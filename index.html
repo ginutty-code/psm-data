@@ -137,10 +137,11 @@
       <option value="uiMapName">UI Map Name</option>
       <option value="react">React (e.g. [-1,-1])</option>
       <option value="classification_name">Classification</option>
-      <option value="taming_skill_1">Taming Skill 1</option>
-      <option value="taming_description_1">Taming Description 1</option>
-      <option value="taming_skill_2">Taming Skill 2</option>
-      <option value="taming_description_2">Taming Description 2</option>
+      <option value="type_name">Type</option>
+      <option value="tamingskillname1">Taming Skill Name 1</option>
+      <option value="tamingskilldesc1">Taming Skill Desc 1</option>
+      <option value="tamingskillname2">Taming Skill Name 2</option>
+      <option value="tamingskilldesc2">Taming Skill Desc 2</option>
       <option value="notes">Notes</option>
       <option value="coords">Coordinates (add/remove)</option>
       <option value="other">Other / Multiple fields</option>
@@ -197,12 +198,12 @@ const COLS = [
   "npc_id","npc_name","family_id","family_name","display_ids",
   "zone_id","zone_name","layer","uiMapId","uiMapName","coords",
   "patch_id","patch_name","react","classification_id","classification_name",
-  "taming_skill_1","taming_description_1","taming_skill_2","taming_description_2","notes"
+  "type_id","type_name","tamingskillname1","tamingskilldesc1","tamingskillname2","tamingskilldesc2","notes"
 ];
 const DISPLAY_FIELDS = [
-  "npc_id","npc_name","family_name","zone_name","uiMapName","react",
-  "classification_name","taming_skill_1","taming_description_1",
-  "taming_skill_2","taming_description_2","notes","patch_name"
+  "npc_id","npc_name","family_name","zone_name","react",
+  "classification_name","type_name","tamingskillname1","tamingskilldesc1",
+  "tamingskillname2","tamingskilldesc2","notes"
 ];
 
 let allPets = [], selectedPet = null, selectedCoords = new Set();
