@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PSM Hunter Pet Data — Correction Request</title>
+<title>PSM Hunter Pet Data - Correction Request</title>
 <style>
   :root {
     --bg: #2e2c29; --surface: #3a3835; --card: #444240;
@@ -100,12 +100,12 @@
 </head>
 <body>
 
-<h1>🐾 PSM Hunter Pet Data — Correction Request</h1>
+<h1>🐾 PSM Hunter Pet Data - Correction Request</h1>
 <p class="subtitle">Found incorrect data? Search for the pet NPC, fill in the correction, and it'll be filed as a GitHub issue for review.</p>
 
 <!-- STEP 1: Search -->
 <div class="card" id="step1">
-  <div class="step-label">Step 1 — Find the NPC</div>
+  <div class="step-label">Step 1 - Find the NPC</div>
   <label>Search by NPC name or ID</label>
   <div class="search-row">
     <input type="text" id="searchInput" placeholder="e.g. Forest Spider or 12345" />
@@ -117,7 +117,7 @@
 
 <!-- STEP 2: Confirm NPC -->
 <div class="card hidden" id="step2">
-  <div class="step-label">Step 2 — Confirm this is the right NPC</div>
+  <div class="step-label">Step 2 - Confirm this is the right NPC</div>
   <div class="npc-card" id="npcDisplay"></div>
   <div class="nav-row">
     <button class="secondary" onclick="resetToSearch()">← Search again</button>
@@ -127,12 +127,12 @@
 
 <!-- STEP 3: Correction form -->
 <div class="card hidden" id="step3">
-  <div class="step-label">Step 3 — Describe the correction</div>
+  <div class="step-label">Step 3 - Describe the correction</div>
 
   <div style="margin-bottom:14px;">
     <label>Field to correct</label>
     <select id="fieldSelect" onchange="onFieldChange()">
-      <option value="">— Select a field —</option>
+      <option value="">- Select a field -</option>
       <option value="npc_name">NPC Name</option>
       <option value="family_name">Family Name</option>
       <option value="zone_name">Zone Name</option>
@@ -163,12 +163,12 @@
 
   <!-- Coord UI -->
   <div id="coordFields" class="hidden">
-    <label>Current coordinates — click to select ones to REMOVE</label>
+    <label>Current coordinates - click to select ones to REMOVE</label>
     <div class="coord-list" id="coordChips"></div>
     <div style="margin-top:12px;">
       <label>Add new coordinate(s)</label>
-      <input type="text" id="coordAdd" placeholder="x,y — separate multiple with |  e.g. 45.2,33.1|46,34" />
-      <small>Format: x,y — pipe-separated for multiple entries</small>
+      <input type="text" id="coordAdd" placeholder="x,y - separate multiple with |  e.g. 45.2,33.1|46,34" />
+      <small>Format: x,y - pipe-separated for multiple entries</small>
     </div>
   </div>
 
@@ -208,6 +208,8 @@ const DISPLAY_FIELDS = [
 ];
 
 let allPets = [], selectedPet = null, selectedCoords = new Set();
+let currentMatches = [], currentPage = 0;
+const PAGE_SIZE = 20;
 
 async function loadData() {
   try {
@@ -221,7 +223,7 @@ async function loadData() {
       header.forEach((h, i) => obj[h.trim()] = (row[i] || "").trim());
       return obj;
     }).filter(p => p.npc_id);
-    setStatus("Ready — " + allPets.length + " NPCs loaded. Start typing to search.", "info");
+    setStatus("Ready - " + allPets.length + " NPCs loaded. Start typing to search.", "info");
   } catch(e) {
     setStatus("Could not load pet data: " + e.message, "error");
   }
@@ -247,25 +249,50 @@ function doSearch() {
   if (!q) return;
   const byId   = allPets.filter(p => p.npc_id === q);
   const byName = allPets.filter(p => p.npc_name.toLowerCase().includes(q) && p.npc_id !== q);
-  const matches = [...byId, ...byName].slice(0, 15);
+  currentMatches = [...byId, ...byName];
+  currentPage = 0;
+  renderResults();
+}
 
+function renderResults() {
   const list = document.getElementById("resultsList");
   list.innerHTML = "";
   list.classList.remove("hidden");
 
-  if (!matches.length) {
-    list.innerHTML = `<div class="msg error">No NPCs found matching "${q}".</div>`;
+  if (!currentMatches.length) {
+    list.innerHTML = `<div class="msg error">No NPCs found.</div>`;
     return;
   }
-  matches.forEach(p => {
+
+  const start = currentPage * PAGE_SIZE;
+  const page  = currentMatches.slice(start, start + PAGE_SIZE);
+  const total = currentMatches.length;
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+
+  page.forEach(p => {
     const el = document.createElement("div");
     el.className = "result-item";
     el.innerHTML = `<strong>${p.npc_name}</strong> <span class="rid">#${p.npc_id} · ${p.family_name} · ${p.zone_name}</span>`;
     el.onclick = () => selectPet(p);
     list.appendChild(el);
   });
-  if (matches.length === 15)
-    list.insertAdjacentHTML("beforeend", `<div class="progress">Showing first 15 results — refine your search for more.</div>`);
+
+  if (totalPages > 1) {
+    const nav = document.createElement("div");
+    nav.className = "nav-row";
+    nav.style.marginTop = "10px";
+    nav.innerHTML = `
+      <button class="secondary" onclick="changePage(-1)" ${currentPage === 0 ? "disabled" : ""}>← Prev</button>
+      <span style="align-self:center;font-size:0.82rem;color:var(--muted)">Page ${currentPage+1} of ${totalPages} - ${total} results</span>
+      <button class="secondary" onclick="changePage(1)" ${currentPage >= totalPages-1 ? "disabled" : ""}>Next →</button>
+    `;
+    list.appendChild(nav);
+  }
+}
+
+function changePage(dir) {
+  currentPage += dir;
+  renderResults();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -286,7 +313,7 @@ function selectPet(pet) {
       ${DISPLAY_FIELDS.map(f => `
         <div class="field-row">
           <span class="fname">${f}</span>
-          <span class="fval">${pet[f] || '<em style="color:var(--muted)">—</em>'}</span>
+          <span class="fval">${pet[f] || '<em style="color:var(--muted)">-</em>'}</span>
         </div>`).join("")}
     </div>
     <div class="field-row" style="margin-top:10px;">
@@ -371,7 +398,7 @@ function submitCorrection() {
   const evidence = document.getElementById("evidence").value.trim();
   const charName = document.getElementById("charName").value.trim();
 
-  const title = `[Correction] NPC #${selectedPet.npc_id} — ${selectedPet.npc_name} — ${field}`;
+  const title = `[Correction] NPC #${selectedPet.npc_id} - ${selectedPet.npc_name} - ${field}`;
   const body =
 `**NPC:** ${selectedPet.npc_name} (#${selectedPet.npc_id})
 **Field:** \`${field}\`
@@ -382,7 +409,7 @@ ${charName ? `**Reported by:** ${charName}` : ""}`;
 
   const url = `${ISSUES_URL}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=correction`;
   window.open(url, "_blank");
-  showSubmitMsg("✅ GitHub opened in a new tab — review and click 'Submit new issue' to file it.", "success");
+  showSubmitMsg("✅ GitHub opened in a new tab - review and click 'Submit new issue' to file it.", "success");
 }
 
 function showSubmitMsg(msg, type) {
