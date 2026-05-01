@@ -209,7 +209,7 @@ const DISPLAY_FIELDS = [
 
 let allPets = [], selectedPet = null, selectedCoords = new Set();
 let currentMatches = [], currentPage = 0;
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 10;
 
 async function loadData() {
   try {
@@ -249,7 +249,7 @@ function doSearch() {
   if (!q) return;
   const byId   = allPets.filter(p => p.npc_id === q);
   const byName = allPets.filter(p => p.npc_name.toLowerCase().includes(q) && p.npc_id !== q);
-  currentMatches = [...byId, ...byName];
+  currentMatches = [...byId, ...byName].sort((a, b) => a.npc_name.localeCompare(b.npc_name));
   currentPage = 0;
   renderResults();
 }
