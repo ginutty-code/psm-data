@@ -92,7 +92,9 @@
   .result-item strong { color: #f5d060; }
   .result-item .rid { font-size: 0.75rem; color: var(--muted); }
 
-  .nav-row { display: flex; gap: 8px; margin-top: 14px; }
+  button { min-width: 160px; }
+  .nav-row { display: flex; justify-content: space-between; margin-top: 14px; }
+  .btn-submit { min-width: 160px; width: auto; }
   .progress { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
 </style>
 </head>
@@ -183,7 +185,7 @@
 
   <div class="nav-row">
     <button class="secondary" onclick="goBackToStep2()">← Back</button>
-    <button class="btn-submit" id="submitBtn" onclick="submitCorrection()">Submit Correction →</button>
+    <button class="btn-submit" id="submitBtn" onclick="submitCorrection()" style="width:auto;">Submit Correction →</button>
   </div>
   <div id="submitMsg" class="hidden"></div>
 </div>
