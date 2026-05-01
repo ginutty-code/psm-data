@@ -190,7 +190,42 @@
   <div id="submitMsg" class="hidden"></div>
 </div>
 
-<script>
+<!-- STEP ADD: New NPC request -->
+<div class="card hidden" id="stepAdd">
+  <div class="step-label">Request — Add a new NPC</div>
+
+  <div style="margin-bottom:14px;">
+    <label>NPC Name</label>
+    <input type="text" id="addName" placeholder="e.g. Venomfang Stalker" />
+  </div>
+  <div style="margin-bottom:14px;">
+    <label>NPC ID (Wowhead ID)</label>
+    <input type="text" id="addId" placeholder="e.g. 12345" />
+  </div>
+  <div style="margin-bottom:14px;">
+    <label>Pet Family</label>
+    <input type="text" id="addFamily" placeholder="e.g. Spider" />
+  </div>
+  <div style="margin-bottom:14px;">
+    <label>Zone / Location</label>
+    <input type="text" id="addZone" placeholder="e.g. Duskwood" />
+  </div>
+  <div style="margin-bottom:14px;">
+    <label>Evidence / source</label>
+    <textarea id="addEvidence" rows="3" placeholder="Wowhead link, Petopia link, in-game testing, patch notes…"></textarea>
+    <small>A Wowhead or Petopia link is very helpful here.</small>
+  </div>
+  <div style="margin-bottom:14px;">
+    <label>Your in-game character name (optional)</label>
+    <input type="text" id="addCharName" placeholder="For credit in changelogs" />
+  </div>
+
+  <div class="nav-row">
+    <button class="secondary" onclick="resetToSearch()">← Search again</button>
+    <button onclick="submitAddRequest()" style="width:auto;height:42px;">Submit Request →</button>
+  </div>
+  <div id="addMsg" class="hidden"></div>
+</div>
 const CSV_URL    = "pet_data.csv";
 const REPO       = "ginutty-code/Hunter-Pet-Data";
 const ISSUES_URL = `https://github.com/${REPO}/issues/new`;
@@ -260,7 +295,12 @@ function renderResults() {
   list.classList.remove("hidden");
 
   if (!currentMatches.length) {
-    list.innerHTML = `<div class="msg error">No NPCs found.</div>`;
+    list.innerHTML = `
+      <div class="msg error">No NPCs found matching your search.</div>
+      <div style="margin-top:10px;text-align:center;">
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:10px;">Not in the database yet? You can request it to be added.</p>
+        <button onclick="goToAddRequest()" style="width:auto;">Request New NPC →</button>
+      </div>`;
     return;
   }
 
@@ -412,7 +452,49 @@ ${charName ? `**Reported by:** ${charName}` : ""}`;
   showSubmitMsg("✅ GitHub opened in a new tab — review and click 'Submit new issue' to file it.", "success");
 }
 
-function showSubmitMsg(msg, type) {
+function goToAddRequest() {
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("stepAdd").classList.remove("hidden");
+  document.getElementById("addName").value = document.getElementById("searchInput").value;
+  document.getElementById("addId").value = "";
+  document.getElementById("addFamily").value = "";
+  document.getElementById("addZone").value = "";
+  document.getElementById("addEvidence").value = "";
+  document.getElementById("addCharName").value = "";
+  document.getElementById("addMsg").classList.add("hidden");
+}
+
+function submitAddRequest() {
+  const name     = document.getElementById("addName").value.trim();
+  const id       = document.getElementById("addId").value.trim();
+  const family   = document.getElementById("addFamily").value.trim();
+  const zone     = document.getElementById("addZone").value.trim();
+  const evidence = document.getElementById("addEvidence").value.trim();
+  const charName = document.getElementById("addCharName").value.trim();
+
+  if (!name && !id) {
+    const el = document.getElementById("addMsg");
+    el.className = "msg error"; el.textContent = "Please provide at least an NPC name or ID.";
+    el.classList.remove("hidden"); return;
+  }
+
+  const title = `[New NPC] ${name || "Unknown"}${id ? " (#" + id + ")" : ""}`;
+  const body =
+`**NPC Name:** ${name || "—"}
+**NPC ID:** ${id || "—"}
+**Pet Family:** ${family || "—"}
+**Zone / Location:** ${zone || "—"}
+${evidence ? `**Evidence:** ${evidence}` : ""}
+${charName ? `**Reported by:** ${charName}` : ""}`;
+
+  const url = `${ISSUES_URL}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=new-npc`;
+  window.open(url, "_blank");
+
+  const el = document.getElementById("addMsg");
+  el.className = "msg success";
+  el.textContent = "✅ GitHub opened in a new tab — review and click 'Submit new issue' to file it.";
+  el.classList.remove("hidden");
+}
   const el = document.getElementById("submitMsg");
   el.className = "msg " + type;
   el.textContent = msg;
