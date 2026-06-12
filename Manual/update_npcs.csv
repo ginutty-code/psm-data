@@ -202,3 +202,11 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257765,Insatiable Consumptor,Normal,0,42,Worm,15458,[],add
 258073,Tusksplitter Boar,Normal,0,5,Boar,3805,[],add
 261337,Voidsinged Hawkstrider,Elite,1,12,Tallstrider,15968,"[-1,-1]",add
+30423,Disembodied Jormungar,Normal,0,42,Worm,67,[],add
+69562,Nalak,Elite,1,303,Lesser Dragonkin,6677,"[-1,-1]",add
+253305,Poison Dart Frog,Normal,0,291,Hopper,16556,[],add
+255709,Reinfused Felwyrm,Normal,0,35,Serpent,16091,[],add
+255957,Corrupted Ray,Normal,0,34,Ray,16796,[],add
+257830,Deeplurk Snapdragon,Normal,0,288,Lizard,16939,[],add
+259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,16796,[],add
+262321,Depthstalker Snapdragon,Elite,1,288,Lizard,16939,[],add

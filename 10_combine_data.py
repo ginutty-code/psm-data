@@ -155,7 +155,7 @@ def _read_first_col(path, col_names):
     result = set()
     if not os.path.exists(path):
         return result
-    with open(path, 'r', encoding='utf-8-sig', newline='') as f:
+    with open(path, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
         reader = csv.DictReader(f)
         for row in reader:
             for key in row:
@@ -176,7 +176,7 @@ def load_skip_display_ids():
 def load_petopia_data():
     data = {}
     if os.path.exists(PETOPIA_DATA_CSV):
-        with open(PETOPIA_DATA_CSV, 'r', encoding='utf-8') as f:
+        with open(PETOPIA_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
             for row in csv.DictReader(f):
                 npc_id = row.get('npc_id')
                 if npc_id:
@@ -186,7 +186,7 @@ def load_petopia_data():
 def load_record_overrides():
     overrides = {}
     if os.path.exists(RECORD_OVERRIDES_CSV):
-        with open(RECORD_OVERRIDES_CSV, 'r', encoding='utf-8-sig') as f:
+        with open(RECORD_OVERRIDES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
             for row in csv.DictReader(f):
                 npc_id = row.get('npc_id', '').strip()
                 zone_id = row.get('zone_id', '').strip()
@@ -198,7 +198,7 @@ def load_final_notes():
     """Loads pre-cleaned notes from the external processing script."""
     notes_map = {}
     if os.path.exists(FINAL_NOTES_CSV):
-        with open(FINAL_NOTES_CSV, 'r', encoding='utf-8-sig') as f:
+        with open(FINAL_NOTES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
             for row in csv.DictReader(f):
                 npc_id = row.get('npc_id', '').strip()
                 if npc_id:
@@ -312,7 +312,7 @@ def main():
 
     print("Loading and filtering Wowhead records...")
     wowhead_records = []
-    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8') as f:
+    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
         for row in csv.DictReader(f):
             npc_id = row.get('npc_id', '').strip()
             if npc_id and npc_id not in skip_ids and row.get('status') == 'successful':

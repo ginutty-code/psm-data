@@ -4156,7 +4156,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257519,Mirebeak Dragonhawk,Normal,0,30,Dragonhawk,15947,"[0,0]"
 257520,Mirebeak Alpha,Normal,0,30,Dragonhawk,15947,"[-1,-1]"
 258977,Dragonhawk,Normal,0,30,Dragonhawk,unknown,[]
-259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,unknown,[]
+259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,16796,[]
 16932,Razorfang Hatchling,Normal,0,31,Ravager,3483,"[-1,-1]"
 16933,Razorfang Ravager,Normal,0,31,Ravager,3483,"[-1,-1]"
 16934,Quillfang Ravager,Normal,0,31,Ravager,3483,"[-1,-1]"
@@ -4501,7 +4501,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255886,Sand Swooper,Normal,0,34,Ray,15336,[]
 255917,Tide Skimmer,Normal,0,34,Ray,15524,"[null,0]"
 255918,Fathom Ray,Normal,0,34,Ray,16105|15524,"[0,0]"
-255957,Corrupted Ray,Normal,0,34,Ray,unknown,[]
+255957,Corrupted Ray,Normal,0,34,Ray,16796,[]
 257575,Hungering Stormray,Normal,0,34,Ray,15458,"[-1,-1]"
 3680,Serpentbloom Snake,Normal,0,35,Serpent,718,"[0,0]"
 5048,Deviate Adder,Elite,1,35,Serpent,718,"[-1,-1]"
@@ -4818,7 +4818,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255148,Arcane Wyrmling,Normal,0,35,Serpent,15968,"[0,0]"
 255194,Void-Singed Wyrmling,Normal,0,35,Serpent,15968,"[-1,-1]"
 255302,Duskburn,Rare,4,35,Serpent,15968,"[-1,-1]"
-255709,Reinfused Felwyrm,Normal,0,35,Serpent,unknown,[]
+255709,Reinfused Felwyrm,Normal,0,35,Serpent,16091,[]
 255871,Lightbloom Crawler,Normal,0,35,Serpent,15355,"[0,0]"
 256695,Mature Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
 256696,Juvenile Rootcrawler,Normal,0,35,Serpent,15355,"[0,0]"
@@ -5459,7 +5459,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 30148,Infesting Jormungar,Normal,0,42,Worm,67,"[-1,-1]"
 30291,Ravenous Jormungar,Normal,0,42,Worm,67,"[-1,-1]"
 30422,Roaming Jormungar,Normal,0,42,Worm,67,"[-1,-1]"
-30423,Disembodied Jormungar,Normal,0,42,Worm,unknown,[]
+30423,Disembodied Jormungar,Normal,0,42,Worm,67,[]
 49347,Coldlurk Burrower,Normal,0,42,Worm,618,"[-1,-1]"
 51022,Chordix,Rare,4,42,Worm,267,"[0,0]"
 51025,Dilennaa,Rare,4,42,Worm,361,"[-1,-1]"
@@ -9623,11 +9623,11 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257528,Whiptail Amazard,Normal,0,288,Lizard,15947,"[-1,-1]"
 257529,Stonemaw Amazard,Normal,0,288,Lizard,15947,"[-1,-1]"
 257530,Razorspine Amazard,Normal,0,288,Lizard,15947,"[-1,-1]"
-257830,Deeplurk Snapdragon,Normal,0,288,Lizard,unknown,[]
+257830,Deeplurk Snapdragon,Normal,0,288,Lizard,16939,[]
 258656,Cinderscale Patriarch,Normal,0,288,Lizard,unknown,[]
 258721,Amazard Gnasher,Normal,0,288,Lizard,unknown,[]
 258823,Deeplurk Snapdragon,Normal,0,288,Lizard,unknown,[]
-262321,Depthstalker Snapdragon,Elite,1,288,Lizard,unknown,[]
+262321,Depthstalker Snapdragon,Elite,1,288,Lizard,16939,[]
 263617,Void-Touched Snapdragon,Normal,0,288,Lizard,unknown,[]
 9166,Pterrordax,Normal,0,290,Pterrordax,490,"[-1,-1]"
 9167,Frenzied Pterrordax,Normal,0,290,Pterrordax,490,"[-1,-1]"
@@ -9842,7 +9842,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 252995,Potatoad,Normal,0,291,Hopper,unknown,[]
 252997,Paint-Crazed Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
 252998,Paint-Crazed Skipper,Normal,0,291,Hopper,15355,"[-1,-1]"
-253305,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+253305,Poison Dart Frog,Normal,0,291,Hopper,16556,[]
 254503,Vile Cursed Toad,Normal,0,291,Hopper,unknown,[]
 254795,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
 256060,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
@@ -10742,7 +10742,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 65723,Jade Hatchling,Normal,0,303,Lesser Dragonkin,5785,"[1,1]"
 65724,Azure Hatchling,Normal,0,303,Lesser Dragonkin,5785,"[1,1]"
 69099,Nalak,Elite,1,303,Lesser Dragonkin,6507,"[-1,-1]"
-69562,Nalak,Elite,1,303,Lesser Dragonkin,unknown,"[-1,-1]"
+69562,Nalak,Elite,1,303,Lesser Dragonkin,6677,"[-1,-1]"
 69580,Onyx Stormclaw,Normal,0,303,Lesser Dragonkin,6677|6507,"[-1,-1]"
 72876,Crimsonscale Firestorm,Elite,1,303,Lesser Dragonkin,6757,"[-1,-1]"
 73167,Huolon,Rare Elite,2,303,Lesser Dragonkin,6757,"[-1,-1]"

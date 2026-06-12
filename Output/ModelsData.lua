@@ -5083,11 +5083,11 @@ ModelsData = {
             [2043] = {"Nightsaber Stalker", "Teldrassil", "Vanilla", "Normal", "[-1,-1]"}
         },
         [15506] = {
-            [15372] = {"Springpaw Lynx", "Eversong Woods (Burning Crusade), Sunstrider Isle", "Vanilla", "Normal", "[0,0]"},
+            [15372] = {"Springpaw Lynx", "Sunstrider Isle", "Vanilla", "Normal", "[0,0]"},
             [15651] = {"Springpaw Stalker", "Eversong Woods (Burning Crusade)", "The Burning Crusade", "Normal", "[-1,-1]"}
         },
         [15507] = {
-            [15366] = {"Springpaw Cub", "Eversong Woods (Burning Crusade), Sunstrider Isle", "Vanilla", "Normal", "[0,0]"}
+            [15366] = {"Springpaw Cub", "Sunstrider Isle", "Vanilla", "Normal", "[0,0]"}
         },
         [15592] = {
             [16349] = {"Ghostclaw Ravager", "Ghostlands", "The Burning Crusade", "Normal", "[-1,-1]"}
@@ -8855,7 +8855,7 @@ ModelsData = {
             [250111] = {"Mistveil Dragonhawk", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
             [255007] = {"Mistveil Dragonhawk", "Zul'Aman", "Midnight", "Normal", "[]"},
             [255821] = {"Child of Jan'alai", "Zul'Aman", "Midnight", "Normal", "[]"},
-            [259914] = {"Tortured Dragonhawk", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"}
+            [259914] = {"Tortured Dragonhawk", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"}
         },
         [124015] = {
             [255007] = {"Mistveil Dragonhawk", "Zul'Aman", "Midnight", "Normal", "[]"},
@@ -10276,7 +10276,7 @@ ModelsData = {
         },
         [125357] = {
             [243171] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
-            [253305] = {"Poison Dart Frog", "Atal'Aman (Delve)", "Midnight", "Normal", "[]"},
+            [253305] = {"Poison Dart Frog", "Atal'Aman", "Midnight", "Normal", "[]"},
             [264270] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"}
         },
         [128022] = {
@@ -10364,7 +10364,7 @@ ModelsData = {
         },
         [131350] = {
             [243171] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
-            [253305] = {"Poison Dart Frog", "Atal'Aman (Delve)", "Midnight", "Normal", "[]"},
+            [253305] = {"Poison Dart Frog", "Atal'Aman", "Midnight", "Normal", "[]"},
             [264270] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"}
         },
         [131351] = {
@@ -10372,7 +10372,7 @@ ModelsData = {
             [249358] = {"Poisonous Passhopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
             [250051] = {"River Hopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
             [250141] = {"Swamp Leaper", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
-            [253305] = {"Poison Dart Frog", "Atal'Aman (Delve)", "Midnight", "Normal", "[]"},
+            [253305] = {"Poison Dart Frog", "Atal'Aman", "Midnight", "Normal", "[]"},
             [256851] = {"Golden Hopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
             [257435] = {"Swamp Darter", "Zul'Aman", "Midnight", "Normal", "[]"},
             [264270] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"}
@@ -10390,7 +10390,7 @@ ModelsData = {
             [247439] = {"Horned Frog", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"},
             [249358] = {"Poisonous Passhopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
             [250051] = {"River Hopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
-            [253305] = {"Poison Dart Frog", "Atal'Aman (Delve)", "Midnight", "Normal", "[]"},
+            [253305] = {"Poison Dart Frog", "Atal'Aman", "Midnight", "Normal", "[]"},
             [256851] = {"Golden Hopper", "Eversong Woods", "Midnight", "Normal", "[0,0]"},
             [264270] = {"Gloombelly Toad", "Eversong Woods", "Midnight", "Normal", "[0,0]"}
         },
@@ -11071,7 +11071,7 @@ ModelsData = {
         },
         [17528] = {
             [18105] = {"Ghaz'an", "The Underbog", "The Burning Crusade", "Elite", "[-1,-1]"},
-            [22884] = {"Leviathan", "Black Temple (Raid)", "The Burning Crusade", "Elite", "[-1,-1]"}
+            [22884] = {"Leviathan", "Black Temple", "The Burning Crusade", "Elite", "[-1,-1]"}
         },
         [17653] = {
             [18286] = {"Mragesh", "Zangarmarsh", "The Burning Crusade", "Normal", "[-1,-1]"}
@@ -11703,7 +11703,7 @@ ModelsData = {
         [47227] = {
             taming = {"Cloud Serpent"},
             [69099] = {"Nalak", "Isle of Thunder", "Mists of Pandaria", "Elite", "[-1,-1]"},
-            [69562] = {"Nalak", "The Fall of Shan Bu (Isle of Thunder) (Scenario)", "Mists of Pandaria", "Elite", "[-1,-1]"}
+            [69562] = {"Nalak", "Fall of Shan Bu", "Mists of Pandaria", "Elite", "[-1,-1]"}
         },
         [50950] = {
             taming = {"Cloud Serpent"},
@@ -12338,41 +12338,41 @@ ModelsData = {
         [103357] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103358] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
             [244048] = {"Trained Snapdragon", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
             [247553] = {"Daggerspine Snapdragon", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103359] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"},
-            [262321] = {"Depthstalker Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Elite", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"},
+            [262321] = {"Depthstalker Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Elite", "[]"}
         },
         [103360] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103361] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
             [244048] = {"Trained Snapdragon", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103362] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103363] = {
             taming = {"Elusive Creature Bait"},
             [193873] = {"Elusive Snapdragon", "The Forbidden Reach, The Waking Shores", "Dragonflight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103364] = {
             taming = {"Elusive Creature Bait"},
@@ -12380,7 +12380,7 @@ ModelsData = {
             [229856] = {"Coralclaw Ravager", "Siren Isle", "The War Within", "Normal", "[-1,-1]"},
             [244048] = {"Trained Snapdragon", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
             [247553] = {"Daggerspine Snapdragon", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
-            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point (Scenario)", "Midnight", "Normal", "[]"}
+            [257830] = {"Deeplurk Snapdragon", "Ritual Site: Daggerspine Point", "Midnight", "Normal", "[]"}
         },
         [103366] = {
             [188027] = {"Salty Salamander", "The Waking Shores", "Dragonflight", "Normal", "[0,0]"},
@@ -12532,7 +12532,7 @@ ModelsData = {
             [226112] = {"Highland Salamanther", "Hallowfall", "The War Within", "Normal", "[-1,-1]"},
             [227608] = {"Undersea Salamanther", "Hallowfall", "The War Within", "Normal", "[-1,-1]"},
             [228823] = {"Undersea Salamanther", "Hallowfall", "The War Within", "Normal", "[-1,-1]"},
-            [251593] = {"Infected Beast", "Harandar, The Grudge Pit (Delve)", "Midnight", "Normal", "[]"}
+            [251593] = {"Infected Beast", "Harandar", "Midnight", "Normal", "[]"}
         },
         [104634] = {
             taming = {"Elusive Creature Bait"},
@@ -15198,7 +15198,7 @@ ModelsData = {
             [250540] = {"Seeking Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [254608] = {"Seeking Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [255886] = {"Sand Swooper", "K'aresh", "The War Within", "Normal", "[]"},
-            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"}
+            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"}
         },
         [122177] = {
             [230906] = {"Siltwing Hunter", "K'aresh", "The War Within", "Normal", "[-1,-1]"},
@@ -15208,7 +15208,7 @@ ModelsData = {
             [246060] = {"Stormray Remora", "Slayer's Rise", "Midnight", "Normal", "[-1,-1]"},
             [250540] = {"Seeking Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [254608] = {"Seeking Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
-            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"}
+            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"}
         },
         [122178] = {
             [238492] = {"Gale Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
@@ -15216,14 +15216,14 @@ ModelsData = {
             [245897] = {"Nether Ray", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
             [246060] = {"Stormray Remora", "Slayer's Rise", "Midnight", "Normal", "[-1,-1]"},
             [249039] = {"Lurking Stormray", "Voidstorm", "Midnight", "Normal", "[0,0]"},
-            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"},
+            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"},
             [257575] = {"Hungering Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
         },
         [122179] = {
             [240511] = {"Twilight Ray", "Atal'Aman", "Midnight", "Normal", "[-1,-1]"},
             [245897] = {"Nether Ray", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
             [247445] = {"Drifting Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
-            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"},
+            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"},
             [257575] = {"Hungering Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
         },
         [122180] = {
@@ -15231,7 +15231,7 @@ ModelsData = {
             [245897] = {"Nether Ray", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
             [247445] = {"Drifting Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [249039] = {"Lurking Stormray", "Voidstorm", "Midnight", "Normal", "[0,0]"},
-            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne (Scenario)", "Midnight", "Normal", "[]"},
+            [255957] = {"Corrupted Ray", "Ritual Site: Broken Throne", "Midnight", "Normal", "[]"},
             [257575] = {"Hungering Stormray", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
         },
         [124302] = {
@@ -17168,10 +17168,9 @@ ModelsData = {
             [16310] = {"Mana Shifter", "Ghostlands", "The Burning Crusade", "Normal", "[-1,-1]"}
         },
         [16217] = {
-            [15274] = {"Mana Wyrm", "Eversong Woods (Burning Crusade), Sunstrider Isle", "Vanilla", "Normal", "[0,0]"},
+            [15274] = {"Mana Wyrm", "Sunstrider Isle", "Vanilla", "Normal", "[0,0]"},
             [19306] = {"Mana Leech", "Mana-Tombs", "The Burning Crusade", "Normal", "[-1,-1]"},
-            [24761] = {"Brightscale Wyrm", "Magisters' Terrace", "The Burning Crusade", "Normal", "[-1,-1]"},
-            [232106] = {"Brightscale Wyrm", "Magisters' Terrace (Midnight) (Dungeon)", "Midnight", "Normal", "[]"}
+            [24761] = {"Brightscale Wyrm", "Magisters' Terrace", "The Burning Crusade", "Normal", "[-1,-1]"}
         },
         [19285] = {
             [41212] = {"Void Wyrm", "Halls of Origination", "Cataclysm", "Normal", "[-1,-1]"},
@@ -17710,7 +17709,7 @@ ModelsData = {
             [250025] = {"Gorged Lightscale", "Eversong Woods", "Midnight", "Normal", "[0,0]"}
         },
         [136091] = {
-            [255709] = {"Reinfused Felwyrm", "Murder Row (Dungeon)", "Midnight", "Normal", "[]"}
+            [255709] = {"Reinfused Felwyrm", "Murder Row", "Midnight", "Normal", "[]"}
         },
         [136092] = {
             [238087] = {"Agitated Wyrm", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
@@ -20922,7 +20921,7 @@ ModelsData = {
             [14223] = {"Cranky Benj", "Hillsbrad Foothills", "Vanilla", "Rare", "[0,0]"}
         },
         [21457] = {
-            [22885] = {"Dragon Turtle", "Black Temple (Raid)", "The Burning Crusade", "Elite", "[-1,-1]"},
+            [22885] = {"Dragon Turtle", "Black Temple", "The Burning Crusade", "Elite", "[-1,-1]"},
             [38845] = {"Child of Volcanoth", "The Lost Isles", "Cataclysm", "Normal", "[null,-1]"}
         },
         [28819] = {
@@ -23081,7 +23080,7 @@ ModelsData = {
             [21956] = {"Rema", "Blade's Edge Mountains", "The Burning Crusade", "Normal", "[-1,1]"}
         },
         [21355] = {
-            [23232] = {"Mutant War Hound", "Black Temple (Raid)", "The Burning Crusade", "Elite", "[-1,-1]"}
+            [23232] = {"Mutant War Hound", "Black Temple", "The Burning Crusade", "Elite", "[-1,-1]"}
         },
         [22003] = {
             [24026] = {"Fanggore Worg", "Grizzly Hills, Howling Fjord", "Wrath of the Lich King", "Normal", "[-1,-1]"},
@@ -23621,7 +23620,7 @@ ModelsData = {
         },
         [27014] = {
             taming = {"Exotic"},
-            [30423] = {"Disembodied Jormungar", "The Storm Peaks (Feeding Arngrim Quest)", "Wrath of the Lich King", "Normal", "[]"}
+            [30423] = {"Disembodied Jormungar", "The Storm Peaks", "Wrath of the Lich King", "Normal", "[]"}
         },
         [34636] = {
             taming = {"Exotic"},

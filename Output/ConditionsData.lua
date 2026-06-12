@@ -307,6 +307,7 @@ PSM.ConditionsData = {
     [29838] = {conditions[8]},
     [29931] = {conditions[8]},
     [29958] = {conditions[23]},
+    [30423] = {conditions[23]},
     [30432] = {conditions[23]},
     [30664] = {conditions[8]},
     [30963] = {conditions[8]},
