@@ -97,7 +97,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 148117,Grong,Elite,1,9,Gorilla,10076,"[null,-1]",add
 152464,Caverndark Terror,Rare Elite,2,8,Crab,10052,"[-1,-1]",add
 152836,Azerite Borer,Elite,1,55,Shale Beast,10524,"[-1,-1]",add
-153903,Tucel,Normal,0,8,Crab,10052,"[-1,-1]",add
 159016,Agitated Gorm,Normal,0,292,Carapid,11510,[],add
 159218,Great Granitefur,Elite,1,128,Stone Hound,10413,[],add
 159693,Enthralled Gorm,Normal,0,292,Carapid,11510,"[-1,-1]",add

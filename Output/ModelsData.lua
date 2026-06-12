@@ -2552,7 +2552,7 @@ ModelsData = {
             [128389] = {"Vale Falcon", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"}
         },
         [81083] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [135632] = {"Mountain Hawk", "Stormsong Valley", "Battle for Azeroth", "Normal", "[0,0]"},
             [136311] = {"Mountain Hawk", "Stormsong Valley", "Battle for Azeroth", "Normal", "[1,-1]"},
             [229534] = {"Stormfeather Falcon", "Siren Isle", "The War Within", "Normal", "[0,0]"}
@@ -3955,7 +3955,7 @@ ModelsData = {
             [162360] = {"Camel", "Uldum", "Battle for Azeroth", "Normal", "[0,0]"}
         },
         [87962] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [126627] = {"Lost Alpaca", "Vol'dun", "Battle for Azeroth", "Normal", "[0,0]"},
             [136354] = {"Alpaca", "Vol'dun", "Battle for Azeroth", "Normal", "[null,0]"},
             [162681] = {"Elusive Quickhoof", "Vol'dun", "Battle for Azeroth", "Normal", "[1,1]"}
@@ -3987,7 +3987,7 @@ ModelsData = {
             [162765] = {"Friendly Alpaca", "Uldum", "Battle for Azeroth", "Normal", "[0,0]"}
         },
         [88594] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [126217] = {"Dot", "Vol'dun", "Battle for Azeroth", "Normal", "[null,1]"},
             [126219] = {"Dolly", "Vol'dun", "Battle for Azeroth", "Normal", "[null,1]"},
             [128848] = {"Dolly", "Vol'dun", "Battle for Azeroth", "Normal", "[null,1]"},
@@ -6408,7 +6408,7 @@ ModelsData = {
     },
     ["Courser"] = {
         [65] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [26472] = {"Highland Mustang", "Grizzly Hills", "Wrath of the Lich King", "Normal", "[-1,-1]"},
             [28605] = {"Havenshire Stallion", "Plaguelands: The Scarlet Enclave", "Wrath of the Lich King", "Normal", "[0,0]"},
             [48180] = {"Wild Horse", "Hillsbrad Foothills", "Cataclysm", "Normal", "[0,0]"},
@@ -6419,7 +6419,7 @@ ModelsData = {
             [142347] = {"Wild Horse", "Arathi Highlands", "Battle for Azeroth", "Normal", "[0,0]"}
         },
         [229] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [27626] = {"Tatjana's Horse", "Grizzly Hills", "Wrath of the Lich King", "Normal", "[-1,-1]"},
             [28605] = {"Havenshire Stallion", "Plaguelands: The Scarlet Enclave", "Wrath of the Lich King", "Normal", "[0,0]"},
             [37785] = {"Wild Horse", "Gilneas", "Cataclysm", "Normal", "[0,null]"},
@@ -6434,7 +6434,7 @@ ModelsData = {
             [3864] = {"Fel Steed", "Shadowfang Keep", "Vanilla", "Elite", "[0,0]"}
         },
         [236] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [37785] = {"Wild Horse", "Gilneas", "Cataclysm", "Normal", "[0,null]"},
             [137340] = {"Mara", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"}
         },
@@ -6444,7 +6444,7 @@ ModelsData = {
             [142455] = {"Riverland Bronco", "Stormsong Valley", "Battle for Azeroth", "Normal", "[0,0]"}
         },
         [238] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [37785] = {"Wild Horse", "Gilneas", "Cataclysm", "Normal", "[0,null]"},
             [48180] = {"Wild Horse", "Hillsbrad Foothills", "Cataclysm", "Normal", "[0,0]"},
             [128441] = {"Magoo", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
@@ -6509,7 +6509,7 @@ ModelsData = {
             [117206] = {"Strange Horse", "Brawl'gar Arena, Deeprun Tram", "Legion", "Normal", "[-1,-1]"}
         },
         [69430] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [104815] = {"Jojo the Palestrider", "Azsuna", "Legion", "Normal", "[0,0]"},
             [112636] = {"Sinister Leyrunner", "Azsuna", "Legion", "Rare", "[-1,-1]"},
             [130350] = {"Guardian of the Spring", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,1]"},
@@ -6530,7 +6530,7 @@ ModelsData = {
             [121112] = {"Somber Dawn", "Broken Shore", "Legion", "Rare Elite", "[-1,-1]"}
         },
         [76855] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123212] = {"Fjord Mustang", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[0,0]"},
             [129139] = {"Freehold Colt", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[0,0]"},
             [137342] = {"Korthos", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"}
@@ -6539,12 +6539,12 @@ ModelsData = {
             [123212] = {"Fjord Mustang", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[0,0]"}
         },
         [76857] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [128476] = {"Goldie", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [134307] = {"Hexthralled Courser", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"}
         },
         [76858] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [124845] = {"Kul Tiran Horse", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [134307] = {"Hexthralled Courser", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
@@ -6553,7 +6553,7 @@ ModelsData = {
             [134307] = {"Hexthralled Courser", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"}
         },
         [76860] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [142610] = {"Pack Mule", "Stormsong Valley", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
@@ -6564,22 +6564,22 @@ ModelsData = {
             [210835] = {"Wild Horse", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"}
         },
         [76870] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123212] = {"Fjord Mustang", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[0,0]"},
             [137338] = {"Rose", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,null]"},
             [210835] = {"Wild Horse", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"}
         },
         [76871] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123604] = {"Kul Tiran Horse", "Boralus", "Battle for Azeroth", "Normal", "[1,-1]"}
         },
         [76873] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [124845] = {"Kul Tiran Horse", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [76875] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [127702] = {"Trader's Mule", "Drustvar", "Battle for Azeroth", "Normal", "[1,-1]"},
             [128838] = {"Pack Mule", "Stormsong Valley, Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
@@ -6596,19 +6596,19 @@ ModelsData = {
             [210835] = {"Wild Horse", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"}
         },
         [76888] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [124845] = {"Kul Tiran Horse", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [76889] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123212] = {"Fjord Mustang", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[0,0]"},
             [124845] = {"Kul Tiran Horse", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [142455] = {"Riverland Bronco", "Stormsong Valley", "Battle for Azeroth", "Normal", "[0,0]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [76890] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123604] = {"Kul Tiran Horse", "Boralus", "Battle for Azeroth", "Normal", "[1,-1]"},
             [210835] = {"Wild Horse", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"}
         },
@@ -6616,22 +6616,22 @@ ModelsData = {
             [127615] = {"Ephemeral Runner", "Invasion Point: Bonich", "Legion", "Normal", "[]"}
         },
         [79952] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [128478] = {"Scout", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [81465] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [130889] = {"Workhorse", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [81466] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [130889] = {"Workhorse", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
         [81467] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [130889] = {"Workhorse", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[1,-1]"},
             [174412] = {"Freckles", "Tiragarde Sound", "Shadowlands", "Normal", "[-1,null]"}
         },
@@ -7210,10 +7210,6 @@ ModelsData = {
             [128631] = {"Tidal Clickshell", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [142577] = {"Hardshell Scavenger", "Stormsong Valley", "Battle for Azeroth", "Normal", "[0,0]"}
         },
-        [85427] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
-            [153903] = {"Faceless Conqueror", "Vale of Eternal Blossoms", "Battle for Azeroth", "Normal", "[-1,-1]"}
-        },
         [85438] = {
             [137681] = {"King Clickyclack", "Vol'dun", "Battle for Azeroth", "Rare", "[-1,-1]"}
         },
@@ -7240,7 +7236,7 @@ ModelsData = {
             [149654] = {"Glimmerspine", "Darkshore", "Battle for Azeroth", "Rare", "[-1,-1]"}
         },
         [89128] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [145740] = {"Tinitoa", "Nazjatar", "Battle for Azeroth", "Normal", "[null,1]"},
             [154935] = {"Gorgonian Scavenger", "Nazjatar", "Battle for Azeroth", "Normal", "[-1,-1]"}
         },
@@ -10518,7 +10514,7 @@ ModelsData = {
             [137152] = {"Company Watchdog", "Tiragarde Sound", "Battle for Azeroth", "Normal", "[-1,-1]"}
         },
         [30211] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [37718] = {"Mountain Mastiff", "Gilneas", "Cataclysm", "Normal", "[-1,null]"},
             [41561] = {"Wary Mastiff", "Gilneas", "Cataclysm", "Normal", "[0,null]"},
             [92956] = {"Attack Mastiff", "Stormheim", "Legion", "Normal", "[1,-1]"},
@@ -10530,7 +10526,7 @@ ModelsData = {
             [142016] = {"Newstead Hound", "Arathi Highlands", "Battle for Azeroth", "Normal", "[1,-1]"}
         },
         [30212] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [37718] = {"Mountain Mastiff", "Gilneas", "Cataclysm", "Normal", "[-1,null]"},
             [41561] = {"Wary Mastiff", "Gilneas", "Cataclysm", "Normal", "[0,null]"},
             [58876] = {"Starving Hound", "Scarlet Halls", "Mists of Pandaria", "Elite", "[-1,-1]"},
@@ -11726,11 +11722,11 @@ ModelsData = {
             [139486] = {"Skycrack", "Crestfall, Havenswood, Jorundall, Molten Cay, Skittering Hollow, Snowblossom Village, The Dread Chain, The Rotting Mire, Un'gol Ruins, Verdant Wilds, Whispering Reef", "Battle for Azeroth", "Rare Elite", "[-1,-1]"}
         },
         [91729] = {
-            taming = {"Cloud Serpent","N'lyeth, Sliver of N'Zoth"},
+            taming = {"Cloud Serpent","Sliver of N'Zoth"},
             [163042] = {"Ivory Cloud Serpent", "Vale of Eternal Blossoms", "Battle for Azeroth", "Elite", "[1,1]"}
         },
         [92139] = {
-            taming = {"Cloud Serpent","N'lyeth, Sliver of N'Zoth"},
+            taming = {"Cloud Serpent","Sliver of N'Zoth"},
             [154761] = {"Rajani Warserpent", "Vale of Eternal Blossoms", "Battle for Azeroth", "Elite", "[1,1]"},
             [156389] = {"Rajani Warserpent", "Vale of Eternal Blossoms", "Battle for Azeroth", "Elite", "[1,1]"}
         },
@@ -12076,13 +12072,13 @@ ModelsData = {
             [113041] = {"Infected Diemetradon", "The Emerald Nightmare", "Legion", "Elite", "[-1,-1]"}
         },
         [76834] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123098] = {"Venomous Diemetradon", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [144496] = {"Venomous Diemetradon", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [145457] = {"Venomous Diemetradon", "Boralus", "Battle for Azeroth", "Normal", "[-1,1]"}
         },
         [76835] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [13323] = {"Subterranean Diemetradon", "Maraudon", "Vanilla", "Elite", "[-1,-1]"},
             [123098] = {"Venomous Diemetradon", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [135510] = {"Azuresail the Ancient", "Zuldazar", "Battle for Azeroth", "Elite", "[-1,-1]"},
@@ -14606,7 +14602,7 @@ ModelsData = {
             [140699] = {"Bonescreamer", "Zuldazar", "Battle for Azeroth", "Normal", "[null,-1]"}
         },
         [83646] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [123096] = {"Frogmarsh Razormaw", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [130727] = {"Fenclaw Runner", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [133812] = {"Zanxib", "Nazmir", "Battle for Azeroth", "Rare", "[-1,-1]"},
@@ -14614,7 +14610,7 @@ ModelsData = {
             [145110] = {"Ravasaur Sniffer", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[-1,1]"}
         },
         [83647] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [120587] = {"Rivermarsh Raptor", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [122504] = {"Savagemane Ravasaur", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [123096] = {"Frogmarsh Razormaw", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
@@ -14623,7 +14619,7 @@ ModelsData = {
             [145110] = {"Ravasaur Sniffer", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[-1,1]"}
         },
         [83648] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [124217] = {"Raptor Patriarch", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [124226] = {"Raptor Matriarch", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [125206] = {"Sharptooth Scavenger", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
@@ -14636,7 +14632,7 @@ ModelsData = {
             [149147] = {"N'chala the Egg Thief", "Zuldazar", "Battle for Azeroth", "Rare", "[-1,-1]"}
         },
         [83649] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [120587] = {"Rivermarsh Raptor", "Nazmir", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [139365] = {"Queenfeather", "Zuldazar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [145444] = {"Ravasaur Fleshripper", "Boralus, Tiragarde Sound", "Battle for Azeroth", "Normal", "[-1,1]"}
@@ -15041,7 +15037,7 @@ ModelsData = {
             [223492] = {"Flatcram Grandame", "Azj-Kahet", "The War Within", "Normal", "[0,0]"}
         },
         [90738] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [150696] = {"Fathom Ray Broodkeeper", "Nazjatar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [153764] = {"Wrinklefin", "Nazjatar", "Battle for Azeroth", "Normal", "[-1,1]"},
             [223492] = {"Flatcram Grandame", "Azj-Kahet", "The War Within", "Normal", "[0,0]"}
@@ -17255,7 +17251,7 @@ ModelsData = {
             [47740] = {"Viper", "Uldum", "Cataclysm", "Normal", "[-1,-1]"}
         },
         [35804] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [47740] = {"Viper", "Uldum", "Cataclysm", "Normal", "[-1,-1]"},
             [142464] = {"Moult", "Dazar'alor, Zuldazar", "Battle for Azeroth", "Normal", "[-1,1]"}
         },
@@ -23159,7 +23155,7 @@ ModelsData = {
             [58891] = {"Longfang Cub", "Valley of the Four Winds", "Mists of Pandaria", "Normal", "[-1,-1]"}
         },
         [29283] = {
-            taming = {"N'lyeth, Sliver of N'Zoth"},
+            taming = {"Sliver of N'Zoth"},
             [103563] = {"Riding Wolf", "Stormsong Valley", "Legion", "Normal", "[-1,1]"}
         },
         [32926] = {

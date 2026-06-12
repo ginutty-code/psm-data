@@ -1362,7 +1362,6 @@ PSM.NotesData = {
     [153694] = [[Sometimes spawns when Deepcoil Eggs are destroyed during the world quest Break a Few Eggs / Break a Few Eggs.]],
     [153764] = [[Alliance hunters can tame Wrinklefin in the usual way, but it is friendly to Horde and can only be tamed by Horde hunters using the toy "N'lyeth, Sliver of N'Zoth" while in War Mode. This fathom ray is a faction hub NPC and probably shouldn't be tameable anyway. Also of note, its title, "Droobie's Companion" is incorrect, as it belongs to Dren Nautilin.]],
     [153812] = [[Stealthed.]],
-    [153903] = [[Normally friendly, but can be tamed if you use the toy "N'lyeth, Sliver of N'Zoth" while in War Mode. Accompanies Sardina Lauray.]],
     [153959] = [[Its name changes to "Sated Snapdragon" after being fed on the quest Sating Snapdragons / Sating Snapdragons.]],
     [153971] = [[Spawns occasionally when players open Chittershell Clams when on the quest Working With Purpose / Working With Purpose.]],
     [153980] = [[Found in the alternate timeline phase of Mechagon, which is accessible on days when Chromie is present in Rustbolt, or by activating a Personal Time Displacer.]],

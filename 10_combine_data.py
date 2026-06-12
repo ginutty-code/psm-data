@@ -63,6 +63,8 @@ CONDITION_NORMALIZATION = {
     "Highmountain Taurens": "Highmountain Tauren", "Zandalari": "Zandalari Troll",
     "Zandalari Trolls": "Zandalari Troll", "Mag'har": "Mag'har Orc",
     "Mag'har Orcs": "Mag'har Orc", "Kul Tirans": "Kul Tiran", "Mechagnomes": "Mechagnome",
+    "N'lyeth, Sliver of N'Zoth": "Sliver of N'Zoth",
+    "Friendly Taming": "Sliver of N'Zoth",
     "Brewfest": "Event", "Love is in the Air": "Event", "Hallow's End": "Event",
     "Lunar Festival": "Event", "Midsummer Fire Festival": "Event",
     "Feast of Winter Veil": "Event", "Noblegarden": "Event", "Children's Week": "Event",
@@ -85,7 +87,7 @@ RACE_KEYWORDS = [
 NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ")
 FACTIONS = ("Alliance", "Horde")
 ITEM_TAMING_REQS = [
-    "N'lyeth, Sliver of N'Zoth", "Disturbed Earth",
+    "Disturbed Earth",
     "Elusive Creature Bait", "Elusive Creature Lure", "Siren's Sting"
 ]
 
@@ -140,7 +142,8 @@ def clean_taming_skill(skill):
         return ""
     skill = skill.replace("Required Skill:", "").strip()
     skill = re.sub(r'\s*(?:Taming|Family)$', '', skill, flags=re.IGNORECASE)
-    return skill.strip()
+    skill = skill.strip()
+    return CONDITION_NORMALIZATION.get(skill, skill)
 
 def get_expansion(patch_id):
     if not patch_id:
@@ -523,7 +526,7 @@ def main():
         final_notes_lower = final_notes.lower()
         for req in ITEM_TAMING_REQS:
             if ITEM_TAMING_LOWER[req] in final_notes_lower:
-                npc_taming_set.add(req)
+                npc_taming_set.add(CONDITION_NORMALIZATION.get(req, req))
 
         record_data['taming_requirements'] = "|".join(sorted(npc_taming_set))
         record_data['special_conditions'] = "|".join(sorted(npc_conditions))

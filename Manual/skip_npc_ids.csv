@@ -77,9 +77,15 @@ npc_id,reason
 12054,unknown location
 12296,unknown location
 12297,unknown location
+13161,cannot be tamed
 13837,unknown location
 14406,unknown location
 14566,cannot be tamed
+14943,cannot be tamed
+14944,cannot be tamed
+14945,cannot be tamed
+14947,cannot be tamed
+14948,cannot be tamed
 15107,unknown location
 15421,unknown location
 15422,unknown location
@@ -1051,6 +1057,7 @@ npc_id,reason
 153792,unknown location
 153892,unknown location
 153902,cannot be tamed
+153903,cannot be tamed
 154090,unknown location
 154107,unknown location
 154115,unknown location
@@ -3269,9 +3276,3 @@ npc_id,reason
 260507,unknown location
 261047,unknown location
 261115,cannot be tamed
-14948,cannot be tamed
-14943,cannot be tamed
-14944,cannot be tamed
-14947,cannot be tamed
-13161,cannot be tamed
-14945,cannot be tamed
