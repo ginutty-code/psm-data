@@ -1,0 +1,204 @@
+npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,react,action
+3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]",add
+4304,Scarlet Tracking Hound,Elite,1,25,Hyena,796,"[-1,-1]",add
+4822,Snapping Crustacean,Elite,1,8,Crab,719,"[-1,-1]",add
+4823,Barbed Crustacean,Elite,1,8,Crab,719,"[-1,-1]",add
+4824,Aku'mai Fisher,Elite,1,21,Turtle,719,"[-1,-1]",add
+4825,Aku'mai Snapjaw,Elite,1,21,Turtle,719,"[-1,-1]",add
+5226,Murk Worm,Elite,1,42,Worm,1477,"[-1,-1]",add
+5456,Centipaar Stinger,Normal,0,44,Wasp,440,"[-1,-1]",add
+7268,Sandfury Guardian,Elite,1,35,Serpent,1176,"[-1,-1]",add
+9701,Spire Scorpid,Normal,0,20,Scorpid,1583,"[-1,-1]",add
+10040,Gorishi Hive Guard,Normal,0,41,Aqiri,490,"[-1,-1]",add
+13896,Scalebeard,Rare,4,21,Turtle,16,"[0,0]",add
+15932,Gluth,Elite,1,52,Hound,3456,"[-1,-1]",add
+16171,Coldmist Widow,Elite,1,3,Spider,3457,"[-1,-1]",add
+16174,Greater Shadowbat,Elite,1,24,Bat,3457,"[-1,-1]",add
+16179,Hyakiss the Lurker,Rare Elite,2,3,Spider,3457,"[-1,-1]",add
+16992,Dreadtusk,Normal,0,5,Boar,3483,[],add
+17556,Death Ravager,Normal,0,41,Aqiri,3524,"[-1,-1]",add
+17669,Rabid Warhound,Normal,0,52,Hound,3714,"[-1,-1]",add
+17732,Lykul Wasp,Elite,1,44,Wasp,3716,"[-1,-1]",add
+20039,Phoenix-Hawk,Elite,1,30,Dragonhawk,3845,"[-1,-1]",add
+20783,Porfus the Gem Gorger,Normal,0,130,Basilisk,3523,[],add
+21246,Serpentshrine Sporebat,Elite,1,33,Sporebat,3607,"[-1,-1]",add
+21470,Angered Arakkoa Protector,Normal,0,7,Carrion Bird,3522,"[-1,-1]",add
+21724,Hawkbane,Rare,4,2,Cat,3519,"[-1,-1]",add
+22181,Aether Ray,Normal,0,34,Ray,3522,"[0,0]",add
+22255,Daggertail Lizard,Normal,0,156,Scalehide,3522,"[-1,-1]",add
+22946,Shadowmoon War Hound,Normal,0,52,Hound,3959,"[-1,-1]",add
+23051,Monstrous Kaliri,Normal,0,26,Bird of Prey,3519,"[-1,-1]",add
+23132,Brood of Anzu,Normal,0,26,Bird of Prey,3791,"[-1,-1]",add
+23204,Vakkiz the Windrager,Elite,1,27,Wind Serpent,3519,[],add
+23206,Akkarai Hatchling,Normal,0,26,Bird of Prey,3519,"[-1,-1]",add
+24740,Goodie,Normal,0,12,Tallstrider,331,"[1,-1]",add
+24922,Razorthorn Ravager,Normal,0,31,Ravager,3519,"[-1,-1]",add
+25774,Rockfang,Normal,0,1,Wolf,3537,"[-1,-1]",add
+26360,Rattlebore,Normal,0,42,Worm,65,"[-1,-1]",add
+27642,Phantasmal Mammoth,Normal,0,300,Mammoth,4228,"[-1,-1]",add
+28087,Sapphire Hive Queen,Normal,0,44,Wasp,3711,"[-1,-1]",add
+29033,Spirit of Atha,Normal,0,68,Hydra,3711,"[-1,-1]",add
+29411,Crystalweb Weaver,Normal,0,3,Spider,67,"[-1,-1]",add
+29412,Crystalweb Spitter,Normal,0,3,Spider,67,"[-1,-1]",add
+29461,Icetip Crawler,Normal,0,3,Spider,67,"[-1,-1]",add
+29562,Icemaw Bear,Normal,0,4,Bear,67,"[-1,-1]",add
+29630,Fanged Pit Viper,Normal,0,35,Serpent,1987,"[0,0]",add
+29637,Crafty Snake,Normal,0,35,Serpent,1206,"[0,0]",add
+29713,Slad'ran Constrictor,Normal,0,35,Serpent,4416,"[-1,-1]",add
+30320,Battlescarred Frostworg,Elite,1,1,Wolf,67,"[-1,-1]",add
+36852,Skychaser Hippogryph,Normal,0,160,Feathermane,16,"[1,-1]",add
+39444,Pit Viper,Normal,0,35,Serpent,4945,"[-1,-1]",add
+39833,Twilight Buzzard,Normal,0,7,Carrion Bird,616,"[-1,-1]",add
+50958,Kalan'ii,Elite,1,8,Crab,5840,"[0,0]",add
+56286,Enthralled Forest Prowler,Normal,0,2,Cat,5785,"[-1,1]",add
+58768,Cracklefang,Rare,4,1,Wolf,5840,"[-1,-1]",add
+59915,Jasper Guardian,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+59971,Stone Guardian,Normal,0,128,Stone Hound,5840,"[-1,-1]",add
+59973,Stone Guardian,Normal,0,128,Stone Hound,5840,"[-1,-1]",add
+60043,Jade Guardian,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+60047,Amethyst Guardian,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+60051,Cobalt Guardian,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+60223,Granite Quilen,Normal,0,128,Stone Hound,5840,"[-1,-1]",add
+60576,Stone Quilen,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+60833,Frenzied Stone Quilen,Elite,1,128,Stone Hound,6125,[],add
+63978,Kri'chon,Rare,4,20,Scorpid,5840,"[-1,-1]",add
+64183,Enormous Stone Quilen,Elite,1,128,Stone Hound,6125,"[-1,-1]",add
+65790,Muck Sifter,Normal,0,8,Crab,6138,"[0,0]",add
+67087,Ashweb Hatchling,Normal,0,3,Spider,5840,"[-1,-1]",add
+69193,Loa-Infused Bloodhorn,Elite,1,138,Direhorn,6507,"[-1,-1]",add
+70448,Ancient Python,Elite,1,35,Serpent,48050,"[-1,-1]",add
+70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]",add
+70702,Flame Hound,Elite,1,52,Hound,7812,"[-1,-1]",add
+71585,Wind Rider,Elite,1,160,Feathermane,331,"[null,1]",add
+73185,Enraged Mushan Beast,Elite,1,156,Scalehide,6738,"[-1,-1]",add
+80560,Echidnaean Scout,Normal,0,68,Hydra,6722,[],add
+81983,Verdant Mandragora,Elite,1,68,Hydra,7109,"[-1,-1]",add
+84399,Vicious Mandragora,Elite,1,68,Hydra,7109,"[-1,-1]",add
+84500,Dread Raven,Normal,0,26,Bird of Prey,6662,"[1,1]",add
+85828,Blazing Mongrel,Normal,0,52,Hound,6662,[],add
+88150,Untamed Mandragora,Elite,1,68,Hydra,6721,"[-1,-1]",add
+88525,Reaver Pit Fodder,Normal,0,41,Aqiri,6755,"[-1,-1]",add
+90517,Felbound Wolf,Normal,0,1,Wolf,6723,"[-1,-1]",add
+97119,Shroud Hound,Normal,0,52,Hound,6731,"[-1,-1]",add
+97163,Cursed Falke,Normal,0,26,Bird of Prey,7812,"[-1,-1]",add
+99222,Cliffwing Hippogryph,Normal,0,160,Feathermane,7334,"[-1,-1]",add
+103045,Plaguemaw,Rare Elite,2,26,Bird of Prey,67969,"[-1,-1]",add
+112328,Canyon Soarer,Normal,0,26,Bird of Prey,7637,[],add
+124262,Spiderling,Normal,0,3,Spider,8501,[],add
+124683,Bonepicker Pup,Normal,0,25,Hyena,8501,"[-1,-1]",add
+126893,Dune Beetle,Normal,0,53,Beetle,8501,"[0,0]",add
+127268,Sickly Snapjaw,Normal,0,6,Crocolisk,8500,"[-1,-1]",add
+135048,Gorestained Piglet,Elite,1,5,Boar,9424,"[-1,-1]",add
+136205,Coldtooth Howler,Normal,0,1,Wolf,9042,"[-1,-1]",add
+137077,Gulch Beetle,Normal,0,53,Beetle,8501,"[0,0]",add
+137836,Wild Horse,Normal,0,299,Courser,9439,"[0,0]",add
+142016,Newstead Hound,Normal,0,52,Hound,45,"[1,-1]",add
+144494,Coppertooth Pup,Normal,0,1,Wolf,8567,"[0,0]",add
+148117,Grong,Elite,1,9,Gorilla,10076,"[null,-1]",add
+152464,Caverndark Terror,Rare Elite,2,8,Crab,10052,"[-1,-1]",add
+152836,Azerite Borer,Elite,1,55,Shale Beast,10524,"[-1,-1]",add
+153903,Tucel,Normal,0,8,Crab,10052,"[-1,-1]",add
+159016,Agitated Gorm,Normal,0,292,Carapid,11510,[],add
+159218,Great Granitefur,Elite,1,128,Stone Hound,10413,[],add
+159693,Enthralled Gorm,Normal,0,292,Carapid,11510,"[-1,-1]",add
+159901,Boneweave Spiderling,Normal,0,3,Spider,11462,"[0,0]",add
+159978,Great Granitefur,Elite,1,128,Stone Hound,10413,"[0,-1]",add
+160786,Tower Shadehound,Normal,0,52,Hound,11400,[],add
+161172,Gargantuan Seeker,Elite,1,52,Hound,11400,[],add
+161256,Tomb Lurker,Normal,0,3,Spider,10413,"[-1,-1]",add
+161763,Assassin,Normal,0,52,Hound,11400,[],add
+162237,Plagueroc,Normal,0,26,Bird of Prey,13313,"[-1,-1]",add
+162363,Temple Scarab,Normal,0,53,Beetle,5034,[],add
+162624,Neonate Bonetooth,Normal,0,38,Chimaera,11462,[],add
+164642,Bloodraged Spitter,Normal,0,292,Carapid,11510,[],add
+164862,Weald Shimmermoth,Elite,1,37,Moth,13309,"[-1,-1]",add
+165973,Warren Mongrel,Normal,0,52,Hound,11400,[],add
+165974,Crucible Seeker,Normal,0,52,Hound,11400,"[-1,-1]",add
+166966,Runestag,Normal,0,151,Stag,11510,[],add
+166967,Juvenile Runedeer,Normal,0,151,Stag,11510,[],add
+167111,Spinemaw Staghorn,Elite,1,292,Carapid,13334,"[-1,-1]",add
+167113,Spinemaw Acidgullet,Elite,1,292,Carapid,13334,"[-1,-1]",add
+167947,Tremaculum Soulhunter,Normal,0,52,Hound,11400,"[-1,-1]",add
+167960,Gargantuan Seeker,Elite,1,52,Hound,11400,"[-1,-1]",add
+168196,Virulent Pest,Normal,0,53,Beetle,11462,[],add
+168533,Mawsworn Seeker,Normal,0,52,Hound,11400,"[-1,-1]",add
+168584,Mawsworn Seeker,Normal,0,52,Hound,11400,"[-1,-1]",add
+168737,Razorweb Matriarch,Elite,1,3,Spider,11462,"[-1,-1]",add
+168837,Stealthling,Normal,0,3,Spider,13228,"[-1,-1]",add
+168857,Stitched-Wing Hauler,Normal,0,26,Bird of Prey,11462,"[0,0]",add
+169857,Monstrous Mawrat,Elite,1,127,Rodent,11400,"[-1,-1]",add
+170161,Burning Fiend,Normal,0,52,Hound,11400,[],add
+170192,Shade Hatchling,Normal,0,3,Spider,11462,[],add
+170695,Runestag Bull,Normal,0,151,Stag,11510,[],add
+172312,Spinemaw Gorger,Elite,1,292,Carapid,94197,"[-1,-1]",add
+175255,Giant Mawrat,Normal,0,127,Rodent,11400,[],add
+189722,Gulping Goliath,Elite,1,303,Lesser Dragonkin,14082,"[-1,-1]",add
+191679,Magmammoth Bull,Elite,1,300,Mammoth,13644,"[-1,-1]",add
+193311,Melkhop,Rare Elite,2,303,Lesser Dragonkin,13647,"[-1,-1]",add
+194054,Mistbeetle,Normal,0,53,Beetle,13647,[],add
+194079,Mature Riverbeast,Normal,0,150,Riverbeast,13644,"[0,0]",add
+194568,Restless Slyvern,Normal,0,160,Feathermane,13645,"[-1,-1]",add
+195268,Proud Plumecrest,Normal,0,160,Feathermane,13647,[],add
+195448,Blazing Firesquall,Normal,0,26,Bird of Prey,13644,"[-1,-1]",add
+198423,Cliffside Pollinator,Normal,0,53,Beetle,13647,"[0,0]",add
+206472,Tamed Umbraclaw,Normal,0,160,Feathermane,14529,"[1,1]",add
+210410,Tortoise,Normal,0,21,Turtle,14529,[],add
+213834,Candleclaw Mole,Normal,0,127,Rodent,14882,"[-1,-1]",add
+215733,Deeps Larva,Normal,0,42,Worm,14795,"[-1,-1]",add
+217417,Infested Jawgrub,Normal,0,42,Worm,14795,"[-1,-1]",add
+224106,Hallowfall Bear,Normal,0,4,Bear,14838,[],add
+224109,Hallowfall Matriarch,Normal,0,4,Bear,14838,[],add
+224496,Hallowfall Bear,Normal,0,4,Bear,14838,[],add
+225726,Heckler,Normal,0,25,Hyena,15347,"[-1,-1]",add
+227201,Tidal Sandsnapper,Normal,0,8,Crab,14717,"[0,0]",add
+228213,Tidewake Moray,Normal,0,35,Serpent,14838,"[-1,-1]",add
+231316,Whitefeather Crane,Normal,0,125,Waterfowl,5736,[],add
+231322,Lambent Waterstrider,Normal,0,126,Water Strider,5736,[],add
+235414,Ravenous Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+236640,Dustseeker Spiderling,Normal,0,3,Spider,15968,"[0,0]",add
+236645,Shadetooth Bat,Normal,0,24,Bat,15968,"[0,0]",add
+237282,Lil' Skipper,Normal,0,291,Hopper,15347,"[-1,-1]",add
+237753,Void Stalker,Normal,0,32,Warp Stalker,16505,"[-1,-1]",add
+238162,Trench Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+238369,Whipwind Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+238488,Seething Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+240089,Trench Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+240416,Hot-Headed Lynx,Normal,0,2,Cat,15968,"[-1,-1]",add
+240737,Trench Stalker,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+241354,Void-Infused Brightscale,Normal,0,35,Serpent,4131,[],add
+242374,Void Crawler,Normal,0,292,Carapid,15336,"[0,0]",add
+242998,Mourning Warlynx,Normal,0,2,Cat,14838,"[1,null]",add
+243264,Seething Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+243658,Void-Yoked Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+243864,Voidfang,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+244617,Shredclaw Packhunter,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+244945,Rampant Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+247559,Den-Gorger Zitoc,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+247807,Prowling Griefshredder,Normal,0,315,Whiptails,15958,"[-1,-1]",add
+248016,Grafted Shredder,Normal,0,315,Whiptails,15958,"[-1,-1]",add
+248447,Kilivore Drone,Normal,0,31,Ravager,15458,[],add
+248448,Territorial Consumptor,Normal,0,42,Worm,15458,[],add
+248741,Rhazul,Rare,4,315,Whiptails,15355,"[-1,-1]",add
+250124,Plump Chitterfang,Normal,0,127,Rodent,3805,[],add
+250545,Stalking Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+250633,Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+250637,Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+252107,Encroaching Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+252108,Encroaching Packleader,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+252466,Razorshell Ravager,Normal,0,31,Ravager,16596,[],add
+253400,Radooni,Normal,0,39,Devilsaur,15355,"[-1,-1]",add
+254576,Stalking Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+254577,Spiteful Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+255354,Starving Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+256609,Voracious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+256770,Bilemaw the Gluttonous,Rare,4,315,Whiptails,15458,"[-1,-1]",add
+256914,Lightmad Saptor,Normal,0,11,Raptor,15968,[],add
+257127,Barbtooth Bloodtracker,Elite,1,,Whiptail,16542|16595,[],add
+257240,Ripfang Stalker,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+257241,Ripfang Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+257244,Vicious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+257246,Roaming Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
+257740,Infested Shredclaw,Normal,0,315,Whiptails,15458,"[0,0]",add
+257765,Insatiable Consumptor,Normal,0,42,Worm,15458,[],add
+258073,Tusksplitter Boar,Normal,0,5,Boar,3805,[],add
+261337,Voidsinged Hawkstrider,Elite,1,12,Tallstrider,15968,"[-1,-1]",add

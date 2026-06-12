@@ -1,0 +1,3277 @@
+npc_id,reason
+582,cannot be tamed
+700,unknown location
+758,unknown location
+819,unknown location
+995,unknown location
+1189,unknown location
+1810,unknown location
+1811,unknown location
+1819,unknown location
+1820,unknown location
+1979,unknown location
+1980,unknown location
+2052,unknown location
+2164,unknown location
+2347,unknown location
+2707,unknown location
+3235,unknown location
+3237,unknown location
+3460,unknown location
+3466,unknown location
+3474,unknown location
+3722,unknown location
+3826,unknown location
+3866,unknown location
+4011,unknown location
+4013,unknown location
+4041,unknown location
+4044,unknown location
+4107,unknown location
+4109,unknown location
+4110,unknown location
+4304,not in game
+4482,unknown location
+4691,unknown location
+4724,unknown location
+4725,unknown location
+4822,not in game
+4823,not in game
+4824,not in game
+4825,not in game
+4862,unknown location
+5226,not in game
+5264,unknown location
+5276,unknown location
+5288,unknown location
+5305,unknown location
+5306,unknown location
+5326,unknown location
+5441,unknown location
+5443,unknown location
+5453,unknown location
+5456,not in game
+5457,unknown location
+5555,unknown location
+5596,unknown location
+5689,unknown location
+5827,unknown location
+5986,unknown location
+5987,unknown location
+5989,unknown location
+7094,unknown location
+7095,unknown location
+7096,unknown location
+7377,unknown location
+7378,unknown location
+8149,unknown location
+8208,unknown location
+8599,unknown location
+8760,unknown location
+10040,not in game
+10041,unknown location
+10925,unknown location
+11710,unknown location
+11836,unknown location
+11885,unknown location
+12054,unknown location
+12296,unknown location
+12297,unknown location
+13837,unknown location
+14406,unknown location
+14566,cannot be tamed
+15107,unknown location
+15421,unknown location
+15422,unknown location
+15653,unknown location
+16041,unknown location
+16371,unknown location
+16448,unknown location
+16931,unknown location
+17198,unknown location
+17221,unknown location
+17411,unknown location
+17526,unknown location
+17560,unknown location
+17561,unknown location
+17562,unknown location
+17563,unknown location
+17620,unknown location
+17668,unknown location
+17736,unknown location
+18226,unknown location
+18650,unknown location
+18651,cannot be tamed
+18851,unknown location
+18854,unknown location
+18878,unknown location
+19207,unknown location
+19770,unknown location
+19771,unknown location
+19785,unknown location
+19921,unknown location
+20412,unknown location
+20517,unknown location
+20618,unknown location
+20681,unknown location
+20734,unknown location
+20752,unknown location
+20754,unknown location
+20999,unknown location
+21012,unknown location
+21013,unknown location
+21014,unknown location
+21015,unknown location
+21016,unknown location
+21017,unknown location
+21372,unknown location
+21900,unknown location
+21922,unknown location
+22191,unknown location
+22193,unknown location
+22256,unknown location
+22287,unknown location
+22353,unknown location
+23013,unknown location
+23014,unknown location
+23507,cannot be tamed
+23527,cannot be tamed
+23528,cannot be tamed
+23529,cannot be tamed
+23530,cannot be tamed
+23531,cannot be tamed
+23747,cannot be tamed
+24049,unknown location
+24479,unknown location
+24615,unknown location
+24616,unknown location
+24731,unknown location
+24732,unknown location
+24757,unknown location
+24793,unknown location
+24794,unknown location
+25113,unknown location
+25447,unknown location
+25667,unknown location
+25963,unknown location
+25989,unknown location
+27214,unknown location
+27740,unknown location
+27902,unknown location
+27911,cannot be tamed
+27912,cannot be tamed
+28278,unknown location
+28614,unknown location
+28711,unknown location
+28737,unknown location
+28899,unknown location
+28900,unknown location
+28903,cannot be tamed
+29741,unknown location
+29748,unknown location
+29889,unknown location
+30187,cannot be tamed
+30573,cannot be tamed
+30574,cannot be tamed
+30613,unknown location
+31045,cannot be tamed
+31528,unknown location
+31809,unknown location
+31871,unknown location
+32392,unknown location
+32976,unknown location
+34178,unknown location
+34262,unknown location
+34263,unknown location
+35231,unknown location
+35285,unknown location
+35905,unknown location
+36113,unknown location
+36197,unknown location
+36362,unknown location
+36540,cannot be tamed
+36555,unknown location
+36560,unknown location
+36623,unknown location
+36741,unknown location
+37089,unknown location
+38206,unknown location
+38357,unknown location
+38371,unknown location
+38373,cannot be tamed
+38593,unknown location
+38765,unknown location
+38844,cannot be tamed
+39439,unknown location
+39443,cannot be tamed
+39850,unknown location
+39851,unknown location
+39943,unknown location
+40337,unknown location
+40338,unknown location
+41539,cannot be tamed
+41595,unknown location
+41604,unknown location
+41917,unknown location
+41919,unknown location
+42193,unknown location
+42242,unknown location
+42373,unknown location
+42710,unknown location
+42712,unknown location
+42713,unknown location
+42714,unknown location
+42715,unknown location
+42717,unknown location
+42718,cannot be tamed
+42719,unknown location
+42720,unknown location
+42721,unknown location
+42722,unknown location
+43038,unknown location
+43064,unknown location
+43182,cannot be tamed
+43498,cannot be tamed
+44014,unknown location
+44138,unknown location
+44427,cannot be tamed
+44428,unknown location
+44429,cannot be tamed
+44480,unknown location
+44639,unknown location
+44832,unknown location
+44836,cannot be tamed
+45121,cannot be tamed
+45142,unknown location
+45433,cannot be tamed
+45434,cannot be tamed
+45906,unknown location
+46123,unknown location
+46150,unknown location
+46152,unknown location
+46155,unknown location
+46156,unknown location
+46159,unknown location
+46160,unknown location
+46161,unknown location
+46517,cannot be tamed
+46536,cannot be tamed
+47056,unknown location
+47666,cannot be tamed
+48146,unknown location
+48151,unknown location
+48325,cannot be tamed
+48511,unknown location
+48532,unknown location
+48635,unknown location
+48920,unknown location
+48945,unknown location
+49486,unknown location
+50862,unknown location
+50866,unknown location
+50873,unknown location
+50918,cannot be tamed
+51107,unknown location
+51194,unknown location
+51197,unknown location
+51198,unknown location
+51199,unknown location
+51368,unknown location
+51369,unknown location
+51442,unknown location
+51589,cannot be tamed
+51761,unknown location
+52174,unknown location
+52622,unknown location
+52686,unknown location
+53523,unknown location
+54132,unknown location
+54510,cannot be tamed
+54897,unknown location
+54991,unknown location
+55095,unknown location
+55272,cannot be tamed
+55273,cannot be tamed
+55317,unknown location
+55607,unknown location
+55664,unknown location
+56132,cannot be tamed
+56200,unknown location
+56253,cannot be tamed
+56254,cannot be tamed
+56255,cannot be tamed
+56652,unknown location
+56897,unknown location
+57239,unknown location
+57273,unknown location
+57442,unknown location
+58112,unknown location
+58213,cannot be tamed
+58214,cannot be tamed
+58217,cannot be tamed
+58229,unknown location
+58552,unknown location
+58553,unknown location
+58554,unknown location
+58678,unknown location
+58724,unknown location
+58896,unknown location
+58950,unknown location
+59149,unknown location
+59239,unknown location
+59431,unknown location
+59603,cannot be tamed
+59658,unknown location
+59675,unknown location
+59780,unknown location
+59975,unknown location
+60134,unknown location
+60294,unknown location
+60748,unknown location
+60800,cannot be tamed
+61177,unknown location
+61294,unknown location
+61410,cannot be tamed
+61556,unknown location
+61748,unknown location
+61911,unknown location
+62267,cannot be tamed
+62372,unknown location
+62533,unknown location
+62597,cannot be tamed
+62598,cannot be tamed
+62654,unknown location
+63025,cannot be tamed
+63026,unknown location
+63116,unknown location
+63172,unknown location
+63201,unknown location
+63282,unknown location
+63297,unknown location
+63298,unknown location
+63403,unknown location
+63404,unknown location
+63503,unknown location
+63509,unknown location
+63543,unknown location
+63600,unknown location
+63638,unknown location
+63667,unknown location
+63739,unknown location
+63765,cannot be tamed
+63870,unknown location
+63950,unknown location
+63956,unknown location
+64005,unknown location
+64018,unknown location
+64046,unknown location
+64211,unknown location
+64485,unknown location
+64554,unknown location
+64669,unknown location
+64670,unknown location
+64671,unknown location
+64832,cannot be tamed
+64834,unknown location
+64849,cannot be tamed
+65115,unknown location
+65122,unknown location
+65188,unknown location
+65236,unknown location
+65237,unknown location
+65238,unknown location
+65239,unknown location
+65240,unknown location
+65241,unknown location
+65339,unknown location
+65526,unknown location
+65672,cannot be tamed
+65673,cannot be tamed
+65674,cannot be tamed
+65679,cannot be tamed
+65723,cannot be tamed
+65724,cannot be tamed
+65816,unknown location
+65878,unknown location
+66431,unknown location
+66670,cannot be tamed
+66849,cannot be tamed
+67033,unknown location
+67162,cannot be tamed
+67475,unknown location
+67712,unknown location
+68585,unknown location
+68961,unknown location
+69095,unknown location
+69239,unknown location
+69679,unknown location
+69812,unknown location
+70149,unknown location
+71425,unknown location
+71500,unknown location
+71585,cannot be tamed
+71728,unknown location
+71729,unknown location
+71786,unknown location
+72244,unknown location
+72247,unknown location
+72287,unknown location
+72288,unknown location
+72753,unknown location
+73449,unknown location
+73679,unknown location
+74032,cannot be tamed
+74311,unknown location
+74424,unknown location
+74453,unknown location
+74513,unknown location
+74566,unknown location
+74567,unknown location
+74597,unknown location
+74714,unknown location
+74909,unknown location
+74921,unknown location
+74933,unknown location
+74935,unknown location
+74957,unknown location
+74995,unknown location
+75009,unknown location
+75014,unknown location
+75115,unknown location
+75151,unknown location
+75206,unknown location
+75298,unknown location
+75312,unknown location
+75420,unknown location
+75519,unknown location
+75527,unknown location
+75558,unknown location
+75605,unknown location
+75674,unknown location
+75678,unknown location
+75737,unknown location
+75954,unknown location
+76178,unknown location
+76199,unknown location
+76255,unknown location
+76276,unknown location
+76497,unknown location
+76786,unknown location
+76857,unknown location
+76916,unknown location
+76919,unknown location
+76920,unknown location
+76956,unknown location
+76967,unknown location
+77065,unknown location
+77070,unknown location
+77110,unknown location
+77112,unknown location
+77115,unknown location
+77141,unknown location
+77142,unknown location
+77145,unknown location
+77146,unknown location
+77155,unknown location
+77157,unknown location
+77177,unknown location
+77307,unknown location
+77492,unknown location
+77516,unknown location
+77609,unknown location
+77655,unknown location
+77742,unknown location
+77785,unknown location
+77881,unknown location
+78141,unknown location
+78273,unknown location
+78329,unknown location
+78331,unknown location
+78332,unknown location
+78400,unknown location
+78404,unknown location
+78514,unknown location
+78547,cannot be tamed
+78712,unknown location
+78972,unknown location
+79019,unknown location
+79035,unknown location
+79214,unknown location
+79250,unknown location
+79384,unknown location
+79386,unknown location
+79411,unknown location
+79413,unknown location
+79420,unknown location
+79481,unknown location
+79642,unknown location
+79645,unknown location
+79646,unknown location
+79709,unknown location
+79959,unknown location
+80052,unknown location
+80164,unknown location
+80228,unknown location
+80354,unknown location
+80445,unknown location
+80522,unknown location
+80832,unknown location
+80836,unknown location
+80838,unknown location
+80839,unknown location
+80841,unknown location
+80842,unknown location
+80844,unknown location
+80845,unknown location
+80846,unknown location
+80848,unknown location
+80849,unknown location
+80915,unknown location
+81085,cannot be tamed
+81198,unknown location
+81276,unknown location
+81277,unknown location
+81333,cannot be tamed
+81538,unknown location
+81583,unknown location
+81598,unknown location
+81828,cannot be tamed
+82172,cannot be tamed
+82173,cannot be tamed
+82174,cannot be tamed
+82257,unknown location
+82306,unknown location
+82520,unknown location
+82908,unknown location
+82976,unknown location
+83048,unknown location
+83321,unknown location
+83322,unknown location
+83323,unknown location
+83324,unknown location
+83374,unknown location
+83664,unknown location
+83704,cannot be tamed
+83881,unknown location
+83932,unknown location
+84019,unknown location
+84020,unknown location
+84108,unknown location
+84231,unknown location
+84500,cannot be tamed
+84858,unknown location
+84867,cannot be tamed
+84935,unknown location
+84943,unknown location
+85030,unknown location
+85316,unknown location
+85404,unknown location
+85742,unknown location
+85788,unknown location
+86394,unknown location
+86742,unknown location
+86755,unknown location
+86756,unknown location
+86772,unknown location
+86846,unknown location
+87007,unknown location
+87008,unknown location
+87009,unknown location
+87010,unknown location
+87011,unknown location
+87013,unknown location
+87051,cannot be tamed
+87409,unknown location
+87439,unknown location
+87665,unknown location
+87796,unknown location
+88295,unknown location
+88460,unknown location
+88592,unknown location
+88844,unknown location
+89132,unknown location
+89243,unknown location
+89377,unknown location
+89379,unknown location
+89388,unknown location
+89395,unknown location
+89755,unknown location
+89757,unknown location
+89758,unknown location
+89828,unknown location
+90246,unknown location
+90502,unknown location
+90947,unknown location
+91171,unknown location
+91253,unknown location
+91385,unknown location
+91936,unknown location
+92198,unknown location
+92205,unknown location
+92235,unknown location
+92298,unknown location
+92301,unknown location
+92906,cannot be tamed
+93124,unknown location
+93647,unknown location
+93669,unknown location
+93718,unknown location
+94072,unknown location
+94201,unknown location
+94452,unknown location
+94459,unknown location
+94463,unknown location
+94866,unknown location
+95469,unknown location
+95908,cannot be tamed
+96165,unknown location
+97122,unknown location
+97129,unknown location
+97214,unknown location
+97247,unknown location
+97248,unknown location
+97330,unknown location
+97348,unknown location
+97434,unknown location
+97787,unknown location
+97789,unknown location
+97810,unknown location
+97820,unknown location
+98021,unknown location
+98230,unknown location
+98276,unknown location
+98468,unknown location
+98512,unknown location
+99055,unknown location
+99633,unknown location
+99701,unknown location
+99744,unknown location
+99760,unknown location
+99785,unknown location
+99794,unknown location
+99814,unknown location
+100329,unknown location
+101068,unknown location
+101069,unknown location
+101145,unknown location
+101169,unknown location
+101170,unknown location
+101171,unknown location
+101172,unknown location
+101173,unknown location
+101315,unknown location
+101515,unknown location
+101541,unknown location
+101575,unknown location
+101596,unknown location
+101619,unknown location
+101756,unknown location
+101828,unknown location
+102132,unknown location
+102229,unknown location
+102556,unknown location
+102863,unknown location
+103046,cannot be tamed
+103620,unknown location
+103621,unknown location
+103622,unknown location
+103623,unknown location
+103624,unknown location
+103625,unknown location
+103627,unknown location
+103628,unknown location
+103629,unknown location
+103635,unknown location
+103637,unknown location
+104219,unknown location
+104364,unknown location
+104882,cannot be tamed
+105052,unknown location
+105066,unknown location
+105214,unknown location
+105397,unknown location
+105398,unknown location
+105657,unknown location
+105662,unknown location
+106039,unknown location
+106821,unknown location
+106993,unknown location
+107957,unknown location
+108048,unknown location
+108624,unknown location
+108626,unknown location
+109111,unknown location
+109613,unknown location
+109627,unknown location
+109628,unknown location
+109779,unknown location
+110066,unknown location
+111854,unknown location
+111884,unknown location
+112533,cannot be tamed
+112839,unknown location
+112841,unknown location
+113150,unknown location
+113347,unknown location
+113493,unknown location
+113700,unknown location
+113739,unknown location
+113755,unknown location
+113756,unknown location
+113757,unknown location
+113758,unknown location
+113759,unknown location
+113761,unknown location
+114575,unknown location
+114576,unknown location
+114577,unknown location
+114835,unknown location
+115091,unknown location
+115093,unknown location
+115119,cannot be tamed
+116571,unknown location
+116921,unknown location
+117243,cannot be tamed
+117749,cannot be tamed
+117851,unknown location
+119181,unknown location
+119287,unknown location
+119326,unknown location
+119337,unknown location
+119339,unknown location
+119709,unknown location
+120589,unknown location
+120592,unknown location
+121440,unknown location
+121441,unknown location
+121442,unknown location
+121444,unknown location
+121446,unknown location
+121447,unknown location
+121448,unknown location
+121449,unknown location
+121457,unknown location
+121461,unknown location
+121661,unknown location
+122002,unknown location
+122023,unknown location
+122111,unknown location
+122154,unknown location
+122157,unknown location
+122165,unknown location
+122176,unknown location
+122362,unknown location
+122516,unknown location
+122517,unknown location
+122518,unknown location
+122570,unknown location
+122957,unknown location
+123306,unknown location
+123308,unknown location
+123309,unknown location
+123310,unknown location
+123312,unknown location
+123313,unknown location
+123316,unknown location
+123319,unknown location
+123320,unknown location
+123354,unknown location
+123425,unknown location
+123427,unknown location
+123463,unknown location
+123470,unknown location
+123519,unknown location
+123603,unknown location
+123620,unknown location
+123815,unknown location
+123842,unknown location
+123871,unknown location
+123901,unknown location
+123937,unknown location
+124039,unknown location
+124212,unknown location
+124476,unknown location
+124523,unknown location
+124524,unknown location
+124528,unknown location
+124529,unknown location
+124530,unknown location
+124700,unknown location
+124709,unknown location
+124761,unknown location
+124783,unknown location
+124784,unknown location
+124788,unknown location
+124791,unknown location
+124800,unknown location
+124807,unknown location
+124853,unknown location
+124876,unknown location
+124877,unknown location
+125003,unknown location
+125090,unknown location
+125100,unknown location
+125101,unknown location
+125276,unknown location
+125278,unknown location
+125308,unknown location
+125386,unknown location
+125477,unknown location
+126054,unknown location
+126313,unknown location
+126356,unknown location
+126505,unknown location
+126508,unknown location
+126704,unknown location
+126771,unknown location
+126831,unknown location
+127010,unknown location
+127201,unknown location
+127542,unknown location
+127543,unknown location
+127547,unknown location
+127572,cannot be tamed
+127580,unknown location
+127745,unknown location
+127746,unknown location
+127765,unknown location
+127959,unknown location
+128116,unknown location
+128189,unknown location
+128390,unknown location
+128397,unknown location
+128443,unknown location
+128668,unknown location
+128669,unknown location
+128670,unknown location
+128729,unknown location
+128799,unknown location
+128809,unknown location
+128817,unknown location
+128819,unknown location
+128821,unknown location
+128837,unknown location
+128912,unknown location
+128922,unknown location
+128950,unknown location
+128959,unknown location
+128968,unknown location
+129126,unknown location
+129284,unknown location
+129301,unknown location
+129346,unknown location
+129347,unknown location
+129495,unknown location
+129516,unknown location
+129558,unknown location
+129566,unknown location
+129644,unknown location
+129863,unknown location
+129868,unknown location
+129878,unknown location
+129935,unknown location
+130018,unknown location
+130020,unknown location
+130110,unknown location
+130195,unknown location
+130235,unknown location
+130244,unknown location
+130314,unknown location
+130370,unknown location
+130428,unknown location
+130545,unknown location
+130557,unknown location
+130607,unknown location
+130705,unknown location
+130751,unknown location
+130770,unknown location
+130772,unknown location
+130814,unknown location
+130817,unknown location
+130835,unknown location
+130903,unknown location
+131069,unknown location
+131072,unknown location
+131074,unknown location
+131076,unknown location
+131158,unknown location
+131190,unknown location
+131191,unknown location
+131283,unknown location
+131284,unknown location
+131380,unknown location
+131384,unknown location
+131603,unknown location
+131608,unknown location
+131609,unknown location
+131614,unknown location
+131766,unknown location
+131951,unknown location
+132102,unknown location
+132136,unknown location
+132311,unknown location
+132674,unknown location
+132987,unknown location
+133158,unknown location
+133603,unknown location
+133618,unknown location
+133619,unknown location
+133928,unknown location
+133996,unknown location
+133997,unknown location
+133999,unknown location
+134001,unknown location
+134206,unknown location
+134207,unknown location
+134264,cannot be tamed
+134434,unknown location
+134453,unknown location
+134596,unknown location
+134675,unknown location
+134825,unknown location
+135005,unknown location
+135062,unknown location
+135175,unknown location
+135193,unknown location
+135291,unknown location
+135306,unknown location
+135467,unknown location
+135543,unknown location
+135546,unknown location
+135674,unknown location
+135850,unknown location
+136299,unknown location
+136396,unknown location
+136399,unknown location
+136400,unknown location
+136719,unknown location
+136908,unknown location
+137140,unknown location
+137254,unknown location
+137257,unknown location
+137494,unknown location
+137495,unknown location
+137739,unknown location
+138139,unknown location
+139641,unknown location
+140276,unknown location
+140501,cannot be tamed
+140555,unknown location
+140556,unknown location
+140557,unknown location
+141021,unknown location
+141034,unknown location
+141729,unknown location
+141911,unknown location
+141940,unknown location
+142497,unknown location
+142500,unknown location
+142699,unknown location
+142711,unknown location
+143391,unknown location
+143392,unknown location
+143393,unknown location
+144122,cannot be tamed
+144329,unknown location
+144342,unknown location
+145172,unknown location
+145204,unknown location
+145528,cannot be tamed
+145529,cannot be tamed
+146282,unknown location
+146396,unknown location
+147142,unknown location
+147320,unknown location
+147322,unknown location
+147499,cannot be tamed
+147853,unknown location
+147864,unknown location
+148293,unknown location
+148296,unknown location
+148480,unknown location
+148693,unknown location
+148960,unknown location
+148961,unknown location
+149836,unknown location
+149851,unknown location
+150275,unknown location
+150569,unknown location
+150581,cannot be tamed
+150645,unknown location
+150649,unknown location
+150802,unknown location
+150857,cannot be tamed
+151172,unknown location
+151354,cannot be tamed
+151764,unknown location
+151993,unknown location
+151994,unknown location
+152379,unknown location
+152796,unknown location
+152797,unknown location
+152798,unknown location
+152799,unknown location
+152800,unknown location
+152801,unknown location
+152989,cannot be tamed
+153032,unknown location
+153447,unknown location
+153448,unknown location
+153549,unknown location
+153575,unknown location
+153585,unknown location
+153587,unknown location
+153588,unknown location
+153589,unknown location
+153592,unknown location
+153593,unknown location
+153594,unknown location
+153596,unknown location
+153598,unknown location
+153608,unknown location
+153609,unknown location
+153611,unknown location
+153612,unknown location
+153613,unknown location
+153614,unknown location
+153615,unknown location
+153629,unknown location
+153656,unknown location
+153657,unknown location
+153659,unknown location
+153660,unknown location
+153661,unknown location
+153663,unknown location
+153664,unknown location
+153691,unknown location
+153719,unknown location
+153726,unknown location
+153731,unknown location
+153733,unknown location
+153792,unknown location
+153892,unknown location
+153902,cannot be tamed
+154090,unknown location
+154107,unknown location
+154115,unknown location
+154155,cannot be tamed
+154173,unknown location
+154307,unknown location
+154308,unknown location
+154309,unknown location
+154316,unknown location
+154331,unknown location
+154506,unknown location
+154616,unknown location
+154659,unknown location
+154666,unknown location
+154868,unknown location
+154872,unknown location
+154905,unknown location
+155141,unknown location
+155455,unknown location
+155489,unknown location
+155570,unknown location
+155687,unknown location
+155709,unknown location
+155710,unknown location
+155711,unknown location
+155712,unknown location
+155713,unknown location
+155714,unknown location
+155715,unknown location
+155716,unknown location
+155731,unknown location
+155892,unknown location
+155893,unknown location
+155894,unknown location
+155895,unknown location
+155999,unknown location
+156065,unknown location
+156091,unknown location
+156097,unknown location
+156098,unknown location
+156099,unknown location
+156100,unknown location
+156101,unknown location
+156201,unknown location
+156240,unknown location
+156247,unknown location
+156267,unknown location
+156314,unknown location
+156315,unknown location
+156316,unknown location
+156317,unknown location
+156345,unknown location
+156375,unknown location
+156404,unknown location
+156416,cannot be tamed
+156509,unknown location
+156514,unknown location
+156527,unknown location
+156595,cannot be tamed
+156736,cannot be tamed
+156741,unknown location
+156744,unknown location
+156745,unknown location
+156751,unknown location
+156752,unknown location
+156757,unknown location
+156765,unknown location
+156808,cannot be tamed
+156912,unknown location
+156917,unknown location
+156920,unknown location
+156921,unknown location
+156924,unknown location
+156927,unknown location
+157438,unknown location
+157477,cannot be tamed
+157482,unknown location
+157606,unknown location
+157619,unknown location
+157670,cannot be tamed
+157684,unknown location
+157829,unknown location
+157937,unknown location
+157938,unknown location
+157974,unknown location
+158081,cannot be tamed
+158143,unknown location
+158153,unknown location
+158226,unknown location
+158234,unknown location
+158235,unknown location
+158237,unknown location
+158239,unknown location
+158248,unknown location
+158249,unknown location
+158250,unknown location
+158251,unknown location
+158252,unknown location
+158253,unknown location
+158258,unknown location
+158260,unknown location
+158291,unknown location
+158292,unknown location
+158294,unknown location
+158295,unknown location
+158298,cannot be tamed
+158344,unknown location
+158384,unknown location
+158429,unknown location
+158448,unknown location
+158460,unknown location
+158497,unknown location
+158590,unknown location
+158638,unknown location
+158639,unknown location
+158646,unknown location
+158698,cannot be tamed
+158722,cannot be tamed
+158767,cannot be tamed
+158768,cannot be tamed
+158812,unknown location
+158852,cannot be tamed
+158853,unknown location
+158945,unknown location
+158952,unknown location
+158954,unknown location
+159071,unknown location
+159072,unknown location
+159073,unknown location
+159077,unknown location
+159078,unknown location
+159079,unknown location
+159080,unknown location
+159123,unknown location
+159176,unknown location
+159194,unknown location
+159195,unknown location
+159196,unknown location
+159197,unknown location
+159221,unknown location
+159222,unknown location
+159223,unknown location
+159331,unknown location
+159388,cannot be tamed
+159637,cannot be tamed
+159641,cannot be tamed
+159648,unknown location
+159666,unknown location
+159667,unknown location
+159675,cannot be tamed
+159697,cannot be tamed
+159698,unknown location
+159746,unknown location
+159760,unknown location
+159831,unknown location
+159835,cannot be tamed
+159842,unknown location
+159843,unknown location
+159844,unknown location
+159849,unknown location
+159915,cannot be tamed
+159917,cannot be tamed
+159925,unknown location
+159926,unknown location
+160014,unknown location
+160015,unknown location
+160016,unknown location
+160017,unknown location
+160018,unknown location
+160019,unknown location
+160050,unknown location
+160051,unknown location
+160052,unknown location
+160078,unknown location
+160079,unknown location
+160080,unknown location
+160267,unknown location
+160269,unknown location
+160307,unknown location
+160308,unknown location
+160309,unknown location
+160310,unknown location
+160311,unknown location
+160319,unknown location
+160320,unknown location
+160321,unknown location
+160347,unknown location
+160395,unknown location
+160414,unknown location
+160531,unknown location
+160547,unknown location
+160548,unknown location
+160549,unknown location
+160552,unknown location
+160553,unknown location
+160554,unknown location
+160555,unknown location
+160556,unknown location
+160557,unknown location
+160558,unknown location
+160559,unknown location
+160560,unknown location
+160565,unknown location
+160566,unknown location
+160584,unknown location
+160585,unknown location
+160586,unknown location
+160587,unknown location
+160588,unknown location
+160589,unknown location
+160590,unknown location
+160591,unknown location
+160592,unknown location
+160611,unknown location
+160612,unknown location
+160615,unknown location
+160616,unknown location
+160617,unknown location
+160618,unknown location
+160619,unknown location
+160620,unknown location
+160634,cannot be tamed
+160685,unknown location
+160691,unknown location
+160784,unknown location
+160787,unknown location
+160788,unknown location
+160852,unknown location
+160853,unknown location
+160917,cannot be tamed
+160975,unknown location
+161069,unknown location
+161149,unknown location
+161227,unknown location
+161249,cannot be tamed
+161452,unknown location
+161466,unknown location
+161468,unknown location
+161471,unknown location
+161486,unknown location
+161567,unknown location
+161585,cannot be tamed
+161828,cannot be tamed
+161960,unknown location
+162011,unknown location
+162043,unknown location
+162045,unknown location
+162054,unknown location
+162055,unknown location
+162104,unknown location
+162155,unknown location
+162156,unknown location
+162157,unknown location
+162437,unknown location
+162478,cannot be tamed
+162536,unknown location
+162617,unknown location
+162625,unknown location
+162626,unknown location
+162627,unknown location
+162628,unknown location
+162639,unknown location
+162661,unknown location
+162701,unknown location
+162705,cannot be tamed
+162707,unknown location
+162747,unknown location
+162766,unknown location
+162814,unknown location
+162894,cannot be tamed
+162913,cannot be tamed
+162964,unknown location
+162990,cannot be tamed
+162995,unknown location
+163047,unknown location
+163166,unknown location
+163170,unknown location
+163188,unknown location
+163234,unknown location
+163235,unknown location
+163236,unknown location
+163238,unknown location
+163239,unknown location
+163240,unknown location
+163241,unknown location
+163251,unknown location
+163265,unknown location
+163364,cannot be tamed
+163432,unknown location
+163439,cannot be tamed
+163454,unknown location
+163455,unknown location
+163456,unknown location
+163466,unknown location
+163468,unknown location
+163507,cannot be tamed
+163525,unknown location
+163526,unknown location
+163527,unknown location
+163528,unknown location
+163529,unknown location
+163530,unknown location
+163531,unknown location
+163786,unknown location
+163884,unknown location
+163899,unknown location
+163953,unknown location
+163956,unknown location
+163975,unknown location
+163997,unknown location
+164043,cannot be tamed
+164118,unknown location
+164186,unknown location
+164234,cannot be tamed
+164379,unknown location
+164385,cannot be tamed
+164433,unknown location
+164497,unknown location
+164528,unknown location
+164582,unknown location
+164598,unknown location
+164690,unknown location
+164788,unknown location
+164789,unknown location
+164790,unknown location
+164791,unknown location
+164792,unknown location
+164813,unknown location
+164863,unknown location
+164895,unknown location
+164915,cannot be tamed
+164990,cannot be tamed
+164995,unknown location
+165012,unknown location
+165079,unknown location
+165081,unknown location
+165085,unknown location
+165125,cannot be tamed
+165189,generic hunter pet id
+165223,unknown location
+165225,unknown location
+165365,unknown location
+165368,unknown location
+165449,unknown location
+165450,unknown location
+165451,unknown location
+165854,unknown location
+165917,unknown location
+165931,unknown location
+165937,unknown location
+166016,unknown location
+166099,unknown location
+166354,unknown location
+166421,cannot be tamed
+166423,cannot be tamed
+166433,unknown location
+166434,unknown location
+166517,unknown location
+166671,unknown location
+166895,unknown location
+166951,unknown location
+166972,not in game
+167065,cannot be tamed
+167066,cannot be tamed
+167068,cannot be tamed
+167069,cannot be tamed
+167070,cannot be tamed
+167071,cannot be tamed
+167114,unknown location
+167328,unknown location
+167376,unknown location
+167418,unknown location
+167441,unknown location
+167448,unknown location
+167461,unknown location
+167471,unknown location
+167494,unknown location
+167629,unknown location
+167973,unknown location
+168013,unknown location
+168132,unknown location
+168149,unknown location
+168239,unknown location
+168302,unknown location
+168303,unknown location
+168338,unknown location
+168469,unknown location
+168470,unknown location
+168552,unknown location
+168725,unknown location
+168735,unknown location
+168784,unknown location
+168792,unknown location
+168804,unknown location
+168806,unknown location
+168873,unknown location
+168894,unknown location
+168897,unknown location
+168910,unknown location
+168923,unknown location
+169240,unknown location
+169241,unknown location
+169243,unknown location
+169247,unknown location
+169251,unknown location
+169290,unknown location
+169503,unknown location
+169515,unknown location
+169532,unknown location
+169579,unknown location
+169737,unknown location
+169741,unknown location
+169758,unknown location
+169767,unknown location
+169856,unknown location
+169911,unknown location
+169963,unknown location
+170112,unknown location
+170268,unknown location
+170298,unknown location
+170299,unknown location
+170307,unknown location
+170371,unknown location
+170516,unknown location
+170521,unknown location
+170577,unknown location
+170642,unknown location
+170701,unknown location
+170715,unknown location
+170746,unknown location
+170829,unknown location
+170968,unknown location
+170995,cannot be tamed
+171052,unknown location
+171202,cannot be tamed
+171203,cannot be tamed
+171204,cannot be tamed
+171205,cannot be tamed
+171207,cannot be tamed
+171209,cannot be tamed
+171212,cannot be tamed
+171365,unknown location
+171450,cannot be tamed
+171511,unknown location
+171591,cannot be tamed
+171837,unknown location
+171862,unknown location
+171870,unknown location
+171999,unknown location
+172000,unknown location
+172179,unknown location
+172286,unknown location
+172319,unknown location
+172329,unknown location
+172426,unknown location
+172871,cannot be tamed
+172876,unknown location
+173075,unknown location
+173123,unknown location
+173133,cannot be tamed
+173160,unknown location
+173202,unknown location
+173205,cannot be tamed
+173211,cannot be tamed
+173216,cannot be tamed
+173379,cannot be tamed
+173411,unknown location
+173522,unknown location
+173524,unknown location
+173560,unknown location
+173611,unknown location
+173619,unknown location
+173625,unknown location
+173692,unknown location
+173698,unknown location
+173716,unknown location
+173727,unknown location
+173776,unknown location
+173777,unknown location
+173803,cannot be tamed
+173806,cannot be tamed
+173807,cannot be tamed
+173818,cannot be tamed
+174203,unknown location
+174212,unknown location
+174281,unknown location
+174441,unknown location
+174443,unknown location
+174444,unknown location
+174447,unknown location
+174448,unknown location
+174449,unknown location
+174451,unknown location
+174452,unknown location
+174540,unknown location
+174551,unknown location
+174657,unknown location
+174761,unknown location
+174795,unknown location
+174855,unknown location
+174881,unknown location
+174884,unknown location
+174990,unknown location
+174994,cannot be tamed
+175141,unknown location
+175237,unknown location
+175245,unknown location
+175254,unknown location
+175396,cannot be tamed
+175626,unknown location
+175627,unknown location
+175641,unknown location
+175644,unknown location
+175788,cannot be tamed
+175789,cannot be tamed
+175843,unknown location
+176204,unknown location
+176206,unknown location
+176207,unknown location
+176208,unknown location
+176209,unknown location
+176210,unknown location
+176212,unknown location
+176213,unknown location
+176215,unknown location
+176216,unknown location
+176348,unknown location
+176351,unknown location
+176405,unknown location
+176491,unknown location
+176508,unknown location
+176526,unknown location
+176587,unknown location
+176590,unknown location
+176628,unknown location
+176629,unknown location
+176630,unknown location
+176645,unknown location
+176646,unknown location
+176647,unknown location
+176649,unknown location
+176685,unknown location
+176695,unknown location
+176696,unknown location
+176769,unknown location
+176788,unknown location
+176810,unknown location
+177348,unknown location
+177543,cannot be tamed
+177648,unknown location
+177649,unknown location
+177669,unknown location
+178097,unknown location
+178196,cannot be tamed
+178258,unknown location
+178756,cannot be tamed
+178910,unknown location
+178942,unknown location
+179494,unknown location
+179544,unknown location
+180075,cannot be tamed
+180208,cannot be tamed
+180283,unknown location
+180370,unknown location
+180483,cannot be tamed
+180498,unknown location
+180568,unknown location
+180675,unknown location
+180704,unknown location
+180752,unknown location
+180795,unknown location
+180894,unknown location
+181315,unknown location
+181382,unknown location
+181386,unknown location
+181423,unknown location
+181424,unknown location
+181428,unknown location
+181433,unknown location
+181436,unknown location
+181437,unknown location
+181475,unknown location
+181476,unknown location
+181537,unknown location
+181576,unknown location
+181790,unknown location
+181819,unknown location
+181858,unknown location
+181860,unknown location
+181863,unknown location
+181864,unknown location
+181866,unknown location
+181867,unknown location
+181868,unknown location
+182097,unknown location
+182118,unknown location
+182199,unknown location
+182321,unknown location
+182333,unknown location
+182334,unknown location
+182355,unknown location
+182434,unknown location
+182443,cannot be tamed
+182447,unknown location
+182448,unknown location
+182486,unknown location
+182532,unknown location
+182545,unknown location
+182546,unknown location
+182547,unknown location
+182549,unknown location
+182550,unknown location
+182551,unknown location
+182557,unknown location
+182558,unknown location
+182559,unknown location
+182560,unknown location
+182562,unknown location
+182564,unknown location
+182565,unknown location
+182566,unknown location
+182570,unknown location
+182571,unknown location
+182573,unknown location
+182574,unknown location
+182577,unknown location
+182580,unknown location
+182581,unknown location
+182582,unknown location
+182583,unknown location
+182584,unknown location
+182588,unknown location
+182591,unknown location
+182633,unknown location
+182634,unknown location
+182635,unknown location
+182639,unknown location
+182658,unknown location
+182697,unknown location
+182698,unknown location
+182699,unknown location
+182700,unknown location
+182707,unknown location
+182713,unknown location
+182716,unknown location
+182717,unknown location
+182718,unknown location
+182720,unknown location
+182721,unknown location
+182722,unknown location
+182731,unknown location
+182732,unknown location
+182746,unknown location
+182747,unknown location
+182748,unknown location
+182779,unknown location
+182780,unknown location
+182810,unknown location
+182818,unknown location
+182846,unknown location
+182849,unknown location
+183052,cannot be tamed
+183161,unknown location
+183180,unknown location
+183182,unknown location
+183183,unknown location
+183188,unknown location
+183189,unknown location
+183232,unknown location
+183233,unknown location
+183235,unknown location
+183236,unknown location
+183237,unknown location
+183238,unknown location
+183254,unknown location
+183259,unknown location
+183260,unknown location
+183297,unknown location
+183351,unknown location
+183352,unknown location
+183353,unknown location
+183356,unknown location
+183361,unknown location
+183362,unknown location
+183367,unknown location
+183368,unknown location
+183403,unknown location
+183405,unknown location
+183491,unknown location
+183492,unknown location
+183519,unknown location
+183520,unknown location
+183523,unknown location
+183544,unknown location
+183575,unknown location
+183581,unknown location
+183582,unknown location
+183583,unknown location
+183584,unknown location
+183585,unknown location
+183586,unknown location
+183588,unknown location
+183589,unknown location
+183590,unknown location
+183591,unknown location
+183593,unknown location
+183597,unknown location
+183598,unknown location
+183599,unknown location
+183600,unknown location
+183601,unknown location
+183603,unknown location
+183604,unknown location
+183611,unknown location
+183617,unknown location
+183618,unknown location
+183619,unknown location
+183621,unknown location
+183622,unknown location
+183632,unknown location
+183648,unknown location
+183729,unknown location
+183730,unknown location
+183732,unknown location
+183733,unknown location
+183734,unknown location
+183735,unknown location
+184521,cannot be tamed
+184524,cannot be tamed
+184656,cannot be tamed
+184863,unknown location
+184933,unknown location
+185169,unknown location
+185210,unknown location
+185296,cannot be tamed
+185297,cannot be tamed
+185298,cannot be tamed
+185301,cannot be tamed
+185302,cannot be tamed
+185303,cannot be tamed
+185305,cannot be tamed
+185382,unknown location
+185483,unknown location
+185613,cannot be tamed
+185640,unknown location
+185641,unknown location
+185649,unknown location
+185717,unknown location
+185718,unknown location
+185719,unknown location
+185720,unknown location
+185721,unknown location
+185722,unknown location
+185723,unknown location
+185724,unknown location
+185725,unknown location
+185782,unknown location
+185783,unknown location
+185879,unknown location
+185913,unknown location
+185922,unknown location
+185924,unknown location
+185925,unknown location
+185926,unknown location
+185927,unknown location
+186155,unknown location
+186271,unknown location
+186273,unknown location
+186405,unknown location
+186409,unknown location
+186417,unknown location
+186435,unknown location
+186463,unknown location
+186654,unknown location
+186680,unknown location
+186685,unknown location
+186699,unknown location
+186811,unknown location
+186826,unknown location
+186831,unknown location
+186832,unknown location
+186835,unknown location
+186908,unknown location
+186909,unknown location
+186924,unknown location
+186954,unknown location
+187225,unknown location
+187333,unknown location
+187340,unknown location
+187456,unknown location
+187470,unknown location
+187476,unknown location
+187488,unknown location
+187871,cannot be tamed
+188074,cannot be tamed
+188094,unknown location
+188197,unknown location
+188214,unknown location
+188306,unknown location
+188308,unknown location
+188320,unknown location
+188325,unknown location
+188326,unknown location
+188327,unknown location
+188378,unknown location
+188379,unknown location
+188381,unknown location
+188384,unknown location
+188393,unknown location
+188394,unknown location
+188406,unknown location
+188407,unknown location
+188409,unknown location
+188411,unknown location
+188423,unknown location
+188424,unknown location
+188425,unknown location
+188427,unknown location
+188428,unknown location
+188429,unknown location
+188430,unknown location
+188431,unknown location
+188459,unknown location
+188460,unknown location
+188467,unknown location
+188470,unknown location
+188473,unknown location
+188528,unknown location
+188529,unknown location
+188536,unknown location
+188552,unknown location
+188553,unknown location
+188554,unknown location
+188555,unknown location
+188556,unknown location
+188578,unknown location
+188580,unknown location
+188581,unknown location
+188582,unknown location
+188587,unknown location
+188591,unknown location
+188593,unknown location
+188603,unknown location
+188607,unknown location
+188608,unknown location
+188609,unknown location
+188612,unknown location
+188613,unknown location
+188614,unknown location
+188615,unknown location
+188619,unknown location
+188620,unknown location
+188628,unknown location
+188632,unknown location
+188633,unknown location
+188638,unknown location
+188641,unknown location
+188671,unknown location
+188718,unknown location
+188719,unknown location
+188720,unknown location
+188721,unknown location
+188727,unknown location
+188728,unknown location
+188729,unknown location
+188730,unknown location
+188731,unknown location
+188732,unknown location
+188740,unknown location
+188741,unknown location
+188742,unknown location
+188743,unknown location
+188745,unknown location
+188748,unknown location
+188784,unknown location
+188786,unknown location
+188788,unknown location
+188797,unknown location
+188800,unknown location
+188806,unknown location
+188808,unknown location
+188810,unknown location
+188869,cannot be tamed
+188874,unknown location
+188995,cannot be tamed
+189032,unknown location
+189383,unknown location
+189407,unknown location
+189499,unknown location
+189501,unknown location
+189522,unknown location
+189634,cannot be tamed
+189635,cannot be tamed
+189645,unknown location
+189899,cannot be tamed
+189936,unknown location
+190100,cannot be tamed
+190156,unknown location
+190249,cannot be tamed
+190296,unknown location
+190321,unknown location
+190425,unknown location
+190444,unknown location
+190446,unknown location
+190447,unknown location
+190453,unknown location
+190454,unknown location
+190461,unknown location
+190462,unknown location
+190465,unknown location
+190607,cannot be tamed
+190608,cannot be tamed
+190613,unknown location
+190709,unknown location
+190710,unknown location
+190711,unknown location
+190712,unknown location
+190714,unknown location
+190715,unknown location
+190952,unknown location
+191008,cannot be tamed
+191109,unknown location
+191238,cannot be tamed
+191242,cannot be tamed
+191255,unknown location
+191327,unknown location
+191334,cannot be tamed
+191346,unknown location
+191348,unknown location
+191357,cannot be tamed
+191367,unknown location
+191375,cannot be tamed
+191427,unknown location
+191429,unknown location
+191430,unknown location
+191505,unknown location
+191546,unknown location
+191607,unknown location
+191636,cannot be tamed
+191638,unknown location
+191644,unknown location
+191668,unknown location
+191744,unknown location
+191829,unknown location
+191923,unknown location
+191963,unknown location
+191964,unknown location
+191971,unknown location
+192122,unknown location
+192125,unknown location
+192127,unknown location
+192130,unknown location
+192156,unknown location
+192157,unknown location
+192158,unknown location
+192159,unknown location
+192160,unknown location
+192170,unknown location
+192171,unknown location
+192179,unknown location
+192180,unknown location
+192183,unknown location
+192209,unknown location
+192219,unknown location
+192390,unknown location
+192437,unknown location
+192485,unknown location
+192575,unknown location
+192643,unknown location
+192790,unknown location
+192870,unknown location
+193009,cannot be tamed
+193037,cannot be tamed
+193044,cannot be tamed
+193071,unknown location
+193129,unknown location
+193131,unknown location
+193141,unknown location
+193147,unknown location
+193272,unknown location
+193412,unknown location
+193444,unknown location
+193561,cannot be tamed
+193626,unknown location
+193642,unknown location
+193643,cannot be tamed
+193690,unknown location
+193769,unknown location
+193770,unknown location
+193771,unknown location
+193874,unknown location
+193902,unknown location
+194094,unknown location
+194153,unknown location
+194215,unknown location
+194257,unknown location
+194344,unknown location
+194345,unknown location
+194360,unknown location
+194366,unknown location
+194370,unknown location
+194420,unknown location
+194421,unknown location
+194429,unknown location
+194728,unknown location
+194814,unknown location
+194920,unknown location
+194929,unknown location
+195035,unknown location
+195369,unknown location
+195379,unknown location
+195433,cannot be tamed
+195435,cannot be tamed
+195534,unknown location
+195710,cannot be tamed
+195790,unknown location
+195823,unknown location
+196071,unknown location
+196094,cannot be tamed
+196159,cannot be tamed
+196266,unknown location
+196522,cannot be tamed
+196525,unknown location
+196526,cannot be tamed
+196527,cannot be tamed
+196669,cannot be tamed
+196714,cannot be tamed
+196715,cannot be tamed
+196716,unknown location
+196870,unknown location
+196873,unknown location
+196874,unknown location
+196875,unknown location
+196883,unknown location
+196884,cannot be tamed
+196885,cannot be tamed
+196892,unknown location
+196894,unknown location
+196895,unknown location
+196902,unknown location
+196904,unknown location
+196905,cannot be tamed
+196912,unknown location
+196916,unknown location
+196924,unknown location
+196929,cannot be tamed
+196944,unknown location
+197837,unknown location
+197917,unknown location
+197958,cannot be tamed
+198057,cannot be tamed
+198127,unknown location
+198187,unknown location
+198409,unknown location
+198425,unknown location
+198478,unknown location
+198570,unknown location
+198602,unknown location
+198603,unknown location
+198606,unknown location
+198657,unknown location
+198697,unknown location
+198698,unknown location
+198705,unknown location
+198731,unknown location
+198745,unknown location
+198765,unknown location
+198814,unknown location
+198816,unknown location
+198821,unknown location
+198894,unknown location
+199316,unknown location
+199966,unknown location
+199968,unknown location
+200237,unknown location
+200420,unknown location
+201064,unknown location
+201824,unknown location
+202266,unknown location
+202271,unknown location
+202557,unknown location
+202621,cannot be tamed
+202632,unknown location
+203278,cannot be tamed
+203867,unknown location
+203887,unknown location
+203891,unknown location
+203893,unknown location
+203896,unknown location
+203909,unknown location
+203916,unknown location
+204121,unknown location
+204163,unknown location
+204187,unknown location
+204246,unknown location
+204356,cannot be tamed
+204431,unknown location
+204433,unknown location
+204466,unknown location
+204584,unknown location
+204988,unknown location
+205031,unknown location
+205054,unknown location
+205055,unknown location
+205056,unknown location
+205059,unknown location
+205123,unknown location
+205137,unknown location
+206075,unknown location
+206223,unknown location
+206224,unknown location
+206226,unknown location
+206227,unknown location
+206229,unknown location
+206231,unknown location
+206234,unknown location
+206235,unknown location
+206239,unknown location
+206240,unknown location
+206241,unknown location
+206242,unknown location
+206472,cannot be tamed
+206549,unknown location
+206550,unknown location
+206554,unknown location
+206555,unknown location
+206556,unknown location
+206557,unknown location
+206558,unknown location
+206559,unknown location
+206560,unknown location
+206562,unknown location
+206563,unknown location
+206650,unknown location
+206751,unknown location
+206766,unknown location
+206767,unknown location
+206794,unknown location
+206797,unknown location
+206798,unknown location
+206799,unknown location
+206800,unknown location
+206813,unknown location
+206830,unknown location
+206840,unknown location
+206841,unknown location
+206842,unknown location
+206953,unknown location
+206954,unknown location
+207154,cannot be tamed
+207253,unknown location
+207565,unknown location
+207595,cannot be tamed
+207659,unknown location
+207929,unknown location
+208233,unknown location
+208589,unknown location
+208595,unknown location
+208602,unknown location
+208603,unknown location
+208690,unknown location
+209327,unknown location
+209466,unknown location
+209491,cannot be tamed
+209492,cannot be tamed
+209494,cannot be tamed
+209559,unknown location
+209595,cannot be tamed
+209725,unknown location
+209864,unknown location
+209916,unknown location
+210005,cannot be tamed
+210099,unknown location
+210165,unknown location
+210387,unknown location
+210444,unknown location
+210445,unknown location
+210446,unknown location
+210448,unknown location
+210450,unknown location
+210466,unknown location
+210468,unknown location
+210469,unknown location
+210622,unknown location
+210691,unknown location
+210918,unknown location
+210957,unknown location
+211037,unknown location
+211203,cannot be tamed
+211555,unknown location
+211556,unknown location
+211768,unknown location
+211771,unknown location
+211854,unknown location
+211881,unknown location
+211891,unknown location
+211892,unknown location
+211894,unknown location
+211899,unknown location
+211968,unknown location
+211969,unknown location
+211983,unknown location
+212091,unknown location
+212092,unknown location
+212101,unknown location
+212122,unknown location
+212123,unknown location
+212214,unknown location
+212276,unknown location
+212277,unknown location
+212278,unknown location
+212281,unknown location
+212291,unknown location
+212300,unknown location
+212302,unknown location
+212303,unknown location
+212307,unknown location
+212311,unknown location
+212312,unknown location
+212313,unknown location
+212335,unknown location
+212447,unknown location
+212511,unknown location
+212512,unknown location
+212520,unknown location
+212521,unknown location
+212529,unknown location
+212537,unknown location
+212538,unknown location
+212543,unknown location
+212545,unknown location
+212546,unknown location
+212560,unknown location
+212561,unknown location
+212563,unknown location
+212564,unknown location
+212565,unknown location
+212599,unknown location
+212601,unknown location
+212607,unknown location
+212612,unknown location
+212613,unknown location
+212614,unknown location
+212615,unknown location
+212616,unknown location
+212618,unknown location
+212619,unknown location
+212620,unknown location
+212621,unknown location
+212623,unknown location
+212627,unknown location
+212630,unknown location
+212634,unknown location
+212636,unknown location
+212637,unknown location
+212638,unknown location
+212640,unknown location
+212647,unknown location
+212649,unknown location
+212650,unknown location
+212651,unknown location
+212652,unknown location
+212662,unknown location
+212663,unknown location
+212664,unknown location
+212665,unknown location
+212791,unknown location
+212794,unknown location
+212866,unknown location
+212868,unknown location
+212879,unknown location
+212880,unknown location
+212882,unknown location
+212894,unknown location
+212895,unknown location
+212896,unknown location
+212897,unknown location
+212898,unknown location
+212900,unknown location
+212901,unknown location
+212904,unknown location
+212905,unknown location
+212907,unknown location
+212908,unknown location
+212909,unknown location
+212919,unknown location
+212922,unknown location
+212923,unknown location
+212924,unknown location
+212926,unknown location
+212931,unknown location
+212932,unknown location
+212936,unknown location
+212937,unknown location
+212959,unknown location
+212989,unknown location
+212990,unknown location
+212994,unknown location
+212995,unknown location
+212996,unknown location
+212997,unknown location
+212998,unknown location
+213001,unknown location
+213002,unknown location
+213003,unknown location
+213004,unknown location
+213005,unknown location
+213006,unknown location
+213007,unknown location
+213009,unknown location
+213010,unknown location
+213015,unknown location
+213017,unknown location
+213022,unknown location
+213024,unknown location
+213025,unknown location
+213026,unknown location
+213027,unknown location
+213028,unknown location
+213055,unknown location
+213056,unknown location
+213067,unknown location
+213068,unknown location
+213084,unknown location
+213085,unknown location
+213088,unknown location
+213089,unknown location
+213090,unknown location
+213162,unknown location
+213163,unknown location
+213164,unknown location
+213165,unknown location
+213182,unknown location
+213188,unknown location
+213201,unknown location
+213202,unknown location
+213203,unknown location
+213204,unknown location
+213205,unknown location
+213206,unknown location
+213210,unknown location
+213211,unknown location
+213212,unknown location
+213214,unknown location
+213313,unknown location
+213314,unknown location
+213367,unknown location
+213821,unknown location
+213822,unknown location
+213845,unknown location
+213847,unknown location
+213848,unknown location
+213850,unknown location
+213851,unknown location
+213852,unknown location
+214156,unknown location
+214157,unknown location
+214217,unknown location
+214230,unknown location
+214233,unknown location
+214234,unknown location
+214283,unknown location
+214334,unknown location
+214357,cannot be tamed
+214401,unknown location
+214448,unknown location
+214473,unknown location
+214534,unknown location
+214578,unknown location
+214723,unknown location
+214736,unknown location
+214738,unknown location
+214739,unknown location
+214741,unknown location
+214742,unknown location
+214743,unknown location
+214805,unknown location
+214806,unknown location
+214815,unknown location
+214824,cannot be tamed
+214834,unknown location
+214845,unknown location
+214875,unknown location
+214932,unknown location
+215002,unknown location
+215003,unknown location
+215004,unknown location
+215005,unknown location
+215026,unknown location
+215031,unknown location
+215059,unknown location
+215074,unknown location
+215082,unknown location
+215099,unknown location
+215346,unknown location
+215347,unknown location
+215373,unknown location
+215374,unknown location
+215453,unknown location
+215455,unknown location
+215457,unknown location
+215690,unknown location
+215691,unknown location
+215871,unknown location
+215872,unknown location
+215873,unknown location
+215874,unknown location
+215875,unknown location
+215876,unknown location
+215884,unknown location
+215886,unknown location
+215887,unknown location
+215888,unknown location
+215897,unknown location
+215900,unknown location
+215903,unknown location
+215907,unknown location
+215909,unknown location
+215919,unknown location
+215920,unknown location
+215921,unknown location
+215922,unknown location
+215923,unknown location
+215932,unknown location
+215933,unknown location
+215934,unknown location
+215936,unknown location
+215937,unknown location
+215938,unknown location
+215940,unknown location
+215942,unknown location
+215945,unknown location
+215957,unknown location
+215959,unknown location
+215960,unknown location
+216134,cannot be tamed
+216299,unknown location
+216395,unknown location
+216400,unknown location
+216404,unknown location
+216692,unknown location
+216696,unknown location
+216974,unknown location
+217085,unknown location
+217183,unknown location
+217209,unknown location
+217238,unknown location
+217239,unknown location
+217269,unknown location
+217373,unknown location
+217409,unknown location
+217411,unknown location
+217723,unknown location
+217726,unknown location
+217797,unknown location
+218011,cannot be tamed
+218047,unknown location
+218122,unknown location
+218329,unknown location
+218395,unknown location
+218398,unknown location
+218528,unknown location
+218763,unknown location
+218879,unknown location
+219057,cannot be tamed
+219058,cannot be tamed
+219059,cannot be tamed
+219060,cannot be tamed
+219061,cannot be tamed
+219062,cannot be tamed
+219120,unknown location
+219121,unknown location
+219122,unknown location
+219123,unknown location
+219124,unknown location
+219125,unknown location
+219127,cannot be tamed
+219128,cannot be tamed
+219129,cannot be tamed
+219130,cannot be tamed
+219131,cannot be tamed
+219132,cannot be tamed
+219195,cannot be tamed
+219248,unknown location
+219378,cannot be tamed
+219584,unknown location
+219628,unknown location
+219693,unknown location
+219929,unknown location
+220145,unknown location
+220146,unknown location
+220322,unknown location
+220325,unknown location
+220327,unknown location
+220345,unknown location
+220383,unknown location
+220392,unknown location
+220398,unknown location
+220548,unknown location
+220613,unknown location
+220701,unknown location
+220789,unknown location
+220790,unknown location
+220800,unknown location
+220851,unknown location
+220852,unknown location
+220853,unknown location
+220854,unknown location
+221029,unknown location
+221136,unknown location
+221138,unknown location
+221141,unknown location
+221142,unknown location
+221144,unknown location
+221145,unknown location
+221151,unknown location
+221563,unknown location
+221571,unknown location
+221591,unknown location
+221596,unknown location
+221616,unknown location
+221619,unknown location
+222324,unknown location
+222328,unknown location
+222382,unknown location
+222484,unknown location
+222485,unknown location
+222486,unknown location
+222491,unknown location
+222498,unknown location
+222515,unknown location
+222789,not in game
+222807,unknown location
+222868,cannot be tamed
+222917,cannot be tamed
+222958,unknown location
+223202,unknown location
+223239,unknown location
+223545,unknown location
+223639,unknown location
+223640,unknown location
+223684,cannot be tamed
+223855,unknown location
+223933,unknown location
+223978,unknown location
+224056,unknown location
+224100,unknown location
+224112,unknown location
+224125,unknown location
+224467,unknown location
+224469,unknown location
+224472,unknown location
+224585,unknown location
+224587,unknown location
+224636,unknown location
+224641,unknown location
+224643,unknown location
+224656,unknown location
+224657,unknown location
+224668,unknown location
+224677,unknown location
+224684,unknown location
+224686,unknown location
+224689,unknown location
+224704,unknown location
+224705,unknown location
+224706,unknown location
+224738,unknown location
+224767,unknown location
+224897,unknown location
+224983,unknown location
+224984,unknown location
+224985,unknown location
+224986,unknown location
+224987,unknown location
+224989,unknown location
+224990,unknown location
+224991,unknown location
+224992,unknown location
+224993,unknown location
+224995,unknown location
+224996,unknown location
+224997,unknown location
+224998,unknown location
+224999,unknown location
+225023,unknown location
+225025,unknown location
+225027,unknown location
+225028,unknown location
+225029,unknown location
+225030,unknown location
+225031,unknown location
+225032,unknown location
+225033,unknown location
+225034,unknown location
+225041,unknown location
+225042,unknown location
+225043,unknown location
+225044,unknown location
+225045,unknown location
+225046,unknown location
+225047,unknown location
+225048,unknown location
+225050,unknown location
+225051,unknown location
+225052,unknown location
+225053,unknown location
+225054,unknown location
+225057,unknown location
+225064,unknown location
+225065,unknown location
+225158,unknown location
+225159,unknown location
+225161,unknown location
+225162,unknown location
+225181,unknown location
+225236,unknown location
+225237,unknown location
+225255,unknown location
+225349,unknown location
+225362,unknown location
+225363,unknown location
+225364,unknown location
+225365,unknown location
+225369,unknown location
+225376,cannot be tamed
+225381,unknown location
+225382,unknown location
+225446,unknown location
+225468,unknown location
+225548,unknown location
+225550,unknown location
+225557,unknown location
+225703,unknown location
+225796,unknown location
+225862,unknown location
+225902,unknown location
+225943,unknown location
+225968,unknown location
+225969,unknown location
+225970,unknown location
+225971,unknown location
+225989,unknown location
+225990,unknown location
+226000,unknown location
+226037,unknown location
+226122,unknown location
+226172,unknown location
+226235,unknown location
+226242,unknown location
+226320,unknown location
+226322,unknown location
+226324,unknown location
+226325,unknown location
+226355,unknown location
+226356,unknown location
+226464,unknown location
+226508,unknown location
+226889,cannot be tamed
+226891,cannot be tamed
+226996,unknown location
+227057,unknown location
+227167,unknown location
+227183,cannot be tamed
+227184,cannot be tamed
+227185,cannot be tamed
+227268,unknown location
+227291,cannot be tamed
+227298,cannot be tamed
+227365,unknown location
+227557,unknown location
+227570,unknown location
+227669,unknown location
+227748,unknown location
+227864,unknown location
+227865,unknown location
+227953,unknown location
+227983,unknown location
+228018,unknown location
+228077,unknown location
+228082,unknown location
+228131,unknown location
+228164,unknown location
+228222,unknown location
+228309,unknown location
+228409,unknown location
+228452,unknown location
+228468,unknown location
+228487,unknown location
+228850,unknown location
+228851,unknown location
+228853,unknown location
+228854,unknown location
+228895,unknown location
+228896,unknown location
+228897,unknown location
+228898,unknown location
+229003,unknown location
+229004,unknown location
+229005,unknown location
+229007,unknown location
+229008,unknown location
+229010,unknown location
+229011,unknown location
+229012,unknown location
+229014,cannot be tamed
+229015,unknown location
+229118,unknown location
+229173,unknown location
+229178,unknown location
+229209,unknown location
+229491,unknown location
+229512,unknown location
+229525,unknown location
+229539,unknown location
+229804,unknown location
+229831,unknown location
+229832,unknown location
+230037,cannot be tamed
+230142,unknown location
+230203,unknown location
+230368,unknown location
+230369,unknown location
+230462,unknown location
+230556,unknown location
+230837,unknown location
+230914,unknown location
+230923,unknown location
+230924,unknown location
+230926,unknown location
+230957,unknown location
+231425,unknown location
+232606,unknown location
+232607,unknown location
+232608,unknown location
+232609,unknown location
+232610,unknown location
+232645,unknown location
+232671,unknown location
+232715,unknown location
+234318,unknown location
+234489,unknown location
+234758,unknown location
+234759,unknown location
+235349,unknown location
+235350,unknown location
+235351,unknown location
+235507,unknown location
+235508,unknown location
+235509,unknown location
+235510,unknown location
+235511,unknown location
+235562,unknown location
+235646,unknown location
+235654,unknown location
+235655,unknown location
+235656,unknown location
+235657,unknown location
+235658,unknown location
+235659,unknown location
+235666,unknown location
+235673,unknown location
+235674,unknown location
+235675,unknown location
+235677,unknown location
+235686,unknown location
+235688,unknown location
+235689,unknown location
+235690,unknown location
+235874,unknown location
+235896,unknown location
+235898,unknown location
+235971,unknown location
+235972,unknown location
+235973,unknown location
+235974,unknown location
+235975,unknown location
+235976,unknown location
+235977,unknown location
+235978,unknown location
+235979,unknown location
+235981,unknown location
+235982,unknown location
+235983,unknown location
+235984,unknown location
+235985,unknown location
+235986,unknown location
+235987,unknown location
+235988,unknown location
+235995,unknown location
+235996,unknown location
+236039,unknown location
+236131,cannot be tamed
+236137,unknown location
+236182,unknown location
+236183,unknown location
+236186,cannot be tamed
+236187,cannot be tamed
+236188,cannot be tamed
+236189,cannot be tamed
+236246,unknown location
+236269,unknown location
+236275,unknown location
+236276,unknown location
+236278,unknown location
+236287,unknown location
+236293,unknown location
+236294,unknown location
+236296,unknown location
+236298,unknown location
+236300,unknown location
+236301,unknown location
+236302,unknown location
+236317,unknown location
+236318,unknown location
+236319,unknown location
+236320,unknown location
+236325,unknown location
+236326,unknown location
+236329,unknown location
+236333,unknown location
+236335,unknown location
+236336,unknown location
+236340,unknown location
+236342,unknown location
+236347,unknown location
+236349,unknown location
+236352,unknown location
+236353,unknown location
+236354,unknown location
+236379,unknown location
+236380,unknown location
+236381,unknown location
+236384,unknown location
+236385,unknown location
+236387,unknown location
+236394,unknown location
+236395,unknown location
+236401,unknown location
+236402,unknown location
+236403,unknown location
+236428,unknown location
+236429,unknown location
+236430,unknown location
+236431,unknown location
+236432,unknown location
+236433,unknown location
+236434,unknown location
+236435,unknown location
+236437,unknown location
+236438,unknown location
+236439,unknown location
+236440,unknown location
+236441,unknown location
+236443,unknown location
+236444,unknown location
+236445,unknown location
+236446,unknown location
+236447,unknown location
+236448,unknown location
+236449,unknown location
+236450,unknown location
+236451,unknown location
+236452,unknown location
+236453,unknown location
+236454,unknown location
+236455,unknown location
+236598,unknown location
+236600,unknown location
+236635,unknown location
+236636,unknown location
+236637,unknown location
+236638,unknown location
+236639,unknown location
+236641,unknown location
+236644,unknown location
+236646,unknown location
+236662,unknown location
+236663,unknown location
+236664,unknown location
+236665,unknown location
+236666,unknown location
+236667,unknown location
+236668,unknown location
+236669,unknown location
+236670,unknown location
+236699,unknown location
+236708,unknown location
+236709,unknown location
+236710,unknown location
+236725,unknown location
+236726,unknown location
+236729,unknown location
+236744,unknown location
+236748,unknown location
+236751,unknown location
+236752,unknown location
+236753,unknown location
+236757,unknown location
+236758,unknown location
+236759,unknown location
+236760,unknown location
+236764,unknown location
+236765,unknown location
+236768,unknown location
+236772,unknown location
+236775,unknown location
+236776,unknown location
+236781,unknown location
+236788,unknown location
+236842,unknown location
+236843,unknown location
+236844,unknown location
+236919,unknown location
+236993,unknown location
+236996,unknown location
+236997,unknown location
+236998,unknown location
+236999,unknown location
+237000,unknown location
+237001,unknown location
+237002,unknown location
+237003,unknown location
+237004,unknown location
+237005,unknown location
+237006,unknown location
+237008,unknown location
+237009,unknown location
+237021,unknown location
+237022,unknown location
+237024,unknown location
+237027,unknown location
+237028,unknown location
+237029,unknown location
+237039,unknown location
+237040,unknown location
+237041,unknown location
+237042,unknown location
+237043,unknown location
+237044,unknown location
+237045,unknown location
+237048,unknown location
+237053,unknown location
+237056,unknown location
+237057,unknown location
+237059,unknown location
+237060,unknown location
+237061,unknown location
+237062,unknown location
+237064,unknown location
+237069,unknown location
+237070,unknown location
+237081,unknown location
+237083,unknown location
+237084,unknown location
+237093,unknown location
+237094,unknown location
+237096,unknown location
+237097,unknown location
+237098,unknown location
+237099,unknown location
+237100,unknown location
+237101,unknown location
+237102,unknown location
+237113,unknown location
+237114,unknown location
+237116,unknown location
+237117,unknown location
+237118,unknown location
+237127,unknown location
+237133,unknown location
+237185,unknown location
+237186,unknown location
+237202,unknown location
+237207,unknown location
+237265,unknown location
+237404,unknown location
+237407,cannot be tamed
+237501,unknown location
+237543,unknown location
+237544,unknown location
+237579,unknown location
+237632,unknown location
+237728,unknown location
+237755,unknown location
+237825,cannot be tamed
+237840,unknown location
+237841,unknown location
+237842,unknown location
+237843,unknown location
+237844,unknown location
+237845,unknown location
+237846,unknown location
+237847,unknown location
+238032,unknown location
+238570,unknown location
+239245,cannot be tamed
+239357,unknown location
+239428,unknown location
+239528,unknown location
+239529,unknown location
+239530,unknown location
+239531,unknown location
+239532,unknown location
+239534,unknown location
+239535,unknown location
+239537,unknown location
+239538,unknown location
+239539,unknown location
+239540,unknown location
+239546,unknown location
+239880,cannot be tamed
+240618,unknown location
+240619,unknown location
+240620,unknown location
+240621,unknown location
+240622,unknown location
+240623,unknown location
+240624,unknown location
+240625,unknown location
+240764,unknown location
+240944,unknown location
+240995,unknown location
+240996,unknown location
+241374,cannot be tamed
+241420,cannot be tamed
+241426,cannot be tamed
+241442,unknown location
+241513,unknown location
+241582,unknown location
+241758,unknown location
+241761,unknown location
+241766,unknown location
+241767,unknown location
+242749,unknown location
+242781,unknown location
+242939,unknown location
+242940,unknown location
+242941,unknown location
+242942,unknown location
+242943,unknown location
+243124,unknown location
+243125,unknown location
+243133,cannot be tamed
+243397,unknown location
+243399,unknown location
+243400,unknown location
+243777,unknown location
+243832,cannot be tamed
+243941,cannot be tamed
+244508,unknown location
+244918,cannot be tamed
+245115,unknown location
+245119,unknown location
+245120,unknown location
+245326,unknown location
+245427,cannot be tamed
+245429,cannot be tamed
+245895,unknown location
+245947,unknown location
+246168,unknown location
+246593,unknown location
+246787,unknown location
+246895,cannot be tamed
+246921,unknown location
+247438,unknown location
+247563,unknown location
+247581,unknown location
+247602,cannot be tamed
+247752,cannot be tamed
+248022,unknown location
+248425,unknown location
+248457,cannot be tamed
+248473,unknown location
+248730,unknown location
+249354,cannot be tamed
+249447,cannot be tamed
+249464,cannot be tamed
+249513,unknown location
+249515,unknown location
+249516,unknown location
+250029,unknown location
+250031,unknown location
+250032,unknown location
+250042,unknown location
+250049,unknown location
+250056,unknown location
+250058,unknown location
+250092,unknown location
+250109,unknown location
+250110,unknown location
+250119,unknown location
+250121,unknown location
+250134,unknown location
+250135,unknown location
+250137,unknown location
+250138,unknown location
+250139,unknown location
+250140,unknown location
+250166,unknown location
+250228,cannot be tamed
+250331,unknown location
+250332,unknown location
+250338,unknown location
+250362,unknown location
+250444,unknown location
+250485,unknown location
+250507,unknown location
+250525,unknown location
+250532,unknown location
+250533,unknown location
+250542,unknown location
+250543,unknown location
+250549,unknown location
+250552,unknown location
+250554,unknown location
+250555,unknown location
+250561,unknown location
+250570,unknown location
+250574,unknown location
+250578,unknown location
+250659,unknown location
+250684,unknown location
+250742,unknown location
+250817,unknown location
+250821,unknown location
+250955,unknown location
+250995,cannot be tamed
+251066,unknown location
+251442,unknown location
+251527,unknown location
+251885,cannot be tamed
+251887,unknown location
+251937,unknown location
+252034,unknown location
+252723,unknown location
+252834,unknown location
+252835,unknown location
+252894,unknown location
+252995,unknown location
+253262,unknown location
+253263,unknown location
+253382,cannot be tamed
+253400,cannot be tamed
+253667,unknown location
+253925,unknown location
+254101,unknown location
+254132,unknown location
+254133,unknown location
+254503,unknown location
+254543,cannot be tamed
+254617,unknown location
+254619,unknown location
+254685,unknown location
+254722,cannot be tamed
+254899,cannot be tamed
+255006,unknown location
+255030,unknown location
+255032,unknown location
+255158,unknown location
+255182,unknown location
+255188,cannot be tamed
+255237,unknown location
+255244,cannot be tamed
+255471,cannot be tamed
+255490,cannot be tamed
+255496,unknown location
+255502,unknown location
+255747,unknown location
+255748,unknown location
+255834,cannot be tamed
+256058,unknown location
+256072,cannot be tamed
+256258,unknown location
+256512,cannot be tamed
+256516,cannot be tamed
+256517,cannot be tamed
+256787,unknown location
+256850,unknown location
+256852,unknown location
+256856,unknown location
+256861,unknown location
+256902,unknown location
+256905,unknown location
+256915,unknown location
+257023,temporary
+257026,temporary
+257031,temporary
+257032,temporary
+257038,temporary
+257120,unknown location
+257145,unknown location
+257189,unknown location
+257201,unknown location
+257218,unknown location
+257220,unknown location
+257432,unknown location
+257433,unknown location
+257452,cannot be tamed
+257509,unknown location
+257664,unknown location
+257922,unknown location
+257954,cannot be tamed
+257963,unknown location
+258201,unknown location
+258206,cannot be tamed
+258343,unknown location
+258648,cannot be tamed
+258656,unknown location
+258721,unknown location
+258823,unknown location
+258977,unknown location
+259045,cannot be tamed
+259332,cannot be tamed
+260196,unknown location
+260507,unknown location
+261047,unknown location
+261115,cannot be tamed
+14948,cannot be tamed
+14943,cannot be tamed
+14944,cannot be tamed
+14947,cannot be tamed
+13161,cannot be tamed
+14945,cannot be tamed

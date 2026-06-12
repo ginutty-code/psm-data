@@ -1,0 +1,545 @@
+"""
+Generate a consolidated pet dataset by merging Wowhead and Petopia data files.
+
+The pipeline follows these strict steps:
+1. Initial Filtering: Load Wowhead records and filter them by NPC ID skip lists and successful status.
+2. Taming Skill Aggregation (by Display ID): Collect and consolidate Petopia taming skills and manual overrides, mapping them to unique display IDs (excluding skipped ones).
+3. Core Data Merge & Override Application: Combine filtered Wowhead data with Petopia details and cleaned notes. Then, apply manual record overrides, which can supersede previously merged data.
+4. Contextual Condition & Requirement Extraction: Analyze the merged notes and NPC reaction data to identify special taming conditions and item-based taming requirements.
+5. Final Output: Construct the complete dataset, incorporating all derived information, and save it.
+"""
+
+import csv
+import os
+import re
+import json
+from config import (
+    WOWHWEAD_DATA_CSV, PETOPIA_DATA_CSV, SKIP_NPC_IDS_CSV, SKIP_DISPLAY_IDS_CSV,
+    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV, FINAL_NOTES_CSV,
+    ensure_dirs
+)
+
+EXPANSION_MAPPING = {
+    1: "Vanilla", 2: "The Burning Crusade", 3: "Wrath of the Lich King",
+    4: "Cataclysm", 5: "Mists of Pandaria", 6: "Warlords of Draenor",
+    7: "Legion", 8: "Battle for Azeroth", 9: "Shadowlands",
+    10: "Dragonflight", 11: "The War Within", 12: "Midnight", 13: "The Last Titan"
+}
+
+TYPE_MAP = {
+    '1': 'Beast', '2': 'Dragonkin', '4': 'Elemental',
+    '6': 'Undead', '9': 'Mechanical', '15': 'Aberration'
+}
+
+SPECIAL_TAMING_CONDITIONS = {
+    "N'lyeth, Sliver of N'Zoth", "Disturbed Earth",
+    "Elusive Creature Bait", "Elusive Creature Lure", "Siren's Sting",
+    "Alliance", "Horde",
+    "Quest", "Questline", "Dungeon", "Raid", "Battleground", "Delve",
+    "Scenario", "Achievement", "Reputation", "Event", "Assault", "Invasion", "Profession",
+    "Brewfest", "Love is in the Air", "Hallow's End", "Lunar Festival",
+    "Midsummer Fire Festival", "Feast of Winter Veil", "Noblegarden",
+    "Children's Week", "Pirates' Day", "Day of the Dead", "Pilgrim's Bounty",
+    "Pandaren", "Pandarens", "Draenei", "Draenai", "Worgen", "Goblin", "Goblins",
+    "Orc", "Orcs", "Troll", "Trolls", "Undead", "Forsaken", "Tauren", "Taurens",
+    "Human", "Humans", "Dwarf", "Dwarves", "Gnome", "Gnomes", "Vulpera", "Dracthyr",
+    "Mechagnome", "Mechagnomes", "Haranir", "Nightborne", "Earthen",
+    "Night Elf", "Night Elves", "Blood Elf", "Blood Elves", "Void Elf", "Void Elves",
+    "Lightforged Draenei", "Lightforged Draeneis", "Lightforge Draenai", "Lightforged",
+    "Dark Iron Dwarf", "Dark Iron Dwarves", "Dark Iron",
+    "Highmountain Tauren", "Highmountain Taurens", "Highmountain",
+    "Zandalari Troll", "Zandalari Trolls", "Zandalari",
+    "Mag'har Orc", "Mag'har Orcs", "Mag'har", "Kul Tiran", "Kul Tirans"
+}
+
+CONDITION_NORMALIZATION = {
+    "Questline": "Quest", "Draenai": "Draenei", "Lightforge Draenai": "Lightforged Draenei",
+    "Forsaken": "Undead", "Humans": "Human", "Dwarves": "Dwarf", "Orcs": "Orc",
+    "Trolls": "Troll", "Taurens": "Tauren", "Gnomes": "Gnome", "Goblins": "Goblin",
+    "Pandarens": "Pandaren", "Night Elves": "Night Elf", "Blood Elves": "Blood Elf",
+    "Void Elves": "Void Elf", "Lightforged": "Lightforged Draenei",
+    "Lightforged Draeneis": "Lightforged Draenei", "Dark Iron": "Dark Iron Dwarf",
+    "Dark Iron Dwarves": "Dark Iron Dwarf", "Highmountain": "Highmountain Tauren",
+    "Highmountain Taurens": "Highmountain Tauren", "Zandalari": "Zandalari Troll",
+    "Zandalari Trolls": "Zandalari Troll", "Mag'har": "Mag'har Orc",
+    "Mag'har Orcs": "Mag'har Orc", "Kul Tirans": "Kul Tiran", "Mechagnomes": "Mechagnome",
+    "Brewfest": "Event", "Love is in the Air": "Event", "Hallow's End": "Event",
+    "Lunar Festival": "Event", "Midsummer Fire Festival": "Event",
+    "Feast of Winter Veil": "Event", "Noblegarden": "Event", "Children's Week": "Event",
+    "Pirates' Day": "Event", "Day of the Dead": "Event", "Pilgrim's Bounty": "Event"
+}
+
+RACE_KEYWORDS = [
+    "Pandaren", "Pandarens", "Draenei", "Draenai", "Worgen", "Goblin", "Goblins",
+    "Orc", "Orcs", "Troll", "Trolls", "Undead", "Forsaken", "Tauren", "Taurens",
+    "Human", "Humans", "Dwarf", "Dwarves", "Gnome", "Gnomes", "Vulpera", "Dracthyr",
+    "Mechagnome", "Mechagnomes", "Haranir", "Nightborne", "Earthen",
+    "Night Elf", "Night Elves", "Blood Elf", "Blood Elves", "Void Elf", "Void Elves",
+    "Lightforged Draenei", "Lightforged Draeneis", "Lightforge Draenai", "Lightforged",
+    "Dark Iron Dwarf", "Dark Iron Dwarves", "Dark Iron",
+    "Highmountain Tauren", "Highmountain Taurens", "Highmountain",
+    "Zandalari Troll", "Zandalari Trolls", "Zandalari",
+    "Mag'har Orc", "Mag'har Orcs", "Mag'har", "Kul Tiran", "Kul Tirans"
+]
+
+NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ")
+FACTIONS = ("Alliance", "Horde")
+ITEM_TAMING_REQS = [
+    "N'lyeth, Sliver of N'Zoth", "Disturbed Earth",
+    "Elusive Creature Bait", "Elusive Creature Lure", "Siren's Sting"
+]
+
+# --- Pre-build compiled regex patterns for condition/faction scanning ---
+
+def _build_contextual_patterns(item):
+    """Pre-compile the 6 context-aware patterns for a race/faction keyword."""
+    escaped = re.escape(item)
+    faction_prefix = r'(?:(?:Alliance|Horde)\s+)?'
+    return [
+        re.compile(r'(?i)\b' + faction_prefix + escaped + r' hunters? \bcan\b'),
+        re.compile(r'(?i)\b(?:only (?:available|accessible|tameable|visible) to|tameable by)\s+(?:an? )?' + faction_prefix + escaped + r'\b'),
+        re.compile(r'(?i)\bif you\'re (?:an? )?' + faction_prefix + escaped + r'\b'),
+        re.compile(r'(?i)\b' + faction_prefix + escaped + r' (?:only|starting|players?|characters?)\b'),
+        re.compile(r'(?i)\b' + faction_prefix + escaped + r'-only\b'),
+        re.compile(r'(?i)\bfor (?:an? )?' + faction_prefix + escaped + r' (?:hunters?|players?|characters?)\b'),
+    ]
+
+def _build_faction_patterns(faction_name):
+    escaped = re.escape(faction_name)
+    return [
+        re.compile(r'(?i)\b' + escaped + r' hunters? (?:.*?)\bcan\b'),
+        re.compile(r'(?i)\b(?:only (?:available|accessible|tameable|visible) to|tameable by)\s+(?:an? )?(?:\w+\s+)?' + escaped + r'\b'),
+        re.compile(r'(?i)\bif you\'re (?:an? )?(?:\w+\s+)?' + escaped + r'\b'),
+        re.compile(r'(?i)\b' + escaped + r' (?:only|starting|players?|characters?)\b'),
+        re.compile(r'(?i)\b' + escaped + r'-only\b'),
+        re.compile(r'(?i)\bfor (?:an? )?(?:\w+\s+)?' + escaped + r' (?:hunters?|players?|characters?)\b'),
+    ]
+
+# Pre-compiled at module load — no re-compilation during the main loop
+SORTED_METHODS = sorted(
+    [m for m in SPECIAL_TAMING_CONDITIONS if m not in FACTIONS and m not in RACE_KEYWORDS],
+    key=len, reverse=True
+)
+METHOD_PATTERNS = {
+    m: re.compile(r'(?i)\b' + re.escape(m) + r'\b')
+    for m in SORTED_METHODS
+}
+
+SORTED_RACES = sorted(RACE_KEYWORDS, key=len, reverse=True)
+RACE_PATTERNS = {item: _build_contextual_patterns(item) for item in SORTED_RACES}
+
+FACTION_PATTERNS = {f: _build_faction_patterns(f) for f in FACTIONS}
+
+ITEM_TAMING_LOWER = {req: req.lower() for req in ITEM_TAMING_REQS}
+
+
+# --- Helpers ---
+
+def clean_taming_skill(skill):
+    if not skill:
+        return ""
+    skill = skill.replace("Required Skill:", "").strip()
+    skill = re.sub(r'\s*(?:Taming|Family)$', '', skill, flags=re.IGNORECASE)
+    return skill.strip()
+
+def get_expansion(patch_id):
+    if not patch_id:
+        return ""
+    try:
+        return EXPANSION_MAPPING.get(int(str(patch_id).split('.')[0]), "")
+    except (ValueError, IndexError):
+        return ""
+
+def _read_first_col(path, col_names):
+    """Generic loader: returns a set of stripped string values from the first matching column."""
+    result = set()
+    if not os.path.exists(path):
+        return result
+    with open(path, 'r', encoding='utf-8-sig', newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            for key in row:
+                clean_key = key.strip().replace('\ufeff', '')
+                if clean_key in col_names:
+                    val = row[key]
+                    if val:
+                        result.add(str(val).strip())
+                    break
+    return result
+
+def load_skip_ids():
+    return _read_first_col(SKIP_NPC_IDS_CSV, {'npc_id'})
+
+def load_skip_display_ids():
+    return _read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
+
+def load_petopia_data():
+    data = {}
+    if os.path.exists(PETOPIA_DATA_CSV):
+        with open(PETOPIA_DATA_CSV, 'r', encoding='utf-8') as f:
+            for row in csv.DictReader(f):
+                npc_id = row.get('npc_id')
+                if npc_id:
+                    data[npc_id.strip()] = row
+    return data
+
+def load_record_overrides():
+    overrides = {}
+    if os.path.exists(RECORD_OVERRIDES_CSV):
+        with open(RECORD_OVERRIDES_CSV, 'r', encoding='utf-8-sig') as f:
+            for row in csv.DictReader(f):
+                npc_id = row.get('npc_id', '').strip()
+                zone_id = row.get('zone_id', '').strip()
+                if npc_id and zone_id:
+                    overrides[(npc_id, zone_id)] = {k: v for k, v in row.items() if v.strip()}
+    return overrides
+
+def load_final_notes():
+    """Loads pre-cleaned notes from the external processing script."""
+    notes_map = {}
+    if os.path.exists(FINAL_NOTES_CSV):
+        with open(FINAL_NOTES_CSV, 'r', encoding='utf-8-sig') as f:
+            for row in csv.DictReader(f):
+                npc_id = row.get('npc_id', '').strip()
+                if npc_id:
+                    notes_map[npc_id] = row.get('notes', '').strip()
+    return notes_map
+
+# --- Condition extraction (note-scoped, cached) ---
+
+def extract_note_conditions(final_notes):
+    """
+    Extract all non-faction, non-row-specific conditions from a note string.
+    Results are cached by the caller; this should only run once per unique note.
+    """
+    npc_conditions = []
+
+    # Split note into segments to avoid extracting conditions from "Not Tameable" sections
+    segments = re.split(r'[.;:!]', final_notes)
+    for segment in segments:
+        seg_lower = segment.lower()
+        if "not tameable" in seg_lower or "cannot be tamed" in seg_lower:
+            continue
+        matched_spans = []
+
+        # Non-contextual methods
+        for method, pattern in METHOD_PATTERNS.items():
+            for match in pattern.finditer(segment):
+                span = match.span()
+                if not any(s[0] <= span[0] and span[1] <= s[1] for s in matched_spans):
+                    normalized = CONDITION_NORMALIZATION.get(method, method)
+                    if normalized not in npc_conditions:
+                        npc_conditions.append(normalized)
+                    matched_spans.append(span)
+
+        # Context-aware races
+        context_item_spans = []
+        for item in SORTED_RACES:
+            item_found = False
+            for pattern in RACE_PATTERNS[item]:
+                for match in pattern.finditer(segment):
+                    match_text = match.group()
+                    pre_text = segment[max(0, match.start() - 40):match.start()].lower()
+                    if any(neg in pre_text for neg in NEGATIONS):
+                        continue
+                    idx = match_text.lower().find(item.lower())
+                    item_span = (match.start() + idx, match.start() + idx + len(item))
+                    if not any(s[0] <= item_span[0] and item_span[1] <= s[1] for s in context_item_spans):
+                        item_found = True
+                        context_item_spans.append(item_span)
+            if item_found:
+                normalized = CONDITION_NORMALIZATION.get(item, item)
+                if normalized not in npc_conditions:
+                    npc_conditions.append(normalized)
+
+    return npc_conditions
+
+
+def check_explicit_faction(faction_name, final_notes):
+    """Check whether a note explicitly mentions a faction requirement."""
+    segments = re.split(r'[.;:!]', final_notes)
+    for segment in segments:
+        seg_lower = segment.lower()
+        if "not tameable" in seg_lower or "cannot be tamed" in seg_lower:
+            continue
+
+        for pattern in FACTION_PATTERNS[faction_name]:
+            for match in pattern.finditer(segment):
+                pre_text = segment[max(0, match.start() - 40):match.start()].lower()
+                if not any(neg in pre_text for neg in NEGATIONS):
+                    return True
+    return False
+
+
+# --- Main ---
+
+def main():
+    print("Starting final pet data generation...")
+    ensure_dirs()
+
+    skip_ids = load_skip_ids()
+    print(f"Loaded {len(skip_ids)} NPC IDs to skip.")
+
+    skip_display_ids = load_skip_display_ids()
+    print(f"Loaded {len(skip_display_ids)} display IDs to skip.")
+
+    petopia_info = load_petopia_data()
+    print(f"Loaded Petopia info for {len(petopia_info)} NPCs.")
+
+    final_notes_map = load_final_notes()
+    print(f"Loaded {len(final_notes_map)} pre-cleaned notes.")
+
+    full_record_overrides = load_record_overrides()
+    print(f"Loaded {len(full_record_overrides)} record overrides.")
+
+    if not os.path.exists(WOWHWEAD_DATA_CSV):
+        print(f"Error: {WOWHWEAD_DATA_CSV} not found. Run step wowhead_data.py script first.")
+        return
+
+    # Group overrides by NPC ID for O(1) lookup in pass 1
+    overrides_by_npc = {}
+    for (n_id, z_id), override in full_record_overrides.items():
+        overrides_by_npc.setdefault(n_id, []).append(override)
+
+    columns = [
+        'npc_id', 'npc_name', 'family_id', 'family_name', 'display_ids',
+        'zone_id', 'zone_name', 'uiMapId', 'uiMapName', 'coords',
+        'patch_id', 'patch_name', 'expansion', 'react', 'classification_id',
+        'classification_name', 'type_id', 'type_name',
+        'tamingskillname1', 'tamingskilldesc1', 'tamingskillname2',
+        'tamingskilldesc2', 'notes', 'taming_requirements', 'special_conditions'
+    ]
+
+    print("Loading and filtering Wowhead records...")
+    wowhead_records = []
+    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            npc_id = row.get('npc_id', '').strip()
+            if npc_id and npc_id not in skip_ids and row.get('status') == 'successful':
+                wowhead_records.append(row)
+
+    # Pass 1: build display_id → taming skills map
+    print("First pass: Aggregating taming requirements...")
+    display_to_taming = {}
+    npc_skill_map = {}
+
+    for row in wowhead_records:
+        npc_id = row['npc_id']
+        if npc_id not in npc_skill_map:
+            p_info = petopia_info.get(npc_id, {})
+            skills = []
+            for key in ('tamingskillname1', 'tamingskillname2'):
+                s = p_info.get(key)
+                if s:
+                    cleaned = clean_taming_skill(s)
+                    if cleaned:
+                        skills.append(cleaned)
+            for override in overrides_by_npc.get(npc_id, []):
+                if 'taming_requirements' in override:
+                    for s in override['taming_requirements'].split('|'):
+                        cleaned = clean_taming_skill(s)
+                        if cleaned and cleaned not in skills:
+                            skills.append(cleaned)
+            npc_skill_map[npc_id] = skills
+
+        for d_id in (d.strip() for d in row.get('display_ids', '').split('|') if d.strip()):
+            if d_id not in skip_display_ids:
+                display_to_taming.setdefault(d_id, set()).update(npc_skill_map[npc_id])
+
+    # Pre-parse every unique react string once (only 15 unique values empirically)
+    react_parse_cache = {}
+    def parse_react(react_str):
+        if react_str not in react_parse_cache:
+            v_a, v_h = 999, 999
+            if react_str:
+                try:
+                    vals = json.loads(react_str)
+                    if isinstance(vals, list) and len(vals) >= 2:
+                        v_a, v_h = vals[0], vals[1]
+                except (json.JSONDecodeError, TypeError, ValueError):
+                    pass
+            react_parse_cache[react_str] = (v_a, v_h)
+        return react_parse_cache[react_str]
+
+    # Pass 2: generate final rows
+    print("Second pass: Generating final rows...")
+    final_rows = []
+    # Cache note-scoped conditions (expensive regex work, keyed by cleaned note text)
+    conditions_cache = {}
+    # Cache faction scan results per note (also note-scoped)
+    faction_note_cache = {}
+    # Master cache: (notes, react) -> (npc_conditions_base, v_a, v_h)
+    # Covers ~80% of rows that share the same note+react combo
+    combo_cache = {}
+
+    for row in wowhead_records:
+        npc_id = row['npc_id']
+
+        p_info = petopia_info.get(npc_id, {})
+
+        # Pre-override display IDs from Wowhead
+        display_ids_str = row.get('display_ids', '').strip()
+ 
+        override = full_record_overrides.get((npc_id, row.get('zone_id', '').strip()), {})
+        current_zone_id = row.get('zone_id', '').strip()
+        override = full_record_overrides.get((npc_id, current_zone_id), {})
+
+        # Fallback to bulk_zone_id if no override found and zone_id is empty
+        if not override and not current_zone_id:
+            for b_id in (b.strip() for b in row.get('bulk_zone_id', '').split('|') if b.strip()):
+                override = full_record_overrides.get((npc_id, b_id), {})
+                if override:
+                    break
+ 
+        patch_id = row.get('patch_id', '').strip()
+        type_id = row.get('type', '').strip()
+
+        record_data = {
+            'npc_id': npc_id,
+            'npc_name': row.get('displayName') or row.get('npc_name', ''),
+            'family_id': row.get('family_id') or row.get('bulk_family_id', ''),
+            'family_name': row.get('bulk_family_name', ''),
+            'display_ids': display_ids_str,
+            'zone_id': row.get('zone_id', '').strip(),
+            'zone_name': row.get('zone_name', '').strip(),
+            'uiMapId': row.get('uiMapId', '').strip(),
+            'uiMapName': row.get('uiMapName', '').strip(),
+            'coords': row.get('coords', '').strip(),
+            'patch_id': patch_id,
+            'patch_name': row.get('patch_name', ''),
+            'expansion': get_expansion(patch_id),
+            'react': row.get('react', ''),
+            'classification_id': row.get('classification_id', ''),
+            'classification_name': row.get('bulk_classification', ''),
+            'type_id': type_id,
+            'type_name': TYPE_MAP.get(type_id, ''),
+            'tamingskillname1': p_info.get('tamingskillname1', ''),
+            'tamingskilldesc1': p_info.get('tamingskilldesc1', ''),
+            'tamingskillname2': p_info.get('tamingskillname2', ''),
+            'tamingskilldesc2': p_info.get('tamingskilldesc2', ''),
+            'notes': final_notes_map.get(npc_id, ""),
+            'taming_requirements': "",
+            'special_conditions': ""
+        }
+
+        # Apply manual record overrides (which could change display_ids)
+        record_data.update(override)
+
+        # Now filter display IDs against the skip list, after overrides have been applied
+        display_ids_list = [d.strip() for d in record_data.get('display_ids', '').split('|') if d.strip()]
+        allowed_display_ids = [d for d in display_ids_list if d not in skip_display_ids]
+        if not allowed_display_ids:
+            continue
+
+        # Update record with filtered display IDs for final output
+        record_data['display_ids'] = '|'.join(allowed_display_ids)
+
+        final_notes = record_data.get('notes', '')
+        final_react = record_data.get('react', '')
+
+        # Aggregate taming set from display IDs (row-specific)
+        npc_taming_set = set()
+        for d_id in allowed_display_ids:
+            npc_taming_set.update(display_to_taming.get(d_id, set()))
+
+        # (notes, react) combo cache — covers ~80% of rows
+        combo_key = (final_notes, final_react)
+        if combo_key not in combo_cache:
+            # Note-scoped conditions
+            if final_notes not in conditions_cache:
+                conditions_cache[final_notes] = extract_note_conditions(final_notes)
+            base_conditions = list(conditions_cache[final_notes])
+            note_segments = re.split(r'[.;:!]', final_notes)
+
+            v_a, v_h = parse_react(final_react)
+            row_factions = set()
+            is_explicitly_universal = False
+
+            # Note-based explicit faction scan (cached per note)
+            if final_notes not in faction_note_cache:
+                found = set()
+                for f in FACTIONS:
+                    if check_explicit_faction(f, final_notes):
+                        found.add(f)
+                faction_note_cache[final_notes] = found
+            row_factions.update(faction_note_cache[final_notes])
+
+            # Check for universal phrases that signal the pet is for everyone
+            for segment in note_segments:
+                seg_lower = segment.lower()
+                if any(p in seg_lower for p in ["visible to all", "tameable by all", "available to all"]):
+                    is_explicitly_universal = True
+                    break
+
+            # Fallback: implied faction from restriction phrases
+            if not row_factions and not is_explicitly_universal:
+                for segment in note_segments:
+                    seg_lower = segment.lower()
+                    if "not tameable" in seg_lower or "cannot be tamed" in seg_lower:
+                        continue
+                    res_a = any(phrase in seg_lower for phrase in ["friendly to alliance", "not visible to alliance", "doesn't appear to be visible to alliance"])
+                    res_h = any(phrase in seg_lower for phrase in ["friendly to horde", "not visible to horde", "doesn't appear to be visible to horde"])
+                    if res_a and not res_h:
+                        row_factions.add("Horde")
+                    elif res_h and not res_a:
+                        row_factions.add("Alliance")
+
+            # React-based faction signals (only as a fallback hint if the note is silent)
+            if not row_factions and not is_explicitly_universal:
+                if v_a is None and v_h is not None:
+                    row_factions.add("Horde")
+                elif v_h is None and v_a is not None:
+                    row_factions.add("Alliance")
+                elif v_a in (-1, 0) and v_h == 1:
+                    row_factions.add("Alliance")
+                elif v_h in (-1, 0) and v_a == 1:
+                    row_factions.add("Horde")
+
+            # Final veto: null react overrides everything
+            if v_a is None:
+                row_factions.discard("Alliance")
+            if v_h is None:
+                row_factions.discard("Horde")
+
+            for f in row_factions:
+                if f not in base_conditions:
+                    base_conditions.append(f)
+
+            combo_cache[combo_key] = (base_conditions, v_a, v_h)
+
+        npc_conditions, v_a, v_h = combo_cache[combo_key]
+        npc_conditions = list(npc_conditions)  # copy — elusive check may append below
+
+        # Elusive creature check (row-specific: depends on name + expansion)
+        npc_name_lower = record_data['npc_name'].lower()
+        if "elusive" in npc_name_lower:
+            expansion = record_data['expansion']
+            if expansion == "Dragonflight" and "Elusive Creature Bait" not in npc_conditions:
+                npc_conditions.append("Elusive Creature Bait")
+            elif expansion == "The War Within" and "Elusive Creature Lure" not in npc_conditions:
+                npc_conditions.append("Elusive Creature Lure")
+
+        # Item-based taming requirements from note text
+        final_notes_lower = final_notes.lower()
+        for req in ITEM_TAMING_REQS:
+            if ITEM_TAMING_LOWER[req] in final_notes_lower:
+                npc_taming_set.add(req)
+
+        record_data['taming_requirements'] = "|".join(sorted(npc_taming_set))
+        record_data['special_conditions'] = "|".join(sorted(npc_conditions))
+        final_rows.append(record_data)
+
+    final_rows.sort(key=lambda x: (
+        int(x['npc_id']) if x['npc_id'].isdigit() else 0,
+        x['zone_name'], x['uiMapId']
+    ))
+
+    with open(COMBINED_PET_DATA_CSV, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
+        writer.writeheader()
+        writer.writerows(final_rows)
+
+    print(f"Successfully generated {COMBINED_PET_DATA_CSV} with {len(final_rows)} records.")
+
+if __name__ == "__main__":
+    main()

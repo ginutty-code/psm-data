@@ -1,0 +1,62 @@
+family_id,family_name,diet,expansion,icon,maxLevel,minLevel,type,spells,armor,damage,health,exotic,popularity
+1,Wolf,1,0,ability_hunter_pet_wolf,0,0,0,17253;263840,5,5,5,0,335
+2,Cat,3,0,ability_hunter_pet_cat,0,0,0,16827;24450;263892,5,5,5,0,243
+3,Spider,1,0,ability_hunter_pet_spider,0,0,0,17253;160067,5,5,5,0,108
+4,Bear,63,0,ability_hunter_pet_bear,0,0,1,16827;94019;263934,5,5,5,0,167
+5,Boar,63,0,ability_hunter_pet_boar,0,0,2,17253;263869,5,5,5,0,103
+6,Crocolisk,3,0,ability_hunter_pet_crocolisk,0,0,0,50433;17253,5,5,5,0,69
+7,Carrion Bird,3,0,ability_hunter_pet_vulture,0,0,0,17253;24423,5,5,5,0,114
+8,Crab,58,0,ability_hunter_pet_crab,0,0,1,16827;50245,5,5,5,0,83
+9,Gorilla,56,0,ability_hunter_pet_gorilla,0,0,0,49966;263939,5,5,5,0,107
+11,Raptor,1,0,ability_hunter_pet_raptor,0,0,2,16827;263854,5,5,5,0,272
+12,Tallstrider,60,0,ability_hunter_pet_tallstrider,0,0,0,16827;50285,5,5,5,0,77
+20,Scorpid,1,0,ability_hunter_pet_scorpid,0,0,0,16827;160060,5,5,5,0,57
+21,Turtle,58,0,ability_hunter_pet_turtle,0,0,1,17253;26064,5,5,5,0,120
+24,Bat,49,0,ability_hunter_pet_bat,0,0,0,17253;344348,5,5,5,0,71
+25,Hyena,1,0,ability_hunter_pet_hyena,0,0,2,17253;263853,5,5,5,0,116
+26,Bird of Prey,3,0,ability_hunter_pet_owl,0,0,2,16827;263852;94022,5,5,5,0,145
+27,Wind Serpent,14,0,ability_hunter_pet_windserpent,0,0,0,17253;264360,5,5,5,0,89
+30,Dragonhawk,35,1,ability_hunter_pet_dragonhawk,0,0,1,17253;263887,5,5,5,0,166
+31,Ravager,1,1,ability_hunter_pet_ravager,0,0,0,17253;263857,5,5,5,0,399
+32,Warp Stalker,34,1,ability_hunter_pet_warpstalker,0,0,2,17253;35346,5,5,5,0,82
+33,Sporebat,60,1,ability_hunter_pet_sporebat,0,0,2,49966;344347,5,5,5,0,88
+34,Ray,17,1,ability_hunter_pet_netherray,0,0,0,17253;344349,5,5,5,0,78
+35,Serpent,1,0,spell_nature_guardianward,0,0,2,17253;263904,5,5,5,0,102
+37,Moth,60,2,ability_hunter_pet_moth,0,0,2,49966;344353,5,5,5,0,90
+38,Chimaera,1,2,ability_hunter_pet_chimera,0,69,0,17253;54644;92380,5,5,5,1,226
+39,Devilsaur,1,2,ability_hunter_pet_devilsaur,0,69,0,17253;159953;54680,5,5,5,1,359
+41,Aqiri,17,2,ability_hunter_pet_silithid,0,69,2,16827;280151;160065,5,5,5,1,659
+42,Worm,28,2,ability_hunter_pet_worm,0,69,1,17253;263446;93433,5,5,5,1,96
+43,Clefthoof,60,5,inv_clefthoofdraenormount_blue,0,0,0,49966;280069;160057,5,5,5,0,626
+44,Wasp,60,2,ability_hunter_pet_wasp,0,0,0,49966;263858,5,5,5,0,115
+45,Core Hound,1,2,ability_hunter_pet_corehound,0,69,0,17253;159788;263867,5,5,5,1,464
+46,Spirit Beast,3,2,ability_druid_primalprecision,0,69,1,16827;90361;344351;90328,5,5,5,1,1084
+50,Fox,35,3,ability_hunter_aspectofthefox,0,0,2,17253;160011;90347,5,5,5,0,145
+51,Monkey,48,3,inv_pet_monkey,0,0,2,49966;160044,5,5,5,0,64
+52,Hound,63,3,inv_pet_mastiff,0,0,2,17253;263423,5,5,5,0,128
+53,Beetle,48,3,inv_misc_ahnqirajtrinket_01,0,0,1,17253;90339,5,5,5,0,59
+55,Shale Beast,195,3,inv_pet_-shalespider,0,69,2,17253;279259;160063,5,5,5,1,89
+68,Hydra,195,5,trade_archaeology_whitehydrafigurine,0,0,1,17253;263863,5,5,5,0,140
+125,Waterfowl,138,4,inv_pet_crane,0,0,1,49966;344350;126259,5,5,5,0,64
+126,Water Strider,48,4,inv_pet_waterstrider,0,69,2,17253;344346;126311,5,5,5,1,81
+127,Rodent,16,4,inv_pet_porcupine,0,0,2,16827;263856;126364,5,5,5,0,108
+128,Stone Hound,195,4,achievement_moguraid_01,0,69,1,17253;267922;160049,5,5,5,1,257
+129,Gruffhorn,255,4,inv_pet_-goat,0,0,2,49966;263921,5,5,5,0,72
+130,Basilisk,3,4,inv_pet_-basilisk,0,0,2,17253;263841,5,5,5,0,50
+138,Direhorn,48,5,inv_pet_direhorn,0,0,1,17253;263861,5,5,5,0,167
+150,Riverbeast,56,5,inv_hippo_green,0,0,1,17253;160018,5,5,5,0,66
+151,Stag,60,5,inv_talbukdraenor_white,0,0,1,49966;344352,5,5,5,0,84
+154,Mechanical,256,4,ability_mount_mechastrider,0,0,2,17253;263868,5,5,5,0,172
+156,Scalehide,60,6,inv_mushanbeastmount,0,0,0,49966;263865,5,5,5,0,193
+157,Oxen,60,6,ability_mount_yakmount,0,0,1,49966;264023,5,5,5,0,67
+160,Feathermane,255,6,inv_misc_elitehippogryph,0,0,1,17253;160007;263916,5,5,5,0,165
+288,Lizard,243,7,inv_komododragon_green,0,0,1,17253;279362,5,5,5,0,74
+290,Pterrordax,227,7,inv_pterrordax2mount_yellow,0,69,2,17253;160007;279399,5,5,5,1,80
+291,Hopper,243,7,inv_pet_toad_green,0,0,1,49966;279336,5,5,5,0,97
+292,Carapid,65,7,achievement_dungeon_thesandqueen,0,69,1,17253;279410;279254,5,5,5,1,131
+296,Blood Beast,195,7,inv_bloodtrollbeast_mount,0,0,1,17253;288962,5,5,5,0,163
+298,Camel,56,8,ability_mount_camel_brown,0,0,2,49966;341115,5,5,5,0,45
+299,Courser,48,8,inv_horse3_pale,0,0,0,49966;341117,5,5,5,0,87
+300,Mammoth,60,8,ability_mount_ridingelekk,0,0,1,49966;341118,5,5,5,0,69
+303,Lesser Dragonkin,195,9,inv_misc_head_dragon_nexus,0,0,0,16827;392622,5,5,5,0,191
+315,Whiptail,0,12,inv_stalkermount_red,0,0,0,16827;24450;1247058;1247078,5,5,5,1,0

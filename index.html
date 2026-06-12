@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSM Hunter Pet Data — Correction Request</title>
+<style>
+  :root {
+    --bg: #2e2c29; --surface: #3a3835; --card: #444240;
+    --accent: #8b1a1a; --accent2: #c8960c;
+    --text: #f0ede8; --muted: #9a9590; --border: #5a5550;
+    --green: #2ecc71; --input-bg: #252320;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; min-height: 100vh; padding: 24px 16px; max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.3rem; color: #f5d060; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+  label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+  input, select, textarea {
+    width: 100%; background: var(--input-bg); border: 1px solid var(--border);
+    color: var(--text); border-radius: 6px; padding: 10px 12px; font-size: 0.9rem; outline: none;
+    transition: border-color .2s;
+  }
+  input:focus, select:focus, textarea:focus { border-color: #c8960c; }
+  select option { background: var(--input-bg); }
+  textarea { resize: vertical; }
+  .search-row { display: flex; gap: 8px; }
+  .search-row input { flex: 1; }
+
+  button {
+    background: linear-gradient(180deg, #a82020 0%, #6b0f0f 100%);
+    color: #f5d060; border: 1px solid #7a1515; border-radius: 6px;
+    padding: 10px 18px; font-size: 0.9rem; cursor: pointer; transition: opacity .2s;
+    white-space: nowrap; font-weight: bold; text-shadow: 0 1px 2px #0005;
+    min-width: 160px; height: 42px;
+  }
+  button:hover { opacity: .85; }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+  button.secondary {
+    background: linear-gradient(180deg, #555250 0%, #3a3835 100%);
+    color: #c8960c; border-color: #5a5550;
+  }
+
+  .npc-card { border-left: 3px solid #c8960c; padding-left: 14px; }
+  .npc-title { font-size: 1.1rem; font-weight: bold; color: #f5d060; text-shadow: 0 1px 3px #0007; }
+  .npc-meta { font-size: 0.8rem; color: var(--muted); margin: 2px 0 10px; }
+  .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 0.82rem; }
+  .field-row { display: flex; flex-direction: column; padding: 4px 0; border-bottom: 1px solid var(--border); }
+  .field-row .fname { color: var(--muted); font-size: 0.75rem; }
+  .field-row .fval { color: var(--text); overflow-wrap: break-word; word-break: normal; }
+
+  .tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #c8960c 0%, #7a5c00 100%);
+    border: 1px solid #c8960c; border-radius: 4px;
+    padding: 1px 7px; font-size: 0.75rem; margin: 1px;
+    color: #fff; font-weight: bold; text-shadow: 0 1px 2px #0006;
+  }
+  .coord-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .coord-chip {
+    background: linear-gradient(135deg, #4a4845 0%, #333230 100%);
+    border: 1px solid #c8960c; border-radius: 4px;
+    padding: 2px 8px; font-size: 0.78rem; cursor: pointer; transition: background .15s; color: #c8960c;
+  }
+  .coord-chip:hover { background: linear-gradient(135deg, #a82020 0%, #6b0f0f 100%); color: #f5d060; border-color: #a82020; }
+  .coord-chip.selected { background: linear-gradient(135deg, #a82020 0%, #6b0f0f 100%); border-color: #c8960c; color: #f5d060; }
+
+  .step-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: .08em; color: #c8960c; margin-bottom: 10px; font-weight: bold; }
+  .hidden { display: none; }
+  .msg { padding: 10px 14px; border-radius: 6px; font-size: 0.88rem; margin-top: 8px; }
+  .msg.info { background: #333230; border: 1px solid #5a5550; }
+  .msg.error { background: #3a1a1a; border: 1px solid #8b1a1a; color: #f88; }
+  .msg.success { background: #1a3a2a; border: 1px solid var(--green); color: #7dffb3; }
+
+  .results-list { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .result-item { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; cursor: pointer; transition: border-color .2s; }
+  .result-item:hover { border-color: #c8960c; }
+  .result-item strong { color: #f5d060; }
+  .result-item .rid { font-size: 0.75rem; color: var(--muted); }
+
+  .nav-row { display: flex; justify-content: space-between; margin-top: 14px; }
+  .progress { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+  small { color: var(--muted); font-size: 0.78rem; display: block; margin-top: 4px; }
+  .field-gap { margin-bottom: 14px; }
+  .no-results-add { margin-top: 12px; text-align: center; }
+  .no-results-add p { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<h1>🐾 PSM Hunter Pet Data — Correction Request</h1>
+<p class="subtitle">Found incorrect data? Search for the pet NPC, fill in the correction, and it'll be filed as a GitHub issue for review.</p>
+
+<!-- STEP 1: Search -->
+<div class="card" id="step1">
+  <div class="step-label">Step 1 — Find the NPC</div>
+  <label>Search by NPC name or ID</label>
+  <div class="search-row">
+    <input type="text" id="searchInput" placeholder="e.g. Forest Spider or 12345" />
+    <button onclick="doSearch()">Search</button>
+  </div>
+  <div id="searchStatus" class="msg info">Loading pet data…</div>
+  <div id="resultsList" class="results-list hidden"></div>
+</div>
+
+<!-- STEP 2: Confirm NPC -->
+<div class="card hidden" id="step2">
+  <div class="step-label">Step 2 — Confirm this is the right NPC</div>
+  <div class="npc-card" id="npcDisplay"></div>
+  <div class="nav-row">
+    <button class="secondary" onclick="resetToSearch()">← Search again</button>
+    <button onclick="goToStep3()">This is the one →</button>
+  </div>
+</div>
+
+<!-- STEP 3: Correction form -->
+<div class="card hidden" id="step3">
+  <div class="step-label">Step 3 — Describe the correction</div>
+
+  <div class="field-gap">
+    <label>Field to correct</label>
+    <select id="fieldSelect" onchange="onFieldChange()">
+      <option value="">— Select a field —</option>
+      <option value="npc_name">NPC Name</option>
+      <option value="family_name">Family Name</option>
+      <option value="zone_name">Zone Name</option>
+      <option value="react">React (e.g. [-1,-1])</option>
+      <option value="classification_name">Classification</option>
+      <option value="type_name">Type</option>
+      <option value="tamingskillname1">Taming Skill Name 1</option>
+      <option value="tamingskilldesc1">Taming Skill Desc 1</option>
+      <option value="tamingskillname2">Taming Skill Name 2</option>
+      <option value="tamingskilldesc2">Taming Skill Desc 2</option>
+      <option value="notes">Notes</option>
+      <option value="uiMapId">UI Map ID</option>
+      <option value="coords">Coordinates (add/remove)</option>
+      <option value="other">Other / Multiple fields</option>
+    </select>
+  </div>
+
+  <div id="standardFields">
+    <div class="field-gap">
+      <label>Current value (from the data)</label>
+      <input type="text" id="currentVal" readonly style="opacity:.6;" />
+    </div>
+    <div class="field-gap">
+      <label>Proposed correct value</label>
+      <input type="text" id="proposedVal" placeholder="Enter the correct value" />
+    </div>
+  </div>
+
+  <div id="coordFields" class="hidden">
+    <label>Current coordinates — click to select ones to REMOVE</label>
+    <div class="coord-list" id="coordChips"></div>
+    <div style="margin-top:12px;">
+      <label>Add new coordinate(s)</label>
+      <input type="text" id="coordAdd" placeholder="x,y — separate multiple with |  e.g. 45.2,33.1|46,34" />
+      <small>Format: x,y — pipe-separated for multiple entries</small>
+    </div>
+  </div>
+
+  <div class="field-gap" style="margin-top:14px;">
+    <label>Evidence / source</label>
+    <textarea id="evidence" rows="3" placeholder="Wowhead link, Petopia link, in-game testing, patch notes…"></textarea>
+    <small>Optional but helps prioritise your report.</small>
+  </div>
+
+  <div class="field-gap">
+    <label>Your in-game character name (optional)</label>
+    <input type="text" id="charName" placeholder="For credit in changelogs" />
+  </div>
+
+  <div class="nav-row">
+    <button class="secondary" onclick="goBackToStep2()">← Back</button>
+    <button id="submitBtn" onclick="submitCorrection()" style="width:auto;">Submit Correction →</button>
+  </div>
+  <div id="submitMsg" class="hidden"></div>
+</div>
+
+<!-- STEP ADD: New NPC request -->
+<div class="card hidden" id="stepAdd">
+  <div class="step-label">Request — Add a new NPC</div>
+
+  <div class="field-gap">
+    <label>NPC Name</label>
+    <input type="text" id="addName" placeholder="e.g. Venomfang Stalker" />
+  </div>
+  <div class="field-gap">
+    <label>NPC ID (Wowhead ID)</label>
+    <input type="text" id="addId" placeholder="e.g. 12345" />
+  </div>
+  <div class="field-gap">
+    <label>Pet Family</label>
+    <input type="text" id="addFamily" placeholder="e.g. Spider" />
+  </div>
+  <div class="field-gap">
+    <label>Zone / Location</label>
+    <input type="text" id="addZone" placeholder="e.g. Duskwood" />
+  </div>
+  <div class="field-gap">
+    <label>Evidence / source</label>
+    <textarea id="addEvidence" rows="3" placeholder="Wowhead link, Petopia link, in-game testing, patch notes…"></textarea>
+    <small>A Wowhead or Petopia link is very helpful here.</small>
+  </div>
+  <div class="field-gap">
+    <label>Your in-game character name (optional)</label>
+    <input type="text" id="addCharName" placeholder="For credit in changelogs" />
+  </div>
+
+  <div class="nav-row">
+    <button class="secondary" onclick="resetToSearch()">← Search again</button>
+    <button onclick="submitAddRequest()" style="width:auto;">Submit Request →</button>
+  </div>
+  <div id="addMsg" class="hidden"></div>
+</div>
+
+<script>
+const CSV_URL    = "pet_data.csv";
+const REPO       = "ginutty-code/Hunter-Pet-Data";
+const ISSUES_URL = `https://github.com/${REPO}/issues/new`;
+
+const COLS = [
+  "npc_id","npc_name","family_id","family_name","display_ids",
+  "zone_id","zone_name","layer","uiMapId","uiMapName","coords",
+  "patch_id","patch_name","react","classification_id","classification_name",
+  "type_id","type_name","tamingskillname1","tamingskilldesc1","tamingskillname2","tamingskilldesc2","notes"
+];
+const DISPLAY_FIELDS = [
+  "npc_id","npc_name","family_name","zone_name","react",
+  "classification_name","type_name","tamingskillname1","tamingskilldesc1",
+  "tamingskillname2","tamingskilldesc2","notes","uiMapId"
+];
+
+let allPets = [], selectedPet = null, selectedCoords = new Set();
+let currentMatches = [], currentPage = 0;
+const PAGE_SIZE = 10;
+
+async function loadData() {
+  try {
+    const r = await fetch(CSV_URL);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const text = await r.text();
+    const rows = parseCSV(text);
+    const header = rows[0];
+    allPets = rows.slice(1).map(row => {
+      const obj = {};
+      header.forEach((h, i) => obj[h.trim()] = (row[i] || "").trim());
+      return obj;
+    }).filter(p => p.npc_id);
+    setStatus("Ready — " + allPets.length + " NPCs loaded. Start typing to search.", "info");
+  } catch(e) {
+    setStatus("Could not load pet data: " + e.message, "error");
+  }
+}
+
+function parseCSV(text) {
+  const rows = []; let row = []; let cell = ""; let inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (c === '"') { if (inQ && text[i+1] === '"') { cell += '"'; i++; } else inQ = !inQ; }
+    else if (c === ',' && !inQ) { row.push(cell); cell = ""; }
+    else if ((c === '\n' || c === '\r') && !inQ) {
+      if (c === '\r' && text[i+1] === '\n') i++;
+      row.push(cell); rows.push(row); row = []; cell = "";
+    } else cell += c;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
+}
+
+function doSearch() {
+  const q = document.getElementById("searchInput").value.trim().toLowerCase();
+  if (!q) return;
+  const byId   = allPets.filter(p => p.npc_id === q);
+  const byName = allPets.filter(p => p.npc_name.toLowerCase().includes(q) && p.npc_id !== q);
+  currentMatches = [...byId, ...byName].sort((a, b) => a.npc_name.localeCompare(b.npc_name));
+  currentPage = 0;
+  renderResults();
+}
+
+function renderResults() {
+  const list = document.getElementById("resultsList");
+  list.innerHTML = "";
+  list.classList.remove("hidden");
+
+  if (!currentMatches.length) {
+    list.innerHTML = `
+      <div class="msg error">No NPCs found matching your search.</div>
+      <div class="no-results-add">
+        <p>Not in the database yet? You can request it to be added.</p>
+        <button onclick="goToAddRequest()">Request New NPC →</button>
+      </div>`;
+    return;
+  }
+
+  const start = currentPage * PAGE_SIZE;
+  const page  = currentMatches.slice(start, start + PAGE_SIZE);
+  const total = currentMatches.length;
+  const totalPages = Math.ceil(total / PAGE_SIZE);
+
+  page.forEach(p => {
+    const el = document.createElement("div");
+    el.className = "result-item";
+    el.innerHTML = `<strong>${p.npc_name}</strong> <span class="rid">#${p.npc_id} · ${p.family_name} · ${p.zone_name}</span>`;
+    el.onclick = () => selectPet(p);
+    list.appendChild(el);
+  });
+
+  if (totalPages > 1) {
+    const nav = document.createElement("div");
+    nav.className = "nav-row";
+    nav.style.marginTop = "10px";
+    nav.innerHTML = `
+      <button class="secondary" onclick="changePage(-1)" ${currentPage === 0 ? "disabled" : ""}>← Prev</button>
+      <span style="align-self:center;font-size:0.82rem;color:var(--muted)">Page ${currentPage+1} of ${totalPages} — ${total} results</span>
+      <button class="secondary" onclick="changePage(1)" ${currentPage >= totalPages-1 ? "disabled" : ""}>Next →</button>`;
+    list.appendChild(nav);
+  }
+}
+
+function changePage(dir) {
+  currentPage += dir;
+  renderResults();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("searchInput").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+  loadData();
+});
+
+function selectPet(pet) {
+  selectedPet = pet;
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("step2").classList.remove("hidden");
+  const coords = (pet.coords || "").split("|").filter(Boolean);
+  document.getElementById("npcDisplay").innerHTML = `
+    <div class="npc-title">${pet.npc_name}</div>
+    <div class="npc-meta">NPC #${pet.npc_id} · ${pet.family_name} · ${pet.zone_name} · ${pet.classification_name}</div>
+    <div class="field-grid">
+      ${DISPLAY_FIELDS.map(f => `
+        <div class="field-row">
+          <span class="fname">${f}</span>
+          <span class="fval">${pet[f] || '<em style="color:var(--muted)">—</em>'}</span>
+        </div>`).join("")}
+    </div>
+    <div class="field-row" style="margin-top:10px;">
+      <span class="fname">coords (${coords.length} points)</span>
+      <div class="coord-list" style="margin-top:4px;">
+        ${coords.map(c => `<span class="tag">${c}</span>`).join("") || '<em style="color:var(--muted)">none</em>'}
+      </div>
+    </div>`;
+}
+
+function goToStep3() {
+  document.getElementById("step2").classList.add("hidden");
+  document.getElementById("step3").classList.remove("hidden");
+  document.getElementById("fieldSelect").value = "";
+  document.getElementById("currentVal").value = "";
+  document.getElementById("proposedVal").value = "";
+  document.getElementById("evidence").value = "";
+  document.getElementById("coordAdd").value = "";
+  document.getElementById("submitMsg").classList.add("hidden");
+  selectedCoords.clear();
+  document.getElementById("standardFields").classList.remove("hidden");
+  document.getElementById("coordFields").classList.add("hidden");
+}
+
+function goBackToStep2() {
+  document.getElementById("step3").classList.add("hidden");
+  document.getElementById("step2").classList.remove("hidden");
+}
+
+function resetToSearch() {
+  selectedPet = null;
+  ["step2","step3","stepAdd"].forEach(id => document.getElementById(id).classList.add("hidden"));
+  document.getElementById("step1").classList.remove("hidden");
+  document.getElementById("resultsList").classList.add("hidden");
+}
+
+function onFieldChange() {
+  const f = document.getElementById("fieldSelect").value;
+  const isCoord = f === "coords";
+  document.getElementById("standardFields").classList.toggle("hidden", isCoord);
+  document.getElementById("coordFields").classList.toggle("hidden", !isCoord);
+  if (!isCoord && selectedPet && selectedPet[f] !== undefined)
+    document.getElementById("currentVal").value = selectedPet[f];
+  else if (!isCoord)
+    document.getElementById("currentVal").value = "";
+  if (isCoord) buildCoordChips();
+}
+
+function buildCoordChips() {
+  selectedCoords.clear();
+  const coords = (selectedPet.coords || "").split("|").filter(Boolean);
+  document.getElementById("coordChips").innerHTML = coords.map(c =>
+    `<span class="coord-chip" data-coord="${c}" onclick="toggleCoord(this)">${c}</span>`
+  ).join("");
+}
+
+function toggleCoord(el) {
+  const c = el.dataset.coord;
+  if (selectedCoords.has(c)) { selectedCoords.delete(c); el.classList.remove("selected"); }
+  else { selectedCoords.add(c); el.classList.add("selected"); }
+}
+
+function submitCorrection() {
+  const field = document.getElementById("fieldSelect").value;
+  if (!field) { showSubmitMsg("Please select a field to correct.", "error"); return; }
+  const isCoord = field === "coords";
+  let currentVal, proposedVal;
+  if (isCoord) {
+    const toRemove = [...selectedCoords];
+    const toAdd = document.getElementById("coordAdd").value.trim();
+    if (!toRemove.length && !toAdd) { showSubmitMsg("Please select coords to remove and/or enter new ones.", "error"); return; }
+    currentVal  = toRemove.length ? "Remove: " + toRemove.join("|") : "No removals";
+    proposedVal = toAdd ? "Add: " + toAdd : "No additions";
+  } else {
+    currentVal  = document.getElementById("currentVal").value;
+    proposedVal = document.getElementById("proposedVal").value.trim();
+    if (!proposedVal) { showSubmitMsg("Please enter the proposed correct value.", "error"); return; }
+  }
+  const evidence = document.getElementById("evidence").value.trim();
+  const charName = document.getElementById("charName").value.trim();
+  const title = `[Correction] NPC #${selectedPet.npc_id} — ${selectedPet.npc_name} — ${field}`;
+  const body =
+`**NPC:** ${selectedPet.npc_name} (#${selectedPet.npc_id})
+**Field:** \`${field}\`
+**Current value:** ${currentVal}
+**Proposed value:** ${proposedVal}
+${evidence ? `**Evidence:** ${evidence}` : ""}
+${charName ? `**Reported by:** ${charName}` : ""}`;
+  window.open(`${ISSUES_URL}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=correction`, "_blank");
+  showSubmitMsg("✅ GitHub opened in a new tab — review and click 'Submit new issue' to file it.", "success");
+}
+
+function goToAddRequest() {
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("stepAdd").classList.remove("hidden");
+  document.getElementById("addName").value = document.getElementById("searchInput").value;
+  document.getElementById("addId").value = "";
+  document.getElementById("addFamily").value = "";
+  document.getElementById("addZone").value = "";
+  document.getElementById("addEvidence").value = "";
+  document.getElementById("addCharName").value = "";
+  document.getElementById("addMsg").classList.add("hidden");
+}
+
+function submitAddRequest() {
+  const name     = document.getElementById("addName").value.trim();
+  const id       = document.getElementById("addId").value.trim();
+  const family   = document.getElementById("addFamily").value.trim();
+  const zone     = document.getElementById("addZone").value.trim();
+  const evidence = document.getElementById("addEvidence").value.trim();
+  const charName = document.getElementById("addCharName").value.trim();
+  if (!name && !id) {
+    const el = document.getElementById("addMsg");
+    el.className = "msg error"; el.textContent = "Please provide at least an NPC name or ID.";
+    el.classList.remove("hidden"); return;
+  }
+  const title = `[New NPC] ${name || "Unknown"}${id ? " (#" + id + ")" : ""}`;
+  const body =
+`**NPC Name:** ${name || "—"}
+**NPC ID:** ${id || "—"}
+**Pet Family:** ${family || "—"}
+**Zone / Location:** ${zone || "—"}
+${evidence ? `**Evidence:** ${evidence}` : ""}
+${charName ? `**Reported by:** ${charName}` : ""}`;
+  window.open(`${ISSUES_URL}?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=new-npc`, "_blank");
+  const el = document.getElementById("addMsg");
+  el.className = "msg success";
+  el.textContent = "✅ GitHub opened in a new tab — review and click 'Submit new issue' to file it.";
+  el.classList.remove("hidden");
+}
+
+function showSubmitMsg(msg, type) {
+  const el = document.getElementById("submitMsg");
+  el.className = "msg " + type; el.textContent = msg; el.classList.remove("hidden");
+}
+
+function setStatus(msg, type) {
+  const el = document.getElementById("searchStatus");
+  el.className = "msg " + type; el.textContent = msg;
+}
+</script>
+</body>
+</html>
