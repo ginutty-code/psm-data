@@ -77,6 +77,7 @@ def clean_note(note, compiled_rules, keyword_pattern):
 
     # 1. Remove backslashes, normalize whitespace
     note = note.replace('\\', '')
+    note = note.replace('.,', ',')
     note = ' '.join(note.split())
 
     # 2. Strip plain "Located in X." sentences
@@ -112,7 +113,7 @@ def main():
     keyword_pattern = None
     if keywords:
         keyword_pattern = re.compile(
-            r'\b(' + '|'.join(map(re.escape, keywords)) + r')\b',
+            r'\b(' + '|'.join(map(re.escape, keywords)) + r')s?\b',
             re.IGNORECASE
         )
         print(f"Loaded {len(keywords)} keywords for filtering.")

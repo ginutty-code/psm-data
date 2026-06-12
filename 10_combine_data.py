@@ -123,7 +123,7 @@ SORTED_METHODS = sorted(
     key=len, reverse=True
 )
 METHOD_PATTERNS = {
-    m: re.compile(r'(?i)\b' + re.escape(m) + r'\b')
+    m: re.compile(r'(?i)\b' + re.escape(m) + r's?\b')
     for m in SORTED_METHODS
 }
 

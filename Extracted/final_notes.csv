@@ -45,13 +45,13 @@ npc_id,npc_name,notes
 50743,Manax,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 50744,Qu'rik,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 50742,Qem,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
-11729,Hive'Zora Hive Sister,", Silithus. Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
-11725,Hive'Zora Waywatcher,", Silithus. Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
-11722,Hive'Ashi Defender,", Silithus. Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
+11729,Hive'Zora Hive Sister,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
+11725,Hive'Zora Waywatcher,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
+11722,Hive'Ashi Defender,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 15318,Hive'Zara Drone,Located in Ruins of Ahn'Qiraj (Raid).
 15521,Hive'Zara Hatchling,Located in Ruins of Ahn'Qiraj (Raid). Spawns when Buru Eggs are attacked.
 15229,Vekniss Soldier,Located in Temple of Ahn'Qiraj (Raid).
-11733,Hive'Regal Slavemaker,", Silithus. Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
+11733,Hive'Regal Slavemaker,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 15319,Hive'Zara Collector,Located in Ruins of Ahn'Qiraj (Raid).
 131893,Silithid Drone,"Only present in the newer phase of Silithus, after you complete the Antorus raid."
 15300,Vekniss Drone,Located in Temple of Ahn'Qiraj (Raid).
@@ -89,6 +89,7 @@ npc_id,npc_name,notes
 35750,Snapjaw Basilisk,"Spawns during quest ""Early Adoption""."
 156077,Fiendish Terrorwing,"Found in Dredgewood, The Banewood, Ember Ward and Dominance Keep."
 168591,Ravenous Dreadbat,Located in Sanguine Depths (Dungeon).
+157828,Ruinus Dredbat,"Can be found to the east of the muckpool, circling several of the trees."
 178283,Scorched Dredbat,"Found on an isolated piece of land that floats off the south-west edge of the zone. You can reach there by flying, but it can also be reached via the Maw when a Venthyr Assault is active, by taking one of the mirrors surrounding the final boss of the Assault."
 157083,Stonewing Ravager,"Located in The Upper Reaches, Torghast, Tower of the Damned (Dungeon)."
 75247,"Groyat, the Blind Hunter",Located in Razorfen Kraul (Dungeon).
@@ -368,6 +369,8 @@ npc_id,npc_name,notes
 142403,Wild Hog,Found in a range extending east from Millstone Hamlet to near where Osca the Bloodied spawns in the Roaring Highland.
 135048,Gorestained Piglet,"Located in Banquet Hall, Waycrest Manor (Dungeon)."
 153238,Tamed Boar,Found in a pen inside the citadel grounds.
+77124,Crag Goretusk,Found in several caves in the area.
+77129,Elder Crag Goretusk,"Occasionally found in caves in the area, accompanied by regular Crag Goretusks."
 83719,Wild Goreger,Located in Ashran (Battleground). Not found outside the battleground instance.
 82617,Slogtusk the Corpse-Eater,Inside a large cave.
 89689,Diresnout Felboar,"Located in Hellfire Citadel (Non-Instanced), Tanaan Jungle."
@@ -597,7 +600,7 @@ npc_id,npc_name,notes
 41166,Gomegaz,"Wanders the perimeter of the area north of (and up from) the Dark Portal blast zone. Gomegaz only appears in the original, pre-""Iron Horde Invasion"" phase of the zone. Speak to Zidormi, in the passage to the Swamp of Sorrows, to access the pre-invasion phase."
 77927,Son of the Beast,"Located in The Furnace, Upper Blackrock Spire (Dungeon). The only remaining core hound to use the old orange-red model."
 50839,Chromehound,Does a loop of the circular road inside the mountain.
-14020,Chromaggus,", Blackwing Lair (Raid)."
+14020,Chromaggus,"Located in Chromaggus is the seventh encounter of the raid, Blackwing Lair (Raid)."
 168135,Night Mare,This rare NPC is normally invisible and requires a Dream Catcher to see. This item can be assembled as part of a special activity to obtain the Swift Gloomhoof mount. See that page for more information.
 256858,Skittish Springrunner,Found at Tranquil Repose (a glade west of Tranquillien) and also to the north-west of the southern entrance to Zul'Aman.
 140756,Guardian of the Spring,"The Guardian of the Spring is normally friendly but can be tamed if you use the toy ""N'lyeth, Sliver of N'Zoth"" while in War Mode. This version of the Guardian is the one that appears by Roan Berthold near Southwind Station (approx 67,52) for a short time after completing its associated vignette. The original version of the Guardian appears at The Placid Spring (approx 61,52) and can be mounted and ridden for 40 seconds. If you ride it to Roan Berthold at approx you'll be dismounted and receive a lootable chest."
@@ -632,8 +635,10 @@ npc_id,npc_name,notes
 239210,Fluorescent Trashpicker,"Found in a sewer near the center of Hovel Hill. The entrance is an openable sewer lid at coordinates 36.0, 37.4."
 239229,Rusty Trashnester,"Found in a sewer in the north-eastern edge of The Vatworks. The entrance is an openable sewer lid at coordinates 33.8, 57.5."
 227569,Storm-Touched Clawfiend,"Found in a special 'storm' phase of Siren Isle that you can access after completing the zone's weekly quest (by participating in activities and killing various NPCs around Siren Isle) and unlocking Special Assignment: Storm's a Brewin. Once unlocked, speak to Suzie Boltwrench at Flotsam Shoal to enter or leave the storm phase at any time, even after you complete the assignment."
+153966,Chitterspine Crab,Travels in packs in the Grotto.
 231986,Deepwater Matriarch,"Found in a special 'storm' phase of Siren Isle that you can access after completing the zone's weekly quest (by participating in activities and killing various NPCs around Siren Isle) and unlocking Special Assignment: Storm's a Brewin. Once unlocked, speak to Suzie Boltwrench at Flotsam Shoal to enter or leave the storm phase at any time, even after you complete the assignment."
 153971,Chitterspine Clicker,Spawns occasionally when players open Chittershell Clams when on the quest Working With Purpose / Working With Purpose.
+153965,Chitterspine Clicker,Travels in packs in the Grotto.
 152462,Chitterspine Ambusher,Stealthed. Many may be found around Chitterspine Caverns and Chitterspine Grotto in north-west Nazjatar. A few are also
 153812,Chitterspine Lurker,Stealthed.
 152642,Angry Sandcrab,Spawns when you click on your first sand pile during the Alliance-only quest Crab Marks The Spot. This quest is only available when you have Blademaster Inowari active as your bodyguard and is started by a piece of parchment on a rock not far from Braxicus in Dragon's Teth Basin.
@@ -756,7 +761,7 @@ npc_id,npc_name,notes
 68476,Horridon,"Located in Royal Amphitheater, Throne of Thunder (Raid). You may have trouble ending the fight once Horridon is tamed. One option is to feign death, create a group, then leave the group and wait for the 1 minute timer to boot you out of the instance. You may also be locked out of Horridon's arena for a while (30 or more minutes) until the dungeon soft resets."
 69795,Zandalari Battlebeast,Spawns sporadically during the constant attacks on Bleak Hollow.
 250030,Ghostfeather Dragonhawk,Spawns during the Runestone Defense event at Dawnstar Spire.
-259914,Tortured Dragonhawk,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Temple Ritual Site event.
+259914,Tortured Dragonhawk,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.
 167343,Dragonhawk,"If you're a blood elf this beast can be found on the ship during the intro to Exile's Reach. It's friendly at this stage, but can be tamed at a much later stage, during the quest The Art of Taming."
 20039,Phoenix-Hawk,Located in Tempest Keep: The Eye (Raid).
 25867,Sunblade Dragonhawk,Located in Sunwell Plateau (Raid).
@@ -798,6 +803,7 @@ npc_id,npc_name,notes
 16874,Snowblind,Spawns when you click on (and destroy) a large nest on the ground. The nest isn't always present and may take several hours to reappear.
 193154,Forgotten Gryphon,"Found atop a plateau southeast of Obsidian Citadel (approximately 33,76)."
 199544,Reservoir Skyfeather,"Found on rock ledges half way up the cliff on the east and north-east sides of Tyrhold Reservoir. They respawn quickly, so if the colour you're after isn't present you can just keep taming and releasing gryphons until it appears."
+5928,Sorrow Wing,In some trees north-west of the lake.
 4015,Pridewing Patriarch,Kill other Pridewings to get him to spawn.
 239832,Enraged Thorntail Shade,Can only be found while Phase Diving. Loses its ethereal effect upon taming.
 249797,Eager Thorntail,Can only be found while Phase Diving.
@@ -880,6 +886,7 @@ npc_id,npc_name,notes
 168453,Animated Pointer,Has a unique green anima effect to it.
 97119,Shroud Hound,"Located in The Naglfar, Maw of Souls (Dungeon). Found in the ship after the first boss."
 138851,Soul Hunter,Located in Island Expeditions (Scenario). Can appear on any island when a Kvaldir invasion is occurring.
+115026,Helhound,"Found during the world quests Helarjar Landing: Grey Shoals - at Grey Shoals to the west of Nor'danil Wellspring in Azsuna, and Helarjar Landing: Vrekt - at Vrekt on the south-east tip of Stormheim."
 78457,Burning Hunter,Spawned by an event and may phase out when complete.
 78432,Burning Hunter,The ones patrolling with the Legion Assailants are not controlled and are tameable.
 116527,Pit Hound,Only present when there's a Legion invasion in Stormheim and the invasion quest Crushing the Legion is active.
@@ -902,6 +909,7 @@ npc_id,npc_name,notes
 138660,Mist Hound,"Located in Island Expeditions (Scenario). A possible encounter on Dread Chain, Skittering Hollow, Verdant Wilds."
 114794,Skeletal Hound,"Located in The Scullery, Return to Karazhan (Dungeon). The Scullery is adjacent to The Banquet Hall. You don't have to defeat Moroes to reach it."
 139980,Taja the Tidehowler,Taja loses its purple aura upon taming.
+161390,Darkhound Hunter,"Found in world quests ""Better Off Dead,"" and ""Deadly Reminder."""
 175860,Ravenous Shade,"Has a unique spectral effect that it, sadly, loses upon being tamed."
 175818,Unbound Darkhound,Loses spectral effect upon taming.
 175819,Unbound Shademongrel,Loses spectral effect upon taming.
@@ -1096,6 +1104,7 @@ npc_id,npc_name,notes
 151634,Motorback Ape <Scrap King's Minion>,This creature makes some very subtle mechanical sounds when clicked.
 114992,Copper Arachnodrone,"Found just outside the northern-most building on the island. In order to see it you must ensure Theramore Isle is set to its pre-destruction phase - if it isn't then speak to Zidormi on the west side of the bridge, west of Theramore. To activate the Arachnodrone you must first obtain an Electrified Key by defeating Doctor Weavil, upstairs in the largest building. The drop-rate of the key isn't 100% so you might have to kill him a few times before you obtain one, but he doesn't take long to respawn. Once activated, the arachnodrone must be reduced to 30% health before it can be tamed. Be ready to interrupt its Maximum Repair spell or it'll heal to full health."
 153473,Abducted Motospider,The Abducted Motospider is a chance spawn when you attempt to rescue abductees from a Mechagon Containment Crate during the quest Abduction Reduction.
+152287,Motospider,Wanders the area in packs.
 152288,Motospider,Spawned by destroying Motospider Eggs.
 154219,Motospider,"Spawns during combat with the rare NPC, Mecharantula."
 153980,Arachnoid Destroyer,"Found in the alternate timeline phase of Mechagon, which is accessible on days when Chromie is present in Rustbolt, or by activating a Personal Time Displacer."
@@ -1176,6 +1185,8 @@ npc_id,npc_name,notes
 70558,Young Pterrorwing,Summoned by Zandalari Beast Handlers during combat.
 88208,Pit Beast,"When present, it's just to the east, inside the entrance of the Proving Grounds."
 212043,Elusive Dreamtalon,"There's a chance this beast will appear when you use an Elusive Creature Bait in the Emerald Dream zone of the Dragon Isles, possibly more frequently in the south of the zone. To create Elusive Creature Bait you must have levelled Dragon Isles Skinning to the point where you can select the Bait Crafter specialization (see your skinning journal inside your professions panel) and spend at least 10 points of Knowledge in it."
+211316,Listless Dreamtalon,Found in open caves at the north end of the thicket.
+210161,"Ristar, the Rabid",Found in open caves at the north end of the thicket.
 210051,Matriarch Keevah,"Found in the south-west, in a cave inland from Summerjoy Shoal."
 52157,Ohgan,"Located in Mandokir's Domain, Zul'Gurub (Dungeon). Ohgan is part of the Bloodlord Mandokir encounter and initially serves as the boss's mount. To tame him you'll have to wait until Mandokir dismounts and Ohgan kills all of the Chained Spirits that surround the arena; before then he refuses to be distracted by you."
 135433,Reanimated Ravasaur,Not inside the dungeon. Found in the large sunken area before the Kings' Rest dungeon entrance.
@@ -1241,7 +1252,7 @@ npc_id,npc_name,notes
 241363,Siltwing Hunter,"Found west of Eco-Dome: Primus during the world quest, Endangered Specimens."
 240511,Twilight Ray,"Found during the Zul'Aman intro quest chain, ""Dis Was Our Land"" but disappears afterwards"
 240544,Vicious Ray,"Found during the Zul'Aman intro quest chain, ""Dis Was Our Land"" but disappears afterwards"
-255957,Corrupted Ray,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Temple Ritual Site event.
+255957,Corrupted Ray,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.
 255886,Sand Swooper,Found only during the Midnight Prologue quest chain added in Patch 11.2.7. The involved storyline begins with a summons from Arator: Meet Arator.
 232111,The Nightreaver,Can only be found while Phase Diving.
 203625,Karokta,"Found north of Glimmerogg. Rares in Zaralek Cavern do not spawn every day, and don't even begin to spawn until the zone has been loaded for at least half an hour."
@@ -1481,6 +1492,7 @@ npc_id,npc_name,notes
 18983,Blackfang Tarantula,Located in The Black Morass (Dungeon).
 129805,Beshol,In a cave. Summoned by opening an Obviously Safe Chest.
 142333,Giant Plains Creeper,"Found in the Battle for Azeroth zone phase, in the south-west part of the zone."
+4006,Deepmoss Webspinner,Hangs upside down from trees.
 207300,Hecutta,"Only appears during the once-off quest, Cavern Cleaning, which is part of the quest chain to recruit the Netherwing Dragonflight, added in Patch 10.2. Found in caverns high up in the mountains on the north side of the Shifting Sands / Temporal Conflux area."
 213668,Invasive Tarantula,"These tarantulas spawn during Superbloom events if someone chooses the ability Arachnid Annihilation from a dreamfruit and then clicks on an Invasive Spider Sac. This ability isn't offered every Superbloom. You may have trouble taming one of these spiders before someone kills it, but it's also not a unique colour."
 178507,Drylands Tarachnid,"Spawns during the quest Knocking On Death's Door. To remain in the phase with it, you need to use a cushion toy, and immediately click on it after clicking on Kbato. You will ride Kbato, but when you hop off you can then interact with the Tarachnid."
@@ -1725,6 +1737,7 @@ npc_id,npc_name,notes
 60047,Amethyst Guardian,Located in Mogu'shan Vaults (Raid). One of The Stone Guard bosses. In 10-player mode only three of the four possible guardians will be present in a given week.
 60043,Jade Guardian,Located in Mogu'shan Vaults (Raid). One of The Stone Guard bosses. In 10-player mode only three of the four possible guardians will be present in a given week.
 59915,Jasper Guardian,Located in Mogu'shan Vaults (Raid). One of The Stone Guard bosses. In 10-player mode only three of the four possible guardians will be present in a given week.
+136550,Charged Sentinel,"Associated with the Azerite Madness and Azerite Mining World Quests in Zuldazar, when Mogu are present."
 60051,Cobalt Guardian,Located in Mogu'shan Vaults (Raid). One of The Stone Guard bosses. In 10-player mode only three of the four possible guardians will be present in a given week.
 61307,Yachi,"Yachi and its companion, Yao, spawn during the quest The Tongue of Ba-Shon, which is part of the Kun-Lai Summit quest chain. It can be tamed by someone other than the quester."
 61387,Quilen Guardian,Located in Mogu'shan Palace (Dungeon).
@@ -1831,6 +1844,7 @@ npc_id,npc_name,notes
 140594,Silithid Hunter-Killer,"Located in Archives of Eternity, Uldir (Raid)."
 17732,Lykul Wasp,Located in The Underbog (Dungeon).
 173114,Invasive Decayfly,"Located in Torghast, Tower of the Damned (Dungeon)."
+65617,Zijin Hollowfly,Attacks in a large swarm.
 109025,Moonglow Locust,Has a different glow to other purple fireflies.
 19632,Lykul Stinger,Located in The Underbog (Dungeon).
 14475,Rex Ashil,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
@@ -1996,6 +2010,7 @@ npc_id,npc_name,notes
 220483,Attentive Silkhauler,Often found carrying a container on its back that is lost upon taming.
 217379,Infested Jawgrub,Covered in spider eggs that are lost upon taming.
 217417,Infested Jawgrub,Covered in spider eggs that are lost upon taming.
+214285,Razormouth Wormling,Found in side-caves in the area.
 223782,Snapjaw Ploughworm,Found in a cave inside the large pit in the west of the area.
 225488,Mycotic Jawcrawler,"Found south of The Wormlands. It is ridden by a Fungari Myconite, but it can be tamed out from under them!"
 216387,Razorling,Summoned by Wormcaller Iz'tikrine during combat.
@@ -2015,6 +2030,7 @@ npc_id,npc_name,notes
 136653,Ravenous Sandworm,Only present when the Horde-only World Quest Sandfishing is active. These worms can be fished out of the sand as part of the quest. The quest is located north-east of Atul'Aman.
 88524,Larva Pit Fodder,"Released from cages using Ogre Cage Key, taken from Bloodring Slavers. You, or someone with you, must have the once-only quest, Assault on the Gorian Proving Grounds to open a cage."
 84799,Adolescent Snow Lurker,Frozen. Attacks when freed.
+73227,Wastes Rockworm <Child of Shui Halad>,"Tiny, travels in packs."
 173834,Chilled Crustburster,"Found during the Necrolord-only quest, A Brokered Deal."
 59754,Mottled Caterpillar,"Originally phased out, but now accessible at later phases."
 67084,Giant Siftworm,Can only be tamed when aggressive due to daily quest.
@@ -2026,8 +2042,10 @@ npc_id,npc_name,notes
 11741,Dredge Crusher,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 11740,Dredge Striker,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 8925,Dredge Worm,Located in Blackrock Depths (Dungeon).
+51026,Gnath,Swims in a little pool under a bridge.
 11789,Deep Borer,Located in Maraudon (Dungeon).
 14477,Grubthor,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
+51029,Parasitus,Swims around in the lake. Very large!
 11787,Rock Borer,Located in Maraudon (Non-Instanced).
 11788,Rock Worm,Located in Maraudon (Non-Instanced).
 51025,Dilennaa,Under water.
