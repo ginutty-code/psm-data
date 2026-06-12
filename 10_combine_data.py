@@ -97,18 +97,18 @@ def _build_contextual_patterns(item):
     faction_prefix = r'(?:(?:Alliance|Horde)\s+)?'
     return [
         re.compile(r'(?i)\b' + faction_prefix + escaped + r' hunters? \bcan\b'),
-        re.compile(r'(?i)\b(?:only (?:available|accessible|tameable|visible) to|tameable by)\s+(?:an? )?' + faction_prefix + escaped + r'\b'),
-        re.compile(r'(?i)\bif you\'re (?:an? )?' + faction_prefix + escaped + r'\b'),
-        re.compile(r'(?i)\b' + faction_prefix + escaped + r' (?:only|starting|players?|characters?)\b'),
+        re.compile(r'(?i)\b(?:only (?:ever )?(?:available|accessible|tameable|visible) (?:to|during)|tameable by)\s+(?:an? |the )?' + faction_prefix + escaped + r'\b'),
+        re.compile(r'(?i)\bif you\'re (?:an? |the )?' + faction_prefix + escaped + r'\b'),
+        re.compile(r'(?i)\b' + faction_prefix + escaped + r' (?:only|starting|players?|characters?|allied(?: race)?)\b'),
         re.compile(r'(?i)\b' + faction_prefix + escaped + r'-only\b'),
-        re.compile(r'(?i)\bfor (?:an? )?' + faction_prefix + escaped + r' (?:hunters?|players?|characters?)\b'),
+        re.compile(r'(?i)\bfor (?:an? |the )?' + faction_prefix + escaped + r' (?:hunters?|players?|characters?)\b'),
     ]
 
 def _build_faction_patterns(faction_name):
     escaped = re.escape(faction_name)
     return [
         re.compile(r'(?i)\b' + escaped + r' hunters? (?:.*?)\bcan\b'),
-        re.compile(r'(?i)\b(?:only (?:available|accessible|tameable|visible) to|tameable by)\s+(?:an? )?(?:\w+\s+)?' + escaped + r'\b'),
+        re.compile(r'(?i)\b(?:only (?:ever )?(?:available|accessible|tameable|visible) (?:to|during)|tameable by)\s+(?:an? |the )?(?:\w+\s+)?' + escaped + r'\b'),
         re.compile(r'(?i)\bif you\'re (?:an? )?(?:\w+\s+)?' + escaped + r'\b'),
         re.compile(r'(?i)\b' + escaped + r' (?:only|starting|players?|characters?)\b'),
         re.compile(r'(?i)\b' + escaped + r'-only\b'),
