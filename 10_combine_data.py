@@ -31,109 +31,100 @@ TYPE_MAP = {
     '6': 'Undead', '9': 'Mechanical', '15': 'Aberration'
 }
 
-SPECIAL_TAMING_CONDITIONS = {
-    "N'lyeth, Sliver of N'Zoth", "Disturbed Earth",
-    "Elusive Creature Bait", "Elusive Creature Lure", "Siren's Sting",
-    "Alliance", "Horde",
-    "Quest", "Questline", "Dungeon", "Raid", "Battleground", "Delve",
-    "Scenario", "Achievement", "Reputation", "Event", "Assault", "Invasion", "Profession",
-    "Brewfest", "Love is in the Air", "Hallow's End", "Lunar Festival",
-    "Midsummer Fire Festival", "Feast of Winter Veil", "Noblegarden",
-    "Children's Week", "Pirates' Day", "Day of the Dead", "Pilgrim's Bounty",
-    "Pandaren", "Pandarens", "Draenei", "Draenai", "Worgen", "Goblin", "Goblins",
-    "Orc", "Orcs", "Troll", "Trolls", "Undead", "Forsaken", "Tauren", "Taurens",
-    "Human", "Humans", "Dwarf", "Dwarves", "Gnome", "Gnomes", "Vulpera", "Dracthyr",
-    "Mechagnome", "Mechagnomes", "Haranir", "Nightborne", "Earthen",
-    "Night Elf", "Night Elves", "Blood Elf", "Blood Elves", "Void Elf", "Void Elves",
-    "Lightforged Draenei", "Lightforged Draeneis", "Lightforge Draenai", "Lightforged",
-    "Dark Iron Dwarf", "Dark Iron Dwarves", "Dark Iron",
-    "Highmountain Tauren", "Highmountain Taurens", "Highmountain",
-    "Zandalari Troll", "Zandalari Trolls", "Zandalari",
-    "Mag'har Orc", "Mag'har Orcs", "Mag'har", "Kul Tiran", "Kul Tirans"
+# Unified Category Mapping: Maps keywords to (Category, Normalized Value)
+CATEGORY_MAP = {
+    "Instance": ["Dungeon", "Raid", "Scenario", "Delve", "Battleground", "Island Expedition", "Horrific Vision", "Torghast"],
+    "World Event": ["Invasion", "Void Strike", "Void Incursion","Void Assault", "Fyrakk Assault","Amathet Assault","Mogu Assault","Mantid Assault","Aqir Unearthed Assault", "Black Empire Assault", "Superbloom", "Grand Hunt", "Community Feast", "Researchers Under Fire", "Time Rift", "Dreamsurge", "Ritual Site", "Worldsoul Memory", "Island Expeditions", "Runestone Defense", "all Assaults", "Assault phases", "all Assaults phases", "Horde assaults", "Faction Assault", "Alliance assaults", "Venthyr Assault", "World Quest"],
+    "Seasonal Event": ["Brewfest", "Feast of Winter Veil", "Love is in the Air", "Hallow's End", "Lunar Festival", "Midsummer Fire Festival", "Noblegarden", "Children's Week", "Pirates' Day", "Day of the Dead", "Pilgrim's Bounty"],
+    "Profession": ["Herbalism", "Skinning", "Leatherworking", "Mining", "Blacksmithing", "Siren's Sting", "Elusive Creature Bait", "Elusive Creature Lure"],
+    "Covenant": ["Kyrian", "Necrolord", "Night Fae", "Venthyr"],
+    "Prerequisite": ["Reputation", "Achievement", "Quest", "Garrison", "Campaign"],
+    "Miscellaneous": ["Disturbed Earth", "N'lyeth, Sliver of N'Zoth"],
+    "Faction": ["Alliance", "Horde"],
+    "Race": ["Blood Elf", "Dark Iron Dwarf", "Dracthyr", "Draenei", "Dwarf", "Earthen","Pandaren", "Gnome", "Goblin", "Haranir", "Highmountain Tauren", "Human", "Kul Tiran","Lightforged Draenei", "Mag'har Orc", "Mechagnome", "Night Elf", "Nightborne","Orc", "Tauren", "Troll", "Undead", "Void Elf", "Vulpera", "Worgen"]
 }
 
 CONDITION_NORMALIZATION = {
-    "Questline": "Quest", "Draenai": "Draenei", "Lightforge Draenai": "Lightforged Draenei",
-    "Forsaken": "Undead", "Humans": "Human", "Dwarves": "Dwarf", "Orcs": "Orc",
-    "Trolls": "Troll", "Taurens": "Tauren", "Gnomes": "Gnome", "Goblins": "Goblin",
-    "Pandarens": "Pandaren", "Night Elves": "Night Elf", "Blood Elves": "Blood Elf",
-    "Void Elves": "Void Elf", "Lightforged": "Lightforged Draenei",
+    # Normalization Aliases (Synonyms back to standard terms)
+    "Questline": "Quest","Storyline": "Quest","Quest Chain": "Quest",
+
+    # Profession Item mapping to parent profession
+    "Siren's Sting": "Herbalism (Siren's Sting)",
+    "Elusive Creature Bait": "Skinning (Elusive Creature Bait)",
+    "Elusive Creature Lure": "Skinning (Elusive Creature Lure)",
+
+    # Assault Aggregation
+    "all Assaults": "Assault", "Assault phase": "Assault", "Assault phases": "Assault", "all Assaults phases": "Assault",
+    "Horde assaults": "Assault", "Faction Assault": "Assault", "Alliance assaults": "Assault",
+    "Venthyr Assault": "Assault", "Void Assault": "Assault", "Fyrakk Assault": "Assault",
+    "Amathet Assault": "Assault", "Mogu Assault": "Assault", "Mantid Assault": "Assault",
+    "Aqir Unearthed Assault": "Assault", "Black Empire Assault": "Assault",
+
+    # Plural to Singular normalization
+    "Draenai": "Draenei", "Lightforge Draenai": "Lightforged Draenei", "Forsaken": "Undead",
+    "Humans": "Human", "Dwarves": "Dwarf", "Orcs": "Orc", "Trolls": "Troll", "Taurens": "Tauren",
+    "Gnomes": "Gnome", "Goblins": "Goblin", "Pandarens": "Pandaren", "Night Elves": "Night Elf",
+    "Blood Elves": "Blood Elf", "Void Elves": "Void Elf", "Lightforged": "Lightforged Draenei",
     "Lightforged Draeneis": "Lightforged Draenei", "Dark Iron": "Dark Iron Dwarf",
     "Dark Iron Dwarves": "Dark Iron Dwarf", "Highmountain": "Highmountain Tauren",
     "Highmountain Taurens": "Highmountain Tauren", "Zandalari": "Zandalari Troll",
-    "Zandalari Trolls": "Zandalari Troll", "Mag'har": "Mag'har Orc",
-    "Mag'har Orcs": "Mag'har Orc", "Kul Tirans": "Kul Tiran", "Mechagnomes": "Mechagnome",
-    "N'lyeth, Sliver of N'Zoth": "Sliver of N'Zoth",
-    "Friendly Taming": "Sliver of N'Zoth",
-    "Brewfest": "Event", "Love is in the Air": "Event", "Hallow's End": "Event",
-    "Lunar Festival": "Event", "Midsummer Fire Festival": "Event",
-    "Feast of Winter Veil": "Event", "Noblegarden": "Event", "Children's Week": "Event",
-    "Pirates' Day": "Event", "Day of the Dead": "Event", "Pilgrim's Bounty": "Event"
+    "Zandalari Trolls": "Zandalari Troll", "Mag'har": "Mag'har Orc", "Mag'har Orcs": "Mag'har Orc",
+    "Kul Tirans": "Kul Tiran", "Mechagnomes": "Mechagnome",
+    "Assaults": "Assault", "Invasions": "Invasion", "Void Strikes": "Void Strike", "Void Assaults": "Assault", "World Quests": "World Quest"
 }
 
-RACE_KEYWORDS = [
-    "Pandaren", "Pandarens", "Draenei", "Draenai", "Worgen", "Goblin", "Goblins",
-    "Orc", "Orcs", "Troll", "Trolls", "Undead", "Forsaken", "Tauren", "Taurens",
-    "Human", "Humans", "Dwarf", "Dwarves", "Gnome", "Gnomes", "Vulpera", "Dracthyr",
-    "Mechagnome", "Mechagnomes", "Haranir", "Nightborne", "Earthen",
-    "Night Elf", "Night Elves", "Blood Elf", "Blood Elves", "Void Elf", "Void Elves",
-    "Lightforged Draenei", "Lightforged Draeneis", "Lightforge Draenai", "Lightforged",
-    "Dark Iron Dwarf", "Dark Iron Dwarves", "Dark Iron",
-    "Highmountain Tauren", "Highmountain Taurens", "Highmountain",
-    "Zandalari Troll", "Zandalari Trolls", "Zandalari",
-    "Mag'har Orc", "Mag'har Orcs", "Mag'har", "Kul Tiran", "Kul Tirans"
-]
+def is_proper_name(text):
+    """Validates if a string looks like a proper name (Title Case, quoted, or specific allowed formats)."""
+    text = text.strip()
+    if not text or len(text) < 3:
+        return False
+    # Allow quoted strings
+    if (text.startswith('"') and text.endswith('"')) or (text.startswith("'") and text.endswith("'")):
+        return True
+    # Reject if it contains common lowercase sentence words not usually in WoW titles
+    if re.search(r'\b(is|are|was|were|the|at|in|on|by|of|to|has|had|been|seventh|first|boss|after|only)\b', text):
+        # Allow "The" and "of" if they are part of a Title Case sequence
+        if not re.match(r'^([A-Z][\w\']*\b\s*|the\s|of\s)+$', text, re.IGNORECASE):
+            return False
+    # Ensure it starts with a Capital or Number
+    if not (text[0].isupper() or text[0].isdigit()):
+        return False
+    return True
 
-NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ")
-FACTIONS = ("Alliance", "Horde")
-ITEM_TAMING_REQS = [
-    "Disturbed Earth",
-    "Elusive Creature Bait", "Elusive Creature Lure", "Siren's Sting"
-]
 
-# --- Pre-build compiled regex patterns for condition/faction scanning ---
-
-def _build_contextual_patterns(item):
-    """Pre-compile the 6 context-aware patterns for a race/faction keyword."""
+NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ", "pre-", "pre ", "older ")
+# Helper to build context-aware patterns for Race and Faction
+def _build_contextual_patterns(item, is_faction=False):
     escaped = re.escape(item)
-    faction_prefix = r'(?:(?:Alliance|Horde)\s+)?'
+    prefix = r'(?:(?:Alliance|Horde)\s+)?' if not is_faction else ''
     return [
-        re.compile(r'(?i)\b' + faction_prefix + escaped + r' hunters? \bcan\b'),
-        re.compile(r'(?i)\b(?:only (?:ever )?(?:available|accessible|tameable|visible) (?:to|during)|tameable by)\s+(?:an? |the )?' + faction_prefix + escaped + r'\b'),
-        re.compile(r'(?i)\bif you\'re (?:an? |the )?' + faction_prefix + escaped + r'\b'),
-        re.compile(r'(?i)\b' + faction_prefix + escaped + r' (?:only|starting|players?|characters?|allied(?: race)?)\b'),
-        re.compile(r'(?i)\b' + faction_prefix + escaped + r'-only\b'),
-        re.compile(r'(?i)\bfor (?:an? |the )?' + faction_prefix + escaped + r' (?:hunters?|players?|characters?)\b'),
+        re.compile(r'(?i)\b' + prefix + escaped + r' hunters? (?:.*?)\bcan\b'),
+        re.compile(r'(?i)\b(?:only (?:ever )?(?:available|accessible|tameable|visible) (?:to|during)|tameable by)\s+(?:an? |the )?' + prefix + escaped + r'\b'),
+        re.compile(r'(?i)\bif you\'re (?:an? |the )?' + prefix + escaped + r'\b'),
+        re.compile(r'(?i)\b' + prefix + escaped + r' (?:only|starting|players?|characters?|allied(?: race)?)\b'),
+        re.compile(r'(?i)\b' + prefix + escaped + r'-only\b'),
+        re.compile(r'(?i)\bfor (?:an? |the )?' + prefix + escaped + r' (?:hunters?|players?|characters?)\b'),
     ]
 
-def _build_faction_patterns(faction_name):
-    escaped = re.escape(faction_name)
-    return [
-        re.compile(r'(?i)\b' + escaped + r' hunters? (?:.*?)\bcan\b'),
-        re.compile(r'(?i)\b(?:only (?:ever )?(?:available|accessible|tameable|visible) (?:to|during)|tameable by)\s+(?:an? |the )?(?:\w+\s+)?' + escaped + r'\b'),
-        re.compile(r'(?i)\bif you\'re (?:an? )?(?:\w+\s+)?' + escaped + r'\b'),
-        re.compile(r'(?i)\b' + escaped + r' (?:only|starting|players?|characters?)\b'),
-        re.compile(r'(?i)\b' + escaped + r'-only\b'),
-        re.compile(r'(?i)\bfor (?:an? )?(?:\w+\s+)?' + escaped + r' (?:hunters?|players?|characters?)\b'),
-    ]
+# Derive Race and Faction search terms from CATEGORY_MAP and Normalization Aliases
+def _get_category_keywords(category_name):
+    base_terms = set(CATEGORY_MAP.get(category_name, []))
+    aliases = [k for k, v in CONDITION_NORMALIZATION.items() if v in base_terms]
+    return sorted(list(base_terms) + aliases, key=len, reverse=True)
 
 # Pre-compiled at module load — no re-compilation during the main loop
-SORTED_METHODS = sorted(
-    [m for m in SPECIAL_TAMING_CONDITIONS if m not in FACTIONS and m not in RACE_KEYWORDS],
-    key=len, reverse=True
-)
-METHOD_PATTERNS = {
-    m: re.compile(r'(?i)\b' + re.escape(m) + r's?\b')
-    for m in SORTED_METHODS
-}
+CATEGORY_PATTERNS = {}
+for cat in CATEGORY_MAP.keys():
+    for kw in _get_category_keywords(cat):
+        CATEGORY_PATTERNS[(cat, kw)] = re.compile(r'(?i)\b' + re.escape(kw) + r's?\b')
 
-SORTED_RACES = sorted(RACE_KEYWORDS, key=len, reverse=True)
-RACE_PATTERNS = {item: _build_contextual_patterns(item) for item in SORTED_RACES}
+RACE_SEARCH_TERMS = _get_category_keywords("Race")
+FACTION_SEARCH_TERMS = _get_category_keywords("Faction")
 
-FACTION_PATTERNS = {f: _build_faction_patterns(f) for f in FACTIONS}
+RACE_PATTERNS = {item: _build_contextual_patterns(item) for item in RACE_SEARCH_TERMS}
+FACTION_PATTERNS = {f: _build_contextual_patterns(f, is_faction=True) for f in FACTION_SEARCH_TERMS}
 
-ITEM_TAMING_LOWER = {req: req.lower() for req in ITEM_TAMING_REQS}
-
+FACTION_NAMES = CATEGORY_MAP["Faction"]
 
 # --- Helpers ---
 
@@ -215,47 +206,61 @@ def extract_note_conditions(final_notes):
     Extract all non-faction, non-row-specific conditions from a note string.
     Results are cached by the caller; this should only run once per unique note.
     """
-    npc_conditions = []
+    npc_conditions = set()
 
     # Split note into segments to avoid extracting conditions from "Not Tameable" sections
     segments = re.split(r'[.;:!]', final_notes)
     for segment in segments:
         seg_lower = segment.lower()
-        if "not tameable" in seg_lower or "cannot be tamed" in seg_lower:
+        if any(neg in seg_lower for neg in ["not tameable", "cannot be tamed"]):
             continue
-        matched_spans = []
 
-        # Non-contextual methods
-        for method, pattern in METHOD_PATTERNS.items():
+        # 1. Standard Categories (Collect all matches in segment first)
+        segment_tags = set()
+        for (cat, kw), pattern in CATEGORY_PATTERNS.items():
+            if cat in ("Race", "Faction"): continue # Use context-aware scanning for these instead
             for match in pattern.finditer(segment):
-                span = match.span()
-                if not any(s[0] <= span[0] and span[1] <= s[1] for s in matched_spans):
-                    normalized = CONDITION_NORMALIZATION.get(method, method)
-                    if normalized not in npc_conditions:
-                        npc_conditions.append(normalized)
-                    matched_spans.append(span)
+                pre_text = segment[max(0, match.start() - 40):match.start()].lower()
+                is_negated = False
+                for neg in NEGATIONS:
+                    if neg in pre_text:
+                        # Ignore general "not" if it's part of an inclusionary "not just" phrase
+                        if neg == "not " and "not just " in pre_text:
+                            continue
+                        is_negated = True
+                        break
+                if is_negated:
+                    continue
+                
+                val = CONDITION_NORMALIZATION.get(kw, kw)
+                segment_tags.add((cat, val))
+                break
+
+        # Refinement: If "World Event: World Quest" matches, suppress the generic "Prerequisite: Quest" 
+        # because World Quests are better categorized as events.
+        if any(c == "World Event" and v == "World Quest" for c, v in segment_tags):
+            segment_tags = { (c, v) for c, v in segment_tags if not (c == "Prerequisite" and v == "Quest") }
+
+        for c, v in segment_tags:
+            npc_conditions.add(f"{c}: {v}")
 
         # Context-aware races
-        context_item_spans = []
-        for item in SORTED_RACES:
-            item_found = False
+        for item in RACE_SEARCH_TERMS:
             for pattern in RACE_PATTERNS[item]:
                 for match in pattern.finditer(segment):
-                    match_text = match.group()
                     pre_text = segment[max(0, match.start() - 40):match.start()].lower()
                     if any(neg in pre_text for neg in NEGATIONS):
                         continue
-                    idx = match_text.lower().find(item.lower())
-                    item_span = (match.start() + idx, match.start() + idx + len(item))
-                    if not any(s[0] <= item_span[0] and item_span[1] <= s[1] for s in context_item_spans):
-                        item_found = True
-                        context_item_spans.append(item_span)
-            if item_found:
-                normalized = CONDITION_NORMALIZATION.get(item, item)
-                if normalized not in npc_conditions:
-                    npc_conditions.append(normalized)
+                    val = CONDITION_NORMALIZATION.get(item, item)
+                    npc_conditions.add(f"Race: {val}")
+                    break
 
-    return npc_conditions
+    # Final deduplication: remove generic category values if a specific parenthesized version exists
+    # e.g. Removes 'Profession: Herbalism' if 'Profession: Herbalism (Siren's Sting)' is present.
+    if npc_conditions:
+        specific_parents = { c.split(" (")[0] for c in npc_conditions if "(" in c and ":" in c }
+        return [c for c in npc_conditions if c not in specific_parents]
+    return []
 
 
 def check_explicit_faction(faction_name, final_notes):
@@ -461,9 +466,9 @@ def main():
             # Note-based explicit faction scan (cached per note)
             if final_notes not in faction_note_cache:
                 found = set()
-                for f in FACTIONS:
+                for f in FACTION_NAMES:
                     if check_explicit_faction(f, final_notes):
-                        found.add(f)
+                        found.add(f"Faction: {f}")
                 faction_note_cache[final_notes] = found
             row_factions.update(faction_note_cache[final_notes])
 
@@ -483,26 +488,24 @@ def main():
                     res_a = any(phrase in seg_lower for phrase in ["friendly to alliance", "not visible to alliance", "doesn't appear to be visible to alliance"])
                     res_h = any(phrase in seg_lower for phrase in ["friendly to horde", "not visible to horde", "doesn't appear to be visible to horde"])
                     if res_a and not res_h:
-                        row_factions.add("Horde")
+                        row_factions.add("Faction: Horde")
                     elif res_h and not res_a:
-                        row_factions.add("Alliance")
+                        row_factions.add("Faction: Alliance")
 
             # React-based faction signals (only as a fallback hint if the note is silent)
             if not row_factions and not is_explicitly_universal:
                 if v_a is None and v_h is not None:
-                    row_factions.add("Horde")
+                    row_factions.add("Faction: Horde")
                 elif v_h is None and v_a is not None:
-                    row_factions.add("Alliance")
+                    row_factions.add("Faction: Alliance")
                 elif v_a in (-1, 0) and v_h == 1:
-                    row_factions.add("Alliance")
+                    row_factions.add("Faction: Alliance")
                 elif v_h in (-1, 0) and v_a == 1:
-                    row_factions.add("Horde")
+                    row_factions.add("Faction: Horde")
 
             # Final veto: null react overrides everything
-            if v_a is None:
-                row_factions.discard("Alliance")
-            if v_h is None:
-                row_factions.discard("Horde")
+            if v_a is None: row_factions.discard("Faction: Alliance")
+            if v_h is None: row_factions.discard("Faction: Horde")
 
             for f in row_factions:
                 if f not in base_conditions:
@@ -517,17 +520,20 @@ def main():
         npc_name_lower = record_data['npc_name'].lower()
         if "elusive" in npc_name_lower:
             expansion = record_data['expansion']
-            if expansion == "Dragonflight" and "Elusive Creature Bait" not in npc_conditions:
-                npc_conditions.append("Elusive Creature Bait")
-            elif expansion == "The War Within" and "Elusive Creature Lure" not in npc_conditions:
-                npc_conditions.append("Elusive Creature Lure")
+            if expansion == "Dragonflight":
+                val = "Profession: Skinning (Elusive Creature Bait)"
+                if val not in npc_conditions:
+                    npc_conditions.append(val)
+            elif expansion == "The War Within":
+                val = "Profession: Skinning (Elusive Creature Lure)"
+                if val not in npc_conditions:
+                    npc_conditions.append(val)
 
-        # Item-based taming requirements from note text
-        final_notes_lower = final_notes.lower()
-        for req in ITEM_TAMING_REQS:
-            if ITEM_TAMING_LOWER[req] in final_notes_lower:
-                npc_taming_set.add(CONDITION_NORMALIZATION.get(req, req))
-
+        # Final deduplication of generic vs specific conditions 
+        if npc_conditions:
+            specific_parents = { c.split(" (")[0] for c in npc_conditions if "(" in c and ":" in c }
+            npc_conditions = [c for c in npc_conditions if c not in specific_parents]
+        
         record_data['taming_requirements'] = "|".join(sorted(npc_taming_set))
         record_data['special_conditions'] = "|".join(sorted(npc_conditions))
         final_rows.append(record_data)
