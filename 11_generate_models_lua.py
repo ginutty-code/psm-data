@@ -193,7 +193,7 @@ def main():
                     
                     # Join aggregated locations into a single string for Lua
                     locs_list = sorted(list(npc.get("locs", [])))
-                    loc_lua = lua_quote(", ".join(locs_list))
+                    loc_lua = lua_quote("|".join(locs_list))
                     
                     exp_lua = lua_quote(npc.get("exp", ""))
                     class_lua = lua_quote(npc.get("class", ""))
