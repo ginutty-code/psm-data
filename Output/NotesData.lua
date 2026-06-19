@@ -2092,7 +2092,10 @@ PSM.NotesData = {
     [259960] = [[Appears during the "Battery Rush: Maisara Deeps" Void Strike event.]],
     [260031] = [[Latticewing Sporegliders with this ID patrol the zone in a small pack.]],
     [260954] = [[Appears during various Void Strike events in Eversong.]],
+    [260988] = [[Located in Frost Chitter Grotto, Val Void Invasion (Scenario)]],
+    [261085] = [[Located in Void Acropolis, Val Void Invasion (Scenario)]],
     [261337] = [[Appears during the 'Tranquil Repose' and 'South Eversong Woods' Void Strike events in Eversong Woods. Only one of these beasts seems to appear at a time but another may spawn as the event continues. These events only occur when Void Assaults are set in Eversong Woods, which is every second week. Void Strike locations seem to cycle randomly, so keep completing them until one of these two appears.]],
+    [261981] = [[Located in The Forgotten Depths, Val Void Invasion (Scenario)]],
     [262321] = [[Located in Ritual Site: Daggerspine Point (Scenario). Appears during the Daggerspine Point Ritual Site event.]],
     [263617] = [[Located in Ritual Site: Daggerspine Point (Scenario). There's a chance of summoning this snapdragon while running the Daggerspine Point Ritual Site. This instance is open every second week in Eversong Woods (check for the purple ritual site mark on the zone map) and is soloable. Inside the instance you can find occasional piles of Washed Up Kelp. Interacting with these has a chance of spawning a Void-Touched Snapdragon (which can also drop a mount of the same name).]],
 }

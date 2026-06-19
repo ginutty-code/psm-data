@@ -7309,7 +7309,8 @@ ModelsData = {
             [199773] = {"Softshell Skitterer", "Emerald Dream|The Forbidden Reach", "Dragonflight", "Normal", "[0,0]"},
             [200249] = {"Weathered Crab", "The Forbidden Reach", "Dragonflight", "Normal", "[0,0]"},
             [250105] = {"Nibbler Crab", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
-            [254198] = {"Kelp Crab", "Zul'Aman", "Midnight", "Normal", "[0,0]"}
+            [254198] = {"Kelp Crab", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
+            [261125] = {"Shoreline Scuttler", "Zul'Aman", "Midnight", "Normal", "[0,0]"}
         },
         [103318] = {
             [188328] = {"Crab", "Emerald Dream", "Dragonflight", "Normal", "[0,0]"},
@@ -7685,7 +7686,8 @@ ModelsData = {
             [224876] = {"Scavenging Sandsnapper", "Isle of Dorn", "The War Within", "Normal", "[-1,-1]"},
             [225889] = {"Angry Sandsnapper", "Isle of Dorn", "The War Within", "Normal", "[-1,-1]"},
             [227201] = {"Tidal Sandsnapper", "Isle of Dorn", "The War Within", "Normal", "[0,0]"},
-            [250103] = {"Seaside Crab", "Zul'Aman", "Midnight", "Normal", "[0,0]"}
+            [250103] = {"Seaside Crab", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
+            [261126] = {"Blueblood Crawler", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
         },
         [114816] = {
             [215548] = {"Crabby Relic-Seeker", "Isle of Dorn", "The War Within", "Normal", "[0,0]"},
@@ -16946,7 +16948,8 @@ ModelsData = {
         },
         [125612] = {
             [254097] = {"Hoarding Klaxid", "Slayer's Rise", "Midnight", "Normal", "[]"},
-            [254720] = {"Frenzied Klaxid", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"}
+            [254720] = {"Frenzied Klaxid", "Eversong Woods", "Midnight", "Normal", "[-1,-1]"},
+            [261085] = {"Invasive Crystalback", "Val", "Midnight", "Normal", "[]"}
         },
         [138657] = {
             [252682] = {"Hoarding Klaxid", "Slayer's Rise", "Midnight", "Normal", "[-1,-1]"},
@@ -18262,6 +18265,7 @@ ModelsData = {
             [86507] = {"Taladorette", "Talador", "Warlords of Draenor", "Normal", "[-1,-1]"}
         },
         [65919] = {
+            [112732] = {"Brood of Sael'orn", "Violet Hold", "Legion", "Elite", "[-1,-1]"},
             [120667] = {"Legion Venomretcher", "Broken Shore", "Legion", "Normal", "[-1,-1]"},
             [121927] = {"Legion Venomretcher", "Dalaran|Stormheim", "Legion", "Normal", "[-1,-1]"}
         },
@@ -18477,7 +18481,8 @@ ModelsData = {
             [186399] = {"Ice Webber", "The Azure Span", "Dragonflight", "Normal", "[-1,-1]"},
             [192591] = {"Shiverweb Crawler", "The Azure Span", "Dragonflight", "Normal", "[-1,-1]"},
             [195397] = {"Shiverweb Cloaker", "The Azure Span", "Dragonflight", "Normal", "[-1,-1]"},
-            [196415] = {"Shiverweb Crawler", "The Azure Span", "Dragonflight", "Normal", "[-1,-1]"}
+            [196415] = {"Shiverweb Crawler", "The Azure Span", "Dragonflight", "Normal", "[-1,-1]"},
+            [260988] = {"Frost Crawler", "Val", "Midnight", "Normal", "[]"}
         },
         [100561] = {
             [189859] = {"Cavern Lurker", "Thaldraszus", "Dragonflight", "Normal", "[-1,-1]"},
@@ -21261,7 +21266,8 @@ ModelsData = {
             [246051] = {"Alloyed Voidcrawler", "Slayer's Rise", "Midnight", "Normal", "[-1,-1]"}
         },
         [141335] = {
-            [259106] = {"Hal'hadar Leystalker", "Eversong Woods|Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
+            [259106] = {"Hal'hadar Leystalker", "Eversong Woods|Zul'Aman", "Midnight", "Normal", "[-1,-1]"},
+            [265254] = {"Hal'hadar Leystalker", "Naigtal|Vilaldoun", "Midnight", "Normal", "[-1,-1]"}
         },
         [141423] = {
             [259106] = {"Hal'hadar Leystalker", "Eversong Woods|Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
@@ -21787,7 +21793,8 @@ ModelsData = {
             [250548] = {"Venomous Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [253620] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[0,0]"},
             [254681] = {"Venomous Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
-            [255549] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
+            [255549] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
+            [261682] = {"Fiery Yellowjacket", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
         },
         [114803] = {
             [250126] = {"Furious Mudcoat", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
@@ -21825,7 +21832,8 @@ ModelsData = {
             [245041] = {"Netherflit", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [253499] = {"Bluffs Hornet", "Zul'Aman", "Midnight", "Normal", "[0,0]"},
             [255142] = {"Mudcoat Stingling", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"},
-            [257219] = {"Hatesting Hatchling", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
+            [257219] = {"Hatesting Hatchling", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
+            [261681] = {"Costal Greenhead", "Zul'Aman", "Midnight", "Normal", "[]"}
         },
         [115075] = {
             [257219] = {"Hatesting Hatchling", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
@@ -21859,7 +21867,8 @@ ModelsData = {
             [253620] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[0,0]"},
             [254099] = {"Scavenging Netherwasp", "Slayer's Rise", "Midnight", "Normal", "[]"},
             [255549] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
-            [257221] = {"Hatesting Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"}
+            [257221] = {"Hatesting Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
+            [261682] = {"Fiery Yellowjacket", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
         },
         [115080] = {
             [216065] = {"Bloatrot Stinger", "Hallowfall", "The War Within", "Normal", "[-1,-1]"},
@@ -21884,7 +21893,8 @@ ModelsData = {
             [255549] = {"Netherwasp Drone", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [257140] = {"Spitesting Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
             [257150] = {"Spitesting Netherwasp", "Voidstorm", "Midnight", "Normal", "[-1,-1]"},
-            [259955] = {"Murderous Mudcoat", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
+            [259955] = {"Murderous Mudcoat", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"},
+            [261682] = {"Fiery Yellowjacket", "Zul'Aman", "Midnight", "Normal", "[-1,-1]"}
         },
         [115082] = {
             [216078] = {"Fallowbarb", "Hallowfall", "The War Within", "Normal", "[-1,-1]"}
@@ -23781,7 +23791,8 @@ ModelsData = {
             [225049] = {"Caustic Jawcrawler", "Hallowfall", "The War Within", "Normal", "[-1,-1]"},
             [227002] = {"Siltboring Jawcrawler", "Hallowfall", "The War Within", "Normal", "[0,0]"},
             [227980] = {"Hilltop Jawcrawler", "Hallowfall", "The War Within", "Normal", "[0,0]"},
-            [229072] = {"Acidbreath Jawcrawler", "Hallowfall", "The War Within", "Normal", "[0,0]"}
+            [229072] = {"Acidbreath Jawcrawler", "Hallowfall", "The War Within", "Normal", "[0,0]"},
+            [261981] = {"Rime Worm", "Val", "Midnight", "Normal", "[]"}
         },
         [114836] = {
             taming = {"Exotic"},

@@ -209,3 +209,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257830,Deeplurk Snapdragon,Normal,0,288,Lizard,16939,[],add
 259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,16796,[],add
 262321,Depthstalker Snapdragon,Elite,1,288,Lizard,16939,[],add
+260988,Frost Crawler,Normal,0,3,Spider,16900,[],add
+261085,Invasive Crystalback,Normal,0,20,Scorpid,16900,[],add
+261981,Rime Worm,Normal,0,42,Worm,16900,[],add

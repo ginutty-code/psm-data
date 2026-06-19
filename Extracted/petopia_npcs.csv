@@ -2201,6 +2201,7 @@ npc_id,npc_name,zone,tameable
 224508,Tidal Sandsnapper,"The Three Shields, Isle of Dorn",Can Be Tamed
 254969,Prowl Crawler,"Nalorakk's Prowl, Zul'Aman",Can Be Tamed
 250103,Seaside Crab,Zul'Aman,Can Be Tamed
+261126,Blueblood Crawler,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 17217,Barbed Crawler,Azuremyst Isle,Can Be Tamed
 33712,Golden Crawler,Eversong Woods (Classic),Can Be Tamed
 17216,Skittering Crawler,Azuremyst Isle,Can Be Tamed
@@ -2228,6 +2229,7 @@ npc_id,npc_name,zone,tameable
 250104,Crab,Zul'Aman,Can Be Tamed
 254198,Kelp Crab,"Strait of Hexx'alor, Zul'Aman",Can Be Tamed
 250105,Nibbler Crab,Zul'Aman,Can Be Tamed
+261125,Shoreline Scuttler,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 144460,Overfed Snapper,Zuldazar,Can Be Tamed
 143718,Overfed Snapper,Stormsong Valley; Tiragarde Sound,Can Be Tamed
 227664,Tidal Sandskitterer,"Stormtide Dregs, Flotsam Shoal, Siren Isle",Can Be Tamed
@@ -4827,6 +4829,7 @@ npc_id,npc_name,zone,tameable
 255514,Shardstinger Klaxid,Voidstorm,Can Be Tamed
 257088,Shardstinger Klaxid,Voidstorm,Can Be Tamed
 254720,Frenzied Klaxid,Eversong Woods,Can Be Tamed
+261085,Invasive Crystalback,"Void Acropolis, Val",Can Be Tamed
 5823,Death Flayer,Durotar,Can Be Tamed
 3281,Sarkoth,Durotar,Can Be Tamed
 7022,Venomlash Scorpid,Uldaman (Dungeon),Can Be Tamed
@@ -5160,6 +5163,7 @@ npc_id,npc_name,zone,tameable
 195397,Shiverweb Cloaker,"Shiverweb Vale, The Azure Span",Can Be Tamed
 185810,Shiverweb Crawler,"Lost Ruins, The Azure Span",Can Be Tamed
 192591,Shiverweb Crawler,"Lost Ruins, The Azure Span",Can Be Tamed
+260988,Frost Crawler,"Frost Chitter Grotto, Val",Can Be Tamed
 1195,Forest Lurker,Loch Modan,Can Be Tamed
 616,Chatter,Redridge Mountains,Can Be Tamed
 52146,Chitter,"Render's Valley, Redridge Mountains",Available to Alliance Hunters Only
@@ -6158,6 +6162,7 @@ npc_id,npc_name,zone,tameable
 48128,Stranded Sparkleshell,Thousand Needles,Can Be Tamed
 246051,Alloyed Voidcrawler,"The Bloodplains, Voidstorm",Can Be Tamed
 259106,Hal'hadar Leystalker,"Zeb'Nowa, Eversong Woods",Can Be Tamed
+265254,Hal'hadar Leystalker,"Nexus Port & Extraction Coast, Naigtal",Can Be Tamed
 232257,Escaped Stalker,"The Merciless Wastes, K'aresh",Can Be Tamed
 234779,K'aresh Cragstalker,"North Sufaad, K'aresh",Can Be Tamed
 233213,Trained Thief-Hunter,"North Sufaad, K'aresh",Can Be Tamed
@@ -6264,6 +6269,7 @@ npc_id,npc_name,zone,tameable
 254681,Venomous Netherwasp,Voidstorm,Can Be Tamed
 250546,Venomous Netherwaspling,Voidstorm,Can Be Tamed
 254682,Venomous Netherwaspling,Voidstorm,Can Be Tamed
+261681,Costal Greenhead,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 259955,Murderous Mudcoat,"Maisara Deeps, Zul'Aman",Can Be Tamed
 137450,The Hornet,"Westwind Weald, Tiragarde Sound",Can Be Tamed
 168579,Fen Hatchling,Plaguefall (Dungeon),Can Be Tamed
@@ -6271,6 +6277,7 @@ npc_id,npc_name,zone,tameable
 250126,Furious Mudcoat,Zul'Aman,Can Be Tamed
 242028,Lightwood Borer,"Zeb'Alar Lumberyard, Zul'Aman",Can Be Tamed
 257149,Spitesting Hatchling,Voidstorm,Can Be Tamed
+261682,Fiery Yellowjacket,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 128966,Marsh Hornet,"Zul'Nazman & Xal'vor, Nazmir",Can Be Tamed
 124536,Bilewing Crippler,"The Four Stingers, Vol'dun",Can Be Tamed
 129298,Whistlebloom Drone,"Whistlebloom Oasis, Vol'dun",Can Be Tamed
@@ -6989,6 +6996,7 @@ npc_id,npc_name,zone,tameable
 227980,Hilltop Jawcrawler,Hallowfall,Can Be Tamed
 227002,Siltboring Jawcrawler,Hallowfall,Can Be Tamed
 225981,Underhang Jawcrawler,Hallowfall,Can Be Tamed
+261981,Rime Worm,"The Forgotten Depths, Val",Can Be Tamed
 220483,Attentive Silkhauler,"Pillar-nest Xesh, Azj-Kahet",Can Be Tamed
 217379,Infested Jawgrub,"Chittering Den, The Ringing Deeps",Can Be Tamed
 218083,Off-duty Silkhauler,"Pillar-nest Xesh, Azj-Kahet",Can Be Tamed
