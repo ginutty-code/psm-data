@@ -33,8 +33,12 @@ TYPE_MAP = {
 
 # Unified Category Mapping: Maps keywords to (Category, Normalized Value)
 CATEGORY_MAP = {
-    "Instance": ["Dungeon", "Raid", "Scenario", "Delve", "Battleground", "Island Expedition", "Horrific Vision", "Torghast"],
-    "World Event": ["Invasion", "Void Strike", "Void Incursion","Void Assault", "Fyrakk Assault","Amathet Assault","Mogu Assault","Mantid Assault","Aqir Unearthed Assault", "Black Empire Assault", "Superbloom", "Grand Hunt", "Community Feast", "Researchers Under Fire", "Time Rift", "Dreamsurge", "Ritual Site", "Worldsoul Memory", "Island Expeditions", "Runestone Defense", "all Assaults", "Assault phases", "all Assaults phases", "Horde assaults", "Faction Assault", "Alliance assaults", "Venthyr Assault", "World Quest"],
+    "Instance": ["Dungeon", "Raid", "Scenario", "Delve", "Battleground", "Torghast"],
+    "World Event": ["N'Zoth Assault", "Faction Assault", "Covenant Assault", "Fyrakk Assault", "Void Assault",
+                    "Legion Invasion", "Void Invasion", "Garrison Invasion",
+                    "Void Strike", "Ritual Site", "Runestone Defense", 
+                    "Superbloom", "Grand Hunt", "Community Feast", "Researchers Under Fire", "Time Rift", "Dreamsurge", 
+                    "Worldsoul Memory", "World Quest"],
     "Seasonal Event": ["Brewfest", "Feast of Winter Veil", "Love is in the Air", "Hallow's End", "Lunar Festival", "Midsummer Fire Festival", "Noblegarden", "Children's Week", "Pirates' Day", "Day of the Dead", "Pilgrim's Bounty"],
     "Profession": ["Herbalism", "Skinning", "Leatherworking", "Mining", "Blacksmithing", "Siren's Sting", "Elusive Creature Bait", "Elusive Creature Lure"],
     "Covenant": ["Kyrian", "Necrolord", "Night Fae", "Venthyr"],
@@ -53,13 +57,20 @@ CONDITION_NORMALIZATION = {
     "Elusive Creature Bait": "Skinning (Elusive Creature Bait)",
     "Elusive Creature Lure": "Skinning (Elusive Creature Lure)",
 
-    # Assault Aggregation
-    "all Assaults": "Assault", "Assault phase": "Assault", "Assault phases": "Assault", "all Assaults phases": "Assault",
-    "Horde assaults": "Assault", "Faction Assault": "Assault", "Alliance assaults": "Assault",
-    "Venthyr Assault": "Assault", "Void Assault": "Assault", "Fyrakk Assault": "Assault",
-    "Amathet Assault": "Assault", "Mogu Assault": "Assault", "Mantid Assault": "Assault",
-    "Aqir Unearthed Assault": "Assault", "Black Empire Assault": "Assault",
+    # Scenario Aggregation
+    "Island Expeditions": "Scenario", "Kvaldir Invasion": "Scenario", "Mogu Invasion": "Scenario",
+    "Horrific Vision": "Scenario",
 
+    # Invasion Aggregation
+    "Greater Invasion Point": "Legion Invasion", "Invasion Point": "Legion Invasion",
+    "Iron Horde garrison invasion": "Garrison Invasion",
+
+    # Assault Aggregation
+    "all Assaults": "N'Zoth Assault", "Assault phase": "N'Zoth Assault", "Assault phases": "N'Zoth Assault", "all Assaults phases": "N'Zoth Assault", "N'Zoth Invasion": "N'Zoth Assault",
+    "Amathet Assault": "N'Zoth Assault", "Black Empire Assault": "N'Zoth Assault", "Aqir Unearthed Assault": "N'Zoth Assault", "Mantid Assault": "N'Zoth Assault", "Mogu Assault": "N'Zoth Assault",
+    "Horde assaults": "Faction Assault", "Alliance assaults": "Faction Assault",
+    "Venthyr Assault": "Covenant Assault", "Kyrian Assault": "Covenant Assault", "Night Fae Assault": "Covenant Assault", "Necrolord Assault": "Covenant Assault",
+    
     # Plural to Singular normalization
     "Draenai": "Draenei", "Lightforge Draenai": "Lightforged Draenei", "Forsaken": "Undead",
     "Humans": "Human", "Dwarves": "Dwarf", "Orcs": "Orc", "Trolls": "Troll", "Taurens": "Tauren",
@@ -70,7 +81,7 @@ CONDITION_NORMALIZATION = {
     "Highmountain Taurens": "Highmountain Tauren", "Zandalari": "Zandalari Troll",
     "Zandalari Trolls": "Zandalari Troll", "Mag'har": "Mag'har Orc", "Mag'har Orcs": "Mag'har Orc",
     "Kul Tirans": "Kul Tiran", "Mechagnomes": "Mechagnome",
-    "Assaults": "Assault", "Invasions": "Invasion", "Void Strikes": "Void Strike", "Void Assaults": "Assault", "World Quests": "World Quest"
+    "Assaults": "Assault", "Invasions": "Invasion", "Void Strikes": "Void Strike", "Void Assaults": "Void Assault", "World Quests": "World Quest"
 }
 
 def is_proper_name(text):
@@ -92,7 +103,7 @@ def is_proper_name(text):
     return True
 
 
-NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ", "pre-", "pre ", "older ")
+NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ", "pre-", "pre ", "older ", "except ")
 # Helper to build context-aware patterns for Race and Faction
 def _build_contextual_patterns(item, is_faction=False):
     escaped = re.escape(item)
@@ -217,6 +228,7 @@ def extract_note_conditions(final_notes):
 
         # 1. Standard Categories (Collect all matches in segment first)
         segment_tags = set()
+        all_category_matches = []
         for (cat, kw), pattern in CATEGORY_PATTERNS.items():
             if cat in ("Race", "Faction"): continue # Use context-aware scanning for these instead
             for match in pattern.finditer(segment):
@@ -233,13 +245,33 @@ def extract_note_conditions(final_notes):
                     continue
                 
                 val = CONDITION_NORMALIZATION.get(kw, kw)
+                all_category_matches.append((cat, val, match.start(), match.end()))
+
+        # Sort by match length descending so longer matches are processed first
+        # Then filter out matches contained within longer matches to avoid redundancy
+        # e.g. "Greater Invasion Point" suppresses "Invasion Point" and "Invasion"
+        all_category_matches.sort(key=lambda m: m[3] - m[2], reverse=True)
+        covered_ranges = []
+        for cat, val, start, end in all_category_matches:
+            is_contained = False
+            for cs, ce in covered_ranges:
+                if start >= cs and end <= ce:
+                    is_contained = True
+                    break
+            if not is_contained:
                 segment_tags.add((cat, val))
-                break
+                covered_ranges.append((start, end))
 
         # Refinement: If "World Event: World Quest" matches, suppress the generic "Prerequisite: Quest" 
         # because World Quests are better categorized as events.
         if any(c == "World Event" and v == "World Quest" for c, v in segment_tags):
             segment_tags = { (c, v) for c, v in segment_tags if not (c == "Prerequisite" and v == "Quest") }
+
+        # Refinement: If an Instance condition is present (e.g. Island Expeditions Scenario),
+        # suppress generic "Invasion" and "Assault" World Event matches, as these are often
+        # scenario-internal mechanics rather than open-world events.
+        if any(c == "Instance" for c, v in segment_tags):
+            segment_tags = { (c, v) for c, v in segment_tags if not (c == "World Event" and v in ("Invasion", "Assault")) }
 
         for c, v in segment_tags:
             npc_conditions.add(f"{c}: {v}")

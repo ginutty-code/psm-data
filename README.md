@@ -84,3 +84,7 @@ The addon expects the following files from the `Output/` folder:
 - `CoordsData.lua`: Coordinate data for map integration.
 - `NotesData.lua`: Curated flavor text and taming instructions.
 - `CnditionsData.lua`: Tactical requirements for special tames.
+
+## Credits
+
+Full credit for the underlying data goes to [Wowhead](https://www.wowhead.com/) and [Petopia](https://www.wow-petopia.com/) and their contributors, who have made this data publicly available.
