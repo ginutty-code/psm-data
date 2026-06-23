@@ -37,6 +37,4 @@ npc_id,search,replace
 ,"These owls are actually all level 112, but you are temporarily bumped to level 112 inside the instance so you can tame them at the minimum instance level of 110. ",
 ," Nyemi was actually added in Patch 9.1, but a bug made her spawn underneath the terrain and she couldn't be reached. She was fixed in Patch 9.1.5.",
 ," Has a shadow-sparkling effect, but unsure if this would be retained if it were tameable.",
-151811,,Does not keep the sun touched glow after taming.
-151883,,Does not keep the sun touched glow after taming.
 125936,,"This NPC can be found in Invasion Point: Bonich, Invasion Point: Cen'gar, Invasion Point: Naigtal, Greater Invasion Point: Mistress Alluradel, Greater Invasion Point: Matron Folnuna, Greater Invasion Point: Pit Lord Vilemus, and Greater Invasion Point: Occularus."

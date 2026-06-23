@@ -1011,6 +1011,7 @@ PSM.ConditionsData = {
     [151353] = {conditions[9], conditions[12]},
     [151773] = {conditions[9]},
     [151809] = {conditions[48]},
+    [151811] = {conditions[48]},
     [151859] = {conditions[48]},
     [151945] = {conditions[48]},
     [151948] = {conditions[48]},

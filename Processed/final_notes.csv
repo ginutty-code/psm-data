@@ -1344,9 +1344,9 @@ npc_id,npc_name,notes
 151709,Energized Scrap Pup,"Spawns during combat with the rare NPC, Jawbreaker."
 151773,Junkyard D.0.G.,"Located in The Under Junk, Operation: Mechagon (Dungeon). Two of these hounds can be found in the trash mobs before K.U.-J.O."
 151809,Savannah Proudfang,Appears in all Assaults phases of the zone. Found south of the Halls of Origination.
-151811,Suntouched Falcon,Does not keep the sun touched glow after taming.
+151811,Suntouched Falcon,Appears in all Assaults phases of the zone. It has a fiery aura that is lost upon taming.
 151859,Tomb Scarab,Appears in all Assaults phases of the zone. Found in various locations in eastern Uldum.
-151883,Anaua,Does not keep the sun touched glow after taming.
+151883,Anaua,Anaua flies around the exterior of the Halls of Origination. She loses her transparent orange effect when tamed.
 151933,Malfunctioning Beastbot,"Retains its electrical effects after taming. The Malfunctioning Beastbot appears occasionally in the south-west corner of Bondo's Yard. It must be activated before it can be tamed, which requires a Beastbot Powerpack, which you can manufacture at Pascal-K1N6. The recipe for this item is granted for free as part of the area progression at Rustbolt."
 151945,Scavenging Dunerunner,Appears in all Assaults phases of the zone. Found in the east of the zone.
 151948,Senbu the Pridefather,Appears during Amathet Assaults.
