@@ -4,7 +4,7 @@ Generate addon Abilities data file
 
 import csv
 import os
-from config import WOWHEAD_FAMILIES_CSV, WOWHEAD_SPELLS_CSV, ABILITIES_LUA, ensure_dirs
+from config import PROCESSED_FAMILIES_CSV, PROCESSED_SPELLS_CSV, ABILITIES_LUA, ensure_dirs
 
 def load_csv(filepath):
     """Load CSV file with encoding fallback and return all rows."""
@@ -24,18 +24,18 @@ def load_csv(filepath):
 
 
 def main():
-    print(f"Loading families CSV from {WOWHEAD_FAMILIES_CSV}...")
-    if not os.path.exists(WOWHEAD_FAMILIES_CSV):
-        print(f"Error: Families CSV file not found: {WOWHEAD_FAMILIES_CSV}")
+    print(f"Loading families CSV from {PROCESSED_FAMILIES_CSV}...")
+    if not os.path.exists(PROCESSED_FAMILIES_CSV):
+        print(f"Error: Families CSV file not found: {PROCESSED_FAMILIES_CSV}")
         return
 
-    print(f"Loading spells CSV from {WOWHEAD_SPELLS_CSV}...")
-    if not os.path.exists(WOWHEAD_SPELLS_CSV):
-        print(f"Error: Spells CSV file not found: {WOWHEAD_SPELLS_CSV}")
+    print(f"Loading spells CSV from {PROCESSED_SPELLS_CSV}...")
+    if not os.path.exists(PROCESSED_SPELLS_CSV):
+        print(f"Error: Spells CSV file not found: {PROCESSED_SPELLS_CSV}")
         return
 
     # Load families
-    families_rows = load_csv(WOWHEAD_FAMILIES_CSV)
+    families_rows = load_csv(PROCESSED_FAMILIES_CSV)
     families = {}
     for row in families_rows:
         family_id = row.get("family_id", "").strip()
@@ -52,7 +52,7 @@ def main():
         }
 
     # Load spells
-    spells_rows = load_csv(WOWHEAD_SPELLS_CSV)
+    spells_rows = load_csv(PROCESSED_SPELLS_CSV)
     spells = {}
     for row in spells_rows:
         spell_id = row.get("spell_id", "").strip()

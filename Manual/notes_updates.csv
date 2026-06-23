@@ -1,0 +1,42 @@
+npc_id,search,replace
+,Siren's Song,Siren's Sting
+,"Flies very, very high. Image courtesy of Sasrei.","He won't show up if you haven't completed the quests to unlock the daily hub. He is found circling high above the Sanctuary of Malorne. His spawn timer is 6-17 hours. He flies up very high. The fall would kill you without some sort of fall slowing mechanism. The best method seems to be to park yourself at the top of the tree just behind the statue of Malorne. Have a freezing trap down. Once he flies close enough, fly up a bit, dismount, shoot and tame."
+,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Temple Ritual Site event.,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.
+,Located in Dun Morogh. Only found in North Gate Pass. Left overs.,
+,"Located in The Waking Shores. Found atop a plateau southeast of Obsidian Citadel (approximately 33,76). Currently, you can only tame this undead gryphon while you're still levelling, or soon after reaching 70, as it relies on a quirk of level scaling, as there's an intended delay with NPCs scaling to your new level. Advance your level to at least 62-63, so that the creatures of the Waking Shore are (temporarily) around two levels lower than you. Slurpo is normally set to scale 2 levels higher than the regular creatures, but the delay in level increase means that it should actually appear at your level. Some time after you reach 70, it will scale up to 72 and remain untameable until the next expansion.",
+,"Located in The Waking Shores. To get this snail to spawn you have to first obtain a Magical Salt Crystal from the back of a cave in the Gorloc Shore in the Azure Span (approximately 11.0, 41.4), then head to Slurpo's cave in the western cliffs of the Wild Preserve, (around 35.9, 89.8) and toss the crystal in the water. Currently, you can only tame Slurpo while you're still levelling, or soon after reaching 70, as it relies on a quirk of level scaling, as there's an intended delay with NPCs scaling to your new level. Advance your level to at least 62-63, so that the creatures of the Waking Shore are (temporarily) around two levels lower than you. Slurpo is normally set to scale 2 levels higher than the regular creatures, but the delay in level increase means that it should actually appear at your level. Some time after you reach 70, it will scale up to 72 and remain untameable until the next expansion.",
+,See this video for tracking information.,
+, See this video for tracking information.,
+, - see our Saving Hati Guide for details,
+," See our Saving Hati Guide for details, and for a list of other essences of Hati you can tame at the end of the chain.",
+," See this map for known locations, but there are probably more we haven't found yet.",
+, Check the Wowhead link for a map.,
+, See the quest link for detailed information.,
+, See their Wowhead page for details.,
+," A detailed walk-through, and video, of the quest can be found here.",
+," Tameable by hunters of level 120, despite it being level 121.",
+, Even though it is level 121 it is tameable by hunters of level 120.,
+, She's tameable at level 120 despite being level 121.,
+, He's tameable at level 120 despite being level 121.,
+,"Toxigore can be tamed at level 120, despite being level 122.",
+," Even though this beast appears two levels higher than you, you can tame it if you're at least as high as its minimum level.",
+, It may not be possible to reach right now.,
+, We're not yet sure of the minimum level required to tame this one!,
+, Currently erroneously classed as a Humanoid.,
+," Use all your defenses, as he hits very hard!",
+,"Use traps to survive the tame. Even though this beast appears two levels higher than you, you can tame it if you're at least as high as its minimum level.",
+," It was mistakenly classed as a Silithid for a while, but was fixed in Patch 8.1.",
+," Use Concussive Shot to slow it, and interrupt its heals when possible.",
+," It runs quickly, so Concussive Shot and Aspect of the Cheetah (and possibly the help of a friend) will be useful.",
+," Currently, you can only tame this undead gryphon while you're still levelling, or soon after reaching 70, as it relies on a quirk of level scaling, as there's an intended delay with NPCs scaling to your new level. Advance your level to at least 62-63, so that the creatures of the Waking Shore are (temporarily) around two levels lower than you. Slurpo is normally set to scale 2 levels higher than the regular creatures, but the delay in level increase means that it should actually appear at your level. Some time after you reach 70, it will scale up to 72 and remain untameable until the next expansion.",
+," Currently, you can only tame Slurpo while you're still levelling, or soon after reaching 70, as it relies on a quirk of level scaling, as there's an intended delay with NPCs scaling to your new level. Advance your level to at least 62-63, so that the creatures of the Waking Shore are (temporarily) around two levels lower than you. Slurpo is normally set to scale 2 levels higher than the regular creatures, but the delay in level increase means that it should actually appear at your level. Some time after you reach 70, it will scale up to 72 and remain untameable until the next expansion.",
+, Much of this information comes from Paryah and PigeonD at Wowhead.,
+, See Wowhead's Vulpera Allied Race Guide for more information on how to unlock this race.,
+," She hits very hard and can badly hurt you, even at level 60, so you will have to kite her.",
+, We're currently trying to work out her path.,
+,"These owls are actually all level 112, but you are temporarily bumped to level 112 inside the instance so you can tame them at the minimum instance level of 110. ",
+," Nyemi was actually added in Patch 9.1, but a bug made her spawn underneath the terrain and she couldn't be reached. She was fixed in Patch 9.1.5.",
+," Has a shadow-sparkling effect, but unsure if this would be retained if it were tameable.",
+151811,,Does not keep the sun touched glow after taming.
+151883,,Does not keep the sun touched glow after taming.
+125936,,"This NPC can be found in Invasion Point: Bonich, Invasion Point: Cen'gar, Invasion Point: Naigtal, Greater Invasion Point: Mistress Alluradel, Greater Invasion Point: Matron Folnuna, Greater Invasion Point: Pit Lord Vilemus, and Greater Invasion Point: Occularus."

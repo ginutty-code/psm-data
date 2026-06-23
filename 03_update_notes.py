@@ -1,5 +1,5 @@
 """
-Generate a cleaned notes dataset from raw Petopia data.
+Generate a final notes dataset from raw Petopia data with manual updates.
 
 Pipeline order:
 1. Load raw Petopia data, extract (npc_id, npc_name, notes).
@@ -8,17 +8,21 @@ Pipeline order:
    a. Basic whitespace normalization and backslash removal.
    b. Strip "Located in X." sentences unless they contain parentheses.
    c. Apply keyword filter — notes with no valuable keyword are dropped.
-   d. Apply search-and-replace cleanup rules (notes_cleanup.csv).
+   d. Apply global (npc_id empty) search-and-replace cleanup rules (notes_updates.csv).
    e. Final whitespace normalization.
 4. Map cleaned notes back to all NPCs (many NPCs may share the same raw note).
-5. Write final_notes.csv with npc_id, npc_name, notes (only rows with a non-empty note).
+5. Apply npc_id-specific updates from notes_updates.csv:
+   - search empty, replace non-empty  → add/override note for that NPC
+   - search empty, replace empty      → remove note for that NPC
+   - search and replace both non-empty → scoped search/replace on that NPC's note
+6. Write final_notes.csv with npc_id, npc_name, notes.
 """
 
 import csv
 import os
 import re
 from config import (
-    PETOPIA_DATA_CSV, NOTES_KEYWORDS_CSV, NOTES_CLEANUP_CSV,
+    PETOPIA_DATA_CSV, NOTES_KEYWORDS_CSV, NOTES_UPDATES_CSV,
     FINAL_NOTES_CSV, ensure_dirs
 )
 
@@ -41,19 +45,51 @@ def load_note_keywords():
     return keywords
 
 
-def load_notes_cleanup():
-    rules = []
-    if os.path.exists(NOTES_CLEANUP_CSV):
-        with open(NOTES_CLEANUP_CSV, 'r', encoding='utf-8-sig') as f:
-            for row in csv.DictReader(f):
-                search = row.get('search') or row.get('\ufeffsearch')
-                replace = row.get('replace') or ""
+def load_notes_updates():
+    """
+    Load notes update rules from notes_updates.csv.
+    Returns:
+        global_rules: list of (compiled_pattern, replace_str) for npc_id="" rows
+        npc_add: dict mapping npc_id -> note_text (search empty, replace non-empty)
+        npc_remove: set of npc_id (search empty, replace empty)
+        npc_modify: dict mapping npc_id -> list of (compiled_pattern, replace_str)
+    """
+    global_rules = []
+    npc_add = {}
+    npc_remove = set()
+    npc_modify = {}
+
+    if not os.path.exists(NOTES_UPDATES_CSV):
+        return global_rules, npc_add, npc_remove, npc_modify
+
+    with open(NOTES_UPDATES_CSV, 'r', encoding='utf-8-sig') as f:
+        for row in csv.DictReader(f):
+            raw_npc_id = (row.get('npc_id') or row.get('\ufeffnpc_id') or '').strip()
+            search = (row.get('search') or row.get('\ufeffsearch') or '').strip()
+            replace = row.get('replace') or ""
+
+            if not raw_npc_id:
+                # Global search/replace rule
                 if search:
-                    rules.append((
-                        re.compile(re.escape(search.strip()), re.IGNORECASE),
+                    global_rules.append((
+                        re.compile(re.escape(search), re.IGNORECASE),
                         replace.strip()
                     ))
-    return rules
+            else:
+                if not search and replace.strip():
+                    # Add/override note for a specific NPC
+                    npc_add[raw_npc_id] = replace.strip()
+                elif not search and not replace.strip():
+                    # Remove note for a specific NPC
+                    npc_remove.add(raw_npc_id)
+                elif search:
+                    # Scoped search/replace for a specific NPC
+                    npc_modify.setdefault(raw_npc_id, []).append((
+                        re.compile(re.escape(search), re.IGNORECASE),
+                        replace.strip()
+                    ))
+
+    return global_rules, npc_add, npc_remove, npc_modify
 
 
 def strip_location_sentences(note):
@@ -91,7 +127,7 @@ def clean_note(note, compiled_rules, keyword_pattern):
     if keyword_pattern and not keyword_pattern.search(note):
         return ""
 
-    # 4. Search and replace cleanup
+    # 4. Global search and replace cleanup
     for pattern, replace in compiled_rules:
         note = pattern.sub(replace, note)
 
@@ -118,8 +154,12 @@ def main():
         )
         print(f"Loaded {len(keywords)} keywords for filtering.")
 
-    compiled_rules = load_notes_cleanup()
-    print(f"Loaded and compiled {len(compiled_rules)} cleanup rules.")
+    # Load update rules (global + npc-specific)
+    global_rules, npc_add, npc_remove, npc_modify = load_notes_updates()
+    print(f"Loaded {len(global_rules)} global cleanup rules.")
+    print(f"Loaded {len(npc_add)} npc-specific note additions.")
+    print(f"Loaded {len(npc_remove)} npc-specific note removals.")
+    print(f"Loaded {len(npc_modify)} npc-specific note modifications.")
 
     # Load raw Petopia records
     raw_records = []
@@ -133,30 +173,68 @@ def main():
 
     print(f"Loaded {len(raw_records)} raw Petopia records.")
 
+    # Build name lookup from Petopia data (used for npc_add entries)
+    petopia_names = {npc_id: npc_name for npc_id, npc_name, _ in raw_records}
+
     # Deduplicate: clean each unique note string once
     unique_notes = {note for _, _, note in raw_records if note}
     print(f"Cleaning {len(unique_notes)} unique note strings...")
 
     note_cache = {}
     for note in unique_notes:
-        note_cache[note] = clean_note(note, compiled_rules, keyword_pattern)
+        note_cache[note] = clean_note(note, global_rules, keyword_pattern)
 
     # Empty string sentinel for NPCs with no note
     note_cache[''] = ''
 
-    # Map cleaned notes back to all NPCs, drop empty results
-    output_rows = []
+    # Map cleaned notes back to all NPCs
+    # Start with a dict so we can insert npc_add records later
+    output_map = {}
     dropped = 0
     for npc_id, npc_name, raw_note in raw_records:
         cleaned = note_cache.get(raw_note, '')
         if cleaned:
-            output_rows.append({
+            output_map[npc_id] = {
                 'npc_id': npc_id,
                 'npc_name': npc_name,
                 'notes': cleaned
-            })
+            }
         else:
             dropped += 1
+
+    # Apply npc-specific modifications (search/replace scoped to one NPC)
+    for npc_id, rules in npc_modify.items():
+        if npc_id in output_map:
+            note = output_map[npc_id]['notes']
+            for pattern, replace in rules:
+                note = pattern.sub(replace, note)
+            note = ' '.join(note.split())
+            if note:
+                output_map[npc_id]['notes'] = note
+            else:
+                del output_map[npc_id]
+                dropped += 1
+
+    # Apply npc-specific additions (overrides any existing note)
+    for npc_id, note_text in npc_add.items():
+        output_map[npc_id] = {
+            'npc_id': npc_id,
+            'npc_name': petopia_names.get(npc_id, ''),
+            'notes': note_text
+        }
+
+    # Apply npc-specific removals
+    for npc_id in npc_remove:
+        if npc_id in output_map:
+            del output_map[npc_id]
+            dropped += 1
+
+    # Convert map to sorted list
+    def npc_sort_key(item):
+        nid = item['npc_id']
+        return int(nid) if nid.isdigit() else 0
+
+    output_rows = sorted(output_map.values(), key=npc_sort_key)
 
     print(f"Kept {len(output_rows)} records, dropped {dropped} (no note or filtered out).")
 

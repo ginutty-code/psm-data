@@ -59,3 +59,4 @@ family_id,family_name,diet,expansion,icon,maxLevel,minLevel,type,spells,armor,da
 299,Courser,48,8,inv_horse3_pale,0,0,0,49966;341117,5,5,5,0,79
 300,Mammoth,60,8,ability_mount_ridingelekk,0,0,1,49966;341118,5,5,5,0,61
 303,Lesser Dragonkin,195,9,inv_misc_head_dragon_nexus,0,0,0,16827;392622,5,5,5,0,153
+315,Whiptail,0,12,inv_stalkermount_red,0,0,0,16827;24450;1247058;1247078,5,5,5,1,0

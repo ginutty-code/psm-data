@@ -9,7 +9,7 @@ import sys
 import csv
 import html
 import requests
-from config import WOWHEAD_FAMILIES_CSV, WOWHEAD_SPELLS_CSV, SPELLS_MAPPING_CSV, ensure_dirs
+from config import PROCESSED_FAMILIES_CSV, WOWHEAD_SPELLS_CSV, PROCESSED_SPELLS_CSV, SPELLS_MAPPING_CSV, ensure_dirs
 
 BASE_URL = 'https://www.wowhead.com'
 SKIP_SPELL_IDS = {16827, 17253, 49966}
@@ -19,10 +19,10 @@ def load_required_spell_ids():
     """Load unique spell IDs from families.csv and spells_mapping.csv."""
     spell_ids = set()
 
-    if not os.path.exists(WOWHEAD_FAMILIES_CSV):
-        raise FileNotFoundError(f"Families CSV not found: {WOWHEAD_FAMILIES_CSV}")
+    if not os.path.exists(PROCESSED_FAMILIES_CSV):
+        raise FileNotFoundError(f"Families CSV not found: {PROCESSED_FAMILIES_CSV}")
 
-    with open(WOWHEAD_FAMILIES_CSV, 'r', encoding='utf-8', newline='') as f:
+    with open(PROCESSED_FAMILIES_CSV, 'r', encoding='utf-8', newline='') as f:
         for row in csv.DictReader(f):
             for sid in row.get('spells', '').split(';'):
                 sid = sid.strip()
@@ -156,8 +156,47 @@ def load_manual_spell_mapping():
     return mapping
 
 
+def save_raw_spells_csv(spells):
+    """Save raw fetched spells to Extracted/wowhead_spells.csv before cleaning."""
+    ensure_dirs()
+    if not spells:
+        print("No raw spells to save")
+        return
+
+    # Collect all unique keys across all spell dicts, preserving insertion order
+    seen = set()
+    fieldnames = []
+    for spell in spells:
+        for key in spell.keys():
+            if key not in seen:
+                seen.add(key)
+                fieldnames.append(key)
+
+    with open(WOWHEAD_SPELLS_CSV, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(spells)
+    print(f"Raw spells saved to {WOWHEAD_SPELLS_CSV}")
+
+
+def load_raw_spells_csv():
+    """Load raw spells from Extracted/wowhead_spells.csv."""
+    if not os.path.exists(WOWHEAD_SPELLS_CSV):
+        return []
+    with open(WOWHEAD_SPELLS_CSV, 'r', encoding='utf-8', newline='') as f:
+        return list(csv.DictReader(f))
+
+
+def load_processed_spells_csv():
+    """Load processed spells from Processed/processed_wowhead_spells.csv."""
+    if not os.path.exists(PROCESSED_SPELLS_CSV):
+        return []
+    with open(PROCESSED_SPELLS_CSV, 'r', encoding='utf-8', newline='') as f:
+        return list(csv.DictReader(f))
+
+
 def save_spells_csv(spells):
-    """Clean and save spells to WOWHEAD_SPELLS_CSV."""
+    """Clean and save processed spells to Processed/processed_wowhead_spells.csv."""
     ensure_dirs()
     if not spells:
         print("No spells to save")
@@ -166,7 +205,7 @@ def save_spells_csv(spells):
     manual_mapping = load_manual_spell_mapping()
 
     exclude = {'screenshot', 'screenshot_enus', 'displayName', 'displayName_enus',
-               'tooltip_html', 'tooltip_html_enus'}
+               'tooltip_html', 'tooltip_html_enus', 'skillcategory'}
 
     def clean_spell_data(spell):
         # Rename and filter keys
@@ -227,23 +266,57 @@ def save_spells_csv(spells):
     other_fields = sorted([k for s in cleaned_spells for k in s if k not in fieldnames])
     fieldnames.extend(other_fields)
 
-    with open(WOWHEAD_SPELLS_CSV, 'w', encoding='utf-8', newline='') as f:
+    with open(PROCESSED_SPELLS_CSV, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction='ignore')
         writer.writeheader()
         writer.writerows(cleaned_spells)
-    print(f"Spells saved to {WOWHEAD_SPELLS_CSV}")
+    print(f"Processed spells saved to {PROCESSED_SPELLS_CSV}")
 
 
 def load_spells_csv():
-    """Load cached spells from WOWHEAD_SPELLS_CSV. Returns empty list if not found."""
-    if not os.path.exists(WOWHEAD_SPELLS_CSV):
+    """Load cached processed spells from PROCESSED_SPELLS_CSV. Returns empty list if not found."""
+    if not os.path.exists(PROCESSED_SPELLS_CSV):
         return []
-    with open(WOWHEAD_SPELLS_CSV, 'r', encoding='utf-8', newline='') as f:
+    with open(PROCESSED_SPELLS_CSV, 'r', encoding='utf-8', newline='') as f:
         return list(csv.DictReader(f))
+
+
+def ask_refresh(cached):
+    """Ask user if they want to refresh or use cached data."""
+    spell_count = len(cached)
+    print(f"\nCached spells found: {WOWHEAD_SPELLS_CSV}")
+    print(f"Summary: {spell_count} spells cached")
+    print("Options:")
+    print("  [y] Refresh - Re-fetch all from Wowhead")
+    print("  [n] Use cached - Use existing data (only fetch missing ones)")
+    print("  [q] Quit - Exit without changes")
+
+    while True:
+        try:
+            choice = input("\nEnter choice (y/n/q): ").strip().lower()
+        except EOFError:
+            # Non-interactive mode - use cached data
+            print("Non-interactive mode: using cached data")
+            return False
+
+        if choice in ('y', 'yes'):
+            return True
+        elif choice in ('n', 'no', ''):
+            return False
+        elif choice in ('q', 'quit', 'exit'):
+            print("Exiting...")
+            sys.exit(0)
+        else:
+            print("Invalid choice. Please enter y, n, or q.")
 
 
 def main():
     ensure_dirs()
+
+    import argparse
+    parser = argparse.ArgumentParser(description='Extract spell details from Wowhead')
+    parser.add_argument('--refresh', action='store_true', help='Refresh all spells from Wowhead (skip prompt)')
+    args = parser.parse_args()
 
     try:
         spell_ids = load_required_spell_ids()
@@ -253,17 +326,30 @@ def main():
 
     print(f"Found {len(spell_ids)} unique spell IDs to process")
 
-    cached = [s for s in load_spells_csv() if int(s.get('spell_id', 0)) not in SKIP_SPELL_IDS]
-    cached_ids = {int(s.get('spell_id', 0)) for s in cached}
-    missing_ids = [sid for sid in spell_ids if sid not in cached_ids]
+    # Load raw cache from Extracted/ (not processed — processed may be missing fields)
+    raw_cached = load_raw_spells_csv() if not args.refresh else []
+    
+    if raw_cached and not args.refresh:
+        should_refresh = ask_refresh(raw_cached)
+        if should_refresh:
+            print("\nRefreshing spells from Wowhead...")
+            raw_cached = []
 
-    if cached:
-        print(f"Found {len(cached)} cached spells. Fetching {len(missing_ids)} missing ones...")
+    raw_cached_ids = {int(s.get('spell_id') or s.get('id', '')) for s in raw_cached if str(s.get('spell_id') or s.get('id', '')).strip().isdigit()}
+    missing_ids = [sid for sid in spell_ids if sid not in raw_cached_ids]
+
+    if raw_cached and not args.refresh:
+        print(f"Found {len(raw_cached)} cached raw spells. Fetching {len(missing_ids)} missing ones...")
     
     new_spells = fetch_all_spells(missing_ids) if missing_ids else []
 
-    # Always re-save to apply current cleaning logic to all records
-    save_spells_csv(cached + new_spells)
+    # 1. Save raw fetched spells to Extracted/
+    save_raw_spells_csv(raw_cached + new_spells)
+
+    # 2. Load raw from Extracted/, clean, and save processed version to Processed/
+    raw_spells = load_raw_spells_csv()
+    raw_spells = [s for s in raw_spells if str(s.get('spell_id') or s.get('id', '')).strip().isdigit() and int(s.get('spell_id') or s.get('id', 0)) not in SKIP_SPELL_IDS]
+    save_spells_csv(raw_spells)
 
 
 if __name__ == '__main__':

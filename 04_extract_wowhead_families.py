@@ -9,7 +9,7 @@ import sys
 import csv
 
 import requests
-from config import WOWHEAD_FAMILIES_CSV, ensure_dirs
+from config import WOWHEAD_FAMILIES_CSV, PROCESSED_FAMILIES_CSV, ensure_dirs
 
 # Configuration
 URL = 'https://www.wowhead.com/hunter-pets'
@@ -97,13 +97,8 @@ def fetch_families():
 
 
 def save_WOWHEAD_FAMILIES_CSV(families):
-    """Save families to CSV file."""
+    """Save raw families to CSV file (no modifications — pure scrape)."""
     ensure_dirs()
-
-    # Ensure Whiptail (ID 315) is always included regardless of extraction or cache state
-    if not any(int(f.get('family_id', 0)) == WHIPTAIL_FAMILY_ID for f in families):
-        print(f"  Adding missing family {WHIPTAIL_FAMILY_ID} (Whiptail) to dataset...")
-        families.append({k: str(v) for k, v in WHIPTAIL_RECORD.items()})
 
     fieldnames = ['family_id', 'family_name', 'diet', 'expansion', 'icon', 'maxLevel', 'minLevel', 'type', 'spells', 'armor', 'damage', 'health', 'exotic', 'popularity']
     with open(WOWHEAD_FAMILIES_CSV, 'w', encoding='utf-8', newline='') as f:
@@ -111,7 +106,25 @@ def save_WOWHEAD_FAMILIES_CSV(families):
         writer.writeheader()
         for family in sorted(families, key=lambda x: int(x.get('family_id', 0))):
             writer.writerow(family)
-    print(f"Families saved to {WOWHEAD_FAMILIES_CSV}")
+    print(f"Raw families saved to {WOWHEAD_FAMILIES_CSV}")
+
+
+def save_PROCESSED_FAMILIES_CSV(families):
+    """Save processed families (with injected corrections) to CSV file."""
+    ensure_dirs()
+
+    # Ensure Whiptail (ID 315) is always included
+    if not any(int(f.get('family_id', 0)) == WHIPTAIL_FAMILY_ID for f in families):
+        print(f"  Adding missing family {WHIPTAIL_FAMILY_ID} (Whiptail) to processed dataset...")
+        families.append({k: str(v) for k, v in WHIPTAIL_RECORD.items()})
+
+    fieldnames = ['family_id', 'family_name', 'diet', 'expansion', 'icon', 'maxLevel', 'minLevel', 'type', 'spells', 'armor', 'damage', 'health', 'exotic', 'popularity']
+    with open(PROCESSED_FAMILIES_CSV, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for family in sorted(families, key=lambda x: int(x.get('family_id', 0))):
+            writer.writerow(family)
+    print(f"Processed families saved to {PROCESSED_FAMILIES_CSV}")
 
 
 def load_WOWHEAD_FAMILIES_CSV():
@@ -163,18 +176,19 @@ def main():
     # Try to load from cache first
     cached = load_WOWHEAD_FAMILIES_CSV()
     
-    # Maintenance: If cache exists but is incomplete, fix it immediately so prompts are accurate
-    if cached and not any(int(f.get('family_id', 0)) == WHIPTAIL_FAMILY_ID for f in cached):
-        print(f"\nCorrection: Cache found but missing family {WHIPTAIL_FAMILY_ID} (Whiptail). Updating file...")
-        save_WOWHEAD_FAMILIES_CSV(cached)
-    
     if cached:
+        # Ensure processed file exists even if only raw cache is present
+        if not os.path.exists(PROCESSED_FAMILIES_CSV):
+            print(f"\nProcessed families file missing. Generating from cached raw data...")
+            save_PROCESSED_FAMILIES_CSV(list(cached))
+
         should_refresh = ask_refresh(cached)
         
         if should_refresh:
             print("\nRefreshing families from Wowhead...")
             families = fetch_families()
             save_WOWHEAD_FAMILIES_CSV(families)
+            save_PROCESSED_FAMILIES_CSV(list(families))
         else:
             print(f"\nUsing cached families ({len(cached)} families)")
             print("Run with --refresh flag to force refresh")
@@ -182,6 +196,7 @@ def main():
         # No cached data - fetch fresh
         families = fetch_families()
         save_WOWHEAD_FAMILIES_CSV(families)
+        save_PROCESSED_FAMILIES_CSV(list(families))
 
 
 if __name__ == '__main__':

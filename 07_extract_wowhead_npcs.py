@@ -9,7 +9,7 @@ import time
 import csv
 
 import requests
-from config import WOWHEAD_FAMILIES_CSV, WOWHEAD_NPCS_CSV, ensure_dirs, get_random_headers
+from config import PROCESSED_FAMILIES_CSV, WOWHEAD_NPCS_CSV, ensure_dirs, get_random_headers
 
 # Use concurrency=1 to avoid rate limiting
 CONCURRENCY = 1
@@ -28,7 +28,7 @@ CLASSIFICATION_MAP = {
 def load_families():
     """Load families from CSV cache."""
     families = {}
-    with open(WOWHEAD_FAMILIES_CSV, 'r', encoding='utf-8', newline='') as f:
+    with open(PROCESSED_FAMILIES_CSV, 'r', encoding='utf-8', newline='') as f:
         reader = csv.DictReader(f)
         for row in reader:
             families[row['family_id']] = row['family_name']

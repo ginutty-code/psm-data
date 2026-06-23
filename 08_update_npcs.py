@@ -5,7 +5,7 @@ Replace/add NPCs from npcs_correct.csv to npcs.csv
 import os
 import csv
 import sys
-from config import WOWHEAD_NPCS_CSV, UPDATE_NPC_CSV, ensure_dirs
+from config import WOWHEAD_NPCS_CSV, PROCESSED_NPCS_CSV, UPDATE_NPC_CSV, ensure_dirs
 
 def load_corrections():
     """Load corrections from the corrections file."""
@@ -53,7 +53,7 @@ def load_npcs():
 
 
 def save_npcs(npcs):
-    """Save NPCs back to the CSV file."""
+    """Save corrected NPCs to the Processed CSV file."""
     columns = [
         'npc_id',
         'npc_name',
@@ -65,14 +65,15 @@ def save_npcs(npcs):
         'react',
     ]
     
-    with open(WOWHEAD_NPCS_CSV, 'w', encoding='utf-8', newline='') as f:
+    ensure_dirs()
+    with open(PROCESSED_NPCS_CSV, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore')
         writer.writeheader()
         for rec in npcs:
             row = {k: ('' if rec.get(k) is None else rec.get(k)) for k in columns}
             writer.writerow(row)
     
-    print(f"NPCs CSV saved to {WOWHEAD_NPCS_CSV}")
+    print(f"Corrected NPCs CSV saved to {PROCESSED_NPCS_CSV}")
 
 
 def apply_corrections():
@@ -158,7 +159,8 @@ def apply_corrections():
     
     print()
     print("=" * 60)
-    print("Corrections applied successfully!")
+    print(f"Corrections applied successfully! Corrected data written to {PROCESSED_NPCS_CSV}")
+    print(f"Original raw data remains untouched at {WOWHEAD_NPCS_CSV}")
     print("=" * 60)
 
 

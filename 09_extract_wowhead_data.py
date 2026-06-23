@@ -15,7 +15,7 @@ from urllib3.util.retry import Retry
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 import random
-from config import WOWHEAD_NPCS_CSV, WOWHWEAD_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
+from config import PROCESSED_NPCS_CSV, WOWHWEAD_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
 
 # Concurrency and pacing settings; adjust as needed to balance speed with risk of rate-limiting.  Note that Wowhead has aggressive rate-limiting, and even a few concurrent requests can trigger it, so we use a conservative default here.
 CONCURRENCY_RANGE = (1, 5)
@@ -49,11 +49,11 @@ def load_skip_npc_ids():
 
 
 def load_npcs():
-    if not os.path.exists(WOWHEAD_NPCS_CSV):
-        print(f"Error: {WOWHEAD_NPCS_CSV} not found. Run step 2 first to produce the CSV.")
+    if not os.path.exists(PROCESSED_NPCS_CSV):
+        print(f"Error: {PROCESSED_NPCS_CSV} not found. Run steps 7 and 8 first to produce the corrected NPC CSV.")
         sys.exit(1)
     records = []
-    with open(WOWHEAD_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:
+    with open(PROCESSED_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:
         reader = csv.DictReader(f)
         for row in reader:
             records.append({
@@ -644,7 +644,7 @@ def main():
     print(f"Found {len(skip_ids)} NPC IDs to skip" if skip_ids else "No skip list found")
     print()
 
-    print(f"Loading NPCs from {WOWHEAD_NPCS_CSV}...")
+    print(f"Loading corrected NPCs from {PROCESSED_NPCS_CSV}...")
     all_npcs = load_npcs()
     original_data = {npc['npc_id']: npc for npc in all_npcs}
     print(f"Loaded {len(all_npcs)} total NPCs")
