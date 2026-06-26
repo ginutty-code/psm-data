@@ -1027,8 +1027,7 @@ ModelsData = {
         },
         [21635] = {
             [24633] = {"Rabid Brown Bear", "Howling Fjord", "Wrath of the Lich King", "Normal", "[-1,-1]"},
-            [27131] = {"Grizzly Bear", "Grizzly Hills", "Wrath of the Lich King", "Normal", "[-1,-1]"},
-            [112644] = {"Dreamway Grizzly", "Emerald Dreamway", "Legion", "Normal", "[0,0]"}
+            [27131] = {"Grizzly Bear", "Grizzly Hills", "Wrath of the Lich King", "Normal", "[-1,-1]"}
         },
         [21735] = {
             [1225] = {"Ol' Sooty", "Loch Modan", "Vanilla", "Normal", "[-1,-1]"},
@@ -9072,7 +9071,6 @@ ModelsData = {
             taming = {"Feathermane"},
             [159298] = {"Gilded Cloudstrider", "Bastion", "Shadowlands", "Normal", "[0,0]"},
             [160606] = {"Glimmerhoof Cloudstrider", "Bastion", "Shadowlands", "Normal", "[0,0]"},
-            [165784] = {"Summoned Glimmerhoof Cloudstrider", "Oribos", "Shadowlands", "Normal", "[]"},
             [168442] = {"Cloudstrider Grazer", "Bastion", "Shadowlands", "Normal", "[0,0]"},
             [168887] = {"Gilded Cloudstrider", "Bastion", "Shadowlands", "Normal", "[0,0]"},
             [168890] = {"Goldenback Stag", "Bastion", "Shadowlands", "Normal", "[-1,-1]"},
@@ -10452,8 +10450,7 @@ ModelsData = {
         },
         [27103] = {
             taming = {"Undead"},
-            [30432] = {"Grimmr Hound", "Icecrown", "Wrath of the Lich King", "Normal", "[-1,-1]"},
-            [99700] = {"Charbone", "Icecrown Citadel", "Legion", "Normal", "[-1,-1]"}
+            [30432] = {"Grimmr Hound", "Icecrown", "Wrath of the Lich King", "Normal", "[-1,-1]"}
         },
         [27790] = {
             [32163] = {"Grimkor's Hound", "Icecrown", "Wrath of the Lich King", "Elite", "[-1,-1]"}
@@ -16844,7 +16841,6 @@ ModelsData = {
             [226573] = {"Cliffwalk Scavenger", "The Ringing Deeps", "The War Within", "Normal", "[-1,-1]"}
         },
         [38123] = {
-            [105141] = {"Emberspit Scorpion", "Firelands", "Legion", "Normal", "[0,0]"},
             [123636] = {"Lost Emberspit Scorpion", "Molten Front", "Legion", "Elite", "[0,0]"},
             [211242] = {"Roiling Deathstalker", "Emerald Dream", "Dragonflight", "Elite", "[-1,-1]"}
         },
@@ -18166,8 +18162,7 @@ ModelsData = {
         },
         [38425] = {
             [52648] = {"Cinderweb Creeper", "Molten Front", "Cataclysm", "Normal", "[-1,-1]"},
-            [64321] = {"Echoweb Spinner", "Cavern of Endless Echoes|Valley of the Four Winds", "Mists of Pandaria", "Normal", "[-1,-1]"},
-            [105049] = {"Cinderweb Creeper", "Firelands", "Legion", "Normal", "[-1,-1]"}
+            [64321] = {"Echoweb Spinner", "Cavern of Endless Echoes|Valley of the Four Winds", "Mists of Pandaria", "Normal", "[-1,-1]"}
         },
         [38426] = {
             [54338] = {"Anthriss", "Molten Front", "Cataclysm", "Rare", "[-1,-1]"}
@@ -18394,12 +18389,10 @@ ModelsData = {
         },
         [94404] = {
             [159895] = {"Chelicerae's Children", "Maldraxxus", "Shadowlands", "Normal", "[-1,-1]"},
-            [165801] = {"Summoned Arachnid", "Oribos", "Shadowlands", "Normal", "[]"},
             [172518] = {"Crawler", "Maldraxxus", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [94405] = {
-            [159737] = {"Boneweave Ambusher", "Maldraxxus", "Shadowlands", "Normal", "[-1,-1]"},
-            [165801] = {"Summoned Arachnid", "Oribos", "Shadowlands", "Normal", "[]"}
+            [159737] = {"Boneweave Ambusher", "Maldraxxus", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [94406] = {
             [159916] = {"Boneweave Rampager", "Maldraxxus", "Shadowlands", "Elite", "[-1,-1]"},
@@ -18411,7 +18404,6 @@ ModelsData = {
         },
         [94407] = {
             [162399] = {"Echo of the Spy", "Maldraxxus", "Shadowlands", "Normal", "[-1,-1]"},
-            [165801] = {"Summoned Arachnid", "Oribos", "Shadowlands", "Normal", "[]"},
             [168837] = {"Stealthling", "Plaguefall", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [94408] = {
@@ -18424,14 +18416,12 @@ ModelsData = {
             [155770] = {"Dread Hatchling", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
             [155795] = {"Dread Crawler", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
             [159265] = {"Tower Creeper", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
-            [165801] = {"Summoned Arachnid", "Oribos", "Shadowlands", "Normal", "[]"},
             [169840] = {"Dread Spinner", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
             [169841] = {"Dread Spiderling", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
             [173491] = {"Dread Spiderling", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [94410] = {
-            [159265] = {"Tower Creeper", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
-            [165801] = {"Summoned Arachnid", "Oribos", "Shadowlands", "Normal", "[]"}
+            [159265] = {"Tower Creeper", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [94411] = {
             [165989] = {"Ebon Crawler", "Revendreth", "Shadowlands", "Normal", "[-1,-1]"},
@@ -19090,8 +19080,7 @@ ModelsData = {
         },
         [45077] = {
             [56532] = {"Tawnyhide Stag", "Valley of the Four Winds", "Mists of Pandaria", "Normal", "[-1,-1]"},
-            [59744] = {"Silverhorn Yearling", "The Jade Forest", "Mists of Pandaria", "Normal", "[-1,-1]"},
-            [165800] = {"Summoned Mountainbuck", "Oribos", "Shadowlands", "Normal", "[]"}
+            [59744] = {"Silverhorn Yearling", "The Jade Forest", "Mists of Pandaria", "Normal", "[-1,-1]"}
         },
         [45089] = {
             [197651] = {"Grey Tailed Stag", "The Azure Span", "Dragonflight", "Normal", "[0,0]"}
@@ -19259,7 +19248,6 @@ ModelsData = {
             [165730] = {"Plains Stag", "Exile's Reach", "Shadowlands", "Normal", "[0,0]"}
         },
         [70441] = {
-            [112691] = {"Greathorn Stag", "Emerald Dreamway", "Legion", "Normal", "[-1,-1]"},
             [210849] = {"Gilnean Stag", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"},
             [216701] = {"Migrating Plains Stag", "Amirdrassil", "Dragonflight", "Normal", "[0,0]"}
         },
@@ -19303,7 +19291,6 @@ ModelsData = {
             [191496] = {"Pinehoof Doe", "Ohn'ahran Plains", "Dragonflight", "Normal", "[-1,-1]"}
         },
         [70447] = {
-            [112692] = {"Greathorn Doe", "Emerald Dreamway", "Legion", "Normal", "[0,0]"},
             [210850] = {"Gilnean Doe", "Ruins of Gilneas", "Dragonflight", "Normal", "[]"},
             [216702] = {"Migrating Plains Doe", "Amirdrassil", "Dragonflight", "Normal", "[0,0]"}
         },
@@ -19466,8 +19453,7 @@ ModelsData = {
             [231195] = {"Crimson Windsteed", "The Wandering Isle", "The War Within", "Normal", "[0,null]"}
         },
         [93780] = {
-            [165106] = {"Runestag Youngling", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]"},
-            [165790] = {"Summoned Runestag", "Oribos", "Shadowlands", "Normal", "[]"}
+            [165106] = {"Runestag Youngling", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]"}
         },
         [93781] = {
             [159030] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
@@ -19479,7 +19465,6 @@ ModelsData = {
         },
         [93782] = {
             [159030] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
-            [165790] = {"Summoned Runestag", "Oribos", "Shadowlands", "Normal", "[]"},
             [165907] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
             [166966] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[]"},
             [170145] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
@@ -19513,7 +19498,6 @@ ModelsData = {
             [172934] = {"Wildbough Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"}
         },
         [93787] = {
-            [165790] = {"Summoned Runestag", "Oribos", "Shadowlands", "Normal", "[]"},
             [166187] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
             [172073] = {"Hazebroken Guardian", "Ardenweald", "Shadowlands", "Elite", "[-1,-1]"},
             [174356] = {"Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"}
@@ -19526,7 +19510,6 @@ ModelsData = {
             [172943] = {"Wildbough Juvenile", "Ardenweald", "Shadowlands", "Normal", "[0,0]"}
         },
         [93789] = {
-            [165790] = {"Summoned Runestag", "Oribos", "Shadowlands", "Normal", "[]"},
             [170856] = {"Highland Runestag", "Ardenweald", "Shadowlands", "Normal", "[0,0]"}
         },
         [93790] = {
@@ -19542,7 +19525,6 @@ ModelsData = {
         },
         [93792] = {
             [164874] = {"Juvenile Miredeer", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
-            [165790] = {"Summoned Runestag", "Oribos", "Shadowlands", "Normal", "[]"},
             [166024] = {"Skittish Runefoal", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
             [170015] = {"Juvenile Miredeer", "Ardenweald", "Shadowlands", "Normal", "[0,0]"},
             [171342] = {"Juvenile Runestag", "De Other Side", "Shadowlands", "Elite", "[-1,-1]"}
@@ -23097,9 +23079,6 @@ ModelsData = {
         [46667] = {
             [50908] = {"Nighthowl", "Tirisfal Glades", "Mists of Pandaria", "Rare", "[-1,-1]"}
         },
-        [51599] = {
-            [112662] = {"Dreamway Prowler Pup", "Emerald Dreamway", "Legion", "Normal", "[0,0]"}
-        },
         [51757] = {
             [72452] = {"Kor'kron Dire Wolf", "Siege of Orgrimmar", "Mists of Pandaria", "Elite", "[-1,-1]"}
         },
@@ -23155,7 +23134,6 @@ ModelsData = {
             [82308] = {"Shadowmoon Stalker", "Shadowmoon Valley|Spires of Arak", "Warlords of Draenor", "Normal", "[-1,-1]"},
             [82535] = {"Void-Touched Stalker", "Shadowmoon Valley", "Warlords of Draenor", "Normal", "[-1,-1]"},
             [95305] = {"Ironfang Stalker", "Tanaan Jungle", "Warlords of Draenor", "Normal", "[-1,-1]"},
-            [112661] = {"Dreamway Prowler", "Emerald Dreamway", "Legion", "Normal", "[0,0]"},
             [127874] = {"Chillmist Prowler", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [132195] = {"Hexenwolf Tracker", "Drustvar", "Battle for Azeroth", "Normal", "[-1,-1]"},
             [136205] = {"Coldtooth Howler", "Stormsong Valley", "Battle for Azeroth", "Normal", "[-1,-1]"}
@@ -23550,9 +23528,6 @@ ModelsData = {
         [43324] = {
             taming = {"Exotic"},
             [59754] = {"Mottled Caterpillar", "The Jade Forest", "Mists of Pandaria", "Normal", "[0,0]"}
-        },
-        [43326] = {
-            [167661] = {"Gertie Jr.", "Ardenweald|Heart of the Forest", "Shadowlands", "Normal", "[1,1]"}
         },
         [43342] = {
             taming = {"Exotic"},

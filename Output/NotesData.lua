@@ -2040,6 +2040,7 @@ PSM.NotesData = {
     [250321] = [[Found in a cave in the northern edge of the area.]],
     [250341] = [[In the Blinding Bloom, it can be found in a cave in the south-east of the area.]],
     [250366] = [[The cave entrance is located near the Sunkiller Sanctum delve.]],
+    [250564] = [[This NPC can be found in The Voidspire (Raid)]],
     [250822] = [[Spawns during the quest, And Then They Came.]],
     [250824] = [[Spawns during the quest, And Then They Came.]],
     [251593] = [[Located in The Grudge Pit (Delve).]],

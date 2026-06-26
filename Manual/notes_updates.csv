@@ -38,3 +38,5 @@ npc_id,search,replace
 ," Nyemi was actually added in Patch 9.1, but a bug made her spawn underneath the terrain and she couldn't be reached. She was fixed in Patch 9.1.5.",
 ," Has a shadow-sparkling effect, but unsure if this would be retained if it were tameable.",
 125936,,"This NPC can be found in Invasion Point: Bonich, Invasion Point: Cen'gar, Invasion Point: Naigtal, Greater Invasion Point: Mistress Alluradel, Greater Invasion Point: Matron Folnuna, Greater Invasion Point: Pit Lord Vilemus, and Greater Invasion Point: Occularus."
+39444,"Located in Chamber of Prophecy, Halls of Origination (Dungeon).","Located in Chamber of Prophecy, Halls of Origination (Dungeon). It is tameable in Normal mode but not Heroic."
+56754,"Located in Cloudstrike Dojo, Shado-Pan Monastery (Dungeon). Summoned during the battle with Gu Cloudstrike, the first boss of the dungeon. Despite its name this cloud serpent is black, not blue.","Located in Cloudstrike Dojo, Shado-Pan Monastery (Dungeon). Summoned during the battle with Gu Cloudstrike, the first boss of the dungeon. Despite its name this cloud serpent is black, not blue. It is tameable in Normal mode but not Heroic."
