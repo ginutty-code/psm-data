@@ -525,8 +525,8 @@ npc_id,npc_name,notes
 53695,Rageface,Located in Firelands (Raid).
 53704,Corsac Fox,"Located in The Dawning Valley, The Wandering Isle (Pandaren Starting Zone). Non-aggressive. Active."
 53753,Cinderweb Broodling,"Spawns in fast-moving packs, but only on random days."
-54318,Ankha,Remove your armor to survive tame.
-54319,Magria,Runs very fast. Remove your armor to survive tame.
+54318,Ankha,"Remove your armor to survive tame. If the regrowth is still on fire for you and you see Nemesis walking around, you are in the wrong phase (the Flamewake phase) and Ankha won't spawn no matter how long you wait. To see Ankha, you have to do the Hyjal questline for the Flamewake phase to become The Regrowth phase. You need to at least complete the available Hyjal quest lines and complete the quest 'The Sanctuary Must Not Fall' when Malfurion summons Malorne in a cut-scene."
+54319,Magria,"Runs very fast. Remove your armor to survive tame. If the regrowth is still on fire for you and you see Nemesis walking around, you are in the wrong phase (the Flamewake phase) and Magria won't spawn no matter how long you wait. To see Magria, you have to do the Hyjal questline for the Flamewake phase to become The Regrowth phase. You need to at least complete the available Hyjal quest lines and complete the quest 'The Sanctuary Must Not Fall' when Malfurion summons Malorne in a cut-scene."
 54320,Ban'thalos,"He won't show up if you haven't completed the quests to unlock the daily hub. He is found circling high above the Sanctuary of Malorne. His spawn timer is 6-17 hours. He flies up very high. The fall would kill you without some sort of fall slowing mechanism. The best method seems to be to park yourself at the top of the tree just behind the statue of Malorne. Have a freezing trap down. Once he flies close enough, fly up a bit, dismount, shoot and tame."
 54321,Solix,Use traps to survive the tame.
 54322,Deth'tilac,Immune to tame until health is low.

@@ -35,7 +35,7 @@ LOCATION_STRIP_RE = re.compile(r'Located in [^.]+\.', re.IGNORECASE)
 def load_note_keywords():
     keywords = set()
     if os.path.exists(NOTES_KEYWORDS_CSV):
-        with open(NOTES_KEYWORDS_CSV, 'r', encoding='utf-8-sig') as f:
+        with open(NOTES_KEYWORDS_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
             for row in csv.DictReader(f):
                 kw = row.get('keyword') or row.get('\ufeffkeyword')
                 if kw:
@@ -62,7 +62,7 @@ def load_notes_updates():
     if not os.path.exists(NOTES_UPDATES_CSV):
         return global_rules, npc_add, npc_remove, npc_modify
 
-    with open(NOTES_UPDATES_CSV, 'r', encoding='utf-8-sig') as f:
+    with open(NOTES_UPDATES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
         for row in csv.DictReader(f):
             raw_npc_id = (row.get('npc_id') or row.get('\ufeffnpc_id') or '').strip()
             search = (row.get('search') or row.get('\ufeffsearch') or '').strip()
