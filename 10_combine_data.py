@@ -347,7 +347,8 @@ def main():
         'patch_id', 'patch_name', 'expansion', 'react', 'classification_id',
         'classification_name', 'type_id', 'type_name',
         'tamingskillname1', 'tamingskilldesc1', 'tamingskillname2',
-        'tamingskilldesc2', 'notes', 'taming_requirements', 'special_conditions'
+        'tamingskilldesc2', 'notes', 'taming_requirements', 'special_conditions',
+        'name_keeper'
     ]
 
     print("Loading and filtering Wowhead records...")
@@ -459,7 +460,8 @@ def main():
             'tamingskilldesc2': p_info.get('tamingskilldesc2', ''),
             'notes': final_notes_map.get(npc_id, ""),
             'taming_requirements': "",
-            'special_conditions': ""
+            'special_conditions': "",
+            'name_keeper': p_info.get('name_keeper', '')
         }
 
         # Apply manual record overrides (which could change display_ids)

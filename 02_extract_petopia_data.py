@@ -76,6 +76,8 @@ def extract_npc_info(html: str) -> Dict[str, str]:
                         info['level'] = f'="{value}"'
                     else:
                         info['level'] = value
+                elif key == 'Name':
+                    info['name_keeper'] = bool(value and 'retains original name' in value.lower())
                 elif key == 'Zone':
                     info['zone'] = value
                 elif key == 'Wowhead':
@@ -163,7 +165,7 @@ def main() -> int:
     if skip_ids:
         print(f"Loaded {len(skip_ids)} NPC IDs to skip.")
 
-    fieldnames = ["npc_id", "npc_name", "zone", "tameable", "family", "level", "wowhead_url", "tamingskillname1", "tamingskilldesc1", "tamingskillname2", "tamingskilldesc2", "notes", "appearance"]
+    fieldnames = ["npc_id", "npc_name", "zone", "tameable", "family", "level", "name_keeper", "wowhead_url", "tamingskillname1", "tamingskilldesc1", "tamingskillname2", "tamingskilldesc2", "notes", "appearance"]
 
     # Collect rows to process
     to_process = [row for row in rows if row.get('npc_id') and row['npc_id'] not in processed_npcs and row['npc_id'] not in skip_ids]

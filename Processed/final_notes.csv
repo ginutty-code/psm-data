@@ -34,12 +34,7 @@ npc_id,npc_name,notes
 4016,Fey Dragon,"Friendly to Alliance. This fey darter appears only sporadically in the area, and is often killed by hostile NPCs. It may take you a while to find one."
 4017,Wily Fey Dragon,"Hostile to both factions. This fey darter appears only sporadically in the area, and is often killed by hostile NPCs. It may take you a while to find one."
 4250,Galak Packhound,"Although not technically rare, these packhounds only spawn as the companions of a rare NPC, Achellios the Banished."
-4304,Scarlet Tracking Hound,"Located in Huntsman's Cloister, Scarlet Monastery - Old (Dungeon). Found in the Library wing of the original (pre-Cataclysm) version of the Scarlet Monastery. To unlock this dungeon account-wide in the retail game, you need to obtain The Scarlet Key on one of your characters (not necessarily your hunter). During the Hallow's End festival in October this key drops frequently from the Headless Horseman event dungeon boss, especially if you activate all four curses inside the instance, otherwise you might be able to get one from a friend or on the Auction House. Once you've obtained a key, proceed to the Scarlet Monastery (non-instanced) and you'll find a keyring with a quest symbol just up the first stairs. Complete this quest to create an interactive keyring on the wall that you can activate any time you want to visit the original versions of the four dungeon wings. Behind Doan, the final boss in the Library wing, is Doan's Lockbox, which can contain another copy of the Scarlet Key for you to give away or auction."
 4374,Strashaz Hydra,"Phased out once you complete the ""Theramore's Fall"" scenario. Speak to Zidormi to access the pre-destruction phase. Originally this hydra just came in black. The orange variant was introduced in Patch 7.1."
-4822,Snapping Crustacean,Located in Blackfathom Deeps (Dungeon).
-4823,Barbed Crustacean,Located in Blackfathom Deeps (Dungeon).
-4824,Aku'mai Fisher,Located in Blackfathom Deeps (Dungeon).
-4825,Aku'mai Snapjaw,Located in Blackfathom Deeps (Dungeon).
 4861,Shrike Bat,Located in Uldaman (Dungeon).
 4863,Jadespine Basilisk,Located in Uldaman (Dungeon).
 4950,Spot,"Spot phases out once you complete the ""Theramore's Fall"" scenario but you can speak to Zidormi to be transported to the pre-destruction phase."
@@ -47,7 +42,6 @@ npc_id,npc_name,notes
 5053,Deviate Crocolisk,Located in Wailing Caverns (Dungeon).
 5056,Deviate Dreadfang,Located in Wailing Caverns (Dungeon).
 5225,Murk Spitter,Found outside the Sunken Temple dungeon.
-5226,Murk Worm,Located in Sunken Temple (Dungeon).
 5278,Sprite Darter,"Friendly to Alliance, but can be attacked and tamed by Horde. Found in the glades west and north-west of Camp Mojache."
 5291,Hakkari Frostwing,Located in Sunken Temple (Dungeon).
 5300,Frayfeather Hippogryph,Initially friendly to Alliance but players can /roar at them to make them aggressive for taming. In valley north and west of Ruins of Isildien.
@@ -94,7 +88,6 @@ npc_id,npc_name,notes
 9684,Lar'korwi,Summoned during quest The Bait for Lar'korwi.
 9696,Bloodaxe Worg,Located in Blackrock Spire (Dungeon).
 9701,Spire Scorpid,Located in Blackrock Spire (Dungeon).
-10040,Gorishi Hive Guard,"Spawns during ""Pawn Captures Queen""."
 10177,Spire Scarab,Located in Blackrock Spire (Dungeon).
 10220,Halycon,"Located in Halycon's Lair, Blackrock Spire (Dungeon)."
 10221,Bloodaxe Worg Pup,Located in Blackrock Spire (Dungeon).
@@ -142,7 +135,6 @@ npc_id,npc_name,notes
 12940,Vorsha the Lasher,"Vorsha is summoned during the once-only Horde quest, Vorsha the Lasher, given by Muglash in the nearby Zoram'gar Outpost. If you've already completed the quest, or your hunter is Alliance, you can easily bring in a Horde character to start the quest, follow Muglash's directions until the stage in which Vorsha spawns, then quickly log off and switch to your hunter."
 13036,Gordok Hound,Located in Dire Maul (Dungeon).
 13136,Hive'Ashi Drone,"Spawns after killing Tortured Druids at Southwind Village. Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
-13161,Aerie Gryphon,Located in Alterac Valley (Battleground).
 13323,Subterranean Diemetradon,Located in Maraudon (Dungeon). In the caverns beyond Earth Song Falls.
 13596,Rotgrip,"Located in Zaetar's Grave, Maraudon (Dungeon)."
 13599,Stolid Snapjaw,Located in Maraudon (Dungeon).
@@ -157,11 +149,6 @@ npc_id,npc_name,notes
 14475,Rex Ashil,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 14476,Krellack,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 14477,Grubthor,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
-14943,Guse's War Rider,"Located in Alterac Valley (Battleground). Friendly to Horde. Only appears if a Horde player releases Wing Commander Guse, performs enough of her turn-in quests and then selects for her to go on patrol."
-14944,Jeztor's War Rider,"Located in Alterac Valley (Battleground). Friendly to Horde. Only appears if a Horde player releases Wing Commander Jeztor, performs enough of her turn-in quests and then selects for her to go on patrol."
-14945,Mulverick's War Rider,"Located in Alterac Valley (Battleground). Friendly to Horde. Only appears if a Horde player releases Wing Commander Mulverick, performs enough of his turn-in quests and then selects for him to go on patrol."
-14947,Ichman's Gryphon,Located in Alterac Valley (Battleground). Friendly to Alliance.
-14948,Vipore's Gryphon,Located in Alterac Valley (Battleground). Friendly to Alliance.
 15168,Vile Scarab,Located in Ruins of Ahn'Qiraj (Raid).
 15196,Deathclasp,"Original Silithus creatures vanish after you complete the Antorus raid. To time-travel to the earlier phase, speak to Zidormi near Valor's Rest."
 15229,Vekniss Soldier,Located in Temple of Ahn'Qiraj (Raid).
@@ -310,8 +297,8 @@ npc_id,npc_name,notes
 28851,Enraged Mammoth,Has a green aura which is lost upon taming.
 29033,Spirit of Atha,Spawns during the Oracles daily quest A Cleansing Song. This quest is given by Oracle Soo-nee and isn't up every day. You can only take this quest if you're at least Friendly with The Oracles.
 29444,Drakkari Snake,"Summoned by Drakkari Snake Handlers in combat. The black and brown variants seem to make sounds when clicked, the red and green variants do not."
-29630,Fanged Pit Viper,"Located in Den of Sseratus, Gundrak (Dungeon). In the room with the first boss, Slad'ran. The red ones don't seem to make sounds when clicked, but the others do."
-29637,Crafty Snake,"Located in Den of Sseratus, Gundrak (Dungeon). In the room with the first boss, Slad'ran. Crafty Snakes seem to be much less common than the dominant Fanged Pit Vipers and there may only be one in the room. The green and red variants do not make sounds when clicked, but the brown and black ones do."
+29630,Fanged Pit Viper,"Located in Den of Sseratus, Gundrak (Dungeon). Tameable in Normal difficulty only - not tameable in Heroic mode. These snakes can be found in the first room with Slad'ran. The red ones don't seem to make sounds when clicked, but the others do."
+29637,Crafty Snake,"Located in Den of Sseratus, Gundrak (Dungeon). Tameable in Normal difficulty only - not tameable in Heroic mode. These snakes can be found in the first room with Slad'ran. Crafty Snakes seem to be much less common than the dominant Fanged Pit Vipers and there may only be one in the room. The green and red variants do not make sounds when clicked, but the brown and black ones do."
 29713,Slad'ran Constrictor,"Located in Den of Sseratus, Gundrak (Dungeon). Summoned during combat with Slad'ran, the first boss of the dungeon. You may have to damage him a bit before the constrictors appear. They will stun you, but they always spawn in the same place and slither towards you, so one technique is to pull Slad'ran to another room to buy yourself some time."
 29735,Savage Worg,Located in Utgarde Keep (Dungeon).
 29838,Drakkari Rhino,Located in Gundrak (Dungeon).
@@ -350,7 +337,7 @@ npc_id,npc_name,notes
 39149,Sarinexx,Spawns during quest Thunderdrome: Sarinexx!. The quest cannot be repeated but it's possible to tame if someone else has the quest.
 39348,Smolderos the Carbonizer,"Smolderos seems to be phased until you reach the part of the zone quest chain set in his area (see Signed in Blood), and he becomes phased again later in the chain."
 39440,Venomous Skitterer,Located in Halls of Origination (Dungeon).
-39444,Pit Viper,"Located in Chamber of Prophecy, Halls of Origination (Dungeon)."
+39444,Pit Viper,"Located in Chamber of Prophecy, Halls of Origination (Dungeon). It is tameable in Normal mode but not Heroic. Tameable in Normal difficulty only - not tameable in Heroic mode."
 39658,Spinescale Basilisk,Pre-quest phase.
 39833,Twilight Buzzard,"Only appears during the quest ""Wave One"" in a phase of the Firelands Hatchery area. Serves as a mount, but the rider is lost after taming."
 40064,Jungle Panther,Found on both islands. Doesn't seem to phase out.
@@ -558,7 +545,7 @@ npc_id,npc_name,notes
 56543,Brittle Greenstone Gorger,Spawn and attack the cart during the quest after leaving Greenstone Quarry. Other players may see and tame them.
 56703,Ik'thik Colossus,Only present during the Battle of Stoneplow quest chain.
 56753,Hornbill Strider,Spawns during the quest A Taste for Eggs.
-56754,Azure Serpent,"Located in Cloudstrike Dojo, Shado-Pan Monastery (Dungeon). Summoned during the battle with Gu Cloudstrike, the first boss of the dungeon. Despite its name this cloud serpent is black, not blue."
+56754,Azure Serpent,"Located in Cloudstrike Dojo, Shado-Pan Monastery (Dungeon). Summoned during the battle with Gu Cloudstrike, the first boss of the dungeon. Despite its name this cloud serpent is black, not blue. It is tameable in Normal mode but not Heroic."
 56877,Raigonn,Located in Gate of the Setting Sun (Dungeon). The fourth and final boss in Gate of the Setting Sun.
 57232,Dappled Moth,Only present during a quest phase.
 57237,Bookworm,Only present during a quest phase.
@@ -691,7 +678,6 @@ npc_id,npc_name,notes
 71491,Guardian of Sacrifice,"Located in Crypt of Forgotten Kings (Scenario). Found in Heroic mode only. Sits atop the dais behind the first boss, Jin Ironfist."
 71529,Thok the Bloodthirsty,"Located in The Menagerie, Siege of Orgrimmar (Raid). Taming Thok counts as defeating him, so you can complete the rest of the raid."
 71578,Amber Parasite,"Located in Chamber of the Paragons, Siege of Orgrimmar (Raid). Will spawn during Paragons fight if Rikkal's Injection spell is not mitigated by tanks."
-71585,Wind Rider,Friendly to Horde.
 71921,Darkfang,"Located in The Valley of Strength, Siege of Orgrimmar (Raid). Part of the Kor'kron Dark Shaman boss encounter."
 71923,Bloodclaw,"Located in The Valley of Strength, Siege of Orgrimmar (Raid). Part of the Kor'kron Dark Shaman boss encounter."
 72275,Black Bengal Goat,"This second ID for the Black Bengal Goat was added in patch 5.4. Unlike the other, this one has a Sha aura (lost upon taming)."
@@ -809,7 +795,6 @@ npc_id,npc_name,notes
 84102,Cadaverous Vulture,"Located in Ashmaul Burial Grounds, Ashran (Battleground). Not found outside the battleground instance."
 84190,Boneshallow Spider,"Located in Ashmaul Burial Grounds, Ashran (Battleground). On walls inside buildings. Not found outside the battleground instance."
 84399,Vicious Mandragora,Located in The Everbloom (Dungeon).
-84500,Dread Raven,Faction: Arakkoa Outcasts. Friendly.
 84644,Vilewing Rylak,"Located in Molten Quarry, Ashran (Battleground). Not found outside the battleground instance."
 84793,Frost Wolf,"Frozen, attacks when freed."
 84798,Icehoof Calf,Frozen. Attacks when freed.
@@ -1049,7 +1034,6 @@ npc_id,npc_name,notes
 127479,The Sand Queen,Located in Tol Dagor (Dungeon).
 127482,Sewer Vicejaw,"Located in Sodden Depths, Tol Dagor (Dungeon)."
 127569,Redwood Guardian,"This stag is found outside the zone barrier, so cannot be physically reached. Instead, in a couple of places around the edge you can just get in range to aggro it with something that won't kill it, like a Tar Trap, which will in turn cause it to come close enough to tame. Invasion Point: Bonich may be reached through a portal in northern Antoran Wastes, Argus."
-127572,Kul Tiran Horse,Friendly to Alliance and part of an Alliance quest phase. Does not seem to be visible to Horde.
 127602,Lucktail,Stealthed.
 127611,Redwood Guardian,"This stag is found outside the zone barrier, so cannot be physically reached. Instead, in a couple of places around the edge you can just get in range to aggro it with something that won't kill it, like a Tar Trap, which will in turn cause it to come close enough to tame. Invasion Point: Bonich may be reached through a portal in northern Antoran Wastes, Argus."
 127615,Ephemeral Runner,"This runner is found outside the zone barrier, so cannot be physically reached. Instead, go directly behind the entry portal and stand in the break between the logs, facing the barrier. Further ahead you'll see a log with a clump of ferns at its right-hand end. Place a freezing trap just in front of the ferns. Every couple of minutes some Ephemeral Runners will run past and with good placement you'll trap one and can tame it. Invasion Point: Bonich may be reached through a portal in northern Antoran Wastes, Argus."
@@ -1384,7 +1368,6 @@ npc_id,npc_name,notes
 153694,Deepcoil Hatchling,Sometimes spawns when Deepcoil Eggs are destroyed during the world quest Break a Few Eggs / Break a Few Eggs.
 153764,Wrinklefin <Droobie's Companion>,"Alliance hunters can tame Wrinklefin in the usual way, but it is friendly to Horde and can only be tamed by Horde hunters using the toy ""N'lyeth, Sliver of N'Zoth"" while in War Mode. This fathom ray is a faction hub NPC and probably shouldn't be tameable anyway. Also of note, its title, ""Droobie's Companion"" is incorrect, as it belongs to Dren Nautilin."
 153812,Chitterspine Lurker,Stealthed.
-153903,Tucel <Sardina's Friend>,"Normally friendly, but can be tamed if you use the toy ""N'lyeth, Sliver of N'Zoth"" while in War Mode. Accompanies Sardina Lauray."
 153959,Savage Snapdragon,"Its name changes to ""Sated Snapdragon"" after being fed on the quest Sating Snapdragons / Sating Snapdragons."
 153965,Chitterspine Clicker,Travels in packs in the Grotto.
 153966,Chitterspine Crab,Travels in packs in the Grotto.
@@ -1784,7 +1767,6 @@ npc_id,npc_name,notes
 206073,Fowl Beast,"Found in the north-east of the Azure Span, along a frozen waterway just south of the 'RA' in 'THALDRASZUS' on the zone map. These ducks are the objective of the daily quest, Fowl Beasts, offered by Nathanos Marris in the Everywhen Inn, on the cliff by Eon's Fringe and the Temporal Conflux in Thaldrazsus."
 206094,Shadow-Blind Threadling,Can spawn when you destroy a Threadling Egg.
 206180,Death Skitterer,"You can spawn this spectral spider during the Off the Page daily quest at Little Scales Daycare in Valdrakken. Daily quests in this area are only available after you unlock them by completing the ""Whelp Daycare"" storyline (added in Patch 10.1.5) up to the quest: What's a Duck?. The 'Off the Page' daily only appears every now and then, so you'll most likely have to keep checking for it. During this quest, you read from a storybook and summon a random NPC. You need for Osthilde to appear, as she's the one who summons Death Skitterers in combat, otherwise you can feign death and the NPC will despawn after about 10 seconds and you can try again (if you keep a small distance from the spawning NPC it's possible to avoid aggroing it so it'll despawn after about 10 seconds anyway!) You may have to fight Osthilde for a while before the Death Skitterers spawn, so beware of killing her too quickly. Note that if you haven't unlocked the Daycare dailies yet, it's possible to get someone else to do the summon, as the quest isn't phased."
-206472,Tamed Umbraclaw,Friendly.
 207072,Flame-Touched Gemback,Its orange flame aura is lost upon taming. The entry to Sor'theril Barrow Den is on the south-eastern side of Haven Cascades.
 207300,Hecutta,"Only appears during the once-off quest, Cavern Cleaning, which is part of the quest chain to recruit the Netherwing Dragonflight, added in Patch 10.2. Found in caverns high up in the mountains on the north side of the Shifting Sands / Temporal Conflux area."
 207625,Incendiary Beetle,"Only appears during the world quest, Dryad Fire Drill. Its orange flame aura is lost upon taming."
@@ -1900,7 +1882,6 @@ npc_id,npc_name,notes
 222155,Opalooze Mollusc,"The NPC with this ID is found a bit further north than the other Opalooze Mollusc. Prior to taming this one appears larger than the other, but they're the same size as pets."
 222248,Canyon Devilfish,"Packs of this ray periodically circle over parts of the zone, including Tenir's Ascent, Sanguine Grasps, Priory of the Sacred Flame, and The Aegis Wall."
 222690,Tor'go,"This spectral devilsaur can only be found when the event, ""Worldsoul Memory: Primal Predators"" is up, located roughly north-west of Opportunity Point in The Ringing Deeps. The zone in which the Worldsoul Memory is active rotates daily, starting with Isle of Dorn, then The Ringing Depths, then Hallowfall, finally Azj-Kahet. You require one Radiant Echo in order to enter the event phase and cannot use another player to access it."
-222789,Battlefront Hauler,Found along the north-south corridor in the far north-east of the zone. Spawns when you destroy Nerubian Burrows.
 222936,Sweet-sting Worker,"Located in Sanctified Grounds, Priory of the Sacred Flame (Dungeon). Around the northern exterior of the Priory grounds."
 223042,Elusive Shalehorn,There's a chance this beast will appear when you use an Elusive Creature Lure in this zone. To learn how to create a lure you must earn at least 25 points in Khaz Algar Skinning and select the Luring specialization (see your skinning journal inside your professions panel). See Wowhead's The War Within Skinning Guide for more information on how luring works.
 223056,Elusive Krolusk,There's a chance this beast will appear when you use an Elusive Creature Lure in this zone. To learn how to create a lure you must earn at least 25 points in Khaz Algar Skinning and select the Luring specialization (see your skinning journal inside your professions panel). See Wowhead's The War Within Skinning Guide for more information on how luring works.

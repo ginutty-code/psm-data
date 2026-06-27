@@ -73,6 +73,8 @@ def main():
         exp = row.get("expansion", "").strip()
         class_name = row.get("classification_name", "").strip()
         react = row.get("react", "").strip()
+        name_keeper = row.get("name_keeper", "").strip()
+
         taming_csv = row.get("taming_requirements", "").strip()
         
         # Parse display_ids pipe-separated string
@@ -117,7 +119,10 @@ def main():
                     "exp": exp,
                     "class": class_value,
                     "react": react,
+                    "name_keeper": name_keeper,
                 }
+                    
+
             else:
                 if loc:
                     family_data[family_name][display_id][npc_id]["locs"].add(loc)
@@ -199,7 +204,9 @@ def main():
                     class_lua = lua_quote(npc.get("class", ""))
                     react_lua = lua_quote(npc.get("react", ""))
 
-                    f.write(f'            [{npc_id}] = {{{name_lua}, {loc_lua}, {exp_lua}, {class_lua}, {react_lua}}}')
+                    nk_lua = npc.get("name_keeper", "") == "True" and "true" or "false"
+
+                    f.write(f'            [{npc_id}] = {{{name_lua}, {loc_lua}, {exp_lua}, {class_lua}, {react_lua}, {nk_lua}}}')
 
                 f.write('\n        }')
             

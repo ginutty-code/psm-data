@@ -37,7 +37,7 @@ The scripts must be run in numerical order. Each step validates its dependencies
 | 05 | `05_extract_wowhead_spells.py` | Scrapes and cleans spell descriptions from Wowhead for all family abilities. | `Processed/processed_wowhead_families.csv`, `Manual/spells_mapping.csv` | `Processed/wowhead_spells.csv` |
 | 06 | `06_generate_abilities_lua.py` | Generates the hierarchical `AbilitiesData.lua` for the addon. | `Processed/processed_wowhead_families.csv`, `Processed/wowhead_spells.csv` | `Output/AbilitiesData.lua` |
 | 07 | `07_extract_wowhead_npcs.py` | Crawls Wowhead to list every tameable NPC belonging to known families. | `Processed/processed_wowhead_families.csv` | `Extracted/wowhead_npcs.csv` |
-| 08 | `08_update_npcs.py` | Applies human-curated overrides from `update_npcs.csv` to the dataset. Reads raw data, writes corrected version. | `Extracted/wowhead_npcs.csv`, `Manual/update_npcs.csv` | `Processed/processed_wowhead_npcs.csv` |
+| 08 | `08_update_npcs.py` | Applies human-curated overrides from `npcs_updates.csv` to the dataset. Reads raw data, writes corrected version. | `Extracted/wowhead_npcs.csv`, `Manual/npcs_updates.csv` | `Processed/processed_wowhead_npcs.csv` |
 | 09 | `09_extract_wowhead_data.py` | Enriches NPCs with Display IDs, coordinates, and patch info using stealth scraping. | `Processed/processed_wowhead_npcs.csv`, `Manual/skip_npc_ids.csv` | `Extracted/wowhead_data.csv` |
 | 10 | `10_combine_data.py` | Merges sources and applies `record_overrides.csv` for final data consolidation. | `Extracted/wowhead_data.csv`, `Extracted/petopia_data.csv`, `Processed/final_notes.csv`, `Manual/skip_npc_ids.csv`, `Manual/skip_display_ids.csv`, `Manual/record_overrides.csv` | `Processed/pet_data.csv` |
 | 11 | `11_generate_models_lua.py` | Generates `ModelsData.lua` (Family > Display ID > NPC) with location aggregation. | `Processed/pet_data.csv` | `Output/ModelsData.lua` |
@@ -63,18 +63,18 @@ The pipeline ensures data integrity through specialized cleaning logic at every 
 
 ## Usage
 
-1. **Initialization**: Ensure `Manual/update_npcs.csv`, `Manual/skip_npc_ids.csv`, `Manual/skip_display_ids.csv`, `Manual/notes_updates.csv`, and `Manual/notes_keywords.csv` are populated.
+1. **Initialization**: Ensure `Manual/npcs_updates.csv`, `Manual/skip_npc_ids.csv`, `Manual/skip_display_ids.csv`, `Manual/notes_updates.csv`, and `Manual/notes_keywords.csv` are populated.
 2. **Execution**: Navigate to the `PSM_Data` directory and run scripts sequentially:
-   ```bash
-   cd PSM_Data
-   python 01_extract_petopia_npcs.py
-   python 02_extract_petopia_data.py
-   # ... and so on
-   ```
+    ```bash
+    cd PSM_Data
+    python 01_extract_petopia_npcs.py
+    python 02_extract_petopia_data.py
+    # ... and so on
+    ```
 3. **Options**: 
-   - Use `--refresh` on scrapers to bypass cached files.
-   - Use `--delay X.X` to manually adjust the scraping speed.
-   - Use `--reset` on Step 09 to clear scraping progress.
+    - Use `--refresh` on scrapers to bypass cached files.
+    - Use `--delay X.X` to manually adjust the scraping speed.
+    - Use `--reset` on Step 09 to clear scraping progress.
 
 ## Output Files
 

@@ -123,12 +123,13 @@
     <select id="fieldSelect" onchange="onFieldChange()">
       <option value="">— Select a field —</option>
       <option value="npc_name">NPC Name</option>
+      <option value="name_keeper">Name Keeper</option>
       <option value="family_name">Family Name</option>
       <option value="zone_name">Zone Name</option>
       <option value="react">React (e.g. [-1,-1])</option>
       <option value="classification_name">Classification</option>
       <option value="type_name">Type</option>
-      <option value="taming">Taming Skills</option>
+      <option value="taming_requirements">Taming Requirements</option>
       <option value="special_conditions">Conditions</option>
       <option value="notes">Notes</option>
       <option value="uiMapId">UI Map ID</option>
@@ -220,13 +221,14 @@ const ISSUES_URL = `https://github.com/${REPO}/issues/new`;
 
 const COLS = [
   "npc_id","npc_name","family_id","family_name","display_ids",
-  "zone_id","zone_name","layer","uiMapId","uiMapName","coords",
-  "patch_id","patch_name","react","classification_id","classification_name",
-  "type_id","type_name","taming","special_conditions","notes"
+  "zone_id","zone_name","uiMapId","uiMapName","coords",
+  "patch_id","patch_name","expansion","react","classification_id","classification_name",
+  "type_id","type_name","tamingskillname1","tamingskilldesc1","tamingskillname2","tamingskilldesc2",
+  "notes","taming_requirements","special_conditions","name_keeper"
 ];
 const DISPLAY_FIELDS = [
-  "npc_id","npc_name","family_name","zone_name","react",
-  "classification_name","type_name","taming","special_conditions","notes","uiMapId"
+  "npc_id","npc_name","name_keeper","family_name","zone_name","react",
+  "classification_name","type_name","taming_requirements","special_conditions","notes","uiMapId"
 ];
 
 let allPets = [], selectedPet = null, selectedCoords = new Set();
