@@ -231,6 +231,30 @@ const DISPLAY_FIELDS = [
   "classification_name","type_name","taming_requirements","special_conditions","notes","uiMapId"
 ];
 
+const FIELD_LABELS = {
+  npc_id:             "NPC ID",
+  npc_name:           "NPC Name",
+  name_keeper:        "Name Keeper",
+  family_name:        "Family Name",
+  zone_name:          "Zone Name",
+  react:              "React",
+  classification_name: "Classification",
+  type_name:          "Type",
+  taming_requirements: "Taming Requirements",
+  special_conditions:  "Conditions",
+  notes:              "Notes",
+  uiMapId:            "UI Map ID"
+};
+
+function formatFieldValue(field, value) {
+  if (field === "name_keeper") {
+    return value && value.toLowerCase() === "true"
+      ? '<span style="color:var(--green);font-weight:bold;">✔ Yes</span>'
+      : '<span style="color:var(--muted);">✖ No</span>';
+  }
+  return value || '<em style="color:var(--muted)">—</em>';
+}
+
 let allPets = [], selectedPet = null, selectedCoords = new Set();
 let currentMatches = [], currentPage = 0;
 const PAGE_SIZE = 10;
@@ -339,8 +363,8 @@ function selectPet(pet) {
     <div class="field-grid">
       ${DISPLAY_FIELDS.map(f => `
         <div class="field-row">
-          <span class="fname">${f}</span>
-          <span class="fval">${pet[f] || '<em style="color:var(--muted)">—</em>'}</span>
+          <span class="fname">${FIELD_LABELS[f] || f}</span>
+          <span class="fval">${formatFieldValue(f, pet[f])}</span>
         </div>`).join("")}
     </div>
     <div class="field-row" style="margin-top:10px;">
