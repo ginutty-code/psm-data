@@ -20255,10 +20255,6 @@ ModelsData = {
         [93861] = {
             [167856] = {"Blisterback", "Revendreth", "Shadowlands", "Normal", "[1,1]", false}
         },
-        [93988] = {
-            taming = {"Exotic","Gargon"},
-            [159978] = {"Lady Ihrin", "Revendreth", "Shadowlands", "Normal", "[0,-1]", false}
-        },
         [94496] = {
             [167856] = {"Blisterback", "Revendreth", "Shadowlands", "Normal", "[1,1]", false},
             [169167] = {"Drained Soulstalker", "Revendreth", "Shadowlands", "Normal", "[1,1]", false},

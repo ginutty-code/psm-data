@@ -5047,7 +5047,6 @@ npc_id,npc_name,family_id,family_name,display_ids,zone_id,zone_name,uiMapId,uiMa
 159895,Chelicerae's Children,3,Spider,94404,11462,Maldraxxus,1536,Maldraxxus,"55.4,23.4",9.0.1,,Shadowlands,"[-1,-1]",0,Normal,1,Beast,Spawns when you attack the Intricate Webbing protecting Sister Chelicerae.,,,
 159901,Boneweave Spiderling,3,Spider,94594,11462,Maldraxxus,1536,Maldraxxus,"54.6,17.8|55.6,19.8|53.4,19.8|55.4,15.4|54.8,22",9.0.1,,Shadowlands,"[0,0]",0,Normal,1,Beast,,,,
 159916,Boneweave Rampager,3,Spider,94406,11462,Maldraxxus,1536,Maldraxxus,"54.4,17.6|50.6,28.2",9.0.1,,Shadowlands,"[-1,-1]",1,Elite,1,Beast,,,,
-159978,Lady Ihrin,128,Stone Hound,93988,10413,Revendreth,1525,Revendreth,"54.8,27.6|54.8,29.8",9.0.1,,Shadowlands,"[0,-1]",0,,7,,,Exotic|Gargon,,
 160074,Gorm Slicer,292,Carapid,94197,11510,Ardenweald,1565,Ardenweald,"60,31.4|61.6,30.2|58.6,34|60.8,33.4|57.8,29.4",9.0.1,,Shadowlands,"[-1,-1]",0,Normal,1,Beast,,Exotic,,
 160075,Gorm Spewer,292,Carapid,94205,11510,Ardenweald,1565,Ardenweald,"60.8,31|60.2,33|63,30.4|58.4,34",9.0.1,,Shadowlands,"[-1,-1]",0,Normal,1,Beast,,Exotic,,
 160076,Gorm Borer,292,Carapid,94193,11510,Ardenweald,1565,Ardenweald,"59.2,32.8|61,31.4|60.2,34.6|61.4,29.4|62.8,32.6",9.0.1,,Shadowlands,"[-1,-1]",0,Normal,1,Beast,,Exotic,,
