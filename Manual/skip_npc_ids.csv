@@ -40,6 +40,7 @@ npc_id,zone_id,layer,reason
 4824,,,not in game
 4825,,,not in game
 4862,,,unknown location
+5225,1477,,incorrect zone_id
 5226,,,not in game
 5264,,,unknown location
 5276,,,unknown location
@@ -95,6 +96,7 @@ npc_id,zone_id,layer,reason
 16448,,,unknown location
 16931,,,unknown location
 17198,,,unknown location
+17216,457,,incorrect zone_id
 17221,,,unknown location
 17411,,,unknown location
 17526,,,unknown location
@@ -130,6 +132,7 @@ npc_id,zone_id,layer,reason
 21015,,,unknown location
 21016,,,unknown location
 21017,,,unknown location
+21250,3519,,cannot be tamed
 21372,,,unknown location
 21900,,,unknown location
 21922,,,unknown location
@@ -185,6 +188,7 @@ npc_id,zone_id,layer,reason
 31809,,,unknown location
 31871,,,unknown location
 32392,,,unknown location
+32517,9389,,incorrect zone_id
 32976,,,unknown location
 34178,,,unknown location
 34262,,,unknown location
@@ -273,10 +277,13 @@ npc_id,zone_id,layer,reason
 48920,,,unknown location
 48945,,,unknown location
 49486,,,unknown location
+50839,46,,incorrect zone_id
+50839,51,,incorrect zone_id
 50862,,,unknown location
 50866,,,unknown location
 50873,,,unknown location
 50918,,,cannot be tamed
+51052,9389,,incorrect zone_id
 51107,,,unknown location
 51194,,,unknown location
 51197,,,unknown location
@@ -1016,11 +1023,39 @@ npc_id,zone_id,layer,reason
 150802,,,unknown location
 150857,,,cannot be tamed
 151172,,,unknown location
+151353,10472,,redundant info
+151353,13400,,redundant info
+151353,13403,,redundant info
+151353,13404,,redundant info
+151353,13411,,redundant info
+151353,13412,119,redundant info
+151353,13412,144,redundant info
+151353,13412,42,redundant info
+151353,13412,49,redundant info
+151353,13412,51,redundant info
+151353,13412,57,redundant info
+151353,13412,68,redundant info
+151353,13412,69,redundant info
+151353,13413,,redundant info
 151354,,,cannot be tamed
 151764,,,unknown location
 151993,,,unknown location
 151994,,,unknown location
 152379,,,unknown location
+152708,10472,,redundant info
+152708,13400,122,redundant info
+152708,13400,189,redundant info
+152708,13400,19,redundant info
+152708,13400,33,redundant info
+152708,13400,43,redundant info
+152708,13400,54,redundant info
+152708,13400,66,redundant info
+152708,13400,81,redundant info
+152708,13400,86,redundant info
+152708,13400,87,redundant info
+152708,13403,,redundant info
+152708,13404,,redundant info
+152708,13413,,redundant info
 152796,,,unknown location
 152797,,,unknown location
 152798,,,unknown location
@@ -1066,6 +1101,20 @@ npc_id,zone_id,layer,reason
 153892,,,unknown location
 153902,,,cannot be tamed
 153903,,,cannot be tamed
+154030,10472,,redundant info
+154030,13400,115,redundant info
+154030,13400,122,redundant info
+154030,13400,189,redundant info
+154030,13400,42,redundant info
+154030,13400,43,redundant info
+154030,13400,81,redundant info
+154030,13400,87,redundant info
+154030,13403,,redundant info
+154030,13404,,redundant info
+154030,13411,,redundant info
+154030,13412,,redundant info
+154030,13413,,redundant info
+154030,13575,,redundant info
 154090,,,unknown location
 154107,,,unknown location
 154115,,,unknown location
@@ -1084,7 +1133,27 @@ npc_id,zone_id,layer,reason
 154872,,,unknown location
 154905,,,unknown location
 155141,,,unknown location
+155238,13400,122,redundant info
+155238,13400,189,redundant info
+155238,13403,,redundant info
+155238,13404,,redundant info
+155238,13411,,redundant info
+155238,13575,,redundant info
 155455,,,unknown location
+155483,10472,,redundant info
+155483,13400,,redundant info
+155483,13403,,redundant info
+155483,13404,152,redundant info
+155483,13404,25,redundant info
+155483,13404,54,redundant info
+155483,13404,55,redundant info
+155483,13404,59,redundant info
+155483,13404,67,redundant info
+155483,13404,68,redundant info
+155483,13411,,redundant info
+155483,13412,,redundant info
+155483,13413,,redundant info
+155483,13575,,redundant info
 155489,,,unknown location
 155570,,,unknown location
 155687,,,unknown location
@@ -1119,6 +1188,7 @@ npc_id,zone_id,layer,reason
 156317,,,unknown location
 156345,,,unknown location
 156375,,,unknown location
+156376,,,cannot be tamed
 156404,,,unknown location
 156416,,,cannot be tamed
 156509,,,unknown location
@@ -1140,6 +1210,9 @@ npc_id,zone_id,layer,reason
 156921,,,unknown location
 156924,,,unknown location
 156927,,,unknown location
+157083,10472,,redundant info
+157109,10472,,redundant info
+157149,10472,,redundant info
 157438,,,unknown location
 157477,,,cannot be tamed
 157482,,,unknown location
@@ -1209,6 +1282,7 @@ npc_id,zone_id,layer,reason
 159221,,,unknown location
 159222,,,unknown location
 159223,,,unknown location
+159323,10472,,redundant info
 159331,,,unknown location
 159388,,,cannot be tamed
 159637,,,cannot be tamed
@@ -1440,6 +1514,7 @@ npc_id,zone_id,layer,reason
 167070,,,cannot be tamed
 167071,,,cannot be tamed
 167114,,,unknown location
+167256,,,cannot be tamed
 167328,,,unknown location
 167376,,,unknown location
 167418,,,unknown location
@@ -1447,14 +1522,22 @@ npc_id,zone_id,layer,reason
 167448,,,unknown location
 167461,,,unknown location
 167471,,,unknown location
+167480,,,cannot be tamed
 167494,,,unknown location
 167629,,,unknown location
 167661,,,cannot be tamed
 167726,,,cannot be tamed
+167856,,,cannot be tamed
 167973,,,unknown location
 168013,,,unknown location
+168084,,,cannot be tamed
+168085,,,cannot be tamed
+168086,,,cannot be tamed
+168089,,,cannot be tamed
+168090,,,cannot be tamed
 168132,,,unknown location
 168149,,,unknown location
+168196,,,unknown location
 168239,,,unknown location
 168302,,,unknown location
 168303,,,unknown location
@@ -1474,23 +1557,69 @@ npc_id,zone_id,layer,reason
 168897,,,unknown location
 168910,,,unknown location
 168923,,,unknown location
+168946,,,cannot be tamed
+169167,,,cannot be tamed
 169240,,,unknown location
 169241,,,unknown location
 169243,,,unknown location
 169247,,,unknown location
 169251,,,unknown location
 169290,,,unknown location
+169310,,,cannot be tamed
+169332,,,cannot be tamed
+169333,,,cannot be tamed
+169334,,,cannot be tamed
+169335,,,cannot be tamed
+169337,,,cannot be tamed
 169503,,,unknown location
 169515,,,unknown location
 169532,,,unknown location
+169563,,,cannot be tamed
+169564,,,cannot be tamed
 169579,,,unknown location
 169737,,,unknown location
 169741,,,unknown location
 169758,,,unknown location
 169767,,,unknown location
+169823,10472,,redundant info
+169823,13400,,redundant info
+169823,13403,,redundant info
+169823,13404,152,redundant info
+169823,13404,25,redundant info
+169823,13404,54,redundant info
+169823,13404,55,redundant info
+169823,13404,59,redundant info
+169823,13404,67,redundant info
+169823,13404,68,redundant info
+169823,13411,,redundant info
+169823,13412,,redundant info
+169823,13413,,redundant info
+169823,13575,,redundant info
 169856,,,unknown location
+169871,10472,,redundant info
+169871,13400,115,redundant info
+169871,13400,122,redundant info
+169871,13400,16,redundant info
+169871,13400,18,redundant info
+169871,13400,189,redundant info
+169871,13400,19,redundant info
+169871,13400,29,redundant info
+169871,13400,33,redundant info
+169871,13400,42,redundant info
+169871,13400,43,redundant info
+169871,13400,66,redundant info
+169871,13400,81,redundant info
+169871,13400,86,redundant info
+169871,13400,87,redundant info
+169871,13403,,redundant info
+169871,13404,,redundant info
+169871,13411,,redundant info
+169871,13412,,redundant info
+169871,13413,,redundant info
+169872,,,cannot be tamed
 169911,,,unknown location
 169963,,,unknown location
+170093,10472,,redundant info
 170112,,,unknown location
 170268,,,unknown location
 170298,,,unknown location
@@ -1499,7 +1628,10 @@ npc_id,zone_id,layer,reason
 170371,,,unknown location
 170516,,,unknown location
 170521,,,unknown location
+170548,,,cannot be tamed
 170577,,,unknown location
+170609,,,cannot be tamed
+170609,,,cannot be tamed
 170642,,,unknown location
 170701,,,unknown location
 170715,,,unknown location
@@ -1532,6 +1664,20 @@ npc_id,zone_id,layer,reason
 172871,,,cannot be tamed
 172876,,,unknown location
 173075,,,unknown location
+173114,10472,,redundant info
+173114,13400,,redundant info
+173114,13403,,redundant info
+173114,13404,152,redundant info
+173114,13404,25,redundant info
+173114,13404,54,redundant info
+173114,13404,55,redundant info
+173114,13404,59,redundant info
+173114,13404,67,redundant info
+173114,13404,68,redundant info
+173114,13411,,redundant info
+173114,13412,,redundant info
+173114,13413,,redundant info
+173114,13575,,redundant info
 173123,,,unknown location
 173133,,,cannot be tamed
 173160,,,unknown location
@@ -1633,6 +1779,12 @@ npc_id,zone_id,layer,reason
 178756,,,cannot be tamed
 178910,,,unknown location
 178942,,,unknown location
+179458,13400,19,redundant info
+179458,13404,,redundant info
+179458,13411,,redundant info
+179458,13412,,redundant info
+179458,13413,,redundant info
+179458,13575,,redundant info
 179494,,,unknown location
 179544,,,unknown location
 180075,,,cannot be tamed
@@ -1809,8 +1961,44 @@ npc_id,zone_id,layer,reason
 184656,,,cannot be tamed
 184863,,,unknown location
 184933,,,unknown location
+185112,13400,,redundant info
+185112,13404,,redundant info
+185112,13411,,redundant info
+185112,13412,,redundant info
+185112,13413,,redundant info
+185112,13575,1969,redundant info
+185113,13400,,redundant info
+185113,13404,,redundant info
+185113,13411,,redundant info
+185113,13412,,redundant info
+185113,13413,,redundant info
+185113,13575,1969,redundant info
+185114,13400,,redundant info
+185114,13404,,redundant info
+185114,13411,,redundant info
+185114,13412,,redundant info
+185114,13413,,redundant info
+185114,13575,1969,redundant info
+185125,13400,,redundant info
+185125,13404,,redundant info
+185125,13411,,redundant info
+185125,13412,,redundant info
+185125,13413,,redundant info
+185125,13575,1969,redundant info
+185126,13400,,redundant info
+185126,13404,,redundant info
+185126,13411,,redundant info
+185126,13412,,redundant info
+185126,13413,,redundant info
+185126,13575,1969,redundant info
 185169,,,unknown location
 185210,,,unknown location
+185254,13400,19,redundant info
+185254,13404,,redundant info
+185254,13411,,redundant info
+185254,13412,,redundant info
+185254,13413,,redundant info
+185254,13575,,redundant info
 185296,,,cannot be tamed
 185297,,,cannot be tamed
 185298,,,cannot be tamed
@@ -3297,168 +3485,3 @@ npc_id,zone_id,layer,reason
 261047,,,unknown location
 261115,,,cannot be tamed
 264297,,,unknown location
-5225,1477,,incorrect zone_id
-168196,,,unknown location
-151353,10472,,redundant info
-151353,13400,,redundant info
-151353,13403,,redundant info
-151353,13404,,redundant info
-151353,13411,,redundant info
-151353,13412,119,redundant info
-151353,13412,144,redundant info
-151353,13412,42,redundant info
-151353,13412,49,redundant info
-151353,13412,51,redundant info
-151353,13412,57,redundant info
-151353,13412,68,redundant info
-151353,13412,69,redundant info
-151353,13413,,redundant info
-152708,10472,,redundant info
-152708,13400,122,redundant info
-152708,13400,189,redundant info
-152708,13400,19,redundant info
-152708,13400,33,redundant info
-152708,13400,43,redundant info
-152708,13400,54,redundant info
-152708,13400,66,redundant info
-152708,13400,81,redundant info
-152708,13400,86,redundant info
-152708,13400,87,redundant info
-152708,13403,,redundant info
-152708,13404,,redundant info
-152708,13413,,redundant info
-154030,10472,,redundant info
-154030,13400,115,redundant info
-154030,13400,122,redundant info
-154030,13400,189,redundant info
-154030,13400,42,redundant info
-154030,13400,43,redundant info
-154030,13400,81,redundant info
-154030,13400,87,redundant info
-154030,13403,,redundant info
-154030,13404,,redundant info
-154030,13411,,redundant info
-154030,13412,,redundant info
-154030,13413,,redundant info
-154030,13575,,redundant info
-155238,13400,122,redundant info
-155238,13400,189,redundant info
-155238,13403,,redundant info
-155238,13404,,redundant info
-155238,13411,,redundant info
-155238,13575,,redundant info
-155483,10472,,redundant info
-155483,13400,,redundant info
-155483,13403,,redundant info
-155483,13404,152,redundant info
-155483,13404,25,redundant info
-155483,13404,54,redundant info
-155483,13404,55,redundant info
-155483,13404,59,redundant info
-155483,13404,67,redundant info
-155483,13404,68,redundant info
-155483,13411,,redundant info
-155483,13412,,redundant info
-155483,13413,,redundant info
-155483,13575,,redundant info
-157083,10472,,redundant info
-157109,10472,,redundant info
-157149,10472,,redundant info
-159323,10472,,redundant info
-169823,10472,,redundant info
-169823,13400,,redundant info
-169823,13403,,redundant info
-169823,13404,152,redundant info
-169823,13404,25,redundant info
-169823,13404,54,redundant info
-169823,13404,55,redundant info
-169823,13404,59,redundant info
-169823,13404,67,redundant info
-169823,13404,68,redundant info
-169823,13411,,redundant info
-169823,13412,,redundant info
-169823,13413,,redundant info
-169823,13575,,redundant info
-169871,10472,,redundant info
-169871,13400,115,redundant info
-169871,13400,122,redundant info
-169871,13400,16,redundant info
-169871,13400,18,redundant info
-169871,13400,189,redundant info
-169871,13400,19,redundant info
-169871,13400,29,redundant info
-169871,13400,33,redundant info
-169871,13400,42,redundant info
-169871,13400,43,redundant info
-169871,13400,66,redundant info
-169871,13400,81,redundant info
-169871,13400,86,redundant info
-169871,13400,87,redundant info
-169871,13403,,redundant info
-169871,13404,,redundant info
-169871,13411,,redundant info
-169871,13412,,redundant info
-169871,13413,,redundant info
-170093,10472,,redundant info
-173114,10472,,redundant info
-173114,13400,,redundant info
-173114,13403,,redundant info
-173114,13404,152,redundant info
-173114,13404,25,redundant info
-173114,13404,54,redundant info
-173114,13404,55,redundant info
-173114,13404,59,redundant info
-173114,13404,67,redundant info
-173114,13404,68,redundant info
-173114,13411,,redundant info
-173114,13412,,redundant info
-173114,13413,,redundant info
-173114,13575,,redundant info
-179458,13400,19,redundant info
-179458,13404,,redundant info
-179458,13411,,redundant info
-179458,13412,,redundant info
-179458,13413,,redundant info
-179458,13575,,redundant info
-185112,13400,,redundant info
-185112,13404,,redundant info
-185112,13411,,redundant info
-185112,13412,,redundant info
-185112,13413,,redundant info
-185112,13575,1969,redundant info
-185113,13400,,redundant info
-185113,13404,,redundant info
-185113,13411,,redundant info
-185113,13412,,redundant info
-185113,13413,,redundant info
-185113,13575,1969,redundant info
-185114,13400,,redundant info
-185114,13404,,redundant info
-185114,13411,,redundant info
-185114,13412,,redundant info
-185114,13413,,redundant info
-185114,13575,1969,redundant info
-185125,13400,,redundant info
-185125,13404,,redundant info
-185125,13411,,redundant info
-185125,13412,,redundant info
-185125,13413,,redundant info
-185125,13575,1969,redundant info
-185126,13400,,redundant info
-185126,13404,,redundant info
-185126,13411,,redundant info
-185126,13412,,redundant info
-185126,13413,,redundant info
-185126,13575,1969,redundant info
-185254,13400,19,redundant info
-185254,13404,,redundant info
-185254,13411,,redundant info
-185254,13412,,redundant info
-185254,13413,,redundant info
-185254,13575,,redundant info
-21250,3519,,cannot be tamed
-50839,46,,incorrect zone_id
-50839,51,,incorrect zone_id
-17216,457,,incorrect zone_id
-32517,9389,,incorrect zone_id
-51052,9389,,incorrect zone_id

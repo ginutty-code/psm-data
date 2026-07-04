@@ -6759,7 +6759,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 162767,Pesticide,Rare,4,53,Beetle,11462,"[-1,-1]"
 163154,Aqir Scarab,Normal,0,53,Beetle,10833,"[-1,-1]"
 163170,Aqir Impaler,Normal,0,53,Beetle,unknown,[]
-168196,Virulent Pest,Normal,0,53,Beetle,11462,[]
+168196,Virulent Pest,Normal,0,53,Beetle,unknown,[]
 169747,Maw Roach,Normal,0,53,Beetle,11400,"[-1,-1]"
 170746,Essence Devourer,Normal,0,53,Beetle,unknown,[]
 171052,Essence Devourer,Normal,0,53,Beetle,unknown,[]

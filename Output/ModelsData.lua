@@ -5998,8 +5998,7 @@ ModelsData = {
         [97894] = {
             taming = {"Exotic"},
             [164829] = {"Chosen Flayedwing", "Maldraxxus", "Shadowlands", "Normal", "[0,0]", false},
-            [164878] = {"Chosen Flayedwing", "Maldraxxus", "Shadowlands", "Normal", "[0,0]", false},
-            [168946] = {"Trained Flayedwing", "Maldraxxus", "Shadowlands", "Normal", "[1,1]", false}
+            [164878] = {"Chosen Flayedwing", "Maldraxxus", "Shadowlands", "Normal", "[0,0]", false}
         },
         [97896] = {
             taming = {"Exotic"},
@@ -6606,8 +6605,7 @@ ModelsData = {
         [94295] = {
             [168359] = {"Swift Skymane", "Bastion", "Shadowlands", "Normal", "[0,0]", false},
             [169099] = {"Wild Skymane", "Bastion", "Shadowlands", "Normal", "[0,0]", false},
-            [170247] = {"Spirited Skymane", "Bastion", "Shadowlands", "Normal", "[0,0]", false},
-            [170548] = {"Sundancer", "Bastion", "Shadowlands", "Rare Elite", "[1,1]", false}
+            [170247] = {"Spirited Skymane", "Bastion", "Shadowlands", "Normal", "[0,0]", false}
         },
         [94296] = {
             [165685] = {"Glen Grazer", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
@@ -9367,7 +9365,6 @@ ModelsData = {
         },
         [93760] = {
             [166290] = {"Timber Vulpin", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
-            [168084] = {"Rooda", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
             [170068] = {"Glimmerfur Vulpin", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
             [172722] = {"Grove Prowler", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false}
         },
@@ -10797,7 +10794,6 @@ ModelsData = {
         },
         [96899] = {
             [169825] = {"Warstitched Hound", "Maldraxxus", "Shadowlands", "Normal", "[0,0]", false},
-            [169872] = {"Chosen Corpsehound", "Maldraxxus", "Shadowlands", "Normal", "[1,1]", false},
             [170159] = {"Stiched Fleshripper", "Maldraxxus", "Shadowlands", "Normal", "[]", false},
             [177130] = {"Starving Corpsehound", "The Maw", "Shadowlands", "Normal", "[-1,-1]", false}
         },
@@ -13082,9 +13078,7 @@ ModelsData = {
         },
         [92661] = {
             taming = {"Mechanical"},
-            [160110] = {"First Guardian of Kalliope", "Bastion", "Shadowlands", "Normal", "[-1,-1]", false},
-            [169563] = {"Gleaming Phalynx", "Bastion", "Shadowlands", "Normal", "[1,1]", false},
-            [169564] = {"Gleaming Phalynx", "Bastion", "Shadowlands", "Normal", "[1,1]", false}
+            [160110] = {"First Guardian of Kalliope", "Bastion", "Shadowlands", "Normal", "[-1,-1]", false}
         },
         [92676] = {
             taming = {"Mechanical"},
@@ -13352,7 +13346,6 @@ ModelsData = {
             [155483] = {"Faeleaf Shimmerwing", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", true},
             [164862] = {"Weald Shimmermoth", "De Other Side", "Shadowlands", "Elite", "[-1,-1]", false},
             [166019] = {"Shimmermoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
-            [168085] = {"Duster", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
             [169798] = {"Illusory Ardenmoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
             [170526] = {"Silky Ardenmoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
             [170859] = {"Silentwing Ardenmoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
@@ -19512,9 +19505,6 @@ ModelsData = {
             [166735] = {"Deranged Guardian", "Ardenweald", "Shadowlands", "Elite", "[-1,-1]", false},
             [172067] = {"Terrified Guardian", "Ardenweald", "Shadowlands", "Elite", "[0,0]", false}
         },
-        [94341] = {
-            [170609] = {"Stranded Stag", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false}
-        },
         [96831] = {
             [231258] = {"Serene Windsteed", "The Wandering Isle", "The War Within", "Normal", "[]", false}
         },
@@ -20252,12 +20242,7 @@ ModelsData = {
             [171651] = {"Uninvited Intimidator", "Revendreth|The Ember Court", "Shadowlands", "Normal", "[-1,-1]", false},
             [176117] = {"Silent Proctor", "Revendreth", "Shadowlands", "Normal", "[-1,-1]", false}
         },
-        [93861] = {
-            [167856] = {"Blisterback", "Revendreth", "Shadowlands", "Normal", "[1,1]", false}
-        },
         [94496] = {
-            [167856] = {"Blisterback", "Revendreth", "Shadowlands", "Normal", "[1,1]", false},
-            [169167] = {"Drained Soulstalker", "Revendreth", "Shadowlands", "Normal", "[1,1]", false},
             [172785] = {"Unfinished Granitefur", "Revendreth", "Shadowlands", "Normal", "[0,0]", false}
         },
         [95362] = {
@@ -20886,7 +20871,6 @@ ModelsData = {
         },
         [47799] = {
             [67703] = {"Slateshell Wanderer", "Fall of Shan Bu|Isle of Thunder", "Mists of Pandaria", "Normal", "[0,0]", false},
-            [156376] = {"River Terrapin", "Bastion", "Shadowlands", "Normal", "[1,1]", false},
             [169124] = {"Glimmerpool Terrapin", "Bastion", "Shadowlands", "Normal", "[0,0]", false},
             [169826] = {"Glimmerpool Snapjaw", "Bastion", "Shadowlands", "Normal", "[0,0]", false},
             [170334] = {"Glimmerpool Snapper", "Bastion", "Shadowlands", "Normal", "[0,0]", false}
@@ -21992,14 +21976,7 @@ ModelsData = {
             [112334] = {"Frenzied Riverbug", "Suramar", "Legion", "Normal", "[-1,-1]", false}
         },
         [57556] = {
-            [167480] = {"The Lonely Matriarch", "Ardenweald", "Shadowlands", "Elite", "[1,1]", false},
-            [168090] = {"Betsy", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169332] = {"Maribel", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169333] = {"Daisy", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169334] = {"Lulu", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169335] = {"Lillythistle Jr.", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169336] = {"Rose", "Ardenweald", "Shadowlands", "Normal", "[1,null]", false},
-            [169337] = {"Miss Spot", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false}
+            [169336] = {"Rose", "Ardenweald", "Shadowlands", "Normal", "[1,null]", false}
         },
         [58406] = {
             taming = {"Exotic"},
@@ -22226,7 +22203,6 @@ ModelsData = {
         },
         [95552] = {
             [162449] = {"Puddle Strider", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
-            [168086] = {"Leggy", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
             [169231] = {"Night Heron", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false}
         },
         [95553] = {
@@ -23514,10 +23490,7 @@ ModelsData = {
         },
         [45097] = {
             taming = {"Exotic"},
-            [66418] = {"Spotted Caterpillar", "Townlong Steppes", "Mists of Pandaria", "Normal", "[0,0]", false},
-            [167256] = {"Silkstrider Grub", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [168089] = {"Silkstrider Grub", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
-            [169310] = {"Silkstrider Grub", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false}
+            [66418] = {"Spotted Caterpillar", "Townlong Steppes", "Mists of Pandaria", "Normal", "[0,0]", false}
         },
         [45098] = {
             taming = {"Exotic"},
