@@ -4253,7 +4253,7 @@ ModelsData = {
             [164038] = {"Darkwarren Spitter", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false},
             [164642] = {"Bloodraged Spitter", "", "Shadowlands", "Normal", "[]", false},
             [165190] = {"Enraged Gorm Rampager", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false},
-            [169823] = {"Gorm Behemoth", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", false},
+            [169823] = {"Gorm Behemoth", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", true},
             [169974] = {"Corrosive Gorm", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false},
             [169975] = {"Gorm Spitter", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false},
             [170766] = {"Gorm Spewer", "Ardenweald", "Shadowlands", "Normal", "[-1,-1]", false},
@@ -6348,7 +6348,8 @@ ModelsData = {
             [21102] = {"Uvuros", "Shadowmoon Valley", "The Burning Crusade", "Elite", "[-1,-1]", true}
         },
         [29539] = {
-            [50839] = {"Chromehound", "Blackrock Mountain", "Mists of Pandaria", "Rare", "[-1,-1]", false}
+            taming = {"Exotic"},
+            [50839] = {"Chromehound", "Blackrock Mountain", "Mists of Pandaria", "Rare", "[-1,-1]", true}
         },
         [54190] = {
             taming = {"Exotic"},
@@ -13164,7 +13165,7 @@ ModelsData = {
             [48278] = {"Mining Monkey", "The Deadmines", "Cataclysm", "Normal", "[0,0]", false}
         },
         [46574] = {
-            [51052] = {"Gib the Banana-Hoarder", "Swamp of Sorrows", "Mists of Pandaria", "Rare", "[-1,-1]", false}
+            [51052] = {"Gib the Banana-Hoarder", "Swamp of Sorrows", "Mists of Pandaria", "Rare", "[-1,-1]", true}
         }
     },
     ["Moth"] = {
@@ -13348,7 +13349,7 @@ ModelsData = {
             [174248] = {"Ardenmoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false}
         },
         [95199] = {
-            [155483] = {"Faeleaf Shimmerwing", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", false},
+            [155483] = {"Faeleaf Shimmerwing", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", true},
             [164862] = {"Weald Shimmermoth", "De Other Side", "Shadowlands", "Elite", "[-1,-1]", false},
             [166019] = {"Shimmermoth", "Ardenweald", "Shadowlands", "Normal", "[0,0]", false},
             [168085] = {"Duster", "Ardenweald", "Shadowlands", "Normal", "[1,1]", false},
@@ -18653,7 +18654,8 @@ ModelsData = {
     },
     ["Spirit Beast"] = {
         [28010] = {
-            [32517] = {"Loque'nahak", "Sholazar Basin", "Wrath of the Lich King", "Rare", "[0,0]", false}
+            taming = {"Exotic"},
+            [32517] = {"Loque'nahak", "Sholazar Basin", "Wrath of the Lich King", "Rare", "[0,0]", true}
         },
         [28871] = {
             taming = {"Exotic"},
@@ -20226,7 +20228,7 @@ ModelsData = {
         [93165] = {
             taming = {"Exotic","Gargon"},
             [159177] = {"Loyal Granitefur", "Revendreth", "Shadowlands", "Normal", "[-1,-1]", false},
-            [159323] = {"Stoneward Trampler", "The Upper Reaches", "Shadowlands", "Rare Elite", "[-1,-1]", false},
+            [159323] = {"Stoneward Trampler", "The Upper Reaches", "Shadowlands", "Rare Elite", "[-1,-1]", true},
             [159441] = {"Rockbreaker", "Revendreth", "Shadowlands", "Normal", "[-1,-1]", true},
             [178050] = {"Loyal Granitefur", "Revendreth", "Shadowlands", "Normal", "[0,0]", false},
             [185126] = {"Stoneward Trampler", "The Adamant Vaults", "Shadowlands", "Rare Elite", "[-1,-1]", false}
@@ -21275,7 +21277,7 @@ ModelsData = {
             [18132] = {"Umbraglow Stinger", "Zangarmarsh", "The Burning Crusade", "Normal", "[-1,-1]", false},
             [59351] = {"Emerald Fenfly", "The Jade Forest", "Mists of Pandaria", "Normal", "[0,0]", false},
             [59768] = {"Jadeglow Wasp", "The Jade Forest", "Mists of Pandaria", "Normal", "[0,0]", false},
-            [173114] = {"Invasive Decayfly", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", false},
+            [173114] = {"Invasive Decayfly", "The Soulforges", "Shadowlands", "Rare Elite", "[-1,-1]", true},
             [185112] = {"Invasive Decayfly", "The Adamant Vaults", "Shadowlands", "Rare Elite", "[-1,-1]", false}
         },
         [18723] = {

@@ -3,12 +3,11 @@ Clean and process Petopia data, generating a cleaned dataset with notes and tami
 
 Pipeline order:
 1. Load raw Petopia data.
-2. Filter out NPCs listed in the NPC skip list.
-3. Deduplicate by npc_id (keep first occurrence).
-4. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates).
-5. Clean taming skills from tamingskillname1/tamingskillname2.
-6. Merge taming_updates.csv — override/add taming_requirements where specified.
-7. Write processed_petopia_data.csv with columns: npc_id, npc_name, zone, family, name_keeper, notes, taming_requirements.
+2. Deduplicate by npc_id (keep first occurrence).
+3. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates) and add missing NPCs from notes_updates.csv.
+4. Clean taming skills from tamingskillname1/tamingskillname2.
+5. Merge taming_updates.csv — override/add taming_requirements where specified.
+6. Write processed_petopia_data.csv with columns: npc_id, npc_name, zone, family, name_keeper, notes, taming_requirements.
 """
 
 import csv
@@ -18,7 +17,7 @@ import sys
 from config import (
     PETOPIA_DATA_CSV, PROCESSED_PETOPIA_DATA_CSV,
     NOTES_KEYWORDS_CSV, NOTES_UPDATES_CSV,
-    SKIP_NPC_IDS_CSV, TAMING_UPDATES_CSV,
+    TAMING_UPDATES_CSV,
     ensure_dirs
 )
 
@@ -214,27 +213,19 @@ def main():
     total_loaded = len(raw_records)
     print(f"Loaded {total_loaded} raw Petopia records.")
 
-    # 2. Filter by NPC skip list
-    skip_npc_ids = load_skip_npc_ids(SKIP_NPC_IDS_CSV)
-    print(f"Loaded {len(skip_npc_ids)} NPC IDs to skip.")
-
-    filtered_records = [r for r in raw_records if r.get('npc_id', '').strip() not in skip_npc_ids]
-    skipped_npc = total_loaded - len(filtered_records)
-    print(f"Skipped {skipped_npc} NPCs from skip list.")
-
-    # 3. Deduplicate by npc_id (keep first occurrence)
+    # 2. Deduplicate by npc_id (keep first occurrence)
     seen_ids = set()
     deduped_records = []
-    for r in filtered_records:
+    for r in raw_records:
         npc_id = r.get('npc_id', '').strip()
         if npc_id not in seen_ids:
             seen_ids.add(npc_id)
             deduped_records.append(r)
 
-    skipped_dupes = len(filtered_records) - len(deduped_records)
+    skipped_dupes = len(raw_records) - len(deduped_records)
     print(f"Skipped {skipped_dupes} duplicate NPC IDs.")
 
-    # 4. Clean notes
+    # 3. Clean notes
     keywords = load_note_keywords()
     keyword_pattern = None
     if keywords:
@@ -291,7 +282,36 @@ def main():
     deduped_records = [r for r in deduped_records if r.get('npc_id', '').strip() not in npc_remove]
     print(f"Records after note removals: {len(deduped_records)}")
 
-    # 5. Clean taming skills
+    # ---------------------------------------------------------------------
+    # Add missing NPCs from notes_updates
+    # ---------------------------------------------------------------------
+    # Some note updates refer to NPCs that are not present in the raw
+    # Petopia data.  The original pipeline discarded those updates, but
+    # the downstream data model expects every note update to be represented
+    # in the final cleaned dataset.  We therefore create minimal records
+    # for any NPC IDs that appear in ``npc_add`` but are missing from the
+    # deduped records.  The note text is cleaned using the same rules as
+    # for existing records.
+    existing_ids = {r.get('npc_id', '').strip() for r in deduped_records}
+    missing_ids = set(npc_add.keys()) - existing_ids - npc_remove
+    added_count = 0
+    for missing_id in missing_ids:
+        raw_note = npc_add[missing_id]
+        cleaned_note = clean_note(raw_note, global_rules, keyword_pattern)
+        deduped_records.append({
+            'npc_id': missing_id,
+            'npc_name': '',
+            'zone': '',
+            'family': '',
+            'name_keeper': '',
+            'cleaned_notes': cleaned_note,
+            'taming_requirements': '',
+        })
+        added_count += 1
+    if added_count:
+        print(f"Added {added_count} missing NPC(s) from notes_updates.")
+
+    # 4. Clean taming skills
     for r in deduped_records:
         skills = []
         for key in ('tamingskillname1', 'tamingskillname2'):
@@ -302,7 +322,7 @@ def main():
                     skills.append(cleaned)
         r['taming_requirements'] = '|'.join(skills)
 
-    # 6. Merge taming_updates.csv
+    # 5. Merge taming_updates.csv
     taming_updates = load_taming_updates(TAMING_UPDATES_CSV)
     print(f"Loaded {len(taming_updates)} taming requirement updates.")
 
@@ -311,7 +331,7 @@ def main():
         if npc_id in taming_updates:
             r['taming_requirements'] = taming_updates[npc_id]
 
-    # 7. Write output
+    # 6. Write output
     output_columns = ['npc_id', 'npc_name', 'zone', 'family', 'name_keeper', 'notes', 'taming_requirements']
 
     output_rows = []
@@ -340,9 +360,10 @@ def main():
     print("\n" + "-" * 40)
     print("Cleaning Statistics Summary:")
     print(f"  Total records loaded:              {total_loaded}")
-    print(f"  Skipped (NPC skip list):           {skipped_npc}")
     print(f"  Skipped (duplicate NPC IDs):       {skipped_dupes}")
     print(f"  Dropped (no surviving notes):      {dropped_notes}")
+    print(f"  Added missing NPCs from updates:   {len(missing_ids)}")
+    print(f"  Taming updates applied:            {len(taming_updates)}")
     print(f"  Final records written:             {len(output_rows)}")
     print("-" * 40 + "\n")
     print("Petopia data cleaning step completed successfully.")
