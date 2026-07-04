@@ -4948,7 +4948,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 156081,Sinrunner,Normal,0,299,Courser,10413,"[0,0]",97067|97068,Revendreth,10413,0,"24.4,38.6|67.4,68.4|52.4,35.4|63.2,61.8|68.2,66",1525,Revendreth,9.0.1,,0,Sinrunner,299,"[0,0]",1,successful,No
 156083,Sanguifang,Rare,4,52,Hound,9105,"[-1,-1]",38186,Vale of Eternal Blossoms,9105,0,"46,57",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,4,Sanguifang,52,"[-1,-1]",6,successful,No
 156214,Fire Hound,Normal,0,52,Hound,unknown,[],64471,The Maw,11400,0,,1543,The Maw,9.0.1,,0,Fire Hound,52,[],6,successful,No
-156242,Animated Prowler,Normal,0,154,Mechanical,13411,"[-1,-1]",92677,Coldheart Interstitia,13411,67,,1911,Torghast - Entrance,9.0.1,,0,Animated Prowler,154,"[-1,-1]",9,successful,No
+156242,Animated Prowler,Normal,0,154,Mechanical,13411,"[-1,-1]",92677,Coldheart Interstitia,13411,67,,1911,Torghast,9.0.1,,0,Animated Prowler,154,"[-1,-1]",9,successful,No
 156284,Sinrunner,Normal,0,299,Courser,10413,"[0,0]",93511,Revendreth,10413,0,"42.4,65.4|50.4,61.4|44.8,70.6|48.4,63.8|59.4,34.2|49.4,66.2|66.8,37.8",1525,Revendreth,9.0.1,,0,Sinrunner,299,"[0,0]",1,successful,No
 156376,River Terrapin,Normal,0,21,Turtle,10534,"[1,1]",47799,Bastion,10534,0,"56.4,77.2|52.4,61.4",1533,Bastion,9.0.1,,0,River Terrapin,21,"[1,1]",1,successful,No
 156389,Rajani Warserpent,Elite,1,303,Lesser Dragonkin,9105,"[1,1]",92139,Vale of Eternal Blossoms,9105,0,"47.4,21.4",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,1,Rajani Warserpent,303,"[1,1]",1,successful,No
@@ -4965,11 +4965,11 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 156780,White Crane,Normal,0,125,Waterfowl,9105,"[0,0]",39553|39554,Vale of Eternal Blossoms,9105,0,"70.8,58|75.4,52.6|87.4,42.4|69.2,30.4|72.8,24.6|73,57.4|80.6,40.6|83.8,44.8|81,45|73.4,21.6",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,0,White Crane,125,"[0,0]",1,successful,No
 156788,Fairlands Gazelle,Normal,0,151,Stag,9105,"[0,0]",2237|40169|42838,Vale of Eternal Blossoms,9105,0,"24.6,48.2|25.6,46.4|31.6,51.8|27.4,44.4|29.4,58.8|30.2,56.4|31,46.8|32.2,49.4|24.6,44.6|25.8,51.2|30.6,54|33.4,47.2|34.6,49.4|22.4,44|27.4,48.6|25.2,54.4|25.2,66|34.2,45|24,63.6|38,40",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,0,Fairlands Gazelle,151,"[0,0]",1,successful,No
 156931,Silkfeather Hawk,Normal,0,26,Bird of Prey,9105,"[-1,-1]",26566|34007|43225|43226,Vale of Eternal Blossoms,9105,0,"57.4,54.4|29.2,60.4|32.2,53.2",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,0,Silkfeather Hawk,26,"[-1,-1]",1,successful,No
-157083,Stonewing Ravager,Elite,1,24,Bat,13413|10472,"[-1,-1]",92704,The Upper Reaches,13413,83,,1911,Torghast - Entrance,9.0.1,,1,Stonewing Ravager,24,"[-1,-1]",1,successful,No
-157109,Vampire Bat,Normal,0,24,Bat,13413|10472,"[-1,-1]",60055,The Upper Reaches,13413,120,,1911,Torghast - Entrance,9.0.1,,0,Vampire Bat,24,"[-1,-1]",1,successful,No
+157083,Stonewing Ravager,Elite,1,24,Bat,13413|10472,"[-1,-1]",92704,The Upper Reaches,13413,83,,1911,Torghast,9.0.1,,1,Stonewing Ravager,24,"[-1,-1]",1,successful,No
+157109,Vampire Bat,Normal,0,24,Bat,13413|10472,"[-1,-1]",60055,The Upper Reaches,13413,120,,1911,Torghast,9.0.1,,0,Vampire Bat,24,"[-1,-1]",1,successful,No
 157121,Ekashim,Normal,0,2,Cat,10833,"[-1,-1]",37168,Uldum,10833,0,"74.4,68.2",1527,Uldum,8.3.0,Visions of N'Zoth,0,Ekashim,2,"[-1,-1]",1,successful,No
 157143,Arid Bonepicker,Normal,0,7,Carrion Bird,10833,"[0,0]",2305|77899,Uldum,10833,0,"68,31.4",1527,Uldum,8.3.0,Visions of N'Zoth,0,Arid Bonepicker,7,"[0,0]",1,successful,No
-157149,Heartseeker,Rare Elite,2,24,Bat,13413|10472,"[-1,-1]",92703,The Upper Reaches,13413,83,,1911,Torghast - Entrance,9.0.1,,2,Heartseeker,24,"[-1,-1]",1,successful,No
+157149,Heartseeker,Rare Elite,2,24,Bat,13413|10472,"[-1,-1]",92703,The Upper Reaches,13413,83,,1911,Torghast,9.0.1,,2,Heartseeker,24,"[-1,-1]",1,successful,No
 157162,Rei Lun,Rare Elite,2,303,Lesser Dragonkin,9105,"[-1,-1]",40795,Vale of Eternal Blossoms,9105,0,"21.4,12.8",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,2,Rei Lun,303,"[-1,-1]",1,successful,No
 157274,Languishing Etherwyrm,Normal,0,27,Wind Serpent,10534,"[0,0]",93470,Bastion,10534,0,"53.8,78.2|52,79.6|54.4,76|52.2,81.6",1533,Bastion,9.0.1,,0,Languishing Etherwyrm,27,"[0,0]",1,successful,No
 157277,Starved Etherwyrm,Normal,0,27,Wind Serpent,10534,"[-1,-1]",93472,Bastion,10534,0,"52.8,77.8|55.8,76.8|52.4,81.4",1533,Bastion,9.0.1,,0,Starved Etherwyrm,27,"[-1,-1]",1,successful,No
@@ -5028,7 +5028,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 159265,Tower Creeper,Normal,0,3,Spider,10413,"[-1,-1]",94408|94409|94410,Revendreth,10413,0,"27.2,12.8|26,28.8|32.4,13.4|30.4,24.8|23.6,28.4|27,22.6|37.8,22.4|26.2,24.8|34.6,24.4",1525,Revendreth,9.0.1,,0,Tower Creeper,3,"[-1,-1]",1,successful,No
 159289,Juvenile Cloudfeather,Normal,0,7,Carrion Bird,10534,"[-1,-1]",94752|94754,Bastion,10534,0,"56.2,48|55.4,46",1533,Bastion,9.0.1,,0,Juvenile Cloudfeather,7,"[-1,-1]",1,successful,No
 159298,Gilded Cloudstrider,Normal,0,160,Feathermane,10534,"[0,0]",98493,Bastion,10534,0,"56.8,44|58.2,45.6|58.6,43",1533,Bastion,9.0.1,,0,Gilded Cloudstrider,160,"[0,0]",1,successful,No
-159323,Stoneward Trampler,Rare Elite,2,128,Stone Hound,13413|10472,"[-1,-1]",93165,The Upper Reaches,13413,83,,1911,Torghast - Entrance,9.0.1,,2,Stoneward Trampler,128,"[-1,-1]",1,successful,No
+159323,Stoneward Trampler,Rare Elite,2,128,Stone Hound,13413|10472,"[-1,-1]",93165,The Upper Reaches,13413,83,,1911,Torghast,9.0.1,,2,Stoneward Trampler,128,"[-1,-1]",1,successful,No
 159420,Shimmering Etherwyrm,Normal,0,27,Wind Serpent,10534,"[0,0]",93470,Bastion,10534,0,"56.2,37.2",1533,Bastion,9.0.1,,0,Shimmering Etherwyrm,27,"[0,0]",1,successful,No
 159441,Rockbreaker,Normal,0,128,Stone Hound,10413,"[-1,-1]",93165,Revendreth,10413,0,"37.2,23.4",1525,Revendreth,9.0.1,,0,Rockbreaker,128,"[-1,-1]",1,successful,No
 159460,Nightwidow Horror,Elite,1,3,Spider,10413,"[-1,-1]",94408,Revendreth,10413,0,"32.4,13.4|23.6,28.4|27,12.4|30.4,24.8|37.8,23|27.2,21.8",1525,Revendreth,9.0.1,,1,Nightwidow Horror,3,"[-1,-1]",1,successful,No
@@ -5283,8 +5283,8 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 166735,Deranged Guardian,Elite,1,151,Stag,11510,"[-1,-1]",93795,Ardenweald,11510,0,"27.8,54|27.6,56.2|26.6,58.8",1565,Ardenweald,9.0.1,,1,Deranged Guardian,151,"[-1,-1]",1,successful,No
 166872,Umbral Phalynx,Normal,0,154,Mechanical,10534,"[-1,-1]",92677,Bastion,10534,0,"58.4,59.6|58.6,62.4|57.4,57.2|60.8,62.8",1533,Bastion,9.0.1,,0,Umbral Phalynx,154,"[-1,-1]",9,successful,No
 166930,Skullboar Spinebreaker,Normal,0,5,Boar,10534,"[0,0]",97324,Bastion,10534,0,"39.4,51",1533,Bastion,9.0.1,,0,Skullboar Spinebreaker,5,"[0,0]",1,successful,No
-166933,Ventun the Ravenous,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast - Entrance,9.0.1,,0,Ventun the Ravenous,52,"[-1,-1]",1,successful,No
-166934,Lor the Loyal,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast - Entrance,9.0.1,,0,Lor the Loyal,52,"[-1,-1]",1,successful,No
+166933,Ventun the Ravenous,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast,9.0.1,,0,Ventun the Ravenous,52,"[-1,-1]",1,successful,No
+166934,Lor the Loyal,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast,9.0.1,,0,Lor the Loyal,52,"[-1,-1]",1,successful,No
 166966,Runestag,Normal,0,151,Stag,11510,[],93781|93782|93785|93786,,11510,0,,1739,Ardenweald,9.0.1,,0,Runestag,151,[],1,successful,No
 166967,Juvenile Runedeer,Normal,0,151,Stag,11510,[],97281|97282,,11510,0,,1739,Ardenweald,9.0.1,,0,Juvenile Runedeer,151,[],1,successful,No
 167111,Spinemaw Staghorn,Elite,1,292,Carapid,13334,"[-1,-1]",94190,Mists of Tirna Scithe,13334,0,,1669,Mists of Tirna Scithe,9.0.1,,1,Spinemaw Staghorn,,"[-1,-1]",1,successful,No
@@ -5311,7 +5311,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 167439,Agitated Mistfeather,Elite,1,303,Lesser Dragonkin,11510,"[-1,-1]",96412,Ardenweald,11510,0,"29.8,58|30,60.4|29.6,62.6",1565,Ardenweald,9.0.1,,1,Agitated Mistfeather,303,"[-1,-1]",2,successful,No
 167442,Fledgeling Mistfeather,Normal,0,303,Lesser Dragonkin,11510,"[0,0]",97050|97051,Ardenweald,11510,0,"28,60.6|28.4,54.2|27.8,57.4|28.4,51.8|30,56.6",1565,Ardenweald,9.0.1,,0,Fledgeling Mistfeather,303,"[0,0]",2,successful,No
 167480,The Lonely Matriarch,Elite,1,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"18.2,37.6",1565,Ardenweald,9.0.1,,1,The Lonely Matriarch,126,"[1,1]",1,successful,No
-167485,Starving Mawrat,Normal,0,127,Rodent,13400,"[-1,-1]",95749,Skoldus Hall,13400,19,,1911,Torghast - Entrance,9.0.1,,0,Starving Mawrat,127,"[-1,-1]",1,successful,No
+167485,Starving Mawrat,Normal,0,127,Rodent,13400,"[-1,-1]",95749,Skoldus Hall,13400,19,,1911,Torghast,9.0.1,,0,Starving Mawrat,127,"[-1,-1]",1,successful,No
 167497,Carved Intimidator,Normal,0,128,Stone Hound,10413,"[-1,-1]",95362|95372,Revendreth,10413,0,"64.6,48.8|67.2,43.4|64.6,51.4|65.8,46.6|68.8,48.4",1525,Revendreth,9.0.1,,0,Carved Intimidator,128,"[-1,-1]",1,successful,No
 167501,Carved Tracker,Normal,0,128,Stone Hound,10413,"[-1,-1]",96492,Revendreth,10413,0,"62,49.6",1525,Revendreth,9.0.1,,0,Carved Tracker,128,"[-1,-1]",1,successful,No
 167503,Veilwing Guardian,Normal,0,303,Lesser Dragonkin,11510,"[-1,-1]",96413,Ardenweald,11510,0,"48.4,41.6|45.4,48.4|45.8,46.4",1565,Ardenweald,9.0.1,,0,Veilwing Guardian,303,"[-1,-1]",2,successful,No
@@ -5524,7 +5524,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 170067,Savagewing Teroclaw,Normal,0,7,Carrion Bird,11510,"[-1,-1]",58164|95115,Ardenweald,11510,0,"34.4,43.6|37.6,43.4|40,41.4|34.6,40",1565,Ardenweald,9.0.1,,0,Savagewing Teroclaw,7,"[-1,-1]",1,successful,No
 170068,Glimmerfur Vulpin,Normal,0,50,Fox,11510,"[0,0]",93760|93762,Ardenweald,11510,0,"32.8,43.4|34,45",1565,Ardenweald,9.0.1,,0,Glimmerfur Vulpin,50,"[0,0]",1,successful,No
 170070,Glimmerfur Denwatcher,Normal,0,50,Fox,11510,"[-1,-1]",93755,Ardenweald,11510,0,"33.4,45.6|32.6,42.8",1565,Ardenweald,9.0.1,,0,Glimmerfur Denwatcher,50,"[-1,-1]",1,successful,No
-170093,Mawsworn Seeker,Normal,0,52,Hound,13400|10472,"[-1,-1]",92628,Skoldus Hall,13400,87,,1911,Torghast - Entrance,9.0.1,,0,Mawsworn Seeker,52,"[-1,-1]",1,successful,No
+170093,Mawsworn Seeker,Normal,0,52,Hound,13400|10472,"[-1,-1]",92628,Skoldus Hall,13400,87,,1911,Torghast,9.0.1,,0,Mawsworn Seeker,52,"[-1,-1]",1,successful,No
 170122,Pearlshell Snapper,Normal,0,21,Turtle,11510,"[0,0]",93467|94172,Ardenweald,11510,0,"34.4,41|39,40.6|36.2,42.8|35.4,45.6",1565,Ardenweald,9.0.1,,0,Pearlshell Snapper,21,"[0,0]",1,successful,No
 170144,Juvenile Runedeer,Normal,0,151,Stag,11510,"[0,0]",97283|97284,Ardenweald,11510,0,"37.4,42.8|39,40.6|35.2,47.4",1565,Ardenweald,9.0.1,,0,Juvenile Runedeer,151,"[0,0]",1,successful,No
 170145,Runestag,Normal,0,151,Stag,11510,"[0,0]",93781|93782|93785|93786,Ardenweald,11510,0,"37.6,42.8|37.8,40.8|35.2,48|35.8,44",1565,Ardenweald,9.0.1,,0,Runestag,151,"[0,0]",1,successful,No
