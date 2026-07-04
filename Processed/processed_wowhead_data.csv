@@ -4950,7 +4950,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 156214,Fire Hound,Normal,0,52,Hound,unknown,[],64471,The Maw,11400,0,,1543,The Maw,9.0.1,,0,Fire Hound,52,[],6,successful,No
 156242,Animated Prowler,Normal,0,154,Mechanical,13411,"[-1,-1]",92677,Coldheart Interstitia,13411,67,,1911,Torghast,9.0.1,,0,Animated Prowler,154,"[-1,-1]",9,successful,No
 156284,Sinrunner,Normal,0,299,Courser,10413,"[0,0]",93511,Revendreth,10413,0,"42.4,65.4|50.4,61.4|44.8,70.6|48.4,63.8|59.4,34.2|49.4,66.2|66.8,37.8",1525,Revendreth,9.0.1,,0,Sinrunner,299,"[0,0]",1,successful,No
-156376,River Terrapin,Normal,0,21,Turtle,10534,"[1,1]",47799,Bastion,10534,0,"56.4,77.2|52.4,61.4",1533,Bastion,9.0.1,,0,River Terrapin,21,"[1,1]",1,successful,No
 156389,Rajani Warserpent,Elite,1,303,Lesser Dragonkin,9105,"[1,1]",92139,Vale of Eternal Blossoms,9105,0,"47.4,21.4",1530,Vale of Eternal Blossoms,8.3.0,Visions of N'Zoth,1,Rajani Warserpent,303,"[1,1]",1,successful,No
 156395,Starving Dredbat,Normal,0,24,Bat,10413,"[-1,-1]",92701,Revendreth,10413,0,"51.2,74.4|47.8,74.6|51.2,76.4|53,75.4|48.4,77.2|51.4,72.4|51,78.8",1525,Revendreth,9.0.1,,0,Starving Dredbat,24,"[-1,-1]",1,successful,No
 156564,Ravening Guardian,Elite,1,154,Mechanical,10534,"[-1,-1]",92677,Bastion,10534,0,"24.6,24|26.6,23.4|24.8,20.6|24.2,28",1533,Bastion,9.0.1,,1,Ravening Guardian,154,"[-1,-1]",9,successful,No
@@ -5291,7 +5290,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 167116,Spinemaw Reaver,Elite,1,44,Wasp,13334,"[-1,-1]",95692,Mists of Tirna Scithe,13334,0,,1669,Mists of Tirna Scithe,9.0.1,,1,Spinemaw Reaver,44,"[-1,-1]",1,successful,No
 167129,Reza,Normal,0,128,Stone Hound,unknown,[],97157,Revendreth,10413,0,"61.8,79.2",1525,Revendreth,9.0.1,,0,Reza,128,[],1,successful,No
 167139,Geza,Normal,0,128,Stone Hound,unknown,[],97158,Revendreth,10413,0,"61.8,79.2",1525,Revendreth,9.0.1,,0,Geza,128,[],1,successful,No
-167256,Silkstrider Grub,Normal,0,42,Worm,11510,"[1,1]",45097,Ardenweald,11510,0,"36.2,27.8",1565,Ardenweald,9.0.1,,0,Silkstrider Grub,42,"[1,1]",1,successful,No
 167335,Draka's Flayedwing,Normal,0,38,Chimaera,11462,"[0,0]",94927,Maldraxxus,11462,0,"48.4,57.2",1536,Maldraxxus,9.0.1,,0,Draka's Flayedwing,38,"[0,0]",1,successful,No
 167337,Mechanical Bunny,Normal,0,154,Mechanical,10424,"[0,null]",33559,Exile's Reach,10424,0,"52.4,55",1409,Exile's Reach,9.0.1,,0,Mechanical Bunny,154,"[0,null]",9,successful,No
 167342,Moth,Normal,0,37,Moth,10424,"[0,null]",29056,Exile's Reach,10424,0,"52.4,55",1409,Exile's Reach,9.0.1,,0,Moth,37,"[0,null]",1,successful,No
@@ -5309,7 +5307,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 167433,Marrowmaw,Normal,0,38,Chimaera,10534,"[-1,-1]",94914,Bastion,10534,0,"39.4,55.2",1533,Bastion,9.0.1,,0,Marrowmaw,38,"[-1,-1]",1,successful,No
 167439,Agitated Mistfeather,Elite,1,303,Lesser Dragonkin,11510,"[-1,-1]",96412,Ardenweald,11510,0,"29.8,58|30,60.4|29.6,62.6",1565,Ardenweald,9.0.1,,1,Agitated Mistfeather,303,"[-1,-1]",2,successful,No
 167442,Fledgeling Mistfeather,Normal,0,303,Lesser Dragonkin,11510,"[0,0]",97050|97051,Ardenweald,11510,0,"28,60.6|28.4,54.2|27.8,57.4|28.4,51.8|30,56.6",1565,Ardenweald,9.0.1,,0,Fledgeling Mistfeather,303,"[0,0]",2,successful,No
-167480,The Lonely Matriarch,Elite,1,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"18.2,37.6",1565,Ardenweald,9.0.1,,1,The Lonely Matriarch,126,"[1,1]",1,successful,No
 167485,Starving Mawrat,Normal,0,127,Rodent,13400,"[-1,-1]",95749,Skoldus Hall,13400,19,,1911,Torghast,9.0.1,,0,Starving Mawrat,127,"[-1,-1]",1,successful,No
 167497,Carved Intimidator,Normal,0,128,Stone Hound,10413,"[-1,-1]",95362|95372,Revendreth,10413,0,"64.6,48.8|67.2,43.4|64.6,51.4|65.8,46.6|68.8,48.4",1525,Revendreth,9.0.1,,0,Carved Intimidator,128,"[-1,-1]",1,successful,No
 167501,Carved Tracker,Normal,0,128,Stone Hound,10413,"[-1,-1]",96492,Revendreth,10413,0,"62,49.6",1525,Revendreth,9.0.1,,0,Carved Tracker,128,"[-1,-1]",1,successful,No
@@ -5321,17 +5318,11 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 167721,The Slumbering Emperor,Rare,4,37,Moth,11510,"[-1,-1]",95201,Ardenweald,11510,0,"59.4,46.4",1565,Ardenweald,9.0.1,,4,The Slumbering Emperor,37,"[-1,-1]",1,successful,No
 167848,Dambala,Elite,1,35,Serpent,11510,"[-1,-1]",98233,Ardenweald,11510,0,"68.4,65.4",1565,Ardenweald,9.0.1,,1,Dambala,35,"[-1,-1]",1,successful,No
 167851,Egg-Tender Leh'go,Rare,4,292,Carapid,11510,"[-1,-1]",94204,Ardenweald,11510,0,"57.8,29.4",1565,Ardenweald,9.0.1,,4,Egg-Tender Leh'go,292,"[-1,-1]",1,successful,No
-167856,Blisterback,Normal,0,128,Stone Hound,10413,"[1,1]",93861|94496,Revendreth,10413,0,"31,57.2",1525,Revendreth,9.0.1,,0,Blisterback,128,"[1,1]",1,successful,No
 167947,Tremaculum Soulhunter,Normal,0,52,Hound,11400,"[-1,-1]",92627,,11400,0,,1543,The Maw,9.0.1,,0,Tremaculum Soulhunter,52,"[-1,-1]",1,successful,No
 167960,Gargantuan Seeker,Elite,1,52,Hound,11400,"[-1,-1]",92628,,11400,0,,1543,The Maw,9.0.1,,1,Gargantuan Seeker,52,"[-1,-1]",1,successful,No
 167964,4.RF-4.RF,Elite,1,154,Mechanical,13309,"[-1,-1]",68856,De Other Side,13309,0,,1677,De Other Side,9.0.1,,1,4.RF-4.RF,154,"[-1,-1]",9,successful,No
 168008,Rootstinger Warrior,Normal,0,44,Wasp,11510,"[-1,-1]",95689|95690,Ardenweald,11510,0,"51.6,71|53.4,68.8|56,68",1565,Ardenweald,9.0.1,,0,Rootstinger Warrior,44,"[-1,-1]",1,successful,No
 168036,Marrowjaw,Normal,0,26,Bird of Prey,11462,"[-1,-1]",96751,Maldraxxus,11462,0,"41.4,67.4",1536,Maldraxxus,9.0.1,,0,Marrowjaw,26,"[-1,-1]",1,successful,No
-168084,Rooda,Normal,0,50,Fox,11510,"[1,1]",93760,Ardenweald,11510,0,"49,53",1565,Ardenweald,9.0.1,,0,Rooda,50,"[1,1]",1,successful,No
-168085,Duster,Normal,0,37,Moth,11510,"[1,1]",95199,Ardenweald,11510,0,"49,53",1565,Ardenweald,9.0.1,,0,Duster,37,"[1,1]",1,successful,No
-168086,Leggy,Normal,0,125,Waterfowl,11510,"[1,1]",95552,Ardenweald,11510,0,"49.4,53",1565,Ardenweald,9.0.1,,0,Leggy,125,"[1,1]",1,successful,No
-168089,Silkstrider Grub,Normal,0,42,Worm,11510,"[1,1]",45097,Ardenweald,11510,0,"49,53.4",1565,Ardenweald,9.0.1,,0,Silkstrider Grub,42,"[1,1]",1,successful,No
-168090,Betsy,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"49,53.2",1565,Ardenweald,9.0.1,,0,Betsy,126,"[1,1]",1,successful,No
 168135,Night Mare,Rare Elite,2,299,Courser,11510,"[-1,-1]",94297,Ardenweald,11510,0,"60,49.2|60.8,56.4|61.4,50.8|62.2,54.8|58,49.6|58.8,55.4",1565,Ardenweald,9.0.1,,2,Night Mare,299,"[-1,-1]",1,successful,No
 168153,Plagueroc,Elite,1,26,Bird of Prey,13228,"[-1,-1]",96752|96771|96772|96945,Plaguefall,13228,0,,1674,Plaguefall,9.0.1,,1,Plagueroc,26,"[-1,-1]",1,successful,No
 168192,Bloodtusk Ancient,Elite,1,5,Boar,11462,"[-1,-1]",96310|97323,Maldraxxus,11462,0,"54.8,56.4|48.2,39.2",1536,Maldraxxus,9.0.1,,1,Bloodtusk Ancient,5,"[-1,-1]",1,successful,No
@@ -5404,7 +5395,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 168892,Famished Etherwyrm,Normal,0,27,Wind Serpent,10534,"[-1,-1]",93470,Bastion,10534,0,"43.4,65.4|37.2,70",1533,Bastion,9.0.1,,0,Famished Etherwyrm,27,"[-1,-1]",1,successful,No
 168919,Elysian Owl,Normal,0,26,Bird of Prey,10534,"[0,0]",64329,Bastion,10534,0,"47.2,77.4|47.4,75.2|52.4,29|42.8,57.2|50.2,64|54.4,56.2|60.6,45.4|34.6,49.4|52.2,36|54.4,65.8",1533,Bastion,9.0.1,,0,Elysian Owl,26,"[0,0]",1,successful,No
 168943,Goldenpaw Stalker,Normal,0,50,Fox,10534,"[-1,-1]",93757,Bastion,10534,0,"54.8,68|56.4,66",1533,Bastion,9.0.1,,0,Goldenpaw Stalker,50,"[-1,-1]",1,successful,No
-168946,Trained Flayedwing,Normal,0,38,Chimaera,11462,"[1,1]",97894,Maldraxxus,11462,0,"35.8,52|38,55.6|36.2,47.8|36.2,49.8|38.8,43.4|40.2,54.2|54.4,56.6|55.4,58.4|60.6,45|31.2,37|33.2,34.8|40.4,51.8|49.4,58.2|57.2,53|34.4,44.8|35.4,35.8|47.4,58.8|52.4,30.6|59,31",1536,Maldraxxus,9.0.1,,0,Trained Flayedwing,38,"[1,1]",1,successful,No
 168984,Soulwing Darter,Normal,0,37,Moth,10534,"[0,0]",93498,Bastion,10534,0,"55.2,69.2|56.2,66.6|57.6,68.6|52.8,66.8|53,69.6",1533,Bastion,9.0.1,,0,Soulwing Darter,37,"[0,0]",1,successful,No
 168986,Skeletal Raptor,Elite,1,11,Raptor,13309,"[-1,-1]",33733,De Other Side,13309,0,,1677,De Other Side,9.0.1,,1,Skeletal Raptor,11,"[-1,-1]",6,successful,No
 169049,Anima-Starved Stalker,Normal,0,2,Cat,11510,"[-1,-1]",62588,Ardenweald,11510,0,"62.4,40.4|64,43",1565,Ardenweald,9.0.1,,0,Anima-Starved Stalker,2,"[-1,-1]",1,successful,No
@@ -5424,7 +5414,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 169158,Glimmerfly Darter,Normal,0,37,Moth,10534,"[0,0]",93496|93498,Bastion,10534,0,"52.6,55.4|52.2,52.8",1533,Bastion,9.0.1,,0,Glimmerfly Darter,37,"[0,0]",1,successful,No
 169160,Dreadhound,Normal,0,52,Hound,10413,"[-1,-1]",7891,Revendreth,10413,0,"40.2,73.4",1525,Revendreth,9.0.1,,0,Dreadhound,52,"[-1,-1]",1,successful,No
 169163,Goldenplume Hunter,Normal,0,7,Carrion Bird,10534,"[-1,-1]",95114,Bastion,10534,0,"52.8,54.6|51.4,56.2|52.6,51.6",1533,Bastion,9.0.1,,0,Goldenplume Hunter,7,"[-1,-1]",1,successful,No
-169167,Drained Soulstalker,Normal,0,128,Stone Hound,10413,"[1,1]",94496,Revendreth,10413,0,"48.4,74.4|52.4,75.4|51.8,72.4",1525,Revendreth,9.0.1,,0,Drained Soulstalker,128,"[1,1]",1,successful,No
 169174,Goldenplume Matriarch,Elite,1,7,Carrion Bird,10534,"[-1,-1]",95114,Bastion,10534,0,"53.4,52.6",1533,Bastion,9.0.1,,1,Goldenplume Matriarch,7,"[-1,-1]",1,successful,No
 169179,Goldenplume Juvenile,Normal,0,7,Carrion Bird,10534,"[0,0]",94752,Bastion,10534,0,"53,53.6|52.4,56",1533,Bastion,9.0.1,,0,Goldenplume Juvenile,7,"[0,0]",1,successful,No
 169184,Bonetusk Runt,Normal,0,5,Boar,11462,"[0,0]",97322,Maldraxxus,11462,0,"58.8,35.4|52.4,29.8|43.8,58",1536,Maldraxxus,9.0.1,,0,Bonetusk Runt,5,"[0,0]",1,successful,No
@@ -5443,14 +5432,8 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 169276,Disturbed Nightmare,Normal,0,3,Spider,11510,"[-1,-1]",67817,Ardenweald,11510,0,"60.4,49.2|61,55.6|62,52.8|58.4,50",1565,Ardenweald,9.0.1,,0,Disturbed Nightmare,3,"[-1,-1]",1,successful,No
 169303,Greater Ardenmoth,Normal,0,37,Moth,11510,"[0,0]",95198|95200,Ardenweald,11510,0,"60.2,56.4|60.8,50.4|62.6,51.4|62.4,54.2|61.4,48.2",1565,Ardenweald,9.0.1,,0,Greater Ardenmoth,37,"[0,0]",1,successful,No
 169308,Soulwing Duster,Normal,0,37,Moth,10534,"[0,0]",93498,Bastion,10534,0,"46.4,60.2|45.6,57.8|45.4,54.6|45.4,51.4|37.4,62|44.6,49.4|40.4,62.2|42.8,54.4|44,61",1533,Bastion,9.0.1,,0,Soulwing Duster,37,"[0,0]",1,successful,No
-169310,Silkstrider Grub,Normal,0,42,Worm,11510,"[1,1]",45097,Ardenweald,11510,0,"37.2,29|35,29.4|36,27.4",1565,Ardenweald,9.0.1,,0,Silkstrider Grub,42,"[1,1]",1,successful,No
 169313,Silverwing Hunter,Normal,0,7,Carrion Bird,10534,"[-1,-1]",95116,Bastion,10534,0,"43.2,58.8",1533,Bastion,9.0.1,,0,Silverwing Hunter,7,"[-1,-1]",1,successful,No
-169332,Maribel,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"37.4,27.6",1565,Ardenweald,9.0.1,,0,Maribel,126,"[1,1]",1,successful,No
-169333,Daisy,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"36.2,28",1565,Ardenweald,9.0.1,,0,Daisy,126,"[1,1]",1,successful,No
-169334,Lulu,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"37,28.6",1565,Ardenweald,9.0.1,,0,Lulu,126,"[1,1]",1,successful,No
-169335,Lillythistle Jr.,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"36.8,28.4",1565,Ardenweald,9.0.1,,0,Lillythistle Jr.,126,"[1,1]",1,successful,No
 169336,Rose,Normal,0,126,Water Strider,11510,"[1,null]",57556,Ardenweald,11510,0,"38.6,26.2",1565,Ardenweald,9.0.1,,0,Rose,126,"[1,null]",1,successful,No
-169337,Miss Spot,Normal,0,126,Water Strider,11510,"[1,1]",57556,Ardenweald,11510,0,"37,28.4",1565,Ardenweald,9.0.1,,0,Miss Spot,126,"[1,1]",1,successful,No
 169382,Silverwing Juvenile,Normal,0,7,Carrion Bird,10534,"[0,0]",95117,Bastion,10534,0,"42.4,58",1533,Bastion,9.0.1,,0,Silverwing Juvenile,7,"[0,0]",1,successful,No
 169390,Copperfur Vulpin,Normal,0,50,Fox,10534,"[-1,-1]",93759,Bastion,10534,0,"41.8,60.4|41.8,58.4|40.8,62.6|36.6,60.6",1533,Bastion,9.0.1,,0,Copperfur Vulpin,50,"[-1,-1]",1,successful,No
 169434,Scuttleclaw Skimmer,Normal,0,8,Crab,394,"[0,0]",342,Grizzly Hills,394,0,"22.2,91.4|20,90.2|21.6,88.4|23.8,88.6|23.2,93.8",116,Grizzly Hills,9.0.1,,0,Scuttleclaw Skimmer,8,"[0,0]",1,successful,No
@@ -5464,8 +5447,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 169513,Etherwyrm Scavenger,Normal,0,27,Wind Serpent,10534,"[-1,-1]",93470,Bastion,10534,0,"47.4,43|49.6,43",1533,Bastion,9.0.1,,0,Etherwyrm Scavenger,27,"[-1,-1]",1,successful,No
 169548,Carrion Hunter,Normal,0,26,Bird of Prey,210,"[-1,-1]",27543,Icecrown,210,0,"55.4,52.8|57.4,55.2|53,54|58.2,57.6|58.4,63.4|59.2,61.2",118,Icecrown,9.0.1,,0,Carrion Hunter,26,"[-1,-1]",1,successful,No
 169555,Glimmerfly Duster,Normal,0,37,Moth,10534,"[0,0]",93496|93498,Bastion,10534,0,"46.2,43.6|45.6,39.2|44,43.2|48.2,39.4|43.4,40.8",1533,Bastion,9.0.1,,0,Glimmerfly Duster,37,"[0,0]",1,successful,No
-169563,Gleaming Phalynx,Normal,0,154,Mechanical,10534,"[1,1]",92661,Bastion,10534,0,"67.4,32|66.4,28.2",1533,Bastion,9.0.1,,0,Gleaming Phalynx,154,"[1,1]",1,successful,No
-169564,Gleaming Phalynx,Normal,0,154,Mechanical,10534,"[1,1]",92661,Bastion,10534,0,"66.6,31|66.4,28.2",1533,Bastion,9.0.1,,0,Gleaming Phalynx,154,"[1,1]",1,successful,No
 169568,Skyripper Fledgling,Normal,0,38,Chimaera,11462,"[0,0]",98674,Maldraxxus,11462,0,"57.4,89|58.4,90.8|53.4,92.6|54.8,94.8",1536,Maldraxxus,9.0.1,,0,Skyripper Fledgling,38,"[0,0]",1,successful,No
 169570,Skyripper Hunter,Normal,0,38,Chimaera,11462,"[0,0]",94923,Maldraxxus,11462,0,"54,90.6|53,93|57.2,88.4|55.8,93.4|52,90.6|58.4,90.6",1536,Maldraxxus,9.0.1,,0,Skyripper Hunter,38,"[0,0]",1,successful,No
 169618,Umbrawing Glimmerfly,Normal,0,37,Moth,10534,"[0,0]",93497,Bastion,10534,0,"49.2,21|48.4,18",1533,Bastion,9.0.1,,0,Umbrawing Glimmerfly,37,"[0,0]",1,successful,No
@@ -5498,7 +5479,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 169858,Restless Etherwyrm,Normal,0,27,Wind Serpent,10534,"[-1,-1]",93470,Bastion,10534,0,"46.8,19.8|46.2,22.8|45.2,15.8|46.2,24.8",1533,Bastion,9.0.1,,0,Restless Etherwyrm,27,"[-1,-1]",1,successful,No
 169864,Scorchwing Drone,Normal,0,44,Wasp,11462,"[0,0]",80030,Maldraxxus,11462,0,"38.4,70|37,60.2|37.2,74.8|37.4,72",1536,Maldraxxus,9.0.1,,0,Scorchwing Drone,44,"[0,0]",1,successful,No
 169871,Hungry Mawrat,Normal,0,127,Rodent,13400|13413|13411,"[-1,-1]",95749,Skoldus Hall,13400,0,,1911,Torghast,9.0.1,,,Hungry Mawrat,127,"[-1,-1]",1,successful,No
-169872,Chosen Corpsehound,Normal,0,52,Hound,11462,"[1,1]",96899,Maldraxxus,11462,0,"36.2,60.4",1536,Maldraxxus,9.0.1,,0,Chosen Corpsehound,52,"[1,1]",1,successful,No
 169874,Veilwing Matriarch,Normal,0,303,Lesser Dragonkin,11510,"[-1,-1]",96411,Ardenweald,11510,0,"47.4,45|47.6,47.6|49.6,45.6|48.2,42.2|45.4,46.6|49.6,47.8|50.6,43.8|47.2,49.6|48,40",1565,Ardenweald,9.0.1,,0,Veilwing Matriarch,303,"[-1,-1]",2,successful,No
 169913,Runestalker Runt,Normal,0,2,Cat,11510,"[-1,-1]",62591,Ardenweald,11510,0,"57,44.6|58.4,42.4|54.4,45.2|59.4,38.4",1565,Ardenweald,9.0.1,,0,Runestalker Runt,2,"[-1,-1]",1,successful,No
 169914,Umbrawing Monarch,Normal,0,37,Moth,10534,"[0,0]",93497,Bastion,10534,0,"36,31.8|33.8,28.8|26.4,30.8|37.4,29|39.8,25.4|29,32.8",1533,Bastion,9.0.1,,0,Umbrawing Monarch,37,"[0,0]",1,successful,No
@@ -5570,11 +5550,9 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 170460,Pearly Wader,Normal,0,125,Waterfowl,11510,"[0,0]",95554,Ardenweald,11510,0,"55.4,25.2|57.2,28.6|47.2,21.8|51.6,24",1565,Ardenweald,9.0.1,,0,Pearly Wader,125,"[0,0]",1,successful,No
 170488,Son of Hakkar,Normal,0,27,Wind Serpent,13309,"[-1,-1]",2699|2702,De Other Side,13309,0,,1677,De Other Side,9.0.1,,0,Son of Hakkar,27,"[-1,-1]",1,successful,No
 170526,Silky Ardenmoth,Normal,0,37,Moth,11510,"[0,0]",95199,Ardenweald,11510,0,"45.4,72.6|44.4,74.6|43.2,72|47.2,70|46.6,75.4",1565,Ardenweald,9.0.1,,0,Silky Ardenmoth,37,"[0,0]",1,successful,No
-170548,Sundancer,Rare Elite,2,299,Courser,10534,"[1,1]",94295,Bastion,10534,0,"60,93.4",1533,Bastion,9.0.1,,2,Sundancer,299,"[1,1]",1,successful,No
 170604,Cloudfeather Greatwing,Normal,0,7,Carrion Bird,10534,"[-1,-1]",95114,Bastion,10534,0,"47.4,16.4",1533,Bastion,9.0.1,,0,Cloudfeather Greatwing,7,"[-1,-1]",1,successful,No
 170605,Cloudfeather Screecher,Normal,0,7,Carrion Bird,10534,"[-1,-1]",95117,Bastion,10534,0,"47.4,16.4",1533,Bastion,9.0.1,,0,Cloudfeather Screecher,7,"[-1,-1]",1,successful,No
 170606,Juvenile Cloudfeather,Normal,0,7,Carrion Bird,10534,"[-1,-1]",94752,Bastion,10534,0,"47.2,16.4",1533,Bastion,9.0.1,,0,Juvenile Cloudfeather,7,"[-1,-1]",1,successful,No
-170609,Stranded Stag,Normal,0,151,Stag,11510,"[1,1]",94341,Ardenweald,11510,0,"64.2,49.8",1565,Ardenweald,9.0.1,,0,Stranded Stag,151,"[1,1]",1,successful,No
 170659,"Basilofos, King of the Hill",Rare,4,160,Feathermane,10534,"[-1,-1]",93463,Bastion,10534,0,"48.4,50.4",1533,Bastion,9.0.1,,4,"Basilofos, King of the Hill",160,"[-1,-1]",1,successful,No
 170674,Runestag,Normal,0,151,Stag,11510,"[0,0]",93785|93793,Ardenweald,11510,0,"66.4,53.2|66.4,59.6|66.6,57.6|63.4,56",1565,Ardenweald,9.0.1,,0,Runestag,151,"[0,0]",1,successful,No
 170695,Runestag Bull,Normal,0,151,Stag,11510,[],93783,,11510,0,,1739,Ardenweald,9.0.1,,0,Runestag Bull,151,[],1,successful,No
