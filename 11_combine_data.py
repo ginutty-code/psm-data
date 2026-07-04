@@ -2,10 +2,13 @@
 Generate a consolidated pet dataset by merging Wowhead and Petopia data files.
 
 The pipeline follows these strict steps:
-1. Initial Filtering: Load Wowhead records and filter them by NPC ID skip lists and successful status.
-2. Taming Skill Aggregation (by Display ID): Collect and consolidate Petopia taming skills and manual overrides, mapping them to unique display IDs (excluding skipped ones).
-3. Core Data Merge & Override Application: Combine filtered Wowhead data with Petopia details and cleaned notes. Then, apply manual record overrides, which can supersede previously merged data.
-4. Contextual Condition & Requirement Extraction: Analyze the merged notes and NPC reaction data to identify special taming conditions and item-based taming requirements.
+1. Initial Loading: Load pre-cleaned Wowhead records and pre-processed Petopia data.
+2. Taming Skill Aggregation (by Display ID): Collect and consolidate Petopia taming skills
+   (pre-computed in step 03), mapping them to unique display IDs (excluding skipped ones).
+3. Core Data Merge & Override Application: Combine filtered Wowhead data with cleaned Petopia
+   details. Then, apply manual record overrides, which can supersede previously merged data.
+4. Contextual Condition & Requirement Extraction: Analyze the merged notes and NPC reaction
+   data to identify special taming conditions and item-based taming requirements.
 5. Final Output: Construct the complete dataset, incorporating all derived information, and save it.
 """
 
@@ -14,8 +17,8 @@ import os
 import re
 import json
 from config import (
-    WOWHWEAD_DATA_CSV, PETOPIA_DATA_CSV, SKIP_NPC_IDS_CSV, SKIP_DISPLAY_IDS_CSV,
-    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV, FINAL_NOTES_CSV,
+    PROCESSED_WOWHEAD_DATA_CSV, PROCESSED_PETOPIA_DATA_CSV, SKIP_DISPLAY_IDS_CSV,
+    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV,
     ensure_dirs
 )
 
@@ -33,7 +36,7 @@ TYPE_MAP = {
 
 # Unified Category Mapping: Maps keywords to (Category, Normalized Value)
 CATEGORY_MAP = {
-    "Instance": ["Dungeon", "Raid", "Scenario", "Delve", "Battleground", "Torghast"],
+    "Instance": ["Dungeon", "Raid", "Scenario", "Delve", "Battleground"],
     "World Event": ["N'Zoth Assault", "Faction Assault", "Covenant Assault", "Fyrakk Assault", "Void Assault",
                     "Legion Invasion", "Void Invasion", "Garrison Invasion",
                     "Void Strike", "Ritual Site", "Runestone Defense", 
@@ -59,7 +62,7 @@ CONDITION_NORMALIZATION = {
 
     # Scenario Aggregation
     "Island Expeditions": "Scenario", "Kvaldir Invasion": "Scenario", "Mogu Invasion": "Scenario",
-    "Horrific Vision": "Scenario",
+    "Horrific Vision": "Scenario", "Torghast": "Scenario",
 
     # Invasion Aggregation
     "Greater Invasion Point": "Legion Invasion", "Invasion Point": "Legion Invasion",
@@ -139,14 +142,6 @@ FACTION_NAMES = CATEGORY_MAP["Faction"]
 
 # --- Helpers ---
 
-def clean_taming_skill(skill):
-    if not skill:
-        return ""
-    skill = skill.replace("Required Skill:", "").strip()
-    skill = re.sub(r'\s*(?:Taming|Family)$', '', skill, flags=re.IGNORECASE)
-    skill = skill.strip()
-    return CONDITION_NORMALIZATION.get(skill, skill)
-
 def get_expansion(patch_id):
     if not patch_id:
         return ""
@@ -172,16 +167,18 @@ def _read_first_col(path, col_names):
                     break
     return result
 
-def load_skip_ids():
-    return _read_first_col(SKIP_NPC_IDS_CSV, {'npc_id'})
-
 def load_skip_display_ids():
     return _read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
 
-def load_petopia_data():
+def load_processed_petopia_data():
+    """
+    Load the pre-cleaned Petopia dataset.
+    Returns a dict of npc_id -> row with keys: npc_id, npc_name, zone, family,
+    name_keeper, notes, taming_requirements.
+    """
     data = {}
-    if os.path.exists(PETOPIA_DATA_CSV):
-        with open(PETOPIA_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
+    if os.path.exists(PROCESSED_PETOPIA_DATA_CSV):
+        with open(PROCESSED_PETOPIA_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
             for row in csv.DictReader(f):
                 npc_id = row.get('npc_id')
                 if npc_id:
@@ -198,17 +195,6 @@ def load_record_overrides():
                 if npc_id and zone_id:
                     overrides[(npc_id, zone_id)] = {k: v for k, v in row.items() if v.strip()}
     return overrides
-
-def load_final_notes():
-    """Loads pre-cleaned notes from the external processing script."""
-    notes_map = {}
-    if os.path.exists(FINAL_NOTES_CSV):
-        with open(FINAL_NOTES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
-            for row in csv.DictReader(f):
-                npc_id = row.get('npc_id', '').strip()
-                if npc_id:
-                    notes_map[npc_id] = row.get('notes', '').strip()
-    return notes_map
 
 # --- Condition extraction (note-scoped, cached) ---
 
@@ -270,6 +256,20 @@ def extract_note_conditions(final_notes):
         # Refinement: If an Instance condition is present (e.g. Island Expeditions Scenario),
         # suppress generic "Invasion" and "Assault" World Event matches, as these are often
         # scenario-internal mechanics rather than open-world events.
+        # Refinement: If "outside" is mentioned before an instance keyword, it's not an instance condition.
+        instance_condition_negated = False
+        if any(c == "Instance" for c, v in segment_tags):
+            for cat, instance_val, start_idx, end_idx in all_category_matches:
+                if cat == "Instance" and instance_val in CATEGORY_MAP.get("Instance", []) and start_idx is not None:
+                    pre_text = segment[max(0, start_idx - 50):start_idx].lower()
+                    if any(neg in pre_text for neg in ["outside", "outside of"]):
+                        instance_condition_negated = True
+                        break
+        
+        if instance_condition_negated:
+            segment_tags = { (c, v) for c, v in segment_tags if not (c == "Instance") }
+
+
         if any(c == "Instance" for c, v in segment_tags):
             segment_tags = { (c, v) for c, v in segment_tags if not (c == "World Event" and v in ("Invasion", "Assault")) }
 
@@ -314,52 +314,42 @@ def check_explicit_faction(faction_name, final_notes):
 # --- Main ---
 
 def main():
-    print("Starting final pet data generation...")
+    print("=" * 60)
+    print("Step 11: Combine Wowhead and Petopia Data")
+    print("=" * 60)
     ensure_dirs()
 
-    skip_ids = load_skip_ids()
-    print(f"Loaded {len(skip_ids)} NPC IDs to skip.")
-
     skip_display_ids = load_skip_display_ids()
-    print(f"Loaded {len(skip_display_ids)} display IDs to skip.")
+    print(f"Loaded {len(skip_display_ids)} display IDs to skip (for post-override check).")
 
-    petopia_info = load_petopia_data()
-    print(f"Loaded Petopia info for {len(petopia_info)} NPCs.")
-
-    final_notes_map = load_final_notes()
-    print(f"Loaded {len(final_notes_map)} pre-cleaned notes.")
+    # Load pre-processed Petopia data (cleaned notes + pre-computed taming_requirements)
+    petopia_info = load_processed_petopia_data()
+    print(f"Loaded pre-processed Petopia info for {len(petopia_info)} NPCs.")
 
     full_record_overrides = load_record_overrides()
     print(f"Loaded {len(full_record_overrides)} record overrides.")
 
-    if not os.path.exists(WOWHWEAD_DATA_CSV):
-        print(f"Error: {WOWHWEAD_DATA_CSV} not found. Run step wowhead_data.py script first.")
+    if not os.path.exists(PROCESSED_WOWHEAD_DATA_CSV):
+        print(f"Error: {PROCESSED_WOWHEAD_DATA_CSV} not found. Run step 10_clean_wowhead_data.py script first.")
         return
-
-    # Group overrides by NPC ID for O(1) lookup in pass 1
-    overrides_by_npc = {}
-    for (n_id, z_id), override in full_record_overrides.items():
-        overrides_by_npc.setdefault(n_id, []).append(override)
 
     columns = [
         'npc_id', 'npc_name', 'family_id', 'family_name', 'display_ids',
         'zone_id', 'zone_name', 'uiMapId', 'uiMapName', 'coords',
         'patch_id', 'patch_name', 'expansion', 'react', 'classification_id',
         'classification_name', 'type_id', 'type_name',
-        'tamingskillname1', 'tamingskilldesc1', 'tamingskillname2',
-        'tamingskilldesc2', 'notes', 'taming_requirements', 'special_conditions',
+        'notes', 'taming_requirements', 'special_conditions',
         'name_keeper'
     ]
 
-    print("Loading and filtering Wowhead records...")
+    print("Loading pre-cleaned Wowhead records...")
     wowhead_records = []
-    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
+    with open(PROCESSED_WOWHEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
         for row in csv.DictReader(f):
-            npc_id = row.get('npc_id', '').strip()
-            if npc_id and npc_id not in skip_ids and row.get('status') == 'successful':
-                wowhead_records.append(row)
+            wowhead_records.append(row)
 
     # Pass 1: build display_id → taming skills map
+    # Uses the pre-computed taming_requirements from processed petopia data
     print("First pass: Aggregating taming requirements...")
     display_to_taming = {}
     npc_skill_map = {}
@@ -368,19 +358,8 @@ def main():
         npc_id = row['npc_id']
         if npc_id not in npc_skill_map:
             p_info = petopia_info.get(npc_id, {})
-            skills = []
-            for key in ('tamingskillname1', 'tamingskillname2'):
-                s = p_info.get(key)
-                if s:
-                    cleaned = clean_taming_skill(s)
-                    if cleaned:
-                        skills.append(cleaned)
-            for override in overrides_by_npc.get(npc_id, []):
-                if 'taming_requirements' in override:
-                    for s in override['taming_requirements'].split('|'):
-                        cleaned = clean_taming_skill(s)
-                        if cleaned and cleaned not in skills:
-                            skills.append(cleaned)
+            taming_req_str = p_info.get('taming_requirements', '')
+            skills = [s.strip() for s in taming_req_str.split('|') if s.strip()]
             npc_skill_map[npc_id] = skills
 
         for d_id in (d.strip() for d in row.get('display_ids', '').split('|') if d.strip()):
@@ -421,7 +400,6 @@ def main():
         # Pre-override display IDs from Wowhead
         display_ids_str = row.get('display_ids', '').strip()
  
-        override = full_record_overrides.get((npc_id, row.get('zone_id', '').strip()), {})
         current_zone_id = row.get('zone_id', '').strip()
         override = full_record_overrides.get((npc_id, current_zone_id), {})
 
@@ -434,6 +412,9 @@ def main():
  
         patch_id = row.get('patch_id', '').strip()
         type_id = row.get('type', '').strip()
+
+        # Use pre-computed taming_requirements from processed petopia data
+        pre_taming_req = p_info.get('taming_requirements', '')
 
         record_data = {
             'npc_id': npc_id,
@@ -454,17 +435,13 @@ def main():
             'classification_name': row.get('bulk_classification', ''),
             'type_id': type_id,
             'type_name': TYPE_MAP.get(type_id, ''),
-            'tamingskillname1': p_info.get('tamingskillname1', ''),
-            'tamingskilldesc1': p_info.get('tamingskilldesc1', ''),
-            'tamingskillname2': p_info.get('tamingskillname2', ''),
-            'tamingskilldesc2': p_info.get('tamingskilldesc2', ''),
-            'notes': final_notes_map.get(npc_id, ""),
-            'taming_requirements': "",
+            'notes': p_info.get('notes', ''),
+            'taming_requirements': pre_taming_req,
             'special_conditions': "",
             'name_keeper': p_info.get('name_keeper', '')
         }
 
-        # Apply manual record overrides (which could change display_ids)
+        # Apply manual record overrides (which could change any field)
         record_data.update(override)
 
         # Now filter display IDs against the skip list, after overrides have been applied
@@ -568,7 +545,14 @@ def main():
             specific_parents = { c.split(" (")[0] for c in npc_conditions if "(" in c and ":" in c }
             npc_conditions = [c for c in npc_conditions if c not in specific_parents]
         
-        record_data['taming_requirements'] = "|".join(sorted(npc_taming_set))
+        # Combine pre-computed taming_requirements with display-ID aggregated ones
+        # (the display-ID aggregation may add requirements from other NPCs sharing the same display ID)
+        final_taming_set = set()
+        if pre_taming_req:
+            final_taming_set.update(s.strip() for s in pre_taming_req.split('|') if s.strip())
+        final_taming_set.update(npc_taming_set)
+        
+        record_data['taming_requirements'] = "|".join(sorted(final_taming_set))
         record_data['special_conditions'] = "|".join(sorted(npc_conditions))
         final_rows.append(record_data)
 

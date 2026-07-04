@@ -10,28 +10,29 @@ OUTPUT_DIR = 'Output'
 # Extracted — raw, unaltered data from web sources
 PETOPIA_NPCS_CSV = os.path.join(EXTRACTED_DIR, 'petopia_npcs.csv')
 PETOPIA_DATA_CSV = os.path.join(EXTRACTED_DIR, 'petopia_data.csv')
-WOWHEAD_FAMILIES_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_families.csv')   # raw scrape before Whiptail injection
 WOWHEAD_NPCS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_npcs.csv')            # raw scrape before corrections
 WOWHWEAD_DATA_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_data.csv')           # enriched per-NPC data from web
+WOWHEAD_FAMILIES_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_families.csv')   # raw scrape before Whiptail injection
 WOWHEAD_SPELLS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_spells.csv')        # raw scrape before cleaning
 
-# Processed — transformed/enriched intermediate data (processed_ prefix distinguishes from raw originals)
-PROCESSED_FAMILIES_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_families.csv')
-PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv')
-FINAL_NOTES_CSV = os.path.join(PROCESSED_DIR, 'final_notes.csv')
-PROCESSED_NPCS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_npcs.csv')
-LOCATION_DATA_CSV = os.path.join(PROCESSED_DIR, 'location_data.csv')
-
 # Manual — human-curated input files
-NOTES_UPDATES_CSV = os.path.join(MANUAL_DIR, 'notes_updates.csv')
-NOTES_KEYWORDS_CSV = os.path.join(MANUAL_DIR, 'notes_keywords.csv')
-SPELLS_MAPPING_CSV = os.path.join(MANUAL_DIR, 'spells_mapping.csv')
-UPDATE_NPC_CSV = os.path.join(MANUAL_DIR, 'npcs_updates.csv')
 SKIP_NPC_IDS_CSV = os.path.join(MANUAL_DIR, 'skip_npc_ids.csv')
 SKIP_DISPLAY_IDS_CSV = os.path.join(MANUAL_DIR, 'skip_display_ids.csv')
+NOTES_UPDATES_CSV = os.path.join(MANUAL_DIR, 'notes_updates.csv')
+NOTES_KEYWORDS_CSV = os.path.join(MANUAL_DIR, 'notes_keywords.csv')
+TAMING_UPDATES_CSV = os.path.join(MANUAL_DIR, 'taming_updates.csv')
+NPC_UPDATES_CSV = os.path.join(MANUAL_DIR, 'npcs_updates.csv')
+SPELLS_MAPPING_CSV = os.path.join(MANUAL_DIR, 'spells_mapping.csv')
 RECORD_OVERRIDES_CSV = os.path.join(MANUAL_DIR, 'record_overrides.csv')
 
-# Processed — intermediate data (step 10 output, consumed by Lua generators)
+# Processed — transformed/enriched intermediate data (processed_ prefix distinguishes from raw originals)
+PROCESSED_PETOPIA_DATA_CSV = os.path.join(PROCESSED_DIR, 'processed_petopia_data.csv')
+PROCESSED_NPCS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_npcs.csv')
+PROCESSED_WOWHEAD_DATA_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_data.csv')
+PROCESSED_FAMILIES_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_families.csv')
+PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv')
+
+# Processed — master file combining all relevant data for final output generation (pet_data.csv is the main source for the addon)
 COMBINED_PET_DATA_CSV = os.path.join(PROCESSED_DIR, 'pet_data.csv')
 
 # Output — final deliverables for the addon (.lua files only)

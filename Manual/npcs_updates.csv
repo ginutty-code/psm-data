@@ -188,3 +188,5 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 260988,Frost Crawler,Normal,0,3,Spider,16900,[],update
 261085,Invasive Crystalback,Normal,0,20,Scorpid,16900,[],update
 261981,Rime Worm,Normal,0,42,Worm,16900,[],update
+1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
+143416,Ancient Core Hound,Normal,0,45,Core Hound,2717|8064,"[-1,null]",update
