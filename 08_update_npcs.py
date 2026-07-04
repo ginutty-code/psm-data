@@ -5,17 +5,17 @@ Replace/add NPCs from npcs_correct.csv to npcs.csv
 import os
 import csv
 import sys
-from config import WOWHEAD_NPCS_CSV, PROCESSED_NPCS_CSV, UPDATE_NPC_CSV, ensure_dirs
+from config import WOWHEAD_NPCS_CSV, PROCESSED_NPCS_CSV, NPC_UPDATES_CSV, ensure_dirs
 
 def load_corrections():
     """Load corrections from the corrections file."""
     corrections = {}
-    if not os.path.exists(UPDATE_NPC_CSV):
-        print(f"Corrections file not found: {UPDATE_NPC_CSV}")
+    if not os.path.exists(NPC_UPDATES_CSV):
+        print(f"Corrections file not found: {NPC_UPDATES_CSV}")
         print("No corrections will be applied.")
         return corrections
     
-    with open(UPDATE_NPC_CSV, 'r', encoding='utf-8', newline='') as f:
+    with open(NPC_UPDATES_CSV, 'r', encoding='utf-8', newline='') as f:
         reader = csv.DictReader(f)
         for row in reader:
             npc_id = str(row.get('npc_id', '')).strip()

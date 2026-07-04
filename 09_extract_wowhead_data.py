@@ -35,14 +35,12 @@ def load_skip_npc_ids():
         try:
             with open(SKIP_NPC_IDS_CSV, 'r', encoding='utf-8-sig', newline='') as f:
                 reader = csv.DictReader(f)
+                has_zone_col = 'zone_id' in reader.fieldnames if reader.fieldnames else False
                 for row in reader:
-                    for key in row.keys():
-                        clean_key = key.strip().replace('\ufeff', '')
-                        if clean_key == 'npc_id':
-                            id_value = row.get(key)
-                            if id_value:
-                                skip_ids.add(str(id_value).strip())
-                            break
+                    npc_id = row.get('npc_id', '').strip()
+                    zone_id = row.get('zone_id', '').strip() if has_zone_col and row.get('zone_id') else ''
+                    if npc_id and not zone_id:
+                        skip_ids.add(npc_id)
         except Exception:
             pass
     return skip_ids

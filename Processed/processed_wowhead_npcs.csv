@@ -714,7 +714,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 1822,Venom Mist Lurker,Normal,0,3,Spider,28,"[-1,-1]"
 1824,Plague Lurker,Normal,0,3,Spider,28,"[-1,-1]"
 1986,Webwood Spider,Normal,0,3,Spider,141,"[-1,-1]"
-1994,Githyiss the Vile,Normal,0,3,Spider,141,"[-1,null]"
+1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]"
 1998,Webwood Lurker,Normal,0,3,Spider,141,"[-1,-1]"
 1999,Webwood Venomfang,Normal,0,3,Spider,141,"[-1,-1]"
 2000,Webwood Silkspinner,Normal,0,3,Spider,141,"[-1,-1]"
