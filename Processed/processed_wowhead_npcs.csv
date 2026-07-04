@@ -10946,7 +10946,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 148117,Grong,Elite,1,9,Gorilla,10076,"[null,-1]"
 159693,Enthralled Gorm,Normal,0,292,Carapid,11510,"[-1,-1]"
 159901,Boneweave Spiderling,Normal,0,3,Spider,11462,"[0,0]"
-159978,Great Granitefur,Elite,1,128,Stone Hound,10413,"[0,-1]"
 161256,Tomb Lurker,Normal,0,3,Spider,10413,"[-1,-1]"
 162237,Plagueroc,Normal,0,26,Bird of Prey,13313,"[-1,-1]"
 164862,Weald Shimmermoth,Elite,1,37,Moth,13309,"[-1,-1]"

@@ -6486,7 +6486,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 159917,Gatamatos,Normal,0,154,Mechanical,10534,"[1,1]",92676,Bastion,10534,0,"55,41.4|55,41.6",1533,Bastion,9.0.1,,0,Gatamatos,154,"[1,1]",1,successful,No
 159925,Aqir Impaler,Normal,0,44,Wasp,unknown,[],91811,,,,,,,8.3.0,Visions of N'Zoth,0,Aqir Impaler,44,[],1,successful,
 159926,Aqir Impaler,Normal,0,44,Wasp,unknown,[],91811,,,,,,,8.3.0,Visions of N'Zoth,0,Aqir Impaler,44,[],1,successful,
-159978,Great Granitefur,,1,128,Stone Hound,10413,,93988,Revendreth,10413,0,"54.8,27.6|54.8,29.8|55,27.4|55,29.4",1525,Revendreth,9.0.1,,0,Lady Ihrin,,"[0,-1]",7,successful,No
 160014,Pureheart,Rare,4,154,Mechanical,unknown,[],92676,,,,,,,9.0.1,,4,Pureheart,,[],9,successful,
 160015,Centurion Phalynx,Normal,0,154,Mechanical,unknown,[],92661,,,,,,,9.0.1,,0,Centurion Phalynx,,[],9,successful,
 160016,Loyal Clawguard,Normal,0,154,Mechanical,unknown,[],92661,,,,,,,9.0.1,,0,Loyal Clawguard,,[],9,successful,

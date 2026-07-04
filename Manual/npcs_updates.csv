@@ -85,7 +85,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 159218,Great Granitefur,Elite,1,128,Stone Hound,10413,[],update
 159693,Enthralled Gorm,Normal,0,292,Carapid,11510,"[-1,-1]",add
 159901,Boneweave Spiderling,Normal,0,3,Spider,11462,"[0,0]",add
-159978,Great Granitefur,Elite,1,128,Stone Hound,10413,"[0,-1]",add
 160786,Tower Shadehound,Normal,0,52,Hound,11400,[],update
 161172,Gargantuan Seeker,Elite,1,52,Hound,11400,[],update
 161256,Tomb Lurker,Normal,0,3,Spider,10413,"[-1,-1]",add
