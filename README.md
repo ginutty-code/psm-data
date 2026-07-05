@@ -94,3 +94,5 @@ The intermediate `pet_data.csv` used to generate these Lua files is located at `
 ## Credits
 
 Full credit for the underlying data goes to [Wowhead](https://www.wowhead.com/) and [Petopia](https://www.wow-petopia.com/) and their contributors, who have made this data publicly available.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U7D622NM2Q)
