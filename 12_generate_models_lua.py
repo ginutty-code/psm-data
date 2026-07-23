@@ -58,7 +58,8 @@ def main():
     print(f"Found {len(skip_display_ids)} display IDs to skip")
 
     # Read CSV and build hierarchical data structure
-    family_data = {}
+    # Hierarchy: expansion -> continent -> family -> display_id -> npcs
+    hierarchy = {}
     processed_count = 0
 
     rows = load_csv(COMBINED_PET_DATA_CSV)
@@ -69,11 +70,11 @@ def main():
         
         family_name = row.get("family_name", "").strip()
         npc_name = row.get("npc_name", "").strip()
-        loc = row.get("zone_name", "").strip()
         exp = row.get("expansion", "").strip()
         class_name = row.get("classification_name", "").strip()
         react = row.get("react", "").strip()
         name_keeper = row.get("name_keeper", "").strip()
+        continent_name = row.get("continent_name", "").strip()
 
         taming_csv = row.get("taming_requirements", "").strip()
         
@@ -81,12 +82,10 @@ def main():
         display_ids_str = row.get("display_ids", "").strip()
         display_ids = [d.strip() for d in display_ids_str.split('|') if d.strip()]
 
-        taming_lua = ""
+        # Parse taming requirements into list
+        taming_skills = []
         if taming_csv:
-            skills = [s.strip() for s in taming_csv.split('|') if s.strip()]
-            if skills:
-                # Format as a Lua array table string: {"Skill1","Skill2"}
-                taming_lua = '{' + ','.join(f'"{s}"' for s in skills) + '}'
+            taming_skills = [s.strip() for s in taming_csv.split('|') if s.strip()]
         
         # Fallback for empty expansion
         if not exp:
@@ -95,37 +94,40 @@ def main():
         # Default class to "Normal" if empty
         class_value = class_name or "Normal"
 
-        # Initialize family if not exists
-        if family_name not in family_data:
-            family_data[family_name] = {}
+        # Fallback for empty continent
+        if not continent_name:
+            continent_name = "Unknown"
 
         for display_id in display_ids:
             if display_id in skip_display_ids:
                 continue
 
-            # Initialize display ID entry if not exists
-            if display_id not in family_data[family_name]:
-                family_data[family_name][display_id] = {}
+            # Initialize hierarchy levels
+            if exp not in hierarchy:
+                hierarchy[exp] = {}
+            if continent_name not in hierarchy[exp]:
+                hierarchy[exp][continent_name] = {}
+            if family_name not in hierarchy[exp][continent_name]:
+                hierarchy[exp][continent_name][family_name] = {}
+            if display_id not in hierarchy[exp][continent_name][family_name]:
+                hierarchy[exp][continent_name][family_name][display_id] = {
+                    "taming": set()
+                }
 
-            # Set taming at display ID level (assume consistency across NPCs with same display ID)
-            if taming_lua and "taming" not in family_data[family_name][display_id]:
-                family_data[family_name][display_id]["taming"] = taming_lua
+            did_entry = hierarchy[exp][continent_name][family_name][display_id]
 
-            # Add NPC entry under display ID, aggregating locations across multiple CSV rows
-            if npc_id not in family_data[family_name][display_id]:
-                family_data[family_name][display_id][npc_id] = {
+            # Aggregate taming at display ID level
+            if taming_skills:
+                did_entry["taming"].update(taming_skills)
+
+            # Add NPC entry (aggregating if same NPC appears in multiple rows)
+            if npc_id not in did_entry:
+                did_entry[npc_id] = {
                     "name": npc_name,
-                    "locs": {loc} if loc else set(),
-                    "exp": exp,
                     "class": class_value,
                     "react": react,
                     "name_keeper": name_keeper,
                 }
-                    
-
-            else:
-                if loc:
-                    family_data[family_name][display_id][npc_id]["locs"].add(loc)
 
         processed_count += 1
 
@@ -143,89 +145,108 @@ def main():
     with open(MODELS_LUA, 'w', encoding='utf-8') as f:
         f.write("-- Models Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Hierarchical format: Family -> Display IDs -> NPCs\n")
+        f.write("-- Hierarchical format: Expansion -> Continent -> Family -> Display IDs -> NPCs\n")
+        f.write("-- NPC tuple: {name, classification, react, is_name_keeper}\n")
         f.write("\n")
         f.write("ModelsData = {\n")
         
-        # Sort family names alphabetically
-        sorted_families = sorted(family_data.keys())
+        # Sort expansions in WoW release order
+        expansion_order = [
+            "Vanilla", "The Burning Crusade", "Wrath of the Lich King",
+            "Cataclysm", "Mists of Pandaria", "Warlords of Draenor",
+            "Legion", "Battle for Azeroth", "Shadowlands",
+            "Dragonflight", "The War Within", "Unknown"
+        ]
+        sorted_expansions = sorted(
+            hierarchy.keys(),
+            key=lambda x: (expansion_order.index(x) if x in expansion_order else 999, x)
+        )
         
-        for i, family_name in enumerate(sorted_families):
-            family = family_data[family_name]
-            if not family:
-                continue
-            
-            # Add comma before family (except first)
-            if i > 0:
+        for ei, exp in enumerate(sorted_expansions):
+            if ei > 0:
                 f.write(",\n")
+            f.write(f'    ["{exp}"] = {{\n')
             
-            # Format family name as Lua string key
-            f.write(f'    ["{family_name}"] = {{\n')
+            continents = hierarchy[exp]
+            sorted_continents = sorted(continents.keys())
             
-            # Sort display IDs numerically
-            sorted_display_ids = sorted(family.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
-            
-            for j, display_id in enumerate(sorted_display_ids):
-                data = family[display_id]
-                taming = data.get("taming")
-
-                # Add comma before display ID (except first in family)
-                if j > 0:
+            for ci, continent in enumerate(sorted_continents):
+                if ci > 0:
                     f.write(",\n")
-
-                # Format display ID as numeric key
-                f.write(f'        [{display_id}] = {{\n')
-
-                # Add taming if present
-                if taming:
-                    f.write(f'            taming = {taming},\n')
-
-                # Get NPC entries (exclude taming key)
-                npc_entries = {k: v for k, v in data.items() if k != "taming"}
-
-                # Sort NPC IDs numerically
-                sorted_npc_ids = sorted(npc_entries.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
-
-                for k, npc_id in enumerate(sorted_npc_ids):
-                    npc = npc_entries[npc_id]
-
-                    # Add comma before NPC (except first)
-                    if k > 0:
+                f.write(f'        ["{continent}"] = {{\n')
+                
+                families = continents[continent]
+                sorted_families = sorted(families.keys())
+                
+                for fi, family in enumerate(sorted_families):
+                    if fi > 0:
                         f.write(",\n")
-
-                    # Write NPC entry
-                    name_lua = lua_quote(npc.get("name", ""))
+                    f.write(f'            ["{family}"] = {{\n')
                     
-                    # Join aggregated locations into a single string for Lua
-                    locs_list = sorted(list(npc.get("locs", [])))
-                    loc_lua = lua_quote("|".join(locs_list))
+                    display_data = families[family]
+                    sorted_dids = sorted(display_data.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
                     
-                    exp_lua = lua_quote(npc.get("exp", ""))
-                    class_lua = lua_quote(npc.get("class", ""))
-                    react_lua = lua_quote(npc.get("react", ""))
-
-                    nk_lua = npc.get("name_keeper", "") == "True" and "true" or "false"
-
-                    f.write(f'            [{npc_id}] = {{{name_lua}, {loc_lua}, {exp_lua}, {class_lua}, {react_lua}, {nk_lua}}}')
-
+                    for di, did in enumerate(sorted_dids):
+                        if di > 0:
+                            f.write(",\n")
+                        f.write(f'                [{did}] = {{\n')
+                        
+                        did_entry = display_data[did]
+                        taming_set = did_entry.get("taming")
+                        
+                        # Write taming if present
+                        if taming_set:
+                            sorted_taming = sorted(taming_set)
+                            taming_lua = '{' + ','.join(f'"{s}"' for s in sorted_taming) + '}'
+                            f.write(f'                    taming = {taming_lua},\n')
+                        
+                        # NPC entries (exclude taming key)
+                        npc_entries = {k: v for k, v in did_entry.items() if k != "taming"}
+                        sorted_npc_ids = sorted(npc_entries.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
+                        
+                        for ni, npc_id in enumerate(sorted_npc_ids):
+                            if ni > 0:
+                                f.write(",\n")
+                            
+                            npc = npc_entries[npc_id]
+                            name_lua = lua_quote(npc.get("name", ""))
+                            class_lua = lua_quote(npc.get("class", ""))
+                            react_lua = lua_quote(npc.get("react", ""))
+                            nk_lua = "true" if npc.get("name_keeper", "") == "True" else "false"
+                            
+                            # 4-element tuple: {name, class, react, nameKeeper}
+                            # expansion and continent are implied by tree keys
+                            f.write(f'                    [{npc_id}] = {{{name_lua}, {class_lua}, {react_lua}, {nk_lua}}}')
+                        
+                        f.write('\n                }')
+                    
+                    f.write('\n            }')
+                
                 f.write('\n        }')
             
             f.write('\n    }')
         
         f.write("\n}\n")
     
-    # Print summary
-    total_families = len([f for f in family_data.values() if f])
-    total_display_ids = sum(len(f) for f in family_data.values() if f)
-    total_npcs = sum(
-        len([k for k in display_data.keys() if k != "taming"])
-        for family in family_data.values()
-        if family
-        for display_data in family.values()
-    )
+    # Print summary (unique counts across the entire hierarchy)
+    total_expansions = len(hierarchy)
+    unique_continents = set()
+    unique_families = set()
+    unique_dids = set()
+    unique_npcs = set()
+    for exp_name, cont_dict in hierarchy.items():
+        for cont_name, fam_dict in cont_dict.items():
+            unique_continents.add(cont_name)
+            for fam_name, did_dict in fam_dict.items():
+                unique_families.add(fam_name)
+                for did_key, did_entry in did_dict.items():
+                    unique_dids.add(did_key)
+                    for k in did_entry:
+                        if k != "taming":
+                            unique_npcs.add(k)
     
     print(f"Done! Lua file saved to: {MODELS_LUA}")
-    print(f"Summary: {total_families} families, {total_display_ids} display IDs, {total_npcs} NPCs")
+    print(f"Summary: {total_expansions} expansions, {len(unique_continents)} continents, {len(unique_families)} families, {len(unique_dids)} display IDs, {len(unique_npcs)} NPCs")
 
 
 if __name__ == "__main__":

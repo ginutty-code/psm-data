@@ -18,7 +18,7 @@ import re
 import json
 from config import (
     PROCESSED_WOWHEAD_DATA_CSV, PROCESSED_PETOPIA_DATA_CSV, SKIP_DISPLAY_IDS_CSV,
-    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV,
+    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV, MANUAL_DIR,
     ensure_dirs
 )
 
@@ -196,6 +196,29 @@ def load_record_overrides():
                     overrides[(npc_id, zone_id)] = {k: v for k, v in row.items() if v.strip()}
     return overrides
 
+
+def load_continent_data():
+    """
+    Load continent data from continent_data.csv.
+    Returns a dict: uiMapId -> (continent_id, continent_name)
+    """
+    continent_map = {}
+    continent_csv = os.path.join(MANUAL_DIR, 'continent_data.csv')
+    if not os.path.exists(continent_csv):
+        print(f"Warning: {continent_csv} not found")
+        return continent_map
+    
+    with open(continent_csv, 'r', encoding='utf-8-sig', errors='replace') as f:
+        for row in csv.DictReader(f):
+            ui_map_id = row.get('uiMapId', '').strip()
+            continent_id = row.get('continent_id', '').strip()
+            continent_name = row.get('continent_name', '').strip()
+            if ui_map_id:
+                continent_map[ui_map_id] = (continent_id, continent_name)
+    
+    print(f"Loaded {len(continent_map)} uiMapId -> continent mappings")
+    return continent_map
+
 # --- Condition extraction (note-scoped, cached) ---
 
 def extract_note_conditions(final_notes):
@@ -329,13 +352,17 @@ def main():
     full_record_overrides = load_record_overrides()
     print(f"Loaded {len(full_record_overrides)} record overrides.")
 
+    # Load continent data
+    continent_map = load_continent_data()
+
     if not os.path.exists(PROCESSED_WOWHEAD_DATA_CSV):
         print(f"Error: {PROCESSED_WOWHEAD_DATA_CSV} not found. Run step 10_clean_wowhead_data.py script first.")
         return
 
     columns = [
         'npc_id', 'npc_name', 'family_id', 'family_name', 'display_ids',
-        'zone_id', 'zone_name', 'uiMapId', 'uiMapName', 'coords',
+        'zone_id', 'zone_name', 'continent_id', 'continent_name',
+        'uiMapId', 'uiMapName', 'coords',
         'patch_id', 'patch_name', 'expansion', 'react', 'classification_id',
         'classification_name', 'type_id', 'type_name',
         'notes', 'taming_requirements', 'special_conditions',
@@ -443,6 +470,15 @@ def main():
 
         # Apply manual record overrides (which could change any field)
         record_data.update(override)
+
+        # Resolve continent from uiMapId
+        ui_map_id = record_data.get('uiMapId', '')
+        if ui_map_id in continent_map:
+            record_data['continent_id'] = continent_map[ui_map_id][0]
+            record_data['continent_name'] = continent_map[ui_map_id][1]
+        else:
+            record_data['continent_id'] = ''
+            record_data['continent_name'] = 'Unknown'
 
         # Now filter display IDs against the skip list, after overrides have been applied
         display_ids_list = [d.strip() for d in record_data.get('display_ids', '').split('|') if d.strip()]

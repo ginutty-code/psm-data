@@ -1,0 +1,471 @@
+﻿uiMapId,uiMapName,continent_id,continent_name
+1,Durotar,12,Kalimdor
+7,Mulgore,12,Kalimdor
+10,Northern Barrens,12,Kalimdor
+11,Wailing Caverns,12,Kalimdor
+57,Teldrassil,12,Kalimdor
+58,Shadowthread Cave,12,Kalimdor
+62,Darkshore,12,Kalimdor
+63,Ashenvale,12,Kalimdor
+64,Thousand Needles,12,Kalimdor
+65,Stonetalon Mountains,12,Kalimdor
+66,Desolace,12,Kalimdor
+68,Maraudon,12,Kalimdor
+69,Feralas,12,Kalimdor
+70,Dustwallow Marsh,12,Kalimdor
+71,Tanaris,12,Kalimdor
+72,The Noxious Lair,12,Kalimdor
+73,The Gaping Chasm,12,Kalimdor
+76,Azshara,12,Kalimdor
+77,Felwood,12,Kalimdor
+78,Un'Goro Crater,12,Kalimdor
+79,The Slithering Scar,12,Kalimdor
+81,Silithus,12,Kalimdor
+83,Winterspring,12,Kalimdor
+85,Orgrimmar,12,Kalimdor
+88,Thunder Bluff,12,Kalimdor
+97,Azuremyst Isle,12,Kalimdor
+103,The Exodar,12,Kalimdor
+106,Bloodmyst Isle,12,Kalimdor
+198,Mount Hyjal,12,Kalimdor
+199,Southern Barrens,12,Kalimdor
+213,Ragefire Chasm,12,Kalimdor
+219,Zul'Farrak,12,Kalimdor
+221,Blackfathom Deeps,12,Kalimdor
+223,Blackfathom Deeps,12,Kalimdor
+234,Dire Maul,12,Kalimdor
+247,Ruins of Ahn'Qiraj,12,Kalimdor
+249,Uldum,12,Kalimdor
+273,The Black Morass,12,Kalimdor
+274,Old Hillsbrad Foothills,12,Kalimdor
+277,Lost City of the Tol'vir,12,Kalimdor
+279,Wailing Caverns,12,Kalimdor
+281,Maraudon,12,Kalimdor
+297,Halls of Origination,12,Kalimdor
+298,Halls of Origination,12,Kalimdor
+299,Halls of Origination,12,Kalimdor
+300,Razorfen Downs,12,Kalimdor
+301,Razorfen Kraul,12,Kalimdor
+319,Ahn'Qiraj,12,Kalimdor
+327,Ahn'Qiraj: The Fallen Kingdom,12,Kalimdor
+338,Molten Front,12,Kalimdor
+367,Firelands,12,Kalimdor
+399,Hour of Twilight,12,Kalimdor
+401,End Time,12,Kalimdor
+460,Shadowglen,12,Kalimdor
+461,Valley of Trials,12,Kalimdor
+462,Camp Narache,12,Kalimdor
+463,Echo Isles,12,Kalimdor
+468,Ammen Vale,12,Kalimdor
+503,Brawl'gar Arena,12,Kalimdor
+522,The Secrets of Ragefire,12,Kalimdor
+1203,Darkshore,12,Kalimdor
+1330,Uldum,12,Kalimdor
+1332,Darkshore,12,Kalimdor
+1333,Darkshore,12,Kalimdor
+1338,Darkshore,12,Kalimdor
+1527,Uldum,12,Kalimdor
+2351,Razorwind Shores,12,Kalimdor
+14,Arathi Highlands,13,Eastern Kingdoms
+15,Badlands,13,Eastern Kingdoms
+17,Blasted Lands,13,Eastern Kingdoms
+18,Tirisfal Glades,13,Eastern Kingdoms
+19,Scarlet Monastery Entrance,13,Eastern Kingdoms
+21,Silverpine Forest,13,Eastern Kingdoms
+22,Western Plaguelands,13,Eastern Kingdoms
+23,Eastern Plaguelands,13,Eastern Kingdoms
+25,Hillsbrad Foothills,13,Eastern Kingdoms
+26,The Hinterlands,13,Eastern Kingdoms
+27,Dun Morogh,13,Eastern Kingdoms
+32,Searing Gorge,13,Eastern Kingdoms
+33,Blackrock Mountain,13,Eastern Kingdoms
+36,Burning Steppes,13,Eastern Kingdoms
+37,Elwynn Forest,13,Eastern Kingdoms
+40,The Jasperlode Mine,13,Eastern Kingdoms
+42,Deadwind Pass,13,Eastern Kingdoms
+47,Duskwood,13,Eastern Kingdoms
+48,Loch Modan,13,Eastern Kingdoms
+49,Redridge Mountains,13,Eastern Kingdoms
+50,Northern Stranglethorn,13,Eastern Kingdoms
+51,Swamp of Sorrows,13,Eastern Kingdoms
+52,Westfall,13,Eastern Kingdoms
+55,The Deadmines,13,Eastern Kingdoms
+56,Wetlands,13,Eastern Kingdoms
+84,Stormwind City,13,Eastern Kingdoms
+91,Alterac Valley,13,Eastern Kingdoms
+94,Eversong Woods,13,Eastern Kingdoms
+95,Ghostlands,13,Eastern Kingdoms
+124,Plaguelands: The Scarlet Enclave,13,Eastern Kingdoms
+179,Gilneas,13,Eastern Kingdoms
+201,Kelp'thar Forest,13,Eastern Kingdoms
+202,Gilneas City,13,Eastern Kingdoms
+204,Abyssal Depths,13,Eastern Kingdoms
+205,Shimmering Expanse,13,Eastern Kingdoms
+210,The Cape of Stranglethorn,13,Eastern Kingdoms
+217,Ruins of Gilneas,13,Eastern Kingdoms
+218,Ruins of Gilneas City,13,Eastern Kingdoms
+220,The Temple of Atal'Hakkar,13,Eastern Kingdoms
+226,Gnomeregan,13,Eastern Kingdoms
+227,Gnomeregan,13,Eastern Kingdoms
+229,Gnomeregan,13,Eastern Kingdoms
+230,Uldaman,13,Eastern Kingdoms
+232,Molten Core,13,Eastern Kingdoms
+233,Zul'Gurub,13,Eastern Kingdoms
+241,Twilight Highlands,13,Eastern Kingdoms
+242,Blackrock Depths,13,Eastern Kingdoms
+243,Blackrock Depths,13,Eastern Kingdoms
+244,Tol Barad,13,Eastern Kingdoms
+245,Tol Barad Peninsula,13,Eastern Kingdoms
+250,Blackrock Spire,13,Eastern Kingdoms
+251,Blackrock Spire,13,Eastern Kingdoms
+252,Blackrock Spire,13,Eastern Kingdoms
+254,Blackrock Spire,13,Eastern Kingdoms
+255,Blackrock Spire,13,Eastern Kingdoms
+286,Blackwing Descent,13,Eastern Kingdoms
+290,Blackwing Lair,13,Eastern Kingdoms
+291,The Deadmines,13,Eastern Kingdoms
+292,The Deadmines,13,Eastern Kingdoms
+294,The Bastion of Twilight,13,Eastern Kingdoms
+310,Shadowfang Keep,13,Eastern Kingdoms
+318,Stratholme,13,Eastern Kingdoms
+333,Zul'Aman,13,Eastern Kingdoms
+335,Sunwell Plateau,13,Eastern Kingdoms
+337,Zul'Gurub,13,Eastern Kingdoms
+348,Magisters' Terrace,13,Eastern Kingdoms
+349,Magisters' Terrace,13,Eastern Kingdoms
+350,Karazhan,13,Eastern Kingdoms
+358,Karazhan,13,Eastern Kingdoms
+425,Northshire,13,Eastern Kingdoms
+427,Coldridge Valley,13,Eastern Kingdoms
+431,Scarlet Halls,13,Eastern Kingdoms
+465,Deathknell,13,Eastern Kingdoms
+467,Sunstrider Isle,13,Eastern Kingdoms
+469,New Tinkertown,13,Eastern Kingdoms
+500,Deeprun Tram,13,Eastern Kingdoms
+523,Dun Morogh,13,Eastern Kingdoms
+616,Upper Blackrock Spire,13,Eastern Kingdoms
+618,Upper Blackrock Spire,13,Eastern Kingdoms
+623,Hillsbrad Foothills (Southshore vs. Tarren Mill),13,Eastern Kingdoms
+810,Karazhan,13,Eastern Kingdoms
+943,Arathi Highlands,13,Eastern Kingdoms
+973,The Sunwell,13,Eastern Kingdoms
+1044,Arathi Highlands,13,Eastern Kingdoms
+1470,Vision of Stormwind,13,Eastern Kingdoms
+1537,Alterac Valley,13,Eastern Kingdoms
+2070,Tirisfal Glades,13,Eastern Kingdoms
+2071,Uldaman: Legacy of Tyr,13,Eastern Kingdoms
+2352,Founder's Point,13,Eastern Kingdoms
+2393,Silvermoon City,13,Eastern Kingdoms
+2395,Eversong Woods,13,Eastern Kingdoms
+2404,Vision of Stormwind,13,Eastern Kingdoms
+2405,Voidstorm,13,Eastern Kingdoms
+2413,Harandar,13,Eastern Kingdoms
+2424,Isle of Quel'Danas,13,Eastern Kingdoms
+2434,Augurs' Terrace,13,Eastern Kingdoms
+2437,Zul'Aman,13,Eastern Kingdoms
+2444,Slayer's Rise,13,Eastern Kingdoms
+2451,Arathi Highlands,13,Eastern Kingdoms
+2505,Gulf of Memory,13,Eastern Kingdoms
+2506,Shadowguard Point,13,Eastern Kingdoms
+2507,Torment's Rise,13,Eastern Kingdoms
+2511,Magisters' Terrace,13,Eastern Kingdoms
+2525,The Darkway,13,Eastern Kingdoms
+2529,The Voidspire,13,Eastern Kingdoms
+2535,Atal'Aman,13,Eastern Kingdoms
+2536,Atal'Aman,13,Eastern Kingdoms
+2545,Parhelion Plaza,13,Eastern Kingdoms
+2547,Collegiate Calamity,13,Eastern Kingdoms
+2576,The Den,13,Eastern Kingdoms
+2585,Zul'Aman,13,Eastern Kingdoms
+2594,Eversong Woods,13,Eastern Kingdoms
+2599,Val,13,Eastern Kingdoms
+2600,Naigtal,13,Eastern Kingdoms
+2646,Vilaldoun,13,Eastern Kingdoms
+100,Hellfire Peninsula,101,Outland
+102,Zangarmarsh,101,Outland
+104,Shadowmoon Valley,101,Outland
+105,Blade's Edge Mountains,101,Outland
+107,Nagrand,101,Outland
+108,Terokkar Forest,101,Outland
+109,Netherstorm,101,Outland
+111,Shattrath City,101,Outland
+246,The Shattered Halls,101,Outland
+258,Sethekk Halls,101,Outland
+259,Sethekk Halls,101,Outland
+262,The Underbog,101,Outland
+265,The Slave Pens,101,Outland
+266,The Botanica,101,Outland
+271,The Arcatraz,101,Outland
+272,Mana-Tombs,101,Outland
+332,Serpentshrine Cavern,101,Outland
+334,Tempest Keep,101,Outland
+339,Black Temple,101,Outland
+340,Black Temple,101,Outland
+347,Hellfire Ramparts,101,Outland
+114,Borean Tundra,113,Northrend
+115,Dragonblight,113,Northrend
+116,Grizzly Hills,113,Northrend
+117,Howling Fjord,113,Northrend
+118,Icecrown,113,Northrend
+119,Sholazar Basin,113,Northrend
+120,The Storm Peaks,113,Northrend
+121,Zul'Drak,113,Northrend
+123,Wintergrasp,113,Northrend
+127,Crystalsong Forest,113,Northrend
+129,The Nexus,113,Northrend
+133,Utgarde Keep,113,Northrend
+136,Utgarde Pinnacle,113,Northrend
+142,The Oculus,113,Northrend
+149,Ulduar,113,Northrend
+153,Gundrak,113,Northrend
+160,Drak'Tharon Keep,113,Northrend
+162,Naxxramas,113,Northrend
+163,Naxxramas,113,Northrend
+168,The Violet Hold,113,Northrend
+190,Icecrown Citadel,113,Northrend
+370,The Nexus,113,Northrend
+745,Ulduar,113,Northrend
+746,Ulduar,113,Northrend
+799,The Oculus,113,Northrend
+897,The Deaths of Chromie,113,Northrend
+900,The Deaths of Chromie,113,Northrend
+371,The Jade Forest,424,Pandaria
+374,The Widow's Wail,424,Pandaria
+376,Valley of the Four Winds,424,Pandaria
+377,Cavern of Endless Echoes,424,Pandaria
+378,The Wandering Isle,424,Pandaria
+379,Kun-Lai Summit,424,Pandaria
+385,Tomb of Conquerors,424,Pandaria
+388,Townlong Steppes,424,Pandaria
+390,Vale of Eternal Blossoms,424,Pandaria
+392,Shrine of Two Moons,424,Pandaria
+417,Temple of Kotmogu,424,Pandaria
+418,Krasarang Wilds,424,Pandaria
+422,Dread Wastes,424,Pandaria
+433,The Veiled Stair,424,Pandaria
+437,Gate of the Setting Sun,424,Pandaria
+443,Shado-Pan Monastery,424,Pandaria
+448,The Jade Forest,424,Pandaria
+450,Unga Ingoo,424,Pandaria
+451,Assault on Zan'vess,424,Pandaria
+453,Mogu'shan Palace,424,Pandaria
+454,Mogu'shan Palace,424,Pandaria
+455,Mogu'shan Palace,424,Pandaria
+456,Terrace of Endless Spring,424,Pandaria
+471,Mogu'shan Vaults,424,Pandaria
+473,Mogu'shan Vaults,424,Pandaria
+481,Crypt of Forgotten Kings,424,Pandaria
+504,Isle of Thunder,424,Pandaria
+507,Isle of Giants,424,Pandaria
+508,Throne of Thunder,424,Pandaria
+509,Throne of Thunder,424,Pandaria
+510,Throne of Thunder,424,Pandaria
+511,Throne of Thunder,424,Pandaria
+513,Throne of Thunder,424,Pandaria
+516,Isle of Thunder,424,Pandaria
+518,Thunder King's Citadel,424,Pandaria
+554,Timeless Isle,424,Pandaria
+556,Siege of Orgrimmar,424,Pandaria
+561,Siege of Orgrimmar,424,Pandaria
+564,Siege of Orgrimmar,424,Pandaria
+709,The Wandering Isle,424,Pandaria
+1530,Vale of Eternal Blossoms,424,Pandaria
+2366,The Wandering Isle,424,Pandaria
+525,Frostfire Ridge,572,Draenor
+526,Bladespire Citadel,572,Draenor
+532,Grulloc's Grotto,572,Draenor
+534,Tanaan Jungle,572,Draenor
+535,Talador,572,Draenor
+539,Shadowmoon Valley,572,Draenor
+542,Spires of Arak,572,Draenor
+543,Gorgrond,572,Draenor
+550,Nagrand,572,Draenor
+582,Lunarfall,572,Draenor
+588,Ashran,572,Draenor
+590,Frostwall,572,Draenor
+595,Iron Docks,572,Draenor
+599,Blackrock Foundry,572,Draenor
+601,Skyreach,572,Draenor
+620,The Everbloom,572,Draenor
+622,Stormshield,572,Draenor
+624,Warspear,572,Draenor
+661,Hellfire Citadel,572,Draenor
+666,Hellfire Citadel,572,Draenor
+1478,Ashran,572,Draenor
+628,Dalaran,619,Broken Isles
+630,Azsuna,619,Broken Isles
+634,Stormheim,619,Broken Isles
+641,Val'sharah,619,Broken Isles
+646,Broken Shore,619,Broken Isles
+649,Helheim,619,Broken Isles
+650,Highmountain,619,Broken Isles
+654,Mucksnout Den,619,Broken Isles
+680,Suramar,619,Broken Isles
+694,Helmouth Shallows,619,Broken Isles
+703,Halls of Valor,619,Broken Isles
+706,Helmouth Cliffs,619,Broken Isles
+711,Vault of the Wardens,619,Broken Isles
+712,Vault of the Wardens,619,Broken Isles
+714,Niskara,619,Broken Isles
+719,"Mardum, the Shattered Abyss",619,Broken Isles
+732,Violet Hold,619,Broken Isles
+749,The Arcway,619,Broken Isles
+750,Thunder Totem,619,Broken Isles
+758,Gloaming Reef,619,Broken Isles
+764,The Nighthold,619,Broken Isles
+771,The Nighthold,619,Broken Isles
+778,The Emerald Nightmare,619,Broken Isles
+779,The Emerald Nightmare,619,Broken Isles
+780,The Emerald Nightmare,619,Broken Isles
+790,Eye of Azshara,619,Broken Isles
+806,Trial of Valor,619,Broken Isles
+830,Krokuun,619,Broken Isles
+848,Cathedral of Eternal Night,619,Broken Isles
+851,Tomb of Sargeras,619,Broken Isles
+858,Assault on Broken Shore,619,Broken Isles
+882,Eredath,619,Broken Isles
+885,Antoran Wastes,619,Broken Isles
+903,The Seat of the Triumvirate,619,Broken Isles
+909,"Antorus, the Burning Throne",619,Broken Isles
+922,Invasion Point: Bonich,619,Broken Isles
+923,Invasion Point: Cen'gar,619,Broken Isles
+924,Invasion Point: Naigtal,619,Broken Isles
+927,Greater Invasion Point: Pit Lord Vilemus,619,Broken Isles
+928,Greater Invasion Point: Mistress Alluradel,619,Broken Isles
+929,Greater Invasion Point: Matron Folnuna,619,Broken Isles
+932,Greater Invasion Point: Occularus,619,Broken Isles
+933,Forge of Aeons,619,Broken Isles
+1472,The Dragon's Spine,619,Broken Isles
+1691,Shattered Grove,619,Broken Isles
+1717,Chill's Reach,619,Broken Isles
+2305,Dalaran,619,Broken Isles
+862,Zuldazar,875,Zandalar
+863,Nazmir,875,Zandalar
+864,Vol'dun,875,Zandalar
+934,Atal'Dazar,875,Zandalar
+1004,Kings' Rest,875,Zandalar
+1010,The MOTHERLODE!!,875,Zandalar
+1038,Temple of Sethraliss,875,Zandalar
+1041,The Underrot,875,Zandalar
+1043,Temple of Sethraliss,875,Zandalar
+1149,Uldir,875,Zandalar
+1151,Uldir,875,Zandalar
+1153,Uldir,875,Zandalar
+1165,Dazar'alor,875,Zandalar
+1167,Zanchul,875,Zandalar
+1352,Battle of Dazar'alor,875,Zandalar
+1358,Battle of Dazar'alor,875,Zandalar
+895,Tiragarde Sound,876,Kul Tiras
+896,Drustvar,876,Kul Tiras
+936,Freehold,876,Kul Tiras
+942,Stormsong Valley,876,Kul Tiras
+974,Tol Dagor,876,Kul Tiras
+981,Un'gol Ruins,876,Kul Tiras
+1015,Waycrest Manor,876,Kul Tiras
+1016,Waycrest Manor,876,Kul Tiras
+1032,Skittering Hollow,876,Kul Tiras
+1033,The Rotting Mire,876,Kul Tiras
+1034,Verdant Wilds,876,Kul Tiras
+1035,Molten Cay,876,Kul Tiras
+1036,The Dread Chain,876,Kul Tiras
+1037,Whispering Reef,876,Kul Tiras
+1039,Shrine of the Storm,876,Kul Tiras
+1161,Boralus,876,Kul Tiras
+1169,Tol Dagor,876,Kul Tiras
+1182,Saltstone Mine,876,Kul Tiras
+1183,Thornheart,876,Kul Tiras
+1336,Havenswood,876,Kul Tiras
+1337,Jorundall,876,Kul Tiras
+1462,Mechagon Island,876,Kul Tiras
+1490,Mechagon,876,Kul Tiras
+1494,Mechagon,876,Kul Tiras
+1501,Crestfall,876,Kul Tiras
+1502,Snowblossom Village,876,Pandaria
+174,The Lost Isles,948,The Maelstrom
+194,Kezan,948,The Maelstrom
+207,Deepholm,948,The Maelstrom
+324,The Stonecore,948,The Maelstrom
+725,The Maelstrom,948,The Maelstrom
+1157,The Great Sea,1156,The Great Sea
+1355,Nazjatar,1355,Nazjatar
+1515,The Eternal Palace,1355,Nazjatar
+1409,Exile's Reach,1409,Exile's Reach
+1525,Revendreth,1550,The Shadowlands
+1533,Bastion,1550,The Shadowlands
+1536,Maldraxxus,1550,The Shadowlands
+1543,The Maw,1550,The Shadowlands
+1565,Ardenweald,1550,The Shadowlands
+1644,Ember Court,1550,The Shadowlands
+1650,Sightless Hold,1550,The Shadowlands
+1663,Halls of Atonement,1550,The Shadowlands
+1666,The Necrotic Wake,1550,The Shadowlands
+1669,Mists of Tirna Scithe,1550,The Shadowlands
+1674,Plaguefall,1550,The Shadowlands
+1675,Sanguine Depths,1550,The Shadowlands
+1676,Sanguine Depths,1550,The Shadowlands
+1677,De Other Side,1550,The Shadowlands
+1693,Spires Of Ascension,1550,The Shadowlands
+1739,Ardenweald,1550,The Shadowlands
+1911,Torghast,1550,The Shadowlands
+1960,The Maw,1550,The Shadowlands
+1961,Korthia,1550,The Shadowlands
+1970,Zereth Mortis,1550,The Shadowlands
+1989,"Tazavesh, the Veiled Market",1550,The Shadowlands
+1998,Sanctum of Domination,1550,The Shadowlands
+2022,The Waking Shores,1978,Dragon Isles
+2023,Ohn'ahran Plains,1978,Dragon Isles
+2024,The Azure Span,1978,Dragon Isles
+2025,Thaldraszus,1978,Dragon Isles
+2076,The Azure Vault,1978,Dragon Isles
+2080,Neltharus,1978,Dragon Isles
+2083,Halls of Infusion,1978,Dragon Isles
+2093,The Nokhud Offensive,1978,Dragon Isles
+2112,Valdrakken,1978,Dragon Isles
+2118,The Forbidden Reach,1978,Dragon Isles
+2133,Zaralek Cavern,1978,Dragon Isles
+2151,The Forbidden Reach,1978,Dragon Isles
+2166,"Aberrus, the Shadowed Crucible",1978,Dragon Isles
+2168,"Aberrus, the Shadowed Crucible",1978,Dragon Isles
+2199,Tyrhold Reservoir,1978,Dragon Isles
+2200,Emerald Dream,1978,Dragon Isles
+2232,Amirdrassil,1978,Dragon Isles
+2239,Amirdrassil,1978,Dragon Isles
+2262,Traitor's Rest,1978,Dragon Isles
+2213,City of Threads,2274,Khaz Algar
+2214,The Ringing Deeps,2274,Khaz Algar
+2215,Hallowfall,2274,Khaz Algar
+2216,City of Threads - Lower,2274,Khaz Algar
+2248,Isle of Dorn,2274,Khaz Algar
+2249,Fungal Folly,2274,Khaz Algar
+2250,Kriegval's Rest,2274,Khaz Algar
+2251,The Waterworks,2274,Khaz Algar
+2255,Azj-Kahet,2274,Khaz Algar
+2256,Azj-Kahet - Lower,2274,Khaz Algar
+2259,Tak-Rethan Abyss,2274,Khaz Algar
+2269,Earthcrawl Mines,2274,Khaz Algar
+2277,Nightfall Sanctum,2274,Khaz Algar
+2298,Nerub-ar Palace,2274,Khaz Algar
+2299,The Underkeep,2274,Khaz Algar
+2301,The Sinkhole,2274,Khaz Algar
+2302,The Dread Pit,2274,Khaz Algar
+2303,Darkflame Cleft,2274,Khaz Algar
+2308,Priory of the Sacred Flame,2274,Khaz Algar
+2310,Skittering Breach,2274,Khaz Algar
+2312,Mycomancer Cavern,2274,Khaz Algar
+2313,The Spiral Weave,2274,Khaz Algar
+2315,The Rookery,2274,Khaz Algar
+2328,The Proscenium,2274,Khaz Algar
+2339,Dornogal,2274,Khaz Algar
+2346,Undermine,2274,Khaz Algar
+2347,The Spiral Weave,2274,Khaz Algar
+2357,City of Echoes,2274,Khaz Algar
+2369,Siren Isle,2274,Khaz Algar
+2371,K'aresh,2274,Khaz Algar
+2387,Operation: Floodgate,2274,Khaz Algar
+2396,Excavation Site 9,2274,Khaz Algar
+2406,Undermine,2274,Khaz Algar
+2420,Sidestreet Sluice,2274,Khaz Algar
+2421,Sidestreet Sluice,2274,Khaz Algar
+2422,Sidestreet Sluice,2274,Khaz Algar
+2472,Tazavesh,2274,Khaz Algar
+2477,Voidscar Cavern,2274,Khaz Algar

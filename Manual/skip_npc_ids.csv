@@ -1099,7 +1099,6 @@ npc_id,zone_id,layer,reason
 153733,,,unknown location
 153792,,,unknown location
 153892,,,unknown location
-153902,,,cannot be tamed
 153903,,,cannot be tamed
 154030,10472,,redundant info
 154030,13400,115,redundant info
@@ -3485,3 +3484,12 @@ npc_id,zone_id,layer,reason
 261047,,,unknown location
 261115,,,cannot be tamed
 264297,,,unknown location
+143416,8064,,incorrect zone_id
+94191,8392,,incorrect zone_id
+111404,8392,,incorrect zone_id
+113132,8392,,incorrect zone_id
+231809,-12,,incorrect zone_id
+197000,13642,,incorrect zone_id
+214214,13642,,incorrect zone_id
+214215,13642,,incorrect zone_id
+222722,-14,,incorrect zone_id
