@@ -359,7 +359,7 @@
         <option value="npc_name">NPC Name</option>
         <option value="name_keeper">Name Keeper</option>
         <option value="family_name">Family Name</option>
-        <option value="zone_name">Zone Name</option>
+        <option value="uiMapName">Zone Name</option>
         <option value="react">React (e.g. [-1,-1])</option>
         <option value="classification_name">Classification</option>
         <option value="type_name">Type</option>
@@ -457,12 +457,12 @@
 
     const COLS = [
       "npc_id", "npc_name", "family_id", "family_name", "display_ids",
-      "zone_id", "zone_name", "uiMapId", "uiMapName", "coords",
+      "zone_id", "uiMapName", "uiMapId", "uiMapName", "coords",
       "patch_id", "patch_name", "expansion", "react", "classification_id", "classification_name",
       "type_id", "type_name", "notes", "taming_requirements", "special_conditions", "name_keeper"
     ];
     const DISPLAY_FIELDS = [
-      "npc_name", "name_keeper", "family_name", "zone_name", "react",
+      "npc_name", "name_keeper", "family_name", "uiMapName", "react",
       "classification_name", "type_name", "taming_requirements", "special_conditions", "notes", "uiMapId"
     ];
 
@@ -471,7 +471,7 @@
       family_name: "Family Name",
       name_keeper: "Name Keeper",
       classification_name: "Classification",
-      zone_name: "Zone",
+      uiMapName: "Zone",
       react: "React",
       type_name: "Type",
       taming_requirements: "Taming Requirements",
@@ -559,7 +559,7 @@
       page.forEach(p => {
         const el = document.createElement("div");
         el.className = "result-item";
-        el.innerHTML = `<strong>${p.npc_name}</strong> <span class="rid">#${p.npc_id} · ${p.family_name} · ${p.zone_name}</span>`;
+        el.innerHTML = `<strong>${p.npc_name}</strong> <span class="rid">#${p.npc_id} · ${p.family_name} · ${p.uiMapName}</span>`;
         el.onclick = () => selectPet(p);
         list.appendChild(el);
       });
@@ -593,7 +593,7 @@
       const coords = (pet.coords || "").split("|").filter(Boolean);
       document.getElementById("npcDisplay").innerHTML = `
     <div class="npc-title">${pet.npc_name}</div>
-    <div class="npc-meta">NPC #${pet.npc_id} · ${pet.family_name} · ${pet.zone_name} · ${pet.classification_name}</div>
+    <div class="npc-meta">NPC #${pet.npc_id} · ${pet.family_name} · ${pet.uiMapName} · ${pet.classification_name}</div>
     <div class="field-grid">
       ${DISPLAY_FIELDS.map(f => `
         <div class="field-row">
