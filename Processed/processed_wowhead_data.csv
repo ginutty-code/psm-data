@@ -973,8 +973,8 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 22394,Deathshadow Hound,Normal,0,52,Hound,3518,"[-1,-1]",6195,Nagrand,3518,0,"9.4,42.8|11,38.4|12.4,36.6|8.4,40.4",107,Nagrand,2.2.0,Voice Chat!,0,Deathshadow Hound,52,"[-1,-1]",1,successful,No
 22807,Lost Torranche,Normal,0,12,Tallstrider,3519,"[-1,-1]",1281,Terokkar Forest,3519,0,"44.4,89.4|46.6,90.4|45.6,93.2",108,Terokkar Forest,2.2.0,Voice Chat!,0,Lost Torranche,12,"[-1,-1]",1,successful,No
 22884,Leviathan,Elite,1,68,Hydra,3959,"[-1,-1]",17528,Black Temple,3959,1,"34.4,19",340,Black Temple,2.2.0,Voice Chat!,1,Leviathan,68,"[-1,-1]",1,successful,No
-22885,Dragon Turtle,Elite,1,21,Turtle,3959,"[-1,-1]",21457,Black Temple,3959,0,,339,Black Temple,2.2.0,Voice Chat!,1,Dragon Turtle,21,"[-1,-1]",1,successful,No
-22946,Shadowmoon War Hound,Normal,0,1,Wolf,3959,"[-1,-1]",14334,Black Temple,3959,0,,339,Black Temple,2.2.0,Voice Chat!,0,Shadowmoon War Hound,1,"[-1,-1]",1,successful,No
+22885,Dragon Turtle,Elite,1,21,Turtle,3959,"[-1,-1]",21457,Black Temple,3959,0,,340,Black Temple,2.2.0,Voice Chat!,1,Dragon Turtle,21,"[-1,-1]",1,successful,No
+22946,Shadowmoon War Hound,Normal,0,1,Wolf,3959,"[-1,-1]",14334,Black Temple,3959,0,,341,Black Temple,2.2.0,Voice Chat!,0,Shadowmoon War Hound,1,"[-1,-1]",1,successful,No
 22979,Wild Sparrowhawk,Normal,0,26,Bird of Prey,3518,"[-1,-1]",4877,Nagrand,3518,0,"19.8,33.8|18,39.2",107,Nagrand,2.2.0,Voice Chat!,0,Wild Sparrowhawk,26,"[-1,-1]",1,successful,No
 23020,Shadow Serpent,Normal,0,35,Serpent,3520,"[-1,-1]",21193,Shadowmoon Valley,3520,0,"62.6,21.2|65.8,23.8|66.2,26.2|45.2,14.6|60.4,21|64.6,22|70.2,29.2|45.6,12.4|68,22.4|47.4,13.8|65.8,29.2|66.2,20.2|72.8,31|73.2,28.2|45,10.4",104,Shadowmoon Valley,2.2.0,Voice Chat!,0,Shadow Serpent,35,"[-1,-1]",1,successful,No
 23026,Twilight Serpent,Normal,0,35,Serpent,3518,"[0,0]",21210,Nagrand,3518,0,"10.8,40.2|12.4,37.2|18.6,32.4|18.8,35.4|19,37.8|8,44.8|9.6,38.4|12.4,35.2|7.4,41.8",107,Nagrand,2.2.0,Voice Chat!,0,Twilight Serpent,35,"[0,0]",1,successful,No
@@ -985,7 +985,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 23204,Vakkiz the Windrager,Elite,1,27,Wind Serpent,3519,[],21296,,3519,0,,108,Terokkar Forest,2.2.0,Voice Chat!,1,Vakkiz the Windrager,,[],6,successful,No
 23206,Akkarai Hatchling,Normal,0,26,Bird of Prey,3519,"[-1,-1]",6299|20730|20738|21003,Terokkar Forest,3519,0,"69.2,80.8|69.4,74.8|73.4,80.8|61.4,78|62,74.6|70.2,83.2|72.2,88.2|74.8,87.4",108,Terokkar Forest,2.1.0,The Black Temple,0,Akkarai Hatchling,26,"[-1,-1]",1,successful,No
 23219,Blackwind Warp Chaser,Normal,0,32,Warp Stalker,3519,"[-1,-1]",19998,Terokkar Forest,3519,0,"64.4,85.6|60,82.8|66.6,85.2|62.4,84.6|61,81|63.4,82.8|60.6,72.6|69.2,88.2|62.6,72|66.4,68|66.6,72",108,Terokkar Forest,2.2.0,Voice Chat!,0,Blackwind Warp Chaser,32,"[-1,-1]",1,successful,No
-23232,Mutant War Hound,Elite,1,1,Wolf,3959,"[-1,-1]",21355,Black Temple,3959,0,,339,Black Temple,2.2.0,Voice Chat!,1,Mutant War Hound,1,"[-1,-1]",1,successful,No
+23232,Mutant War Hound,Elite,1,1,Wolf,3959,"[-1,-1]",21355,Black Temple,3959,0,,342,Black Temple,2.2.0,Voice Chat!,1,Mutant War Hound,1,"[-1,-1]",1,successful,No
 23326,Nethermine Ravager,Normal,0,31,Ravager,3520,"[-1,-1]",20068,Shadowmoon Valley,3520,0,"72.4,83|65.6,82.4|68,81|70.4,82.2|74,87.4|73.8,85.4",104,Shadowmoon Valley,2.2.0,Voice Chat!,0,Nethermine Ravager,31,"[-1,-1]",1,successful,No
 23501,Netherwing Ray,Normal,0,34,Ray,3520,"[-1,-1]",19400,Shadowmoon Valley,3520,0,"65.6,79.4|69.2,77.8|74.4,79.8|74.4,91.6|79,87.4|68.4,90.6|71.2,91.6|66.6,89.4|62.6,81.2|63.4,90.4",104,Shadowmoon Valley,2.2.0,Voice Chat!,0,Netherwing Ray,34,"[-1,-1]",1,successful,No
 23584,Amani Bear,Elite,1,4,Bear,3805,"[-1,-1]",22467,Zul'Aman,3805,0,"30.4,63.4",333,Zul'Aman,2.3.0,The Gods of Zul'Aman,1,Amani Bear,4,"[-1,-1]",1,successful,No
@@ -2688,7 +2688,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 81745,Elekk,Normal,0,300,Mammoth,6662,"[1,-1]",54464|54465|54486,Talador,6662,0,"46.8,80.2|51.8,80",535,Talador,6.0.1,,0,Elekk,300,"[1,-1]",1,successful,No
 81774,Injured Stalker,Normal,0,1,Wolf,6719,"[-1,-1]",52602,Shadowmoon Valley,6719,0,"29.8,28.4",539,Shadowmoon Valley,6.0.1,,0,Injured Stalker,1,"[-1,-1]",1,successful,No
 81818,Legion Hunter-Killer,Normal,0,52,Hound,8485|7307,"[0,0]",56645,Upper Blackrock Spire,7307,0,,618,Upper Blackrock Spire,6.0.1,,0,Legion Hunter-Killer,,"[0,0]",6,successful,No
-81818,Legion Hunter-Killer,Normal,0,52,Hound,8485|7307,"[0,0]",56645,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Legion Hunter-Killer,,"[0,0]",6,successful,No
+81818,Legion Hunter-Killer,Normal,0,52,Hound,8485|7307,"[0,0]",56645,Ashran,8485,,,,,6.0.1,,0,Legion Hunter-Killer,,"[0,0]",6,successful,No
 81898,Leatherhide Bull,Normal,0,43,Clefthoof,6755,"[-1,-1]",54443,Nagrand,6755,0,"73.2,53.2|76.4,56|73.6,45.4|65.4,44.2|74.2,43.4|62,55.4|62.8,45.4|71.4,57.2|77.8,58.2|78.2,62.8|79.2,55|79.2,60.8|79.8,58|68,44|69,49.4|70.8,54.2|70.8,46|73,41.6|75.4,58|79.4,65.6|81.4,65.8|83,67.8|45.6,51.8|72,51.2|75.4,40|76.2,43.2|78.6,42.6|84.4,64.2|47.6,50|61.8,47.6|64.2,42|69.4,55.8|80.4,49.4|57.6,49.8|58.8,59.6|60.8,51.2|73.8,48.4|78.8,68.2|80.8,53.4|82,59|82,63.8|83,40.2|53.2,48.4|63.8,56.8|64.4,11.2|72.4,65.6|74.6,35.2|83.6,57.4|87,63.4|60.2,41.4|63,51.2|65.4,8.8|66,40.2|70.6,61.4|76.8,69.4|78.8,38.6|40,51.4|67.8,37.6|70.2,38.4|70.2,67.4|85.4,38.6",550,Nagrand,6.0.1,,0,Leatherhide Bull,43,"[-1,-1]",1,successful,No
 81902,Nagrand Prowler,Normal,0,1,Wolf,6755,"[-1,-1]",52600|54193,Nagrand,6755,0,"88.8,48.2|88.8,46.2|85.4,47|89.6,43.2|72.2,10.4|85.2,45",550,Nagrand,6.0.1,,0,Nagrand Prowler,1,"[-1,-1]",1,successful,No
 81966,Oli,Normal,0,300,Mammoth,6755,"[0,0]",54526,Nagrand,6755,0,"79.2,52.4",550,Nagrand,6.0.1,,0,Oli,300,"[0,0]",1,successful,No
@@ -2713,7 +2713,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 82308,Shadowmoon Stalker,Normal,0,1,Wolf,6719|6722,"[-1,-1]",52602,Shadowmoon Valley,6719,0,"39,31|40.4,29|29.6,30|38,32.8|25.8,28|36,32.4|43,27.4|26.6,25|32.2,29.4|42.8,40.4|29.2,34.2|41.2,43.4|49.4,25.4|51.2,28.4|53.4,32.6|55.8,35.6",539,Shadowmoon Valley,6.0.1,,0,Shadowmoon Stalker,1,"[-1,-1]",1,successful,No
 82308,Shadowmoon Stalker,Normal,0,1,Wolf,6719|6722,"[-1,-1]",52602,Spires of Arak,6722,0,"74.2,20.4|68.4,22.2|72.6,21.6|67.2,20.4|75.2,36.8|70.8,19.4|76.2,33.2",542,Spires of Arak,6.0.1,,0,Shadowmoon Stalker,1,"[-1,-1]",1,successful,No
 82310,Stonehide Riverbeast,Normal,0,150,Riverbeast,6941|8485,"[0,0]",56949,Ashran,6941,0,"49.2,53|47.2,50.8|48.6,55.6|49.2,50.4|51,54.6|45,50|48.4,58|52.4,50.2|49.4,45.4|54.6,50.4",588,Ashran,6.0.1,,0,Stonehide Riverbeast,150,"[0,0]",1,successful,No
-82310,Stonehide Riverbeast,Normal,0,150,Riverbeast,6941|8485,"[0,0]",56949,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Stonehide Riverbeast,150,"[0,0]",1,successful,No
 82312,Young Windroc,Normal,0,26,Bird of Prey,6755,"[-1,-1]",59517,Nagrand,6755,0,"66.4,51.8",550,Nagrand,6.0.1,,0,Young Windroc,26,"[-1,-1]",1,successful,No
 82323,Moonglow Sporebat,Normal,0,33,Sporebat,6719,"[-1,-1]",51579,Shadowmoon Valley,6719,0,"54.2,21|56.4,20.4|53,18.4|52.2,21.4|57.4,22.6|52,26|53.8,24|51.4,16.4",539,Shadowmoon Valley,6.0.1,,0,Moonglow Sporebat,33,"[-1,-1]",1,successful,No
 82354,Seacliff Kaliri,Normal,0,26,Bird of Prey,6719|7078,"[-1,-1]",58832,Shadowmoon Valley,6719,0,"63.6,38.2|61.4,32.8|63.2,30.2|64.6,36.2|65.2,32.4|60.6,37|61,40.6",539,Shadowmoon Valley,6.0.1,,0,Seacliff Kaliri,26,"[-1,-1]",1,successful,No
@@ -2763,21 +2762,14 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 83553,Insha'tar,Rare,4,32,Warp Stalker,6719,"[-1,-1]",57801,Shadowmoon Valley,6719,0,"57.4,48.4",539,Shadowmoon Valley,6.0.1,,4,Insha'tar,32,"[-1,-1]",1,successful,No
 83591,Tura'aka,Rare,4,38,Chimaera,6755,"[-1,-1]",56062,Nagrand,6755,0,"64.2,38.4",550,Nagrand,6.0.1,,4,Tura'aka,38,"[-1,-1]",1,successful,No
 83681,Buzzing Venomfly,Normal,0,44,Wasp,6941|8485,"[-1,-1]",57882|57883|57884|57885,Ashran,6941,0,"57.4,57.4|54.4,62|53.6,53.6",588,Ashran,6.0.1,,0,Buzzing Venomfly,44,"[-1,-1]",1,successful,No
-83681,Buzzing Venomfly,Normal,0,44,Wasp,6941|8485,"[-1,-1]",57882|57883|57884|57885,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Buzzing Venomfly,44,"[-1,-1]",1,successful,No
 83719,Wild Goreger,Normal,0,5,Boar,6941|8485,"[-1,-1]",52656|52834,Ashran,6941,0,"61.6,29.8|53.4,33.6|56.8,34.4|62.2,34.4",588,Ashran,6.0.1,,,Wild Goreger,5,"[-1,-1]",1,successful,No
-83719,Wild Goreger,Normal,0,5,Boar,6941|8485,"[-1,-1]",52656|52834,Ashran,8485,0,,1478,Ashran,6.0.1,,,Wild Goreger,5,"[-1,-1]",1,successful,No
 83720,Sporebat Darter,Normal,0,33,Sporebat,6941|8485,"[-1,-1]",57560,Ashran,6941,0,"37.6,39.2|37.6,35.6|36,37.2|30.6,30.8|33.4,37.4|35.6,31.8",588,Ashran,6.0.1,,0,Sporebat Darter,33,"[-1,-1]",1,successful,No
-83720,Sporebat Darter,Normal,0,33,Sporebat,6941|8485,"[-1,-1]",57560,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Sporebat Darter,33,"[-1,-1]",1,successful,No
 83740,Toxicfang Rylak,Normal,0,38,Chimaera,6722,"[-1,-1]",55092,Spires of Arak,6722,0,"55.4,27.2",542,Spires of Arak,6.0.1,,0,Toxicfang Rylak,38,"[-1,-1]",1,successful,No
 83746,Rukhmar,Elite,1,26,Bird of Prey,6722,"[-1,-1]",59089,Spires of Arak,6722,0,"47.1,78.4",542,Spires of Arak,6.0.1,,1,Rukhmar,26,"[-1,-1]",1,successful,No
 83804,Ashmaul Gutwrencher,Normal,0,5,Boar,6941|8485,"[-1,-1]",57962,Ashran,6941,0,"57.6,29.6|59.2,27|59.4,30.6|61,25.2",588,Ashran,6.0.1,,0,Ashmaul Gutwrencher,5,"[-1,-1]",1,successful,No
-83804,Ashmaul Gutwrencher,Normal,0,5,Boar,6941|8485,"[-1,-1]",57962,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Ashmaul Gutwrencher,5,"[-1,-1]",1,successful,No
 83815,Mastiff,Normal,0,52,Hound,6941|8485,"[1,-1]",30221|30222,Ashran,6941,0,"44.4,64.2|43.8,62.2|42.2,65.6|46.6,64.8",588,Ashran,6.0.1,,0,Mastiff,52,"[1,-1]",1,successful,No
-83815,Mastiff,Normal,0,52,Hound,6941|8485,"[1,-1]",30221|30222,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Mastiff,52,"[1,-1]",1,successful,No
 83840,Sand Snapper,Normal,0,8,Crab,6941|8485,"[-1,-1]",34670,Ashran,6941,0,"53.6,26.4|58.2,22.4|55.8,22.2|59.4,18.8|59.6,25.4|61.6,21.4",588,Ashran,6.0.1,,0,Sand Snapper,8,"[-1,-1]",1,successful,No
-83840,Sand Snapper,Normal,0,8,Crab,6941|8485,"[-1,-1]",34670,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Sand Snapper,8,"[-1,-1]",1,successful,No
 83841,Flat-Toothed Riverbeast,Normal,0,150,Riverbeast,6941|8485,"[0,0]",52414|52415,Ashran,6941,0,"56.6,21.4|59.6,20|61.8,19.8|58.2,27.2",588,Ashran,6.0.1,,0,Flat-Toothed Riverbeast,150,"[0,0]",1,successful,No
-83841,Flat-Toothed Riverbeast,Normal,0,150,Riverbeast,6941|8485,"[0,0]",52414|52415,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Flat-Toothed Riverbeast,150,"[0,0]",1,successful,No
 83843,Breezestrider Stallion,Normal,0,151,Stag,6755,"[0,0]",54412|54413,Nagrand,6755,0,"36,19.4|36.4,22.4|37.8,25.4|38.8,23.4|42.2,27.4",550,Nagrand,6.0.1,,0,Breezestrider Stallion,151,"[0,0]",1,successful,No
 83897,Razorback Hog,Normal,0,5,Boar,6722,"[-1,-1]",59301,Spires of Arak,6722,0,"50.6,62.6|56.4,56",542,Spires of Arak,6.0.1,,0,Razorback Hog,5,"[-1,-1]",1,successful,No
 83976,Dread Raven,Normal,0,26,Bird of Prey,6722,"[-1,-1]",59369,Spires of Arak,6722,0,"55.4,8.4",542,Spires of Arak,6.0.1,,0,Dread Raven,26,"[-1,-1]",1,successful,No
@@ -2791,12 +2783,9 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 84058,Bladefist Ravager,Normal,0,31,Ravager,6722,"[-1,-1]",58106,Spires of Arak,6722,0,"29.8,27.8",542,Spires of Arak,6.0.1,,0,Bladefist Ravager,31,"[-1,-1]",1,successful,No
 84083,Dread Raven,Elite,1,26,Bird of Prey,6722,"[-1,-1]",59369,Spires of Arak,6722,0,"58.4,8.4",542,Spires of Arak,6.0.1,,1,Dread Raven,26,"[-1,-1]",1,successful,No
 84097,Boneshallow Spider,Normal,0,3,Spider,6941|8485,"[-1,-1]",46898,Ashran,6941,0,"42.4,56.2|33.8,62.4|37,65.4|43.8,52.4|38.8,62.6|34.2,65.8|38,60.6|39,65.6",588,Ashran,6.0.1,,,Boneshallow Spider,3,"[-1,-1]",1,successful,No
-84097,Boneshallow Spider,Normal,0,3,Spider,6941|8485,"[-1,-1]",46898,Ashran,8485,0,,1478,Ashran,6.0.1,,,Boneshallow Spider,3,"[-1,-1]",1,successful,No
 84102,Cadaverous Vulture,Normal,0,26,Bird of Prey,6941|8485,"[-1,-1]",58162|58163,Ashran,6941,0,"38.4,60.6|37.2,63.2|39.8,56.6",588,Ashran,6.0.1,,0,Cadaverous Vulture,,"[-1,-1]",6,successful,No
-84102,Cadaverous Vulture,Normal,0,26,Bird of Prey,6941|8485,"[-1,-1]",58162|58163,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Cadaverous Vulture,,"[-1,-1]",6,successful,No
 84151,Gorge Rylak,Normal,0,38,Chimaera,6721,"[-1,-1]",53862,Gorgrond,6721,0,"45,51.4|46,43.8|44.4,58.4|42.4,60.2|44.2,55.4",543,Gorgrond,6.0.1,,0,Gorge Rylak,38,"[-1,-1]",1,successful,No
 84190,Boneshallow Spider,Normal,0,3,Spider,6941|8485,"[-1,-1]",46898,Ashran,6941,0,"44.2,53.6|43.4,58|45.6,50.8|42,59.6",588,Ashran,6.0.1,,,Boneshallow Spider,3,"[-1,-1]",1,successful,No
-84190,Boneshallow Spider,Normal,0,3,Spider,6941|8485,"[-1,-1]",46898,Ashran,8485,0,,1478,Ashran,6.0.1,,,Boneshallow Spider,3,"[-1,-1]",1,successful,No
 84233,Thrashtalon Vulture,Normal,0,7,Carrion Bird,6721|9786,"[0,0]",58217,Gorgrond,6721,0,"43.8,69.2|46.2,54.2|46.2,51.2|48.8,58.6|43.6,65.8",543,Gorgrond,6.0.1,,0,Thrashtalon Vulture,7,"[0,0]",1,successful,No
 84233,Thrashtalon Vulture,Normal,0,7,Carrion Bird,6721|9786,"[0,0]",58217,Gorgrond,9786,0,"45.2,73.8|43.2,68.4|49.6,59.2",543,Gorgrond,6.0.1,,0,Thrashtalon Vulture,7,"[0,0]",1,successful,No
 84341,Moonshell Crawler,Normal,0,8,Crab,6719,"[0,0]",18117|56803|58295,Shadowmoon Valley,6719,0,"26.2,5.2|28.8,10.4",539,Shadowmoon Valley,6.0.1,,0,Moonshell Crawler,8,"[0,0]",1,successful,No
@@ -2810,7 +2799,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 84642,Pond Skipper,Normal,0,126,Water Strider,6755,"[-1,-1]",58469,Nagrand,6755,0,"88.6,20.6|91,21.4|85.6,13.8",550,Nagrand,6.0.1,,0,Pond Skipper,126,"[-1,-1]",1,successful,No
 84643,Deep Strider,Normal,0,126,Water Strider,6755,"[-1,-1]",58410,Nagrand,6755,0,"91.4,20.8|83.8,12.4|90,17.4",550,Nagrand,6.0.1,,0,Deep Strider,126,"[-1,-1]",1,successful,No
 84644,Vilewing Rylak,Normal,0,38,Chimaera,6941|8485,"[-1,-1]",56068|58414,Ashran,6941,0,"54.6,68.8|59.4,67.4|55.2,66.8|58.2,69.8|59.6,58.4",588,Ashran,6.0.1,,0,Vilewing Rylak,38,"[-1,-1]",1,successful,No
-84644,Vilewing Rylak,Normal,0,38,Chimaera,6941|8485,"[-1,-1]",56068|58414,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Vilewing Rylak,38,"[-1,-1]",1,successful,No
 84793,Frost Wolf,Normal,0,1,Wolf,6720,"[1,1]",52598|52599,Frostfire Ridge,6720,0,"55.4,49.6",525,Frostfire Ridge,6.0.1,,0,Frost Wolf,1,"[1,1]",1,successful,No
 84798,Icehoof Calf,Normal,0,43,Clefthoof,6720,"[1,1]",54440|54590,Frostfire Ridge,6720,0,"55.4,49.4",525,Frostfire Ridge,6.0.1,,0,Icehoof Calf,43,"[1,1]",1,successful,No
 84799,Adolescent Snow Lurker,Normal,0,42,Worm,6720,"[1,1]",37551,Frostfire Ridge,6720,0,"54.4,49.6",525,Frostfire Ridge,6.0.1,,0,Adolescent Snow Lurker,42,"[1,1]",1,successful,No
@@ -2821,7 +2809,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 84866,Widow Wasp,Normal,0,44,Wasp,6722,"[-1,-1]",56043,Spires of Arak,6722,0,"43.4,49.4|43.4,46.4",542,Spires of Arak,6.0.1,,0,Widow Wasp,44,"[-1,-1]",1,successful,No
 84890,Festerbloom,Rare,4,68,Hydra,6722,"[-1,-1]",58554,Spires of Arak,6722,0,"54.4,39.4",542,Spires of Arak,6.0.1,,4,Festerbloom,68,"[-1,-1]",4,successful,No
 84893,Goregore,Rare Elite,2,5,Boar,6941|8485,"[-1,-1]",52698,Ashran,6941,0,"35.8,53.2",588,Ashran,6.0.1,,2,Goregore,5,"[-1,-1]",1,successful,No
-84893,Goregore,Rare Elite,2,5,Boar,6941|8485,"[-1,-1]",52698,Ashran,8485,0,,1478,Ashran,6.0.1,,2,Goregore,5,"[-1,-1]",1,successful,No
 84905,Stingtail Worker,Normal,0,44,Wasp,6722,"[0,0]",59194,Spires of Arak,6722,0,"58.4,45",542,Spires of Arak,6.0.1,,0,Stingtail Worker,44,"[0,0]",1,successful,No
 84909,Stingtail Drone,Normal,0,44,Wasp,6722,"[0,0]",58540,Spires of Arak,6722,0,"58.4,45",542,Spires of Arak,6.0.1,,0,Stingtail Drone,44,"[0,0]",1,successful,No
 84912,Sunderthorn,Rare,4,44,Wasp,6722,"[-1,-1]",58569,Spires of Arak,6722,0,"58.4,45",542,Spires of Arak,6.0.1,,4,Sunderthorn,44,"[-1,-1]",1,successful,No
@@ -2851,9 +2838,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 85695,Mistcreep Stinger,Normal,0,44,Wasp,6721,"[0,0]",56042,Gorgrond,6721,0,"51.6,67.2|53.6,66.6|50,69.4",543,Gorgrond,6.0.1,,0,Mistcreep Stinger,44,"[0,0]",1,successful,No
 85743,Highlands Riverbeast,Normal,0,150,Riverbeast,6721,"[-1,-1]",52417,Gorgrond,6721,0,"45,91.2|47.4,88.6",543,Gorgrond,6.0.1,,0,Highlands Riverbeast,150,"[-1,-1]",1,successful,No
 85753,Kaliri Skyterror,Normal,0,26,Bird of Prey,6941|8485,"[-1,-1]",58833,Ashran,6941,0,"58,41|46.6,26.2|55,41.6|59.4,43|53,44.2|49.6,43|54,35.2",588,Ashran,6.0.1,,0,Kaliri Skyterror,26,"[-1,-1]",1,successful,No
-85753,Kaliri Skyterror,Normal,0,26,Bird of Prey,6941|8485,"[-1,-1]",58833,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Kaliri Skyterror,26,"[-1,-1]",1,successful,No
 85756,Onyx Ravager,Normal,0,31,Ravager,6941|8485,"[-1,-1]",55972,Ashran,6941,0,"56.6,39.6|56.8,44.4|57.8,41.6|58.8,44.2|59,37.4|54.4,35.8|55.2,33.4",588,Ashran,6.0.1,,0,Onyx Ravager,31,"[-1,-1]",1,successful,No
-85756,Onyx Ravager,Normal,0,31,Ravager,6941|8485,"[-1,-1]",55972,Ashran,8485,0,,1478,Ashran,6.0.1,,0,Onyx Ravager,31,"[-1,-1]",1,successful,No
 85760,Blooming Mandragora,Normal,0,68,Hydra,6721,"[-1,-1]",55765|55783,Gorgrond,6721,0,"45.4,92.2|47,89.4|49.6,72.4|46.4,78.2|47.6,81.6",543,Gorgrond,6.0.1,,0,Blooming Mandragora,68,"[-1,-1]",4,successful,No
 85762,Highlands Calfling,Normal,0,150,Riverbeast,6721,"[0,0]",59084|59085,Gorgrond,6721,0,"46.4,89.4|45.4,91.4|48,87.6",543,Gorgrond,6.0.1,,0,Highlands Calfling,150,"[0,0]",1,successful,No
 85779,Verdant Ravager,Normal,0,31,Ravager,6721,"[-1,-1]",55975,Gorgrond,6721,0,"48.4,75.4",543,Gorgrond,6.0.1,,0,Verdant Ravager,31,"[-1,-1]",1,successful,No
@@ -3035,7 +3020,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 91824,Bluffwalker Goat,Normal,0,129,Gruffhorn,7541,"[0,0]",40024|40075,Stormheim,7541,0,"79.4,68.4|44,76.4|53.4,85.4|46.2,74.8|80.4,65.8|33.8,45.6|34.2,35.6|39,53.2|45,20.6|45.4,66.6|32,56.2|32.8,33.8|33,31.8|35.2,31|35.8,38|36.4,67.6|37.2,46.4|38,66|39,55.6|39.2,25.4|39.6,28.6|44.8,68.8|46.8,77.4|52,78.4|54,93|59.4,91.6|73.6,85.2",634,Stormheim,7.0.3,Legion,0,Bluffwalker Goat,129,"[0,0]",1,successful,No
 91847,Risen Hound,Normal,0,52,Hound,7558,"[-1,-1]",64471,Val'sharah,7558,0,"38,59.4|40.4,60|40,63.4|36.4,63.2|38.4,65",641,Val'sharah,7.0.3,Legion,0,Risen Hound,52,"[-1,-1]",6,successful,No
 91916,Spiked Rockworm,Normal,0,42,Worm,6941|8485,"[-1,-1]",64752,Ashran,6941,0,"51.4,56.2|53.8,56.4|50.4,54.4|51,60.6",588,Ashran,6.2.0,Fury of Hellfire,0,Spiked Rockworm,42,"[-1,-1]",1,successful,No
-91916,Spiked Rockworm,Normal,0,42,Worm,6941|8485,"[-1,-1]",64752,Ashran,8485,0,,1478,Ashran,6.2.0,Fury of Hellfire,0,Spiked Rockworm,42,"[-1,-1]",1,successful,No
 92040,Fenri,Rare,4,52,Hound,7588,"[-1,-1]",70084,Helheim,7588,0,"84.4,49",649,Helheim,7.0.3,Legion,4,Fenri,52,"[-1,-1]",1,successful,No
 92117,Gorebeak,Rare,4,7,Carrion Bird,7558,"[-1,-1]",31979|31981,Val'sharah,7558,0,"59.4,76.4",641,Val'sharah,7.0.3,Legion,4,Gorebeak,7,"[-1,-1]",1,successful,No
 92332,Hulking Gnarlvine,Normal,0,68,Hydra,7558,"[-1,-1]",55777,Val'sharah,7558,0,"63.4,55.6|63.8,58.4|67,58.6",641,Val'sharah,7.0.3,Legion,0,Hulking Gnarlvine,68,"[-1,-1]",4,successful,No
@@ -4738,22 +4722,9 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 144831,Colossal Spadefoot,Rare Elite,2,291,Hopper,9440|9469|9496,"[-1,-1]",76789,Havenswood,9548,0,"54,79.6|42.6,74.8|36.4,46|34.4,48.2|46.8,70.8|48.8,75.8",1336,Havenswood,8.1.0,Tides of Vengeance,2,Colossal Spadefoot,291,"[-1,-1]",1,successful,No
 144833,Whiptongue,Rare Elite,2,291,Hopper,9440|9469,"[-1,-1]",76788,Verdant Wilds,9440,0,"66.4,54.6|55.2,76.2|39.2,55.4|49.8,73.6|68.6,55.2|48.8,71.4|52.6,75.2|54.6,66.4|57.2,75.2|67,80|51.2,65.4|63,70.2|65.2,57|34,55.6|45.8,60.4|51.4,47.2|52.6,62.2|54,79.6|63.4,23.4|69.6,80.8|39.4,51|43.2,59|43.4,51.4|45.6,49.8|46.6,66.8|47.2,75.6|53.2,69|55.6,83.8|55.8,59.8|59.6,83.4|60.4,55.4|61.6,59.4|62,67.2|62.6,72.8|63,64.8|64.6,82.2|65.8,64.6|66.8,82.6|70.2,63.8|72.2,60.2|76.2,34",1034,Verdant Wilds,8.1.0,Tides of Vengeance,2,Whiptongue,291,"[-1,-1]",1,successful,No
 144833,Whiptongue,Rare Elite,2,291,Hopper,9440|9469,"[-1,-1]",76788,Un'gol Ruins,9469,0,"35.2,42.8|46,22|46.8,25|57.4,64.2|58.8,24.6|59,56.2|64.4,59.8|68.4,54.4|70.6,60.4",981,Un'gol Ruins,8.1.0,Tides of Vengeance,2,Whiptongue,291,"[-1,-1]",1,successful,No
-144837,Darkshore Stag,Normal,0,151,Stag,10058|148|10226,"[-1,-1]",70442|70444,Darkshore,10058,0,"50.4,40.2|36.2,56.2|39,60.2|51.2,45.8|52.2,23.8|53.6,30.4|39.4,47.4|54.2,26|52,38.4|52.8,44.4|39,56.4|40.4,80.2|42.2,85|44.6,52.6|47.8,39|36.2,85.4|40.2,63.4|44,54.6|45.6,28|50,26.4|54.4,43|56,29|58.6,47.8|34,82.8|42.2,49.4|44,87.8|46.6,48.2|53,21.4|56.2,32.6",1203,Darkshore,8.1.0,Tides of Vengeance,0,Darkshore Stag,151,"[-1,-1]",1,successful,No
-144837,Darkshore Stag,Normal,0,151,Stag,10058|148|10226,"[-1,-1]",70442|70444,Darkshore,10084,0,"53.4,30.2|50.8,40.4",1332,Darkshore,8.1.0,Tides of Vengeance,0,Darkshore Stag,151,"[-1,-1]",1,successful,No
-144837,Darkshore Stag,Normal,0,151,Stag,10058|148|10226,"[-1,-1]",70442|70444,Darkshore,10226,0,"47.8,40.6|51.4,37.8|52.6,40|53.4,34.2|49,43.6|51.4,42.6",1333,Darkshore,8.1.0,Tides of Vengeance,0,Darkshore Stag,151,"[-1,-1]",1,successful,No
-144837,Darkshore Stag,Normal,0,151,Stag,10058|148|10226,"[-1,-1]",70442|70444,Darkshore,10227,0,"46,28.4|36.4,60|41,64.4|43.8,53.4",1338,Darkshore,8.1.0,Tides of Vengeance,0,Darkshore Stag,151,"[-1,-1]",1,successful,No
 144837,Darkshore Stag,Normal,0,151,Stag,10058|148|10226,"[-1,-1]",70442|70444,Darkshore,148,0,"40.4,35.4|42.8,48.8|39.6,33.4|43,51.8|38.8,47.4|42,30.4|44.4,21.6|47.4,29.6",62,Darkshore,8.1.0,Tides of Vengeance,0,Darkshore Stag,151,"[-1,-1]",1,successful,No
-144839,Whitetail Doe,Normal,0,151,Stag,10226|10058|148,"[0,0]",70450|70451,Darkshore,10058,0,"46,34.8|54.4,51|56.8,33.4|52.6,52|56.2,52|56.4,36.6",1203,Darkshore,8.1.0,Tides of Vengeance,0,Whitetail Doe,151,"[0,0]",1,successful,No
-144839,Whitetail Doe,Normal,0,151,Stag,10226|10058|148,"[0,0]",70450|70451,Darkshore,10084,0,"49.4,46.6|46.6,34.4|54.8,50.2",1332,Darkshore,8.1.0,Tides of Vengeance,0,Whitetail Doe,151,"[0,0]",1,successful,No
-144839,Whitetail Doe,Normal,0,151,Stag,10226|10058|148,"[0,0]",70450|70451,Darkshore,10226,0,"55.2,29.6|53.8,39.4|47.2,25.4|52.2,35|56.4,35.2|45.2,31|47.6,40.6|49.2,28.4|49.2,43.8|52.2,45.6|54,32.8",1333,Darkshore,8.1.0,Tides of Vengeance,0,Whitetail Doe,151,"[0,0]",1,successful,No
 144839,Whitetail Doe,Normal,0,151,Stag,10226|10058|148,"[0,0]",70450|70451,Darkshore,148,0,"39.4,32.8|49.4,25|41.4,35.8",62,Darkshore,8.1.0,Tides of Vengeance,0,Whitetail Doe,151,"[0,0]",1,successful,No
-144842,Tide Crawler,Normal,0,8,Crab,10058|10226|148,"[0,0]",1939,Darkshore,10058,0,"53,20.6|54.4,23.2|44.4,35.4|31.8,79.6",1203,Darkshore,8.1.0,Tides of Vengeance,0,Tide Crawler,8,"[0,0]",1,successful,No
-144842,Tide Crawler,Normal,0,8,Crab,10058|10226|148,"[0,0]",1939,Darkshore,10084,0,"52,21.6|44.4,35.4|54.4,22.2|31.8,79.2",1332,Darkshore,8.1.0,Tides of Vengeance,0,Tide Crawler,8,"[0,0]",1,successful,No
-144842,Tide Crawler,Normal,0,8,Crab,10058|10226|148,"[0,0]",1939,Darkshore,10226,0,"44.6,28.2|47.8,21.2|50.2,21.4|45,30.4|46.2,37.4|46.2,41.8|55.6,22.4",1333,Darkshore,8.1.0,Tides of Vengeance,0,Tide Crawler,8,"[0,0]",1,successful,No
 144842,Tide Crawler,Normal,0,8,Crab,10058|10226|148,"[0,0]",1939,Darkshore,148,0,"39.4,32.2|43.4,19.4|37.4,76.2|43.4,28.8|37,65.4|45.8,18.6|57.2,16.6",62,Darkshore,8.1.0,Tides of Vengeance,0,Tide Crawler,8,"[0,0]",1,successful,No
-144993,Crazed Thistlebear,Normal,0,4,Bear,148|10058|10226,"[-1,-1]",14316,Darkshore,10058,0,"50.2,41.2|53.6,30.4|56,37.8|56.4,35.2|50,28|57.4,41.6|60.2,45.2",1203,Darkshore,8.1.0,Tides of Vengeance,0,Crazed Thistlebear,4,"[-1,-1]",1,successful,No
-144993,Crazed Thistlebear,Normal,0,4,Bear,148|10058|10226,"[-1,-1]",14316,Darkshore,10084,0,"50.6,40.4|53.8,31|56,37.4",1332,Darkshore,8.1.0,Tides of Vengeance,0,Crazed Thistlebear,4,"[-1,-1]",1,successful,No
-144993,Crazed Thistlebear,Normal,0,4,Bear,148|10058|10226,"[-1,-1]",14316,Darkshore,10226,0,"55.8,40.4|57,36.2",1333,Darkshore,8.1.0,Tides of Vengeance,0,Crazed Thistlebear,4,"[-1,-1]",1,successful,No
 144993,Crazed Thistlebear,Normal,0,4,Bear,148|10058|10226,"[-1,-1]",14316,Darkshore,148,0,"40.4,81.8|50.4,32.4|49.4,24.8|51.2,29.8|55.4,23.8|45.8,43.8|61.4,22.8",62,Darkshore,8.1.0,Tides of Vengeance,0,Crazed Thistlebear,4,"[-1,-1]",1,successful,No
 145110,Ravasaur Sniffer,Normal,0,11,Raptor,8568|8567,"[-1,1]",83646|83647|83648,Tiragarde Sound,8567,0,"76.8,39.4",895,Tiragarde Sound,8.1.0,Tides of Vengeance,0,Ravasaur Sniffer,11,"[-1,1]",1,successful,No
 145110,Ravasaur Sniffer,Normal,0,11,Raptor,8568|8567,"[-1,1]",83646|83647|83648,Boralus,8568,0,"78.2,73|63.8,60.4|69.4,59.6|71.4,62.8|78.4,75|67,58.8|71.2,69.2|74.4,69.2|76.2,72|66.6,60.8|69,61.6|73,64.4|78.2,70.8|70,66.6|66.6,63.8|67.8,55.4",1161,Boralus,8.1.0,Tides of Vengeance,0,Ravasaur Sniffer,11,"[-1,1]",1,successful,No
@@ -5013,7 +4984,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 158976,Shrieking Evedweller,Normal,0,24,Bat,10413,"[-1,-1]",92702|92703,Revendreth,10413,0,"29.4,28.6|33.4,28.6|26.8,23|31.4,25.6|34.6,13.4|26,28.8|36,27.6",1525,Revendreth,9.0.1,,0,Shrieking Evedweller,24,"[-1,-1]",1,successful,No
 158978,Great Granitefur,Elite,1,128,Stone Hound,10413,"[-1,-1]",93160|93163,Revendreth,10413,0,"28.8,15.4|37.8,23.4|30.4,13.8|35.8,22.8|27.4,22.4",1525,Revendreth,9.0.1,,1,Great Granitefur,128,"[-1,-1]",1,successful,No
 158979,Silent Proctor,Normal,0,128,Stone Hound,10413,"[-1,-1]",93857|95362,Revendreth,10413,0,"72.6,45.6|65.4,43.4|69.2,43|73,47.8|72.6,43.6",1525,Revendreth,9.0.1,,0,Silent Proctor,128,"[-1,-1]",1,successful,No
-159016,Agitated Gorm,Normal,0,292,Carapid,11510,[],94199,,11510,0,,1739,Ardenweald,9.0.1,,0,Agitated Gorm,292,[],1,successful,No
+159016,Agitated Gorm,Normal,0,292,Carapid,11510,[],94199,,11510,0,,1565,Ardenweald,9.0.1,,0,Agitated Gorm,292,[],1,successful,No
 159026,Carved Tracker,Normal,0,128,Stone Hound,10413,"[-1,-1]",96492,Revendreth,10413,0,"72.8,55.6|71.4,49.4|74.4,49.4|77,49.6",1525,Revendreth,9.0.1,,0,Carved Tracker,128,"[-1,-1]",1,successful,No
 159029,Juvenile Runedeer,Normal,0,151,Stag,11510,"[0,0]",97281|97282,Ardenweald,11510,0,"62.4,51.4|58.4,50|61.4,56.4|62.4,54.2|57.6,54.6|68,18.2",1565,Ardenweald,9.0.1,,0,Juvenile Runedeer,151,"[0,0]",1,successful,No
 159030,Runestag,Normal,0,151,Stag,11510,"[0,0]",93781|93782|93785|93786,Ardenweald,11510,0,"61.8,49.6|62.2,54.8|57.2,53.6|58.8,49.2|62.4,51.6|58.8,55.8|68,18.4",1565,Ardenweald,9.0.1,,0,Runestag,151,"[0,0]",1,successful,No
@@ -5112,7 +5083,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 162336,Neferset Crocolisk,Normal,0,6,Crocolisk,10833,"[-1,-1]",32814,Uldum,10833,0,"63.6,79.2|67.2,77|68,73.8|57.4,73.8|65.8,75.4|66.4,72.4|59.6,74.6|64.6,66.8|68.4,70.8|70,76.8|58.4,76.8|58.4,64.8|71,78.6",1527,Uldum,8.3.0,Visions of N'Zoth,0,Neferset Crocolisk,6,"[-1,-1]",1,successful,No
 162360,Camel,Normal,0,298,Camel,10833,"[0,0]",35899|35900|35901|37205,Uldum,10833,0,"31.4,43.8|33.4,23.6|34,32.2|32.4,30.8|33,18.6|33.2,45|33.4,28.2|33.6,55.2|34,20.8|35.2,51",1527,Uldum,8.3.0,Visions of N'Zoth,0,Camel,298,"[0,0]",1,successful,No
 162361,Tiger,Normal,0,2,Cat,10833,"[-1,-1]",34248,Uldum,10833,0,"49.8,77.8|49.8,79.8|48,84.4|50.6,83.6|46.6,78.4|51.6,80.8|46.4,81.2|49.6,73.4",1527,Uldum,8.3.0,Visions of N'Zoth,0,Tiger,2,"[-1,-1]",1,successful,No
-162363,Temple Scarab,Normal,0,53,Beetle,5034,[],37580,,5034,0,,1330,Uldum,8.3.0,Visions of N'Zoth,0,Temple Scarab,53,[],1,successful,No
+162363,Temple Scarab,Normal,0,53,Beetle,5034,[],37580,,5034,0,,1527,Uldum,8.3.0,Visions of N'Zoth,0,Temple Scarab,53,[],1,successful,No
 162364,Sand Scorpid,Normal,0,20,Scorpid,10833,[],2488|2729,Uldum,10833,0,"50.4,85.2|50.6,83.2|51,87.2",1527,Uldum,8.3.0,Visions of N'Zoth,0,Sand Scorpid,20,[],1,successful,No
 162368,Diseased Vulture,Normal,0,7,Carrion Bird,10833,"[-1,-1]",10825,Uldum,10833,0,"41.8,70.4",1527,Uldum,8.3.0,Visions of N'Zoth,0,Diseased Vulture,7,"[-1,-1]",1,successful,No
 162373,Ferndweller Wasp,Normal,0,44,Wasp,10833,"[-1,-1]",37743,Uldum,10833,0,"49.8,33.4|58,30.4|46.6,27.6|52,32.4|57.2,46.2|58.6,57|60.6,77.6|67.4,75.2|62.2,80.2|70,76.8|47.4,42.4|56.8,33.4|57.4,55|47.8,33.6|48.6,35.6|50.6,30.2|60.2,36.2|66.8,71.2|46.8,40.4|55.8,23.4|56,28.8|57.2,50.8|58.2,27.6|60,30.8|65.6,74.2|66.2,77.2|44.8,29.6|45.2,43|47.8,31.4|50.8,35.6|58.2,74.8|58.8,60|63.4,66|65.6,69.4|69.6,71.4|71,78.8|50.4,43|51.4,49|54.8,33.4|55.4,31|55.6,25.8|57.8,23.2|58,80|61.4,41.2|65.4,66.4|67.6,68.4|50.4,46|59.6,83.4|61.6,82.8",1527,Uldum,8.3.0,Visions of N'Zoth,0,Ferndweller Wasp,44,"[-1,-1]",1,successful,No
@@ -5193,7 +5164,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 164479,Bonefang,Elite,1,38,Chimaera,12916,[],94926,The Necrotic Wake,12916,0,"20.5,40.3",1666,The Necrotic Wake,9.0.1,,1,Bonefang,38,[],1,successful,No
 164563,Vicious Gargon,Elite,1,128,Stone Hound,12831,"[-1,-1]",93160|93163,Halls of Atonement,12831,0,,1663,Halls of Atonement,9.0.1,,1,Vicious Gargon,128,"[-1,-1]",1,successful,No
 164587,Satiated Sawtooth,Normal,0,38,Chimaera,11462,"[-1,-1]",94925|98675,Maldraxxus,11462,0,"42.4,48.4",1536,Maldraxxus,9.0.1,,0,Satiated Sawtooth,38,"[-1,-1]",1,successful,No
-164642,Bloodraged Spitter,Normal,0,292,Carapid,11510,[],94207,,11510,0,,1739,Ardenweald,9.0.1,,0,Bloodraged Spitter,292,[],1,successful,No
+164642,Bloodraged Spitter,Normal,0,292,Carapid,11510,[],94207,,11510,0,,1565,Ardenweald,9.0.1,,0,Bloodraged Spitter,292,[],1,successful,No
 164819,Ariella,Normal,0,160,Feathermane,10534,"[-1,-1]",93464,Bastion,10534,0,"45.8,36.4",1533,Bastion,9.0.1,,0,Ariella,160,"[-1,-1]",1,successful,No
 164826,Wandering Boar,Normal,0,5,Boar,10424,"[0,0]",138762,Exile's Reach,10424,0,"64.2,68.8",1409,Exile's Reach,9.0.1,,0,Wandering Boar,5,"[0,0]",1,successful,No
 164827,Sharpbeak Hawk,Normal,0,26,Bird of Prey,10424,"[0,0]",140087|140088|140089|140090,Exile's Reach,10424,0,"62,70.4|62.6,68.4|60.8,61|54.2,49.8|62.4,65.2",1409,Exile's Reach,9.0.1,,0,Sharpbeak Hawk,26,"[0,0]",1,successful,No
@@ -5280,8 +5251,8 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 166930,Skullboar Spinebreaker,Normal,0,5,Boar,10534,"[0,0]",97324,Bastion,10534,0,"39.4,51",1533,Bastion,9.0.1,,0,Skullboar Spinebreaker,5,"[0,0]",1,successful,No
 166933,Ventun the Ravenous,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast,9.0.1,,0,Ventun the Ravenous,52,"[-1,-1]",1,successful,No
 166934,Lor the Loyal,Normal,0,52,Hound,13400,"[-1,-1]",92628,Skoldus Hall,13400,189,,1911,Torghast,9.0.1,,0,Lor the Loyal,52,"[-1,-1]",1,successful,No
-166966,Runestag,Normal,0,151,Stag,11510,[],93781|93782|93785|93786,,11510,0,,1739,Ardenweald,9.0.1,,0,Runestag,151,[],1,successful,No
-166967,Juvenile Runedeer,Normal,0,151,Stag,11510,[],97281|97282,,11510,0,,1739,Ardenweald,9.0.1,,0,Juvenile Runedeer,151,[],1,successful,No
+166966,Runestag,Normal,0,151,Stag,11510,[],93781|93782|93785|93786,,11510,0,,1565,Ardenweald,9.0.1,,0,Runestag,151,[],1,successful,No
+166967,Juvenile Runedeer,Normal,0,151,Stag,11510,[],97281|97282,,11510,0,,1565,Ardenweald,9.0.1,,0,Juvenile Runedeer,151,[],1,successful,No
 167111,Spinemaw Staghorn,Elite,1,292,Carapid,13334,"[-1,-1]",94190,Mists of Tirna Scithe,13334,0,,1669,Mists of Tirna Scithe,9.0.1,,1,Spinemaw Staghorn,,"[-1,-1]",1,successful,No
 167113,Spinemaw Acidgullet,Elite,1,292,Carapid,13334,"[-1,-1]",94205,Mists of Tirna Scithe,13334,0,,1669,Mists of Tirna Scithe,9.0.1,,1,Spinemaw Acidgullet,292,"[-1,-1]",1,successful,No
 167116,Spinemaw Reaver,Elite,1,44,Wasp,13334,"[-1,-1]",95692,Mists of Tirna Scithe,13334,0,,1669,Mists of Tirna Scithe,9.0.1,,1,Spinemaw Reaver,44,"[-1,-1]",1,successful,No
@@ -5552,7 +5523,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 170606,Juvenile Cloudfeather,Normal,0,7,Carrion Bird,10534,"[-1,-1]",94752,Bastion,10534,0,"47.2,16.4",1533,Bastion,9.0.1,,0,Juvenile Cloudfeather,7,"[-1,-1]",1,successful,No
 170659,"Basilofos, King of the Hill",Rare,4,160,Feathermane,10534,"[-1,-1]",93463,Bastion,10534,0,"48.4,50.4",1533,Bastion,9.0.1,,4,"Basilofos, King of the Hill",160,"[-1,-1]",1,successful,No
 170674,Runestag,Normal,0,151,Stag,11510,"[0,0]",93785|93793,Ardenweald,11510,0,"66.4,53.2|66.4,59.6|66.6,57.6|63.4,56",1565,Ardenweald,9.0.1,,0,Runestag,151,"[0,0]",1,successful,No
-170695,Runestag Bull,Normal,0,151,Stag,11510,[],93783,,11510,0,,1739,Ardenweald,9.0.1,,0,Runestag Bull,151,[],1,successful,No
+170695,Runestag Bull,Normal,0,151,Stag,11510,[],93783,,11510,0,,1565,Ardenweald,9.0.1,,0,Runestag Bull,151,[],1,successful,No
 170698,Solstar Hunter,Normal,0,7,Carrion Bird,11510,"[-1,-1]",58165|58167,Ardenweald,11510,0,"43.8,27|45.6,28|43.6,24.8|45.6,25",1565,Ardenweald,9.0.1,,0,Solstar Hunter,7,"[-1,-1]",1,successful,No
 170699,Solstar Fledgling,Normal,0,7,Carrion Bird,11510,"[-1,-1]",58714|94751,Ardenweald,11510,0,"44.2,27.4|46.6,29.4",1565,Ardenweald,9.0.1,,0,Solstar Fledgling,7,"[-1,-1]",1,successful,No
 170723,Anima-Gorged Feaster,Normal,0,34,Ray,13366,"[0,0]",97450,Shattered Grove,13366,0,"22.6,55.8|63.8,58.4|22.6,52.8|25,53.2|25.8,55.6|25.2,62.8|55.6,62|20.4,56.2|21.6,59|23.6,59|25.2,50.4|65.8,55.8|27.6,48.4|27.8,50.6|27.8,53.4|53.2,63.8|53.8,71.8|64,54.8|66.8,59.2|68.2,54.4|69.6,59.8|71,65.2|71.6,62.2|15.8,55.8|29.8,41.6|41.4,68.2|57,70.4|61.4,59.6|17.8,57.8|53.6,61.2|55.8,59.2|58.8,71.8|59.2,53.6|61.6,54|61.8,71|63.6,51.8|70.8,67.6|22,61.4|25,47.2|25.8,57.8|25.8,64.8|47.6,66.8|51.2,70.2|52,67.2|53.8,66|56,56.4|62.6,56.4|64,60.6|71.4,58|14.4,58|22,49.6|27.6,44|27.8,56.6|46.8,61.4|48.8,72.8|51,65|52,73.8|60.8,73.8|73.8,38.8|75.4,40.4|12.8,43.2|19,60.2|19.8,63|20,53|25.6,60|27.6,46.4|39,44|40.4,65|45,70.6|56,73.4|56.4,54.4|63.4,73|67.4,57|73.2,60.2|13.8,55.8|14.8,44.4|17.2,53.6|26,39.6|28.4,62.2|56,67.2|58.4,60.8|59.4,51.2|67.4,61.8|67.8,68.2|69,65|74,63.6|12.2,40.4|21,41.8|25.8,41.8|27.2,67|39.4,41.8|55,75.2|59.8,69|60.4,64.6|61.2,48.8|63.6,48.8|73.2,67.4|13.4,49|22.6,45.6|25.4,37.6|28.8,59.8|29.8,47.6|30.2,52.4|46.4,64.2|48.4,62.8|57,64.8|59,55.8|62.2,76.2|69.8,70.8|74,42|77.8,41.2|12.6,52.2|15.2,51.2|15.4,40.6|17.8,43.2|33.8,45.6|33.8,53.6|36.2,53.6|38.2,53.4|40.2,62.2|43,71.6|44.2,60.4|64.8,42.2|65.4,71|73.2,55|11,47.6|12.6,46|13.2,63.2|16,49|23,39.2|28.8,38.2|31.4,57.4|34.6,57.4|38,56.8|39.4,47.4|40.8,59.4|44.6,74.2|63.2,68.4|66.8,65.8|67.8,71.2|69.4,42.8|76,48|79.2,43.2|82,44.8|10,45.4|12,37.6|16.4,37.8|17.8,36|18.4,67.8|30.8,54.4|38,60.4|38.6,49.8|48.6,58.4|62.6,43.6|65.2,45|65.4,73.2|66.2,47.2|67.4,44.4|70.6,35.2|72,42.8|72.6,49.2|74.6,50.2|77,34.4|78.2,36.8|80.4,34.6",1691,Shattered Grove,9.0.1,,0,Anima-Gorged Feaster,34,"[0,0]",1,successful,No
@@ -7765,7 +7736,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 231809,Emboldened Mawrat,Normal,0,127,Rodent,11400|-12,"[-1,-1]",95749,The Maw,11400,0,"32.4,20.8|34,19.4|31.4,22.6|30.2,30.4|33.8,17.4|25.4,30.6|26.2,34|31.4,27.4|24.4,28.6|28,30.6",1543,The Maw,11.2.7,Midnight Prologue: The Warning,0,Emboldened Mawrat,127,"[-1,-1]",1,successful,No
 231986,Deepwater Matriarch,Elite,1,8,Crab,10416,"[-1,-1]",124128,Siren Isle,10416,0,"58.4,72.2|56.6,65.4|57.6,69.4|60.2,68|58.4,74.6|54.4,63.4|56.4,73.4|58.6,63.8|60.6,70.6|56.4,67.8|59.2,66|60.8,73.4|60.4,75.8|54,61.2|58,61.4|63.6,66.2|58.6,55",2369,Siren Isle,11.0.7,Siren Isle,1,Deepwater Matriarch,8,"[-1,-1]",1,successful,No
 232098,Chowdar,Rare,4,296,Blood Beast,15781,"[-1,-1]",78853,"Tazavesh, the Veiled Market",15781,0,"72,80.4|77.4,75.4|73.2,78.4|75.4,77.4|71.4,83|79.4,75.4|81.6,75.4|72.4,84.8|73.4,76.4",2472,Tazavesh,11.2.0,Ghosts of K'aresh,4,Chowdar,296,"[-1,-1]",1,successful,No
-232106,Brightscale Wyrm,Normal,0,35,Serpent,15829,[],144230,Magisters' Terrace,15829,,,348,Magisters' Terrace,12.0.0,Midnight,0,Brightscale Wyrm,35,[],1,successful,No
+232106,Brightscale Wyrm,Normal,0,35,Serpent,15829,[],144230,Magisters' Terrace,15829,0,,2511,Magisters' Terrace,12.0.0,Midnight,0,Brightscale Wyrm,35,[],1,successful,No
 232111,The Nightreaver,Rare,4,34,Ray,15336,"[-1,-1]",137104,K'aresh,15336,0,"52.6,57.4",2371,K'aresh,11.2.0,Ghosts of K'aresh,4,The Nightreaver,34,"[-1,-1]",1,successful,No
 232193,Stalker of the Wastes,Rare,4,32,Warp Stalker,15336,"[-1,-1]",124299,K'aresh,15336,0,"76.4,41.4",2371,K'aresh,11.2.0,Ghosts of K'aresh,4,Stalker of the Wastes,32,"[-1,-1]",1,successful,No
 232195,Urmag,Rare,4,292,Carapid,15336,"[-1,-1]",75598,K'aresh,15336,0,"69.4,50",2371,K'aresh,11.2.0,Ghosts of K'aresh,4,Urmag,292,"[-1,-1]",1,successful,No
@@ -7789,7 +7760,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 235413,Territorial Netherwasp,Normal,0,44,Wasp,15458,"[-1,-1]",80502|115076,Voidstorm,15458,0,"36.2,59.4",2405,Voidstorm,12.0.0,Midnight,0,Territorial Netherwasp,44,"[-1,-1]",1,successful,No
 235414,Ravenous Shredclaw,Normal,0,315,Whiptail,15458,"[-1,-1]",125773,Voidstorm,15458,0,"35.6,58.8",2405,Voidstorm,12.0.0,Midnight,0,Ravenous Shredclaw,315,"[-1,-1]",1,successful,No
 235415,Hungry Kilivore,Normal,0,31,Ravager,15458,"[-1,-1]",126375,Voidstorm,15458,0,"36,59.2",2405,Voidstorm,12.0.0,Midnight,0,Hungry Kilivore,31,"[-1,-1]",1,successful,No
-235980,Dragonhawk,Normal,0,30,Dragonhawk,15969,[],124925|124926|124928,Silvermoon City,15969,0,"54.6,54.4|64.8,83.2",2393,Silvermoon City,12.0.0,Midnight,0,Dragonhawk,30,[],1,successful,No
 236165,Dragonhawk Mossbeak,Normal,0,30,Dragonhawk,15947,"[0,0]",124014,Zul'Aman,15947,0,"54.2,21.4|55.6,19.6|53,18.4|51.8,21.2",2437,Zul'Aman,12.0.0,Midnight,0,Dragonhawk Mossbeak,30,"[0,0]",1,successful,No
 236166,Dragonhawk Plumesparker,Normal,0,30,Dragonhawk,15947,"[0,0]",124933,Zul'Aman,15947,0,"54.2,20.4|50.8,22.4|52,19|51,24.6|54,17.8|55.4,23",2437,Zul'Aman,12.0.0,Midnight,0,Dragonhawk Plumesparker,30,"[0,0]",1,successful,No
 236168,Cinderdig Amazard,Normal,0,288,Lizard,15947,"[-1,-1]",136472,Zul'Aman,15947,0,"53.4,22.6|55.6,21.8",2437,Zul'Aman,12.0.0,Midnight,0,Cinderdig Amazard,288,"[-1,-1]",1,successful,No
@@ -8103,7 +8073,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 250118,Riptalon Eviscerator,Normal,0,26,Bird of Prey,15947,"[-1,-1]",124967,Zul'Aman,15947,0,"22.8,70.6|25.6,38.2|26.8,30.2|27.8,70",2437,Zul'Aman,12.0.0,Midnight,0,Riptalon Eviscerator,26,"[-1,-1]",1,successful,No
 250120,Keen-Eye Riptalon,Normal,0,26,Bird of Prey,15947,"[0,0]",124214|124216,Zul'Aman,15947,0,"39.4,78.2|35.8,81.8|33.4,75.8|37.6,83.2|53.2,85.2|32.6,83.4|42.8,71.4|48.8,76.8|53,78.2|54,80.2|30.2,44.8|33,73.6|38.6,67.2|42,68.2|42.2,76.4|50,73.4|50.6,78.4|51,76.2|54.4,82.6|27.6,42.2|32.8,69.4|33.6,77.8|34.2,64.2|35.4,68|39.6,84|41.2,79.8|27.8,63.4|29.2,73.4|29.4,41.2|31.2,37.6|31.4,41.8|41.4,82.8|49.4,82|28,35|28.8,32.2|29.8,66|29.8,76.2|31.8,65|32.8,85.6|33.6,43.2|35.6,62.2|38.4,70.2|44.6,74|46.8,70.6|51.2,87.8|51.4,70|53.8,87.6|55.8,71.2",2437,Zul'Aman,12.0.0,Midnight,0,Keen-Eye Riptalon,26,"[0,0]",1,successful,No
 250123,Chitterfang Scurrier,Normal,0,127,Rodent,15947,"[0,0]",125342,Zul'Aman,15947,0,"43.4,43.8|29.4,74.4|48,48.4|28.4,22.8|31.8,26.4|44.4,57.4|24.4,69|29,80|33.2,16.2|42.2,66.6|45.4,36.8|46.6,41|46.6,87.4|48.4,85.2|55.6,70.4|57,80.4|30,72.4|31.6,75.4|38,20.2|43.6,60.2|45,90.8|46.4,63.4|48.8,41.4|49.2,72.2|56.6,75.2|35,43.2|41,90.4|49,79.8|49.2,77.4|49.8,68.8|53.6,32.8",2437,Zul'Aman,12.0.0,Midnight,0,Chitterfang Scurrier,127,"[0,0]",1,successful,No
-250124,Plump Chitterfang,Normal,0,127,Rodent,3805,[],125344,,3805,0,,333,Zul'Aman,12.0.0,Midnight,0,Plump Chitterfang,127,[],1,successful,No
+250124,Plump Chitterfang,Normal,0,127,Rodent,3805,[],125344,,3805,0,,2585,Zul'Aman,12.0.0,Midnight,0,Plump Chitterfang,127,[],1,successful,No
 250125,Scavenging Chitterfang,Normal,0,127,Rodent,15947|16194,"[0,0]",125343,Zul'Aman,15947,0,"38.8,29.8|39.4,34.4|28.4,23.2|33.8,25.8|39.8,27.4|45.6,37.4|38.8,90.6|42.2,66.4|43.4,40.8|46.4,44.6|48,50.4|30.6,22.6|40.4,25|45.8,56.2|49.2,40.6|49.6,81.6",2437,Zul'Aman,12.0.0,Midnight,0,Scavenging Chitterfang,127,"[0,0]",1,successful,No
 250125,Scavenging Chitterfang,Normal,0,127,Rodent,15947|16194,"[0,0]",125343,Atal'Aman,16194,0,"57,9.8|63.2,16.6|62.8,13.8|57,13.8|59.4,11|64.6,12.6",2536,Atal'Aman,12.0.0,Midnight,0,Scavenging Chitterfang,127,"[0,0]",1,successful,No
 250126,Furious Mudcoat,Normal,0,44,Wasp,15947,"[-1,-1]",114803,Zul'Aman,15947,0,"28.4,23.4|47.8,50.2|48.6,44.8",2437,Zul'Aman,12.0.0,Midnight,0,Furious Mudcoat,44,"[-1,-1]",1,successful,No
@@ -8161,7 +8131,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 250553,Klaxid,Normal,0,20,Scorpid,15458,"[-1,null]",138658,Voidstorm,15458,0,"62.4,55.4|64.4,54.8|57.6,60.4|62.2,68",2405,Voidstorm,12.0.0,Midnight,0,Klaxid,20,"[-1,null]",1,successful,No
 250562,Consumptor,Normal,0,42,Worm,15458,"[-1,-1]",131268|131269|131270|131271,Voidstorm,15458,0,"36.4,86.2",2405,Voidstorm,12.0.0,Midnight,0,Consumptor,42,"[-1,-1]",1,successful,No
 250564,Blistercreep,Normal,0,296,Blood Beast,16340,"[-1,-1]",128548|128549|128550|128551,The Voidspire,16340,0,"42.5,35.2",2529,The Voidspire,12.0.0,Midnight,0,Blistercreep,296,"[-1,-1]",1,successful,No
-250566,Brilliant Hawkstrider,Normal,0,12,Tallstrider,15969,"[0,0]",129980|129982,Silvermoon City,15969,0,"43.2,63.2|40.8,64.8|41.4,62|43,65.6",2393,Silvermoon City,12.0.0,Midnight,0,Brilliant Hawkstrider,12,"[0,0]",1,successful,No
 250582,Bloated Snapdragon,Rare,4,288,Lizard,15968,"[-1,-1]",106511,Eversong Woods,15968,0,"36.4,63.8",2395,Eversong Woods,12.0.0,Midnight,4,Bloated Snapdragon,288,"[-1,-1]",1,successful,No
 250633,Shredclaw,Normal,0,315,Whiptail,15458,"[-1,-1]",131614,Voidstorm,15458,0,"49.8,85.8|48.8,88",2405,Voidstorm,12.0.0,Midnight,0,Shredclaw,315,"[-1,-1]",1,successful,No
 250635,Consumptor,Normal,0,42,Worm,unknown,"[-1,-1]",131269,Voidstorm,15458,0,"49.8,85.8|48.8,88",2405,Voidstorm,12.0.0,Midnight,0,Consumptor,42,"[-1,-1]",1,successful,No
@@ -8171,7 +8140,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 250824,Lightfrenzied Devourer,Normal,0,35,Serpent,15968,"[-1,-1]",128068,Eversong Woods,15968,0,"60.6,62.2",2395,Eversong Woods,12.0.0,Midnight,0,Lightfrenzied Devourer,35,"[-1,-1]",4,successful,No
 250826,Banuran,Rare,4,291,Hopper,15968,"[-1,-1]",136563,Eversong Woods,15968,0,"56.4,77.4",2395,Eversong Woods,12.0.0,Midnight,4,Banuran,291,"[-1,-1]",1,successful,No
 250876,Terrinor,Rare,4,24,Bat,15968,"[-1,-1]",136539,Eversong Woods,15968,0,"40.2,85.2",2395,Eversong Woods,12.0.0,Midnight,4,Terrinor,24,"[-1,-1]",1,successful,No
-250882,Amber Wyrm,Normal,0,35,Serpent,15969,"[0,0]",136106,Silvermoon City,15969,0,"56,65.2",2393,Silvermoon City,12.0.0,Midnight,0,Amber Wyrm,35,"[0,0]",1,successful,No
 251251,Skittering Underroot Beetle,Normal,0,53,Beetle,15355,"[0,0]",110392|110393|110394|110395|110396|110397|110399,Harandar,15355,0,"30.4,59.4|49,21.6|69.6,26.8|27,59.8|27.4,64.8|28.2,58|28.8,62.6|29.2,66|29.8,25.2|33,31.6|33.4,41.6|34.4,35.6|36.6,54|37.8,44.8|39.2,42|47.2,17.2|56,11.8|68.6,6.8|69.6,30.4|75,20.8|76.6,37.4|77.8,30",2413,Harandar,12.0.0,Midnight,0,Skittering Underroot Beetle,53,"[0,0]",1,successful,No
 251339,Ornery Winebat,Normal,0,24,Bat,15968,"[0,0]",114961|114963,Eversong Woods,15968,0,"39.8,61.2|39,59.2",2395,Eversong Woods,12.0.0,Midnight,0,Ornery Winebat,24,"[0,0]",1,successful,No
 251394,Hungry Scalebiter,Normal,0,288,Lizard,15947,"[-1,-1]",103570|103571|103572|103573|103574,Zul'Aman,15947,0,"45.2,61",2437,Zul'Aman,12.0.0,Midnight,0,Hungry Scalebiter,288,"[-1,-1]",1,successful,No
@@ -8192,7 +8160,6 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 251593,Infected Beast,Normal,0,288,Lizard,15355,[],104633,Harandar,15355,0,"70.6,65",2413,Harandar,12.0.0,Midnight,0,Infected Beast,288,[],1,successful,No
 251705,Hungry Hatchling,Normal,0,8,Crab,15947,"[0,0]",103321|103324,Zul'Aman,15947,0,"39.4,80|37.6,78.2",2437,Zul'Aman,12.0.0,Midnight,0,Hungry Hatchling,8,"[0,0]",1,successful,No
 251724,Sporegorger Chloroceros,Normal,0,138,Direhorn,15355,"[-1,-1]",128538|128541,Harandar,15355,0,"50.6,34.8|50.8,31.6|50.2,36.8|42.8,48.2|40.6,46.8|41.2,44.2|45.6,41.8|47,30|52.8,32.6|53,36|44.6,47.2|46.4,35.4|43.2,29.6|46.6,39.8|47.6,41.8|50.8,29",2413,Harandar,12.0.0,Midnight,0,Sporegorger Chloroceros,138,"[-1,-1]",1,successful,No
-251733,Brilliant Hawkstrider,Normal,0,12,Tallstrider,15969,[],129980|129982,Silvermoon City,15969,0,"54.6,65.6|40.4,64|57.8,64.6",2393,Silvermoon City,12.0.0,Midnight,0,Brilliant Hawkstrider,12,[],1,successful,No
 251756,Kipkip,Normal,0,33,Sporebat,15355,"[-1,-1]",125189,Harandar,15355,0,"71.2,65.8",2413,Harandar,12.0.0,Midnight,0,Kipkip,33,"[-1,-1]",1,successful,No
 251758,Vonto,Normal,0,33,Sporebat,15355,"[-1,-1]",125190,Harandar,15355,0,"71.2,65.8",2413,Harandar,12.0.0,Midnight,0,Vonto,33,"[-1,-1]",1,successful,No
 251825,Shimmerspore Hatchling,Normal,0,37,Moth,15355,"[0,0]",114620|114779,Harandar,15355,0,"41.6,41|55.4,39.4|62,30.4|65,35.2|68,35.2|44.2,44",2413,Harandar,12.0.0,Midnight,0,Shimmerspore Hatchling,37,"[0,0]",1,successful,No
@@ -8480,7 +8447,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 257946,Stinger Hatchling,Normal,0,44,Wasp,15947,"[0,0]",115077,Zul'Aman,15947,0,"51.2,32.8|51,29.8",2437,Zul'Aman,12.0.0,Midnight,0,Stinger Hatchling,44,"[0,0]",1,successful,No
 258069,Mudwallow Boar,Normal,0,5,Boar,15947,"[0,0]",125537|125538,Zul'Aman,15947,0,"53,33.4|52.6,30.6|50.4,34",2437,Zul'Aman,12.0.0,Midnight,0,Mudwallow Boar,5,"[0,0]",1,successful,No
 258070,Tusksplitter Boar,Normal,0,5,Boar,15947,"[-1,-1]",125554|125555,Zul'Aman,15947,0,"50.8,29.8|52.6,33.4",2437,Zul'Aman,12.0.0,Midnight,0,Tusksplitter Boar,5,"[-1,-1]",1,successful,No
-258073,Tusksplitter Boar,Normal,0,5,Boar,3805,[],125554|125555,,3805,0,,333,Zul'Aman,12.0.0,Midnight,0,Tusksplitter Boar,5,[],1,successful,No
+258073,Tusksplitter Boar,Normal,0,5,Boar,3805,[],125554|125555,,3805,0,,2585,Zul'Aman,12.0.0,Midnight,0,Tusksplitter Boar,5,[],1,successful,No
 258090,Bulb-eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]",128022|128023|128024|128025|128026,Harandar,15355,0,"45.6,45.8",2413,Harandar,12.0.0,Midnight,0,Bulb-eye Potatoad,291,"[-1,-1]",4,successful,No
 258190,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[-1,-1]",128066,Harandar,15355,0,"41.2,66.2|35.6,70.6|33.8,76|37.8,71.8|38,69",2413,Harandar,12.0.0,Midnight,0,Lightcursed Crawler,35,"[-1,-1]",4,successful,No
 258215,Kapara,Normal,0,127,Rodent,15947,"[0,0]",131949,Zul'Aman,15947,0,"44,33",2437,Zul'Aman,12.0.0,Midnight,0,Kapara,127,"[0,0]",1,successful,No

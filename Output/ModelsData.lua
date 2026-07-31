@@ -2993,8 +2993,7 @@ ModelsData = {
                 },
                 [14334] = {
                     [17280] = {"Shattered Hand Warhound", "Normal", "[-1,-1]", false},
-                    [17669] = {"Rabid Warhound", "Normal", "[-1,-1]", false},
-                    [22946] = {"Shadowmoon War Hound", "Normal", "[-1,-1]", false}
+                    [17669] = {"Rabid Warhound", "Normal", "[-1,-1]", false}
                 },
                 [17408] = {
                     [18706] = {"Bonechewer Riding Wolf", "Normal", "[-1,-1]", false}
@@ -3011,9 +3010,6 @@ ModelsData = {
                 [20634] = {
                     [21956] = {"Rema", "Normal", "[-1,1]", true}
                 },
-                [21355] = {
-                    [23232] = {"Mutant War Hound", "Elite", "[-1,-1]", false}
-                },
                 [37576] = {
                     [19458] = {"Ripp", "Normal", "[-1,-1]", true}
                 }
@@ -3022,6 +3018,16 @@ ModelsData = {
                 [20329] = {
                     taming = {"Exotic"},
                     [21381] = {"Young Crust Burster", "Normal", "[-1,-1]", false}
+                }
+            }
+        },
+        ["Unknown"] = {
+            ["Wolf"] = {
+                [14334] = {
+                    [22946] = {"Shadowmoon War Hound", "Normal", "[-1,-1]", false}
+                },
+                [21355] = {
+                    [23232] = {"Mutant War Hound", "Elite", "[-1,-1]", false}
                 }
             }
         }
@@ -8989,10 +8995,6 @@ ModelsData = {
                     taming = {"Undead"},
                     [73325] = {"Fel Wolf", "Normal", "[-1,-1]", false}
                 },
-                [56645] = {
-                    taming = {"Undead"},
-                    [81818] = {"Legion Hunter-Killer", "Normal", "[0,0]", false}
-                },
                 [59116] = {
                     taming = {"Undead"},
                     [84027] = {"Vicious Felhound", "Normal", "[-1,-1]", false}
@@ -10126,6 +10128,14 @@ ModelsData = {
             ["Carrion Bird"] = {
                 [58718] = {
                     [77430] = {"Kil'uun", "Elite", "[-1,-1]", true}
+                }
+            }
+        },
+        ["Unknown"] = {
+            ["Hound"] = {
+                [56645] = {
+                    taming = {"Undead"},
+                    [81818] = {"Legion Hunter-Killer", "Normal", "[0,0]", false}
                 }
             }
         },
@@ -26836,15 +26846,6 @@ ModelsData = {
                     [255821] = {"Child of Jan'alai", "Normal", "[]", false},
                     [257519] = {"Mirebeak Dragonhawk", "Normal", "[0,0]", false}
                 },
-                [124925] = {
-                    [235980] = {"Dragonhawk", "Normal", "[]", false}
-                },
-                [124926] = {
-                    [235980] = {"Dragonhawk", "Normal", "[]", false}
-                },
-                [124928] = {
-                    [235980] = {"Dragonhawk", "Normal", "[]", false}
-                },
                 [124929] = {
                     [254610] = {"Ghostfeather Alpha", "Normal", "[-1,-1]", false},
                     [254761] = {"Ghostfeather Alpha", "Normal", "[-1,null]", false}
@@ -27780,8 +27781,7 @@ ModelsData = {
                 },
                 [136106] = {
                     [242520] = {"Encroaching Mana Wyrm", "Normal", "[0,0]", false},
-                    [250024] = {"Lightscale Nibbler", "Normal", "[0,0]", false},
-                    [250882] = {"Amber Wyrm", "Normal", "[0,0]", false}
+                    [250024] = {"Lightscale Nibbler", "Normal", "[0,0]", false}
                 },
                 [136107] = {
                     [237399] = {"Erratic Light Wyrm", "Normal", "[0,0]", false},
@@ -27958,8 +27958,6 @@ ModelsData = {
                 },
                 [129980] = {
                     [250229] = {"Brightwing Hawkstrider", "Normal", "[]", false},
-                    [250566] = {"Brilliant Hawkstrider", "Normal", "[0,0]", false},
-                    [251733] = {"Brilliant Hawkstrider", "Normal", "[]", false},
                     [253924] = {"Brilliant Hawkstrider", "Normal", "[0,0]", false},
                     [256834] = {"Resplendent Hawkstrider", "Normal", "[0,0]", false},
                     [256835] = {"Refulgent Hawkstrider", "Normal", "[0,0]", false},
@@ -27991,8 +27989,6 @@ ModelsData = {
                 },
                 [129982] = {
                     [250229] = {"Brightwing Hawkstrider", "Normal", "[]", false},
-                    [250566] = {"Brilliant Hawkstrider", "Normal", "[0,0]", false},
-                    [251733] = {"Brilliant Hawkstrider", "Normal", "[]", false},
                     [253924] = {"Brilliant Hawkstrider", "Normal", "[0,0]", false},
                     [256834] = {"Resplendent Hawkstrider", "Normal", "[0,0]", false},
                     [256835] = {"Refulgent Hawkstrider", "Normal", "[0,0]", false},
