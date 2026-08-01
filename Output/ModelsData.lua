@@ -2993,7 +2993,8 @@ ModelsData = {
                 },
                 [14334] = {
                     [17280] = {"Shattered Hand Warhound", "Normal", "[-1,-1]", false},
-                    [17669] = {"Rabid Warhound", "Normal", "[-1,-1]", false}
+                    [17669] = {"Rabid Warhound", "Normal", "[-1,-1]", false},
+                    [22946] = {"Shadowmoon War Hound", "Normal", "[-1,-1]", false}
                 },
                 [17408] = {
                     [18706] = {"Bonechewer Riding Wolf", "Normal", "[-1,-1]", false}
@@ -3010,6 +3011,9 @@ ModelsData = {
                 [20634] = {
                     [21956] = {"Rema", "Normal", "[-1,1]", true}
                 },
+                [21355] = {
+                    [23232] = {"Mutant War Hound", "Elite", "[-1,-1]", false}
+                },
                 [37576] = {
                     [19458] = {"Ripp", "Normal", "[-1,-1]", true}
                 }
@@ -3018,16 +3022,6 @@ ModelsData = {
                 [20329] = {
                     taming = {"Exotic"},
                     [21381] = {"Young Crust Burster", "Normal", "[-1,-1]", false}
-                }
-            }
-        },
-        ["Unknown"] = {
-            ["Wolf"] = {
-                [14334] = {
-                    [22946] = {"Shadowmoon War Hound", "Normal", "[-1,-1]", false}
-                },
-                [21355] = {
-                    [23232] = {"Mutant War Hound", "Elite", "[-1,-1]", false}
                 }
             }
         }
@@ -10036,12 +10030,6 @@ ModelsData = {
                     [77927] = {"Son of the Beast", "Elite", "[0,0]", false}
                 }
             },
-            ["Hound"] = {
-                [56645] = {
-                    taming = {"Undead"},
-                    [81818] = {"Legion Hunter-Killer", "Normal", "[0,0]", false}
-                }
-            },
             ["Hyena"] = {
                 [1535] = {
                     [78489] = {"Snickerfang Pup", "Normal", "[-1,-1]", false}
@@ -10128,14 +10116,6 @@ ModelsData = {
             ["Carrion Bird"] = {
                 [58718] = {
                     [77430] = {"Kil'uun", "Elite", "[-1,-1]", true}
-                }
-            }
-        },
-        ["Unknown"] = {
-            ["Hound"] = {
-                [56645] = {
-                    taming = {"Undead"},
-                    [81818] = {"Legion Hunter-Killer", "Normal", "[0,0]", false}
                 }
             }
         },
@@ -26172,27 +26152,35 @@ ModelsData = {
                     [250055] = {"Mountain Rocktalon", "Normal", "[]", false},
                     [253173] = {"Keen-Eye Riptalon", "Normal", "[0,0]", false},
                     [254628] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
-                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false}
+                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
                 },
                 [124213] = {
-                    [242189] = {"Melancholy Eagle", "Normal", "[0,0]", false}
+                    [242189] = {"Melancholy Eagle", "Normal", "[0,0]", false},
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
                 },
                 [124214] = {
                     [236539] = {"Giant Goldeneye", "Normal", "[0,0]", false},
                     [250055] = {"Mountain Rocktalon", "Normal", "[]", false},
                     [250120] = {"Keen-Eye Riptalon", "Normal", "[0,0]", false},
                     [254628] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
-                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false}
+                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
+                },
+                [124215] = {
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
                 },
                 [124216] = {
-                    [250120] = {"Keen-Eye Riptalon", "Normal", "[0,0]", false}
+                    [250120] = {"Keen-Eye Riptalon", "Normal", "[0,0]", false},
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
                 },
                 [124217] = {
                     [244763] = {"Blush Pinebeak", "Normal", "[0,0]", false},
                     [245619] = {"Watchful Nestguard", "Normal", "[0,0]", false},
                     [250055] = {"Mountain Rocktalon", "Normal", "[]", false},
                     [254628] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
-                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false}
+                    [254629] = {"Mountain Rocktalon", "Normal", "[-1,-1]", false},
+                    [256902] = {"Giant Eagle", "Normal", "[]", false}
                 },
                 [124964] = {
                     [243679] = {"Giant Eagle", "Normal", "[0,0]", false},
@@ -27649,7 +27637,7 @@ ModelsData = {
                 [125612] = {
                     [254097] = {"Hoarding Klaxid", "Normal", "[]", false},
                     [254720] = {"Frenzied Klaxid", "Normal", "[-1,-1]", false},
-                    [261085] = {"Invasive Crystalback", "Normal", "[]", false}
+                    [261085] = {"Invasive Crystalback", "Normal", "[-1,-1]", false}
                 },
                 [138657] = {
                     [252682] = {"Hoarding Klaxid", "Normal", "[-1,-1]", false},
@@ -27816,7 +27804,7 @@ ModelsData = {
             },
             ["Spider"] = {
                 [100535] = {
-                    [260988] = {"Frost Crawler", "Normal", "[]", false}
+                    [260988] = {"Frost Crawler", "Normal", "[-1,-1]", false}
                 },
                 [125469] = {
                     [247603] = {"Enclave Lurker", "Normal", "[-1,-1]", false},
@@ -28324,7 +28312,7 @@ ModelsData = {
                 },
                 [114484] = {
                     taming = {"Exotic"},
-                    [261981] = {"Rime Worm", "Normal", "[]", false}
+                    [261981] = {"Rime Worm", "Normal", "[-1,-1]", false}
                 },
                 [125275] = {
                     [256408] = {"Spawn of Ix", "Normal", "[-1,-1]", false}

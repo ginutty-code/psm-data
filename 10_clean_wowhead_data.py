@@ -16,7 +16,7 @@ import os
 import csv
 import sys
 from config import (
-    WOWHWEAD_DATA_CSV, PROCESSED_WOWHEAD_DATA_CSV, SKIP_NPC_IDS_CSV, SKIP_DISPLAY_IDS_CSV,
+    WOWHEAD_DATA_CSV, PROCESSED_WOWHEAD_DATA_CSV, SKIP_NPC_IDS_CSV, SKIP_DISPLAY_IDS_CSV,LOCATION_UPDATES_CSV,
     ensure_dirs
 )
 
@@ -73,8 +73,6 @@ def thin_coord_string(coord_str, min_distance, densest_first=True):
     thinned = thin_points(pairs, min_distance)
     return '|'.join(f"{x:g},{y:g}" for x, y in thinned)
 
-
-LOCATION_UPDATES_CSV = os.path.join('Manual', 'location_updates.csv')
 
 
 def load_skip_ids(filepath, col_names):
@@ -263,14 +261,14 @@ def main():
     # Load location updates
     exact_updates, npc_only_updates = load_location_updates(LOCATION_UPDATES_CSV)
 
-    if not os.path.exists(WOWHWEAD_DATA_CSV):
-        print(f"Error: {WOWHWEAD_DATA_CSV} not found. Please run Step 09 (extract_wowhead_data) first.")
+    if not os.path.exists(WOWHEAD_DATA_CSV):
+        print(f"Error: {WOWHEAD_DATA_CSV} not found. Please run Step 09 (extract_wowhead_data) first.")
         sys.exit(1)
 
-    print(f"Reading records from {WOWHWEAD_DATA_CSV}...")
+    print(f"Reading records from {WOWHEAD_DATA_CSV}...")
     
     # Read headers first to ensure we write the exact same columns
-    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
+    with open(WOWHEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
         reader = csv.reader(f)
         headers = next(reader) if reader else []
 
@@ -292,7 +290,7 @@ def main():
     seen_records = set()
     cleaned_rows = []
 
-    with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
+    with open(WOWHEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
         reader = csv.DictReader(f)
         for row in reader:
             total_loaded += 1

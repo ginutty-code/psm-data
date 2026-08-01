@@ -361,7 +361,7 @@ def main():
 
     columns = [
         'npc_id', 'npc_name', 'family_id', 'family_name', 'display_ids',
-        'zone_id', 'zone_name', 'continent_id', 'continent_name',
+        'zone_id', 'zone_name','layer', 'continent_id', 'continent_name',
         'uiMapId', 'uiMapName', 'coords',
         'patch_id', 'patch_name', 'expansion', 'react', 'classification_id',
         'classification_name', 'type_id', 'type_name',
@@ -451,6 +451,7 @@ def main():
             'display_ids': display_ids_str,
             'zone_id': row.get('zone_id', '').strip(),
             'zone_name': row.get('zone_name', '').strip(),
+            'layer': row.get('layer', '').strip(),
             'uiMapId': row.get('uiMapId', '').strip(),
             'uiMapName': row.get('uiMapName', '').strip(),
             'coords': row.get('coords', '').strip(),

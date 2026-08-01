@@ -2,16 +2,16 @@ import os
 import random
 
 # Directories
-EXTRACTED_DIR = 'Extracted'
-PROCESSED_DIR = 'Processed'
-MANUAL_DIR = 'Manual'
-OUTPUT_DIR = 'Output'
+EXTRACTED_DIR = 'psm-data/Extracted'
+MANUAL_DIR = 'psm-data/Manual'
+PROCESSED_DIR = 'psm-data/Processed'
+OUTPUT_DIR = 'psm-data/Output'
 
 # Extracted — raw, unaltered data from web sources
 PETOPIA_NPCS_CSV = os.path.join(EXTRACTED_DIR, 'petopia_npcs.csv')
 PETOPIA_DATA_CSV = os.path.join(EXTRACTED_DIR, 'petopia_data.csv')
 WOWHEAD_NPCS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_npcs.csv')            # raw scrape before corrections
-WOWHWEAD_DATA_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_data.csv')           # enriched per-NPC data from web
+WOWHEAD_DATA_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_data.csv')           # enriched per-NPC data from web
 WOWHEAD_FAMILIES_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_families.csv')   # raw scrape before Whiptail injection
 WOWHEAD_SPELLS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_spells.csv')        # raw scrape before cleaning
 
@@ -22,6 +22,7 @@ NOTES_UPDATES_CSV = os.path.join(MANUAL_DIR, 'notes_updates.csv')
 NOTES_KEYWORDS_CSV = os.path.join(MANUAL_DIR, 'notes_keywords.csv')
 TAMING_UPDATES_CSV = os.path.join(MANUAL_DIR, 'taming_updates.csv')
 NPC_UPDATES_CSV = os.path.join(MANUAL_DIR, 'npcs_updates.csv')
+LOCATION_UPDATES_CSV = os.path.join(MANUAL_DIR, 'location_updates.csv')
 SPELLS_MAPPING_CSV = os.path.join(MANUAL_DIR, 'spells_mapping.csv')
 RECORD_OVERRIDES_CSV = os.path.join(MANUAL_DIR, 'record_overrides.csv')
 
