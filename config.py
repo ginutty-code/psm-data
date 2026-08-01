@@ -43,12 +43,31 @@ COORDS_LUA = os.path.join(OUTPUT_DIR, 'CoordsData.lua')
 CONDITIONS_LUA = os.path.join(OUTPUT_DIR, 'ConditionsData.lua')
 NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 
+ADDON_MODELS_BROWSER_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'ModelsBrowser'))
+
 
 def ensure_dirs():
     """Ensure that the standard project directories exist."""
-    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR]:
+    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_MODELS_BROWSER_DIR]:
         if not os.path.exists(d):
             os.makedirs(d, exist_ok=True)
+
+
+def sync_output_to_addon(target_file=None):
+    """Sync file(s) from Output directory to the addon directory."""
+    import shutil
+    ensure_dirs()
+    if target_file:
+        files = [target_file]
+    else:
+        files = [ABILITIES_LUA, MODELS_LUA, COORDS_LUA, CONDITIONS_LUA, NOTES_LUA]
+
+    for src in files:
+        if os.path.exists(src):
+            filename = os.path.basename(src)
+            dest = os.path.join(ADDON_MODELS_BROWSER_DIR, filename)
+            shutil.copy2(src, dest)
+            print(f"Synced {filename} -> {dest}")
 
 
 # Rotating realistic browser-like header sets (Firefox and Safari are generally more reliable for Wowhead)

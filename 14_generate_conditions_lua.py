@@ -4,7 +4,7 @@ Generate addon Special Conditions data file
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, CONDITIONS_LUA, ensure_dirs
+from config import COMBINED_PET_DATA_CSV, CONDITIONS_LUA, ensure_dirs, sync_output_to_addon
 
 # Define the category groups for conditions
 GROUPS_ORDER = ["Faction", "Race", "Instance", "World Event", "Seasonal Event", "Profession", "Covenant", "Prerequisite", "Miscellaneous"]
@@ -120,6 +120,7 @@ def main():
 
     print(f"Done! {len(conditions_map)} NPCs mapped to special conditions.")
     print(f"Lua file saved to: {CONDITIONS_LUA}")
+    sync_output_to_addon(CONDITIONS_LUA)
 
 if __name__ == "__main__":
     main()

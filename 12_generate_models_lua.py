@@ -1,11 +1,10 @@
 """
-Generate addon Models data file
+Generate addon Models data file (flat format by npcId)
 """
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, SKIP_DISPLAY_IDS_CSV, MODELS_LUA, ensure_dirs
-
+from config import COMBINED_PET_DATA_CSV, SKIP_DISPLAY_IDS_CSV, MODELS_LUA, ensure_dirs, sync_output_to_addon
 
 
 def load_csv(filepath):
@@ -57,81 +56,73 @@ def main():
     skip_display_ids = load_skip_display_ids()
     print(f"Found {len(skip_display_ids)} display IDs to skip")
 
-    # Read CSV and build hierarchical data structure
-    # Hierarchy: expansion -> continent -> family -> display_id -> npcs
-    hierarchy = {}
-    processed_count = 0
-
+    # Read CSV and build flat data structure keyed by npc_id (integer)
+    npcs = {}
     rows = load_csv(COMBINED_PET_DATA_CSV)
+
     for row in rows:
-        npc_id = row.get("npc_id", "").strip()
-        if not npc_id:
+        raw_npc_id = row.get("npc_id", "").strip()
+        if not raw_npc_id:
             continue
-        
-        family_name = row.get("family_name", "").strip()
-        npc_name = row.get("npc_name", "").strip()
-        exp = row.get("expansion", "").strip()
-        class_name = row.get("classification_name", "").strip()
-        react = row.get("react", "").strip()
-        name_keeper = row.get("name_keeper", "").strip()
-        continent_name = row.get("continent_name", "").strip()
 
-        taming_csv = row.get("taming_requirements", "").strip()
-        
-        # Parse display_ids pipe-separated string
+        try:
+            npc_id = int(raw_npc_id)
+        except ValueError:
+            continue
+
+        if npc_id not in npcs:
+            npcs[npc_id] = {
+                "name": row.get("npc_name", "").strip(),
+                "displayIds": set(),
+                "uiMapId": None,
+                "uiMapName": None,
+                "family": row.get("family_name", "").strip(),
+                "expansion": row.get("expansion", "").strip() or "Unknown",
+                "react": row.get("react", "").strip(),
+                "classification": row.get("classification_name", "").strip() or "Normal",
+                "nameKeeper": row.get("name_keeper", "").strip() == "True",
+                "taming": set(),
+                "conditions": set(),
+            }
+
+        entry = npcs[npc_id]
+
+        # Extract map information (first valid map ID > 0)
+        mid_str = row.get("uiMapId", "").strip()
+        mname_str = row.get("uiMapName", "").strip()
+        if entry["uiMapId"] is None and mid_str and mid_str != "0":
+            try:
+                entry["uiMapId"] = int(mid_str)
+                entry["uiMapName"] = mname_str
+            except ValueError:
+                pass
+
+        # Extract display IDs
         display_ids_str = row.get("display_ids", "").strip()
-        display_ids = [d.strip() for d in display_ids_str.split('|') if d.strip()]
+        if display_ids_str:
+            for d in display_ids_str.split('|'):
+                d_clean = d.strip()
+                if d_clean and d_clean not in skip_display_ids:
+                    try:
+                        entry["displayIds"].add(int(d_clean))
+                    except ValueError:
+                        pass
 
-        # Parse taming requirements into list
-        taming_skills = []
+        # Extract taming requirements
+        taming_csv = row.get("taming_requirements", "").strip()
         if taming_csv:
-            taming_skills = [s.strip() for s in taming_csv.split('|') if s.strip()]
-        
-        # Fallback for empty expansion
-        if not exp:
-            exp = "Unknown"
+            for t in taming_csv.split('|'):
+                if t.strip():
+                    entry["taming"].add(t.strip())
 
-        # Default class to "Normal" if empty
-        class_value = class_name or "Normal"
+        # Extract special conditions
+        conditions_csv = row.get("special_conditions", "").strip()
+        if conditions_csv:
+            for c in conditions_csv.split('|'):
+                if c.strip():
+                    entry["conditions"].add(c.strip())
 
-        # Fallback for empty continent
-        if not continent_name:
-            continent_name = "Unknown"
-
-        for display_id in display_ids:
-            if display_id in skip_display_ids:
-                continue
-
-            # Initialize hierarchy levels
-            if exp not in hierarchy:
-                hierarchy[exp] = {}
-            if continent_name not in hierarchy[exp]:
-                hierarchy[exp][continent_name] = {}
-            if family_name not in hierarchy[exp][continent_name]:
-                hierarchy[exp][continent_name][family_name] = {}
-            if display_id not in hierarchy[exp][continent_name][family_name]:
-                hierarchy[exp][continent_name][family_name][display_id] = {
-                    "taming": set()
-                }
-
-            did_entry = hierarchy[exp][continent_name][family_name][display_id]
-
-            # Aggregate taming at display ID level
-            if taming_skills:
-                did_entry["taming"].update(taming_skills)
-
-            # Add NPC entry (aggregating if same NPC appears in multiple rows)
-            if npc_id not in did_entry:
-                did_entry[npc_id] = {
-                    "name": npc_name,
-                    "class": class_value,
-                    "react": react,
-                    "name_keeper": name_keeper,
-                }
-
-        processed_count += 1
-
-    print(f"Processed {processed_count} NPCs")
+    print(f"Processed {len(npcs)} unique NPCs")
 
     # Generate Lua file
     print(f"Generating Lua file to {MODELS_LUA}...")
@@ -139,114 +130,49 @@ def main():
     def lua_quote(s):
         if s is None:
             s = ""
-        # Escape backslashes and double quotes for safe Lua string literals
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(MODELS_LUA, 'w', encoding='utf-8') as f:
         f.write("-- Models Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Hierarchical format: Expansion -> Continent -> Family -> Display IDs -> NPCs\n")
-        f.write("-- NPC tuple: {name, classification, react, is_name_keeper}\n")
-        f.write("\n")
+        f.write("-- Flat table structure: ModelsData[npcId] = { ... }\n\n")
         f.write("ModelsData = {\n")
-        
-        # Sort expansions in WoW release order
-        expansion_order = [
-            "Vanilla", "The Burning Crusade", "Wrath of the Lich King",
-            "Cataclysm", "Mists of Pandaria", "Warlords of Draenor",
-            "Legion", "Battle for Azeroth", "Shadowlands",
-            "Dragonflight", "The War Within", "Unknown"
-        ]
-        sorted_expansions = sorted(
-            hierarchy.keys(),
-            key=lambda x: (expansion_order.index(x) if x in expansion_order else 999, x)
-        )
-        
-        for ei, exp in enumerate(sorted_expansions):
-            if ei > 0:
-                f.write(",\n")
-            f.write(f'    ["{exp}"] = {{\n')
-            
-            continents = hierarchy[exp]
-            sorted_continents = sorted(continents.keys())
-            
-            for ci, continent in enumerate(sorted_continents):
-                if ci > 0:
-                    f.write(",\n")
-                f.write(f'        ["{continent}"] = {{\n')
-                
-                families = continents[continent]
-                sorted_families = sorted(families.keys())
-                
-                for fi, family in enumerate(sorted_families):
-                    if fi > 0:
-                        f.write(",\n")
-                    f.write(f'            ["{family}"] = {{\n')
-                    
-                    display_data = families[family]
-                    sorted_dids = sorted(display_data.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
-                    
-                    for di, did in enumerate(sorted_dids):
-                        if di > 0:
-                            f.write(",\n")
-                        f.write(f'                [{did}] = {{\n')
-                        
-                        did_entry = display_data[did]
-                        taming_set = did_entry.get("taming")
-                        
-                        # Write taming if present
-                        if taming_set:
-                            sorted_taming = sorted(taming_set)
-                            taming_lua = '{' + ','.join(f'"{s}"' for s in sorted_taming) + '}'
-                            f.write(f'                    taming = {taming_lua},\n')
-                        
-                        # NPC entries (exclude taming key)
-                        npc_entries = {k: v for k, v in did_entry.items() if k != "taming"}
-                        sorted_npc_ids = sorted(npc_entries.keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
-                        
-                        for ni, npc_id in enumerate(sorted_npc_ids):
-                            if ni > 0:
-                                f.write(",\n")
-                            
-                            npc = npc_entries[npc_id]
-                            name_lua = lua_quote(npc.get("name", ""))
-                            class_lua = lua_quote(npc.get("class", ""))
-                            react_lua = lua_quote(npc.get("react", ""))
-                            nk_lua = "true" if npc.get("name_keeper", "") == "True" else "false"
-                            
-                            # 4-element tuple: {name, class, react, nameKeeper}
-                            # expansion and continent are implied by tree keys
-                            f.write(f'                    [{npc_id}] = {{{name_lua}, {class_lua}, {react_lua}, {nk_lua}}}')
-                        
-                        f.write('\n                }')
-                    
-                    f.write('\n            }')
-                
-                f.write('\n        }')
-            
-            f.write('\n    }')
-        
-        f.write("\n}\n")
-    
-    # Print summary (unique counts across the entire hierarchy)
-    total_expansions = len(hierarchy)
-    unique_continents = set()
-    unique_families = set()
-    unique_dids = set()
-    unique_npcs = set()
-    for exp_name, cont_dict in hierarchy.items():
-        for cont_name, fam_dict in cont_dict.items():
-            unique_continents.add(cont_name)
-            for fam_name, did_dict in fam_dict.items():
-                unique_families.add(fam_name)
-                for did_key, did_entry in did_dict.items():
-                    unique_dids.add(did_key)
-                    for k in did_entry:
-                        if k != "taming":
-                            unique_npcs.add(k)
-    
+
+        sorted_npc_ids = sorted(npcs.keys())
+        for npc_id in sorted_npc_ids:
+            entry = npcs[npc_id]
+
+            sorted_dids = sorted(entry["displayIds"])
+            dids_str = "{ " + ", ".join(str(d) for d in sorted_dids) + " }"
+
+            f.write(f"    [{npc_id}] = {{\n")
+            f.write(f"        name = {lua_quote(entry['name'])},\n")
+            f.write(f"        displayIds = {dids_str},\n")
+
+            if entry["uiMapId"] is not None:
+                f.write(f"        uiMapId = {entry['uiMapId']},\n")
+            if entry["uiMapName"]:
+                f.write(f"        uiMapName = {lua_quote(entry['uiMapName'])},\n")
+
+            f.write(f"        family = {lua_quote(entry['family'])},\n")
+            f.write(f"        expansion = {lua_quote(entry['expansion'])},\n")
+            f.write(f"        react = {lua_quote(entry['react'])},\n")
+            f.write(f"        classification = {lua_quote(entry['classification'])},\n")
+
+            nk_str = "true" if entry["nameKeeper"] else "false"
+            f.write(f"        nameKeeper = {nk_str},\n")
+
+            if entry["taming"]:
+                sorted_taming = sorted(entry["taming"])
+                taming_str = "{ " + ", ".join(lua_quote(t) for t in sorted_taming) + " }"
+                f.write(f"        taming = {taming_str},\n")
+
+            f.write("    },\n")
+
+        f.write("}\n")
+
     print(f"Done! Lua file saved to: {MODELS_LUA}")
-    print(f"Summary: {total_expansions} expansions, {len(unique_continents)} continents, {len(unique_families)} families, {len(unique_dids)} display IDs, {len(unique_npcs)} NPCs")
+    sync_output_to_addon(MODELS_LUA)
 
 
 if __name__ == "__main__":

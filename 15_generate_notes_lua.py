@@ -4,7 +4,7 @@ Generate addon Notes data file
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, NOTES_LUA, ensure_dirs
+from config import COMBINED_PET_DATA_CSV, NOTES_LUA, ensure_dirs, sync_output_to_addon
 
 def main():
     ensure_dirs()
@@ -64,6 +64,7 @@ end
         luafile.write(lua_content)
 
     print(f"Done! Lua file saved to: {NOTES_LUA}")
+    sync_output_to_addon(NOTES_LUA)
 
 if __name__ == "__main__":
     main()

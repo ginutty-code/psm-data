@@ -4,7 +4,7 @@ Generate addon Abilities data file
 
 import csv
 import os
-from config import PROCESSED_FAMILIES_CSV, PROCESSED_SPELLS_CSV, ABILITIES_LUA, ensure_dirs
+from config import PROCESSED_FAMILIES_CSV, PROCESSED_SPELLS_CSV, ABILITIES_LUA, ensure_dirs, sync_output_to_addon
 
 def load_csv(filepath):
     """Load CSV file with encoding fallback and return all rows."""
@@ -225,6 +225,7 @@ def main():
 
     print(f"Done! Lua file saved to: {ABILITIES_LUA}")
     print(f"Summary: {total_families} families, {total_ranks} ranks, {total_abilities} abilities")
+    sync_output_to_addon(ABILITIES_LUA)
 
 
 if __name__ == "__main__":

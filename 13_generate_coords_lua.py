@@ -4,7 +4,7 @@ Generate addon Coordinates data file
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, COORDS_LUA, ensure_dirs
+from config import COMBINED_PET_DATA_CSV, COORDS_LUA, ensure_dirs, sync_output_to_addon
 
 
 def load_csv(filepath):
@@ -119,6 +119,7 @@ def main():
 
     print(f"Done! Lua file saved to: {COORDS_LUA}")
     print(f"Summary: {total_zones} zones, {total_npcs} NPC entries")
+    sync_output_to_addon(COORDS_LUA)
 
 
 if __name__ == "__main__":

@@ -41,7 +41,7 @@ The scripts must be run in numerical order. Each step validates its dependencies
 | 09 | `09_extract_wowhead_data.py` | Enriches NPCs with Display IDs, coordinates, and patch info using stealth scraping. | `Processed/processed_wowhead_npcs.csv`, `Manual/skip_npc_ids.csv` | `Extracted/wowhead_data.csv` |
 | 10 | `10_clean_wowhead_data.py` | Cleans and pre-filters Wowhead data by applying NPC and Display ID skip lists, applies manual location updates from `location_updates.csv`, and thins coordinates to remove redundant points. | `Extracted/wowhead_data.csv`, `Manual/skip_npc_ids.csv`, `Manual/skip_display_ids.csv`, `Manual/location_updates.csv` | `Processed/processed_wowhead_data.csv` |
 | 11 | `11_combine_data.py` | Merges sources and applies `record_overrides.csv` for final data consolidation. | `Processed/processed_wowhead_data.csv`, `Processed/processed_petopia_data.csv`, `Manual/skip_display_ids.csv`, `Manual/record_overrides.csv` | `Processed/pet_data.csv` |
-| 12 | `12_generate_models_lua.py` | Generates `ModelsData.lua` (Family > Display ID > NPC) with location aggregation. | `Processed/pet_data.csv` | `Output/ModelsData.lua` |
+| 12 | `12_generate_models_lua.py` | Generates `ModelsData.lua` flat table indexed by NPC ID (`ModelsData[npcId] = { ... }`) with `uiMapId` zone key. | `Processed/pet_data.csv` | `Output/ModelsData.lua` |
 | 13 | `13_generate_coords_lua.py` | Generates `CoordsData.lua` mapping NPCs to zone coordinates and Map IDs. | `Processed/pet_data.csv` | `Output/CoordsData.lua` |
 | 14 | `14_generate_conditions_lua.py` | Generates `ConditionsData.lua` mapping NPC IDs to special conditions. | `Processed/pet_data.csv` | `Output/ConditionsData.lua` |
 | 15 | `15_generate_notes_lua.py` | Generates `NotesData.lua` with space-saving note deduplication logic. | `Processed/pet_data.csv` | `Output/NotesData.lua` |
@@ -84,7 +84,7 @@ The pipeline ensures data integrity through specialized cleaning logic at every 
 
 The addon expects the following `.lua` files from the `Output/` folder:
 - `AbilitiesData.lua`: Family ability mappings and spell descriptions.
-- `ModelsData.lua`: Hierarchical model and NPC metadata.
+- `ModelsData.lua`: Flat table of NPC metadata and display IDs (`ModelsData[npcId] = { ... }`).
 - `CoordsData.lua`: Coordinate data for map integration.
 - `NotesData.lua`: Curated flavor text and taming instructions.
 - `ConditionsData.lua`: Tactical requirements for special tames.
