@@ -3529,3 +3529,9 @@ npc_id,zone_id,layer,reason
 144993,10084,,incorrect zone_id
 144993,10226,,incorrect zone_id
 81818,,,cannot be tamed
+3630,17,0,incorrect zone_id
+3631,17,0,incorrect zone_id
+3632,17,0,incorrect zone_id
+3633,17,20,incorrect zone_id
+3634,17,20,incorrect zone_id
+3652,17,20,incorrect zone_id
