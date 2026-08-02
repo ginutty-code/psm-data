@@ -42,6 +42,7 @@ def main():
             continue
 
         location = row.get("uiMapName", "").strip()
+        continent = row.get("continent_name", "").strip()
         npc_id = row.get("npc_id", "").strip()
         coords = row.get("coords", "").strip()
 
@@ -49,6 +50,7 @@ def main():
         if uiMapId not in zone_data:
             zone_data[uiMapId] = {
                 'name': location,
+                'continent': continent,
                 'npcs': {}
             }
 
@@ -91,6 +93,8 @@ def main():
             # Write zone entry
             f.write(f'    [{uiMapId}] = {{\n')
             f.write(f'        name = {zone_name_lua},\n')
+            if zone.get('continent'):
+                f.write(f'        continent = {lua_quote(zone["continent"])},\n')
             f.write(f'        npcs = {{\n')
 
             # Sort NPC IDs numerically

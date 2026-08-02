@@ -15,7 +15,7 @@ from urllib3.util.retry import Retry
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 import random
-from config import PROCESSED_NPCS_CSV, WOWHWEAD_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
+from config import PROCESSED_NPCS_CSV, WOWHEAD_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
 
 # Concurrency and pacing settings; adjust as needed to balance speed with risk of rate-limiting.  Note that Wowhead has aggressive rate-limiting, and even a few concurrent requests can trigger it, so we use a conservative default here.
 CONCURRENCY_RANGE = (1, 5)
@@ -75,8 +75,8 @@ def load_progress():
     skipped_ids = set()
     retry_ids = set()
 
-    if os.path.exists(WOWHWEAD_DATA_CSV):
-        with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', newline='') as f:
+    if os.path.exists(WOWHEAD_DATA_CSV):
+        with open(WOWHEAD_DATA_CSV, 'r', encoding='utf-8', newline='') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 npc_id = str(row.get('npc_id', '')).strip()
@@ -109,9 +109,9 @@ def save_progress(results, original_data, append=True):
 
     # Load existing rows, keyed by (npc_id, zone_name, layer)
     existing = {}
-    if append and os.path.exists(WOWHWEAD_DATA_CSV):
+    if append and os.path.exists(WOWHEAD_DATA_CSV):
         try:
-            with open(WOWHWEAD_DATA_CSV, 'r', encoding='utf-8', newline='') as f:
+            with open(WOWHEAD_DATA_CSV, 'r', encoding='utf-8', newline='') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
                     npc_id = str(row.get('npc_id', '')).strip()
@@ -306,7 +306,7 @@ def save_progress(results, original_data, append=True):
                 'obsolete': obsolete,
             }
 
-    with open(WOWHWEAD_DATA_CSV, 'w', encoding='utf-8', newline='') as f:
+    with open(WOWHEAD_DATA_CSV, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(
             f,
             fieldnames=['npc_id', 'npc_name', 'bulk_classification', 'bulk_classification_id', 'bulk_family_id', 'bulk_family_name', 'bulk_zone_id', 'bulk_react', 'display_ids', 'zone_name', 'zone_id', 'layer', 'coords', 'uiMapId', 'uiMapName', 'patch_id', 'patch_name', 'classification_id', 'displayName', 'family_id', 'react', 'type', 'status', 'obsolete'],
@@ -789,7 +789,7 @@ def main():
     print(f"Skipped NPCs (skip list): {skipped_count}")
     print(f"Non-skipped NPCs:         {len(npcs)}")
     print(f"Successfully processed:   {complete_count}")
-    print(f"\nProgress CSV saved to: {WOWHWEAD_DATA_CSV}")
+    print(f"\nProgress CSV saved to: {WOWHEAD_DATA_CSV}")
     print("=" * 60)
 
 
@@ -802,8 +802,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.reset:
-        if os.path.exists(WOWHWEAD_DATA_CSV):
-            os.remove(WOWHWEAD_DATA_CSV)
+        if os.path.exists(WOWHEAD_DATA_CSV):
+            os.remove(WOWHEAD_DATA_CSV)
             print("Progress file reset.")
 
     main()

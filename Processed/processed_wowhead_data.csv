@@ -8475,8 +8475,9 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 258510,Hateleech Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]",128549|128551,Slayer's Rise,15959,0,"43,49.8|43,46.6|42.2,53",2444,Slayer's Rise,12.0.0,Midnight,0,Hateleech Blistercreep,296,"[-1,-1]",1,successful,No
 258993,Captured Witherbark Lynx,Normal,0,2,Cat,15947,[],124949,Zul'Aman,15947,0,"38,37.2",2437,Zul'Aman,12.0.0,Midnight,0,Captured Witherbark Lynx,2,[],1,successful,No
 258999,Voidcraven Consumptor,Normal,0,42,Worm,15458,"[-1,-1]",131268,Voidstorm,15458,0,"38.2,59.4",2405,Voidstorm,12.0.0,Midnight,0,Voidcraven Consumptor,42,"[-1,-1]",1,successful,No
-259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,15947|15968,"[-1,-1]",141335|141423,Zul'Aman,15947,0,"37.4,71.4|37.4,69.2|40.4,40|40,42",2437,Zul'Aman,12.0.5,Midnight,0,Hal'hadar Leystalker,32,"[-1,-1]",1,successful,No
-259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,15947|15968,"[-1,-1]",141335|141423,Eversong Woods,15968,0,"54.8,88.2",2395,Eversong Woods,12.0.5,Midnight,0,Hal'hadar Leystalker,32,"[-1,-1]",1,successful,No
+259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]",141335|141423,Zul'Aman,15947,0,"37,72.7|40.4,40|37.6,69.5|39.7,42.6",2437,Zul'Aman,12.0.5,Midnight,0,Hal'hadar Leystalker,32,"[-1,-1]",1,successful,No
+259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]",141335|141423,Eversong Woods,15968,0,"54.5,88.2",2395,Eversong Woods,12.0.5,Midnight,0,Hal'hadar Leystalker,32,"[-1,-1]",1,successful,No
+259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]",141335|141423,Naigtal,16943,0,"75.1,70.7|76.8,73|62.9,70.8|67,71.2|70.8,78.7",2600,Naigtal,12.0.5,Midnight,0,Hal'hadar Leystalker,32,"[-1,-1]",1,successful,No
 259329,Crawler Corpse,Normal,0,8,Crab,15947,"[-1,-1]",114823,Zul'Aman,15947,0,"38.8,81.6",2437,Zul'Aman,12.0.0,Midnight,0,Crawler Corpse,8,"[-1,-1]",1,successful,No
 259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,16796,[],124014,Ritual Site,16796,0,"52.9,47.7|53,50.3",2585,Zul'Aman,12.0.5,Midnight,,Tortured Dragonhawk,30,[],1,successful,No
 259955,Murderous Mudcoat,Normal,0,44,Wasp,15947,"[-1,-1]",115078|115081,Zul'Aman,15947,0,"47,41.8|48.8,44.4|49.4,41.6",2437,Zul'Aman,12.0.5,Midnight,0,Murderous Mudcoat,44,"[-1,-1]",1,successful,No
