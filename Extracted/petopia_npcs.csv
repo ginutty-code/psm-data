@@ -2477,7 +2477,6 @@ npc_id,npc_name,zone,tameable
 45807,Sawtooth Crocolisk,Swamp of Sorrows,Can Be Tamed
 237635,Lightfrenzy Tyrannosaptor,"Lightbloom Lash'Ra, Eversong Woods",Can Be Tamed
 252851,Ancient Devilsaptor,"Nordrassil Roots, Harandar",Can Be Tamed
-253400,Radooni,"Har'athir, Harandar",Can Be Tamed
 250086,Stumpy,Harandar,Can Be Tamed
 249328,Hellebora,"Gloom Mire, Harandar",Can Be Tamed
 134852,Vilebone Ravager,"The Dreadmire, Nazmir",Can Be Tamed
@@ -2996,25 +2995,25 @@ npc_id,npc_name,zone,tameable
 173720,Mistveil Gorgegullet,Mists of Tirna Scithe,Can Be Tamed
 175350,Falls Gulper,"Glitterfall Heights, Ardenweald",Can Be Tamed
 173687,Glowgullet Bull,Ardenweald,Can Be Tamed
-250143,Bog Hopper,"Leech Bog, Zul'Aman",Can Be Tamed
-243171,Gloombelly Toad,"Stillwhisper Pond, Eversong Woods",Can Be Tamed
-253305,Poison Dart Frog,Atal'Aman (Delve),Can Be Tamed
-249358,Poisonous Passhopper,Eversong Woods,Can Be Tamed
 135052,Blight Toad,"Ballroom, Waycrest Manor (Dungeon)",Can Be Tamed
 214406,Shadowstarved Bullfrog,"Stillstone Pond, Hallowfall",Can Be Tamed
 137233,Plague Toad,Temple of Sethraliss (Dungeon),Can Be Tamed
 136475,Speckled Bullfrog,"Darkwood Shoal & Shrouded Shore, Vol'dun",Can Be Tamed
-257155,Abasi Croaker,"Atal'Abasi, Zul'Aman",Can Be Tamed
-250826,Banuran,"Zeb'Nowa, Eversong Woods",Can Be Tamed
-247011,Horned Frog,Zul'Aman,Can Be Tamed
-242032,Oophaga,"The Stump, Zul'Aman",Can Be Tamed
+250143,Bog Hopper,"Leech Bog, Zul'Aman",Can Be Tamed
+243171,Gloombelly Toad,"Stillwhisper Pond, Eversong Woods",Can Be Tamed
+253305,Poison Dart Frog,Atal'Aman (Delve),Can Be Tamed
 250142,Poisonous Hoplet,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 257428,Poisonous Hoplet,"Leech Bog, Zul'Aman",Can Be Tamed
+249358,Poisonous Passhopper,Eversong Woods,Can Be Tamed
 256851,Golden Hopper,"Lake Elrendar , Eversong Woods",Can Be Tamed
 250051,River Hopper,Eversong Woods,Can Be Tamed
 250141,Swamp Leaper,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 250053,Toxic Dartling,Eversong Woods,Can Be Tamed
 254795,Toxic Dartling,Eversong Woods,Can Be Tamed
+257155,Abasi Croaker,"Atal'Abasi, Zul'Aman",Can Be Tamed
+250826,Banuran,"Zeb'Nowa, Eversong Woods",Can Be Tamed
+247011,Horned Frog,Zul'Aman,Can Be Tamed
+242032,Oophaga,"The Stump, Zul'Aman",Can Be Tamed
 256853,Radiant Dartling,"Suncrown Tree, Eversong Woods",Can Be Tamed
 256854,Radiant Dartling,"Lake Eldendar , Eversong Woods",Can Be Tamed
 73805,Corrupted Toad,"The Cursed Woods, Shadowmoon Valley - Draenor",Can Be Tamed
@@ -4548,7 +4547,10 @@ npc_id,npc_name,zone,tameable
 221297,Foraging Mole,"The Cataract River, The Ringing Deeps",Can Be Tamed
 215846,Displaced Mole,"The Rumbling Wastes, The Ringing Deeps",Can Be Tamed
 219257,Invasive Thickhead,"Abyssal Excavation, The Ringing Deeps",Can Be Tamed
-210075,Henri Snufftail,"Haven Cascades, The Emerald Dream",Can Be Tamed
+210798,Striped Skulker,The Emerald Dream,Upcoming Pet
+210944,Tanned Skulker,The Emerald Dream,Can Be Tamed
+210075,Henri Snufftail,"Haven Cascades, The Emerald Dream",Upcoming Pet
+211072,Smolderfur Skulker,The Emerald Dream,Can Be Tamed
 204685,Luminous Squeaker,"Warder's Teeth, Zaralek Cavern",Can Be Tamed
 205001,Treasurewhiskers,"Mysterious Cave, Zaralek Cavern",Can Be Tamed
 205204,Lugear Mouse,Zaralek Cavern,Can Be Tamed
@@ -5272,8 +5274,8 @@ npc_id,npc_name,zone,tameable
 107440,Felsurge Hunter,"Felsurge Nest, Azsuna",Can Be Tamed
 112858,Hungry Spiderling,"Moonshade Sanctum, Suramar",Can Be Tamed
 120666,Legion Webspewer,Broken Shore,Can Be Tamed
-105756,Leyline Spiderling,"Falanaar Tunnels, Suramar",Can Be Tamed
 113974,Leyline Spiderling,"Ley Station Anora, Suramar",Can Be Tamed
+105756,Leyline Spiderling,"Falanaar Tunnels, Suramar",Can Be Tamed
 114692,Leyline Spiderling,"Falanaar Tunnels, Withered Training Instance",Can Be Tamed
 110376,Leyline Spiderling,"Falanaar Tunnels, Withered Training Instance",Can Be Tamed
 107398,Moonfall Stalker,"Moonshade Sanctum, Suramar",Can Be Tamed
@@ -6022,38 +6024,38 @@ npc_id,npc_name,zone,tameable
 2957,Elder Plainstrider,Mulgore,Can Be Tamed
 3246,Fleeting Plainstrider,Northern Barrens,Can Be Tamed
 191404,Cascadia Fickleshell,"Gardens of Unity, Thaldraszus",Can Be Tamed
-192637,Clearwater Turtle,Ohn'ahran Plains,Can Be Tamed
+192678,Clearwater Snapper,Ohn'ahran Plains,Can Be Tamed
 194045,Coastal Scaleshell,The Azure Span,Can Be Tamed
-197864,Dragonshell Snapper,"Misty Canyon, The Azure Span",Can Be Tamed
-192775,Greenbelt Turtle,Ohn'ahran Plains,Can Be Tamed
-196286,Highland Snapper Hatchling,"Veiled Ossuary, Thaldraszus",Can Be Tamed
-196063,Sandshell Snapper,"The Storm Scar, Ohn'ahran Plains",Can Be Tamed
+197866,Dragonshell Tyrant,"Misty Canyon, The Azure Span",Can Be Tamed
+186308,Mud Snapper,"Blueshore Prairie, Ohn'ahran Plains",Can Be Tamed
 191329,Sleepless Fickleshell,"Gardens of Unity, Thaldraszus",Can Be Tamed
-197041,Sunshell Turtle,"Rusza'thar Reach, Ohn'ahran Plains",Can Be Tamed
+210826,Blueslate Tortoise,The Emerald Dream,Can Be Tamed
 210195,Cantankerous Turtle,"Summerjoy Shoal, The Emerald Dream",Can Be Tamed
+212143,Cerulean Greyback,"Haven Cascades, The Emerald Dream",Can Be Tamed
+211145,Dewdrop Tortoise,"Twisting Wood, Slumbersome Shores, and Root-Bound Sanctuary, The Emerald Dream",Can Be Tamed
+210272,Lucidshell Tortoise,"Ancient Bough & Shallow Crossing, The Emerald Dream",Can Be Tamed
 210782,Singing Shore Snapper,"Singing Fen & Meandering Rootlands, The Emerald Dream",Can Be Tamed
 210783,Singing Shore Tortoise,"Singing Fen & Meandering Rootlands, The Emerald Dream",Can Be Tamed
 210449,Slumberpod Turtle,"Slumbersome Shores, The Emerald Dream",Can Be Tamed
 210410,Tortoise,The Emerald Dream,Can Be Tamed
+214215,Vigilant Snapper,Amirdrassil (Dragon Isles Zone),Can Be Tamed
+240676,Cautious Turtle,"Atal'Aman, Zul'Aman",Can Be Tamed
+250165,Tempered Spikeshell,"Hermit's Mooring, Zul'Aman",Can Be Tamed
+192637,Clearwater Turtle,Ohn'ahran Plains,Can Be Tamed
+197864,Dragonshell Snapper,"Misty Canyon, The Azure Span",Can Be Tamed
+192775,Greenbelt Turtle,Ohn'ahran Plains,Can Be Tamed
+196286,Highland Snapper Hatchling,"Veiled Ossuary, Thaldraszus",Can Be Tamed
+196063,Sandshell Snapper,"The Storm Scar, Ohn'ahran Plains",Can Be Tamed
+197041,Sunshell Turtle,"Rusza'thar Reach, Ohn'ahran Plains",Can Be Tamed
 214214,Vigilant Turtle,Amirdrassil (Dragon Isles Zone),Can Be Tamed
 250163,Spikeshell Snapper,Zul'Aman,Can Be Tamed
 211032,Darkshell Snapper,The Emerald Dream,Can Be Tamed
 214226,Shadechaser Snapper,"Twisting Wood, Amirdrassil (Dragon Isles Zone)",Can Be Tamed
 214227,Shadechaser Turtle,"Twisting Wood, Amirdrassil (Dragon Isles Zone)",Can Be Tamed
 196182,Highland Snapper,"Veiled Ossuary, Thaldraszus",Can Be Tamed
-186308,Mud Snapper,"Blueshore Prairie, Ohn'ahran Plains",Can Be Tamed
 196619,Springshell Snapper,"Dragonsprings Summit, Ohn'ahran Plains",Can Be Tamed
-212143,Cerulean Greyback,"Haven Cascades, The Emerald Dream",Can Be Tamed
-210272,Lucidshell Tortoise,"Ancient Bough & Shallow Crossing, The Emerald Dream",Can Be Tamed
 211184,Petalmuncher Tortoise,The Emerald Dream,Can Be Tamed
-240676,Cautious Turtle,"Atal'Aman, Zul'Aman",Can Be Tamed
 250164,Meandering Spikeshell,Zul'Aman,Can Be Tamed
-192678,Clearwater Snapper,Ohn'ahran Plains,Can Be Tamed
-197866,Dragonshell Tyrant,"Misty Canyon, The Azure Span",Can Be Tamed
-210826,Blueslate Tortoise,The Emerald Dream,Can Be Tamed
-211145,Dewdrop Tortoise,"Twisting Wood, Slumbersome Shores, and Root-Bound Sanctuary, The Emerald Dream",Can Be Tamed
-214215,Vigilant Snapper,Amirdrassil (Dragon Isles Zone),Can Be Tamed
-250165,Tempered Spikeshell,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 192776,Sunscale Snapper,Ohn'ahran Plains,Can Be Tamed
 191527,Sunscale Turtle,"Roaring Dragonsprings, Ohn'ahran Plains",Can Be Tamed
 257154,Abasi Snapper,"Atal'Abasi, Zul'Aman",Can Be Tamed
