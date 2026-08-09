@@ -1,0 +1,33 @@
+npc_id,npc_name,family_id,family_name,type_id,type_name,taming_requirements
+9498,Gorishi Grub,42,Worm,1,Beast,Exotic
+15630,Spawn of Fankriss,42,Worm,1,Beast,Exotic
+20713,Fey Drake,303,Lesser Dragonkin,1,Beast,Lesser Dragonkin
+44258,Colossal Gyreworm,55,Shale Beast,1,Beast,Exotic
+48639,Ruby Gemstone Cluster,55,Shale Beast,1,Beast,Exotic
+58575,Golden Cloud Serpent,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+58581,Azure Cloud Serpent,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+58582,Jade Cloud Serpent,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+62269,Voress'thalik,41,Aqiri,1,Beast,Exotic
+62309,Hei Feng,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+62599,Wild Cloudrunner,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+63865,Amber Parasite,42,Worm,1,Beast,Exotic
+64186,Stonebound Quilen,128,Stone Hound,1,Beast,Exotic
+64403,Alani,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+64686,Granite Fragment,128,Stone Hound,1,Beast,Exotic
+65559,Vision of Zhao-Ren,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+75771,Trained Clefthoof,43,Clefthoof,1,Beast,Exotic
+76389,Thunderhoof,43,Clefthoof,1,Beast,Exotic
+78508,Darkwing Rylak,38,Chimaera,1,Beast,Exotic
+78521,Darkwing Rylak,38,Chimaera,1,Beast,Exotic
+85537,Grom'kar Warbeast,43,Clefthoof,1,Beast,Exotic
+85888,Howling Rylak,38,Chimaera,1,Beast,Exotic
+98382,Corrupted Gyreworm,55,Shale Beast,1,Beast,Exotic
+101062,Corrupted Shale Spider,55,Shale Beast,1,Beast,Exotic
+140433,Wild Gryphon,160,Feathermane,1,Beast,Feathermane
+163386,Alani,303,Lesser Dragonkin,1,Beast,Cloud Serpent
+171633,Uninvited Bonecrusher,128,Stone Hound,1,Beast,Exotic|Gargon
+172785,Unfinished Granitefur,128,Stone Hound,1,Beast,Exotic|Gargon
+204189,Deep Krolusk,292,Carapid,1,Beast,Exotic
+205594,Kithguard Crawlers,292,Carapid,1,Beast,Exotic
+256408,Spawn of Ix,42,Worm,1,Beast,Exotic
+171633,Uninvited Bonecrusher,128,Stone Hound,1,Beast,Exotic|Gargon

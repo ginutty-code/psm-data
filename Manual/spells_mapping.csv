@@ -1,0 +1,88 @@
+spell_id,spell_name,spell_icon,spell_category,spell_tag
+50245,Pin,,Enemy movement reduction,Control
+50433,Ankle Crack,,Enemy movement reduction,Control
+54644,Frost Breath,,Enemy movement reduction,Control
+160065,Tendon Rip,,Enemy movement reduction,Control
+263423,Lock Jaw,,Enemy movement reduction,Control
+263446,Acid Spit,,Enemy movement reduction,Control
+263840,Furious Bite,,Enemy movement reduction,Control
+263841,Petrifying Gaze,inv_treasurebasiliskmount_green,Enemy movement reduction,Control
+263852,Talon Rend,,Enemy movement reduction,Control
+288962,Blood Bolt,,Enemy movement reduction,Control
+341118,Trample,,Enemy movement reduction,Control
+1247078,Shadow Jump,,Enemy movement reduction,Control
+35346,Warp Time,,Enemy movement reduction,Control
+50285,Dust Cloud,,Enemy movement reduction,Control
+160067,Web Spray,,Enemy movement reduction,Control
+92380,Froststorm Breath,spell_frost_icestorm,Exotic: Damage over time,Damage
+93433,Burrow Attack,,Exotic: Damage over time,Damage
+159788,Molten Hide,,Exotic: Damage over time,Damage
+24450,Prowl,,First attack damage bonus,Damage
+90328,Spirit Walk,,First attack damage bonus,Damage
+24423,Bloody Screech,,Enemy healing reduction,Debuffs
+263853,Infected Bite,,Enemy healing reduction,Debuffs
+263854,Savage Rend,,Enemy healing reduction,Debuffs
+263856,Gnaw,,Enemy healing reduction,Debuffs
+263857,Ravage,,Enemy healing reduction,Debuffs
+263858,Toxic Sting,,Enemy healing reduction,Debuffs
+263861,Gore,,Enemy healing reduction,Debuffs
+263863,Acid Bite,,Enemy healing reduction,Debuffs
+279362,Grievous Bite,,Enemy healing reduction,Debuffs
+1247058,Serrated Strike,,Enemy healing reduction,Debuffs
+54680,Monstrous Bite,,Enemy healing reduction,Debuffs
+160018,Gruesome Bite,,Enemy healing reduction,Debuffs
+160060,Deadly Sting,,Enemy healing reduction,Debuffs
+272679,Fortitude of the Bear,,Hunter and pet damage reduction,Spec
+264662,Endurance Training,,Hunter and pet health buff,Spec
+264663,Predator's Thirst,,Hunter and pet leech,Spec
+280069,Blood of the Rhino,,Exotic: Pet armor & healing,Defense
+263865,Scale Shield,,Pet damage taken reduction,Defense
+26064,Shell Shield,,Pet damage taken reduction,Defense
+90339,Harden Carapace,,Pet damage taken reduction,Defense
+160063,Solid Shell,,Pet damage taken reduction,Defense
+263867,Obsidian Skin,,Pet damage taken reduction,Defense
+263868,Defense Matrix,,Pet damage taken reduction,Defense
+263869,Bristle,,Pet damage taken reduction,Defense
+279410,Bulwark,,Pet damage taken reduction,Defense
+392622,Shimmering Scales,,Pet damage taken reduction,Defense
+279254,Calcified Carapace,,Exotic: Pet damage taken reduction,Defense
+279259,Shimmering Shale,,Exotic: Pet damage taken reduction,Defense
+160057,Thick Hide,,Pet damage taken reduction,Defense
+263921,Gruff,inv_babyspacegoat,Pet damage taken reduction,Defense
+263934,Thick Fur,,Pet damage taken reduction,Defense
+263939,Silverback,,Pet damage taken reduction,Defense
+264023,Niuzao's Fortitude,,Pet damage taken reduction,Defense
+279399,Ancient Hide,,Pet damage taken reduction,Defense
+341115,Hardy,,Pet damage taken reduction,Defense
+160049,Stone Armor,,Pet damage taken reduction,Defense
+160011,Agile Reflexes,,Pet dodge,Defense
+160044,Primal Agility,,Pet dodge,Defense
+263887,Dragon's Guile,,Pet dodge,Defense
+263892,Catlike Reflexes,,Pet dodge,Defense
+263904,Serpent's Swiftness,,Pet dodge,Defense
+263916,Feather Flurry,,Pet dodge,Defense
+264360,Winged Agility,,Pet dodge,Defense
+279336,Swarm of Flies,,Pet dodge,Defense
+341117,Fleethoof,,Pet dodge,Defense
+159953,Feast,,Exotic: Pet armor&healing,Defense
+267922,Eternal Guardian,,Exotic: Pet instant revive,Defense
+344346,Soothing Waters,,Pet dispel,Defense
+344347,Spore Cloud,,Pet dispel,Defense
+344348,Sonic Screech,,Pet dispel,Defense
+344349,Nether Energy,,Pet dispel,Defense
+344350,Oiled Feathers,,Pet dispel,Defense
+344351,Spirit Pulse,,Pet dispel,Defense
+344352,Nature's Grace,,Pet dispel,Defense
+344353,Serenity Dust,,Pet dispel,Defense
+90347,Play,,Fun,Fun
+94019,Rest,,Fun,Fun
+94022,Trick,,Fun,Fun
+126259,Trick,,Fun,Fun
+126364,Rest,,Fun,Fun
+264667,Primal Rage,,Bloodlust / Heroism,Spec
+90361,Spirit Mend,,Exotic: Ally healing,Utility
+272682,Master's Call,,Ally movement impairing removal,Spec
+264656,Pathfinding,,Hunter and pet movement speed,Spec
+160007,Updraft,,Exotic: Hunter and pet slow fall,Utility
+126311,Surface Trot,,Exotic: Hunter and pet water walking,Utility
+280151,Dune Strider,,Exotic: Pet movement speed,Utility
