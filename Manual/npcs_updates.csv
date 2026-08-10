@@ -188,3 +188,27 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 261981,Rime Worm,Normal,0,42,Worm,16900,[],update
 1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
 143416,Ancient Core Hound,Normal,0,45,Core Hound,2717|8064,"[-1,null]",update
+271067,Ravenous Seabird,Normal,0,26,Bird of Prey,16365,[],add
+261317,Emaciated Truffle Hog,Normal,0,5,Boar,16365,[],add
+260827,Snuffling Boar,Normal,0,5,Boar,16365,[],add
+264503,Untouched Tusksplitter,Normal,0,5,Boar,16365,"[null,-1]",add
+261837,Corroded Cliffcharger,Normal,0,5,Boar,16365,[],add
+262009,Mutated Double-Spine Hog,Normal,0,5,Boar,16365,[],add
+261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,[],add
+258955,Frilled Spitter,Normal,0,35,Serpent,,[],add
+261124,Incensed Cobra,Normal,0,35,Serpent,16365,[],add
+265343,Nest Coiler,Normal,0,35,Serpent,16365,[],add
+264655,Lurking Thorntail,Normal,0,35,Serpent,16365,[],add
+268979,Newborn Cobra,Normal,0,35,Serpent,16535,"[null,-1]",add
+265049,Burrow Stinger,Normal,0,35,Serpent,16548,[],add
+261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[null,-1]",add
+261643,Summoned Serpent,Normal,0,35,Serpent,16535,[],add
+263653,Mortuary Creeper,Normal,0,3,Spider,16535,[],add
+254758,Crypt Spider,Normal,0,3,Spider,16535,[],add
+258111,Clouded Crystalshell,Normal,0,21,Turtle,16535,[],add
+262977,Snapping Fractureshell,Normal,0,21,Turtle,16365,[],add
+260368,Armored Snacktooth,Normal,0,21,Turtle,16365,[],add
+257600,Murkfen Muckstomper,Normal,0,21,Turtle,16365,[],add
+262691,Crazed Crystalshell,Normal,0,21,Turtle,16365,[],add
+265237,Lockjaw,Rare,4,21,Turtle,16365,[],add
+256763,Ornery Muckstinger,Normal,0,44,Wasp,16365,[],add

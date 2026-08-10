@@ -6864,11 +6864,21 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 253315,Juvenile Chloroceros,Harandar,Direhorn,,,Direhorn|Florafaun
 253316,Violet Chloroceros,Harandar,Direhorn,,Loses flower on back when tamed.,Direhorn|Florafaun
 253397,Slithering Grovecrawler,Harandar,Serpent,,,Florafaun
+253489,Sludge Biter,The Coiled Isle,Worm,,,Exotic
+253490,Snapping Prowler,The Coiled Isle,Lizard,,,
+253491,Snapping Matriarch,The Coiled Isle,Lizard,,,
 253499,Bluffs Hornet,Zul'Aman,Wasp,,Found just west outside of Maisara Deeps.,
 253558,Adzikel <The Hidden Light>,Harandar,Serpent,,,Florafaun
 253620,Netherwasp Drone,Voidstorm,Wasp,,,
+253694,Scaled Breaker,The Coiled Isle,Hydra,,"Found during the quest, The Serpent's Tail.",
+253695,Screaming Skyfang,The Coiled Isle,Wind Serpent,,"Found during the quest, The Serpent's Tail.",
+253697,Ravenous Cobraling,The Coiled Isle,Serpent,,"Found during the quest, The Serpent's Tail.",
+253761,Vilescar Harrier,The Coiled Isle,Wind Serpent,,,
+253764,Vilescar Skyfiend,The Coiled Isle,Chimaera,,"Found during the quest, The Serpent's Tail.",Exotic
+253765,Brood Watcher,The Coiled Isle,Serpent,,"Found during the quest, The Serpent's Tail.",
 253850,Juvenile Ghostclaw,Eversong Woods,Cat,,,
 253881,Glimmering Petalwing,Harandar,Carrion Bird,,,Florafaun
+253884,Winged Skyfang,Zul'Aman,Chimaera,,"Found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge. Also spawns during the confrontation with Hexlord Malacrass during the quest, Down With the Skies.",Exotic
 253923,Sunset Doe,Eversong Woods,Stag,,,
 253939,Springpaw Lynx,Eversong Woods,Cat,,,
 253950,Crimson Bloodfeather,Eversong Woods,Dragonhawk,,,
@@ -6877,12 +6887,16 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 253985,Bloodfeather Dragonhawk,Eversong Woods,Dragonhawk,,,
 253993,Scaley Scratcher,Zul'Aman,Scalehide,,,
 254053,Sunset Stag,Eversong Woods,Stag,,,
+254166,Murkfen Amazard,The Coiled Isle,Lizard,,,
+254167,Enraged Amazard,The Coiled Isle,Lizard,,,
 254198,Kelp Crab,Zul'Aman,Crab,,,
 254203,Scavenging Stalker,Harandar,Water Strider,,"Located in The Grudge Pit (Non-Instanced), Harandar.",Exotic
 254241,Juvenile Springpaw,Eversong Woods,Cat,,,
+254288,Vilescar Tyrant,The Coiled Isle,Hydra,,,
 254313,Ghostfeather Dragonhawk,Eversong Woods,Dragonhawk,,,
 254361,Ghostclaw Elder,Eversong Woods,Cat,,,
 254363,Ghostclaw Lynx,Eversong Woods,Cat,,,
+254511,Ravenous Python,The Coiled Isle,Serpent,,,
 254576,Stalking Shredclaw,Voidstorm,Whiptail,,,Exotic
 254577,Spiteful Shredclaw,Voidstorm,Whiptail,,,Exotic
 254581,Mature Dunedweller,Voidstorm,Worm,,,Exotic
@@ -6898,17 +6912,21 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 254709,Prowling Voidstalker,Eversong Woods,Warp Stalker,,Appears during various Void Strike events in Eversong.,
 254720,Frenzied Klaxid,Eversong Woods,Scorpid,,Appears during various Void Strike events in Eversong.,
 254732,Giant Duskwing,Eversong Woods,Bat,,,
+254758,Crypt Spider,"Crypt of the Denied, The Coiled Isle",,,,
 254795,Toxic Dartling,Eversong Woods,Hopper,,Found south of the Horde entrance to Silvermoon City.,
 254815,Rageclaw Matriarch,Eversong Woods,Bear,,Found near the southern entrance to Zul'Aman.,
 254818,Duskling Skitterer,Eversong Woods,Spider,,,
+254964,Insatiate Hatchling,The Coiled Isle,Serpent,,,
 254969,Prowl Crawler,Zul'Aman,Crab,,,
 254970,Bloodletter Kilivore,Voidstorm,Ravager,,,
 254972,Void-Bloated Wyrm,Eversong Woods,Serpent,,Appears during various Void Strike events on Sunstrider Isle.,
+254973,Vilescar Shrieker,The Coiled Isle,Wind Serpent,,,
 254974,Ravenous Kilivore,Voidstorm,Ravager,,,
 255022,Pango Behemoth,Zul'Aman,Scalehide,,,
 255042,Riptalon Eviscerator,Zul'Aman,Bird of Prey,,,
 255055,Wrathshell Consumptor,Midnight Delves,Worm,,Can spawn as a part of a Nemesis group only during the first season of Midnight Delves.,Exotic
 255079,Opportunistic Grovecrawler,Harandar,Serpent,,"Found during the quest, Re-Hydra-ted.",Florafaun
+255088,Looming Mutagenitor,The Coiled Isle,Chimaera,,"Found when the event, ""The Looming Mutagenitor"" is up.",Exotic
 255122,Plump Chitterfang,Zul'Aman,Rodent,,,
 255136,Kapara,Zul'Aman,Rodent,,,
 255137,Juvenile Swiftclaw,Zul'Aman,Cat,,,
@@ -6933,6 +6951,7 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 255752,Amani Mauler,Zul'Aman,Bear,,,
 255764,Mammoth Calf,Zul'Aman,Mammoth,,,
 255765,Mammoth,Zul'Aman,Mammoth,,,
+255811,Choleric Cliffdweller,The Coiled Isle,Gruffhorn,,,
 255847,Paint-Crazed Thornmaw,Harandar,Scalehide,,"Found during the quest, The Stroke of Storms.",Florafaun
 255871,Lightbloom Crawler,Harandar,Serpent,,,Florafaun
 255876,Lightsick Sporeglider,Harandar,Sporebat,,,
@@ -6952,6 +6971,8 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 256193,Grotto Firefly,Harandar,Moth,,,
 256195,Grotto Darter,Harandar,Moth,,,
 256204,Glowing Firefly,Harandar,Moth,,,
+256207,Screeching Skyfiend,Zul'Aman,Chimaera,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",Exotic
+256213,Coiling Skyfang,Zul'Aman,Wind Serpent,,"Found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge. Also spawns during the confrontation with Hexlord Malacrass during the quest, Down With the Skies.",
 256225,Rootforage Beetle,Harandar,Beetle,,,
 256227,Tiny Cavern Skipper,Harandar,Hopper,,,
 256230,Barkborn Petalwing,Eversong Woods,Carrion Bird,,,Florafaun
@@ -6984,10 +7005,15 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 256671,Iridescent Petalwing,Harandar,Carrion Bird,,,Florafaun
 256695,Mature Rootcrawler,Harandar,Serpent,,,Florafaun
 256700,Rootcrawler,Harandar,Serpent,,,Florafaun
+256712,Scrawny Pebbledweller,The Coiled Isle,Crab,,,
 256713,Lightcursed Petalwing,Harandar,Carrion Bird,,,Florafaun
 256715,Bloomskitter Beetle,Harandar,Beetle,,,
+256763,Ornery Muckstinger,"The Ring of Glory, The Coiled Isle",,,,
 256766,Rootforage Beetle,Harandar,Beetle,,,
 256770,Bilemaw the Gluttonous <Apex Predator>,Voidstorm,Whiptail,True,,Exotic
+256773,Devouring Writhe,The Coiled Isle,Serpent,,,
+256791,Scaleskin Vilewing,The Coiled Isle,Chimaera,,,Exotic
+256792,Scaleskin Harrier,The Coiled Isle,Wind Serpent,,,
 256805,Valesoar Petalwing,Harandar,Carrion Bird,,,Florafaun
 256834,Resplendent Hawkstrider,Eversong Woods,Tallstrider,,,
 256835,Refulgent Hawkstrider,Eversong Woods,Tallstrider,,,
@@ -6995,6 +7021,7 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 256841,Resplendent Hawkstrider,Eversong Woods,Tallstrider,,,
 256843,Glistening Hawkstrider,Eversong Woods,Tallstrider,,,
 256844,Gleaming Hawkstrider,Eversong Woods,Tallstrider,,Possibly only found as a couple of isolated individuals: one north of Fairbreeze Village and one in the woods a fair way east of East Sanctum and south of Farstrider Hold.,
+256845,Coiling Harrier,Zul'Aman,Wind Serpent,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.",
 256847,Gleaming Hawkstrider,Eversong Woods,Tallstrider,,"Only known to occur as a single individual that runs along the beach to the west of Lightbloom Ath'Ran and south of Sunset Strand, by a larger number of Glistening Hawkstriders.",
 256851,Golden Hopper,Eversong Woods,Hopper,,,
 256853,Radiant Dartling,Eversong Woods,Hopper,,,
@@ -7005,6 +7032,7 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 256862,Brilliant Hawkstrider,Eversong Woods,Tallstrider,,,
 256870,Smoldering Beetle,Harandar,Beetle,,,
 256878,Opportunistic Petalwing,Harandar,Carrion Bird,,,Florafaun
+256882,Lost Kapara,The Coiled Isle,Rodent,,,
 256898,Soaring Petalwing,Harandar,Carrion Bird,,"Found in various, very high-up places throughout the zone.",Florafaun
 256903,Soaring Petalwing,Harandar,Carrion Bird,,,Florafaun
 256914,Lightmad Saptor,Eversong Woods,Raptor,,,Florafaun
@@ -7059,11 +7087,14 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 257529,Stonemaw Amazard,Zul'Aman,Lizard,,,
 257530,Razorspine Amazard,Zul'Aman,Lizard,,,
 257575,Hungering Stormray,Voidstorm,Ray,,,
+257600,Murkfen Muckstomper,"Mlurkkr Mire, The Coiled Isle",,,,
 257740,Infested Shredclaw,Voidstorm,Whiptail,,,Exotic
 257765,Insatiable Consumptor,Voidstorm,Worm,,,Exotic
 257830,Deeplurk Snapdragon,Ritual Site: Daggerspine Point (Scenario),Lizard,,Located in Ritual Site: Daggerspine Point (Scenario). Appears during the Daggerspine Point Ritual Site event.,
+257864,Exalted Skyfiend,The Coiled Isle,Wind Serpent,,"Found during the event, ""The Broodmother's Nest"". Can only be reached on the northern main tower on the northeastern side. Though it can be attacked, it is out of range for Tame Beast. You will need to place a Frost Trap at your feet, then either have a Death Knight use Death Grip or use the item Web Pull to pull the wind serpent to you when it is in range, then use Tame Beast.",
 257880,Backwoods Boar,Zul'Aman,Boar,,,
 257881,Backwoods Boar,Zul'Aman,Boar,,,
+257894,Writhing Young,The Coiled Isle,Serpent,,Spawns when a Writhing Clutch finishes hatching.,
 257898,Siphoning Blistercreep,Voidstorm,Blood Beast,,,Blood Beast
 257942,Carefree Pango,Zul'Aman,Scalehide,,,
 257945,Stinger Matriarch,Zul'Aman,Wasp,,,
@@ -7072,25 +7103,136 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 258070,Tusksplitter Boar,Zul'Aman,Boar,,,
 258073,Tusksplitter Boar,Zul'Aman,Boar,,,
 258090,Bulb-eye Potatoad,Harandar,Hopper,,,Florafaun
+258111,Clouded Crystalshell,"The Whispering Marsh, The Coiled Isle",,,,
 258190,Lightcursed Crawler,Harandar,Serpent,,,Florafaun
 258215,Kapara,Zul'Aman,Rodent,,"Found to the north of Shadebasin Watch. Only found during the quest, A Quiet Walk Interrupted.",
 258216,Kapara Pup,Zul'Aman,Rodent,,"Found to the east of Shadebasin Watch. Only found during the quest, A Quiet Walk Interrupted.",
 258269,Voidsated Consumptor,Voidstorm,Worm,,"Requires the quest, ""Buried in the Dark"" to access.",Exotic
+258394,Steely Seabird,The Coiled Isle,Bird of Prey,,,
+258504,Implanted Boar,The Coiled Isle,Boar,,,
 258510,Hateleech Blistercreep,Voidstorm,Blood Beast,,,Blood Beast
+258511,Infected Eagle,The Coiled Isle,Bird of Prey,,,
+258512,Tainted Dart Frog,The Coiled Isle,Hopper,,,
+258549,Newborn Corpseburster,The Coiled Isle,Serpent,,"Can be found roaming the area, but also spawns when you kill an Implanted Boar, Infected Eagle, or Tainted Dart Frog.",
+258931,Rotsting Swarmer,The Coiled Isle,Wasp,,,
+258943,Highcliff Osprey,The Coiled Isle,Bird of Prey,,,
+258955,Frilled Spitter,Midnight Delves,,,,
+258961,Scalewing Hunter,Midnight Delves,Wind Serpent,,Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.,
+258962,Writhing Ripcoil,Midnight Delves,Serpent,,Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.,
+258980,Gully Hog,The Coiled Isle,Boar,,,
+259063,Winged Skyfang,Zul'Aman,Chimaera,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid. Most of these creatures are killed fairly quickly by friendly NPCs but you can find some beyond the perimeter that are less likely to be under attack.",Exotic
 259106,Hal'hadar Leystalker,Eversong Woods,Warp Stalker,,"This warp stalker appears during several Void Assaults in Zul'Aman and Eversong Woods, if Hal'hadar ethereals are present. Void Assaults switch between the two zones weekly. A good source in ZA is the Void Incursion event that occurs at Speaker's Rest when the zone's Void Assaults tally reaches 100%. During this event, the Hal'hadar Leystalkers are stealthed but easily detected by hunters. An event in Eversong where they occur is the ""Cryptic Operations"" Void Strike in the crypts at the southern end of the Zeb'Nowa ruins (in the far south-east of the zone, south-west of the entrance to Zul'Aman). This strike appears to be less frequent than most so you may have to clear a number of them before it pops, but when it does be quick to tame one as other players engaging with the event will probably kill them quickly.",
+259131,Timber Cobra,The Coiled Isle,Serpent,,,
+259132,Timber Whelp,The Coiled Isle,Serpent,,,
+259275,Deathcoil Skyfiend,Zul'Aman,Chimaera,,"Only spawns during the Patch 12.1 Campaign quest, Down With the Skies.",Exotic
+259699,Swooping Viper,Zul'Aman,Chimaera,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.",Exotic
+259767,Shrieking Skyfiend,Zul'Aman,Chimaera,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",Exotic
+259768,Coiling Serpent,Zul'Aman,Wind Serpent,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",
 259914,Tortured Dragonhawk,Ritual Site: Broken Throne (Scenario),Dragonhawk,,Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.,
+259952,Coiling Skyfang,The Coiled Isle,Wind Serpent,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",
 259955,Murderous Mudcoat,Zul'Aman,Wasp,,"Appears during the ""Battery Rush: Maisara Deeps"" Void Strike event.",
 259960,Perturbed Pango,Zul'Aman,Scalehide,,"Appears during the ""Battery Rush: Maisara Deeps"" Void Strike event.",
 260031,Latticewing Sporeglider,Harandar,Sporebat,,Latticewing Sporegliders with this ID patrol the zone in a small pack.,
+260081,Hefty Stonecracker,The Coiled Isle,Crab,,,
+260368,Armored Snacktooth,"Gnarldor Isle, The Coiled Isle",,,,
+260369,Feral Ram,The Coiled Isle,Gruffhorn,,,
+260370,Grumpy Bullfrog,The Coiled Isle,Hopper,,,
+260371,Scavenging Filthfeather,The Coiled Isle,Bird of Prey,,,
+260372,Mulchtusk Scavenger,The Coiled Isle,Boar,,,
+260827,Snuffling Boar,"The Whispering Marsh & Mlurkkr Mire, The Coiled Isle",,,,
 260954,Vicious Trigore,Eversong Woods,Hydra,,Appears during various Void Strike events in Eversong.,
 260988,Frost Crawler,Val,Spider,,,
 261085,Invasive Crystalback,Val,Scorpid,,,
+261122,Agitated Python,The Coiled Isle,Serpent,,"Spawns during the world quest, Who Ordered the Bag of Snakes?.",
+261124,Incensed Cobra,"Tokka's Landing, The Coiled Isle",,,,
 261125,Shoreline Scuttler,Zul'Aman,Crab,,,
 261126,Blueblood Crawler,Zul'Aman,Crab,,,
+261142,Destra,The Coiled Isle,Hydra,True,,
+261177,Swarming Chestbiter,Zul'Aman,Serpent,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.",
+261307,Slickfeather Eagle,The Coiled Isle,Bird of Prey,,,
+261317,Emaciated Truffle Hog,"Path of Whispers, The Coiled Isle",,,,
 261337,Voidsinged Hawkstrider,Eversong Woods,Tallstrider,,"Appears during the 'Tranquil Repose' and 'South Eversong Woods' Void Strike events in Eversong Woods. Only one of these beasts seems to appear at a time but another may spawn as the event continues. These events only occur when Void Assaults are set in Eversong Woods, which is every second week. Void Strike locations seem to cycle randomly, so keep completing them until one of these two appears.",
+261369,Odorous Stripeback,The Coiled Isle,Rodent,,,
+261372,Dustscale Cobra,"Zail'Zar Span & Blistering Terrace, The Coiled Isle",,,,
+261375,Swarming Python,The Coiled Isle,Serpent,,,
+261377,Preying Writhe,The Coiled Isle,Serpent,,,
+261378,Gorged Skyfiend,The Coiled Isle,Chimaera,,,Exotic
+261390,Venomgall Tyrant,The Coiled Isle,Hydra,,,
+261396,Prowling Skyfiend,The Coiled Isle,Chimaera,,,Exotic
+261398,Writhing Coiler,The Coiled Isle,Serpent,,,
+261473,Spotted Kapara,The Coiled Isle,Rodent,,,
+261476,Spineback Hornet,The Coiled Isle,Wasp,,,
+261478,Ravine Boar,The Coiled Isle,Boar,,,
+261481,Frenzied Boar,The Coiled Isle,Boar,,,
+261482,Frenzied Kapara,The Coiled Isle,Rodent,,,
+261554,Twinfang Harrower,Altar of Fangs (Dungeon),Chimaera,,Located in Altar of Fangs (Dungeon).,Exotic
+261626,Sickly Kapara,The Coiled Isle,Rodent,,,
+261635,Greenhusk Leechling,The Coiled Isle,Worm,,,Exotic
+261638,Muskmoss Lizard,The Coiled Isle,Lizard,,,
+261643,Summoned Serpent,"Vaults of Atal'Utek, The Coiled Isle",,,,
+261650,Bonesnapper Lizard,The Coiled Isle,Lizard,,,
+261651,Carrion Hornet,The Coiled Isle,Wasp,,,
+261652,Musty Kapara,The Coiled Isle,Rodent,,,
+261666,Screeching Eagle,The Coiled Isle,Bird of Prey,,,
+261667,Thickhide Boar,The Coiled Isle,Boar,,,
 261681,Costal Greenhead,Zul'Aman,Wasp,,,
 261682,Fiery Yellowjacket,Zul'Aman,Wasp,,,
+261693,Coiling Windlash,Zul'Aman,Chimaera,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",Exotic
+261694,Coiling Skyfang,The Coiled Isle,Wind Serpent,,"Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.",
+261789,Caustic Abductor,The Coiled Isle,Chimaera,,"Found during the quest, The Serpent's Tail.",Exotic
+261820,Venom-Bloated Python,The Coiled Isle; Eversong Woods; Zul'Aman; Harandar; Voidstorm,Serpent,,"Can spawn from enemy corpses when your Season 2 Nightmare Prey target is one of the ""Children of Ula'tek"" (Janoa the Fang, Batani the Scaled, Kursak the Coiled, Kadani the Claw).",
+261837,Corroded Cliffcharger,"The Fangs, The Coiled Isle",,,,
+261864,Burrowing Ambusher,"The Serpent's Tail, The Coiled Isle",,,,
+261943,Shredscale Hydra,Midnight Delves,Hydra,,Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.,
 261981,Rime Worm,Val,Worm,,,Exotic
+262009,Mutated Double-Spine Hog,"The Fangs, The Coiled Isle",,,,
+262102,Slithering Coiler,The Darkway (Delve),Serpent,,"Located in The Darkway (Delve). Found when the delve story is ""Eggsplosive Growth"".",
 262321,Depthstalker Snapdragon,Ritual Site: Daggerspine Point (Scenario),Lizard,,Located in Ritual Site: Daggerspine Point (Scenario). Appears during the Daggerspine Point Ritual Site event.,
+262439,Wild Snake,The Coiled Isle,Serpent,,,
+262691,Crazed Crystalshell,"The Whispering Marsh, The Coiled Isle",,,,
+262960,Mutated Ravine Hogbeast,The Coiled Isle,Boar,,,
+262965,Spined Snapper,The Coiled Isle,Lizard,,,
+262972,Corroded Skystriker,The Coiled Isle,Bird of Prey,,,
+262977,Snapping Fractureshell,"Wreck of Sethralis's Scale, The Coiled Isle",,,,
+263356,Lurking Coiler,The Coiled Isle,Serpent,,,
+263359,Sacred Doomcoiler,The Coiled Isle,Serpent,,,
+263393,Territorial Eel,The Coiled Isle,Serpent,,,
 263617,Void-Touched Snapdragon,Ritual Site: Daggerspine Point (Scenario),Lizard,,Located in Ritual Site: Daggerspine Point (Scenario). There's a chance of summoning this snapdragon while running the Daggerspine Point Ritual Site. This instance is open every second week in Eversong Woods (check for the purple ritual site mark on the zone map) and is soloable. Inside the instance you can find occasional piles of Washed Up Kelp. Interacting with these has a chance of spawning a Void-Touched Snapdragon (which can also drop a mount of the same name).,
+263653,Mortuary Creeper,"Vault of Restless Bones, The Coiled Isle",,,,
+263694,Spiritsting,The Coiled Isle,Wasp,True,,
+263695,Zecrogon,The Coiled Isle,Crab,True,,
+264159,Pugnacious Harrier,The Coiled Isle,Wind Serpent,,,
+264350,Summoned Coiler,The Coiled Isle,Serpent,,"Found during the event, ""Temple Strike: Overflowing Venom"".",
+264502,Skittish Dart Frog,The Coiled Isle,Hopper,,,
+264503,Untouched Tusksplitter,"The Forum, The Coiled Isle",,,,
+264655,Lurking Thorntail,"The Forum, The Coiled Isle",,,,
+264656,Forum Frondchewer,The Coiled Isle,Gruffhorn,,,
+264658,Frondchewer Lamb,The Coiled Isle,Gruffhorn,,,
+264659,Steelfeather Eagle,The Coiled Isle,Bird of Prey,,,
+264671,Forum Windchaser,The Coiled Isle,Bird of Prey,,,
+264705,Fringe Clacker,The Coiled Isle,Crab,,,
+265048,Burrow Spitter,The Grudge Pit (Delve),Serpent,,"Located in The Grudge Pit (Delve). Can spawn when the delve story is ""The Fungal Pharmacon"".",
+265049,Burrow Stinger,The Grudge Pit (Delve),,,,
+265051,Burrow Python,The Grudge Pit (Delve),Serpent,,"Located in The Grudge Pit (Delve). Can spawn when the delve story is ""The Fungal Pharmacon"".",
+265237,Lockjaw,"The Fangs, The Coiled Isle",,,,
 265254,Hal'hadar Leystalker,Naigtal,Warp Stalker,,,
+265332,Surviving Whelkshell,The Coiled Isle,Crab,,,
+265333,Whelkshell Hulk,The Coiled Isle,Crab,,,
+265336,Sludgeback Leech,The Coiled Isle,Worm,,,Exotic
+265337,Sludgling,The Coiled Isle,Worm,,,Exotic
+265343,Nest Coiler,"Blistering Terrace, The Coiled Isle",,,,
+265480,Enraged Dragonhawk,Zul'Aman,Dragonhawk,,"Found during the quest, Bravely Burning.",
+265672,Acidburned Osprey,The Coiled Isle,Bird of Prey,,,
+265720,Scavenging Critter,Zul'Aman,Rodent,,"Found during the quest, Root of Survival.",
+265968,Writhing Bonechewer,The Coiled Isle,Serpent,,,
+265969,Carrion Harrier,The Coiled Isle,Wind Serpent,,,
+268049,Siltmouth <The Unflappable>,The Coiled Isle,Rodent,True,,
+268973,Newborn Writhe,The Coiled Isle,Serpent,,,
+268979,Newborn Cobra,"The Seal of Wrath, The Coiled Isle",,,,
+268981,Newborn Skyfang,The Coiled Isle,Wind Serpent,,,
+270233,Venomspawn Snapper,The Coiled Isle,Serpent,,,
+270767,Newborn Snake,The Coiled Isle,Serpent,,"Found during the quest, The Serpent's Tail.",
+271028,Enraged Dragonhawk,Zul'Aman,Dragonhawk,,"Found during the quest, Bravely Burning.",
+271067,Ravenous Seabird,"Mlurkkr Mire, The Coiled Isle",,,,
+272920,Vilescar Tyrant,The Coiled Isle,Hydra,,,
+273290,Writhing Coiler,The Coiled Isle,Serpent,,"Spawns when rescuing Naz'ara the Clever during the quest, Into the Vaults of Atal'Utek.",

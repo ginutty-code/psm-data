@@ -11003,3 +11003,27 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257244,Vicious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257246,Roaming Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257740,Infested Shredclaw,Normal,0,315,Whiptails,15458,"[0,0]"
+271067,Ravenous Seabird,Normal,0,26,Bird of Prey,16365,[]
+261317,Emaciated Truffle Hog,Normal,0,5,Boar,16365,[]
+260827,Snuffling Boar,Normal,0,5,Boar,16365,[]
+264503,Untouched Tusksplitter,Normal,0,5,Boar,16365,"[null,-1]"
+261837,Corroded Cliffcharger,Normal,0,5,Boar,16365,[]
+262009,Mutated Double-Spine Hog,Normal,0,5,Boar,16365,[]
+261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,[]
+258955,Frilled Spitter,Normal,0,35,Serpent,,[]
+261124,Incensed Cobra,Normal,0,35,Serpent,16365,[]
+265343,Nest Coiler,Normal,0,35,Serpent,16365,[]
+264655,Lurking Thorntail,Normal,0,35,Serpent,16365,[]
+268979,Newborn Cobra,Normal,0,35,Serpent,16535,"[null,-1]"
+265049,Burrow Stinger,Normal,0,35,Serpent,16548,[]
+261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[null,-1]"
+261643,Summoned Serpent,Normal,0,35,Serpent,16535,[]
+263653,Mortuary Creeper,Normal,0,3,Spider,16535,[]
+254758,Crypt Spider,Normal,0,3,Spider,16535,[]
+258111,Clouded Crystalshell,Normal,0,21,Turtle,16535,[]
+262977,Snapping Fractureshell,Normal,0,21,Turtle,16365,[]
+260368,Armored Snacktooth,Normal,0,21,Turtle,16365,[]
+257600,Murkfen Muckstomper,Normal,0,21,Turtle,16365,[]
+262691,Crazed Crystalshell,Normal,0,21,Turtle,16365,[]
+265237,Lockjaw,Rare,4,21,Turtle,16365,[]
+256763,Ornery Muckstinger,Normal,0,44,Wasp,16365,[]
