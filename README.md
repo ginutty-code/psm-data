@@ -50,7 +50,9 @@ The scripts must be run in numerical order. Each step validates its dependencies
 ## Key Features
 
 ### Robust Scraping
-- **Anti-Detection**: Scripts like `09_extract_wowhead_data.py` use a rotating pool of realistic browser headers, randomized request jitter, and a multi-tiered backoff strategy. If a 403 or 429 error occurs, the script enforces a cooldown and rebuilds the session to bypass IP-level throttling.
+- **Anti-Detection**: `09_extract_wowhead_data.py` and `02_extract_petopia_data.py` use a rotating pool of realistic browser headers, randomized request jitter, and a shared cooldown: if enough requests fail back-to-back across all worker threads, every thread pauses before continuing, instead of hammering a site that's already rate-limiting them. `07_extract_wowhead_npcs.py` uses a simpler single-threaded exponential backoff on 403s.
+- **Graceful Interruption**: `09` and `02` catch Ctrl+C mid-batch, stop cleanly, and flush whatever was already scraped instead of losing progress or dumping a raw traceback.
+- **Resumability**: A NPC that fails to fetch after retrying is left out of the output CSV rather than written with blank fields, so the next run picks it back up automatically instead of treating it as permanently done.
 - **Maintenance Persistence**: The system identifies missing data (like the hardcoded "Whiptail" family logic in Step 04) and automatically fixes local caches during execution.
 
 ### Data Cleaning
@@ -68,9 +70,9 @@ The pipeline ensures data integrity through specialized cleaning logic at every 
 ## Usage
 
 1. **Initialization**: Ensure `Manual/npcs_updates.csv`, `Manual/skip_npc_ids.csv`, `Manual/skip_display_ids.csv`, `Manual/notes_updates.csv`, `Manual/notes_keywords.csv`, and `Manual/location_updates.csv` are populated.
-2. **Execution**: Navigate to the `PSM_Data` directory and run scripts sequentially:
+2. **Execution**: Navigate to the `psm-data` directory and run scripts sequentially:
     ```bash
-    cd PSM_Data
+    cd psm-data
     python 01_extract_petopia_npcs.py
     python 02_extract_petopia_data.py
     # ... and so on
