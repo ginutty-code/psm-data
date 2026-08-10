@@ -4,25 +4,65 @@ Extract npc metadata for each npc in petopia.csv
 
 import csv
 import os
+import random
 import sys
-from concurrent.futures import ThreadPoolExecutor
-from typing import Dict, List, Set
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from bs4 import BeautifulSoup
-from config import PETOPIA_NPCS_CSV, PETOPIA_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
-CONCURRENCY = 10  # Adjust as needed, lower if rate limited
+from config import (
+    PETOPIA_DATA_CSV,
+    PETOPIA_NPCS_CSV,
+    SKIP_NPC_IDS_CSV,
+    ensure_dirs,
+    get_random_headers,
+)
+
+CONCURRENCY = 2  # Adjust as needed, lower if rate limited
+REQUEST_DELAY_RANGE = (1.0, 3.0)  # Randomized delay before each request
+FETCH_MAX_ATTEMPTS = 3
+FETCH_RETRY_DELAY = 3  # Seconds to wait between retry attempts for a single NPC
+COOLDOWN_SECONDS = 120  # Pause the whole run when the site appears to be rate-limiting us
+
+# Signal for graceful shutdown (e.g. Ctrl+C mid-batch)
+stop_event = threading.Event()
+
+_tls = threading.local()
+rate_limit_lock = threading.Lock()
+global_backoff_until = 0  # Timestamp; workers pause while time.time() < this
+
+
+def get_session() -> requests.Session:
+    """Return a thread-local session that retries transient connection/server errors."""
+    if getattr(_tls, 'session', None) is None:
+        s = requests.Session()
+        retries = Retry(
+            total=3,
+            backoff_factor=0.5,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["GET"],
+            raise_on_status=False,
+        )
+        adapter = HTTPAdapter(max_retries=retries, pool_connections=CONCURRENCY * 2, pool_maxsize=CONCURRENCY * 2)
+        s.mount('http://', adapter)
+        s.mount('https://', adapter)
+        _tls.session = s
+    return _tls.session
 
 
 def fetch_page(url: str) -> str:
     _, headers = get_random_headers()
-    resp = requests.get(url, headers=headers, timeout=30)
+    resp = get_session().get(url, headers=headers, timeout=30)
     resp.raise_for_status()
     return resp.text
 
 
-def load_skip_npc_ids(path: str) -> Set[str]:
+def load_skip_npc_ids(path: str) -> set[str]:
     """Load NPC IDs to skip from the provided CSV file."""
     skip_ids = set()
     if os.path.exists(path):
@@ -30,18 +70,18 @@ def load_skip_npc_ids(path: str) -> Set[str]:
             with open(path, "r", encoding="utf-8-sig", newline="") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    for key in row.keys():
+                    for key in row:
                         if key.strip().replace("\ufeff", "") == "npc_id":
                             val = row.get(key)
                             if val:
                                 skip_ids.add(str(val).strip())
                             break
-        except Exception:
-            pass
+        except (OSError, csv.Error) as e:
+            print(f"Failed to read skip list {path}: {e}", file=sys.stderr)
     return skip_ids
 
 
-def extract_npc_info(html: str) -> Dict[str, str]:
+def extract_npc_info(html: str) -> dict[str, str]:
     soup = BeautifulSoup(html, 'html.parser')
     content_div = soup.find('div', id='content2')
     if not content_div:
@@ -117,7 +157,7 @@ def extract_npc_info(html: str) -> Dict[str, str]:
     return info
 
 
-def write_batch(rows: List[Dict[str, str]], fieldnames: List[str], output_path: str, write_header: bool = False):
+def write_batch(rows: list[dict[str, str]], fieldnames: list[str], output_path: str, write_header: bool = False):
     mode = 'w' if write_header else 'a'
     with open(output_path, mode, newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -127,17 +167,62 @@ def write_batch(rows: List[Dict[str, str]], fieldnames: List[str], output_path: 
             writer.writerow({k: r.get(k, "") for k in fieldnames})
 
 
-def process_single(row: Dict[str, str]) -> Dict[str, str]:
-    npc_id = row.get('npc_id')
-    name = row.get('npc_name', 'Unknown')
+def fetch_npc_data(npc_id: str, url: str) -> tuple[str, dict[str, str]]:
+    """
+    Fetch and parse a single NPC page, retrying transient connection failures.
+
+    Returns (status, extra_info):
+      'success' - page fetched and parsed; extra_info has the scraped fields.
+      'skip'    - page confirmed missing (404) or unparseable; extra_info is
+                  empty, but the NPC is still considered done.
+      'retry'   - fetch failed after all attempts; caller should leave this
+                  NPC out of the written CSV so a future run retries it.
+    """
+    attempt = 0
+    while attempt < FETCH_MAX_ATTEMPTS:
+        if stop_event.is_set():
+            return 'retry', {}
+
+        with rate_limit_lock:
+            wait_time = global_backoff_until - time.time()
+        if wait_time > 0:
+            for _ in range(int(wait_time) + 1):
+                if stop_event.is_set():
+                    return 'retry', {}
+                time.sleep(1)
+            continue
+
+        attempt += 1
+        try:
+            time.sleep(random.uniform(*REQUEST_DELAY_RANGE))
+            html = fetch_page(url)
+        except requests.RequestException as e:
+            if hasattr(e, 'response') and e.response is not None and e.response.status_code == 404:
+                print(f"  {npc_id}: page not found (404), keeping bulk row only", file=sys.stderr)
+                return 'skip', {}
+            if attempt >= FETCH_MAX_ATTEMPTS:
+                print(f"  {npc_id}: failed to fetch after {attempt} attempts: {e}", file=sys.stderr)
+                return 'retry', {}
+            print(f"  {npc_id}: fetch error, retrying ({attempt}/{FETCH_MAX_ATTEMPTS}): {e}", file=sys.stderr)
+            time.sleep(FETCH_RETRY_DELAY)
+            continue
+
+        try:
+            return 'success', extract_npc_info(html)
+        except (AttributeError, KeyError, ValueError) as e:
+            print(f"  {npc_id}: failed to parse page, keeping bulk row only: {e}", file=sys.stderr)
+            return 'skip', {}
+
+    return 'retry', {}
+
+
+def process_single(row: dict[str, str]) -> tuple[str, dict[str, str]]:
+    npc_id = row.get('npc_id', '') or ''
     url = f"https://www.wow-petopia.com/npc.php?id={npc_id}"
-    try:
-        html = fetch_page(url)
-        extra_info = extract_npc_info(html)
-        return {**row, **extra_info}
-    except Exception as e:
-        print(f"Failed to fetch or parse {url}: {e}", file=sys.stderr)
-        return row  # Return original row to keep in CSV, but with empty extra fields
+    status, extra_info = fetch_npc_data(npc_id, url)
+    if status == 'retry':
+        return 'retry', row
+    return 'success', {**row, **extra_info}
 
 
 def main() -> int:
@@ -157,7 +242,7 @@ def main() -> int:
     if not write_header:
         with open(PETOPIA_DATA_CSV, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            processed_npcs = set(row['npc_id'] for row in reader if row.get('npc_id'))
+            processed_npcs = {row['npc_id'] for row in reader if row.get('npc_id')}
         print(f"Resuming from {len(processed_npcs)} already processed NPCs.")
 
     # Load skip list
@@ -170,26 +255,56 @@ def main() -> int:
     # Collect rows to process
     to_process = [row for row in rows if row.get('npc_id') and row['npc_id'] not in processed_npcs and row['npc_id'] not in skip_ids]
 
+    global global_backoff_until
+
     batch = []
     processed_count = 0
+    retried_count = 0
+    consecutive_failures = 0
+
     with ThreadPoolExecutor(max_workers=CONCURRENCY) as executor:
-        for i in range(0, len(to_process), CONCURRENCY):
-            batch_rows = to_process[i:i + CONCURRENCY]
-            print(f"Processing batch of {len(batch_rows)} NPCs...")
-            futures = [executor.submit(process_single, row) for row in batch_rows]
-            for future in futures:
-                result = future.result()
-                if result:
-                    batch.append(result)
-                    processed_count += 1
-            # Write the batch (size of CONCURRENCY)
+        try:
+            for i in range(0, len(to_process), CONCURRENCY):
+                if stop_event.is_set():
+                    break
+                batch_rows = to_process[i:i + CONCURRENCY]
+                print(f"Processing batch of {len(batch_rows)} NPCs...")
+                futures = [executor.submit(process_single, row) for row in batch_rows]
+                for future in as_completed(futures):
+                    status, result = future.result()
+                    if status == 'retry':
+                        consecutive_failures += 1
+                        retried_count += 1
+                        print(f"  {result.get('npc_id')}: will retry on a future run")
+                        if consecutive_failures >= CONCURRENCY:
+                            with rate_limit_lock:
+                                global_backoff_until = time.time() + COOLDOWN_SECONDS
+                            print(f"  ! Repeated connection failures detected. Cooling down for {COOLDOWN_SECONDS}s...")
+                            for _ in range(COOLDOWN_SECONDS):
+                                if stop_event.is_set():
+                                    break
+                                time.sleep(1)
+                            consecutive_failures = 0
+                    else:
+                        consecutive_failures = 0
+                        batch.append(result)
+                        processed_count += 1
+                # Write the batch (size of CONCURRENCY)
+                if batch:
+                    write_batch(batch, fieldnames, PETOPIA_DATA_CSV, write_header)
+                    write_header = False
+                    print(f"Processed and wrote batch of {len(batch)} NPCs. Total processed: {processed_count}")
+                    batch = []
+        except KeyboardInterrupt:
+            print("\n[!] Cancellation requested. Shutting down gracefully...")
+            stop_event.set()
+            executor.shutdown(wait=False, cancel_futures=True)
+        finally:
             if batch:
                 write_batch(batch, fieldnames, PETOPIA_DATA_CSV, write_header)
-                write_header = False
-                print(f"Processed and wrote batch of {len(batch)} NPCs. Total processed: {processed_count}")
-                batch = []
 
-    print(f"Processing complete. Total new NPCs processed: {processed_count}")
+    suffix = f" ({retried_count} deferred for a future run)" if retried_count else ""
+    print(f"Processing complete. Total new NPCs processed: {processed_count}{suffix}")
     return 0
 
 
