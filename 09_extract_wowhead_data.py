@@ -2,20 +2,27 @@
 Extract npc metadata for each npc in npcs.csv, except the npcs in skip_npcs.csv
 """
 
-import os
-import re
-import sys
-import time
 import csv
 import json
+import os
+import random
+import re
+import sys
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import threading
-import random
-from config import PROCESSED_NPCS_CSV, WOWHEAD_DATA_CSV, SKIP_NPC_IDS_CSV, ensure_dirs, get_random_headers
+
+from config import (
+    PROCESSED_NPCS_CSV,
+    SKIP_NPC_IDS_CSV,
+    WOWHEAD_DATA_CSV,
+    ensure_dirs,
+    get_random_headers,
+)
 
 # Concurrency and pacing settings; adjust as needed to balance speed with risk of rate-limiting.  Note that Wowhead has aggressive rate-limiting, and even a few concurrent requests can trigger it, so we use a conservative default here.
 CONCURRENCY_RANGE = (1, 5)
@@ -41,8 +48,8 @@ def load_skip_npc_ids():
                     zone_id = row.get('zone_id', '').strip() if has_zone_col and row.get('zone_id') else ''
                     if npc_id and not zone_id:
                         skip_ids.add(npc_id)
-        except Exception:
-            pass
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read skip list {SKIP_NPC_IDS_CSV}: {e}", file=sys.stderr)
     return skip_ids
 
 
@@ -120,13 +127,13 @@ def save_progress(results, original_data, append=True):
                     if npc_id:
                         key = (npc_id, zone_id, spawn_id)
                         existing[key] = row
-        except Exception:
-            pass
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read existing progress from {WOWHEAD_DATA_CSV}: {e}", file=sys.stderr)
 
     for npc_id, data in results.items():
         # Remove any and all existing rows for this NPC ID to ensure a clean replacement.
         # This prevents 'retry' or 'skipped' status markers from co-existing with actual data.
-        keys_to_remove = [k for k in existing.keys() if k[0] == npc_id]
+        keys_to_remove = [k for k in existing if k[0] == npc_id]
         for k in keys_to_remove:
             existing.pop(k)
 
@@ -324,7 +331,7 @@ def robust_json_loads(json_str):
         # Quote unquoted keys (e.g., {id: 123} -> {"id": 123})
         json_str = re.sub(r'([{,])\s*(\w+):', r'\1"\2":', json_str)
         return json.loads(json_str)
-    except Exception:
+    except (json.JSONDecodeError, TypeError):
         return {}
 
 
@@ -357,8 +364,8 @@ def extract_location_and_coords_from_html(html_content):
                     if not zone_name: # Set the first found zone_name as the primary
                         zone_name = zname
 
-    except Exception:
-        pass
+    except (AttributeError, IndexError) as e:
+        print(f"Warning: failed to parse locations span: {e}", file=sys.stderr)
 
     # FALLBACK: Use existing patterns if map extraction above didn't yield anything
     if not zone_name:
@@ -370,8 +377,8 @@ def extract_location_and_coords_from_html(html_content):
             if location_match:
                 zone_name = location_match.group(2).strip()
                 zone_id_map[location_match.group(1)] = zone_name
-        except Exception:
-            pass
+        except (AttributeError, IndexError) as e:
+            print(f"Warning: failed to parse fallback location: {e}", file=sys.stderr)
 
     try:
         mapper_match = re.search(r'var\s+g_mapperData\s*=\s*(\{.*?\});', html_content, re.DOTALL)
@@ -409,8 +416,8 @@ def extract_location_and_coords_from_html(html_content):
                             ]
                             if coord_strings:
                                 coords_list.append((zone_id, spawn_id, uiMapName, uiMapId, '|'.join(coord_strings)))
-    except Exception:
-        pass
+    except (AttributeError, KeyError, IndexError, TypeError) as e:
+        print(f"Warning: failed to parse g_mapperData: {e}", file=sys.stderr)
 
     return zone_name, coords_list, zone_id_map
 
@@ -468,8 +475,8 @@ def extract_additional_data_from_html(html_content):
                 if additional_data.get('location'):
                     break
 
-    except Exception:
-        pass
+    except (AttributeError, KeyError, IndexError, TypeError) as e:
+        print(f"Warning: failed to parse additional NPC data: {e}", file=sys.stderr)
 
     return additional_data
 
@@ -500,8 +507,8 @@ def extract_patch_info_from_html(html_content):
                 if re.match(r'^[0-9]+\.[0-9]+\.[0-9]+$', patch_id):
                     return patch_id, ""
 
-    except Exception:
-        pass
+    except (AttributeError, IndexError) as e:
+        print(f"Warning: failed to parse patch info: {e}", file=sys.stderr)
 
     return "", ""
 
@@ -533,7 +540,6 @@ def get_session():
 
 
 def fetch_npc_data(npc_id, npc_name, family_name):
-    global global_backoff_until
     url = f"https://www.wowhead.com/npc={npc_id}"
     max_attempts = 3
     attempt = 0
@@ -627,6 +633,7 @@ def filter_skipped_npcs(npcs, skip_ids):
 
 
 def main():
+    global global_backoff_until
     ensure_dirs()
 
     print("=" * 60)
@@ -797,13 +804,15 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Enrich NPC data with display IDs, location, patch info, classification, displayName, and family')
-    parser.add_argument('--delay', type=float, default=REQUEST_DELAY_RANGE[0], help='Delay between requests in seconds')
+    parser.add_argument('--delay', type=float, default=None, help=f'Fixed delay between requests in seconds (default: random {REQUEST_DELAY_RANGE[0]}-{REQUEST_DELAY_RANGE[1]}s)')
     parser.add_argument('--reset', action='store_true', help='Reset progress and start fresh')
     args = parser.parse_args()
 
-    if args.reset:
-        if os.path.exists(WOWHEAD_DATA_CSV):
-            os.remove(WOWHEAD_DATA_CSV)
-            print("Progress file reset.")
+    if args.delay is not None:
+        REQUEST_DELAY_RANGE = (args.delay, args.delay)
+
+    if args.reset and os.path.exists(WOWHEAD_DATA_CSV):
+        os.remove(WOWHEAD_DATA_CSV)
+        print("Progress file reset.")
 
     main()

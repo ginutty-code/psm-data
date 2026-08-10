@@ -2,14 +2,20 @@
 Extract tameable NPCs for each family ID in families.csv
 """
 
+import csv
 import os
 import re
 import sys
 import time
-import csv
 
 import requests
-from config import PROCESSED_FAMILIES_CSV, WOWHEAD_NPCS_CSV, ensure_dirs, get_random_headers
+
+from config import (
+    PROCESSED_FAMILIES_CSV,
+    WOWHEAD_NPCS_CSV,
+    ensure_dirs,
+    get_random_headers,
+)
 
 # Use concurrency=1 to avoid rate limiting
 CONCURRENCY = 1
@@ -41,8 +47,7 @@ def load_WOWHEAD_NPCS_CSV():
     if os.path.exists(WOWHEAD_NPCS_CSV):
         with open(WOWHEAD_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:
             reader = csv.DictReader(f)
-            for row in reader:
-                npcs.append(row)
+            npcs = list(reader)
     return npcs if npcs else None
 
 
@@ -353,7 +358,7 @@ def ask_refresh(cached, families):
             if valid and family_ids:
                 return family_ids
             else:
-                print(f"Invalid choice. Enter 'all', 'none', 'q', or family ID(s) (e.g., '1,9')")
+                print("Invalid choice. Enter 'all', 'none', 'q', or family ID(s) (e.g., '1,9')")
 
 
 def main():
@@ -472,13 +477,15 @@ if __name__ == '__main__':
     import argparse
     
     parser = argparse.ArgumentParser(description='Extract tameable NPCs from Wowhead family pages')
-    parser.add_argument('--delay', type=float, default=REQUEST_DELAY, help='Delay between requests in seconds')
+    parser.add_argument('--delay', type=float, default=None, help=f'Delay between requests in seconds (default: {REQUEST_DELAY})')
     parser.add_argument('--refresh', action='store_true', help='Refresh all data from Wowhead (skip prompt)')
     args = parser.parse_args()
-    
-    if args.refresh:
+
+    if args.delay is not None:
+        REQUEST_DELAY = args.delay
+
+    if args.refresh and os.path.exists(WOWHEAD_NPCS_CSV):
         # Force refresh by removing cached file
-        if os.path.exists(WOWHEAD_NPCS_CSV):
-            os.remove(WOWHEAD_NPCS_CSV)
-    
+        os.remove(WOWHEAD_NPCS_CSV)
+
     main()
