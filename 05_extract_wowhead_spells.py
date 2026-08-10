@@ -2,14 +2,22 @@
 Extract spell details for each spell ID in families.csv and assign category and tag.
 """
 
+import csv
+import html
 import json
 import os
 import re
 import sys
-import csv
-import html
+
 import requests
-from config import PROCESSED_FAMILIES_CSV, WOWHEAD_SPELLS_CSV, PROCESSED_SPELLS_CSV, SPELLS_MAPPING_CSV, ensure_dirs
+
+from config import (
+    PROCESSED_FAMILIES_CSV,
+    PROCESSED_SPELLS_CSV,
+    SPELLS_MAPPING_CSV,
+    WOWHEAD_SPELLS_CSV,
+    ensure_dirs,
+)
 
 BASE_URL = 'https://www.wowhead.com'
 SKIP_SPELL_IDS = {16827, 17253, 49966}
@@ -151,7 +159,7 @@ def load_manual_spell_mapping():
                         'spell_tag': (normalized_row.get('spell_tag') or normalized_row.get('tag') or '').strip(),
                         'icon': (normalized_row.get('spell_icon') or normalized_row.get('icon') or '').strip(),
                     }
-    except Exception as e:
+    except (OSError, csv.Error) as e:
         print(f"Warning: Could not load manual mappings from {SPELLS_MAPPING_CSV}: {e}")
     return mapping
 
@@ -167,7 +175,7 @@ def save_raw_spells_csv(spells):
     seen = set()
     fieldnames = []
     for spell in spells:
-        for key in spell.keys():
+        for key in spell:
             if key not in seen:
                 seen.add(key)
                 fieldnames.append(key)

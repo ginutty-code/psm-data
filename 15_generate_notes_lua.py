@@ -4,7 +4,9 @@ Generate addon Notes data file
 
 import csv
 import os
+
 from config import COMBINED_PET_DATA_CSV, NOTES_LUA, ensure_dirs, sync_output_to_addon
+
 
 def main():
     ensure_dirs()

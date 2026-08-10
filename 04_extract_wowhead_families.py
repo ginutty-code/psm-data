@@ -2,14 +2,15 @@
 Extract hunter pet familes details from Wowhead
 """
 
+import csv
 import json
 import os
 import re
 import sys
-import csv
 
 import requests
-from config import WOWHEAD_FAMILIES_CSV, PROCESSED_FAMILIES_CSV, ensure_dirs
+
+from config import PROCESSED_FAMILIES_CSV, WOWHEAD_FAMILIES_CSV, ensure_dirs
 
 # Configuration
 URL = 'https://www.wowhead.com/hunter-pets'
@@ -133,8 +134,7 @@ def load_WOWHEAD_FAMILIES_CSV():
     if os.path.exists(WOWHEAD_FAMILIES_CSV):
         with open(WOWHEAD_FAMILIES_CSV, 'r', encoding='utf-8', newline='') as f:
             reader = csv.DictReader(f)
-            for row in reader:
-                families.append(row)
+            families = list(reader)
     return families if families else None
 
 
@@ -179,7 +179,7 @@ def main():
     if cached:
         # Ensure processed file exists even if only raw cache is present
         if not os.path.exists(PROCESSED_FAMILIES_CSV):
-            print(f"\nProcessed families file missing. Generating from cached raw data...")
+            print("\nProcessed families file missing. Generating from cached raw data...")
             save_PROCESSED_FAMILIES_CSV(list(cached))
 
         should_refresh = ask_refresh(cached)
@@ -206,9 +206,8 @@ if __name__ == '__main__':
     parser.add_argument('--refresh', action='store_true', help='Refresh data from Wowhead (skip prompt)')
     args = parser.parse_args()
     
-    if args.refresh:
+    if args.refresh and os.path.exists(WOWHEAD_FAMILIES_CSV):
         # Force refresh by removing cached file
-        if os.path.exists(WOWHEAD_FAMILIES_CSV):
-            os.remove(WOWHEAD_FAMILIES_CSV)
+        os.remove(WOWHEAD_FAMILIES_CSV)
     
     main()

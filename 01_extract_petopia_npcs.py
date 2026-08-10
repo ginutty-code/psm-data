@@ -2,14 +2,12 @@
 Extract list of npc models from Petopia's available pets gallery page.
 """
 import csv
-import os
 import re
 import sys
-from typing import List, Dict
 
 import requests
-from config import PETOPIA_NPCS_CSV, ensure_dirs, get_random_headers
 
+from config import PETOPIA_NPCS_CSV, ensure_dirs, get_random_headers
 
 URL = "https://www.wow-petopia.com/gallery.php?id=available"
 
@@ -47,8 +45,8 @@ def fetch_page(url: str) -> str:
     return resp.text
 
 
-def parse_records(html: str) -> List[Dict[str, str]]:
-    records: List[Dict[str, str]] = []
+def parse_records(html: str) -> list[dict[str, str]]:
+    records: list[dict[str, str]] = []
 
     # Combine matches from single- and double-quoted attribute styles
     anchor_matches = []
@@ -92,7 +90,7 @@ def parse_records(html: str) -> List[Dict[str, str]]:
     return records
 
 
-def write_csv(rows: List[Dict[str, str]], path: str) -> None:
+def write_csv(rows: list[dict[str, str]], path: str) -> None:
     fieldnames = ["npc_id", "npc_name", "zone", "tameable"]
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -106,7 +104,7 @@ def main() -> int:
 
     try:
         html = fetch_page(URL)
-    except Exception as e:
+    except requests.RequestException as e:
         print(f"Failed to fetch {URL}: {e}", file=sys.stderr)
         return 1
 

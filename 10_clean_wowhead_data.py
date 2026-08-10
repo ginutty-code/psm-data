@@ -12,12 +12,17 @@ This step performs the following cleaning operations:
 7. Thins coordinates in the 'coords' column by removing points that are too close to each other (minimum distance: 2.0).
 """
 
-import os
 import csv
+import os
 import sys
+
 from config import (
-    WOWHEAD_DATA_CSV, PROCESSED_WOWHEAD_DATA_CSV, SKIP_NPC_IDS_CSV, SKIP_DISPLAY_IDS_CSV,LOCATION_UPDATES_CSV,
-    ensure_dirs
+    LOCATION_UPDATES_CSV,
+    PROCESSED_WOWHEAD_DATA_CSV,
+    SKIP_DISPLAY_IDS_CSV,
+    SKIP_NPC_IDS_CSV,
+    WOWHEAD_DATA_CSV,
+    ensure_dirs,
 )
 
 # Minimum allowed distance between any two kept coordinate points.
@@ -212,9 +217,8 @@ def apply_location_updates(record, exact_updates, npc_only_updates):
             matches = exact_updates[key]
 
     # If no exact match and source has empty zone_id+layer, try npc_id-only (Scenario 1)
-    if not matches and not zone_id:
-        if npc_id in npc_only_updates:
-            matches = npc_only_updates[npc_id]
+    if not matches and not zone_id and npc_id in npc_only_updates:
+        matches = npc_only_updates[npc_id]
 
     if not matches:
         # No update applies — return the original record unchanged
@@ -285,7 +289,6 @@ def main():
     skipped_duplicates = 0
     location_updates_applied = 0
     location_rows_split = 0
-    final_count = 0
 
     seen_records = set()
     cleaned_rows = []

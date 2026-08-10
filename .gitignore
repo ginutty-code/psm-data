@@ -2,4 +2,4 @@ __pycache__/
 *.pyc
 .env
 venv/
-CLAUDE.md
+.ruff_cache

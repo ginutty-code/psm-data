@@ -14,13 +14,15 @@ import csv
 import os
 import re
 import sys
-from config import (
-    PETOPIA_DATA_CSV, PROCESSED_PETOPIA_DATA_CSV,
-    NOTES_KEYWORDS_CSV, NOTES_UPDATES_CSV,
-    TAMING_UPDATES_CSV,
-    ensure_dirs
-)
 
+from config import (
+    NOTES_KEYWORDS_CSV,
+    NOTES_UPDATES_CSV,
+    PETOPIA_DATA_CSV,
+    PROCESSED_PETOPIA_DATA_CSV,
+    TAMING_UPDATES_CSV,
+    ensure_dirs,
+)
 
 # Matches any "Located in <anything>." sentence.
 # The substitution function checks for parentheses before stripping.
@@ -249,9 +251,6 @@ def main():
     for note in unique_notes:
         note_cache[note] = clean_note(note, global_rules, keyword_pattern)
     note_cache[''] = ''
-
-    # Build name lookup for npc_add entries
-    petopia_names = {r.get('npc_id', '').strip(): r.get('npc_name', '').strip() for r in deduped_records}
 
     # Apply notes to records
     dropped_notes = 0

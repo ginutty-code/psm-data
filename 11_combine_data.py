@@ -13,13 +13,18 @@ The pipeline follows these strict steps:
 """
 
 import csv
+import json
 import os
 import re
-import json
+
 from config import (
-    PROCESSED_WOWHEAD_DATA_CSV, PROCESSED_PETOPIA_DATA_CSV, SKIP_DISPLAY_IDS_CSV,
-    RECORD_OVERRIDES_CSV, COMBINED_PET_DATA_CSV, MANUAL_DIR,
-    ensure_dirs
+    COMBINED_PET_DATA_CSV,
+    MANUAL_DIR,
+    PROCESSED_PETOPIA_DATA_CSV,
+    PROCESSED_WOWHEAD_DATA_CSV,
+    RECORD_OVERRIDES_CSV,
+    SKIP_DISPLAY_IDS_CSV,
+    ensure_dirs,
 )
 
 EXPANSION_MAPPING = {
@@ -96,14 +101,12 @@ def is_proper_name(text):
     if (text.startswith('"') and text.endswith('"')) or (text.startswith("'") and text.endswith("'")):
         return True
     # Reject if it contains common lowercase sentence words not usually in WoW titles
-    if re.search(r'\b(is|are|was|were|the|at|in|on|by|of|to|has|had|been|seventh|first|boss|after|only)\b', text):
-        # Allow "The" and "of" if they are part of a Title Case sequence
-        if not re.match(r'^([A-Z][\w\']*\b\s*|the\s|of\s)+$', text, re.IGNORECASE):
-            return False
-    # Ensure it starts with a Capital or Number
-    if not (text[0].isupper() or text[0].isdigit()):
+    # (unless "The"/"of" are part of a Title Case sequence)
+    if re.search(r'\b(is|are|was|were|the|at|in|on|by|of|to|has|had|been|seventh|first|boss|after|only)\b', text) \
+            and not re.match(r'^([A-Z][\w\']*\b\s*|the\s|of\s)+$', text, re.IGNORECASE):
         return False
-    return True
+    # Ensure it starts with a Capital or Number
+    return text[0].isupper() or text[0].isdigit()
 
 
 NEGATIONS = ("not ", "never ", "doesn't ", "don't ", "isn't ", "aren't ", "cannot ", "can't ", "pre-", "pre ", "older ", "except ")
@@ -128,7 +131,7 @@ def _get_category_keywords(category_name):
 
 # Pre-compiled at module load — no re-compilation during the main loop
 CATEGORY_PATTERNS = {}
-for cat in CATEGORY_MAP.keys():
+for cat in CATEGORY_MAP:
     for kw in _get_category_keywords(cat):
         CATEGORY_PATTERNS[(cat, kw)] = re.compile(r'(?i)\b' + re.escape(kw) + r's?\b')
 
@@ -290,7 +293,7 @@ def extract_note_conditions(final_notes):
                         break
         
         if instance_condition_negated:
-            segment_tags = { (c, v) for c, v in segment_tags if not (c == "Instance") }
+            segment_tags = { (c, v) for c, v in segment_tags if c != "Instance" }
 
 
         if any(c == "Instance" for c, v in segment_tags):
@@ -370,10 +373,8 @@ def main():
     ]
 
     print("Loading pre-cleaned Wowhead records...")
-    wowhead_records = []
     with open(PROCESSED_WOWHEAD_DATA_CSV, 'r', encoding='utf-8', errors='replace') as f:
-        for row in csv.DictReader(f):
-            wowhead_records.append(row)
+        wowhead_records = list(csv.DictReader(f))
 
     # Pass 1: build display_id → taming skills map
     # Uses the pre-computed taming_requirements from processed petopia data
@@ -544,9 +545,7 @@ def main():
             if not row_factions and not is_explicitly_universal:
                 if v_a is None and v_h is not None:
                     row_factions.add("Faction: Horde")
-                elif v_h is None and v_a is not None:
-                    row_factions.add("Faction: Alliance")
-                elif v_a in (-1, 0) and v_h == 1:
+                elif v_h is None and v_a is not None or v_a in (-1, 0) and v_h == 1:
                     row_factions.add("Faction: Alliance")
                 elif v_h in (-1, 0) and v_a == 1:
                     row_factions.add("Faction: Horde")

@@ -4,7 +4,13 @@ Generate addon Special Conditions data file
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, CONDITIONS_LUA, ensure_dirs, sync_output_to_addon
+
+from config import (
+    COMBINED_PET_DATA_CSV,
+    CONDITIONS_LUA,
+    ensure_dirs,
+    sync_output_to_addon,
+)
 
 # Define the category groups for conditions
 GROUPS_ORDER = ["Faction", "Race", "Instance", "World Event", "Seasonal Event", "Profession", "Covenant", "Prerequisite", "Miscellaneous"]
@@ -45,7 +51,7 @@ def main():
         return
 
     print(f"Generating Lua file to {CONDITIONS_LUA}...")
-    sorted_entries = sorted(list(unique_conditions))
+    sorted_entries = sorted(unique_conditions)
 
     with open(CONDITIONS_LUA, 'w', encoding='utf-8') as f:
         f.write("-- ConditionsData.lua\n")
@@ -92,7 +98,7 @@ def main():
                 present_groups.remove(group_name)
         
         # 2. Write any remaining groups found in data but not in GROUPS_ORDER (safety catch)
-        for group_name in sorted(list(present_groups)):
+        for group_name in sorted(present_groups):
             f.write(f'    ["{group_name}"] = {{\n')
             for member in sorted(condition_groups[group_name]):
                 idx = condition_to_idx[member]

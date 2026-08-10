@@ -4,7 +4,14 @@ Generate addon Models data file (flat format by npcId)
 
 import csv
 import os
-from config import COMBINED_PET_DATA_CSV, SKIP_DISPLAY_IDS_CSV, MODELS_LUA, ensure_dirs, sync_output_to_addon
+
+from config import (
+    COMBINED_PET_DATA_CSV,
+    MODELS_LUA,
+    SKIP_DISPLAY_IDS_CSV,
+    ensure_dirs,
+    sync_output_to_addon,
+)
 
 
 def load_csv(filepath):
@@ -18,7 +25,8 @@ def load_csv(filepath):
                 rows = list(reader)
                 if rows:
                     return rows
-        except Exception:
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
             continue
     
     return []
@@ -32,15 +40,15 @@ def load_skip_display_ids():
             with open(SKIP_DISPLAY_IDS_CSV, 'r', encoding='utf-8-sig', newline='') as f:
                 reader = csv.DictReader(f)
                 for row in reader:
-                    for key in row.keys():
+                    for key in row:
                         clean_key = key.strip().replace('\ufeff', '')
                         if clean_key in ('id', 'display_id'):
                             id_value = row.get(key)
                             if id_value:
                                 skip_ids.add(str(id_value).strip())
                             break
-        except Exception:
-            pass
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read skip list {SKIP_DISPLAY_IDS_CSV}: {e}")
     return skip_ids
 
 

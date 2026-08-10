@@ -4,7 +4,14 @@ Generate addon Abilities data file
 
 import csv
 import os
-from config import PROCESSED_FAMILIES_CSV, PROCESSED_SPELLS_CSV, ABILITIES_LUA, ensure_dirs, sync_output_to_addon
+
+from config import (
+    ABILITIES_LUA,
+    PROCESSED_FAMILIES_CSV,
+    PROCESSED_SPELLS_CSV,
+    sync_output_to_addon,
+)
+
 
 def load_csv(filepath):
     """Load CSV file with encoding fallback and return all rows."""
@@ -17,7 +24,8 @@ def load_csv(filepath):
                 rows = list(reader)
                 if rows:
                     return rows
-        except Exception:
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
             continue
 
     return []
@@ -153,7 +161,7 @@ def main():
         f.write("AbilitiesData = {\n")
 
         # Sort family_ids, put "Spec" last
-        sorted_family_ids = sorted([k for k in abilities_data.keys() if k != "Spec"], key=lambda x: int(x) if x.isdigit() else float('inf'))
+        sorted_family_ids = sorted([k for k in abilities_data if k != "Spec"], key=lambda x: int(x) if x.isdigit() else float('inf'))
         if "Spec" in abilities_data:
             sorted_family_ids.append("Spec")
 

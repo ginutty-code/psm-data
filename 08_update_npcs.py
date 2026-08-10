@@ -2,10 +2,12 @@
 Replace/add NPCs from npcs_correct.csv to npcs.csv
 """
 
-import os
 import csv
+import os
 import sys
-from config import WOWHEAD_NPCS_CSV, PROCESSED_NPCS_CSV, NPC_UPDATES_CSV, ensure_dirs
+
+from config import NPC_UPDATES_CSV, PROCESSED_NPCS_CSV, WOWHEAD_NPCS_CSV, ensure_dirs
+
 
 def load_corrections():
     """Load corrections from the corrections file."""
@@ -46,9 +48,8 @@ def load_npcs():
     
     with open(WOWHEAD_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            npcs.append(row)
-    
+        npcs = list(reader)
+
     return npcs
 
 
