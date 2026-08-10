@@ -88,7 +88,7 @@ def main():
                 "expansion": row.get("expansion", "").strip() or "Unknown",
                 "react": row.get("react", "").strip(),
                 "classification": row.get("classification_name", "").strip() or "Normal",
-                "nameKeeper": row.get("name_keeper", "").strip() == "True",
+                "nameKeeper": row.get("name_keeper", "").strip().lower() == "true",
                 "taming": set(),
                 "conditions": set(),
             }
