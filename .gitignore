@@ -1,5 +1,43 @@
-__pycache__/
-*.pyc
+# ── Secrets / environments ───────────────────────────────────────────────────
 .env
+.env.*
 venv/
-.ruff_cache
+.venv/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ── Scraper working files ────────────────────────────────────────────────────
+# Extracted/, Processed/ and Output/ are tracked on purpose -- they are the
+# pipeline's reproducible intermediate state and the compiled tables. Partial or
+# per-run debris is not.
+*.partial
+*.tmp
+scrape_log*.txt
+
+# ── Editors / IDEs ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Claude Code local overrides ──────────────────────────────────────────────
+CLAUDE.local.md
+.claude/settings.local.json
+
+# ── OS / editor junk ─────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# ── Patch / backup leftovers ─────────────────────────────────────────────────
+*.bak
+*.orig
+*.rej
