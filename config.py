@@ -43,10 +43,10 @@ COORDS_LUA = os.path.join(OUTPUT_DIR, 'CoordsData.lua')
 CONDITIONS_LUA = os.path.join(OUTPUT_DIR, 'ConditionsData.lua')
 NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 
-# The generated tables live in their own LoadOnDemand addon folder, separate from
-# the Models Browser UI that consumes them, so the addon's core can load the data
-# without pulling in the browser UI.
-ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_Data'))
+# The generated tables live in a Data/ subfolder of the Models Browser addon, kept
+# apart from its hand-written Lua so it is unambiguous which files this pipeline
+# owns and which must never be hand-edited.
+ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'Data'))
 
 
 def ensure_dirs():
