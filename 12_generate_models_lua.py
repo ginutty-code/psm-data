@@ -1,9 +1,12 @@
 """
-Generate addon Models data file (flat format by npcId)
+Generate addon Models data file (structure-of-arrays, backed by a dense
+npcId<->index backbone -- see ../DATA_STRUCTURE_OPTIMIZATION_PLAN.md, Target
+schema for ModelsData).
 """
 
 import csv
 import os
+import re
 
 from config import (
     COMBINED_PET_DATA_CSV,
@@ -17,7 +20,7 @@ from config import (
 def load_csv(filepath):
     """Load CSV file with encoding fallback and return all rows."""
     encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
-    
+
     for encoding in encodings:
         try:
             with open(filepath, 'r', encoding=encoding, errors='replace') as f:
@@ -28,7 +31,7 @@ def load_csv(filepath):
         except (OSError, csv.Error) as e:
             print(f"Warning: Could not read {filepath} as {encoding}: {e}")
             continue
-    
+
     return []
 
 
@@ -41,7 +44,7 @@ def load_skip_display_ids():
                 reader = csv.DictReader(f)
                 for row in reader:
                     for key in row:
-                        clean_key = key.strip().replace('\ufeff', '')
+                        clean_key = key.strip().replace(chr(0xFEFF), '')
                         if clean_key in ('id', 'display_id'):
                             id_value = row.get(key)
                             if id_value:
@@ -52,6 +55,55 @@ def load_skip_display_ids():
     return skip_ids
 
 
+REACT_PATTERN = re.compile(r'\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]')
+
+
+def parse_react(react_str):
+    """Parse a '[a,b]' faction-reaction string into two ints. Defaults to (0, 0)."""
+    if not react_str:
+        return 0, 0
+    match = REACT_PATTERN.match(react_str.strip())
+    if not match:
+        return 0, 0
+    return int(match.group(1)), int(match.group(2))
+
+
+def format_display_ids(display_ids_set):
+    """Bare number if exactly one, else a Lua array; {} if none."""
+    sorted_dids = sorted(display_ids_set)
+    if not sorted_dids:
+        return "{}"
+    if len(sorted_dids) == 1:
+        return str(sorted_dids[0])
+    return "{ " + ", ".join(str(d) for d in sorted_dids) + " }"
+
+
+def lua_quote(s):
+    if s is None:
+        s = ""
+    return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def write_dense_column(f, name, values, per_line=10):
+    """A column present for every index -- plain positional list, chunked for readability."""
+    f.write(f"ModelsData.{name} = {{\n")
+    for i in range(0, len(values), per_line):
+        chunk = values[i:i + per_line]
+        f.write("    " + ", ".join(chunk) + ",\n")
+    f.write("}\n\n")
+
+
+def write_sparse_column(f, name, sorted_npc_ids, npc_id_to_index, value_fn):
+    """A column only some indices have -- explicit [i] = value, one per line,
+    index simply omitted (implicit nil, still array-part-eligible) when absent."""
+    f.write(f"ModelsData.{name} = {{\n")
+    for npc_id in sorted_npc_ids:
+        value = value_fn(npc_id)
+        if value is not None:
+            f.write(f"    [{npc_id_to_index[npc_id]}] = {value},\n")
+    f.write("}\n\n")
+
+
 def main():
     ensure_dirs()
 
@@ -59,7 +111,7 @@ def main():
     if not os.path.exists(COMBINED_PET_DATA_CSV):
         print(f"Error: CSV file not found: {COMBINED_PET_DATA_CSV}")
         return
-    
+
     print("Loading skip display IDs...")
     skip_display_ids = load_skip_display_ids()
     print(f"Found {len(skip_display_ids)} display IDs to skip")
@@ -90,7 +142,6 @@ def main():
                 "classification": row.get("classification_name", "").strip() or "Normal",
                 "nameKeeper": row.get("name_keeper", "").strip().lower() == "true",
                 "taming": set(),
-                "conditions": set(),
             }
 
         entry = npcs[npc_id]
@@ -123,60 +174,117 @@ def main():
                 if t.strip():
                     entry["taming"].add(t.strip())
 
-        # Extract special conditions
-        conditions_csv = row.get("special_conditions", "").strip()
-        if conditions_csv:
-            for c in conditions_csv.split('|'):
-                if c.strip():
-                    entry["conditions"].add(c.strip())
-
     print(f"Processed {len(npcs)} unique NPCs")
 
-    # Generate Lua file
+    # Dense npcId <-> index backbone
+    sorted_npc_ids = sorted(npcs.keys())
+    npc_id_to_index = {npc_id: i + 1 for i, npc_id in enumerate(sorted_npc_ids)}
+
+    # Internal-only ID maps for enum-like fields. Sorted alphabetically for
+    # reproducible diffs across regenerations -- NOT for cross-version stability,
+    # these IDs are never persisted (see ModelsData.lua's own header comment).
+    distinct_families = sorted({npcs[nid]["family"] for nid in npcs})
+    distinct_expansions = sorted({npcs[nid]["expansion"] for nid in npcs})
+    distinct_classifications = sorted({npcs[nid]["classification"] for nid in npcs})
+
+    family_to_id = {name: i + 1 for i, name in enumerate(distinct_families)}
+    expansion_to_id = {name: i + 1 for i, name in enumerate(distinct_expansions)}
+    classification_to_id = {name: i + 1 for i, name in enumerate(distinct_classifications)}
+
+    # uiMapId -> uiMapName is a clean 1:1 mapping in the source data (verified), so
+    # this ships as one small lookup joined through UiMapId[i], instead of repeating
+    # the name string as its own per-record column.
+    uimapid_to_name = {}
+    for nid in sorted_npc_ids:
+        mid = npcs[nid]["uiMapId"]
+        mname = npcs[nid]["uiMapName"]
+        if mid is not None and mname:
+            uimapid_to_name[mid] = mname
+
+    react_by_npc_id = {nid: parse_react(npcs[nid]["react"]) for nid in sorted_npc_ids}
+
     print(f"Generating Lua file to {MODELS_LUA}...")
-    
-    def lua_quote(s):
-        if s is None:
-            s = ""
-        return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(MODELS_LUA, 'w', encoding='utf-8') as f:
         f.write("-- Models Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Flat table structure: ModelsData[npcId] = { ... }\n\n")
-        f.write("ModelsData = {\n")
+        f.write("-- Structure-of-arrays layout, backed by a dense npcId<->index backbone.\n")
+        f.write("-- ModelsData.Index[npcId] = denseIndex; ModelsData.NpcId[denseIndex] = npcId.\n")
+        f.write("-- Every per-record column (Name, DisplayIds, UiMapId, FamilyId,\n")
+        f.write("-- ExpansionId, ReactA, ReactH, ClassificationId, NameKeeper, Taming) is\n")
+        f.write("-- ModelsData.<Column>[denseIndex] = value.\n")
+        f.write("-- Families/Expansions/Classifications are separate lookups keyed by their\n")
+        f.write("-- own internal-only IDs (NOT denseIndex, NOT stable across regenerations --\n")
+        f.write("-- resolve display strings through them, never persist the raw ID).\n")
+        f.write("-- UiMapNames is also a separate lookup, but keyed by uiMapId directly (via\n")
+        f.write("-- the UiMapId column above) -- Blizzard's own stable zone ID, not one of\n")
+        f.write("-- ours, safe to treat as stable.\n\n")
 
-        sorted_npc_ids = sorted(npcs.keys())
+        f.write("ModelsData = {}\n\n")
+
+        # Index: npcId -> denseIndex. Sparse keys, stays hash-part -- but it's the
+        # only hash-keyed table left, instead of every record being one.
+        f.write("ModelsData.Index = {\n")
         for npc_id in sorted_npc_ids:
-            entry = npcs[npc_id]
+            f.write(f"    [{npc_id}] = {npc_id_to_index[npc_id]},\n")
+        f.write("}\n\n")
 
-            sorted_dids = sorted(entry["displayIds"])
-            dids_str = "{ " + ", ".join(str(d) for d in sorted_dids) + " }"
+        write_dense_column(f, "NpcId", [str(nid) for nid in sorted_npc_ids])
+        write_dense_column(f, "Name", [lua_quote(npcs[nid]["name"]) for nid in sorted_npc_ids])
+        write_dense_column(
+            f, "DisplayIds",
+            [format_display_ids(npcs[nid]["displayIds"]) for nid in sorted_npc_ids],
+        )
 
-            f.write(f"    [{npc_id}] = {{\n")
-            f.write(f"        name = {lua_quote(entry['name'])},\n")
-            f.write(f"        displayIds = {dids_str},\n")
+        write_sparse_column(
+            f, "UiMapId", sorted_npc_ids, npc_id_to_index,
+            lambda nid: npcs[nid]["uiMapId"] if npcs[nid]["uiMapId"] is not None else None,
+        )
 
-            if entry["uiMapId"] is not None:
-                f.write(f"        uiMapId = {entry['uiMapId']},\n")
-            if entry["uiMapName"]:
-                f.write(f"        uiMapName = {lua_quote(entry['uiMapName'])},\n")
+        write_dense_column(
+            f, "FamilyId",
+            [str(family_to_id[npcs[nid]["family"]]) for nid in sorted_npc_ids],
+        )
+        write_dense_column(
+            f, "ExpansionId",
+            [str(expansion_to_id[npcs[nid]["expansion"]]) for nid in sorted_npc_ids],
+        )
+        write_dense_column(f, "ReactA", [str(react_by_npc_id[nid][0]) for nid in sorted_npc_ids])
+        write_dense_column(f, "ReactH", [str(react_by_npc_id[nid][1]) for nid in sorted_npc_ids])
+        write_dense_column(
+            f, "ClassificationId",
+            [str(classification_to_id[npcs[nid]["classification"]]) for nid in sorted_npc_ids],
+        )
+        write_dense_column(
+            f, "NameKeeper",
+            ["true" if npcs[nid]["nameKeeper"] else "false" for nid in sorted_npc_ids],
+        )
 
-            f.write(f"        family = {lua_quote(entry['family'])},\n")
-            f.write(f"        expansion = {lua_quote(entry['expansion'])},\n")
-            f.write(f"        react = {lua_quote(entry['react'])},\n")
-            f.write(f"        classification = {lua_quote(entry['classification'])},\n")
+        def taming_value(nid):
+            if not npcs[nid]["taming"]:
+                return None
+            sorted_taming = sorted(npcs[nid]["taming"])
+            return "{ " + ", ".join(lua_quote(t) for t in sorted_taming) + " }"
 
-            nk_str = "true" if entry["nameKeeper"] else "false"
-            f.write(f"        nameKeeper = {nk_str},\n")
+        write_sparse_column(f, "Taming", sorted_npc_ids, npc_id_to_index, taming_value)
 
-            if entry["taming"]:
-                sorted_taming = sorted(entry["taming"])
-                taming_str = "{ " + ", ".join(lua_quote(t) for t in sorted_taming) + " }"
-                f.write(f"        taming = {taming_str},\n")
+        f.write("ModelsData.Families = {\n")
+        f.writelines(f"    [{fid}] = {lua_quote(name)},\n" for name, fid in family_to_id.items())
+        f.write("}\n\n")
 
-            f.write("    },\n")
+        f.write("ModelsData.Expansions = {\n")
+        f.writelines(f"    [{eid}] = {lua_quote(name)},\n" for name, eid in expansion_to_id.items())
+        f.write("}\n\n")
 
+        f.write("ModelsData.Classifications = {\n")
+        f.writelines(f"    [{cid}] = {lua_quote(name)},\n" for name, cid in classification_to_id.items())
+        f.write("}\n\n")
+
+        f.write("ModelsData.UiMapNames = {\n")
+        f.writelines(
+            f"    [{mid}] = {lua_quote(name)},\n"
+            for mid, name in sorted(uimapid_to_name.items())
+        )
         f.write("}\n")
 
     print(f"Done! Lua file saved to: {MODELS_LUA}")

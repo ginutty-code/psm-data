@@ -56,14 +56,17 @@ def main():
                 'npcs': {}
             }
 
-        # Store NPC under this zone, even if coords are empty
+        # Store NPC under this zone, even if coords are empty. Value is the
+        # coords string directly -- no {coords = ...} wrapper table, since
+        # coords was ever the only field in it (~800KB of pure per-entry
+        # table overhead across ~8,500 npc-in-zone entries, for zero benefit).
         if npc_id not in zone_data[uiMapId]['npcs']:
-            zone_data[uiMapId]['npcs'][npc_id] = {'coords': coords}
+            zone_data[uiMapId]['npcs'][npc_id] = coords
         else:
             # If multiple coords entries exist for same npc_id in same zone, merge them
-            existing = zone_data[uiMapId]['npcs'][npc_id]['coords']
+            existing = zone_data[uiMapId]['npcs'][npc_id]
             if coords and coords not in existing:
-                zone_data[uiMapId]['npcs'][npc_id]['coords'] = existing + '|' + coords if existing else coords
+                zone_data[uiMapId]['npcs'][npc_id] = existing + '|' + coords if existing else coords
 
     # Generate Lua file
     print(f"Generating Lua file to {COORDS_LUA}...")
@@ -77,7 +80,7 @@ def main():
     with open(COORDS_LUA, 'w', encoding='utf-8') as f:
         f.write("-- Coords Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Format: CoordsData[uiMapId] = {name = \"ZoneName\", npcs = {[npc_id] = {coords = \"...\"}, ...}}\n")
+        f.write("-- Format: CoordsData[uiMapId] = {name = \"ZoneName\", continent = \"...\", npcs = {[npc_id] = \"x,y|x,y|...\", ...}}\n")
         f.write("\n")
         f.write("CoordsData = {\n")
 
@@ -103,14 +106,14 @@ def main():
             sorted_npc_ids = sorted(zone['npcs'].keys(), key=lambda x: int(x) if x.isdigit() else float('inf'))
 
             for j, npc_id in enumerate(sorted_npc_ids):
-                npc_coords = zone['npcs'][npc_id]['coords']
+                npc_coords = zone['npcs'][npc_id]
                 coords_lua = lua_quote(npc_coords)
 
                 # Add comma before NPC (except first)
                 if j > 0:
                     f.write(",\n")
 
-                f.write(f'            [{npc_id}] = {{coords = {coords_lua}}}')
+                f.write(f'            [{npc_id}] = {coords_lua}')
 
             f.write('\n        }\n    }')
 
