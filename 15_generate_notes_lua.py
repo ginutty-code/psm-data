@@ -26,6 +26,12 @@ def main():
 -- These are read-only. User-edited notes are stored separately in PSM_UserNotes (SavedVariables).
 -- At runtime, seed notes and user notes are merged by the Notes UI layer.
 
+-- This file ships in the PetStableManagement_Data addon, a separate LoadOnDemand
+-- folder from the core addon that creates _G.PSM. Declare it rather than relying on
+-- cross-addon load order, matching every other .lua file in the project.
+_G.PSM = _G.PSM or {}
+local PSM = _G.PSM
+
 PSM.NotesData = {
 '''
 

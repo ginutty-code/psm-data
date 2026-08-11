@@ -57,6 +57,11 @@ def main():
         f.write("-- ConditionsData.lua\n")
         f.write("-- Maps NPC IDs to condition-specific taming requirements.\n")
         f.write("-- These are used for filtering in the Special Tames panel.\n\n")
+        # This file ships in the PetStableManagement_Data addon, a separate
+        # LoadOnDemand folder from the core addon that creates _G.PSM. Declare it
+        # rather than relying on cross-addon load order, matching every other file.
+        f.write("_G.PSM = _G.PSM or {}\n")
+        f.write("local PSM = _G.PSM\n\n")
         
         # Map conditions found in data to groups
         condition_groups = {}

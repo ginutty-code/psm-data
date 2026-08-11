@@ -43,12 +43,15 @@ COORDS_LUA = os.path.join(OUTPUT_DIR, 'CoordsData.lua')
 CONDITIONS_LUA = os.path.join(OUTPUT_DIR, 'ConditionsData.lua')
 NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 
-ADDON_MODELS_BROWSER_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'ModelsBrowser'))
+# The generated tables live in their own LoadOnDemand addon folder, separate from
+# the Models Browser UI that consumes them, so the addon's core can load the data
+# without pulling in the browser UI.
+ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_Data'))
 
 
 def ensure_dirs():
     """Ensure that the standard project directories exist."""
-    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_MODELS_BROWSER_DIR]:
+    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_DATA_DIR]:
         if not os.path.exists(d):
             os.makedirs(d, exist_ok=True)
 
@@ -65,7 +68,7 @@ def sync_output_to_addon(target_file=None):
     for src in files:
         if os.path.exists(src):
             filename = os.path.basename(src)
-            dest = os.path.join(ADDON_MODELS_BROWSER_DIR, filename)
+            dest = os.path.join(ADDON_DATA_DIR, filename)
             shutil.copy2(src, dest)
             print(f"Synced {filename} -> {dest}")
 
