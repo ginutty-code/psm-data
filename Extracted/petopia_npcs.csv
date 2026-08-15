@@ -628,24 +628,24 @@ npc_id,npc_name,zone,tameable
 254628,Mountain Rocktalon,Eversong Woods,Can Be Tamed
 255042,Riptalon Eviscerator,"Temple of Akil'zon , Zul'Aman",Can Be Tamed
 254646,Rocktalon Scavenger,Eversong Woods,Can Be Tamed
-247630,Watchful Striker,"Farstrider Enclave, Eversong Woods",Upcoming Pet
-260371,Scavenging Filthfeather,"Gnarldor Isle, The Coiled Isle",Upcoming Pet
-261307,Slickfeather Eagle,The Coiled Isle,Upcoming Pet
+247630,Watchful Striker,"Farstrider Enclave, Eversong Woods",Can Be Tamed
+260371,Scavenging Filthfeather,"Gnarldor Isle, The Coiled Isle",Can Be Tamed
+261307,Slickfeather Eagle,The Coiled Isle,Can Be Tamed
 264659,Steelfeather Eagle,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
 242189,Melancholy Eagle,"Solemn Valley, Zul'Aman",Can Be Tamed
-264671,Forum Windchaser,"The Forum, The Coiled Isle",Upcoming Pet
+264671,Forum Windchaser,"The Forum, The Coiled Isle",Can Be Tamed
 258394,Steely Seabird,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 250118,Riptalon Eviscerator,"Bitterbark, Zul'Aman",Can Be Tamed
 253173,Keen-eye Riptalon,"Spiritpaw Borough, Zul'Aman",Can Be Tamed
-258943,Highcliff Osprey,"Path of Whispers, The Coiled Isle",Upcoming Pet
+258943,Highcliff Osprey,"Path of Whispers, The Coiled Isle",Can Be Tamed
 261666,Screeching Eagle,The Coiled Isle,Can Be Tamed
 244763,Blush Pinebeak,"Temple of Halazzi, Zul'Aman",Can Be Tamed
 245619,Watchful Nestguard,"Akil'zon's Reach, Zul'Aman",Can Be Tamed
-244650,Rotting Vilefeaster,"Temple of Halazzi, Zul'Aman",Upcoming Pet
-265672,Acidburned Osprey,"Path of Whispers, The Coiled Isle",Upcoming Pet
-262972,Corroded Skystriker,"Wreck of Sethralis's Scale, The Coiled Isle",Upcoming Pet
-258511,Infected Eagle,"The Forum, The Coiled Isle",Upcoming Pet
-271067,Ravenous Seabird,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
+244650,Rotting Vilefeaster,"Temple of Halazzi, Zul'Aman",Can Be Tamed
+265672,Acidburned Osprey,"Path of Whispers, The Coiled Isle",Can Be Tamed
+262972,Corroded Skystriker,"Wreck of Sethralis's Scale, The Coiled Isle",Can Be Tamed
+258511,Infected Eagle,"The Forum, The Coiled Isle",Can Be Tamed
+271067,Ravenous Seabird,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 238547,Enraged K'arroc Shade,"Lunnall River, K'aresh",Can Be Tamed
 249806,Soaring K'aaroc,"The Oasis, Eco-Dome: Primus, K'aresh",Can Be Tamed
 216707,Watchful Somnowl,Amirdrassil (Dragon Isles Zone),Can Be Tamed
@@ -1224,10 +1224,10 @@ npc_id,npc_name,zone,tameable
 82617,Slogtusk the Corpse-Eater,"Stonefury Cliffs, Frostfire Ridge",Can Be Tamed
 243631,Agitated Boar,"Zeb'Alar Lumberyard, Zul'Aman",Can Be Tamed
 243532,Grazing Boar,"Zeb'Alar Lumberyard, Zul'Aman",Can Be Tamed
-242165,Tearful Boar,"Solemn Valley, Zul'Aman",Upcoming Pet
-261317,Emaciated Truffle Hog,"Path of Whispers, The Coiled Isle",Upcoming Pet
-258980,Gully Hog,"The Fangs & Wreck of Sethralis's Scale, The Coiled Isle",Upcoming Pet
-260372,Mulchtusk Scavenger,"Gnarldor Isle, The Coiled Isle",Upcoming Pet
+242165,Tearful Boar,"Solemn Valley, Zul'Aman",Can Be Tamed
+261317,Emaciated Truffle Hog,"Path of Whispers, The Coiled Isle",Can Be Tamed
+258980,Gully Hog,"The Fangs & Wreck of Sethralis's Scale, The Coiled Isle",Can Be Tamed
+260372,Mulchtusk Scavenger,"Gnarldor Isle, The Coiled Isle",Can Be Tamed
 260827,Snuffling Boar,"The Whispering Marsh & Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 86850,Young Rocktusk,Gorgrond,Can Be Tamed
 130164,Highland Boar,"Brackish Coast & Autumnvale, Drustvar",Can Be Tamed
@@ -1236,10 +1236,10 @@ npc_id,npc_name,zone,tameable
 250117,Tusksplitter Boar,Zul'Aman,Can Be Tamed
 258073,Tusksplitter Boar,"Shrine of Filo, Zul'Aman",Can Be Tamed
 258070,Tusksplitter Boar,"Shrine of Filo, Zul'Aman",Can Be Tamed
-255749,Tusksplitter Boar,"Spiritpaw Backwoods, Zul'Aman",Upcoming Pet
+255749,Tusksplitter Boar,"Spiritpaw Backwoods, Zul'Aman",Can Be Tamed
 125347,Mudbrush Boar,"Foxhollow Woods, Tiragarde Sound",Can Be Tamed
 130130,Hungry Warswine,"Briarback Kraul, Stormsong Valley",Can Be Tamed
-261478,Ravine Boar,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
+261478,Ravine Boar,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
 264503,Untouched Tusksplitter,"The Forum, The Coiled Isle",Can Be Tamed
 89689,Diresnout Felboar,"Hellfire Citadel (Non-Instanced), Tanaan Jungle",Can Be Tamed
 156716,Wandering Boar,"Darkmaul Plains, Exile's Reach",Can Be Tamed
@@ -1253,7 +1253,7 @@ npc_id,npc_name,zone,tameable
 129869,Hungry Rooter,Stormsong Valley,Can Be Tamed
 135293,Thundersnout,"Muckwallow, Stormsong Valley",Can Be Tamed
 88508,Rocktusk Patriarch,Gorgrond,Can Be Tamed
-242402,Saltleaf Boar,"Camp Stonewash, Zul'Aman",Upcoming Pet
+242402,Saltleaf Boar,"Camp Stonewash, Zul'Aman",Can Be Tamed
 261667,Thickhide Boar,The Coiled Isle,Can Be Tamed
 92875,Diretusk Piglet,Tanaan Jungle,Can Be Tamed
 92876,Diretusk Sow,Tanaan Jungle,Can Be Tamed
@@ -1264,12 +1264,12 @@ npc_id,npc_name,zone,tameable
 80174,Pack Boar,"The Burning Glacier, Frostfire Ridge",Can Be Tamed
 77478,Shardtusk Boar,"Colossal's Fall, Frostfire Ridge",Can Be Tamed
 72934,Trained Coldsnout,Frostfire Ridge,Can Be Tamed
-77994,Bloodmaul Dire Boar,"Stonefury Cliffs, Frostfire Ridge",Upcoming Pet
-261837,Corroded Cliffcharger,"The Fangs, The Coiled Isle",Upcoming Pet
-262009,Mutated Double-Spine Hog,"The Fangs, The Coiled Isle",Upcoming Pet
-262960,Mutated Ravine Hogbeast,"Wreck of Sethralis's Scale, The Coiled Isle",Upcoming Pet
-261481,Frenzied Boar,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-258504,Implanted Boar,"The Forum, The Coiled Isle",Upcoming Pet
+77994,Bloodmaul Dire Boar,"Stonefury Cliffs, Frostfire Ridge",Can Be Tamed
+261837,Corroded Cliffcharger,"The Fangs, The Coiled Isle",Can Be Tamed
+262009,Mutated Double-Spine Hog,"The Fangs, The Coiled Isle",Can Be Tamed
+262960,Mutated Ravine Hogbeast,"Wreck of Sethralis's Scale, The Coiled Isle",Can Be Tamed
+261481,Frenzied Boar,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+258504,Implanted Boar,"The Forum, The Coiled Isle",Can Be Tamed
 77298,Trained Coldsnout,"Agurak's Fall, Frostfire Ridge",Can Be Tamed
 242401,Saltleaf Snouter,"Camp Stonewash, Zul'Aman",Can Be Tamed
 242166,Weeping Swine,"Solemn Valley, Zul'Aman",Can Be Tamed
@@ -1917,20 +1917,20 @@ npc_id,npc_name,zone,tameable
 24043,Amani Lynx,Zul'Aman (Dungeon),Can Be Tamed
 15366,Springpaw Cub,Eversong Woods (Classic),Can Be Tamed
 15372,Springpaw Lynx,Eversong Woods (Classic),Can Be Tamed
-15651,Springpaw Stalker,Eversong Woods (Classic),Upcoming Pet
-261693,Coiling Windlash,"The Skybridge, Zul'Aman",Upcoming Pet
-259275,Deathcoil Skyfiend,"The Skybridge, Zul'Aman",Upcoming Pet
-261396,Prowling Skyfiend,"Vaults of Atal'Utek, The Coiled Isle",Upcoming Pet
-256207,Screeching Skyfiend,"The Skybridge, Zul'Aman",Upcoming Pet
-259767,Shrieking Skyfiend,"The Skybridge, Zul'Aman",Upcoming Pet
-259699,Swooping Viper,"Witherbark Bluffs, Zul'Aman",Upcoming Pet
-253764,Vilescar Skyfiend,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-259063,Winged Skyfang,"Witherbark Bluffs, Zul'Aman",Upcoming Pet
-253884,Winged Skyfang,"The Skybridge, Zul'Aman",Upcoming Pet
-261789,Caustic Abductor,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-256791,Scaleskin Vilewing,"Gate of the Eastern Fang, The Coiled Isle",Upcoming Pet
-261378,Gorged Skyfiend,"The Seal of Wrath, The Coiled Isle",Upcoming Pet
-255088,Looming Mutagenitor,"The Forum, The Coiled Isle",Upcoming Pet
+15651,Springpaw Stalker,Eversong Woods (Classic),Can Be Tamed
+261693,Coiling Windlash,"The Skybridge, Zul'Aman",Can Be Tamed
+259275,Deathcoil Skyfiend,"The Skybridge, Zul'Aman",Can Be Tamed
+261396,Prowling Skyfiend,"Vaults of Atal'Utek, The Coiled Isle",Can Be Tamed
+256207,Screeching Skyfiend,"The Skybridge, Zul'Aman",Can Be Tamed
+259767,Shrieking Skyfiend,"The Skybridge, Zul'Aman",Can Be Tamed
+259699,Swooping Viper,"Witherbark Bluffs, Zul'Aman",Can Be Tamed
+253764,Vilescar Skyfiend,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+259063,Winged Skyfang,"Witherbark Bluffs, Zul'Aman",Can Be Tamed
+253884,Winged Skyfang,"The Skybridge, Zul'Aman",Can Be Tamed
+261789,Caustic Abductor,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+261378,Gorged Skyfiend,"The Seal of Wrath, The Coiled Isle",Can Be Tamed
+256791,Scaleskin Vilewing,"Gate of the Eastern Fang, The Coiled Isle",Can Be Tamed
+255088,Looming Mutagenitor,"The Forum, The Coiled Isle",Can Be Tamed
 261554,Twinfang Harrower,Altar of Fangs (Dungeon),Can Be Tamed
 164829,Chosen Flayedwing,"House of the Chosen & Ossein Foundry, Maldraxxus",Can Be Tamed
 162259,Galescreamer Pup,Maldraxxus,Can Be Tamed
@@ -2266,13 +2266,13 @@ npc_id,npc_name,zone,tameable
 250104,Crab,Zul'Aman,Can Be Tamed
 254198,Kelp Crab,"Strait of Hexx'alor, Zul'Aman",Can Be Tamed
 250105,Nibbler Crab,Zul'Aman,Can Be Tamed
-261125,Shoreline Scuttler,"Temple of Jan'alai, Zul'Aman",Upcoming Pet
+261125,Shoreline Scuttler,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 265333,Whelkshell Hulk,The Coiled Isle,Can Be Tamed
 144460,Overfed Snapper,Zuldazar,Can Be Tamed
 143718,Overfed Snapper,Stormsong Valley; Tiragarde Sound,Can Be Tamed
 227664,Tidal Sandskitterer,"Stormtide Dregs, Flotsam Shoal, Siren Isle",Can Be Tamed
-264705,Fringe Clacker,The Coiled Isle,Upcoming Pet
-256712,Scrawny Pebbledweller,"The Whispering Marsh, The Coiled Isle",Upcoming Pet
+264705,Fringe Clacker,The Coiled Isle,Can Be Tamed
+256712,Scrawny Pebbledweller,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 265332,Surviving Whelkshell,The Coiled Isle,Can Be Tamed
 143928,Cursed Snapclaw,"Fletcher's Hollow, Drustvar",Can Be Tamed
 210106,Root Snapper,The Emerald Dream,Can Be Tamed
@@ -2287,7 +2287,7 @@ npc_id,npc_name,zone,tameable
 111784,Great Sea Crab,The Broken Isles,Can Be Tamed
 26521,Kili'ua,"Kili'ua's Atoll, Dragonblight",Can Be Tamed
 242034,Voidtouched Crustacean,"Broken Throne, Zul'Aman",Can Be Tamed
-246074,Voidtouched Hatchling,"Broken Throne, Zul'Aman",Upcoming Pet
+246074,Voidtouched Hatchling,"Broken Throne, Zul'Aman",Can Be Tamed
 3108,Encrusted Surf Crawler,Durotar,Can Be Tamed
 33713,Rotting Crawler,Ghostlands,Can Be Tamed
 1216,Shore Crawler,Westfall,Can Be Tamed
@@ -2325,7 +2325,7 @@ npc_id,npc_name,zone,tameable
 257265,Crazed Crawler,"Nalorakk's Prowl, Zul'Aman",Can Be Tamed
 127630,Agitated Snapclaw,"Snapclaw Shore, Drustvar",Can Be Tamed
 153903,Tucel,"Abyssal Pool, Nazjatar",Can Be Tamed
-248460,Juvenile Crawler,"Nalorakk's Prowl, Zul'Aman",Upcoming Pet
+248460,Juvenile Crawler,"Nalorakk's Prowl, Zul'Aman",Can Be Tamed
 263695,Zecrogon,The Coiled Isle,Can Be Tamed
 137885,Ravenous Crab,Nazmir,Can Be Tamed
 123814,Clampclaw Clacker,"Darkwood Shoal, Vol'dun",Can Be Tamed
@@ -2628,8 +2628,8 @@ npc_id,npc_name,zone,tameable
 253970,Crimson Bloodfeather,Eversong Woods,Can Be Tamed
 253950,Crimson Bloodfeather,Eversong Woods,Can Be Tamed
 251460,Lightscale Dragonhawk,"Isle of Quel'Danas, Eversong Woods",Can Be Tamed
-238089,Territorial Dragonhawk,"Sanctum of the Sun, Eversong Woods",Upcoming Pet
-271028,Enraged Dragonhawk,"The Stump, Zul'Aman",Upcoming Pet
+238089,Territorial Dragonhawk,"Sanctum of the Sun, Eversong Woods",Can Be Tamed
+271028,Enraged Dragonhawk,"The Stump, Zul'Aman",Can Be Tamed
 265480,Enraged Dragonhawk,"The Stump, Zul'Aman",Can Be Tamed
 236166,Dragonhawk Plumesparker,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 242397,Hidegorger the Everburning,"Camp Stonewash, Zul'Aman",Can Be Tamed
@@ -2915,11 +2915,11 @@ npc_id,npc_name,zone,tameable
 195909,Wild Cliffhoof,Ohn'ahran Plains,Can Be Tamed
 202506,Elusive Argali,"Caldera of the Menders, The Forbidden Reach",Can Be Tamed
 202510,Elusive Elder Argali,"Caldera of the Menders, The Forbidden Reach",Can Be Tamed
-214231,Rockhorn Argali,Amirdrassil (Dragon Isles Zone),Upcoming Pet
-255811,Choleric Cliffdweller,"The Fangs, The Coiled Isle",Upcoming Pet
-260369,Feral Ram,"Gnarldor Isle, The Coiled Isle",Upcoming Pet
+214231,Rockhorn Argali,Amirdrassil (Dragon Isles Zone),Can Be Tamed
+255811,Choleric Cliffdweller,"The Fangs, The Coiled Isle",Can Be Tamed
+260369,Feral Ram,"Gnarldor Isle, The Coiled Isle",Can Be Tamed
 264656,Forum Frondchewer,"The Forum, The Coiled Isle",Can Be Tamed
-214222,Golddown Argali,Amirdrassil (Dragon Isles Zone),Upcoming Pet
+214222,Golddown Argali,Amirdrassil (Dragon Isles Zone),Can Be Tamed
 264658,Frondchewer Lamb,"The Forum, The Coiled Isle",Can Be Tamed
 187975,Fleecepelt Argali,"Wanderer's Steppe, Ohn'ahran Plains",Can Be Tamed
 2098,Ram,Loch Modan; Wetlands; Arathi Highlands,Can Be Tamed
@@ -3053,20 +3053,20 @@ npc_id,npc_name,zone,tameable
 253305,Poison Dart Frog,Atal'Aman (Delve),Can Be Tamed
 250142,Poisonous Hoplet,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 257428,Poisonous Hoplet,"Leech Bog, Zul'Aman",Can Be Tamed
-249358,Poisonous Passhopper,Eversong Woods,Upcoming Pet
+249358,Poisonous Passhopper,Eversong Woods,Can Be Tamed
 260370,Grumpy Bullfrog,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 256851,Golden Hopper,"Lake Elrendar , Eversong Woods",Can Be Tamed
 250051,River Hopper,Eversong Woods,Can Be Tamed
 250141,Swamp Leaper,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 250053,Toxic Dartling,Eversong Woods,Can Be Tamed
-254795,Toxic Dartling,Eversong Woods,Upcoming Pet
+254795,Toxic Dartling,Eversong Woods,Can Be Tamed
 257155,Abasi Croaker,"Atal'Abasi, Zul'Aman",Can Be Tamed
 250826,Banuran,"Zeb'Nowa, Eversong Woods",Can Be Tamed
 247011,Horned Frog,Zul'Aman,Can Be Tamed
 242032,Oophaga,"The Stump, Zul'Aman",Can Be Tamed
 256853,Radiant Dartling,"Suncrown Tree, Eversong Woods",Can Be Tamed
-256854,Radiant Dartling,"Lake Eldendar , Eversong Woods",Upcoming Pet
-264502,Skittish Dart Frog,"The Forum, The Coiled Isle",Upcoming Pet
+256854,Radiant Dartling,"Lake Eldendar , Eversong Woods",Can Be Tamed
+264502,Skittish Dart Frog,"The Forum, The Coiled Isle",Can Be Tamed
 258512,Tainted Dart Frog,"The Forum, The Coiled Isle",Can Be Tamed
 73805,Corrupted Toad,"The Cursed Woods, Shadowmoon Valley - Draenor",Can Be Tamed
 74176,Gloomshade Gulper,"Gloomshade Grove, Shadowmoon Valley - Draenor",Can Be Tamed
@@ -3304,12 +3304,12 @@ npc_id,npc_name,zone,tameable
 8596,Plaguehound Runt,Eastern Plaguelands,Can Be Tamed
 32163,Grimkor's Hound,Icecrown,Can Be Tamed
 30952,Hungering Plaguehound,Icecrown,Can Be Tamed
-29452,Vargul Blighthound,Zul'Drak,Upcoming Pet
-261943,Shredscale Hydra,Midnight Delves,Upcoming Pet
-254288,Vilescar Tyrant,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
-272920,Vilescar Tyrant,"Blistering Terrace, The Coiled Isle",Upcoming Pet
-253694,Scaled Breaker,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-261390,Venomgall Tyrant,"The Seal of Wrath, The Coiled Isle",Upcoming Pet
+29452,Vargul Blighthound,Zul'Drak,Can Be Tamed
+261943,Shredscale Hydra,Midnight Delves,Can Be Tamed
+254288,Vilescar Tyrant,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
+272920,Vilescar Tyrant,"Blistering Terrace, The Coiled Isle",Can Be Tamed
+253694,Scaled Breaker,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+261390,Venomgall Tyrant,"The Seal of Wrath, The Coiled Isle",Can Be Tamed
 261142,Destra,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
 201579,Magmorax,"Molten Crucible, Aberrus, the Shadowed Crucible (Raid)",Can Be Tamed
 83530,Hyacinth Mandragora,"Blademoon Bloom, Shadowmoon Valley",Can Be Tamed
@@ -3578,22 +3578,22 @@ npc_id,npc_name,zone,tameable
 257527,Cragspine Amazard,"Thresh Cove, Zul'Aman",Can Be Tamed
 250152,Dreadmaw Amazard,Zul'Aman,Can Be Tamed
 257529,Stonemaw Amazard,"Thresh Cove, Zul'Aman",Can Be Tamed
-242024,The Snapping Scourge,"Temple of Jan'alai, Zul'Aman",Upcoming Pet
-261650,Bonesnapper Lizard,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
-254167,Enraged Amazard,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
-254166,Murkfen Amazard,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
-253491,Snapping Matriarch,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Upcoming Pet
+242024,The Snapping Scourge,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
+261650,Bonesnapper Lizard,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
+254167,Enraged Amazard,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
+254166,Murkfen Amazard,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
+253491,Snapping Matriarch,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Can Be Tamed
 262965,Spined Snapper,"Wreck of Sethralis's Scale, The Coiled Isle",Can Be Tamed
-250150,Terrorspine Amazard,Zul'Aman,Upcoming Pet
-250151,Amazard Chomper,"Shrine of Filo, Zul'Aman",Upcoming Pet
-261638,Muskmoss Lizard,"Ofi's Hut, The Coiled Isle",Upcoming Pet
-253490,Snapping Prowler,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Upcoming Pet
+250150,Terrorspine Amazard,Zul'Aman,Can Be Tamed
+250151,Amazard Chomper,"Shrine of Filo, Zul'Aman",Can Be Tamed
+261638,Muskmoss Lizard,"Ofi's Hut, The Coiled Isle",Can Be Tamed
+253490,Snapping Prowler,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Can Be Tamed
 257526,Amazard Gnawer,"Funerary Coast, Zul'Aman",Can Be Tamed
 257524,Razorspine Amazard,"Funerary Coast , Zul'Aman",Can Be Tamed
 257530,Razorspine Amazard,"Funerary Coast, Zul'Aman",Can Be Tamed
 257528,Whiptail Amazard,"Funerary Coast, Zul'Aman",Can Be Tamed
 236169,Cinderscale Amazard,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
-257523,Stonemaw Amazard,"Camp Stonewash, Zul'Aman",Upcoming Pet
+257523,Stonemaw Amazard,"Camp Stonewash, Zul'Aman",Can Be Tamed
 236168,Cinderdig Amazard,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
 191653,Coastal Salamanther,The Waking Shores,Can Be Tamed
 195461,Shifty Salamanther,Ohn'ahran Plains,Can Be Tamed
@@ -4584,22 +4584,22 @@ npc_id,npc_name,zone,tameable
 79587,Massive Riverwallow,Talador,Can Be Tamed
 88586,Mogamago,"Everbloom Wilds, Gorgrond",Can Be Tamed
 87021,Wetland Trampler,Nagrand - Draenor,Can Be Tamed
-250101,Kapara,"Bitterbark, Zul'Aman",Upcoming Pet
-256882,Lost Kapara,"The Ring of Glory, The Coiled Isle",Upcoming Pet
+250101,Kapara,"Bitterbark, Zul'Aman",Can Be Tamed
+256882,Lost Kapara,"The Ring of Glory, The Coiled Isle",Can Be Tamed
 261473,Spotted Kapara,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
-258215,Kapara,Zul'Aman,Upcoming Pet
+258215,Kapara,Zul'Aman,Can Be Tamed
 261626,Sickly Kapara,"Ofi's Hut, The Coiled Isle",Can Be Tamed
 250100,Kapara Pup,Zul'Aman,Can Be Tamed
-258216,Kapara Pup,Zul'Aman,Upcoming Pet
+258216,Kapara Pup,Zul'Aman,Can Be Tamed
 261652,Musty Kapara,"Wreck of Paku's Talon, The Coiled Isle",Can Be Tamed
-255136,Kapara,Zul'Aman,Upcoming Pet
-268049,Siltmouth,"Gate of the Eastern Fang, The Coiled Isle",Upcoming Pet
+255136,Kapara,Zul'Aman,Can Be Tamed
+268049,Siltmouth,"Gate of the Eastern Fang, The Coiled Isle",Can Be Tamed
 261482,Frenzied Kapara,"Zail'Zar Span, The Coiled Isle",Can Be Tamed
 239324,Escaped Subject,"The Vatworks, Undermine",Can Be Tamed
 234292,Nesting Rat,"Hovel Hill, Undermine",Can Be Tamed
 250124,Chitterfang Scurrier,Zul'Aman,Can Be Tamed
 250123,Chitterfang Scurrier,Zul'Aman,Can Be Tamed
-255122,Plump Chitterfang,Zul'Aman,Upcoming Pet
+255122,Plump Chitterfang,Zul'Aman,Can Be Tamed
 265720,Scavenging Critter,"The Stump, Zul'Aman",Can Be Tamed
 231217,Territorial Nibbler,Undermine,Can Be Tamed
 250125,Scavenging Chitterfang,Zul'Aman,Can Be Tamed
@@ -4619,11 +4619,11 @@ npc_id,npc_name,zone,tameable
 221297,Foraging Mole,"The Cataract River, The Ringing Deeps",Can Be Tamed
 215846,Displaced Mole,"The Rumbling Wastes, The Ringing Deeps",Can Be Tamed
 219257,Invasive Thickhead,"Abyssal Excavation, The Ringing Deeps",Can Be Tamed
-261369,Odorous Stripeback,The Coiled Isle,Upcoming Pet
-210798,Striped Skulker,The Emerald Dream,Upcoming Pet
+261369,Odorous Stripeback,The Coiled Isle,Can Be Tamed
+210798,Striped Skulker,The Emerald Dream,Can Be Tamed
 210944,Tanned Skulker,The Emerald Dream,Can Be Tamed
-210075,Henri Snufftail,"Haven Cascades, The Emerald Dream",Upcoming Pet
-211072,Smolderfur Skulker,The Emerald Dream,Upcoming Pet
+210075,Henri Snufftail,"Haven Cascades, The Emerald Dream",Can Be Tamed
+211072,Smolderfur Skulker,The Emerald Dream,Can Be Tamed
 204685,Luminous Squeaker,"Warder's Teeth, Zaralek Cavern",Can Be Tamed
 205001,Treasurewhiskers,"Mysterious Cave, Zaralek Cavern",Can Be Tamed
 205204,Lugear Mouse,Zaralek Cavern,Can Be Tamed
@@ -4950,19 +4950,19 @@ npc_id,npc_name,zone,tameable
 40656,Duneclaw Matriarch,Tanaris,Can Be Tamed
 11736,Stonelash Pincer,Silithus,Can Be Tamed
 47803,Sand Scorpid,Uldum,Can Be Tamed
-162364,Sand Scorpid,"Neferset City, Uldum",Upcoming Pet
-253765,Brood Watcher,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-256773,Devouring Writhe,"Gate of the Eastern Fang, The Coiled Isle",Upcoming Pet
-258549,Newborn Corpseburster,"The Forum, The Coiled Isle",Upcoming Pet
-268973,Newborn Writhe,"The Seal of Wrath & The Serpent's Tail, The Coiled Isle",Upcoming Pet
-261377,Preying Writhe,"Blistering Terrace, The Coiled Isle",Upcoming Pet
-257894,Writhing Young,"Blistering Terrace, The Coiled Isle",Upcoming Pet
-263356,Lurking Coiler,"The Underbelly, The Coiled Isle",Upcoming Pet
-263359,Sacred Doomcoiler,"The Underbelly, The Coiled Isle",Upcoming Pet
-265968,Writhing Bonechewer,"Venom Rise, The Coiled Isle",Upcoming Pet
-273290,Writhing Coiler,"Vaults of Atal'Utek, The Coiled Isle",Upcoming Pet
-261398,Writhing Coiler,"The Seal of Wrath, The Coiled Isle",Upcoming Pet
-258962,Writhing Ripcoil,Midnight Delves,Upcoming Pet
+162364,Sand Scorpid,"Neferset City, Uldum",Can Be Tamed
+253765,Brood Watcher,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+256773,Devouring Writhe,"Gate of the Eastern Fang, The Coiled Isle",Can Be Tamed
+258549,Newborn Corpseburster,"The Forum, The Coiled Isle",Can Be Tamed
+268973,Newborn Writhe,"The Seal of Wrath & The Serpent's Tail, The Coiled Isle",Can Be Tamed
+261377,Preying Writhe,"Blistering Terrace, The Coiled Isle",Can Be Tamed
+257894,Writhing Young,"Blistering Terrace, The Coiled Isle",Can Be Tamed
+263356,Lurking Coiler,"The Underbelly, The Coiled Isle",Can Be Tamed
+263359,Sacred Doomcoiler,"The Underbelly, The Coiled Isle",Can Be Tamed
+265968,Writhing Bonechewer,"Venom Rise, The Coiled Isle",Can Be Tamed
+273290,Writhing Coiler,"Vaults of Atal'Utek, The Coiled Isle",Can Be Tamed
+261398,Writhing Coiler,"The Seal of Wrath, The Coiled Isle",Can Be Tamed
+258962,Writhing Ripcoil,Midnight Delves,Can Be Tamed
 264350,Summoned Coiler,"Vaults of Atal'Utek, The Coiled Isle",Can Be Tamed
 247392,Agitated Wyrm,Eversong Woods,Can Be Tamed
 250026,Arcane Manathirster,Eversong Woods,Can Be Tamed
@@ -5040,12 +5040,12 @@ npc_id,npc_name,zone,tameable
 73163,Imperial Python,Timeless Isle,Can Be Tamed
 92606,Sylissa,"Zorammarsh, Tanaan Jungle",Can Be Tamed
 135061,Water Serpent,"Verdant Plateau, Vol'dun",Can Be Tamed
-261122,Agitated Python,"Tokka's Landing, The Coiled Isle",Upcoming Pet
-265051,Burrow Python,The Grudge Pit (Delve),Upcoming Pet
-261177,Swarming Chestbiter,"Witherbark Bluffs, Zul'Aman",Upcoming Pet
-270233,Venomspawn Snapper,"Venom Rise, The Coiled Isle",Upcoming Pet
-262102,Slithering Coiler,The Darkway (Delve),Upcoming Pet
-261375,Swarming Python,"The Serpent's Tail & Blistering Terrace, The Coiled Isle",Upcoming Pet
+261122,Agitated Python,"Tokka's Landing, The Coiled Isle",Can Be Tamed
+265051,Burrow Python,The Grudge Pit (Delve),Can Be Tamed
+261177,Swarming Chestbiter,"Witherbark Bluffs, Zul'Aman",Can Be Tamed
+270233,Venomspawn Snapper,"Venom Rise, The Coiled Isle",Can Be Tamed
+262102,Slithering Coiler,The Darkway (Delve),Can Be Tamed
+261375,Swarming Python,"The Serpent's Tail & Blistering Terrace, The Coiled Isle",Can Be Tamed
 254964,Insatiate Hatchling,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 3680,Serpentbloom Snake,Wailing Caverns (Dungeon),Can Be Tamed
 23020,Shadow Serpent,Shadowmoon Valley - Outland,Can Be Tamed
@@ -5055,11 +5055,11 @@ npc_id,npc_name,zone,tameable
 24338,Amani Snake,Zul'Aman (Dungeon),Can Be Tamed
 51676,Marsh Serpent,"Vir'naal River Delta, Uldum",Can Be Tamed
 39444,Pit Viper,"Chamber of Prophecy, Halls of Origination (Dungeon)",Can Be Tamed
-162375,Marsh Serpent,"Vir'naal River Delta, Uldum",Upcoming Pet
-254511,Ravenous Python,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
+162375,Marsh Serpent,"Vir'naal River Delta, Uldum",Can Be Tamed
+254511,Ravenous Python,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 262439,Wild Snake,The Coiled Isle,Can Be Tamed
 65821,Cobaltscale Death Adder,Krasarang Wilds,Can Be Tamed
-158465,Poisonous Snake,Uldum,Upcoming Pet
+158465,Poisonous Snake,Uldum,Can Be Tamed
 44568,Dune Rattler,Tanaris,Can Be Tamed
 47283,Sand Serpent,Uldum,Can Be Tamed
 52402,Venomtooth,"The Coil, Zul'Gurub (Dungeon)",Can Be Tamed
@@ -5080,7 +5080,7 @@ npc_id,npc_name,zone,tameable
 67770,Acidfang Slitherer,"Diremoor, Isle of Thunder",Can Be Tamed
 140690,Dreadfang Viper,Island Expeditions (Scenario),Can Be Tamed
 65820,Yellowback Water Moccasin,"Krasarang River, Krasarang Wilds",Can Be Tamed
-142464,Moult,"Dazar'alor, Zuldazar",Upcoming Pet
+142464,Moult,"Dazar'alor, Zuldazar",Can Be Tamed
 140038,Abyssal Eel,Shrine of the Storm (Dungeon),Can Be Tamed
 145343,Deepcoil Serpent,"Chamber of the Harvesters, Nazjatar",Can Be Tamed
 120477,Deep Stalker,"Lair of Harjatan, Tomb of Sargeras (Raid)",Can Be Tamed
@@ -5100,19 +5100,19 @@ npc_id,npc_name,zone,tameable
 228212,Tidewake Eel,Hallowfall,Can Be Tamed
 228213,Tidewake Moray,Hallowfall,Can Be Tamed
 222810,Undersea Depthstalker,Hallowfall,Can Be Tamed
-215680,Deepwater Eel,Hallowfall,Upcoming Pet
+215680,Deepwater Eel,Hallowfall,Can Be Tamed
 263393,Territorial Eel,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 129980,Abyssal Eel,Stormsong Valley,Can Be Tamed
 137944,Spiny Shallow Eel,"Windswept Coast, Stormsong Valley",Can Be Tamed
 149707,Coral Slitherer,"Azsh'ari Terrace, Nazjatar",Can Be Tamed
 130232,Venomous Coilscale,"Fogcliff Strand, Tiragarde Sound",Can Be Tamed
-145338,Abyssal Eel,"Azsh'ari Terrace, Nazjatar",Upcoming Pet
+145338,Abyssal Eel,"Azsh'ari Terrace, Nazjatar",Can Be Tamed
 152555,Elderspawn Nalaada,"Spears of Azshara, Nazjatar",Can Be Tamed
 225525,Spined Bilespitter,"Lightless Channels, Azj-Kahet",Can Be Tamed
 225520,Spined Slitherer,"Lightless Channels, Azj-Kahet",Can Be Tamed
 219606,Sunless Slitherer,"Sunless Strand, Hallowfall",Can Be Tamed
 220772,Sightless Wavecutter,"Bleak Sand, Hallowfall",Can Be Tamed
-220786,Wavecutter Eel,"Bleak Sand, Hallowfall",Upcoming Pet
+220786,Wavecutter Eel,"Bleak Sand, Hallowfall",Can Be Tamed
 140604,Coastal Trapfang,"Umber Shore, Tiragarde Sound",Can Be Tamed
 137183,Honey-Coated Slitherer,"Blushwater Brook, Tiragarde Sound",Can Be Tamed
 127600,Venomscale Slitherer,"Rockslip Falls, Tiragarde Sound",Can Be Tamed
@@ -5120,29 +5120,29 @@ npc_id,npc_name,zone,tameable
 152554,Abyssal Spawn,"Azsh'ari Terrace, Nazjatar",Can Be Tamed
 125299,Soultainted Cobra,"Port of Zem'lan, Vol'dun",Can Be Tamed
 130401,Vathikur,Vol'dun,Can Be Tamed
-167848,Dambala,"Dusky Grotto, Ardenweald",Upcoming Pet
-253697,Ravenous Cobraling,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-259131,Timber Cobra,"The Fangs, The Coiled Isle",Upcoming Pet
+167848,Dambala,"Dusky Grotto, Ardenweald",Can Be Tamed
+253697,Ravenous Cobraling,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+259131,Timber Cobra,"The Fangs, The Coiled Isle",Can Be Tamed
 259132,Timber Whelp,"The Fangs, The Coiled Isle",Can Be Tamed
 135846,Sand-Crusted Striker,Temple of Sethraliss (Dungeon),Can Be Tamed
-134390,Sand-Crusted Striker,Temple of Sethraliss (Dungeon),Upcoming Pet
+134390,Sand-Crusted Striker,Temple of Sethraliss (Dungeon),Can Be Tamed
 133384,Merektha,Temple of Sethraliss (Dungeon),Can Be Tamed
-138540,Venomous Cobra,"Feed Pits, Vol'dun",Upcoming Pet
+138540,Venomous Cobra,"Feed Pits, Vol'dun",Can Be Tamed
 173855,Shadow of Dambala,"Dusky Grotto, Ardenweald",Can Be Tamed
-136593,Sevriss,"Whistlebloom Oasis, Vol'dun",Upcoming Pet
+136593,Sevriss,"Whistlebloom Oasis, Vol'dun",Can Be Tamed
 127169,Colossal Water Cobra,Vol'dun,Can Be Tamed
-265048,Burrow Spitter,The Grudge Pit (Delve),Upcoming Pet
-261864,Burrowing Ambusher,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-258955,Frilled Spitter,Midnight Delves,Upcoming Pet
-261124,Incensed Cobra,"Tokka's Landing, The Coiled Isle",Upcoming Pet
-265343,Nest Coiler,"Blistering Terrace, The Coiled Isle",Upcoming Pet
-261820,Venom-Bloated Python,The Coiled Isle; Eversong Woods; Zul'Aman; Harandar; Voidstorm,Upcoming Pet
-264655,Lurking Thorntail,"The Forum, The Coiled Isle",Upcoming Pet
-268979,Newborn Cobra,"The Seal of Wrath, The Coiled Isle",Upcoming Pet
-270767,Newborn Snake,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-265049,Burrow Stinger,The Grudge Pit (Delve),Upcoming Pet
-261372,Dustscale Cobra,"Zail'Zar Span & Blistering Terrace, The Coiled Isle",Upcoming Pet
-261643,Summoned Serpent,"Vaults of Atal'Utek, The Coiled Isle",Upcoming Pet
+265048,Burrow Spitter,The Grudge Pit (Delve),Can Be Tamed
+261864,Burrowing Ambusher,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+258955,Frilled Spitter,Midnight Delves,Can Be Tamed
+261124,Incensed Cobra,"Tokka's Landing, The Coiled Isle",Can Be Tamed
+265343,Nest Coiler,"Blistering Terrace, The Coiled Isle",Can Be Tamed
+261820,Venom-Bloated Python,The Coiled Isle; Eversong Woods; Zul'Aman; Harandar; Voidstorm,Can Be Tamed
+264655,Lurking Thorntail,"The Forum, The Coiled Isle",Can Be Tamed
+268979,Newborn Cobra,"The Seal of Wrath, The Coiled Isle",Can Be Tamed
+270767,Newborn Snake,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+265049,Burrow Stinger,The Grudge Pit (Delve),Can Be Tamed
+261372,Dustscale Cobra,"Zail'Zar Span & Blistering Terrace, The Coiled Isle",Can Be Tamed
+261643,Summoned Serpent,"Vaults of Atal'Utek, The Coiled Isle",Can Be Tamed
 15274,Mana Wyrm,"Sunstrider Isle, Eversong Woods (Classic)",Can Be Tamed
 16310,Mana Shifter,"Sanctum of the Moon, Ghostlands",Can Be Tamed
 89393,Azsuna Mana Wyrm,Azsuna,Can Be Tamed
@@ -5510,7 +5510,7 @@ npc_id,npc_name,zone,tameable
 132318,Bilefang Skitterer,"Bleak Hills Mine, Drustvar",Can Be Tamed
 129496,Sandspinner Weaver,"Court of Zak'rajan, Vol'dun",Can Be Tamed
 139521,Sandspinner Weaver,"Arid Basin, Vol'dun",Can Be Tamed
-58474,Bloodtip,"Guo-Lai Halls, Vale of Eternal Blossoms",Upcoming Pet
+58474,Bloodtip,"Guo-Lai Halls, Vale of Eternal Blossoms",Can Be Tamed
 263653,Mortuary Creeper,"Vault of Restless Bones, The Coiled Isle",Can Be Tamed
 44906,Skitterweb Matriarch,Silverpine Forest,Available to Alliance Hunters Only
 48268,Battle Creeper,Hillsbrad Foothills,Can Be Tamed
@@ -5546,8 +5546,8 @@ npc_id,npc_name,zone,tameable
 46508,Darkwood Lurker,Tol Barad Peninsula,Can Be Tamed
 58459,Ashweb Weaver,Vale of Eternal Blossoms,Can Be Tamed
 58588,Ashweb Weaver,Vale of Eternal Blossoms,Can Be Tamed
-97494,Thornback Spinner,"Rockcrawler Chasm, Highmountain",Upcoming Pet
-254758,Crypt Spider,"Crypt of the Denied, The Coiled Isle",Upcoming Pet
+97494,Thornback Spinner,"Rockcrawler Chasm, Highmountain",Can Be Tamed
+254758,Crypt Spider,"Crypt of the Denied, The Coiled Isle",Can Be Tamed
 17522,Myst Spinner,Bloodmyst Isle,Can Be Tamed
 129833,Mossfang Matriarch,"Fernwood Ridge, Tiragarde Sound",Can Be Tamed
 26625,Darkweb Recluse,Drak'Tharon Keep (Dungeon),Can Be Tamed
@@ -6153,8 +6153,8 @@ npc_id,npc_name,zone,tameable
 210410,Tortoise,The Emerald Dream,Can Be Tamed
 214215,Vigilant Snapper,Amirdrassil (Dragon Isles Zone),Can Be Tamed
 240676,Cautious Turtle,"Atal'Aman, Zul'Aman",Can Be Tamed
-250165,Tempered Spikeshell,"Hermit's Mooring, Zul'Aman",Upcoming Pet
-258111,Clouded Crystalshell,"The Whispering Marsh, The Coiled Isle",Upcoming Pet
+250165,Tempered Spikeshell,"Hermit's Mooring, Zul'Aman",Can Be Tamed
+258111,Clouded Crystalshell,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 262977,Snapping Fractureshell,"Wreck of Sethralis's Scale, The Coiled Isle",Can Be Tamed
 192637,Clearwater Turtle,Ohn'ahran Plains,Can Be Tamed
 197864,Dragonshell Snapper,"Misty Canyon, The Azure Span",Can Be Tamed
@@ -6163,20 +6163,20 @@ npc_id,npc_name,zone,tameable
 196063,Sandshell Snapper,"The Storm Scar, Ohn'ahran Plains",Can Be Tamed
 197041,Sunshell Turtle,"Rusza'thar Reach, Ohn'ahran Plains",Can Be Tamed
 214214,Vigilant Turtle,Amirdrassil (Dragon Isles Zone),Can Be Tamed
-250163,Spikeshell Snapper,Zul'Aman,Upcoming Pet
-260368,Armored Snacktooth,"Gnarldor Isle, The Coiled Isle",Upcoming Pet
+250163,Spikeshell Snapper,Zul'Aman,Can Be Tamed
+260368,Armored Snacktooth,"Gnarldor Isle, The Coiled Isle",Can Be Tamed
 211032,Darkshell Snapper,The Emerald Dream,Can Be Tamed
 214226,Shadechaser Snapper,"Twisting Wood, Amirdrassil (Dragon Isles Zone)",Can Be Tamed
 214227,Shadechaser Turtle,"Twisting Wood, Amirdrassil (Dragon Isles Zone)",Can Be Tamed
 196182,Highland Snapper,"Veiled Ossuary, Thaldraszus",Can Be Tamed
 196619,Springshell Snapper,"Dragonsprings Summit, Ohn'ahran Plains",Can Be Tamed
 211184,Petalmuncher Tortoise,The Emerald Dream,Can Be Tamed
-250164,Meandering Spikeshell,Zul'Aman,Upcoming Pet
-257600,Murkfen Muckstomper,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
+250164,Meandering Spikeshell,Zul'Aman,Can Be Tamed
+257600,Murkfen Muckstomper,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 192776,Sunscale Snapper,Ohn'ahran Plains,Can Be Tamed
 191527,Sunscale Turtle,"Roaring Dragonsprings, Ohn'ahran Plains",Can Be Tamed
-257154,Abasi Snapper,"Atal'Abasi, Zul'Aman",Upcoming Pet
-262691,Crazed Crystalshell,"The Whispering Marsh, The Coiled Isle",Upcoming Pet
+257154,Abasi Snapper,"Atal'Abasi, Zul'Aman",Can Be Tamed
+262691,Crazed Crystalshell,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 265237,Lockjaw,"The Fangs, The Coiled Isle",Can Be Tamed
 207285,Un'Gorian Protoshell,"Passage of Time, Thaldraszus",Can Be Tamed
 163556,Lumbering Crystalback,"Garden of Edenia, Bastion",Can Be Tamed
@@ -6391,8 +6391,8 @@ npc_id,npc_name,zone,tameable
 250546,Venomous Netherwaspling,Voidstorm,Can Be Tamed
 254682,Venomous Netherwaspling,Voidstorm,Can Be Tamed
 261681,Costal Greenhead,"Temple of Jan'alai, Zul'Aman",Can Be Tamed
-259955,Murderous Mudcoat,"Maisara Deeps, Zul'Aman",Upcoming Pet
-256763,Ornery Muckstinger,"The Ring of Glory, The Coiled Isle",Upcoming Pet
+259955,Murderous Mudcoat,"Maisara Deeps, Zul'Aman",Can Be Tamed
+256763,Ornery Muckstinger,"The Ring of Glory, The Coiled Isle",Can Be Tamed
 258931,Rotsting Swarmer,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 137450,The Hornet,"Westwind Weald, Tiragarde Sound",Can Be Tamed
 168579,Fen Hatchling,Plaguefall (Dungeon),Can Be Tamed
@@ -6418,7 +6418,7 @@ npc_id,npc_name,zone,tameable
 250128,Buzzing Mudcoat,Zul'Aman,Can Be Tamed
 257945,Stinger Matriarch,"Shrine of Filo, Zul'Aman",Can Be Tamed
 235413,Territorial Netherwasp,"The Ingress, Voidstorm",Can Be Tamed
-261651,Carrion Hornet,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
+261651,Carrion Hornet,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 261476,Spineback Hornet,The Coiled Isle,Can Be Tamed
 128974,Queen Tzxi'kik,"Xal'vor, Nazmir",Can Be Tamed
 140275,Dire Barb,"Rosaline's Apiary, Stormsong Valley",Can Be Tamed
@@ -6759,20 +6759,20 @@ npc_id,npc_name,zone,tameable
 257740,Infested Shredclaw,Voidstorm,Can Be Tamed
 257246,Roaming Shredclaw,Voidstorm,Can Be Tamed
 256770,Bilemaw the Gluttonous,"The Molt, Voidstorm",Can Be Tamed
-248741,Rhazul,Harandar,Upcoming Pet
-265969,Carrion Harrier,"Venom Rise, The Coiled Isle",Upcoming Pet
-256845,Coiling Harrier,"Witherbark Bluffs, Zul'Aman",Upcoming Pet
-259768,Coiling Serpent,"The Skybridge, Zul'Aman",Upcoming Pet
-259952,Coiling Skyfang,"The Skybridge, The Coiled Isle",Upcoming Pet
-256213,Coiling Skyfang,"The Skybridge, Zul'Aman",Upcoming Pet
-261694,Coiling Skyfang,"The Skybridge, The Coiled Isle",Upcoming Pet
-268981,Newborn Skyfang,"Blistering Terrace, The Coiled Isle",Upcoming Pet
-256792,Scaleskin Harrier,"Gate of the Eastern Fang, The Coiled Isle",Upcoming Pet
-258961,Scalewing Hunter,Midnight Delves,Upcoming Pet
-253761,Vilescar Harrier,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-264159,Pugnacious Harrier,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-253695,Screaming Skyfang,"The Serpent's Tail, The Coiled Isle",Upcoming Pet
-254973,Vilescar Shrieker,"Mlurkkr Mire, The Coiled Isle",Upcoming Pet
+248741,Rhazul,Harandar,Can Be Tamed
+265969,Carrion Harrier,"Venom Rise, The Coiled Isle",Can Be Tamed
+256845,Coiling Harrier,"Witherbark Bluffs, Zul'Aman",Can Be Tamed
+259768,Coiling Serpent,"The Skybridge, Zul'Aman",Can Be Tamed
+259952,Coiling Skyfang,"The Skybridge, The Coiled Isle",Can Be Tamed
+256213,Coiling Skyfang,"The Skybridge, Zul'Aman",Can Be Tamed
+261694,Coiling Skyfang,"The Skybridge, The Coiled Isle",Can Be Tamed
+268981,Newborn Skyfang,"Blistering Terrace, The Coiled Isle",Can Be Tamed
+256792,Scaleskin Harrier,"Gate of the Eastern Fang, The Coiled Isle",Can Be Tamed
+258961,Scalewing Hunter,Midnight Delves,Can Be Tamed
+253761,Vilescar Harrier,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+264159,Pugnacious Harrier,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+253695,Screaming Skyfang,"The Serpent's Tail, The Coiled Isle",Can Be Tamed
+254973,Vilescar Shrieker,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 257864,Exalted Skyfiend,"Blistering Terrace, The Coiled Isle",Can Be Tamed
 170388,Brooding Shadewing,"Temple of Humility, Bastion",Can Be Tamed
 170007,Disturbed Etherwyrm,Bastion,Can Be Tamed
@@ -7085,15 +7085,15 @@ npc_id,npc_name,zone,tameable
 71921,Darkfang,"The Valley of Strength, Siege of Orgrimmar (Raid)",Can Be Tamed
 71923,Bloodclaw,"The Valley of Strength, Siege of Orgrimmar (Raid)",Can Be Tamed
 72452,Kor'kron Dire Wolf,"The Valley of Strength, Siege of Orgrimmar (Raid)",Can Be Tamed
-255141,Spiny Leechling,"Leech Bog, Zul'Aman",Upcoming Pet
-253489,Sludge Biter,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Upcoming Pet
+255141,Spiny Leechling,"Leech Bog, Zul'Aman",Can Be Tamed
+253489,Sludge Biter,"The Ring of Glory & The Whispering Marsh, The Coiled Isle",Can Be Tamed
 265337,Sludgling,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 250153,Ravenous Mukleech,Zul'Aman,Can Be Tamed
-257363,Ravenous Mukleech,"Leech Bog , Zul'Aman",Upcoming Pet
+257363,Ravenous Mukleech,"Leech Bog , Zul'Aman",Can Be Tamed
 265336,Sludgeback Leech,"Mlurkkr Mire, The Coiled Isle",Can Be Tamed
 250154,Mukleech Bloodletter,Zul'Aman,Can Be Tamed
 257491,Mukleech Bloodletter,"Leech Bog , Zul'Aman",Can Be Tamed
-257360,Mukleech Bloodletter,"Leech Bog, Zul'Aman",Upcoming Pet
+257360,Mukleech Bloodletter,"Leech Bog, Zul'Aman",Can Be Tamed
 261635,Greenhusk Leechling,"Ofi's Hut, The Coiled Isle",Can Be Tamed
 255139,Wallows Mukleech,"Leech Bog, Zul'Aman",Can Be Tamed
 248038,Ambush Consumptor,"The Molt, Voidstorm",Can Be Tamed

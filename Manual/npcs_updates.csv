@@ -32,8 +32,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 29412,Crystalweb Spitter,Normal,0,3,Spider,67,"[-1,-1]",add
 29461,Icetip Crawler,Normal,0,3,Spider,67,"[-1,-1]",add
 29562,Icemaw Bear,Normal,0,4,Bear,67,"[-1,-1]",add
-29630,Fanged Pit Viper,Normal,0,35,Serpent,1987,"[0,0]",add
-29637,Crafty Snake,Normal,0,35,Serpent,1206,"[0,0]",add
 30320,Battlescarred Frostworg,Elite,1,1,Wolf,67,"[-1,-1]",add
 36852,Skychaser Hippogryph,Normal,0,160,Feathermane,16,"[1,-1]",add
 39444,Pit Viper,Normal,0,35,Serpent,4945,"[-1,-1]",add
@@ -56,7 +54,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 67087,Ashweb Hatchling,Normal,0,3,Spider,5840,"[-1,-1]",update
 69193,Loa-Infused Bloodhorn,Elite,1,138,Direhorn,6507,"[-1,-1]",add
 70448,Ancient Python,Elite,1,35,Serpent,48050,"[-1,-1]",add
-70702,Flame Hound,Elite,1,52,Hound,7812,"[-1,-1]",add
 73185,Enraged Mushan Beast,Elite,1,156,Scalehide,6738,"[-1,-1]",add
 80560,Echidnaean Scout,Normal,0,68,Hydra,6722,[],update
 81983,Verdant Mandragora,Elite,1,68,Hydra,7109,"[-1,-1]",add
@@ -65,8 +62,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 88150,Untamed Mandragora,Elite,1,68,Hydra,6721,"[-1,-1]",add
 88525,Reaver Pit Fodder,Normal,0,41,Aqiri,6755,"[-1,-1]",add
 90517,Felbound Wolf,Normal,0,1,Wolf,6723,"[-1,-1]",add
-97119,Shroud Hound,Normal,0,52,Hound,6731,"[-1,-1]",add
-97163,Cursed Falke,Normal,0,26,Bird of Prey,7812,"[-1,-1]",add
 99222,Cliffwing Hippogryph,Normal,0,160,Feathermane,7334,"[-1,-1]",add
 112328,Canyon Soarer,Normal,0,26,Bird of Prey,7637,[],update
 124262,Spiderling,Normal,0,3,Spider,8501,[],add
@@ -113,9 +108,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 170695,Runestag Bull,Normal,0,151,Stag,11510,[],update
 172312,Spinemaw Gorger,Elite,1,292,Carapid,94197,"[-1,-1]",add
 175255,Giant Mawrat,Normal,0,127,Rodent,11400,[],update
-189722,Gulping Goliath,Elite,1,303,Lesser Dragonkin,14082,"[-1,-1]",add
 191679,Magmammoth Bull,Elite,1,300,Mammoth,13644,"[-1,-1]",add
-193311,Melkhop,Rare Elite,2,303,Lesser Dragonkin,13647,"[-1,-1]",add
 194054,Mistbeetle,Normal,0,53,Beetle,13647,[],update
 194079,Mature Riverbeast,Normal,0,150,Riverbeast,13644,"[0,0]",add
 194568,Restless Slyvern,Normal,0,160,Feathermane,13645,"[-1,-1]",add
@@ -171,7 +164,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 256609,Voracious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
 256770,Bilemaw the Gluttonous,Rare,4,315,Whiptails,15458,"[-1,-1]",add
 256914,Lightmad Saptor,Normal,0,11,Raptor,15968,[],update
-257127,Barbtooth Bloodtracker,Elite,1,,Whiptail,16542|16595,[],add
+257127,Barbtooth Bloodtracker,Elite,1,315,Whiptail,16542|16595,[],add
 257240,Ripfang Stalker,Normal,0,315,Whiptails,15458,"[-1,-1]",add
 257241,Ripfang Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
 257244,Vicious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]",add
@@ -187,28 +180,12 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 261085,Invasive Crystalback,Normal,0,20,Scorpid,16900,[],update
 261981,Rime Worm,Normal,0,42,Worm,16900,[],update
 1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
-143416,Ancient Core Hound,Normal,0,45,Core Hound,2717|8064,"[-1,null]",update
-271067,Ravenous Seabird,Normal,0,26,Bird of Prey,16365,[],add
-261317,Emaciated Truffle Hog,Normal,0,5,Boar,16365,[],add
-260827,Snuffling Boar,Normal,0,5,Boar,16365,[],add
-264503,Untouched Tusksplitter,Normal,0,5,Boar,16365,"[null,-1]",add
-261837,Corroded Cliffcharger,Normal,0,5,Boar,16365,[],add
-262009,Mutated Double-Spine Hog,Normal,0,5,Boar,16365,[],add
-261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,[],add
-258955,Frilled Spitter,Normal,0,35,Serpent,,[],add
-261124,Incensed Cobra,Normal,0,35,Serpent,16365,[],add
-265343,Nest Coiler,Normal,0,35,Serpent,16365,[],add
-264655,Lurking Thorntail,Normal,0,35,Serpent,16365,[],add
-268979,Newborn Cobra,Normal,0,35,Serpent,16535,"[null,-1]",add
-265049,Burrow Stinger,Normal,0,35,Serpent,16548,[],add
-261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[null,-1]",add
-261643,Summoned Serpent,Normal,0,35,Serpent,16535,[],add
-263653,Mortuary Creeper,Normal,0,3,Spider,16535,[],add
-254758,Crypt Spider,Normal,0,3,Spider,16535,[],add
-258111,Clouded Crystalshell,Normal,0,21,Turtle,16535,[],add
-262977,Snapping Fractureshell,Normal,0,21,Turtle,16365,[],add
-260368,Armored Snacktooth,Normal,0,21,Turtle,16365,[],add
-257600,Murkfen Muckstomper,Normal,0,21,Turtle,16365,[],add
-262691,Crazed Crystalshell,Normal,0,21,Turtle,16365,[],add
-265237,Lockjaw,Rare,4,21,Turtle,16365,[],add
-256763,Ornery Muckstinger,Normal,0,44,Wasp,16365,[],add
+135048,Gorestained Piglet,Elite,1,5,Boar,9424,"[-1,-1]",add
+3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]",add
+27642,Phantasmal Mammoth,Elite,1,300,Mammoth,4228,"[-1,-1]",add
+70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]",add
+262102,Slithering Coiler,Normal,0,35,Serpent,16642,[],add
+210798,Striped Skulker,Normal,0,127,Rodent,14529,"[0,0]",add
+210944,Tanned Skulker,Normal,0,127,Rodent,14529,"[0,0]",add
+211072,Smolderfur Skulker,Normal,0,127,Rodent,14529,[],add
+259768,Coiling Serpent,Normal,0,35,Serpent,15947,[],add
