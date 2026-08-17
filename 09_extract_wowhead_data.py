@@ -30,8 +30,7 @@ CONCURRENCY = random.randint(*CONCURRENCY_RANGE)
 REQUEST_DELAY_RANGE = (4.0, 10.0) # Range for base request delay
 BATCH_SIZE = 10              
 BATCH_SECONDS = 30         
-COOLDOWN_SECONDS = 120        # Initial penalty; if we still get rate-limited after this, we exponentially increase the backoff time up to MAX_BACKOFF_SECONDS seconds.
-MAX_BACKOFF_SECONDS = 600
+COOLDOWN_SECONDS = 120        # Flat penalty applied whenever the backoff trips; it does not escalate across repeats.
 
 # Signal for graceful shutdown
 stop_event = threading.Event()

@@ -98,10 +98,10 @@ The intermediate `pet_data.csv` used to generate these Lua files is located at `
 Every `_generate_*_lua.py` step (06, 12, 13, 14, 15) calls `config.sync_output_to_addon()` immediately after writing its file to `Output/`. This copies the generated `.lua` file directly into the live addon source at:
 
 ```
-psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
+psm-addon/PetStableManagement_ModelsBrowser/Data/
 ```
 
-So running the generation steps not only refreshes `Output/` but also updates the addon in place — no manual copy step is needed. The sync target is defined by `ADDON_MODELS_BROWSER_DIR` in `config.py`.
+So running the generation steps not only refreshes `Output/` but also updates the addon in place — no manual copy step is needed. The sync target is defined by `ADDON_DATA_DIR` in `config.py`.
 
 ## Credits
 

@@ -35,9 +35,10 @@ Whiptail family (id 315) is a constant hardcoded directly inside
 
 `config.sync_output_to_addon()` is the only thing that touches the other
 repo — it copies the five compiled `Output/*.lua` files into
-`../psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/`, where that
-addon's `.toc` load order picks them back up. Nothing else in this pipeline
-should reach across the repo boundary.
+`../psm-addon/PetStableManagement_ModelsBrowser/Data/` (the `ADDON_DATA_DIR`
+constant), where that addon's `.toc` load order picks them back up. The `Data/`
+subfolder keeps generated tables apart from that addon's hand-written Lua.
+Nothing else in this pipeline should reach across the repo boundary.
 
 ## Network resilience
 
