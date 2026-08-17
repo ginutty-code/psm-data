@@ -1,3 +1,4 @@
+import csv
 import os
 import random
 
@@ -47,6 +48,51 @@ NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 # apart from its hand-written Lua so it is unambiguous which files this pipeline
 # owns and which must never be hand-edited.
 ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'Data'))
+
+
+# --- Shared CSV loading ---
+#
+# These live here because the numbered scripts cannot import each other -- a leading digit
+# is not a valid module name -- so a helper needed by more than one of them has nowhere else
+# to go, and the copies drift. `load_csv` had three byte-identical definitions;
+# `load_skip_display_ids` had two that reached the same answer by different routes.
+
+def load_csv(filepath):
+    """Load a CSV with encoding fallback and return all rows."""
+    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
+
+    for encoding in encodings:
+        try:
+            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
+                rows = list(csv.DictReader(f))
+                if rows:
+                    return rows
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
+            continue
+
+    return []
+
+
+def read_first_col(path, col_names):
+    """
+    The set of values from whichever of `col_names` a row carries first.
+
+    Tolerates a stray BOM in the header, which is why it matches on a cleaned key rather
+    than indexing the column directly.
+    """
+    result = set()
+    if not os.path.exists(path):
+        return result
+    with open(path, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
+        for row in csv.DictReader(f):
+            for key in row:
+                if key.strip().replace('﻿', '') in col_names:
+                    val = row[key]
+                    if val:
+                        result.add(str(val).strip())
+                    break
+    return result
 
 
 def ensure_dirs():

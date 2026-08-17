@@ -26,6 +26,7 @@ from config import (
     RECORD_OVERRIDES_CSV,
     SKIP_DISPLAY_IDS_CSV,
     ensure_dirs,
+    read_first_col,
 )
 
 EXPANSION_MAPPING = {
@@ -154,25 +155,7 @@ def get_expansion(patch_id):
     except (ValueError, IndexError):
         return ""
 
-def _read_first_col(path, col_names):
-    """Generic loader: returns a set of stripped string values from the first matching column."""
-    result = set()
-    if not os.path.exists(path):
-        return result
-    with open(path, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            for key in row:
-                clean_key = key.strip().replace('\ufeff', '')
-                if clean_key in col_names:
-                    val = row[key]
-                    if val:
-                        result.add(str(val).strip())
-                    break
-    return result
 
-def load_skip_display_ids():
-    return _read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
 
 def load_processed_petopia_data():
     """
@@ -371,7 +354,7 @@ def main():
     print("=" * 60)
     ensure_dirs()
 
-    skip_display_ids = load_skip_display_ids()
+    skip_display_ids = read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
     print(f"Loaded {len(skip_display_ids)} display IDs to skip (for post-override check).")
 
     # Load pre-processed Petopia data (cleaned notes + pre-computed taming_requirements)

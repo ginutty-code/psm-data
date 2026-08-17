@@ -2,28 +2,9 @@
 Generate addon Coordinates data file
 """
 
-import csv
 import os
 
-from config import COMBINED_PET_DATA_CSV, COORDS_LUA, sync_output_to_addon
-
-
-def load_csv(filepath):
-    """Load CSV file with encoding fallback and return all rows."""
-    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
-
-    for encoding in encodings:
-        try:
-            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-                if rows:
-                    return rows
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
-            continue
-
-    return []
+from config import COMBINED_PET_DATA_CSV, COORDS_LUA, load_csv, sync_output_to_addon
 
 
 def main():
