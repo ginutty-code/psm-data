@@ -72,10 +72,20 @@ def main():
             if c in EXCLUDED_FROM_GROUPS:
                 continue
                 
-            # Split "Category: Value" -> group: "Category", member: "Value"
+            # Split "Category: Value" -> group: "Category", member: "Value".
+            # A condition with no colon falls back to DEFAULT_GROUP rather than raising:
+            # split(":", 1) returns one element, so indexing [1] was an IndexError that
+            # took the whole generator down. Every condition carries a colon today, so
+            # this is a guard against a curation edit -- 11_combine_data.py derives these
+            # from note parsing, where a new CATEGORY_MAP entry or a record override can
+            # produce a bare value.
             parts = c.split(":", 1)
-            group_name = parts[0].strip()
-            value_name = parts[1].strip()
+            if len(parts) == 2:
+                group_name = parts[0].strip()
+                value_name = parts[1].strip()
+            else:
+                group_name = DEFAULT_GROUP
+                value_name = parts[0].strip()
             
             f.write(f'    [{i+1}] = "{value_name}",\n')
             condition_to_idx[c] = i + 1
