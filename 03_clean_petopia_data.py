@@ -4,7 +4,7 @@ Clean and process Petopia data, generating a cleaned dataset with notes and tami
 Pipeline order:
 1. Load raw Petopia data.
 2. Deduplicate by npc_id (keep first occurrence).
-3. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates) and add missing NPCs from notes_updates.csv.
+3. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates) for the NPCs present here. Notes naming an NPC absent from the Petopia data are left for 11_combine_data.py, which is the first step that knows both sources.
 4. Clean taming skills from tamingskillname1/tamingskillname2.
 5. Merge taming_updates.csv — override/add taming_requirements where specified.
 6. Write processed_petopia_data.csv with columns: npc_id, npc_name, zone, family, name_keeper, notes, taming_requirements.
@@ -20,6 +20,7 @@ from config import (
     NOTES_UPDATES_CSV,
     PETOPIA_DATA_CSV,
     PROCESSED_PETOPIA_DATA_CSV,
+    SKIP_NPC_IDS_CSV,
     TAMING_UPDATES_CSV,
     ensure_dirs,
 )
@@ -46,17 +47,33 @@ def clean_taming_skill(skill):
 
 # --- Skip list loading ---
 
-def load_skip_npc_ids(filepath):
-    """Load global NPC skip IDs from the skip list CSV."""
+def load_global_skip_npc_ids(filepath):
+    """
+    NPC IDs skipped everywhere: the rows carrying an npc_id and nothing else.
+
+    The presence of a zone_id is what makes a row a statement about one zone rather
+    than about the NPC. Petopia data has no zone dimension, so a zone-scoped row says
+    nothing here and is ignored -- only a bare npc_id means "this NPC does not belong
+    in the data at all".
+
+    This is deliberately the same rule as the global tier of
+    10_clean_wowhead_data.py's load_skip_npc_data, so both pipelines agree on what a
+    global skip is by construction. `reason` stays a free-text curation note and is
+    read by nothing, which keeps a typo there harmless.
+    """
     skip_ids = set()
     if not os.path.exists(filepath):
         print(f"Warning: Skip list file not found: {filepath}")
         return skip_ids
     with open(filepath, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
         reader = csv.DictReader(f)
+        has_zone_col = 'zone_id' in (reader.fieldnames or [])
         for row in reader:
             npc_id = row.get('npc_id', '').strip()
-            if npc_id:
+            if not npc_id:
+                continue
+            zone_id = row.get('zone_id', '').strip() if has_zone_col else ''
+            if not zone_id:
                 skip_ids.add(npc_id)
     return skip_ids
 
@@ -227,6 +244,17 @@ def main():
     skipped_dupes = len(raw_records) - len(deduped_records)
     print(f"Skipped {skipped_dupes} duplicate NPC IDs.")
 
+    # 2b. Drop globally-skipped NPCs. This moved here from 02's extraction step, so a
+    # curation change takes effect without re-scraping. 02 also matched on npc_id
+    # alone, which meant zone-scoped rows -- statements about one Wowhead zone --
+    # removed NPCs from Petopia entirely.
+    global_skips = load_global_skip_npc_ids(SKIP_NPC_IDS_CSV)
+    before_skip = len(deduped_records)
+    deduped_records = [r for r in deduped_records
+                       if r.get('npc_id', '').strip() not in global_skips]
+    print(f"Skipped {before_skip - len(deduped_records)} globally-skipped NPC IDs "
+          f"(of {len(global_skips)} listed).")
+
     # 3. Clean notes
     keywords = load_note_keywords()
     keyword_pattern = None
@@ -281,34 +309,16 @@ def main():
     deduped_records = [r for r in deduped_records if r.get('npc_id', '').strip() not in npc_remove]
     print(f"Records after note removals: {len(deduped_records)}")
 
-    # ---------------------------------------------------------------------
-    # Add missing NPCs from notes_updates
-    # ---------------------------------------------------------------------
-    # Some note updates refer to NPCs that are not present in the raw
-    # Petopia data.  The original pipeline discarded those updates, but
-    # the downstream data model expects every note update to be represented
-    # in the final cleaned dataset.  We therefore create minimal records
-    # for any NPC IDs that appear in ``npc_add`` but are missing from the
-    # deduped records.  The note text is cleaned using the same rules as
-    # for existing records.
-    existing_ids = {r.get('npc_id', '').strip() for r in deduped_records}
-    missing_ids = set(npc_add.keys()) - existing_ids - npc_remove
-    added_count = 0
-    for missing_id in missing_ids:
-        raw_note = npc_add[missing_id]
-        cleaned_note = clean_note(raw_note, global_rules, keyword_pattern)
-        deduped_records.append({
-            'npc_id': missing_id,
-            'npc_name': '',
-            'zone': '',
-            'family': '',
-            'name_keeper': '',
-            'cleaned_notes': cleaned_note,
-            'taming_requirements': '',
-        })
-        added_count += 1
-    if added_count:
-        print(f"Added {added_count} missing NPC(s) from notes_updates.")
+    # This step corrects, cleans and updates notes for the NPCs it has. Notes naming an
+    # NPC that is not in the Petopia data are left for 11_combine_data.py.
+    #
+    # A minimal record used to be fabricated here for each of those. "Missing" is not
+    # answerable at this step: Petopia is one of two sources, and the combined dataset is
+    # driven by the Wowhead side (7852 NPCs against Petopia's 7227). An NPC absent here is
+    # usually present there, so the fabricated row was a phantom Petopia record -- blank
+    # name, zone, family -- entering the merge as though it had been scraped. Only after
+    # 11 has merged both sources does "this NPC exists nowhere" mean anything, and 16
+    # reports the ones that are still unplaced.
 
     # 4. Clean taming skills
     for r in deduped_records:
@@ -361,7 +371,6 @@ def main():
     print(f"  Total records loaded:              {total_loaded}")
     print(f"  Skipped (duplicate NPC IDs):       {skipped_dupes}")
     print(f"  Dropped (no surviving notes):      {dropped_notes}")
-    print(f"  Added missing NPCs from updates:   {len(missing_ids)}")
     print(f"  Taming updates applied:            {len(taming_updates)}")
     print(f"  Final records written:             {len(output_rows)}")
     print("-" * 40 + "\n")

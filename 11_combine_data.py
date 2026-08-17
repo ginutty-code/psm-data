@@ -20,6 +20,7 @@ import re
 from config import (
     COMBINED_PET_DATA_CSV,
     MANUAL_DIR,
+    NOTES_UPDATES_CSV,
     PROCESSED_PETOPIA_DATA_CSV,
     PROCESSED_WOWHEAD_DATA_CSV,
     RECORD_OVERRIDES_CSV,
@@ -188,6 +189,31 @@ def load_processed_petopia_data():
                     data[npc_id.strip()] = row
     return data
 
+def load_note_additions():
+    """
+    npc_id -> note text, for the rows of notes_updates.csv that add a note outright
+    (empty `search`, non-empty `replace`). 03_clean_petopia_data.py owns the full format
+    -- global rules, removals and scoped search/replace -- and applies all of it to the
+    NPCs Petopia knows about. Only the outright additions are needed here.
+
+    This is the first step that has seen both sources, so it is the first step that can
+    tell "Petopia did not have this NPC" from "this NPC does not exist". 03 used to guess
+    at the former by fabricating a blank Petopia record; the note is attached to the real
+    Wowhead record instead. Applied verbatim, matching how 03 applies the same rows.
+    """
+    additions = {}
+    if not os.path.exists(NOTES_UPDATES_CSV):
+        return additions
+    with open(NOTES_UPDATES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
+        for row in csv.DictReader(f):
+            npc_id = (row.get('npc_id') or row.get('﻿npc_id') or '').strip()
+            search = (row.get('search') or row.get('﻿search') or '').strip()
+            replace = (row.get('replace') or '').strip()
+            if npc_id and not search and replace:
+                additions[npc_id] = replace
+    return additions
+
+
 def load_record_overrides():
     overrides = {}
     if os.path.exists(RECORD_OVERRIDES_CSV):
@@ -352,6 +378,9 @@ def main():
     petopia_info = load_processed_petopia_data()
     print(f"Loaded pre-processed Petopia info for {len(petopia_info)} NPCs.")
 
+    note_additions = load_note_additions()
+    print(f"Loaded {len(note_additions)} note additions from notes_updates.")
+
     full_record_overrides = load_record_overrides()
     print(f"Loaded {len(full_record_overrides)} record overrides.")
 
@@ -464,7 +493,9 @@ def main():
             'classification_name': row.get('bulk_classification', ''),
             'type_id': type_id,
             'type_name': TYPE_MAP.get(type_id, ''),
-            'notes': p_info.get('notes', ''),
+            # Petopia's cleaned note wins; a notes_updates addition fills in for an NPC
+            # Petopia never carried. Ones matching no record at all are reported by 16.
+            'notes': p_info.get('notes', '') or note_additions.get(npc_id, ''),
             'taming_requirements': pre_taming_req,
             'special_conditions': "",
             'name_keeper': p_info.get('name_keeper', '')
