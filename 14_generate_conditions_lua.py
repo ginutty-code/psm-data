@@ -8,8 +8,8 @@ import os
 from config import (
     COMBINED_PET_DATA_CSV,
     CONDITIONS_LUA,
+    SCHEMA_VERSION,
     ensure_dirs,
-    sync_output_to_addon,
 )
 
 # Define the category groups for conditions
@@ -54,6 +54,7 @@ def main():
     sorted_entries = sorted(unique_conditions)
 
     with open(CONDITIONS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- ConditionsData.lua\n")
         f.write("-- Maps NPC IDs to condition-specific taming requirements.\n")
         f.write("-- These are used for filtering in the Special Tames panel.\n\n")
@@ -141,7 +142,6 @@ def main():
 
     print(f"Done! {len(conditions_map)} NPCs mapped to special conditions.")
     print(f"Lua file saved to: {CONDITIONS_LUA}")
-    sync_output_to_addon(CONDITIONS_LUA)
 
 if __name__ == "__main__":
     main()

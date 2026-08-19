@@ -8,8 +8,8 @@ from config import (
     ABILITIES_LUA,
     PROCESSED_FAMILIES_CSV,
     PROCESSED_SPELLS_CSV,
+    SCHEMA_VERSION,
     load_csv,
-    sync_output_to_addon,
 )
 
 
@@ -136,6 +136,7 @@ def main():
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(ABILITIES_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Abilities Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", icon = \"family_icon\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", icon = \"ability_icon\", category = \"category\", tag = \"tag\"}, ...}}}\n")
@@ -215,7 +216,6 @@ def main():
 
     print(f"Done! Lua file saved to: {ABILITIES_LUA}")
     print(f"Summary: {total_families} families, {total_ranks} ranks, {total_abilities} abilities")
-    sync_output_to_addon(ABILITIES_LUA)
 
 
 if __name__ == "__main__":

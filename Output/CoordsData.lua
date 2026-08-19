@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- Coords Data Export
 -- Generated automatically
 -- Format: CoordsData[uiMapId] = {name = "ZoneName", continent = "...", npcs = {[npc_id] = "x,y|x,y|...", ...}}

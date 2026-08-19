@@ -37,6 +37,13 @@ PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv
 # Processed — master file combining all relevant data for final output generation (pet_data.csv is the main source for the addon)
 COMBINED_PET_DATA_CSV = os.path.join(PROCESSED_DIR, 'pet_data.csv')
 
+# Bumped whenever a generated file's shape changes in a way the addon must know about
+# (a renamed field, a column added/removed). Every generator stamps this into its output
+# as `PSM_DataSchemaVersion`; psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
+# Schema.lua asserts it matches on load and fails loud on a mismatch instead of every
+# consumer hitting nil-index errors independently. Bump both sides together.
+SCHEMA_VERSION = 1
+
 # Output — final deliverables for the addon (.lua files only)
 ABILITIES_LUA = os.path.join(OUTPUT_DIR, 'AbilitiesData.lua')
 MODELS_LUA = os.path.join(OUTPUT_DIR, 'ModelsData.lua')

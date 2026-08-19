@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- NotesData.lua
 -- Curated seed notes for notable tameable NPCs, keyed by NPC ID.
 -- These are read-only. User-edited notes are stored separately in PSM_UserNotes (SavedVariables).

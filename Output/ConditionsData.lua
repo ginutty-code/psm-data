@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- ConditionsData.lua
 -- Maps NPC IDs to condition-specific taming requirements.
 -- These are used for filtering in the Special Tames panel.

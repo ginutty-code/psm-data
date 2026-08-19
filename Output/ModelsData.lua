@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- Models Data Export
 -- Generated automatically
 -- Structure-of-arrays layout, backed by a dense npcId<->index backbone.

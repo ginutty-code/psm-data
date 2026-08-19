@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- Abilities Data Export
 -- Generated automatically
 -- Format: AbilitiesData[family_id] = {name = "family_name", icon = "family_icon", ranks = {[rank] = {[ability_id] = {name = "ability_name", icon = "ability_icon", category = "category", tag = "tag"}, ...}}}

@@ -10,11 +10,11 @@ import re
 from config import (
     COMBINED_PET_DATA_CSV,
     MODELS_LUA,
+    SCHEMA_VERSION,
     SKIP_DISPLAY_IDS_CSV,
     ensure_dirs,
     load_csv,
     read_first_col,
-    sync_output_to_addon,
 )
 
 REACT_PATTERN = re.compile(r'\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]')
@@ -170,6 +170,7 @@ def main():
     print(f"Generating Lua file to {MODELS_LUA}...")
 
     with open(MODELS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Models Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Structure-of-arrays layout, backed by a dense npcId<->index backbone.\n")
@@ -252,7 +253,6 @@ def main():
         f.write("}\n")
 
     print(f"Done! Lua file saved to: {MODELS_LUA}")
-    sync_output_to_addon(MODELS_LUA)
 
 
 if __name__ == "__main__":

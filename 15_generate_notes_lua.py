@@ -5,7 +5,7 @@ Generate addon Notes data file
 import csv
 import os
 
-from config import COMBINED_PET_DATA_CSV, NOTES_LUA, ensure_dirs, sync_output_to_addon
+from config import COMBINED_PET_DATA_CSV, NOTES_LUA, SCHEMA_VERSION, ensure_dirs
 
 
 def main():
@@ -21,7 +21,8 @@ def main():
         npc_notes = list(reader)
 
     # Generate the Lua file
-    lua_content = '''-- NotesData.lua
+    lua_content = f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n"
+    lua_content += '''-- NotesData.lua
 -- Curated seed notes for notable tameable NPCs, keyed by NPC ID.
 -- These are read-only. User-edited notes are stored separately in PSM_UserNotes (SavedVariables).
 -- At runtime, seed notes and user notes are merged by the Notes UI layer.
@@ -72,7 +73,6 @@ end
         luafile.write(lua_content)
 
     print(f"Done! Lua file saved to: {NOTES_LUA}")
-    sync_output_to_addon(NOTES_LUA)
 
 if __name__ == "__main__":
     main()

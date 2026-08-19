@@ -4,7 +4,7 @@ Generate addon Coordinates data file
 
 import os
 
-from config import COMBINED_PET_DATA_CSV, COORDS_LUA, load_csv, sync_output_to_addon
+from config import COMBINED_PET_DATA_CSV, COORDS_LUA, SCHEMA_VERSION, load_csv
 
 
 def main():
@@ -59,6 +59,7 @@ def main():
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(COORDS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Coords Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Format: CoordsData[uiMapId] = {name = \"ZoneName\", continent = \"...\", npcs = {[npc_id] = \"x,y|x,y|...\", ...}}\n")
@@ -109,7 +110,6 @@ def main():
 
     print(f"Done! Lua file saved to: {COORDS_LUA}")
     print(f"Summary: {total_zones} zones, {total_npcs} NPC entries")
-    sync_output_to_addon(COORDS_LUA)
 
 
 if __name__ == "__main__":
