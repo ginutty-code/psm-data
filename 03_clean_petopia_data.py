@@ -188,7 +188,13 @@ def clean_note(note, compiled_rules, keyword_pattern):
 # --- Taming updates loading ---
 
 def load_taming_updates(filepath):
-    """Load taming_updates.csv, returns dict of npc_id -> taming_requirements string."""
+    """Load taming_updates.csv, returns dict of npc_id -> taming_requirements string.
+
+    A row with taming_requirements left blank is a valid override, not a skipped
+    one: it clears whatever Petopia's per-NPC page scraped (e.g. a family-exotic
+    NPC that is itself a documented exception), rather than being indistinguishable
+    from "no row for this NPC at all."
+    """
     updates = {}
     if not os.path.exists(filepath):
         print(f"Warning: Taming updates file not found: {filepath}")
@@ -197,15 +203,17 @@ def load_taming_updates(filepath):
         reader = csv.DictReader(f)
         for row in reader:
             npc_id = row.get('npc_id', '').strip()
+            if not npc_id:
+                continue
             taming_req = row.get('taming_requirements', '').strip()
-            if npc_id and taming_req:
-                # If NPC already has an entry, append (for multiple zone entries)
-                if npc_id in updates:
-                    existing = set(updates[npc_id].split('|'))
-                    existing.update(taming_req.split('|'))
-                    updates[npc_id] = '|'.join(sorted(existing))
-                else:
-                    updates[npc_id] = taming_req
+            # If NPC already has a non-blank entry, append (for multiple zone entries).
+            # A blank row always wins outright -- it's an explicit clear, not a merge.
+            if npc_id in updates and updates[npc_id] and taming_req:
+                existing = set(updates[npc_id].split('|'))
+                existing.update(taming_req.split('|'))
+                updates[npc_id] = '|'.join(sorted(existing))
+            else:
+                updates[npc_id] = taming_req
     return updates
 
 

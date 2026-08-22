@@ -25,6 +25,7 @@ from config import (
     PROCESSED_WOWHEAD_DATA_CSV,
     RECORD_OVERRIDES_CSV,
     SKIP_DISPLAY_IDS_CSV,
+    TAMING_UPDATES_CSV,
     ensure_dirs,
     read_first_col,
 )
@@ -197,6 +198,32 @@ def load_note_additions():
     return additions
 
 
+def load_taming_additions():
+    """
+    npc_id -> taming_requirements string, for taming_updates.csv rows whose NPC
+    Petopia never carried. 03_clean_petopia_data.py applies the full file as an
+    override to every NPC Petopia *does* know about; those already reach here
+    through petopia_info. This is the same "first step that has seen both
+    sources" fallback as load_note_additions, for the same reason: an override
+    for an NPC absent from Petopia's scrape has nothing in 03 to override.
+    """
+    additions = {}
+    if not os.path.exists(TAMING_UPDATES_CSV):
+        return additions
+    with open(TAMING_UPDATES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
+        for row in csv.DictReader(f):
+            npc_id = (row.get('npc_id') or '').strip()
+            taming_req = (row.get('taming_requirements') or '').strip()
+            if npc_id and taming_req:
+                if npc_id in additions:
+                    existing = set(additions[npc_id].split('|'))
+                    existing.update(taming_req.split('|'))
+                    additions[npc_id] = '|'.join(sorted(existing))
+                else:
+                    additions[npc_id] = taming_req
+    return additions
+
+
 def load_record_overrides():
     overrides = {}
     if os.path.exists(RECORD_OVERRIDES_CSV):
@@ -364,6 +391,9 @@ def main():
     note_additions = load_note_additions()
     print(f"Loaded {len(note_additions)} note additions from notes_updates.")
 
+    taming_additions = load_taming_additions()
+    print(f"Loaded {len(taming_additions)} taming additions from taming_updates (Petopia-absent NPCs).")
+
     full_record_overrides = load_record_overrides()
     print(f"Loaded {len(full_record_overrides)} record overrides.")
 
@@ -398,7 +428,7 @@ def main():
         npc_id = row['npc_id']
         if npc_id not in npc_skill_map:
             p_info = petopia_info.get(npc_id, {})
-            taming_req_str = p_info.get('taming_requirements', '')
+            taming_req_str = p_info.get('taming_requirements', '') or taming_additions.get(npc_id, '')
             skills = [s.strip() for s in taming_req_str.split('|') if s.strip()]
             npc_skill_map[npc_id] = skills
 
@@ -453,8 +483,9 @@ def main():
         patch_id = row.get('patch_id', '').strip()
         type_id = row.get('type', '').strip()
 
-        # Use pre-computed taming_requirements from processed petopia data
-        pre_taming_req = p_info.get('taming_requirements', '')
+        # Use pre-computed taming_requirements from processed petopia data; fall back
+        # to a manual addition for an NPC Petopia never carried (see load_taming_additions).
+        pre_taming_req = p_info.get('taming_requirements', '') or taming_additions.get(npc_id, '')
 
         record_data = {
             'npc_id': npc_id,
