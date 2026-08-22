@@ -37,6 +37,9 @@ PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv
 # Processed — master file combining all relevant data for final output generation (pet_data.csv is the main source for the addon)
 COMBINED_PET_DATA_CSV = os.path.join(PROCESSED_DIR, 'pet_data.csv')
 
+# Processed — validation report from 16_validate_data.py (npc_id, check, description)
+ACTION_LIST_CSV = os.path.join(PROCESSED_DIR, 'action_list.csv')
+
 # Bumped whenever a generated file's shape changes in a way the addon must know about
 # (a renamed field, a column added/removed). Every generator stamps this into its output
 # as `PSM_DataSchemaVersion`; psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/

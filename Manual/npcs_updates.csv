@@ -180,12 +180,9 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 261085,Invasive Crystalback,Normal,0,20,Scorpid,16900,[],update
 261981,Rime Worm,Normal,0,42,Worm,16900,[],update
 1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
-135048,Gorestained Piglet,Elite,1,5,Boar,9424,"[-1,-1]",add
 3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]",add
 27642,Phantasmal Mammoth,Elite,1,300,Mammoth,4228,"[-1,-1]",add
 70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]",add
 262102,Slithering Coiler,Normal,0,35,Serpent,16642,[],add
-210798,Striped Skulker,Normal,0,127,Rodent,14529,"[0,0]",add
-210944,Tanned Skulker,Normal,0,127,Rodent,14529,"[0,0]",add
-211072,Smolderfur Skulker,Normal,0,127,Rodent,14529,[],add
-259768,Coiling Serpent,Normal,0,35,Serpent,15947,[],add
+103045,,,,,,,,add
+134390,,,,,,,,add
