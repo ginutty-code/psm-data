@@ -54,10 +54,16 @@ COORDS_LUA = os.path.join(OUTPUT_DIR, 'CoordsData.lua')
 CONDITIONS_LUA = os.path.join(OUTPUT_DIR, 'ConditionsData.lua')
 NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 
-# The generated tables live in a Data/ subfolder of the Models Browser addon, kept
-# apart from its hand-written Lua so it is unambiguous which files this pipeline
-# owns and which must never be hand-edited.
+# Four of the five generated tables live in a Data/ subfolder of the Models Browser
+# addon, kept apart from its hand-written Lua so it is unambiguous which files this
+# pipeline owns and which must never be hand-edited.
 ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'Data'))
+
+# AbilitiesData.lua is the exception: it's small (~34KB, vs hundreds of KB for its
+# siblings -- the reason the other four wait for LoadOnDemand), and the core addon's
+# Owned Pets panel (always loaded) needs it for its ability filter. So it syncs into
+# core's own Data/ subfolder instead, on the same "generated, never hand-edited" basis.
+CORE_ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement', 'Data'))
 
 
 # --- Shared CSV loading ---
@@ -107,7 +113,7 @@ def read_first_col(path, col_names):
 
 def ensure_dirs():
     """Ensure that the standard project directories exist."""
-    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_DATA_DIR]:
+    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_DATA_DIR, CORE_ADDON_DATA_DIR]:
         if not os.path.exists(d):
             os.makedirs(d, exist_ok=True)
 
@@ -124,7 +130,9 @@ def sync_output_to_addon(target_file=None):
     for src in files:
         if os.path.exists(src):
             filename = os.path.basename(src)
-            dest = os.path.join(ADDON_DATA_DIR, filename)
+            # AbilitiesData.lua is core's, not the Models Browser's -- see CORE_ADDON_DATA_DIR.
+            dest_dir = CORE_ADDON_DATA_DIR if src == ABILITIES_LUA else ADDON_DATA_DIR
+            dest = os.path.join(dest_dir, filename)
             shutil.copy2(src, dest)
             print(f"Synced {filename} -> {dest}")
 
