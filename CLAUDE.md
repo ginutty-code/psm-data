@@ -7,8 +7,10 @@ conditions, and notes.
 
 For the full cross-repo picture — every pipeline stage as a diagram, which
 `Manual/` CSV feeds which script, and the exact bridge point into the addon
-— see `../architecture.html` (open in a browser, or `Read` it directly:
-the node/edge data is plain JS literals, easy to parse as text).
+— see `../psm-addon/docs/architecture.html` (open in a browser, or `Read` it
+directly: the node/edge data is plain JS literals, easy to parse as text).
+`../psm-addon/docs/ARCHITECTURE_PLAN.md` is the closed restructuring plan
+this pipeline's own tasks (A1, the psm-data sweep) were part of.
 
 ## Pipeline shape
 
