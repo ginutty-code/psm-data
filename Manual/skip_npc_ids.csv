@@ -1527,7 +1527,6 @@ npc_id,zone_id,layer,reason
 167661,,,cannot be tamed
 167726,,,cannot be tamed
 167856,,,cannot be tamed
-167973,,,unknown location
 168013,,,unknown location
 168084,,,cannot be tamed
 168085,,,cannot be tamed
@@ -3595,7 +3594,6 @@ npc_id,zone_id,layer,reason
 261644,,,unknown location
 262503,,,unknown location
 262737,,,unknown location
-263464,,,unknown location
 263571,,,unknown location
 263572,,,unknown location
 263634,,,unknown location
@@ -3617,3 +3615,5 @@ npc_id,zone_id,layer,reason
 271252,,,unknown location
 262086,,,unknown location
 140558,,,cannot be tamed
+62164,,,cannot be tamed
+163077,,,cannot be tamed

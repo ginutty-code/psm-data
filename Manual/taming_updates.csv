@@ -23,7 +23,6 @@ npc_id,npc_name,family_id,family_name,type_id,type_name,taming_requirements
 85888,Howling Rylak,38,Chimaera,1,Beast,Exotic
 98382,Corrupted Gyreworm,55,Shale Beast,1,Beast,Exotic
 101062,Corrupted Shale Spider,55,Shale Beast,1,Beast,Exotic
-111463,Bulvinkel,46,Spirit Beast,1,Beast,
 140433,Wild Gryphon,160,Feathermane,1,Beast,Feathermane
 163386,Alani,303,Lesser Dragonkin,1,Beast,Cloud Serpent
 171633,Uninvited Bonecrusher,128,Stone Hound,1,Beast,Exotic|Gargon

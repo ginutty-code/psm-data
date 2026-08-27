@@ -88,12 +88,10 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 162363,Temple Scarab,Normal,0,53,Beetle,5034,[],update
 162624,Neonate Bonetooth,Normal,0,38,Chimaera,11462,[],update
 164642,Bloodraged Spitter,Normal,0,292,Carapid,11510,[],update
-164862,Weald Shimmermoth,Elite,1,37,Moth,13309,"[-1,-1]",add
 165973,Warren Mongrel,Normal,0,52,Hound,11400,[],update
 165974,Crucible Seeker,Normal,0,52,Hound,11400,"[-1,-1]",update
 166966,Runestag,Normal,0,151,Stag,11510,[],update
 166967,Juvenile Runedeer,Normal,0,151,Stag,11510,[],update
-167111,Spinemaw Staghorn,Elite,1,292,Carapid,13334,"[-1,-1]",add
 167113,Spinemaw Acidgullet,Elite,1,292,Carapid,13334,"[-1,-1]",add
 167947,Tremaculum Soulhunter,Normal,0,52,Hound,11400,"[-1,-1]",update
 167960,Gargantuan Seeker,Elite,1,52,Hound,11400,"[-1,-1]",update
@@ -106,7 +104,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 170161,Burning Fiend,Normal,0,52,Hound,11400,[],update
 170192,Shade Hatchling,Normal,0,3,Spider,11462,[],update
 170695,Runestag Bull,Normal,0,151,Stag,11510,[],update
-172312,Spinemaw Gorger,Elite,1,292,Carapid,94197,"[-1,-1]",add
 175255,Giant Mawrat,Normal,0,127,Rodent,11400,[],update
 191679,Magmammoth Bull,Elite,1,300,Mammoth,13644,"[-1,-1]",add
 194054,Mistbeetle,Normal,0,53,Beetle,13647,[],update
@@ -180,9 +177,9 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 261085,Invasive Crystalback,Normal,0,20,Scorpid,16900,[],update
 261981,Rime Worm,Normal,0,42,Worm,16900,[],update
 1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
-3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]",add
-27642,Phantasmal Mammoth,Elite,1,300,Mammoth,4228,"[-1,-1]",add
 70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]",add
 262102,Slithering Coiler,Normal,0,35,Serpent,16642,[],add
-103045,,,,,,,,add
 134390,,,,,,,,add
+29630,,,,,,,,add
+29637,,,,,,,,add
+29713,,,,,,,,add

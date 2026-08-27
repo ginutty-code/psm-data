@@ -5276,6 +5276,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 167947,Tremaculum Soulhunter,Normal,0,52,Hound,11400,"[-1,-1]",92627,,11400,0,,1543,The Maw,9.0.1,,0,Tremaculum Soulhunter,52,"[-1,-1]",1,successful,No
 167960,Gargantuan Seeker,Elite,1,52,Hound,11400,"[-1,-1]",92628,,11400,0,,1543,The Maw,9.0.1,,1,Gargantuan Seeker,52,"[-1,-1]",1,successful,No
 167964,4.RF-4.RF,Elite,1,154,Mechanical,13309,"[-1,-1]",68856,De Other Side,13309,0,,1677,De Other Side,9.0.1,,1,4.RF-4.RF,154,"[-1,-1]",9,successful,No
+167973,Creepy Crawlie,Normal,0,3,Spider,11462,[],94594|96645|98464,Maldraxxus,11462,0,"49.9,47.1",1536,Maldraxxus,9.0.1,,,Creepy Crawlie,3,[],1,successful,No
 168008,Rootstinger Warrior,Normal,0,44,Wasp,11510,"[-1,-1]",95689|95690,Ardenweald,11510,0,"51.6,71|53.4,68.8|56,68",1565,Ardenweald,9.0.1,,0,Rootstinger Warrior,44,"[-1,-1]",1,successful,No
 168036,Marrowjaw,Normal,0,26,Bird of Prey,11462,"[-1,-1]",96751,Maldraxxus,11462,0,"41.4,67.4",1536,Maldraxxus,9.0.1,,0,Marrowjaw,26,"[-1,-1]",1,successful,No
 168135,Night Mare,Rare Elite,2,299,Courser,11510,"[-1,-1]",94297,Ardenweald,11510,0,"60,49.2|60.8,56.4|61.4,50.8|62.2,54.8|58,49.6|58.8,55.4",1565,Ardenweald,9.0.1,,2,Night Mare,299,"[-1,-1]",1,successful,No
@@ -8603,6 +8604,7 @@ npc_id,npc_name,bulk_classification,bulk_classification_id,bulk_family_id,bulk_f
 263356,Lurking Coiler,Normal,0,35,Serpent,unknown,[],137231|142379,,,0,,2613,The Underbelly,12.1.0,Midnight,0,Lurking Coiler,35,"[-1,-1]",1,successful,No
 263359,Sacred Doomcoiler,Elite,1,35,Serpent,unknown,[],137231,,,0,,2613,The Underbelly,12.1.0,Midnight,1,Sacred Doomcoiler,35,"[-1,-1]",1,successful,No
 263393,Territorial Eel,,0,35,Serpent,,,115167,The Coiled Isle,16365,0,"70.8,81.6|68.4,84.1|67.4,79.2|74.2,78.4",2512,The Coiled Isle,12.1.0,Curse of Ula'tek,0,Territorial Eel,35,"[-1,-1]",1,successful,No
+263464,Slithering Skyfang,Normal,0,27,Wind Serpent,16365,[],143814|143815|143816,The Coiled Isle,16365,0,"53.4,57.4",2512,The Coiled Isle,12.1.0,Curse of Ula'tek,0,Slithering Skyfang,27,[],1,successful,No
 263617,Void-Touched Snapdragon,Normal,0,288,Lizard,unknown,[],143061,Eversong Woods,15968,0,"66.01,73.85|61.54,77.22|47.92,72.06|40.97,72.43|38.1,63.62|46.65,46.02|53.27,55.43|50,55.24",2594,Eversong Woods,12.0.5,Midnight,0,Void-Touched Snapdragon,288,[],1,successful,No
 263653,Mortuary Creeper,Normal,0,3,Spider,unknown,[],114981|114983,Vaults of Atal'Utek,16535,0,"37.1,48",2509,Vaults of Atal'Utek,12.1.0,Midnight,0,Mortuary Creeper,3,"[-1,-1]",6,successful,No
 263694,Spiritsting,Normal,0,44,Wasp,unknown,[],144277,The Coiled Isle,16365,0,"72.5,52.6",2512,The Coiled Isle,12.1.0,Midnight,0,Spiritsting,44,"[-1,null]",1,successful,No
