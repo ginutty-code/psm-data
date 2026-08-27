@@ -224,7 +224,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 3425,Savannah Prowler,Northern Barrens,Cat,,,
 3426,Zhevra Charger,Northern Barrens; Southern Barrens,Courser,,,
 3461,Oasis Snapjaw,Northern Barrens,Turtle,,,
-3462,Elder Barrens Giraffe,Northern Barrens,Stag,,,
 3475,Echeyakee,Northern Barrens,Cat,True,,
 3566,Flatland Prowler,Mulgore,Cat,,,
 3581,Sewer Beast,Stormwind City,Crocolisk,True,,
@@ -554,7 +553,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 13323,Subterranean Diemetradon,Maraudon (Dungeon),Lizard,,Located in Maraudon (Dungeon). In the caverns beyond Earth Song Falls.,
 13596,Rotgrip,Maraudon (Dungeon),Crocolisk,True,"Located in Zaetar's Grave, Maraudon (Dungeon).",
 13599,Stolid Snapjaw,Maraudon (Dungeon),Turtle,,Located in Maraudon (Dungeon).,
-13676,Stabled Alterac Ram,Alterac Valley (Battleground),Gruffhorn,,Located in Alterac Valley (Battleground).,
 13896,Scalebeard,Azshara,Turtle,True,,
 14020,Chromaggus,Blackwing Lair (Raid),Core Hound,True,"Located in Chromaggus is the seventh encounter of the raid, Blackwing Lair (Raid).",Exotic
 14123,Steeljaw Snapper,Tanaris,Turtle,,,
@@ -2904,7 +2902,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 107965,Canyon Rockeater,Stormheim,Basilisk,,,
 108009,Azureback Broodling,Highmountain,Scorpid,,,
 108014,Azureback Broodmother,Highmountain,Scorpid,,,
-108035,Fal'dorei Spiderling,Withered Training Instance,Spider,,,
 108088,Rush,Azsuna,Mechanical,True,A tracking tame that requires you to follow Small Oil Puddles and then use a flare to detect the creature. Follows a large loop in north-east Azsuna.,Mechanical
 108106,Sentient Mechanostrider,Gnomeregan (Dungeon),Mechanical,,"Located in The Dormitory, Gnomeregan (Dungeon). A prismatic card reveals a hidden room. He'll need a shocking kick before he becomes tameable.",Mechanical
 108163,Scumshell Crab,Azsuna,Crab,,,
@@ -2967,7 +2964,7 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 111387,Deep Water Clacker,The Broken Isles,Crab,,,
 111404,Salty Seagull,Azsuna,Bird of Prey,,,
 111456,Spiderling,Azsuna,Spider,,,
-111463,Bulvinkel,Stormheim,Spirit Beast,True,"Cliffs south-east of Halls of Valor. From the Halls of Valor entrance, jump to the grassy cliffs area to the west, then climb up and around the back. Jump down to the lower cliff areas to find him.",Exotic
+111463,Bulvinkel,Stormheim,Spirit Beast,True,"Cliffs south-east of Halls of Valor. From the Halls of Valor entrance, jump to the grassy cliffs area to the west, then climb up and around the back. Jump down to the lower cliff areas to find him.",
 111469,Skitterer,Azsuna,Spider,,,
 111487,Bloodthirsty Fox,Azsuna,Fox,,,
 111570,Cove Gull,Azsuna,Bird of Prey,,,
@@ -3103,7 +3100,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 121673,Voidgorged Stalker,Eredath,Warp Stalker,,,
 121896,Bloodbelly Flyer,Zuldazar,Blood Beast,,Bloodbelly Flyers with three different IDs may be found around the Blood Gate area. This ID is only used by a few that fly rapidly about the area.,Blood Beast
 121898,Bloodbelly Flyer,Zuldazar,Blood Beast,,Bloodbelly Flyers with three different IDs may be found around the Blood Gate area. This ID is only used by a few stationary blood ticks on the ground.,Blood Beast
-121927,Legion Venomretcher,The Broken Isles,Spider,,Apparently appears in various zones of the Broken Isles. Sometimes spawns when using Attack Beacons looted from Sentinax rares.,
 122004,Umbra'jin <The Night Hunter>,Zuldazar,Raptor,True,,
 122010,Panthara Shadowfang,Eredath,Cat,,,
 122015,Void Streaker,Eredath,Serpent,,,
@@ -3579,7 +3575,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 132754,Highland Strider,Battle of Stromgarde (Warfront),Raptor,,,
 132758,Young Mesa Buzzard,Battle of Stromgarde (Warfront),Carrion Bird,,,
 132760,Plains Creeper,Battle of Stromgarde (Warfront),Spider,,,
-132766,Plains Creeper,Battle of Stromgarde (Warfront),Spider,,,
 133163,Tia'Kawan <The Ill-Tempered>,Zuldazar,Direhorn,True,"Find in jungles north-east of The Sliver (approx 65, 23). She's only up on days when her associated world quest (Tia'Kawan) is active.",Direhorn
 133173,Vicious War Crawg,Nazmir,Blood Beast,,,Blood Beast
 133234,Krolusk Dunemite,Vol'dun,Carapid,,,Exotic
@@ -4066,7 +4061,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 153812,Chitterspine Lurker,Nazjatar,Crab,,Stealthed.,
 153814,Chitterspine Guillotine,Nazjatar,Crab,,,
 153818,Crackleclaw Crab,Nazjatar,Crab,,,
-153902,,,,,"Normally friendly, but can be tamed if you use the toy ""N'lyeth, Sliver of N'Zoth"" while in War Mode. Accompanies Sardina Lauray.",
 153959,Savage Snapdragon,Nazjatar,Lizard,,"Its name changes to ""Sated Snapdragon"" after being fed on the quest Sating Snapdragons / Sating Snapdragons.",
 153965,Chitterspine Clicker,Nazjatar,Crab,,Travels in packs in the Grotto.,
 153966,Chitterspine Crab,Nazjatar,Crab,,Travels in packs in the Grotto.,
@@ -4102,7 +4096,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 156214,Fire Hound,The Maw,Hound,,,Undead
 156242,Animated Prowler,"Torghast, Tower of the Damned (Dungeon)",Mechanical,,This NPC can be found in Torghast (Scenario) - Coldheart Interstitia.,Mechanical
 156284,Sinrunner,Revendreth,Courser,,"Found at various locations in the zone, including: Dredgewood, The Banewood, Briarbane Stables & The Old Gate.",
-156376,River Terrapin,Bastion,Turtle,,,
 156389,Rajani Warserpent,Vale of Eternal Blossoms,Lesser Dragonkin,,"Normally friendly, but can be tamed if you use the toy ""N'lyeth, Sliver of N'Zoth"" while in War Mode. Appears in the Assaults phase of the zone, only during Mogu Assaults on days when the quest event Zan-Tien Serpent Cage is active.",Cloud Serpent
 156395,Starving Dredbat,Revendreth,Bat,,,
 156564,Ravening Guardian,Bastion,Mechanical,,,Mechanical
@@ -4117,10 +4110,8 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 156788,Fairlands Gazelle,Vale of Eternal Blossoms,Stag,,"Appears in the Assaults phase, during all Assaults.",
 156931,Silkfeather Hawk,Vale of Eternal Blossoms,Bird of Prey,,"Appears in the Assaults phase, during all Assaults.",
 157083,Stonewing Ravager,"Torghast, Tower of the Damned (Dungeon)",Bat,,"This NPC can be found in Torghast (Scenario) - The Upper Reaches, and Torghast, Tower of the Damned.",
-157109,,,,,"This NPC can be found in Torghast (Scenario) - The Upper Reaches, and Torghast, Tower of the Damned.",
 157121,Ekashim <Fangtaker Orsa's Companion>,Uldum,Cat,True,Appears during Amathet Assaults.,
 157143,Arid Bonepicker,Uldum,Carrion Bird,,Appears in all Assaults phases of the zone. Found in a camp south of Khartut's Tomb.,
-157149,,,,,"This NPC can be found in Torghast (Scenario) - The Upper Reaches, and Torghast, Tower of the Damned.",
 157162,Rei Lun <Chalcedony Construct>,Vale of Eternal Blossoms,Lesser Dragonkin,True,"Appears in the Assaults phase of the zone, during Mogu Assaults.",Cloud Serpent
 157274,Languishing Etherwyrm,Bastion,Wind Serpent,,,
 157277,Starved Etherwyrm,Bastion,Wind Serpent,,,
@@ -4193,7 +4184,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 159895,Chelicerae's Children,Maldraxxus,Spider,,Spawns when you attack the Intricate Webbing protecting Sister Chelicerae.,
 159901,Boneweave Spiderling,Maldraxxus,Spider,,,
 159916,Boneweave Rampager,Maldraxxus,Spider,,,
-159978,Great Granitefur,Revendreth,Stone Hound,,,Exotic|Gargon
 160074,Gorm Slicer,Ardenweald,Carapid,,,Exotic
 160075,Gorm Spewer,Ardenweald,Carapid,,,Exotic
 160076,Gorm Borer,Ardenweald,Carapid,,,Exotic
@@ -4402,8 +4392,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 166735,Deranged Guardian,Ardenweald,Stag,,Ridden by Bristlecone Terrors.,
 166872,Umbral Phalynx,Bastion,Mechanical,,,Mechanical
 166930,Skullboar Spinebreaker,Bastion,Boar,,,
-166933,,,,,This NPC can be found in Torghast (Scenario) - Skoldus Hall.,
-166934,,,,,This NPC can be found in Torghast (Scenario) - Skoldus Hall.,
 166966,Runestag,Ardenweald,Stag,,,
 166967,Juvenile Runedeer,Ardenweald,Stag,,,
 167111,Spinemaw Staghorn,Mists of Tirna Scithe,Carapid,,,Exotic
@@ -4581,7 +4569,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 169857,Monstrous Mawrat,The Maw,Rodent,,Found in the introductory quest phase for Shadowlands.,
 169858,Restless Etherwyrm,Bastion,Wind Serpent,,,
 169864,Scorchwing Drone,Maldraxxus,Wasp,,,
-169871,,,,,"This NPC can be found in Torghast (Scenario) - Skoldus Hall, The Upper Reaches, Coldheart Interstitia, The Soulforges, The Fracture Chambers, Mort'regar, and Torghast, Tower of the Damned.",
 169874,Veilwing Matriarch,Ardenweald,Lesser Dragonkin,,,Lesser Dragonkin
 169913,Runestalker Runt,Ardenweald,Cat,,,
 169914,Umbrawing Monarch,Bastion,Moth,,,
@@ -4603,7 +4590,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 170067,Savagewing Teroclaw,Ardenweald,Carrion Bird,,,
 170068,Glimmerfur Vulpin,Ardenweald,Fox,,,
 170070,Glimmerfur Denwatcher,Ardenweald,Fox,,,
-170093,,,,,"This NPC can be found in Torghast (Scenario) - Skoldus Hall, and Torghast, Tower of the Damned .",
 170122,Pearlshell Snapper,Ardenweald,Turtle,,,
 170144,Juvenile Runedeer,Ardenweald,Stag,,,
 170145,Runestag,Ardenweald,Stag,,,
@@ -4825,7 +4811,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 179005,Annelid Mudborer,Zereth Mortis,Worm,,,Exotic
 179043,Orixal <Gastropod Prime>,Zereth Mortis,Carapid,True,"Found in the south-east of the zone, on a rise overlooking the main circular road. It will not be up at the same time as the Overgrown Helicid.",Exotic
 179308,Voracious Mawrat,Korthia,Rodent,,,
-179458,,,,,"This NPC can be found in Torghast (Scenario) - Skoldus Hall, The Adamant Vaults, The Soulforges, Mort'regar, Coldheart Interstitia, and The Upper Reaches .",
 179939,Maw Frenzied Lupine,Zereth Mortis,Wolf,,Found in a cave in the cliffs to the south-east of the Forge of Afterlives. It loses its Maw-corruption effect upon taming.,
 180049,Cervid Grazer,Zereth Mortis,Stag,,,
 180050,Cervid Protector,Zereth Mortis,Stag,,,
@@ -4893,12 +4878,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 184855,Salty Skitterfly,The Waking Shores,Water Strider,,,Exotic
 184856,Salty Skitterbug,The Waking Shores,Water Strider,,,Exotic
 184867,Fussy Swoglet,The Waking Shores,Lesser Dragonkin,,,Lesser Dragonkin
-185112,,,,,"This NPC can be found in Torghast (Scenario) - The Adamant Vaults, Skoldus Hall, The Soulforges, Coldheart Interstitia, Mort'regar, and The Upper Reaches.",
-185113,,,,,"This NPC can be found in Torghast (Scenario) - The Adamant Vaults, Skoldus Hall, The Soulforges, The Upper Reaches, Mort'regar, and Coldheart Interstitia.",
-185114,,,,,"This NPC can be found in Torghast (Scenario) - The Adamant Vaults, Skoldus Hall, The Soulforges, Mort'regar, The Upper Reaches, and Coldheart Interstitia.",
-185125,,,,,"This NPC can be found in Torghast (Scenario) - The Adamant Vaults, Skoldus Hall, The Soulforges, Mort'regar, The Upper Reaches, and Coldheart Interstitia.",
-185126,,,,,"This NPC can be found in Torghast (Scenario) - The Adamant Vaults, Skoldus Hall, The Soulforges, The Upper Reaches, Coldheart Interstitia, and Mort'regar.",
-185254,,,,,"This NPC can be found in Torghast (Scenario) - Skoldus Hall, The Soulforges, The Upper Reaches, Mort'regar, Coldheart Interstitia, and The Adamant Vaults.",
 185266,Thieving Raptora,Zereth Mortis,Bird of Prey,,Can spawn in various locations around Zereth Mortis.,
 185350,Ravenous Bloodbeak,Ohn'ahran Plains,Carrion Bird,,,
 185451,Gardens Avian,Zereth Mortis,Bird of Prey,,"Upon reaching you, Gardens Avians with this ID will start to rise into the sky and despawn, so start to tame from a distance! A frost trap does not prevent them despawning.",
@@ -4930,7 +4909,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 187111,Ancient Hornswog,The Waking Shores,Lesser Dragonkin,,Found in a cave at the northern end of the Wild Coast.,Lesser Dragonkin
 187140,Cantankerous Hornswog,The Waking Shores,Lesser Dragonkin,,,Lesser Dragonkin
 187226,Longwing Skyhunter,Thaldraszus,Bird of Prey,,,
-187246,Nullmagic Hornswog,Azure Vault (Dungeon),Lesser Dragonkin,,Located in Azure Vault (Dungeon).,Lesser Dragonkin
 187256,Time-Lost Raptor,Thaldraszus,Raptor,,,
 187258,Time-Lost Thunderhide,Thaldraszus,Scalehide,,,
 187262,Time-Lost Devilsaur,Thaldraszus,Devilsaur,,,Exotic
@@ -5019,7 +4997,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 189581,Lava Fledgling,The Waking Shores,Bird of Prey,,,
 189614,Grimy Skimmer,Thaldraszus,Water Strider,,,Exotic
 189656,Snowhide Mongrel,The Azure Span,Hyena,,,
-189722,Gulping Goliath,Halls of Infusion (Dungeon),Lesser Dragonkin,,Located in Halls of Infusion (Dungeon).,Lesser Dragonkin
 189741,Lumbering Mauler,Thaldraszus,Bear,,,
 189744,Shimmering Swallowtail,Thaldraszus,Moth,,"The green and white variants make sounds when clicked on, the orange does not.",
 189750,Skittering Woodborer,Thaldraszus,Beetle,,,
@@ -5221,7 +5198,6 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 193306,Stream Hunter,Thaldraszus,Bird of Prey,,,
 193308,Hornstrider Chick,Ohn'ahran Plains,Tallstrider,,,
 193309,Wild Argali,Ohn'ahran Plains,Gruffhorn,,,
-193311,Melkhop,Thaldraszus,Lesser Dragonkin,,Spawns during the Grand Hunt event.,Lesser Dragonkin
 193313,Watching Corpsewing,Ohn'ahran Plains,Carrion Bird,,,
 193346,Horned Plainstomper,Ohn'ahran Plains,Clefthoof,,,Exotic
 193348,Ancient Plainstomper,Ohn'ahran Plains,Clefthoof,,,Exotic
@@ -5740,7 +5716,7 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 210891,Perching Somnowl,The Emerald Dream,Bird of Prey,,,
 210892,Striped Dreamtalon,The Emerald Dream,Raptor,,,
 210894,Flathoof Dreamstag,The Emerald Dream,Stag,,,
-210908,Nah'qi <Ember of Regrowth>,The Emerald Dream,Spirit Beast,,"Nah'qi flies counterclockwise around Amirdrassil, but very high up, just below the tree's canopy. She isn't flagged as a rare, so you won't see a rare marker on your map. Taming this unique owl requires a special skill which is taught by the Cinder of Companionship. The Cinder is awarded when you learn the mount item Reins of Anu'relos, Flame's Guidance which is a rare drop from Mythic Fyrakk in the Amirdrassil raid. Using the Cinder creates an account-wide unlock for you to tame Nah'qi, so you don't have to specifically obtain it on your hunter.",Exotic
+210908,Nah'qi <Ember of Regrowth>,The Emerald Dream,Spirit Beast,,"Nah'qi flies counterclockwise around Amirdrassil, but very high up, just below the tree's canopy. She isn't flagged as a rare, so you won't see a rare marker on your map. Taming this unique owl requires a special skill which is taught by the Cinder of Companionship. The Cinder is awarded when you learn the mount item Reins of Anu'relos, Flame's Guidance which is a rare drop from Mythic Fyrakk in the Amirdrassil raid. Using the Cinder creates an account-wide unlock for you to tame Nah'qi, so you don't have to specifically obtain it on your hunter.",Exotic|Fire Owl
 210942,Dusty Somnowl,The Emerald Dream,Bird of Prey,,,
 210943,Hissing Skitterbug,The Emerald Dream,Beetle,,,
 210944,Tanned Skulker,The Emerald Dream,Rodent,,,

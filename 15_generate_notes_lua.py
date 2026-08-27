@@ -5,7 +5,7 @@ Generate addon Notes data file
 import csv
 import os
 
-from config import COMBINED_PET_DATA_CSV, NOTES_LUA, ensure_dirs, sync_output_to_addon
+from config import COMBINED_PET_DATA_CSV, NOTES_LUA, SCHEMA_VERSION, ensure_dirs
 
 
 def main():
@@ -21,10 +21,16 @@ def main():
         npc_notes = list(reader)
 
     # Generate the Lua file
-    lua_content = '''-- NotesData.lua
+    lua_content = f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n"
+    lua_content += '''-- NotesData.lua
 -- Curated seed notes for notable tameable NPCs, keyed by NPC ID.
 -- These are read-only. User-edited notes are stored separately in PSM_UserNotes (SavedVariables).
 -- At runtime, seed notes and user notes are merged by the Notes UI layer.
+
+-- Declared rather than relying on cross-addon load order, matching every other
+-- .lua file in the project.
+_G.PSM = _G.PSM or {}
+local PSM = _G.PSM
 
 PSM.NotesData = {
 '''
@@ -40,17 +46,6 @@ PSM.NotesData = {
 
     lua_content += '''}
 
-function PSM.NotesData.Get(npcID)
-    local seed = PSM.NotesData[npcID]
-    local user = PSM_UserNotes and PSM_UserNotes[npcID]
-    if seed and user and user ~= "" then
-        return seed .. "\\n\\n" .. user
-    end
-    return seed or (user ~= "" and user) or nil
-end
-function PSM.NotesData.GetUserNote(npcID)
-    return (PSM_UserNotes and PSM_UserNotes[npcID]) or ""
-end
 function PSM.NotesData.SetUserNote(npcID, text)
     PSM_UserNotes = PSM_UserNotes or {}
     if not text or text == "" then
@@ -66,7 +61,6 @@ end
         luafile.write(lua_content)
 
     print(f"Done! Lua file saved to: {NOTES_LUA}")
-    sync_output_to_addon(NOTES_LUA)
 
 if __name__ == "__main__":
     main()

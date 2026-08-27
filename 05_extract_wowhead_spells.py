@@ -158,6 +158,7 @@ def load_manual_spell_mapping():
                         'spell_category': (normalized_row.get('spell_category') or normalized_row.get('category') or '').strip(),
                         'spell_tag': (normalized_row.get('spell_tag') or normalized_row.get('tag') or '').strip(),
                         'icon': (normalized_row.get('spell_icon') or normalized_row.get('icon') or '').strip(),
+                        'spell_rank': (normalized_row.get('spell_rank') or normalized_row.get('rank') or '').strip(),
                     }
     except (OSError, csv.Error) as e:
         print(f"Warning: Could not load manual mappings from {SPELLS_MAPPING_CSV}: {e}")
@@ -251,6 +252,8 @@ def save_spells_csv(spells):
             cleaned['spell_tag'] = manual['spell_tag']
         if manual.get('icon'):
             cleaned['spell_icon'] = manual['icon']
+        if manual.get('spell_rank'):
+            cleaned['spell_rank'] = manual['spell_rank']
 
         # Ensure all requested fields are present, even if empty
         for key in ['spell_id', 'spell_name', 'spell_description', 'spell_icon', 'spell_rank', 'spell_category', 'spell_tag']:

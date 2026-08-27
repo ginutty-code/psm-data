@@ -1,7 +1,14 @@
+PSM_DataSchemaVersion = 1
+
 -- NotesData.lua
 -- Curated seed notes for notable tameable NPCs, keyed by NPC ID.
 -- These are read-only. User-edited notes are stored separately in PSM_UserNotes (SavedVariables).
 -- At runtime, seed notes and user notes are merged by the Notes UI layer.
+
+-- Declared rather than relying on cross-addon load order, matching every other
+-- .lua file in the project.
+_G.PSM = _G.PSM or {}
+local PSM = _G.PSM
 
 PSM.NotesData = {
     [462] = [[Vultros can appear a one of five places around the farmsteads of northern Westfall: (i) south of the Jansen Stead; (ii) south-east of Furlbrow's Pumpkin Farm; (iii) around the road between Furlbrow's Pumpkin Farm and the Molsen Farm; (iv) east of the Molsen Farm; and (v) just south-east of Saldean's Farm.]],
@@ -2063,6 +2070,12 @@ PSM.NotesData = {
     [253305] = [[Located in Atal'Aman (Delve).]],
     [253316] = [[Loses flower on back when tamed.]],
     [253499] = [[Found just west outside of Maisara Deeps.]],
+    [253694] = [[Found during the quest, The Serpent's Tail.]],
+    [253695] = [[Found during the quest, The Serpent's Tail.]],
+    [253697] = [[Found during the quest, The Serpent's Tail.]],
+    [253764] = [[Found during the quest, The Serpent's Tail.]],
+    [253765] = [[Found during the quest, The Serpent's Tail.]],
+    [253884] = [[Found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge. Also spawns during the confrontation with Hexlord Malacrass during the quest, Down With the Skies.]],
     [254203] = [[Located in The Grudge Pit (Non-Instanced), Harandar.]],
     [254709] = [[Appears during various Void Strike events in Eversong.]],
     [254720] = [[Appears during various Void Strike events in Eversong.]],
@@ -2071,12 +2084,15 @@ PSM.NotesData = {
     [254972] = [[Appears during various Void Strike events on Sunstrider Isle.]],
     [255055] = [[Can spawn as a part of a Nemesis group only during the first season of Midnight Delves.]],
     [255079] = [[Found during the quest, Re-Hydra-ted.]],
+    [255088] = [[Found when the event, "The Looming Mutagenitor" is up.]],
     [255194] = [[Appears during the "Voidstrider Isle" Void Strike event.]],
     [255709] = [[Located in Murder Row (Dungeon). Spawned from an Empty Felwyrm Core (purchased from an vendor in the instance). Once you use it, you place it down on the ground (only in the instance), and requires a Warlock or Demon Hunter to infuse it with Fel, spawning the Felwyrm.]],
     [255847] = [[Found during the quest, The Stroke of Storms.]],
     [255886] = [[Found only during the Midnight Prologue quest chain added in Patch 11.2.7. The involved storyline begins with a summons from Arator: Meet Arator.]],
     [255957] = [[Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.]],
     [256095] = [[Found flying around the western edge of the area.]],
+    [256207] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
+    [256213] = [[Found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge. Also spawns during the confrontation with Hexlord Malacrass during the quest, Down With the Skies.]],
     [256344] = [[Located in The Grudge Pit (Non-Instanced), Harandar.]],
     [256345] = [[Located in Vale of Mists & The Grudge Pit (Non-Instanced), Harandar.]],
     [256349] = [[Located in The Grudge Pit (Non-Instanced), Harandar.]],
@@ -2085,6 +2101,7 @@ PSM.NotesData = {
     [256357] = [[Located in Vale of Mists & The Grudge Pit (Non-Instanced), Harandar. Also found in the higher area to the west of The Grudge Pit.]],
     [256361] = [[Located in The Grudge Pit (Non-Instanced), Harandar.]],
     [256844] = [[Possibly only found as a couple of isolated individuals: one north of Fairbreeze Village and one in the woods a fair way east of East Sanctum and south of Farstrider Hold.]],
+    [256845] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.]],
     [256847] = [[Only known to occur as a single individual that runs along the beach to the west of Lightbloom Ath'Ran and south of Sunset Strand, by a larger number of Glistening Hawkstriders.]],
     [256858] = [[Found at Tranquil Repose (a glade west of Tranquillien) and also to the north-west of the southern entrance to Zul'Aman.]],
     [256898] = [[Found in various, very high-up places throughout the zone.]],
@@ -2092,31 +2109,48 @@ PSM.NotesData = {
     [257265] = [[Spawns during the quest, Crab Clues.]],
     [257491] = [[Found hidden in a bear den in the centre of the Leech Bog, around 41.2, 59.7. A swarm of these will appear when you approach the corpses in the back of the cave.]],
     [257830] = [[Located in Ritual Site: Daggerspine Point (Scenario). Appears during the Daggerspine Point Ritual Site event.]],
+    [257864] = [[Found during the event, "The Broodmother's Nest". Can only be reached on the northern main tower on the northeastern side. Though it can be attacked, it is out of range for Tame Beast. You will need to place a Frost Trap at your feet, then either have a Death Knight use Death Grip or use the item Web Pull to pull the wind serpent to you when it is in range, then use Tame Beast.]],
+    [257894] = [[Spawns when a Writhing Clutch finishes hatching.]],
     [258215] = [[Found to the north of Shadebasin Watch. Only found during the quest, A Quiet Walk Interrupted.]],
     [258216] = [[Found to the east of Shadebasin Watch. Only found during the quest, A Quiet Walk Interrupted.]],
     [258269] = [[Requires the quest, "Buried in the Dark" to access.]],
+    [258549] = [[Can be found roaming the area, but also spawns when you kill an Implanted Boar, Infected Eagle, or Tainted Dart Frog.]],
+    [258961] = [[Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.]],
+    [258962] = [[Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.]],
+    [259063] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid. Most of these creatures are killed fairly quickly by friendly NPCs but you can find some beyond the perimeter that are less likely to be under attack.]],
     [259106] = [[This warp stalker appears during several Void Assaults in Zul'Aman and Eversong Woods, if Hal'hadar ethereals are present. Void Assaults switch between the two zones weekly. A good source in ZA is the Void Incursion event that occurs at Speaker's Rest when the zone's Void Assaults tally reaches 100%. During this event, the Hal'hadar Leystalkers are stealthed but easily detected by hunters. An event in Eversong where they occur is the "Cryptic Operations" Void Strike in the crypts at the southern end of the Zeb'Nowa ruins (in the far south-east of the zone, south-west of the entrance to Zul'Aman). This strike appears to be less frequent than most so you may have to clear a number of them before it pops, but when it does be quick to tame one as other players engaging with the event will probably kill them quickly.]],
+    [259275] = [[Only spawns during the Patch 12.1 Campaign quest, Down With the Skies.]],
+    [259699] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.]],
+    [259767] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
+    [259768] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
     [259914] = [[Located in Ritual Site: Broken Throne (Scenario). Appears during the Broken Throne Ritual Site event.]],
+    [259952] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
     [259955] = [[Appears during the "Battery Rush: Maisara Deeps" Void Strike event.]],
     [259960] = [[Appears during the "Battery Rush: Maisara Deeps" Void Strike event.]],
     [260031] = [[Latticewing Sporegliders with this ID patrol the zone in a small pack.]],
     [260954] = [[Appears during various Void Strike events in Eversong.]],
+    [261122] = [[Spawns during the world quest, Who Ordered the Bag of Snakes?.]],
+    [261177] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with A Call for Aid.]],
     [261337] = [[Appears during the 'Tranquil Repose' and 'South Eversong Woods' Void Strike events in Eversong Woods. Only one of these beasts seems to appear at a time but another may spawn as the event continues. These events only occur when Void Assaults are set in Eversong Woods, which is every second week. Void Strike locations seem to cycle randomly, so keep completing them until one of these two appears.]],
+    [261554] = [[Located in Altar of Fangs (Dungeon).]],
+    [261693] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
+    [261694] = [[Only found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge.]],
+    [261789] = [[Found during the quest, The Serpent's Tail.]],
+    [261820] = [[Can spawn from enemy corpses when your Season 2 Nightmare Prey target is one of the "Children of Ula'tek" (Janoa the Fang, Batani the Scaled, Kursak the Coiled, Kadani the Claw).]],
+    [261943] = [[Can be found in various Midnight Delves when the story has a snake/venom/Ula'tek theme.]],
+    [262102] = [[Located in The Darkway (Delve). Found when the delve story is "Eggsplosive Growth".]],
     [262321] = [[Located in Ritual Site: Daggerspine Point (Scenario). Appears during the Daggerspine Point Ritual Site event.]],
     [263617] = [[Located in Ritual Site: Daggerspine Point (Scenario). There's a chance of summoning this snapdragon while running the Daggerspine Point Ritual Site. This instance is open every second week in Eversong Woods (check for the purple ritual site mark on the zone map) and is soloable. Inside the instance you can find occasional piles of Washed Up Kelp. Interacting with these has a chance of spawning a Void-Touched Snapdragon (which can also drop a mount of the same name).]],
+    [264350] = [[Found during the event, "Temple Strike: Overflowing Venom".]],
+    [265048] = [[Located in The Grudge Pit (Delve). Can spawn when the delve story is "The Fungal Pharmacon".]],
+    [265051] = [[Located in The Grudge Pit (Delve). Can spawn when the delve story is "The Fungal Pharmacon".]],
+    [265480] = [[Found during the quest, Bravely Burning.]],
+    [265720] = [[Found during the quest, Root of Survival.]],
+    [270767] = [[Found during the quest, The Serpent's Tail.]],
+    [271028] = [[Found during the quest, Bravely Burning.]],
+    [273290] = [[Spawns when rescuing Naz'ara the Clever during the quest, Into the Vaults of Atal'Utek.]],
 }
 
-function PSM.NotesData.Get(npcID)
-    local seed = PSM.NotesData[npcID]
-    local user = PSM_UserNotes and PSM_UserNotes[npcID]
-    if seed and user and user ~= "" then
-        return seed .. "\n\n" .. user
-    end
-    return seed or (user ~= "" and user) or nil
-end
-function PSM.NotesData.GetUserNote(npcID)
-    return (PSM_UserNotes and PSM_UserNotes[npcID]) or ""
-end
 function PSM.NotesData.SetUserNote(npcID, text)
     PSM_UserNotes = PSM_UserNotes or {}
     if not text or text == "" then

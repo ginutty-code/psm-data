@@ -1,5 +1,9 @@
 """
-Extract npc metadata for each npc in npcs.csv, except the npcs in skip_npcs.csv
+Extract npc metadata for each npc in npcs.csv.
+
+Extraction deliberately scrapes everything and applies no skip list. Skipping is
+10_clean_wowhead_data.py's job, where it can be zone- and layer-scoped and where a
+curation change takes effect without re-scraping.
 """
 
 import csv
@@ -18,7 +22,6 @@ from urllib3.util.retry import Retry
 
 from config import (
     PROCESSED_NPCS_CSV,
-    SKIP_NPC_IDS_CSV,
     WOWHEAD_DATA_CSV,
     ensure_dirs,
     get_random_headers,
@@ -30,28 +33,10 @@ CONCURRENCY = random.randint(*CONCURRENCY_RANGE)
 REQUEST_DELAY_RANGE = (4.0, 10.0) # Range for base request delay
 BATCH_SIZE = 10              
 BATCH_SECONDS = 30         
-COOLDOWN_SECONDS = 120        # Initial penalty; if we still get rate-limited after this, we exponentially increase the backoff time up to MAX_BACKOFF_SECONDS seconds.
-MAX_BACKOFF_SECONDS = 600
+COOLDOWN_SECONDS = 120        # Flat penalty applied whenever the backoff trips; it does not escalate across repeats.
 
 # Signal for graceful shutdown
 stop_event = threading.Event()
-
-def load_skip_npc_ids():
-    skip_ids = set()
-    if os.path.exists(SKIP_NPC_IDS_CSV):
-        try:
-            with open(SKIP_NPC_IDS_CSV, 'r', encoding='utf-8-sig', newline='') as f:
-                reader = csv.DictReader(f)
-                has_zone_col = 'zone_id' in reader.fieldnames if reader.fieldnames else False
-                for row in reader:
-                    npc_id = row.get('npc_id', '').strip()
-                    zone_id = row.get('zone_id', '').strip() if has_zone_col and row.get('zone_id') else ''
-                    if npc_id and not zone_id:
-                        skip_ids.add(npc_id)
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read skip list {SKIP_NPC_IDS_CSV}: {e}", file=sys.stderr)
-    return skip_ids
-
 
 def load_npcs():
     if not os.path.exists(PROCESSED_NPCS_CSV):
@@ -628,10 +613,6 @@ def fetch_npc_data(npc_id, npc_name, family_name):
     return {'error': 'retry'}
 
 
-def filter_skipped_npcs(npcs, skip_ids):
-    return [npc for npc in npcs if str(npc.get('npc_id')) not in skip_ids]
-
-
 def main():
     global global_backoff_until
     ensure_dirs()
@@ -644,20 +625,10 @@ def main():
     print(f"Batch flush: every {BATCH_SIZE} NPCs or {BATCH_SECONDS}s")
     print()
 
-    print("Loading skip list...")
-    skip_ids = load_skip_npc_ids()
-    print(f"Found {len(skip_ids)} NPC IDs to skip" if skip_ids else "No skip list found")
-    print()
-
     print(f"Loading corrected NPCs from {PROCESSED_NPCS_CSV}...")
-    all_npcs = load_npcs()
-    original_data = {npc['npc_id']: npc for npc in all_npcs}
-    print(f"Loaded {len(all_npcs)} total NPCs")
-
-    npcs = filter_skipped_npcs(all_npcs, skip_ids)
-    skipped_count = len(all_npcs) - len(npcs)
-    if skipped_count > 0:
-        print(f"Skipped {skipped_count} NPCs from skip list")
+    npcs = load_npcs()
+    original_data = {npc['npc_id']: npc for npc in npcs}
+    print(f"Loaded {len(npcs)} total NPCs")
 
     print(f"Processing {len(npcs)} NPCs (zone data extracted from web pages)")
     print()
@@ -792,10 +763,8 @@ def main():
     print("=" * 60)
     print("ENRICHMENT COMPLETE")
     print("=" * 60)
-    print(f"Total NPCs: {len(all_npcs)}")
-    print(f"Skipped NPCs (skip list): {skipped_count}")
-    print(f"Non-skipped NPCs:         {len(npcs)}")
-    print(f"Successfully processed:   {complete_count}")
+    print(f"Total NPCs:             {len(npcs)}")
+    print(f"Successfully processed: {complete_count}")
     print(f"\nProgress CSV saved to: {WOWHEAD_DATA_CSV}")
     print("=" * 60)
 

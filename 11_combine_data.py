@@ -20,11 +20,14 @@ import re
 from config import (
     COMBINED_PET_DATA_CSV,
     MANUAL_DIR,
+    NOTES_UPDATES_CSV,
     PROCESSED_PETOPIA_DATA_CSV,
     PROCESSED_WOWHEAD_DATA_CSV,
     RECORD_OVERRIDES_CSV,
     SKIP_DISPLAY_IDS_CSV,
+    TAMING_UPDATES_CSV,
     ensure_dirs,
+    read_first_col,
 )
 
 EXPANSION_MAPPING = {
@@ -153,25 +156,7 @@ def get_expansion(patch_id):
     except (ValueError, IndexError):
         return ""
 
-def _read_first_col(path, col_names):
-    """Generic loader: returns a set of stripped string values from the first matching column."""
-    result = set()
-    if not os.path.exists(path):
-        return result
-    with open(path, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            for key in row:
-                clean_key = key.strip().replace('\ufeff', '')
-                if clean_key in col_names:
-                    val = row[key]
-                    if val:
-                        result.add(str(val).strip())
-                    break
-    return result
 
-def load_skip_display_ids():
-    return _read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
 
 def load_processed_petopia_data():
     """
@@ -187,6 +172,57 @@ def load_processed_petopia_data():
                 if npc_id:
                     data[npc_id.strip()] = row
     return data
+
+def load_note_additions():
+    """
+    npc_id -> note text, for the rows of notes_updates.csv that add a note outright
+    (empty `search`, non-empty `replace`). 03_clean_petopia_data.py owns the full format
+    -- global rules, removals and scoped search/replace -- and applies all of it to the
+    NPCs Petopia knows about. Only the outright additions are needed here.
+
+    This is the first step that has seen both sources, so it is the first step that can
+    tell "Petopia did not have this NPC" from "this NPC does not exist". 03 used to guess
+    at the former by fabricating a blank Petopia record; the note is attached to the real
+    Wowhead record instead. Applied verbatim, matching how 03 applies the same rows.
+    """
+    additions = {}
+    if not os.path.exists(NOTES_UPDATES_CSV):
+        return additions
+    with open(NOTES_UPDATES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
+        for row in csv.DictReader(f):
+            npc_id = (row.get('npc_id') or row.get('﻿npc_id') or '').strip()
+            search = (row.get('search') or row.get('﻿search') or '').strip()
+            replace = (row.get('replace') or '').strip()
+            if npc_id and not search and replace:
+                additions[npc_id] = replace
+    return additions
+
+
+def load_taming_additions():
+    """
+    npc_id -> taming_requirements string, for taming_updates.csv rows whose NPC
+    Petopia never carried. 03_clean_petopia_data.py applies the full file as an
+    override to every NPC Petopia *does* know about; those already reach here
+    through petopia_info. This is the same "first step that has seen both
+    sources" fallback as load_note_additions, for the same reason: an override
+    for an NPC absent from Petopia's scrape has nothing in 03 to override.
+    """
+    additions = {}
+    if not os.path.exists(TAMING_UPDATES_CSV):
+        return additions
+    with open(TAMING_UPDATES_CSV, 'r', encoding='utf-8-sig', errors='replace') as f:
+        for row in csv.DictReader(f):
+            npc_id = (row.get('npc_id') or '').strip()
+            taming_req = (row.get('taming_requirements') or '').strip()
+            if npc_id and taming_req:
+                if npc_id in additions:
+                    existing = set(additions[npc_id].split('|'))
+                    existing.update(taming_req.split('|'))
+                    additions[npc_id] = '|'.join(sorted(existing))
+                else:
+                    additions[npc_id] = taming_req
+    return additions
+
 
 def load_record_overrides():
     overrides = {}
@@ -345,12 +381,18 @@ def main():
     print("=" * 60)
     ensure_dirs()
 
-    skip_display_ids = load_skip_display_ids()
+    skip_display_ids = read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
     print(f"Loaded {len(skip_display_ids)} display IDs to skip (for post-override check).")
 
     # Load pre-processed Petopia data (cleaned notes + pre-computed taming_requirements)
     petopia_info = load_processed_petopia_data()
     print(f"Loaded pre-processed Petopia info for {len(petopia_info)} NPCs.")
+
+    note_additions = load_note_additions()
+    print(f"Loaded {len(note_additions)} note additions from notes_updates.")
+
+    taming_additions = load_taming_additions()
+    print(f"Loaded {len(taming_additions)} taming additions from taming_updates (Petopia-absent NPCs).")
 
     full_record_overrides = load_record_overrides()
     print(f"Loaded {len(full_record_overrides)} record overrides.")
@@ -386,7 +428,7 @@ def main():
         npc_id = row['npc_id']
         if npc_id not in npc_skill_map:
             p_info = petopia_info.get(npc_id, {})
-            taming_req_str = p_info.get('taming_requirements', '')
+            taming_req_str = p_info.get('taming_requirements', '') or taming_additions.get(npc_id, '')
             skills = [s.strip() for s in taming_req_str.split('|') if s.strip()]
             npc_skill_map[npc_id] = skills
 
@@ -441,8 +483,9 @@ def main():
         patch_id = row.get('patch_id', '').strip()
         type_id = row.get('type', '').strip()
 
-        # Use pre-computed taming_requirements from processed petopia data
-        pre_taming_req = p_info.get('taming_requirements', '')
+        # Use pre-computed taming_requirements from processed petopia data; fall back
+        # to a manual addition for an NPC Petopia never carried (see load_taming_additions).
+        pre_taming_req = p_info.get('taming_requirements', '') or taming_additions.get(npc_id, '')
 
         record_data = {
             'npc_id': npc_id,
@@ -464,7 +507,9 @@ def main():
             'classification_name': row.get('bulk_classification', ''),
             'type_id': type_id,
             'type_name': TYPE_MAP.get(type_id, ''),
-            'notes': p_info.get('notes', ''),
+            # Petopia's cleaned note wins; a notes_updates addition fills in for an NPC
+            # Petopia never carried. Ones matching no record at all are reported by 16.
+            'notes': p_info.get('notes', '') or note_additions.get(npc_id, ''),
             'taming_requirements': pre_taming_req,
             'special_conditions': "",
             'name_keeper': p_info.get('name_keeper', '')

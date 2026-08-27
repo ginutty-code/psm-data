@@ -2,33 +2,15 @@
 Generate addon Abilities data file
 """
 
-import csv
 import os
 
 from config import (
     ABILITIES_LUA,
     PROCESSED_FAMILIES_CSV,
     PROCESSED_SPELLS_CSV,
-    sync_output_to_addon,
+    SCHEMA_VERSION,
+    load_csv,
 )
-
-
-def load_csv(filepath):
-    """Load CSV file with encoding fallback and return all rows."""
-    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
-
-    for encoding in encodings:
-        try:
-            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-                if rows:
-                    return rows
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
-            continue
-
-    return []
 
 
 def main():
@@ -154,6 +136,7 @@ def main():
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(ABILITIES_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Abilities Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", icon = \"family_icon\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", icon = \"ability_icon\", category = \"category\", tag = \"tag\"}, ...}}}\n")
@@ -233,7 +216,6 @@ def main():
 
     print(f"Done! Lua file saved to: {ABILITIES_LUA}")
     print(f"Summary: {total_families} families, {total_ranks} ranks, {total_abilities} abilities")
-    sync_output_to_addon(ABILITIES_LUA)
 
 
 if __name__ == "__main__":

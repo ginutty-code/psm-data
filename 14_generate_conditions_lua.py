@@ -8,8 +8,8 @@ import os
 from config import (
     COMBINED_PET_DATA_CSV,
     CONDITIONS_LUA,
+    SCHEMA_VERSION,
     ensure_dirs,
-    sync_output_to_addon,
 )
 
 # Define the category groups for conditions
@@ -54,9 +54,15 @@ def main():
     sorted_entries = sorted(unique_conditions)
 
     with open(CONDITIONS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- ConditionsData.lua\n")
         f.write("-- Maps NPC IDs to condition-specific taming requirements.\n")
         f.write("-- These are used for filtering in the Special Tames panel.\n\n")
+        # This file ships in the PetStableManagement_Data addon, a separate
+        # LoadOnDemand folder from the core addon that creates _G.PSM. Declare it
+        # rather than relying on cross-addon load order, matching every other file.
+        f.write("_G.PSM = _G.PSM or {}\n")
+        f.write("local PSM = _G.PSM\n\n")
         
         # Map conditions found in data to groups
         condition_groups = {}
@@ -67,10 +73,20 @@ def main():
             if c in EXCLUDED_FROM_GROUPS:
                 continue
                 
-            # Split "Category: Value" -> group: "Category", member: "Value"
+            # Split "Category: Value" -> group: "Category", member: "Value".
+            # A condition with no colon falls back to DEFAULT_GROUP rather than raising:
+            # split(":", 1) returns one element, so indexing [1] was an IndexError that
+            # took the whole generator down. Every condition carries a colon today, so
+            # this is a guard against a curation edit -- 11_combine_data.py derives these
+            # from note parsing, where a new CATEGORY_MAP entry or a record override can
+            # produce a bare value.
             parts = c.split(":", 1)
-            group_name = parts[0].strip()
-            value_name = parts[1].strip()
+            if len(parts) == 2:
+                group_name = parts[0].strip()
+                value_name = parts[1].strip()
+            else:
+                group_name = DEFAULT_GROUP
+                value_name = parts[0].strip()
             
             f.write(f'    [{i+1}] = "{value_name}",\n')
             condition_to_idx[c] = i + 1
@@ -126,7 +142,6 @@ def main():
 
     print(f"Done! {len(conditions_map)} NPCs mapped to special conditions.")
     print(f"Lua file saved to: {CONDITIONS_LUA}")
-    sync_output_to_addon(CONDITIONS_LUA)
 
 if __name__ == "__main__":
     main()

@@ -2,28 +2,9 @@
 Generate addon Coordinates data file
 """
 
-import csv
 import os
 
-from config import COMBINED_PET_DATA_CSV, COORDS_LUA, sync_output_to_addon
-
-
-def load_csv(filepath):
-    """Load CSV file with encoding fallback and return all rows."""
-    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
-
-    for encoding in encodings:
-        try:
-            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-                if rows:
-                    return rows
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
-            continue
-
-    return []
+from config import COMBINED_PET_DATA_CSV, COORDS_LUA, SCHEMA_VERSION, load_csv
 
 
 def main():
@@ -78,6 +59,7 @@ def main():
         return '"' + s.replace('\\', '\\\\').replace('"', '\\"') + '"'
 
     with open(COORDS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Coords Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Format: CoordsData[uiMapId] = {name = \"ZoneName\", continent = \"...\", npcs = {[npc_id] = \"x,y|x,y|...\", ...}}\n")
@@ -128,7 +110,6 @@ def main():
 
     print(f"Done! Lua file saved to: {COORDS_LUA}")
     print(f"Summary: {total_zones} zones, {total_npcs} NPC entries")
-    sync_output_to_addon(COORDS_LUA)
 
 
 if __name__ == "__main__":

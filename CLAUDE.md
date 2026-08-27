@@ -33,11 +33,24 @@ Whiptail family (id 315) is a constant hardcoded directly inside
 
 ## Crossing into psm-addon
 
-`config.sync_output_to_addon()` is the only thing that touches the other
-repo — it copies the five compiled `Output/*.lua` files into
-`../psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/`, where that
-addon's `.toc` load order picks them back up. Nothing else in this pipeline
-should reach across the repo boundary.
+`sync.py` is the only thing that touches the other repo — run it explicitly
+after regenerating (`python sync.py`) to copy the five compiled `Output/*.lua`
+files into psm-addon. Four go to `../psm-addon/PetStableManagement_ModelsBrowser/Data/`
+(the `ADDON_DATA_DIR` constant); `AbilitiesData.lua` goes to
+`../psm-addon/PetStableManagement/Data/` instead (`CORE_ADDON_DATA_DIR`), because
+the core addon's Owned Pets panel — always loaded, unlike the Models Browser — needs
+it for its ability filter, and it's small enough (~34KB, vs hundreds of KB for its
+siblings) that it doesn't need `LoadOnDemand`'s deferral. Both destination `Data/`
+subfolders keep generated tables apart from their addon's hand-written Lua. Nothing
+else in this pipeline should reach across the repo boundary, and the
+`1x_generate_*.py` / `06_generate_*.py` scripts no longer sync as a side effect of
+running — they only write to `Output/`.
+
+Each generated file also stamps `PSM_DataSchemaVersion` (from `config.py`'s
+`SCHEMA_VERSION`) at the top. The addon's `Schema.lua` asserts this on load
+and fails with one clear error instead of every consumer hitting nil-index
+errors independently. Bump `SCHEMA_VERSION` here and the matching constant in
+`Schema.lua` together whenever a generated table's shape changes.
 
 ## Network resilience
 

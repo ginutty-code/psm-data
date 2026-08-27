@@ -1,6 +1,11 @@
+PSM_DataSchemaVersion = 1
+
 -- ConditionsData.lua
 -- Maps NPC IDs to condition-specific taming requirements.
 -- These are used for filtering in the Special Tames panel.
+
+_G.PSM = _G.PSM or {}
+local PSM = _G.PSM
 
 local conditions = {
     [1] = "Kyrian",
@@ -1434,6 +1439,12 @@ PSM.ConditionsData = {
     [252998] = {conditions[16]},
     [253179] = {conditions[8]},
     [253305] = {conditions[8]},
+    [253694] = {conditions[5], conditions[16]},
+    [253695] = {conditions[16]},
+    [253697] = {conditions[16]},
+    [253764] = {conditions[16]},
+    [253765] = {conditions[16]},
+    [253884] = {conditions[14], conditions[16]},
     [254709] = {conditions[53]},
     [254720] = {conditions[53]},
     [254761] = {conditions[5]},
@@ -1447,6 +1458,9 @@ PSM.ConditionsData = {
     [255886] = {conditions[16]},
     [255917] = {conditions[6]},
     [255957] = {conditions[11], conditions[49]},
+    [256207] = {conditions[14], conditions[16]},
+    [256213] = {conditions[14], conditions[16]},
+    [256845] = {conditions[14], conditions[16]},
     [256878] = {conditions[5]},
     [257127] = {conditions[8]},
     [257265] = {conditions[16]},
@@ -1455,14 +1469,48 @@ PSM.ConditionsData = {
     [258215] = {conditions[16]},
     [258216] = {conditions[16]},
     [258269] = {conditions[16]},
+    [258961] = {conditions[8]},
+    [258962] = {conditions[8]},
+    [259063] = {conditions[14], conditions[16]},
     [259106] = {conditions[52], conditions[53]},
+    [259131] = {conditions[5]},
+    [259132] = {conditions[5]},
+    [259275] = {conditions[14], conditions[16]},
+    [259699] = {conditions[5], conditions[14], conditions[16]},
+    [259767] = {conditions[14], conditions[16]},
+    [259768] = {conditions[14], conditions[16]},
     [259914] = {conditions[11], conditions[49]},
+    [259952] = {conditions[14], conditions[16]},
     [259955] = {conditions[53]},
     [259960] = {conditions[53]},
+    [260369] = {conditions[5]},
     [260954] = {conditions[53]},
+    [261122] = {conditions[54]},
+    [261177] = {conditions[14], conditions[16]},
     [261337] = {conditions[52], conditions[53]},
+    [261372] = {conditions[6]},
+    [261476] = {conditions[5]},
+    [261554] = {conditions[9]},
+    [261693] = {conditions[14], conditions[16]},
+    [261694] = {conditions[14], conditions[16]},
+    [261789] = {conditions[16]},
+    [261943] = {conditions[8]},
+    [262102] = {conditions[8]},
     [262321] = {conditions[11], conditions[49]},
     [263617] = {conditions[11], conditions[49]},
+    [263694] = {conditions[5]},
+    [263695] = {conditions[5]},
+    [264159] = {conditions[5]},
+    [264503] = {conditions[6]},
+    [264705] = {conditions[6]},
+    [265048] = {conditions[8]},
+    [265051] = {conditions[8]},
+    [265480] = {conditions[16]},
+    [265720] = {conditions[16]},
+    [268979] = {conditions[6]},
+    [270767] = {conditions[16]},
+    [271028] = {conditions[16]},
+    [273290] = {conditions[16]},
 }
 
 function PSM.ConditionsData.Get(npcID)

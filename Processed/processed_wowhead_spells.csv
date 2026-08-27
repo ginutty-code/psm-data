@@ -61,8 +61,8 @@ spell_id,spell_name,spell_description,spell_icon,spell_rank,spell_category,spell
 264663,Predator's Thirst,You and your pet gain 4% Leech.,spell_shadow_vampiricaura,Ferocity Passive,Hunter and pet leech,Spec
 264667,Primal Rage,Increases haste by 30% for all party and raid members for 40 sec. Allies receiving this effect will become Sated and unable to benefit from Primal Rage or similar effects again for 10 min.,spell_shadow_unholyfrenzy,Ferocity Ability,Bloodlust / Heroism,Spec
 267922,Eternal Guardian,"When used, your pet will miraculously return to life with full health.",spell_nature_reincarnation,Exotic Ability,Exotic: Pet instant revive,Defense
-272679,Fortitude of the Bear,Damage taken reduced by 3%.,spell_druid_bearhug,Command Pet Ability,Hunter and pet damage reduction,Spec
-272682,Master's Call,"Your pet removes all root and movement impairing effects from itself and a friendly target, and grants immunity to all such effects for 4 sec.",ability_hunter_masterscall,Command Pet Ability,Ally movement impairing removal,Spec
+272679,Fortitude of the Bear,Damage taken reduced by 3%.,spell_druid_bearhug,Tenacity Ability,Hunter and pet damage reduction,Spec
+272682,Master's Call,"Your pet removes all root and movement impairing effects from itself and a friendly target, and grants immunity to all such effects for 4 sec.",ability_hunter_masterscall,Cunning Ability,Ally movement impairing removal,Spec
 279254,Calcified Carapace,Reduces physical damage taken by (totalHealth * 0.0015 * 0.7).,trade_archaeology_blacktrilobite,Exotic Passive,Exotic: Pet damage taken reduction,Defense
 279259,Shimmering Shale,Reduces magic damage taken by (totalHealth * 0.0015 * 0.7).,inv_skinning_80_shimmerscale,Exotic Passive,Exotic: Pet damage taken reduction,Defense
 279336,Swarm of Flies,"A swarm of flies surrounds the Toad, distracting enemies, increasing dodge chance by 30% for 20 sec.",spell_nature_insect_swarm2,Special Ability,Pet dodge,Defense

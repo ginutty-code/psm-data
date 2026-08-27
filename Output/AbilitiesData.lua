@@ -1,3 +1,5 @@
+PSM_DataSchemaVersion = 1
+
 -- Abilities Data Export
 -- Generated automatically
 -- Format: AbilitiesData[family_id] = {name = "family_name", icon = "family_icon", ranks = {[rank] = {[ability_id] = {name = "ability_name", icon = "ability_icon", category = "category", tag = "tag"}, ...}}}
@@ -1035,13 +1037,7 @@ AbilitiesData = {
         name = "Spec abilities",
         icon = "",
         ranks = {
-            ["Command Pet Ability"] = {
-                [272679] = {
-                    name = "Fortitude of the Bear",
-                    icon = "spell_druid_bearhug",
-                    category = "Hunter and pet damage reduction",
-                    tag = "Spec"
-                },
+            ["Cunning Ability"] = {
                 [272682] = {
                     name = "Master's Call",
                     icon = "ability_hunter_masterscall",
@@ -1070,6 +1066,14 @@ AbilitiesData = {
                     name = "Predator's Thirst",
                     icon = "spell_shadow_vampiricaura",
                     category = "Hunter and pet leech",
+                    tag = "Spec"
+                }
+            },
+            ["Tenacity Ability"] = {
+                [272679] = {
+                    name = "Fortitude of the Bear",
+                    icon = "spell_druid_bearhug",
+                    category = "Hunter and pet damage reduction",
                     tag = "Spec"
                 }
             },

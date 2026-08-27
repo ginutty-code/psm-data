@@ -4,58 +4,22 @@ npcId<->index backbone -- see ../DATA_STRUCTURE_OPTIMIZATION_PLAN.md, Target
 schema for ModelsData).
 """
 
-import csv
 import os
 import re
 
 from config import (
     COMBINED_PET_DATA_CSV,
     MODELS_LUA,
+    SCHEMA_VERSION,
     SKIP_DISPLAY_IDS_CSV,
     ensure_dirs,
-    sync_output_to_addon,
+    load_csv,
+    read_first_col,
 )
 
-
-def load_csv(filepath):
-    """Load CSV file with encoding fallback and return all rows."""
-    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
-
-    for encoding in encodings:
-        try:
-            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
-                reader = csv.DictReader(f)
-                rows = list(reader)
-                if rows:
-                    return rows
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
-            continue
-
-    return []
-
-
-def load_skip_display_ids():
-    """Load skip display IDs from CSV file."""
-    skip_ids = set()
-    if os.path.exists(SKIP_DISPLAY_IDS_CSV):
-        try:
-            with open(SKIP_DISPLAY_IDS_CSV, 'r', encoding='utf-8-sig', newline='') as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    for key in row:
-                        clean_key = key.strip().replace(chr(0xFEFF), '')
-                        if clean_key in ('id', 'display_id'):
-                            id_value = row.get(key)
-                            if id_value:
-                                skip_ids.add(str(id_value).strip())
-                            break
-        except (OSError, csv.Error) as e:
-            print(f"Warning: Could not read skip list {SKIP_DISPLAY_IDS_CSV}: {e}")
-    return skip_ids
-
-
 REACT_PATTERN = re.compile(r'\[\s*(-?\d+)\s*,\s*(-?\d+)\s*\]')
+
+
 
 
 def parse_react(react_str):
@@ -113,7 +77,7 @@ def main():
         return
 
     print("Loading skip display IDs...")
-    skip_display_ids = load_skip_display_ids()
+    skip_display_ids = read_first_col(SKIP_DISPLAY_IDS_CSV, {'id', 'display_id'})
     print(f"Found {len(skip_display_ids)} display IDs to skip")
 
     # Read CSV and build flat data structure keyed by npc_id (integer)
@@ -206,6 +170,7 @@ def main():
     print(f"Generating Lua file to {MODELS_LUA}...")
 
     with open(MODELS_LUA, 'w', encoding='utf-8') as f:
+        f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Models Data Export\n")
         f.write("-- Generated automatically\n")
         f.write("-- Structure-of-arrays layout, backed by a dense npcId<->index backbone.\n")
@@ -288,7 +253,6 @@ def main():
         f.write("}\n")
 
     print(f"Done! Lua file saved to: {MODELS_LUA}")
-    sync_output_to_addon(MODELS_LUA)
 
 
 if __name__ == "__main__":

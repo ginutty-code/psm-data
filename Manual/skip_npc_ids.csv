@@ -1536,7 +1536,6 @@ npc_id,zone_id,layer,reason
 168090,,,cannot be tamed
 168132,,,unknown location
 168149,,,unknown location
-168196,,,unknown location
 168239,,,unknown location
 168302,,,unknown location
 168303,,,unknown location
@@ -3544,124 +3543,77 @@ npc_id,zone_id,layer,reason
 121927,,,cannot be tamed
 108035,,,cannot be tamed
 3462,,,cannot be tamed
-210798,,,cannot be tamed
-210944,,,cannot be tamed
-211072,,,cannot be tamed
-260371,,,cannot be tamed
-261307,,,cannot be tamed
-264659,,,cannot be tamed
-264671,,,cannot be tamed
-258394,,,cannot be tamed
-258943,,,cannot be tamed
-261666,,,cannot be tamed
-265672,,,cannot be tamed
-262972,,,cannot be tamed
-258511,,,cannot be tamed
-258980,,,cannot be tamed
-260372,,,cannot be tamed
-261478,,,cannot be tamed
-261667,,,cannot be tamed
-262960,,,cannot be tamed
-261481,,,cannot be tamed
-258504,,,cannot be tamed
-261693,,,cannot be tamed
-259275,,,cannot be tamed
-261396,,,cannot be tamed
-256207,,,cannot be tamed
-259767,,,cannot be tamed
-259699,,,cannot be tamed
-253764,,,cannot be tamed
-259063,,,cannot be tamed
-253884,,,cannot be tamed
-261789,,,cannot be tamed
-256791,,,cannot be tamed
-261378,,,cannot be tamed
-255088,,,cannot be tamed
-261554,,,cannot be tamed
-265333,,,cannot be tamed
-264705,,,cannot be tamed
-256712,,,cannot be tamed
-265332,,,cannot be tamed
-260081,,,cannot be tamed
-263695,,,cannot be tamed
-271028,,,cannot be tamed
-265480,,,cannot be tamed
-255811,,,cannot be tamed
-260369,,,cannot be tamed
-264656,,,cannot be tamed
-264658,,,cannot be tamed
-260370,,,cannot be tamed
-264502,,,cannot be tamed
-258512,,,cannot be tamed
-261943,,,cannot be tamed
-254288,,,cannot be tamed
-272920,,,cannot be tamed
-253694,,,cannot be tamed
-261390,,,cannot be tamed
-261142,,,cannot be tamed
-261650,,,cannot be tamed
-254167,,,cannot be tamed
-254166,,,cannot be tamed
-253491,,,cannot be tamed
-262965,,,cannot be tamed
-261638,,,cannot be tamed
-253490,,,cannot be tamed
-256882,,,cannot be tamed
-261473,,,cannot be tamed
-261626,,,cannot be tamed
-261652,,,cannot be tamed
-268049,,,cannot be tamed
-261482,,,cannot be tamed
-265720,,,cannot be tamed
-261369,,,cannot be tamed
-253765,,,cannot be tamed
-256773,,,cannot be tamed
-258549,,,cannot be tamed
-268973,,,cannot be tamed
-261377,,,cannot be tamed
-257894,,,cannot be tamed
-263356,,,cannot be tamed
-263359,,,cannot be tamed
-265968,,,cannot be tamed
-273290,,,cannot be tamed
-261398,,,cannot be tamed
-258962,,,cannot be tamed
-264350,,,cannot be tamed
-261122,,,cannot be tamed
-265051,,,cannot be tamed
-261177,,,cannot be tamed
-270233,,,cannot be tamed
-262102,,,cannot be tamed
-261375,,,cannot be tamed
-254964,,,cannot be tamed
-254511,,,cannot be tamed
-262439,,,cannot be tamed
-263393,,,cannot be tamed
-253697,,,cannot be tamed
-259131,,,cannot be tamed
-259132,,,cannot be tamed
-265048,,,cannot be tamed
-261820,,,cannot be tamed
-270767,,,cannot be tamed
-258931,,,cannot be tamed
-261651,,,cannot be tamed
-261476,,,cannot be tamed
-263694,,,cannot be tamed
-265969,,,cannot be tamed
-256845,,,cannot be tamed
-259768,,,cannot be tamed
-259952,,,cannot be tamed
-256213,,,cannot be tamed
-261694,,,cannot be tamed
-268981,,,cannot be tamed
-256792,,,cannot be tamed
-258961,,,cannot be tamed
-253761,,,cannot be tamed
-264159,,,cannot be tamed
-253695,,,cannot be tamed
-254973,,,cannot be tamed
-257864,,,cannot be tamed
-253489,,,cannot be tamed
-265337,,,cannot be tamed
-265336,,,cannot be tamed
-261635,,,cannot be tamed
+251625,,,unknown location
+251626,,,unknown location
+251629,,,unknown location
+251631,,,unknown location
+251634,,,unknown location
+251642,,,unknown location
+251644,,,unknown location
+251646,,,unknown location
+251647,,,unknown location
+251648,,,unknown location
+251651,,,unknown location
+251652,,,unknown location
+251654,,,unknown location
+251655,,,unknown location
+251656,,,unknown location
+251657,,,unknown location
+251677,,,unknown location
+251679,,,unknown location
+251699,,,unknown location
+251703,,,unknown location
+251788,,,unknown location
+251793,,,unknown location
+251794,,,unknown location
+251837,,,unknown location
+252197,,,unknown location
+252202,,,unknown location
+253885,,,unknown location
+253886,,,unknown location
+253889,,,unknown location
+253890,,,unknown location
+256226,,,unknown location
+256864,,,unknown location
+257135,,,unknown location
+257146,,,unknown location
+257334,,,unknown location
+257535,,,unknown location
+257536,,,unknown location
+257559,,,unknown location
+257560,,,unknown location
+257562,,,unknown location
+258945,,,unknown location
+258959,,,unknown location
+259134,,,unknown location
+259135,,,unknown location
+259137,,,unknown location
+260670,,,unknown location
+260843,,,unknown location
+260844,,,unknown location
+260872,,,unknown location
+261644,,,unknown location
+262503,,,unknown location
+262737,,,unknown location
+263464,,,unknown location
+263571,,,unknown location
+263572,,,unknown location
+263634,,,unknown location
+264652,,,unknown location
+264660,,,unknown location
+264661,,,unknown location
+264667,,,unknown location
+264668,,,unknown location
+264673,,,unknown location
+264675,,,unknown location
+264678,,,unknown location
+266327,,,unknown location
+267359,,,unknown location
+268908,,,unknown location
+268911,,,unknown location
+271206,,,unknown location
+271246,,,unknown location
+271247,,,unknown location
+271252,,,unknown location
+262086,,,unknown location
+140558,,,cannot be tamed

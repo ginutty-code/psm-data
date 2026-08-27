@@ -1,3 +1,4 @@
+import csv
 import os
 import random
 
@@ -36,6 +37,16 @@ PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv
 # Processed — master file combining all relevant data for final output generation (pet_data.csv is the main source for the addon)
 COMBINED_PET_DATA_CSV = os.path.join(PROCESSED_DIR, 'pet_data.csv')
 
+# Processed — validation report from 16_validate_data.py (npc_id, check, description)
+ACTION_LIST_CSV = os.path.join(PROCESSED_DIR, 'action_list.csv')
+
+# Bumped whenever a generated file's shape changes in a way the addon must know about
+# (a renamed field, a column added/removed). Every generator stamps this into its output
+# as `PSM_DataSchemaVersion`; psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
+# Schema.lua asserts it matches on load and fails loud on a mismatch instead of every
+# consumer hitting nil-index errors independently. Bump both sides together.
+SCHEMA_VERSION = 1
+
 # Output — final deliverables for the addon (.lua files only)
 ABILITIES_LUA = os.path.join(OUTPUT_DIR, 'AbilitiesData.lua')
 MODELS_LUA = os.path.join(OUTPUT_DIR, 'ModelsData.lua')
@@ -43,12 +54,66 @@ COORDS_LUA = os.path.join(OUTPUT_DIR, 'CoordsData.lua')
 CONDITIONS_LUA = os.path.join(OUTPUT_DIR, 'ConditionsData.lua')
 NOTES_LUA = os.path.join(OUTPUT_DIR, 'NotesData.lua')
 
-ADDON_MODELS_BROWSER_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'ModelsBrowser'))
+# Four of the five generated tables live in a Data/ subfolder of the Models Browser
+# addon, kept apart from its hand-written Lua so it is unambiguous which files this
+# pipeline owns and which must never be hand-edited.
+ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement_ModelsBrowser', 'Data'))
+
+# AbilitiesData.lua is the exception: it's small (~34KB, vs hundreds of KB for its
+# siblings -- the reason the other four wait for LoadOnDemand), and the core addon's
+# Owned Pets panel (always loaded) needs it for its ability filter. So it syncs into
+# core's own Data/ subfolder instead, on the same "generated, never hand-edited" basis.
+CORE_ADDON_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'psm-addon', 'PetStableManagement', 'Data'))
+
+
+# --- Shared CSV loading ---
+#
+# These live here because the numbered scripts cannot import each other -- a leading digit
+# is not a valid module name -- so a helper needed by more than one of them has nowhere else
+# to go, and the copies drift. `load_csv` had three byte-identical definitions;
+# `load_skip_display_ids` had two that reached the same answer by different routes.
+
+def load_csv(filepath):
+    """Load a CSV with encoding fallback and return all rows."""
+    encodings = ['utf-8', 'utf-8-sig', 'cp1252', 'latin-1']
+
+    for encoding in encodings:
+        try:
+            with open(filepath, 'r', encoding=encoding, errors='replace') as f:
+                rows = list(csv.DictReader(f))
+                if rows:
+                    return rows
+        except (OSError, csv.Error) as e:
+            print(f"Warning: Could not read {filepath} as {encoding}: {e}")
+            continue
+
+    return []
+
+
+def read_first_col(path, col_names):
+    """
+    The set of values from whichever of `col_names` a row carries first.
+
+    Tolerates a stray BOM in the header, which is why it matches on a cleaned key rather
+    than indexing the column directly.
+    """
+    result = set()
+    if not os.path.exists(path):
+        return result
+    with open(path, 'r', encoding='utf-8-sig', newline='', errors='replace') as f:
+        for row in csv.DictReader(f):
+            for key in row:
+                if key.strip().replace('﻿', '') in col_names:
+                    val = row[key]
+                    if val:
+                        result.add(str(val).strip())
+                    break
+    return result
 
 
 def ensure_dirs():
     """Ensure that the standard project directories exist."""
-    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_MODELS_BROWSER_DIR]:
+    for d in [EXTRACTED_DIR, PROCESSED_DIR, MANUAL_DIR, OUTPUT_DIR, ADDON_DATA_DIR, CORE_ADDON_DATA_DIR]:
         if not os.path.exists(d):
             os.makedirs(d, exist_ok=True)
 
@@ -65,7 +130,9 @@ def sync_output_to_addon(target_file=None):
     for src in files:
         if os.path.exists(src):
             filename = os.path.basename(src)
-            dest = os.path.join(ADDON_MODELS_BROWSER_DIR, filename)
+            # AbilitiesData.lua is core's, not the Models Browser's -- see CORE_ADDON_DATA_DIR.
+            dest_dir = CORE_ADDON_DATA_DIR if src == ABILITIES_LUA else ADDON_DATA_DIR
+            dest = os.path.join(dest_dir, filename)
             shutil.copy2(src, dest)
             print(f"Synced {filename} -> {dest}")
 

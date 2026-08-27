@@ -94,7 +94,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 30430,Sentry Worg,Normal,0,1,Wolf,210,"[-1,-1]"
 30455,Frostworg,Normal,0,1,Wolf,67,"[1,1]"
 30456,Oloh,Elite,1,1,Wolf,67,"[1,1]"
-31233,Sinewy Wolf,Normal,0,1,Wolf,2817,"[-1,-1]"
+31233,Sinewy Wolf,Normal,0,1,Wolf,2817|4395,"[-1,-1]"
 39851,Noxious Longtooth,Normal,0,1,Wolf,unknown,[]
 41478,Snow Tracker Wolf,Normal,0,1,Wolf,1,"[-1,-1]"
 42002,Wolf,Normal,0,1,Wolf,5145,"[-1,1]"
@@ -141,6 +141,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 72991,Orphaned Frost Wolf,Normal,0,1,Wolf,6720,"[-1,1]"
 73619,Frost Wolf,Normal,0,1,Wolf,6720,"[-1,1]"
 73679,Frost Wolf,Normal,0,1,Wolf,unknown,[]
+74032,Frost Wolf,Normal,0,1,Wolf,6720,"[null,1]"
 74169,Gloomshade Howler,Normal,0,1,Wolf,6719,"[-1,-1]"
 74206,Killmaw,Rare,4,1,Wolf,6719,"[-1,-1]"
 74208,Killmaw Pup,Normal,0,1,Wolf,6719,"[-1,-1]"
@@ -669,7 +670,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250092,Amani Lynx,Elite,1,2,Cat,unknown,[]
 250093,Swiftclaw Elder,Normal,0,2,Cat,15947,"[-1,-1]"
 250094,Amani Swiftclaw,Normal,0,2,Cat,15947,"[-1,-1]"
-250227,Garden Lynx,Normal,0,2,Cat,15968,[]
+250227,Garden Lynx,Normal,0,2,Cat,15968,"[1,null]"
 251455,Ambershade Matriarch,Normal,0,2,Cat,16215,"[-1,-1]"
 251457,Ambershade Lynx,Normal,0,2,Cat,16215,"[-1,-1]"
 251459,Ambershade Kitten,Normal,0,2,Cat,16215,"[0,0]"
@@ -685,13 +686,14 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 254817,Juvenile Ghostclaw,Normal,0,2,Cat,15968,[]
 255137,Juvenile Swiftclaw,Normal,0,2,Cat,15947,"[-1,-1]"
 255217,Swiftclaw Elder,Normal,0,2,Cat,15947,"[-1,-1]"
-255220,Amani Swiftclaw,Normal,0,2,Cat,15947,"[-1,null]"
+255220,Amani Swiftclaw,Normal,0,2,Cat,15947,"[-1,-1]"
 255348,Dame Bloodshed,Rare,4,2,Cat,15968,"[-1,-1]"
-255496,Shrine Lynx,Normal,0,2,Cat,unknown,[]
+255496,Shrine Lynx,Normal,0,2,Cat,16194,[]
 255497,Shrine Matron,Elite,1,2,Cat,16194,[]
 255834,Ros'mareh,Normal,0,2,Cat,16194,"[1,1]"
 257452,Mibaza,Normal,0,2,Cat,15969,"[1,1]"
-258993,Captured Witherbark Lynx,Normal,0,2,Cat,15947,[]
+258993,Captured Witherbark Lynx,Normal,0,2,Cat,15947,"[1,1]"
+264675,Imported Lynx,Normal,0,2,Cat,unknown,[]
 30,Forest Spider,Normal,0,3,Spider,12,"[-1,-1]"
 43,Mine Spider,Normal,0,3,Spider,12,"[-1,-1]"
 217,Venom Web Spider,Normal,0,3,Spider,10|44,"[-1,-1]"
@@ -878,7 +880,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 100334,Tyranna's Spawn,Normal,0,3,Spider,7705,"[-1,-1]"
 100703,Leeching Spider,Normal,0,3,Spider,7705,"[-1,-1]"
 100723,Hatchling Creeper,Normal,0,3,Spider,7705,"[-1,-1]"
-101756,Hallucinated Poisonheart Spider,Normal,0,3,Spider,unknown,[]
 101786,Demon Spiderling,Normal,0,3,Spider,7705,"[-1,-1]"
 105049,Cinderweb Creeper,Normal,0,3,Spider,8125,"[-1,-1]"
 105756,Leyline Spiderling,Normal,0,3,Spider,7637,"[-1,-1]"
@@ -911,7 +912,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 112039,Screeching Spiderling,Elite,1,3,Spider,8026,"[-1,-1]"
 112370,Ruins Recluse,Normal,0,3,Spider,7637,"[-1,-1]"
 112461,Aranasi Spiderling,Normal,0,3,Spider,8105,"[-1,-1]"
-112732,Brood of Sael'orn,Elite,1,3,Spider,7996,"[-1,-1]"
 112858,Hungry Spiderling,Normal,0,3,Spider,7637,"[-1,-1]"
 112859,Vicious Spiderling,Normal,0,3,Spider,7637,"[-1,-1]"
 113150,Webby,Normal,0,3,Spider,unknown,[]
@@ -959,7 +959,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 130903,Creepy Spider,Normal,0,3,Spider,unknown,[]
 131283,Crazed Venomspitter,Normal,0,3,Spider,unknown,[]
 131284,Venomspitter Matriarch,Normal,0,3,Spider,unknown,[]
-131890,Rock Stalker,Normal,0,3,Spider,1377,"[-1,-1]"
+131890,Rock Stalker,Normal,0,3,Spider,1377|-6,"[-1,-1]"
 132317,Bilefang Hunter,Normal,0,3,Spider,8721,"[-1,-1]"
 132318,Bilefang Skitterer,Normal,0,3,Spider,8721,"[-1,-1]"
 132319,Bilefang Mother,Rare,4,3,Spider,8721,"[-1,-1]"
@@ -1195,9 +1195,14 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 249397,Enclave Skitterer,Normal,0,3,Spider,15968,"[0,0]"
 250045,Duskleg Lurker,Normal,0,3,Spider,15968,"[-1,-1]"
 250046,Duskling Skitterer,Normal,0,3,Spider,15968,"[0,0]"
+251699,Mine Spider,Normal,0,3,Spider,unknown,[]
+251703,Mine Spider,Normal,0,3,Spider,unknown,[]
+254758,Crypt Spider,Normal,0,3,Spider,16365,"[-1,-1]"
 254816,Duskleg Lurker,Normal,0,3,Spider,15968,"[-1,-1]"
-254818,Duskling Skitterer,Normal,0,3,Spider,15968,[]
+254818,Duskling Skitterer,Normal,0,3,Spider,15968,"[0,null]"
 260988,Frost Crawler,Normal,0,3,Spider,16900,[]
+263653,Mortuary Creeper,Normal,0,3,Spider,16535,"[-1,-1]"
+271247,Spiderling,Normal,0,3,Spider,unknown,[]
 822,Young Forest Bear,Normal,0,4,Bear,12,"[-1,-1]"
 1130,Bjarn,Rare,4,4,Bear,1,"[-1,-1]"
 1186,Black Bear,Normal,0,4,Bear,38,"[-1,-1]"
@@ -1428,7 +1433,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 224496,Hallowfall Bear,Normal,0,4,Bear,14838,[]
 226122,Highland Bear,Normal,0,4,Bear,unknown,[]
 226179,Highland Bear,Normal,0,4,Bear,14838,"[-1,-1]"
-227185,Baer,Normal,0,4,Bear,14752,"[1,1]"
 227255,Caverndeep Kodiak,Normal,0,4,Bear,14838,"[-1,-1]"
 227265,Kodiak Cub,Normal,0,4,Bear,14838,"[0,0]"
 227483,Caverndeep Kodiak,Normal,0,4,Bear,14838,"[-1,-1]"
@@ -1660,17 +1664,32 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 243532,Grazing Boar,Normal,0,5,Boar,15947,"[0,0]"
 243631,Agitated Boar,Normal,0,5,Boar,15947,"[0,0]"
 248500,Backwoods Boar,Normal,0,5,Boar,15947,"[0,0]"
-250116,Mudwallow Boar,Normal,0,5,Boar,15947|16194,"[0,0]"
+250116,Mudwallow Boar,Normal,0,5,Boar,16194|15947,"[0,0]"
 250117,Tusksplitter Boar,Normal,0,5,Boar,15947,"[-1,-1]"
+251634,Giant Boar,Normal,0,5,Boar,unknown,[]
 254132,[DNT],Normal,0,5,Boar,unknown,[]
 254133,[DNT],Normal,0,5,Boar,unknown,[]
 255012,Mudwallow Boar,Normal,0,5,Boar,15947,"[0,0]"
 255749,Tusksplitter Boar,Normal,0,5,Boar,15947,"[-1,-1]"
+256864,Mulchtusk Scavenger,Normal,0,5,Boar,unknown,[]
+257135,Venom-Crazed Boar,Normal,0,5,Boar,unknown,[]
 257880,Backwoods Boar,Normal,0,5,Boar,15947,"[0,0]"
 257881,Backwoods Boar,Normal,0,5,Boar,15947,"[0,0]"
 258069,Mudwallow Boar,Normal,0,5,Boar,15947,"[0,0]"
 258070,Tusksplitter Boar,Normal,0,5,Boar,15947,"[-1,-1]"
 258073,Tusksplitter Boar,Normal,0,5,Boar,3805,[]
+258504,Implanted Boar,Normal,0,5,Boar,16365,"[-1,-1]"
+258980,Gully Hog,Normal,0,5,Boar,16365,"[0,null]"
+260372,Mulchtusk Scavenger,Normal,0,5,Boar,16365,"[0,0]"
+260827,Snuffling Boar,Normal,0,5,Boar,16365,"[0,0]"
+261317,Emaciated Truffle Hog,Normal,0,5,Boar,16365,"[0,0]"
+261478,Ravine Boar,Normal,0,5,Boar,16365,"[0,0]"
+261481,Frenzied Boar,Normal,0,5,Boar,16365,"[-1,-1]"
+261667,Thickhide Boar,Normal,0,5,Boar,16365,"[0,0]"
+261837,Corroded Cliffcharger,Normal,0,5,Boar,16365,"[-1,-1]"
+262009,Mutated Double-Spine Hog,Normal,0,5,Boar,16365,"[-1,-1]"
+262960,Mutated Ravine Hogbeast,Normal,0,5,Boar,16365,"[-1,-1]"
+264503,Untouched Tusksplitter,Normal,0,5,Boar,16365,"[-1,-1]"
 1150,River Crocolisk,Normal,0,6,Crocolisk,33,"[-1,-1]"
 1152,Snapjaw Crocolisk,Normal,0,6,Crocolisk,33,"[-1,-1]"
 1693,Loch Crocolisk,Normal,0,6,Crocolisk,38,"[-1,-1]"
@@ -1755,7 +1774,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 162336,Neferset Crocolisk,Normal,0,6,Crocolisk,10833,"[-1,-1]"
 199196,Sandy Crocolisk,Normal,0,6,Crocolisk,5287,"[-1,-1]"
 210841,Swamp Crocolisk,Normal,0,6,Crocolisk,4706,[]
-244873,Tamed Amani Crocolisk,Elite,1,6,Crocolisk,16194,"[-1,-1]"
+244873,Tamed Amani Crocolisk,Elite,1,6,Crocolisk,16194|-15,"[-1,-1]"
 244874,Amani Crocolisk,Elite,1,6,Crocolisk,16194,"[0,0]"
 154,Greater Fleshripper,Normal,0,7,Carrion Bird,40,"[-1,-1]"
 199,Young Fleshripper,Normal,0,7,Carrion Bird,40,"[-1,-1]"
@@ -2375,6 +2394,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250105,Nibbler Crab,Normal,0,8,Crab,15947,"[0,0]"
 251462,Sunset Clacker,Normal,0,8,Crab,16215,"[0,0]"
 251467,Split-Open Clacker,Normal,0,8,Crab,16215,[]
+251646,Crab,Normal,0,8,Crab,unknown,[]
+251647,Crab,Normal,0,8,Crab,unknown,[]
 251705,Hungry Hatchling,Normal,0,8,Crab,15947,"[0,0]"
 252221,King Crab,Normal,0,8,Crab,15947,"[-1,-1]"
 252222,Carnivorous Crab,Normal,0,8,Crab,15947,"[-1,-1]"
@@ -2384,12 +2405,18 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255061,Crusher Crab,Normal,0,8,Crab,15947,[]
 255747,Catch-Stealing Crab,Normal,0,8,Crab,unknown,[]
 255748,Bait-Stealing Crab,Normal,0,8,Crab,unknown,[]
+256712,Scrawny Pebbledweller,Normal,0,8,Crab,16365,"[0,0]"
 257265,Void-Crazed Crawler,Normal,0,8,Crab,15947,"[-1,-1]"
 257275,Crawler Corpse,Normal,0,8,Crab,15947,"[-1,-1]"
 257442,Mangled Crawler,Normal,0,8,Crab,15947,"[-1,-1]"
 259329,Crawler Corpse,Normal,0,8,Crab,15947,"[-1,-1]"
+260081,Hefty Stonecracker,Normal,0,8,Crab,16365,"[-1,-1]"
 261125,Shoreline Scuttler,Normal,0,8,Crab,15947,"[0,0]"
 261126,Blueblood Crawler,Normal,0,8,Crab,15947,"[-1,-1]"
+263695,Zecrogon,Normal,0,8,Crab,16365,"[-1,-1]"
+264705,Fringe Clacker,Normal,0,8,Crab,16365,"[0,0]"
+265332,Surviving Whelkshell,Normal,0,8,Crab,16365,"[0,0]"
+265333,Whelkshell Hulk,Normal,0,8,Crab,16365,"[0,0]"
 1511,Enraged Silverback Gorilla,Normal,0,9,Gorilla,5287,"[-1,-1]"
 1516,Konda,Normal,0,9,Gorilla,5287,"[-1,-1]"
 1557,Elder Mistvale Gorilla,Normal,0,9,Gorilla,5287,"[-1,-1]"
@@ -2630,7 +2657,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 139842,Risen Ravasaur,Normal,0,11,Raptor,9525,[]
 140699,Bonescreamer,Normal,0,11,Raptor,8499,"[null,-1]"
 142312,Skullripper,Rare Elite,2,11,Raptor,9439|9734,"[-1,-1]"
-142338,Highland Strider,Normal,0,11,Raptor,45,"[-1,-1]"
+142338,Highland Strider,Normal,0,11,Raptor,45|16432,"[-1,-1]"
 142339,Highland Thrasher,Normal,0,11,Raptor,45,"[-1,-1]"
 142340,Highland Fleshstalker,Normal,0,11,Raptor,45,"[-1,-1]"
 142437,Skullripper,Rare Elite,2,11,Raptor,45,"[-1,-1]"
@@ -2656,7 +2683,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 210161,Ristar the Rabid,Rare,4,11,Raptor,14529,"[-1,-1]"
 210229,Mischievous Dreamtalon,Normal,0,11,Raptor,14529,"[0,0]"
 210230,Dreamtalon Packwatcher,Normal,0,11,Raptor,14529,"[0,0]"
-210324,Raised Boneripper,Normal,0,11,Raptor,6453,"[null,-1]"
+210324,Raised Boneripper,Normal,0,11,Raptor,6453,"[-1,-1]"
 210892,Striped Dreamtalon,Normal,0,11,Raptor,14529,"[-1,-1]"
 211194,Stunned Dreamtalon,Normal,0,11,Raptor,14529,"[0,0]"
 211195,Inspired Dreamtalon,Normal,0,11,Raptor,14529,"[0,0]"
@@ -3112,7 +3139,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 211184,Petalmuncher Tortoise,Normal,0,21,Turtle,14529,"[0,0]"
 212143,Cerulean Greyback,Normal,0,21,Turtle,14529,"[-1,-1]"
 213822,Turtle,Normal,0,21,Turtle,unknown,[]
-214214,Vigilant Turtle,Normal,0,21,Turtle,15105|14969|13642,"[0,null]"
+214214,Vigilant Turtle,Normal,0,21,Turtle,15105|14969,"[0,null]"
 214215,Vigilant Snapper,Normal,0,21,Turtle,15105|14969|13642,"[-1,null]"
 214226,Shadechaser Snapper,Normal,0,21,Turtle,15105|14969,"[-1,null]"
 214227,Shadechaser Turtle,Normal,0,21,Turtle,15105|14969,"[0,null]"
@@ -3125,7 +3152,16 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250163,Spikeshell Snapper,Normal,0,21,Turtle,15947,"[0,0]"
 250164,Meandering Spikeshell,Normal,0,21,Turtle,15947,"[0,0]"
 250165,Tempered Spikeshell,Normal,0,21,Turtle,15947,"[0,0]"
+251648,Turtle,Normal,0,21,Turtle,unknown,[]
 257154,Abasi Snapper,Normal,0,21,Turtle,15947,"[0,0]"
+257535,Venom-Crazed Turtle,Normal,0,21,Turtle,unknown,[]
+257600,Murkfen Muckstomper,Normal,0,21,Turtle,16365,"[-1,-1]"
+258111,Clouded Crystalshell,Normal,0,21,Turtle,16365,"[0,0]"
+260368,Armored Snacktooth,Normal,0,21,Turtle,16365,"[0,0]"
+262691,Crazed Crystalshell,Normal,0,21,Turtle,16365,"[-1,-1]"
+262977,Snapping Fractureshell,Normal,0,21,Turtle,16365,"[0,0]"
+264668,Mosshell Stumper,Normal,0,21,Turtle,unknown,[]
+265237,Lockjaw,Rare,4,21,Turtle,16365,"[-1,-1]"
 1512,Duskbat,Normal,0,24,Bat,6454|85,"[0,0]"
 1513,Mangy Duskbat,Normal,0,24,Bat,6454,"[0,0]"
 1553,Greater Duskbat,Normal,0,24,Bat,85|13983,"[0,0]"
@@ -3545,6 +3581,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 95328,Fel Raven,Elite,1,26,Bird of Prey,6723,"[-1,-1]"
 95762,Irewing,Elite,1,26,Bird of Prey,7503,"[-1,-1]"
 97124,Spitefeather,Elite,1,26,Bird of Prey,7541,"[-1,-1]"
+97163,Cursed Falke,Normal,0,26,Bird of Prey,7812,"[-1,-1]"
 97345,Crawshuk the Hungry,Rare,4,26,Bird of Prey,7503,"[-1,-1]"
 97755,Galecrested Eagle,Normal,0,26,Bird of Prey,7541,"[0,0]"
 97809,Coastal Seagull,Normal,0,26,Bird of Prey,7541|13577,"[0,0]"
@@ -3554,7 +3591,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 100496,Silvered Streaker,Normal,0,26,Bird of Prey,7558,"[0,0]"
 102415,Suramar Skyhunter,Normal,0,26,Bird of Prey,7637,"[0,0]"
 102741,Highcliff Gull,Normal,0,26,Bird of Prey,7503,"[0,0]"
-103045,Plaguemaw,Rare Elite,2,26,Bird of Prey,7812,"[-1,-1]"
 103079,Highmountain Eagle,Normal,0,26,Bird of Prey,7503|7558,"[0,0]"
 103480,Northwind Hawk,Normal,0,26,Bird of Prey,5841,"[null,-1]"
 103540,Starclutch Screecher,Normal,0,26,Bird of Prey,7637,"[0,0]"
@@ -3702,7 +3738,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 176630,Wind Eagle,Normal,0,26,Bird of Prey,unknown,[]
 176646,Redwing Raptora,Elite,1,26,Bird of Prey,unknown,[]
 178238,Desert Raptora,Normal,0,26,Bird of Prey,13536,"[-1,-1]"
-179004,Basal Raptora,Normal,0,26,Bird of Prey,13536,"[-1,-1]"
+179004,Basal Raptora,Normal,0,26,Bird of Prey,13536|13952,"[-1,-1]"
 180052,Grasslands Raptora,Normal,0,26,Bird of Prey,13536,"[-1,-1]"
 180924,Garudeon,Rare Elite,2,26,Bird of Prey,13536,"[-1,-1]"
 181311,Wild Ohuna,Normal,0,26,Bird of Prey,13769,"[0,0]"
@@ -3983,14 +4019,28 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250119,Giant Eagle,Elite,1,26,Bird of Prey,unknown,[]
 250120,Keen-Eye Riptalon,Normal,0,26,Bird of Prey,15947,"[0,0]"
 250121,Giant Eagle,Normal,0,26,Bird of Prey,unknown,[]
+251631,Giant Eagle,Normal,0,26,Bird of Prey,unknown,[]
 253173,Keen-Eye Riptalon,Normal,0,26,Bird of Prey,16194|15947,"[0,0]"
-254628,Mountain Rocktalon,Normal,0,26,Bird of Prey,15968,"[-1,-1]"
+254628,Mountain Rocktalon,Normal,0,26,Bird of Prey,15968|15947,"[-1,-1]"
 254629,Mountain Rocktalon,Normal,0,26,Bird of Prey,15968,"[-1,-1]"
 254631,Rocktalon Scavenger,Normal,0,26,Bird of Prey,15968,"[-1,-1]"
 254646,Rocktalon Scavenger,Normal,0,26,Bird of Prey,15968,"[-1,-1]"
 255042,Riptalon Eviscerator,Normal,0,26,Bird of Prey,15947,"[-1,-1]"
 255490,Aman Eagle,Normal,0,26,Bird of Prey,16194,"[1,1]"
 256902,Giant Eagle,Normal,0,26,Bird of Prey,15947,[]
+257146,Venom-Crazed Eagle,Normal,0,26,Bird of Prey,unknown,[]
+258394,Steely Seabird,Normal,0,26,Bird of Prey,16365,[]
+258511,Infected Eagle,Normal,0,26,Bird of Prey,16365,"[-1,-1]"
+258943,Highcliff Osprey,Normal,0,26,Bird of Prey,16365,"[0,0]"
+258945,Highcliff Osprey,Normal,0,26,Bird of Prey,unknown,[]
+260371,Scavenging Filthfeather,Normal,0,26,Bird of Prey,16365,"[0,0]"
+261307,Slickfeather Eagle,Normal,0,26,Bird of Prey,16365,"[null,0]"
+261666,Screeching Eagle,Normal,0,26,Bird of Prey,16365,"[null,0]"
+262972,Corroded Skystriker,Normal,0,26,Bird of Prey,16365,"[-1,-1]"
+264659,Steelfeather Eagle,Normal,0,26,Bird of Prey,16365,"[0,0]"
+264671,Forum Windchaser,Normal,0,26,Bird of Prey,16365,[]
+265672,Acidburned Osprey,Normal,0,26,Bird of Prey,16365,"[-1,-1]"
+271067,Ravenous Seabird,Normal,0,26,Bird of Prey,16365,"[-1,-1]"
 3630,Deviate Coiler,Normal,0,27,Wind Serpent,17,"[-1,-1]"
 3631,Deviate Stinglash,Normal,0,27,Wind Serpent,17,"[-1,-1]"
 4117,Cloud Serpent,Normal,0,27,Wind Serpent,400,"[-1,-1]"
@@ -4010,7 +4060,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 9397,Unearthed Fossil,Normal,0,27,Wind Serpent,440,"[-1,-1]"
 14234,Hayoc,Rare,4,27,Wind Serpent,15,"[-1,-1]"
 19428,Cobalt Serpent,Elite,1,27,Wind Serpent,3791,"[-1,-1]"
-20673,Swiftwing Shredder,Normal,0,27,Wind Serpent,3523,"[-1,-1]"
+20673,Swiftwing Shredder,Normal,0,27,Wind Serpent,3523|-2,"[-1,-1]"
 20749,Scalewing Serpent,Normal,0,27,Wind Serpent,3522,"[-1,-1]"
 20797,Deviate Coiler Hatchling,Normal,0,27,Wind Serpent,17,"[-1,-1]"
 20999,Scalewing Soarer,Normal,0,27,Wind Serpent,unknown,[]
@@ -4100,6 +4150,29 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 188633,Wind Serpent,Normal,0,27,Wind Serpent,unknown,[]
 191645,Wind Serpent,Normal,0,27,Wind Serpent,13644,"[-1,-1]"
 191647,Young Wind Serpent,Normal,0,27,Wind Serpent,13644,"[0,0]"
+251788,Wind Serpent,Normal,0,27,Wind Serpent,unknown,[]
+251793,Wind Serpent,Normal,0,27,Wind Serpent,unknown,[]
+253695,Screaming Skyfang,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+253761,Vilescar Harrier,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+253885,Coiling Skyfang,Normal,0,27,Wind Serpent,unknown,[]
+253886,Coiling Windlash,Normal,0,27,Wind Serpent,unknown,[]
+253889,Hissing Cobra,Normal,0,27,Wind Serpent,unknown,[]
+254351,Vilescar Harrier,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+254973,Vilescar Shrieker,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+256213,Coiling Skyfang,Normal,0,27,Wind Serpent,15947,"[-1,-1]"
+256792,Scaleskin Harrier,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+256845,Coiling Harrier,Normal,0,27,Wind Serpent,15947,"[-1,-1]"
+257562,Guardian Wind Serpent,Normal,0,27,Wind Serpent,unknown,[]
+257864,Exalted Skyfiend,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+258961,Scalewing Hunter,Normal,0,27,Wind Serpent,16594|16642|16556,[]
+259768,Coiling Serpent,Normal,0,27,Wind Serpent,15947,"[-1,-1]"
+259952,Coiling Skyfang,Normal,0,27,Wind Serpent,15947,"[-1,-1]"
+261694,Coiling Skyfang,Normal,0,27,Wind Serpent,15947,"[-1,-1]"
+263464,Slithering Skyfang,Normal,0,27,Wind Serpent,unknown,[]
+263571,Winged Menace,Normal,0,27,Wind Serpent,unknown,[]
+264159,Pugnacious Harrier,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+265969,Carrion Harrier,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
+268981,Newborn Skyfang,Normal,0,27,Wind Serpent,16365,"[-1,-1]"
 15649,Feral Dragonhawk Hatchling,Normal,0,30,Dragonhawk,3430,"[0,0]"
 15650,Crazed Dragonhawk,Normal,0,30,Dragonhawk,3430,"[0,0]"
 18155,Bloodfalcon,Elite,1,30,Dragonhawk,3847,"[-1,-1]"
@@ -4162,6 +4235,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257520,Mirebeak Alpha,Normal,0,30,Dragonhawk,15947,"[-1,-1]"
 258977,Dragonhawk,Normal,0,30,Dragonhawk,unknown,[]
 259914,Tortured Dragonhawk,Normal,0,30,Dragonhawk,16796,[]
+265480,Enraged Dragonhawk,Normal,0,30,Dragonhawk,15947,"[-1,-1]"
+271028,Enraged Dragonhawk,Normal,0,30,Dragonhawk,15947,"[-1,-1]"
 16932,Razorfang Hatchling,Normal,0,31,Ravager,3483,"[-1,-1]"
 16933,Razorfang Ravager,Normal,0,31,Ravager,3483,"[-1,-1]"
 16934,Quillfang Ravager,Normal,0,31,Ravager,3483,"[-1,-1]"
@@ -4231,7 +4306,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250555,Kilivore,Normal,0,31,Ravager,unknown,[]
 252684,Marrowmaw Kilivore,Normal,0,31,Ravager,15958,"[-1,-1]"
 252894,Razorshell Ravager,Normal,0,31,Ravager,unknown,[]
-253179,Razorshell Ravager,Normal,0,31,Ravager,16642|16545|16549,[]
+253179,Razorshell Ravager,Normal,0,31,Ravager,16557|16548|16549,[]
 254970,Bloodletter Kilivore,Normal,0,31,Ravager,15458,"[-1,-1]"
 254974,Ravenous Kilivore,Normal,0,31,Ravager,15458,"[-1,-1]"
 257044,Kilivore Tribute,Normal,0,31,Ravager,15458,"[-1,-1]"
@@ -4313,6 +4388,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257445,Agitated Voidcrawler,Normal,0,32,Warp Stalker,15458|15958,"[-1,-1]"
 259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]"
 265254,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|17103,"[-1,-1]"
+271206,Voidstalker,Normal,0,32,Warp Stalker,unknown,[]
 17724,Underbat,Elite,1,33,Sporebat,3716,"[-1,-1]"
 17736,Underbat Swarmer,Normal,0,33,Sporebat,unknown,[]
 18128,Sporebat,Normal,0,33,Sporebat,3521,"[0,0]"
@@ -4485,7 +4561,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 237847,Nether Ray,Normal,0,34,Ray,unknown,[]
 238492,Gale Stormray,Normal,0,34,Ray,15458,"[-1,-1]"
 240511,Twilight Ray,Normal,0,34,Ray,16194,"[-1,-1]"
-240544,Vicious Ray,Normal,0,34,Ray,16194|-15,"[-1,-1]"
+240544,Vicious Ray,Normal,0,34,Ray,16194,"[-1,-1]"
 241363,Siltwing Hunter,Normal,0,34,Ray,15336,"[-1,-1]"
 242035,The Devouring Invader,Rare,4,34,Ray,15947,"[-1,-1]"
 242351,Void-Altered Ray,Normal,0,34,Ray,15336,"[0,0]"
@@ -4494,7 +4570,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 245895,Nether Ray,Normal,0,34,Ray,unknown,[]
 245897,Nether Ray,Normal,0,34,Ray,15968,"[-1,-1]"
 246060,Stormray Remora,Normal,0,34,Ray,15958,"[-1,-1]"
-246640,Netherhunter Infestor,Normal,0,34,Ray,15458,"[-1,-1]"
+246640,Netherhunter Infestor,Normal,0,34,Ray,15458|16534,"[-1,-1]"
 247445,Drifting Stormray,Normal,0,34,Ray,15458,"[-1,-1]"
 248425,Territorial Sporebat,Normal,0,34,Ray,unknown,[]
 249039,Lurking Stormray,Normal,0,34,Ray,15458,"[0,0]"
@@ -4539,6 +4615,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 28011,Emperor Cobra,Normal,0,35,Serpent,3711,"[-1,-1]"
 28358,Venomtip,Normal,0,35,Serpent,3711,"[-1,-1]"
 29444,Drakkari Snake,Normal,0,35,Serpent,66,"[-1,-1]"
+29630,Fanged Pit Viper,Normal,0,35,Serpent,4416,"[0,0]"
+29637,Crafty Snake,Normal,0,35,Serpent,4416,"[0,0]"
 29713,Slad'ran Constrictor,Normal,0,35,Serpent,4416,"[-1,-1]"
 36362,Swamp Adder,Normal,0,35,Serpent,unknown,[]
 40280,Swarming Serpent,Normal,0,35,Serpent,5144,"[0,0]"
@@ -4617,11 +4695,10 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 131609,Hiss'ak,Elite,1,35,Serpent,unknown,[]
 133384,Merektha,Elite,1,35,Serpent,9527,"[-1,-1]"
 133980,Ayame,Elite,1,35,Serpent,8500,"[-1,-1]"
-134390,Sand-crusted Striker,Elite,1,35,Serpent,9527,"[-1,-1]"
 135005,Entangler,Elite,1,35,Serpent,unknown,[]
 135061,Water Serpent,Normal,0,35,Serpent,8501,"[-1,-1]"
 135789,Mud Lurker Python,Normal,0,35,Serpent,8500,"[-1,-1]"
-135846,Sand-Crusted Striker,Elite,1,35,Serpent,9527,"[-1,-1]"
+135846,Lightning Serpent,Elite,1,35,Serpent,9527,"[-1,-1]"
 136593,Sevriss,Elite,1,35,Serpent,8501,"[-1,-1]"
 137183,Honey-Coated Slitherer,Rare,4,35,Serpent,8567,"[-1,-1]"
 137824,Arclight,Rare,4,35,Serpent,8721,"[-1,-1]"
@@ -4812,12 +4889,24 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250824,Lightfrenzied Devourer,Normal,0,35,Serpent,15968,"[-1,-1]"
 250882,Amber Wyrm,Normal,0,35,Serpent,15969,"[0,0]"
 251468,Listless Mana Wyrm,Normal,0,35,Serpent,16215,"[0,0]"
+251642,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+251644,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+251657,Python,Normal,0,35,Serpent,unknown,[]
+251677,Cobra,Normal,0,35,Serpent,unknown,[]
+251679,Cobra,Normal,0,35,Serpent,unknown,[]
+251794,Writhe,Normal,0,35,Serpent,unknown,[]
+251837,Writhe,Normal,0,35,Serpent,unknown,[]
 253397,Slithering Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
 253558,Adzikel,Normal,0,35,Serpent,15355,"[-1,-1]"
+253697,Ravenous Cobraling,Normal,0,35,Serpent,16365,"[-1,-1]"
+253765,Brood Watcher,Normal,0,35,Serpent,16365,"[-1,-1]"
+253890,Hooded Amberfang,Normal,0,35,Serpent,unknown,[]
 253959,Arcane Manathirster,Normal,0,35,Serpent,15968,"[0,0]"
 253960,Mana Thirster,Normal,0,35,Serpent,15968,[]
 253961,Mana Thirster,Normal,0,35,Serpent,15968,[]
 253962,Arcane Manathirster,Normal,0,35,Serpent,15968,[]
+254511,Ravenous Python,Normal,0,35,Serpent,16365,"[0,0]"
+254964,Insatiate Hatchling,Normal,0,35,Serpent,16365,"[0,0]"
 254972,Void-Bloated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
 255079,Opportunistic Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
 255148,Arcane Wyrmling,Normal,0,35,Serpent,15968,"[0,0]"
@@ -4825,10 +4914,61 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255302,Duskburn,Rare,4,35,Serpent,15968,"[-1,-1]"
 255709,Reinfused Felwyrm,Normal,0,35,Serpent,16091,[]
 255871,Lightbloom Crawler,Normal,0,35,Serpent,15355,"[0,0]"
+256226,Python,Normal,0,35,Serpent,unknown,[]
 256695,Mature Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
 256696,Juvenile Rootcrawler,Normal,0,35,Serpent,15355,"[0,0]"
 256700,Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+256773,Devouring Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
+257334,Hungry Swarmling,Normal,0,35,Serpent,unknown,[]
+257560,Engorged Writhe,Normal,0,35,Serpent,unknown,[]
+257894,Writhing Young,Normal,0,35,Serpent,16365,"[-1,-1]"
 258190,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+258549,Newborn Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
+258955,Frilled Spitter,Normal,0,35,Serpent,15355,[]
+258959,Ula'tek T3,Elite,1,35,Serpent,unknown,[]
+258962,Writhing Ripcoil,Normal,0,35,Serpent,16545|16642|16594,[]
+259131,Timber Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+259132,Timber Whelp,Normal,0,35,Serpent,16365,"[-1,-1]"
+259134,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+259135,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+259137,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+260670,Writhing Scaleknot,Normal,0,35,Serpent,unknown,[]
+260844,Seething Venommaw,Normal,0,35,Serpent,unknown,[]
+260872,Writhing Neonate,Normal,0,35,Serpent,unknown,[]
+261122,Agitated Python,Normal,0,35,Serpent,16365,"[-1,-1]"
+261124,Incensed Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+261177,Swarming Chestbiter,Normal,0,35,Serpent,15947,"[-1,-1]"
+261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+261375,Swarming Python,Normal,0,35,Serpent,16365,"[-1,-1]"
+261377,Preying Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
+261398,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
+261643,Summoned Serpent,Normal,0,35,Serpent,16535,"[-1,-1]"
+261644,Swarming Cobra,Normal,0,35,Serpent,unknown,[]
+261820,Venom-Bloated Python,Normal,0,35,Serpent,16365|15968|15947,"[-1,-1]"
+261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,"[-1,-1]"
+262439,Wild Snake,Normal,0,35,Serpent,16365,[]
+262503,Vicious Coiler,Normal,0,35,Serpent,unknown,[]
+263356,Lurking Coiler,Normal,0,35,Serpent,unknown,"[-1,-1]"
+263359,Sacred Doomcoiler,Elite,1,35,Serpent,unknown,"[-1,-1]"
+263393,Territorial Eel,Normal,0,35,Serpent,16365,"[-1,-1]"
+263572,Devouring Writhe,Normal,0,35,Serpent,unknown,[]
+263793,Fledgling Corpseburster,Normal,0,35,Serpent,16365|16535|15969,"[-1,-1]"
+264350,Summoned Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
+264655,Lurking Thorntail,Normal,0,35,Serpent,16365,"[-1,-1]"
+264667,Frilled Spitter,Normal,0,35,Serpent,unknown,[]
+265048,Burrow Spitter,Normal,0,35,Serpent,unknown,[]
+265049,Burrow Stinger,Normal,0,35,Serpent,unknown,[]
+265051,Burrow Python,Normal,0,35,Serpent,unknown,[]
+265289,Fledgling Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
+265343,Nest Coiler,Normal,0,35,Serpent,16365,"[0,0]"
+265968,Writhing Bonechewer,Normal,0,35,Serpent,16365,"[-1,-1]"
+268908,Coiling Writhewatcher,Normal,0,35,Serpent,unknown,"[-1,-1]"
+268911,Frilled Spitter,Normal,0,35,Serpent,unknown,"[-1,-1]"
+268973,Newborn Writhe,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
+268979,Newborn Cobra,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
+270233,Venomspawn Snapper,Normal,0,35,Serpent,16365,"[-1,-1]"
+270767,Newborn Snake,Normal,0,35,Serpent,16365,"[-1,-1]"
+273290,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
 16520,Vale Moth,Normal,0,37,Moth,6456|3524,"[0,0]"
 17349,Blue Flutterer,Normal,0,37,Moth,3525,"[0,0]"
 17350,Royal Blue Flutterer,Normal,0,37,Moth,3525,"[0,0]"
@@ -5244,6 +5384,22 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 175788,Grimshadow,Normal,0,38,Chimaera,11462,"[1,1]"
 175789,Grimshadow,Normal,0,38,Chimaera,11462,"[1,1]"
 176810,Mechancal Dragon,Elite,1,38,Chimaera,unknown,[]
+253764,Vilescar Skyfiend,Normal,0,38,Chimaera,16365,"[-1,-1]"
+253884,Winged Skyfang,Normal,0,38,Chimaera,15947,"[-1,-1]"
+255088,Looming Mutagenitor,Rare Elite,2,38,Chimaera,16365,"[-1,-1]"
+256207,Screeching Skyfiend,Normal,0,38,Chimaera,15947,"[-1,-1]"
+256791,Scaleskin Vilewing,Normal,0,38,Chimaera,16365,"[-1,-1]"
+257559,Scaled Shrieker,Elite,1,38,Chimaera,unknown,[]
+259063,Winged Skyfang,Normal,0,38,Chimaera,15947,"[-1,-1]"
+259275,Deathcoil Skyfiend,Normal,0,38,Chimaera,15947,"[-1,-1]"
+259699,Swooping Viper,Normal,0,38,Chimaera,15947,"[-1,-1]"
+259767,Shrieking Skyfiend,Normal,0,38,Chimaera,15947,"[-1,-1]"
+261378,Gorged Skyfiend,Elite,1,38,Chimaera,16535,"[-1,-1]"
+261396,Prowling Skyfiend,Normal,0,38,Chimaera,16535,"[-1,-1]"
+261554,Twinfang Harrower,Elite,1,38,Chimaera,16865,[]
+261693,Coiling Windlash,Normal,0,38,Chimaera,15947,"[-1,-1]"
+261789,Caustic Abductor,Normal,0,38,Chimaera,16365,"[-1,-1]"
+262086,Winged Skyfang,Normal,0,38,Chimaera,unknown,[]
 6498,Devilsaur,Elite,1,39,Devilsaur,490,"[-1,-1]"
 6499,Ironhide Devilsaur,Elite,1,39,Devilsaur,490,"[-1,-1]"
 6500,Tyrant Devilsaur,Elite,1,39,Devilsaur,490,"[-1,-1]"
@@ -5484,7 +5640,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 67084,Giant Siftworm,Normal,0,42,Worm,5785,"[1,1]"
 67820,Bombyx,Elite,1,42,Worm,6134,"[-1,-1]"
 73227,Wastes Rockworm,Normal,0,42,Worm,6720,"[-1,-1]"
-74032,Frost Wolf,Normal,0,42,Worm,6720,"[null,1]"
 78213,Snow Lurker,Normal,0,42,Worm,6720,"[-1,-1]"
 81198,Rock Burrower,Normal,0,42,Worm,unknown,[]
 81276,Snow Worm,Normal,0,42,Worm,unknown,[]
@@ -5655,13 +5810,16 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250503,Invasive Consumptor,Normal,0,42,Worm,16340,[]
 250561,Consumptor,Normal,0,42,Worm,unknown,[]
 250562,Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
-250635,Consumptor,Normal,0,42,Worm,unknown,"[-1,-1]"
+250635,Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
 250659,Consumptor,Normal,0,42,Worm,unknown,[]
 252151,Basincrawler Grub,Normal,0,42,Worm,15968,"[0,0]"
+252197,Swamp Leech,Normal,0,42,Worm,unknown,[]
+252202,Swamp Leech,Normal,0,42,Worm,unknown,[]
 252240,Invasive Consumptor,Normal,0,42,Worm,16340,[]
+253489,Sludge Biter,Normal,0,42,Worm,16365,"[-1,-1]"
 254581,Mature Dunedweller,Normal,0,42,Worm,15458,"[-1,-1]"
 254582,Dunedweller Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
-255055,Wrathshell Consumptor,Elite,1,42,Worm,16642|16556|16545,[]
+255055,Wrathshell Consumptor,Elite,1,42,Worm,16542|16642|16548,[]
 255139,Wallows Mukleech,Normal,0,42,Worm,15947,"[-1,-1]"
 255141,Spiny Leechling,Normal,0,42,Worm,15947,"[-1,-1]"
 255154,Boggorm Recluse,Normal,0,42,Worm,15947,"[-1,-1]"
@@ -5671,7 +5829,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 256608,Invasive Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
 257181,Ridgecrawler Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
 257182,Mature Ridgecrawler,Normal,0,42,Worm,15458,"[-1,-1]"
-257185,Insatiable Consumptor,Normal,0,42,Worm,15458|15958,"[-1,-1]"
+257185,Insatiable Consumptor,Normal,0,42,Worm,15958|15458,"[-1,-1]"
 257189,Insatiable Consumptor,Normal,0,42,Worm,unknown,[]
 257201,Ravenous Consumptor,Normal,0,42,Worm,unknown,[]
 257271,Gorging Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
@@ -5684,8 +5842,11 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257963,Insatiable Consumptor,Normal,0,42,Worm,unknown,[]
 258269,Voidsated Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
 258999,Voidcraven Consumptor,Normal,0,42,Worm,15458,"[-1,-1]"
+261635,Greenhusk Leechling,Normal,0,42,Worm,16365,"[-1,-1]"
 261981,Rime Worm,Normal,0,42,Worm,16900,[]
 264297,Rime Worm,Normal,0,42,Worm,unknown,[]
+265336,Sludgeback Leech,Normal,0,42,Worm,16365,"[0,0]"
+265337,Sludgling,Normal,0,42,Worm,16365,"[0,0]"
 16931,Enraged Clefthoof,Normal,0,43,Clefthoof,unknown,[]
 17132,Clefthoof Bull,Normal,0,43,Clefthoof,3518,"[-1,-1]"
 17133,Aged Clefthoof,Normal,0,43,Clefthoof,3518,"[-1,-1]"
@@ -6110,6 +6271,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250546,Venomous Netherwaspling,Normal,0,44,Wasp,15458,"[-1,-1]"
 250548,Venomous Netherwasp,Normal,0,44,Wasp,15458,"[-1,-1]"
 250549,Venomous Netherwasp,Normal,0,44,Wasp,unknown,[]
+251651,Giant Wasp,Normal,0,44,Wasp,unknown,[]
+251652,Giant Wasp,Normal,0,44,Wasp,unknown,[]
 252683,Scavenging Netherwasp,Normal,0,44,Wasp,15958,"[-1,-1]"
 253499,Bluffs Hornet,Normal,0,44,Wasp,15947,"[0,0]"
 253620,Netherwasp Drone,Normal,0,44,Wasp,15458,"[0,0]"
@@ -6119,6 +6282,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 254685,Venomous Netherwasp,Normal,0,44,Wasp,unknown,[]
 255142,Mudcoat Stingling,Normal,0,44,Wasp,15947,"[-1,-1]"
 255549,Netherwasp Drone,Normal,0,44,Wasp,15458,"[-1,-1]"
+256763,Ornery Muckstinger,Normal,0,44,Wasp,16365,"[-1,-1]"
 257140,Spitesting Netherwasp,Normal,0,44,Wasp,15458,"[-1,-1]"
 257145,Spitesting Hatchling,Normal,0,44,Wasp,unknown,[]
 257149,Spitesting Hatchling,Normal,0,44,Wasp,15458,"[-1,-1]"
@@ -6129,9 +6293,13 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257221,Hatesting Netherwasp,Normal,0,44,Wasp,15458,"[-1,-1]"
 257945,Stinger Matriarch,Normal,0,44,Wasp,15947,"[-1,-1]"
 257946,Stinger Hatchling,Normal,0,44,Wasp,15947,"[0,0]"
+258931,Rotsting Swarmer,Normal,0,44,Wasp,16365,"[-1,-1]"
 259955,Murderous Mudcoat,Normal,0,44,Wasp,15947,"[-1,-1]"
-261681,Costal Greenhead,Normal,0,44,Wasp,15947,[]
+261476,Spineback Hornet,Normal,0,44,Wasp,16365,"[-1,-1]"
+261651,Carrion Hornet,Normal,0,44,Wasp,16365,"[-1,-1]"
+261681,Costal Greenhead,Normal,0,44,Wasp,15947,"[0,0]"
 261682,Fiery Yellowjacket,Normal,0,44,Wasp,15947,"[-1,-1]"
+263694,Spiritsting,Normal,0,44,Wasp,16365,"[-1,-1]"
 11671,Core Hound,Elite,1,45,Core Hound,2717,"[-1,-1]"
 11672,Core Rager,Elite,1,45,Core Hound,2717,"[-1,-1]"
 11673,Ancient Core Hound,Elite,1,45,Core Hound,2717,"[-1,-1]"
@@ -6374,6 +6542,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 61657,Adolescent Flame Hound,Elite,1,52,Hound,2437,"[-1,-1]"
 61658,Mature Flame Hound,Elite,1,52,Hound,2437,"[-1,-1]"
 69095,Test Subject,Normal,0,52,Hound,unknown,[]
+70702,Flame Hound,Elite,1,52,Hound,6731,"[-1,-1]"
 71009,Kor'kron Flameworg,Normal,0,52,Hound,17,"[0,0]"
 73325,Fel Wolf,Normal,0,52,Hound,6720,"[-1,-1]"
 77026,Depraved Hunter,Normal,0,52,Hound,6662,"[-1,-1]"
@@ -6401,6 +6570,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 94201,Terrorfang Hound,Normal,0,52,Hound,unknown,[]
 94866,Nether Mongrel,Normal,0,52,Hound,unknown,[]
 95469,Vicious Hellhound,Normal,0,52,Hound,unknown,[]
+97119,Shroud Hound,Normal,0,52,Hound,7812,"[-1,-1]"
 97330,Raxx,Elite,1,52,Hound,unknown,"[-1,-1]"
 98069,Mist Watchhound,Normal,0,52,Hound,7541,"[-1,-1]"
 98276,Fenri,Rare,4,52,Hound,unknown,[]
@@ -6456,6 +6626,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 140555,Flare Mongrel,Rare,4,52,Hound,unknown,[]
 140556,Smokehound,Rare,4,52,Hound,unknown,[]
 140557,Ripface,Rare,4,52,Hound,unknown,[]
+140558,Inferno Terror,Rare Elite,2,52,Hound,9496|10222|9616,"[-1,-1]"
 140560,Blazeseeker,Rare Elite,2,52,Hound,9496|10222|9497,"[-1,-1]"
 141118,Yard Dog,Normal,0,52,Hound,9042,"[1,-1]"
 141729,Blazehound,Normal,0,52,Hound,unknown,[]
@@ -6682,7 +6853,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 229179,Duskborn Pup,Normal,0,52,Hound,14838,"[0,0]"
 230142,Trained Wavehound,Normal,0,52,Hound,unknown,[]
 230837,Drowned Helhound,Normal,0,52,Hound,unknown,[]
-242781,Bakar,Normal,0,52,Hound,unknown,[]
+266327,Felhound,Normal,0,52,Hound,unknown,[]
+267359,Felhound,Normal,0,52,Hound,unknown,[]
 3253,Silithid Harvester,Rare,4,53,Beetle,4709,"[-1,-1]"
 5451,Hazzali Swarmer,Normal,0,53,Beetle,440,"[-1,-1]"
 5453,Hazzali Tunneler,Normal,0,53,Beetle,unknown,"[-1,-1]"
@@ -6922,6 +7094,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 256870,Smoldering Beetle,Normal,0,53,Beetle,15355,"[0,0]"
 257922,Riverbuzz Beetle,Normal,0,53,Beetle,unknown,[]
 258343,Underroot Beetle,Normal,0,53,Beetle,unknown,[]
+271246,Swarmer,Normal,0,53,Beetle,unknown,[]
 34865,Tunneling Worm,Normal,0,55,Shale Beast,4737,"[null,0]"
 42766,Gorged Gyreworm,Normal,0,55,Shale Beast,5042,"[-1,-1]"
 42845,Rock Borer,Normal,0,55,Shale Beast,5088,"[-1,-1]"
@@ -6960,7 +7133,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 67758,Shale Skitterers,Normal,0,55,Shale Beast,6134,"[0,0]"
 67759,Agitated Shale Spider,Normal,0,55,Shale Beast,6134,"[-1,-1]"
 68653,Shale Shards,Normal,0,55,Shale Beast,6134,"[null,-1]"
-70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]"
 71578,Amber Parasite,Elite,1,55,Shale Beast,6738,"[-1,-1]"
 74509,Blue Shale Crawler,Normal,0,55,Shale Beast,719,"[-1,-1]"
 98382,Corrupted Gyreworm,Normal,0,55,Shale Beast,7955,"[-1,-1]"
@@ -7126,7 +7298,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 244946,Marauding Trigore,Normal,0,68,Hydra,15458,"[-1,-1]"
 246459,Fortamus,Elite,1,68,Hydra,15458,"[-1,-1]"
 246513,Marauding Trigore,Normal,0,68,Hydra,15458,"[-1,-1]"
-246622,Trigore Denguard,Normal,0,68,Hydra,15458|16534,"[-1,-1]"
+246622,Trigore Denguard,Normal,0,68,Hydra,16534|15458,"[-1,-1]"
 248577,Rootbound Horror,Normal,0,68,Hydra,15355|15458,"[-1,-1]"
 248906,Trigore Shard-Breaker,Normal,0,68,Hydra,15458,"[-1,-1]"
 248938,Albino Trigore,Normal,0,68,Hydra,15458,"[-1,-1]"
@@ -7138,13 +7310,22 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250955,Trigore,Elite,1,68,Hydra,unknown,[]
 252847,Drooling Thornbloom,Normal,0,68,Hydra,15355,"[-1,-1]"
 253165,Steeljaw Trigore,Elite,1,68,Hydra,15458,"[-1,-1]"
+253694,Scaled Breaker,Elite,1,68,Hydra,16365,"[-1,-1]"
+254288,Vilescar Tyrant,Elite,1,68,Hydra,16365,"[-1,-1]"
 255237,Trigore,Normal,0,68,Hydra,unknown,[]
 255355,Trigore Primarch,Elite,1,68,Hydra,15458,"[-1,-1]"
 255545,Steeljaw Trigore,Elite,1,68,Hydra,15458,"[-1,-1]"
-256234,Ravaging Hydra,Elite,1,68,Hydra,15355,[]
+256234,Ravaging Hydra,Elite,1,68,Hydra,15355,"[-1,null]"
 256606,Voltaic Trigore,Elite,1,68,Hydra,15458,"[-1,-1]"
 257371,Primal Trigore,Normal,0,68,Hydra,15458,"[-1,-1]"
+259925,Shredscale Hydra,Elite,1,68,Hydra,16545,[]
+260843,Clutch Watcher,Elite,1,68,Hydra,unknown,[]
 260954,Vicious Trigore,Elite,1,68,Hydra,15968,"[-1,-1]"
+261142,Destra,Rare,4,68,Hydra,16365,"[-1,-1]"
+261390,Venomgall Tyrant,Elite,1,68,Hydra,16535,"[-1,-1]"
+261943,Shredscale Hydra,Elite,1,68,Hydra,16594|16548|16542,[]
+263634,Scaled Tyrant,Elite,1,68,Hydra,unknown,[]
+272920,Vilescar Tyrant,Elite,1,68,Hydra,16365,"[-1,-1]"
 50885,Patrannache,Elite,1,125,Waterfowl,5805,"[-1,-1]"
 55015,Whitefeather Crane,Normal,0,125,Waterfowl,5736,[]
 56752,Whitefisher Crane,Normal,0,125,Waterfowl,6134|5805,"[0,0]"
@@ -7389,7 +7570,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250226,Mindrot,Rare,4,126,Water Strider,15355,"[-1,-1]"
 250338,Mycellian Stalker,Normal,0,126,Water Strider,unknown,[]
 254203,Scavenging Stalker,Normal,0,126,Water Strider,15355,"[-1,-1]"
-256368,Valeskimmer,Normal,0,126,Water Strider,15355,"[0,0]"
+256368,Valeskimmer,Normal,0,126,Water Strider,15355|15921,"[0,0]"
 256380,Vale Fogstalker,Normal,0,126,Water Strider,15355|15921,"[-1,-1]"
 256537,Sporewake Skimmer,Normal,0,126,Water Strider,15355,"[0,0]"
 50944,Bristlespine,Elite,1,127,Rodent,5841,"[-1,-1]"
@@ -7561,6 +7742,9 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 206008,Shimmering Crystalspine,Normal,0,127,Rodent,14663,"[0,null]"
 209916,Template Solo Rare,Rare,4,127,Rodent,unknown,[]
 210075,Henri Snufftail,Rare,4,127,Rodent,14529,"[-1,-1]"
+210798,Striped Skulker,Normal,0,127,Rodent,14529,"[0,0]"
+210944,Tanned Skulker,Normal,0,127,Rodent,14529,"[0,0]"
+211072,Smolderfur Skulker,Normal,0,127,Rodent,14529,[]
 211555,Mudnose Mole,Normal,0,127,Rodent,unknown,[]
 211556,Mudnose Mole Pup,Normal,0,127,Rodent,unknown,[]
 212493,Drowsy Crystalspine,Normal,0,127,Rodent,15105|14969,"[-1,null]"
@@ -7607,11 +7791,12 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 236455,Kapara,Normal,0,127,Rodent,unknown,[]
 239324,Escaped Subject,Normal,0,127,Rodent,15347,"[0,0]"
 239325,Radioactive Subject,Normal,0,127,Rodent,15347,[]
-250100,Kapara Pup,Normal,0,127,Rodent,15947|16194,"[0,0]"
+250100,Kapara Pup,Normal,0,127,Rodent,16194|15947,"[0,0]"
 250101,Kapara,Normal,0,127,Rodent,15947|16194,"[0,0]"
 250123,Chitterfang Scurrier,Normal,0,127,Rodent,15947,"[0,0]"
 250124,Plump Chitterfang,Normal,0,127,Rodent,3805,[]
-250125,Scavenging Chitterfang,Normal,0,127,Rodent,15947|16194,"[0,0]"
+250125,Scavenging Chitterfang,Normal,0,127,Rodent,15947,"[0,0]"
+251654,Kapara,Normal,0,127,Rodent,unknown,[]
 254899,Peha,Normal,0,127,Rodent,15947,"[1,1]"
 255121,Scavenging Chitterfang,Normal,0,127,Rodent,15947,"[0,0]"
 255122,Plump Chitterfang,Normal,0,127,Rodent,15947,"[0,0]"
@@ -7619,6 +7804,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255136,Kapara,Normal,0,127,Rodent,16194|15947,"[0,0]"
 256516,Shrine Kapara,Normal,0,127,Rodent,15947,"[1,1]"
 256517,Kapara Pup,Normal,0,127,Rodent,15947,"[1,1]"
+256882,Lost Kapara,Normal,0,127,Rodent,16365,"[0,0]"
+257536,Venom-Crazed Kapara,Normal,0,127,Rodent,unknown,[]
 258201,Kapara,Normal,0,127,Rodent,unknown,[]
 258206,Pilgrim Kapara,Normal,0,127,Rodent,15947,"[1,1]"
 258215,Kapara,Normal,0,127,Rodent,15947,"[0,0]"
@@ -7626,6 +7813,14 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 259045,Acolyte Kapara,Normal,0,127,Rodent,15947,"[1,1]"
 259332,Kapara Pup,Normal,0,127,Rodent,15947,"[1,1]"
 261115,Kapara Pup,Normal,0,127,Rodent,15947,"[1,1]"
+261369,Odorous Stripeback,Normal,0,127,Rodent,16365,"[0,0]"
+261473,Spotted Kapara,Normal,0,127,Rodent,16365,"[0,0]"
+261482,Frenzied Kapara,Normal,0,127,Rodent,16365,"[-1,-1]"
+261626,Sickly Kapara,Normal,0,127,Rodent,16365,"[0,0]"
+261652,Musty Kapara,Normal,0,127,Rodent,16365,"[0,0]"
+263042,Mangled Kapara,Normal,0,127,Rodent,16365,"[0,0]"
+265720,Scavenging Critter,Normal,0,127,Rodent,15947,"[-1,-1]"
+268049,Siltmouth,Rare,4,127,Rodent,16365,"[-1,-1]"
 50843,Portent,Elite,1,128,Stone Hound,5840|9525,"[-1,-1]"
 56274,Guardian of the Elders,Normal,0,128,Stone Hound,5736,[]
 58419,Sleeping Guardian,Normal,0,128,Stone Hound,6134,"[-1,-1]"
@@ -7899,6 +8094,12 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 226891,Rambleshire Buck,Normal,0,129,Gruffhorn,14717,"[1,1]"
 227756,Wild Ramolith,Normal,0,129,Gruffhorn,14717,"[0,0]"
 230037,Trained Ramolith,Normal,0,129,Gruffhorn,14771,"[1,1]"
+251629,Cliff Sheep,Normal,0,129,Gruffhorn,unknown,[]
+255811,Choleric Cliffdweller,Normal,0,129,Gruffhorn,16365,"[0,0]"
+260369,Feral Ram,Normal,0,129,Gruffhorn,16365,"[0,0]"
+264652,Cliff Lamb,Normal,0,129,Gruffhorn,unknown,[]
+264656,Forum Frondchewer,Normal,0,129,Gruffhorn,16365,"[0,0]"
+264658,Frondchewer Lamb,Normal,0,129,Gruffhorn,16365,"[0,0]"
 688,Stone Maw Basilisk,Normal,0,130,Basilisk,33,"[-1,-1]"
 689,Crystal Spine Basilisk,Normal,0,130,Basilisk,33,"[-1,-1]"
 690,Cold Eye Basilisk,Normal,0,130,Basilisk,5287,"[-1,-1]"
@@ -8288,7 +8489,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 26616,Blighted Elk,Normal,0,151,Stag,65,"[-1,-1]"
 27230,Silvercoat Stag,Normal,0,151,Stag,394,"[-1,-1]"
 28129,Longneck Grazer,Normal,0,151,Stag,3711,"[0,0]"
-31236,Dappled Stag,Normal,0,151,Stag,2817,"[0,0]"
+31236,Dappled Stag,Normal,0,151,Stag,2817|4395,"[0,0]"
 33311,Darkshore Stag,Normal,0,151,Stag,148,"[-1,-1]"
 34318,Whitetail Stag,Normal,0,151,Stag,148,"[-1,-1]"
 35096,Weakened Mosshoof Stag,Normal,0,151,Stag,16,"[0,0]"
@@ -9103,7 +9304,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257516,Territorial Pango,Normal,0,156,Scalehide,15947,"[-1,-1]"
 257517,Territorial Pango,Normal,0,156,Scalehide,15947,"[-1,-1]"
 257518,Territorial Pango,Normal,0,156,Scalehide,15947,"[-1,-1]"
-257942,Carefree Pango,Normal,0,156,Scalehide,15947,"[0,null]"
+257942,Carefree Pango,Normal,0,156,Scalehide,15947,"[0,0]"
 259960,Perturbed Pango,Normal,0,156,Scalehide,15947,"[-1,-1]"
 260285,Blinding Thornmaw,Normal,0,156,Scalehide,15355,"[-1,-1]"
 260286,Glimmering Thornmaw,Normal,0,156,Scalehide,15355,"[-1,-1]"
@@ -9620,10 +9821,17 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250582,Bloated Snapdragon,Rare,4,288,Lizard,15968,"[-1,-1]"
 251394,Hungry Scalebiter,Normal,0,288,Lizard,15947,"[-1,-1]"
 251593,Infected Beast,Normal,0,288,Lizard,16548,[]
+251655,Snapping Turtle Lizard,Normal,0,288,Lizard,unknown,[]
+251656,Snapping Turtle Lizard,Normal,0,288,Lizard,unknown,[]
 252723,Yerxis,Normal,0,288,Lizard,unknown,[]
+253490,Snapping Prowler,Normal,0,288,Lizard,16365,"[-1,-1]"
+253491,Snapping Matriarch,Normal,0,288,Lizard,16365,"[-1,-1]"
+254166,Murkfen Amazard,Normal,0,288,Lizard,16365,"[0,0]"
+254167,Enraged Amazard,Normal,0,288,Lizard,16365,"[-1,-1]"
 255006,Dreadmaw Amazard,Normal,0,288,Lizard,unknown,[]
 255471,Hungry Scalebiter,Normal,0,288,Lizard,15947,"[1,1]"
 256787,Deeplurk Snapdragon,Normal,0,288,Lizard,unknown,[]
+256894,Gored Snapper,Normal,0,288,Lizard,16365,"[0,0]"
 257523,Stonemaw Amazard,Normal,0,288,Lizard,15947,"[-1,-1]"
 257524,Razorspine Amazard,Normal,0,288,Lizard,15947,"[-1,-1]"
 257525,Amazard Gnasher,Normal,0,288,Lizard,15947,"[0,0]"
@@ -9635,8 +9843,14 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257830,Deeplurk Snapdragon,Normal,0,288,Lizard,16939,[]
 258721,Amazard Gnasher,Normal,0,288,Lizard,unknown,[]
 258823,Deeplurk Snapdragon,Normal,0,288,Lizard,unknown,[]
+261638,Muskmoss Lizard,Normal,0,288,Lizard,16365,"[0,0]"
+261650,Bonesnapper Lizard,Normal,0,288,Lizard,16365,"[-1,-1]"
 262321,Depthstalker Snapdragon,Elite,1,288,Lizard,16939,[]
+262965,Spined Snapper,Normal,0,288,Lizard,16365,"[0,null]"
+263110,Half-Eaten Snapper,Normal,0,288,Lizard,16365,"[0,0]"
 263617,Void-Touched Snapdragon,Normal,0,288,Lizard,16939,[]
+264660,Snapscale Matriach,Elite,1,288,Lizard,unknown,[]
+264673,Dankhide Snapper,Normal,0,288,Lizard,unknown,[]
 9166,Pterrordax,Normal,0,290,Pterrordax,490,"[-1,-1]"
 9167,Frenzied Pterrordax,Normal,0,290,Pterrordax,490,"[-1,-1]"
 21900,Frightwing,Normal,0,290,Pterrordax,unknown,[]
@@ -9843,6 +10057,8 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 250273,Cascade Potatoad,Normal,0,291,Hopper,15355,"[0,0]"
 250333,Stream Skipper,Normal,0,291,Hopper,15355,"[0,0]"
 250826,Banuran,Rare,4,291,Hopper,15968,"[-1,-1]"
+251625,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+251626,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
 251885,Gravid Potatoad,Normal,0,291,Hopper,16359,"[1,1]"
 251887,Potatoad,Normal,0,291,Hopper,unknown,[]
 251915,Foraging Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
@@ -9855,7 +10071,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 254795,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
 256060,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
 256104,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-256227,Tiny Cavern Skipper,Normal,0,291,Hopper,15355,[]
+256227,Tiny Cavern Skipper,Normal,0,291,Hopper,15355,"[0,null]"
 256364,Misthop Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
 256365,Valeflow Skipper,Normal,0,291,Hopper,15355,"[0,0]"
 256850,River Hopper,Normal,0,291,Hopper,unknown,[]
@@ -9867,7 +10083,13 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257428,Poisonous Hoplet,Normal,0,291,Hopper,15947,"[0,0]"
 257435,Swamp Darter,Normal,0,291,Hopper,15947,[]
 258090,Bulb-Eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+258512,Tainted Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
+260370,Grumpy Bullfrog,Normal,0,291,Hopper,16365,"[0,0]"
+262737,Venom-Crazed Dart Frog,Normal,0,291,Hopper,unknown,[]
 264270,Gloombelly Toad,Normal,0,291,Hopper,15968,"[0,0]"
+264502,Skittish Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
+264661,Hophorn Bullfrog,Elite,1,291,Hopper,unknown,[]
+264678,Dartspitter Frog,Normal,0,291,Hopper,unknown,[]
 121448,Krolusk Dunecrawler,Normal,0,292,Carapid,unknown,[]
 124016,Saltspine Krolusk,Normal,0,292,Carapid,8501,"[-1,-1]"
 124526,Krolusk Dunecrawler,Normal,0,292,Carapid,8501,"[-1,-1]"
@@ -9883,7 +10105,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 134557,Maimed Krolusk,Normal,0,292,Carapid,8501,"[0,0]"
 134562,Captured Krolusk,Normal,0,292,Carapid,8501,"[-1,-1]"
 134675,Trilobite,Normal,0,292,Carapid,unknown,[]
-134686,Mature Krolusk,Elite,1,292,Carapid,9527,"[-1,-1]"
+134686,Krolusk Matriarch,Elite,1,292,Carapid,9527,"[-1,-1]"
 135500,Krolusk,Normal,0,292,Carapid,8501,"[-1,-1]"
 135582,Krolusk Sandhunter,Normal,0,292,Carapid,8501,"[-1,-1]"
 136335,Enraged Krolusk,Rare,4,292,Carapid,8501,"[-1,-1]"
@@ -10069,6 +10291,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 225388,Krolusk Whelpling,Normal,0,292,Carapid,14795,"[-1,-1]"
 225391,Slagshell Slider,Normal,0,292,Carapid,14795,"[-1,-1]"
 225393,Massive Slagshell,Elite,1,292,Carapid,14795,"[-1,-1]"
+227185,Baer,Normal,0,292,Carapid,14752,"[1,1]"
 227291,Nooka,Normal,0,292,Carapid,14752,"[1,1]"
 227794,Slimy Mollusc,Normal,0,292,Carapid,14717,"[0,0]"
 229012,Dustbarren Krolusk,Normal,0,292,Carapid,unknown,[]
@@ -10232,7 +10455,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 232098,Chowdar,Rare,4,296,Blood Beast,15781,"[-1,-1]"
 236781,Blistercreep,Normal,0,296,Blood Beast,unknown,[]
 238478,Untethered Jawhead,Elite,1,296,Blood Beast,15781,"[-1,-1]"
-244967,Crawling Blistercreep,Normal,0,296,Blood Beast,15458,"[-1,-1]"
+244967,Crawling Blistercreep,Normal,0,296,Blood Beast,15458|15958,"[-1,-1]"
 247111,Scavenging Biledrinker,Normal,0,296,Blood Beast,15458,"[-1,-1]"
 248939,Blistercreep Bottomfeeder,Normal,0,296,Blood Beast,15458,"[-1,-1]"
 249131,Crawling Blistercreep,Normal,0,296,Blood Beast,15458,"[-1,-1]"
@@ -10244,6 +10467,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257902,Bloodthirst Blistercreep,Normal,0,296,Blood Beast,15458,"[-1,-1]"
 258510,Hateleech Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
 261045,Siphoning Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
+271252,Nerubian Screamer,Normal,0,296,Blood Beast,unknown,[]
 39443,Camel,Normal,0,298,Camel,4945,"[1,1]"
 45121,Lady Humps,Normal,0,298,Camel,5034,"[1,1]"
 45142,Lady Humps,Normal,0,298,Camel,unknown,[]
@@ -10304,7 +10528,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 3242,Zhevra Runner,Normal,0,299,Courser,17,"[0,0]"
 3426,Zhevra Charger,Normal,0,299,Courser,17|4709,"[0,0]"
 3466,Zhevra Courser,Normal,0,299,Courser,unknown,"[null,0]"
-3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]"
 5443,Tamed Zhevra,Normal,0,299,Courser,unknown,[]
 5555,[PH] Ogre Caravan Packhorse,Normal,0,299,Courser,unknown,[]
 5689,Steed,Normal,0,299,Courser,unknown,[]
@@ -10520,7 +10743,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 26272,Emaciated Mammoth,Normal,0,300,Mammoth,65,"[0,0]"
 26273,Emaciated Mammoth Calf,Normal,0,300,Mammoth,65,"[0,0]"
 26711,Injured Mammoth,Normal,0,300,Mammoth,65,"[-1,-1]"
-27642,Phantasmal Mammoth,Elite,1,300,Mammoth,4228,"[-1,-1]"
 27740,Wild Elekk Vehicle Version,Normal,0,300,Mammoth,unknown,[]
 27902,Pink Riding Elekk,Normal,0,300,Mammoth,unknown,[]
 28379,Shattertusk Mammoth,Normal,0,300,Mammoth,3711,"[0,0]"
@@ -10904,8 +11126,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 29412,Crystalweb Spitter,Normal,0,3,Spider,67,"[-1,-1]"
 29461,Icetip Crawler,Normal,0,3,Spider,67,"[-1,-1]"
 29562,Icemaw Bear,Normal,0,4,Bear,67,"[-1,-1]"
-29630,Fanged Pit Viper,Normal,0,35,Serpent,1987,"[0,0]"
-29637,Crafty Snake,Normal,0,35,Serpent,1206,"[0,0]"
 30320,Battlescarred Frostworg,Elite,1,1,Wolf,67,"[-1,-1]"
 36852,Skychaser Hippogryph,Normal,0,160,Feathermane,16,"[1,-1]"
 39444,Pit Viper,Normal,0,35,Serpent,4945,"[-1,-1]"
@@ -10924,15 +11144,12 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 65790,Muck Sifter,Normal,0,8,Crab,6138,"[0,0]"
 69193,Loa-Infused Bloodhorn,Elite,1,138,Direhorn,6507,"[-1,-1]"
 70448,Ancient Python,Elite,1,35,Serpent,48050,"[-1,-1]"
-70702,Flame Hound,Elite,1,52,Hound,7812,"[-1,-1]"
 73185,Enraged Mushan Beast,Elite,1,156,Scalehide,6738,"[-1,-1]"
 81983,Verdant Mandragora,Elite,1,68,Hydra,7109,"[-1,-1]"
 84399,Vicious Mandragora,Elite,1,68,Hydra,7109,"[-1,-1]"
 88150,Untamed Mandragora,Elite,1,68,Hydra,6721,"[-1,-1]"
 88525,Reaver Pit Fodder,Normal,0,41,Aqiri,6755,"[-1,-1]"
 90517,Felbound Wolf,Normal,0,1,Wolf,6723,"[-1,-1]"
-97119,Shroud Hound,Normal,0,52,Hound,6731,"[-1,-1]"
-97163,Cursed Falke,Normal,0,26,Bird of Prey,7812,"[-1,-1]"
 99222,Cliffwing Hippogryph,Normal,0,160,Feathermane,7334,"[-1,-1]"
 124262,Spiderling,Normal,0,3,Spider,8501,[]
 124683,Bonepicker Pup,Normal,0,25,Hyena,8501,"[-1,-1]"
@@ -10954,9 +11171,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 168837,Stealthling,Normal,0,3,Spider,13228,"[-1,-1]"
 168857,Stitched-Wing Hauler,Normal,0,26,Bird of Prey,11462,"[0,0]"
 172312,Spinemaw Gorger,Elite,1,292,Carapid,94197,"[-1,-1]"
-189722,Gulping Goliath,Elite,1,303,Lesser Dragonkin,14082,"[-1,-1]"
 191679,Magmammoth Bull,Elite,1,300,Mammoth,13644,"[-1,-1]"
-193311,Melkhop,Rare Elite,2,303,Lesser Dragonkin,13647,"[-1,-1]"
 194079,Mature Riverbeast,Normal,0,150,Riverbeast,13644,"[0,0]"
 194568,Restless Slyvern,Normal,0,160,Feathermane,13645,"[-1,-1]"
 195448,Blazing Firesquall,Normal,0,26,Bird of Prey,13644,"[-1,-1]"
@@ -10997,33 +11212,15 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255354,Starving Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 256609,Voracious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 256770,Bilemaw the Gluttonous,Rare,4,315,Whiptails,15458,"[-1,-1]"
-257127,Barbtooth Bloodtracker,Elite,1,,Whiptail,16542|16595,[]
+257127,Barbtooth Bloodtracker,Elite,1,315,Whiptail,16542|16595,[]
 257240,Ripfang Stalker,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257241,Ripfang Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257244,Vicious Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257246,Roaming Shredclaw,Normal,0,315,Whiptails,15458,"[-1,-1]"
 257740,Infested Shredclaw,Normal,0,315,Whiptails,15458,"[0,0]"
-271067,Ravenous Seabird,Normal,0,26,Bird of Prey,16365,[]
-261317,Emaciated Truffle Hog,Normal,0,5,Boar,16365,[]
-260827,Snuffling Boar,Normal,0,5,Boar,16365,[]
-264503,Untouched Tusksplitter,Normal,0,5,Boar,16365,"[null,-1]"
-261837,Corroded Cliffcharger,Normal,0,5,Boar,16365,[]
-262009,Mutated Double-Spine Hog,Normal,0,5,Boar,16365,[]
-261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,[]
-258955,Frilled Spitter,Normal,0,35,Serpent,,[]
-261124,Incensed Cobra,Normal,0,35,Serpent,16365,[]
-265343,Nest Coiler,Normal,0,35,Serpent,16365,[]
-264655,Lurking Thorntail,Normal,0,35,Serpent,16365,[]
-268979,Newborn Cobra,Normal,0,35,Serpent,16535,"[null,-1]"
-265049,Burrow Stinger,Normal,0,35,Serpent,16548,[]
-261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[null,-1]"
-261643,Summoned Serpent,Normal,0,35,Serpent,16535,[]
-263653,Mortuary Creeper,Normal,0,3,Spider,16535,[]
-254758,Crypt Spider,Normal,0,3,Spider,16535,[]
-258111,Clouded Crystalshell,Normal,0,21,Turtle,16535,[]
-262977,Snapping Fractureshell,Normal,0,21,Turtle,16365,[]
-260368,Armored Snacktooth,Normal,0,21,Turtle,16365,[]
-257600,Murkfen Muckstomper,Normal,0,21,Turtle,16365,[]
-262691,Crazed Crystalshell,Normal,0,21,Turtle,16365,[]
-265237,Lockjaw,Rare,4,21,Turtle,16365,[]
-256763,Ornery Muckstinger,Normal,0,44,Wasp,16365,[]
+3864,Fel Steed,Elite,1,299,Courser,209,"[0,0]"
+27642,Phantasmal Mammoth,Elite,1,300,Mammoth,4228,"[-1,-1]"
+70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]"
+262102,Slithering Coiler,Normal,0,35,Serpent,16642,[]
+103045,,,,,,,
+134390,,,,,,,

@@ -18,7 +18,6 @@ from urllib3.util.retry import Retry
 from config import (
     PETOPIA_DATA_CSV,
     PETOPIA_NPCS_CSV,
-    SKIP_NPC_IDS_CSV,
     ensure_dirs,
     get_random_headers,
 )
@@ -60,25 +59,6 @@ def fetch_page(url: str) -> str:
     resp = get_session().get(url, headers=headers, timeout=30)
     resp.raise_for_status()
     return resp.text
-
-
-def load_skip_npc_ids(path: str) -> set[str]:
-    """Load NPC IDs to skip from the provided CSV file."""
-    skip_ids = set()
-    if os.path.exists(path):
-        try:
-            with open(path, "r", encoding="utf-8-sig", newline="") as f:
-                reader = csv.DictReader(f)
-                for row in reader:
-                    for key in row:
-                        if key.strip().replace("\ufeff", "") == "npc_id":
-                            val = row.get(key)
-                            if val:
-                                skip_ids.add(str(val).strip())
-                            break
-        except (OSError, csv.Error) as e:
-            print(f"Failed to read skip list {path}: {e}", file=sys.stderr)
-    return skip_ids
 
 
 def extract_npc_info(html: str) -> dict[str, str]:
@@ -245,15 +225,11 @@ def main() -> int:
             processed_npcs = {row['npc_id'] for row in reader if row.get('npc_id')}
         print(f"Resuming from {len(processed_npcs)} already processed NPCs.")
 
-    # Load skip list
-    skip_ids = load_skip_npc_ids(SKIP_NPC_IDS_CSV)
-    if skip_ids:
-        print(f"Loaded {len(skip_ids)} NPC IDs to skip.")
-
     fieldnames = ["npc_id", "npc_name", "zone", "tameable", "family", "level", "name_keeper", "wowhead_url", "tamingskillname1", "tamingskilldesc1", "tamingskillname2", "tamingskilldesc2", "notes", "appearance"]
 
-    # Collect rows to process
-    to_process = [row for row in rows if row.get('npc_id') and row['npc_id'] not in processed_npcs and row['npc_id'] not in skip_ids]
+    # Collect rows to process. Extraction no longer consults the skip list -- that is
+    # 03's job now, so a curation change takes effect without re-scraping.
+    to_process = [row for row in rows if row.get('npc_id') and row['npc_id'] not in processed_npcs]
 
     global global_backoff_until
 

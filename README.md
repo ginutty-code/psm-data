@@ -95,13 +95,17 @@ The intermediate `pet_data.csv` used to generate these Lua files is located at `
 
 ## Addon Sync
 
-Every `_generate_*_lua.py` step (06, 12, 13, 14, 15) calls `config.sync_output_to_addon()` immediately after writing its file to `Output/`. This copies the generated `.lua` file directly into the live addon source at:
+Every `_generate_*_lua.py` step (06, 12, 13, 14, 15) writes to `Output/` and stops there — it never touches the addon repo on its own. Each generated file also stamps a `PSM_DataSchemaVersion` global, sourced from `SCHEMA_VERSION` in `config.py`, so the addon can assert on load that it understands the data it's about to read.
+
+Run `python sync.py` to copy the compiled `Output/*.lua` files into the live addon source. Four of the five go to:
 
 ```
-psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
+psm-addon/PetStableManagement_ModelsBrowser/Data/
 ```
 
-So running the generation steps not only refreshes `Output/` but also updates the addon in place — no manual copy step is needed. The sync target is defined by `ADDON_MODELS_BROWSER_DIR` in `config.py`.
+`AbilitiesData.lua` is the exception — it goes to `psm-addon/PetStableManagement/Data/` instead, because the core addon's Owned Pets panel (always loaded) needs it for its ability filter, and the file is small enough (~34KB) that it doesn't need the Models Browser's `LoadOnDemand` deferral its larger siblings do.
+
+The sync targets are defined by `ADDON_DATA_DIR` and `CORE_ADDON_DATA_DIR` in `config.py`. Bumping `SCHEMA_VERSION` needs a matching bump in **both** `psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/Schema.lua` and `psm-addon/PetStableManagement/Shared/DataSchema.lua`, or the addon fails loudly on load rather than reading data it wasn't built for.
 
 ## Credits
 
