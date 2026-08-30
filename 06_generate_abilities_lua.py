@@ -12,10 +12,6 @@ from config import (
     load_csv,
 )
 
-# Non-ability spell IDs that appear in family `spells` lists but aren't abilities
-# (moved here from the now-deleted 05_extract_wowhead_spells.py).
-SKIP_SPELL_IDS = {"16827", "17253", "49966"}
-
 
 def main():
     print(f"Loading families CSV from {PROCESSED_FAMILIES_CSV}...")
@@ -37,30 +33,25 @@ def main():
             continue
         name = row.get("family_name", "").strip()
         spells_str = row.get("spells", "").strip()
-        spell_ids = [
-            s.strip() for s in spells_str.split(";")
-            if s.strip() and s.strip() not in SKIP_SPELL_IDS
-        ]
+        spell_ids = [s.strip() for s in spells_str.split(";") if s.strip()]
         families[family_id] = {
             "name": name,
             "spells": spell_ids
         }
 
-    # Load spells (hand-maintained: name, rank, category, tag, icon)
+    # Load spells (hand-maintained: name, rank, category, tag)
     spells_rows = load_csv(SPELLS_MAPPING_CSV)
     spells = {}
     for row in spells_rows:
         spell_id = row.get("spell_id", "").strip()
-        if not spell_id or spell_id in SKIP_SPELL_IDS:
+        if not spell_id:
             continue
         name = row.get("spell_name", "").strip() or f"Spell {spell_id}"
-        icon = row.get("spell_icon", "").strip()
         rank = row.get("spell_rank", "").strip()
         category = row.get("spell_category", "").strip()
         tag = row.get("spell_tag", "").strip()
         spells[spell_id] = {
             "name": name,
-            "icon": icon,
             "rank": rank,
             "category": category,
             "tag": tag
@@ -85,7 +76,6 @@ def main():
                 spell_data = spells[spell_id]
                 rank = spell_data["rank"]
                 name = spell_data["name"]
-                icon = spell_data["icon"]
                 category = spell_data["category"]
                 tag = spell_data["tag"]
 
@@ -93,7 +83,6 @@ def main():
                     ranks[rank] = {}
                 ranks[rank][spell_id] = {
                     "name": name,
-                    "icon": icon,
                     "category": category,
                     "tag": tag
                 }
@@ -109,7 +98,6 @@ def main():
         if spell_id not in linked_spells:
             rank = spell_data["rank"]
             name = spell_data["name"]
-            icon = spell_data["icon"]
             category = spell_data["category"]
             tag = spell_data["tag"]
 
@@ -117,7 +105,6 @@ def main():
                 spec_ranks[rank] = {}
             spec_ranks[rank][spell_id] = {
                 "name": name,
-                "icon": icon,
                 "category": category,
                 "tag": tag
             }
@@ -141,7 +128,7 @@ def main():
         f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Abilities Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", icon = \"ability_icon\", category = \"category\", tag = \"tag\"}, ...}}}\n")
+        f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", category = \"category\", tag = \"tag\"}, ...}}}\n")
         f.write("\n")
         f.write("AbilitiesData = {\n")
 
@@ -186,7 +173,6 @@ def main():
                 for k, ability_id in enumerate(sorted_ability_ids):
                     ability_data = rank_data[ability_id]
                     name = ability_data["name"]
-                    icon = ability_data["icon"]
                     category = ability_data["category"]
                     tag = ability_data["tag"]
 
@@ -197,7 +183,6 @@ def main():
                     # Write ability entry
                     f.write(f'                [{ability_id}] = {{\n')
                     f.write(f'                    name = {lua_quote(name)},\n')
-                    f.write(f'                    icon = {lua_quote(icon)},\n')
                     f.write(f'                    category = {lua_quote(category)},\n')
                     f.write(f'                    tag = {lua_quote(tag)}\n')
                     f.write('                }')
