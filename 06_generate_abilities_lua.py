@@ -7,10 +7,14 @@ import os
 from config import (
     ABILITIES_LUA,
     PROCESSED_FAMILIES_CSV,
-    PROCESSED_SPELLS_CSV,
     SCHEMA_VERSION,
+    SPELLS_MAPPING_CSV,
     load_csv,
 )
+
+# Non-ability spell IDs that appear in family `spells` lists but aren't abilities
+# (moved here from the now-deleted 05_extract_wowhead_spells.py).
+SKIP_SPELL_IDS = {"16827", "17253", "49966"}
 
 
 def main():
@@ -19,9 +23,9 @@ def main():
         print(f"Error: Families CSV file not found: {PROCESSED_FAMILIES_CSV}")
         return
 
-    print(f"Loading spells CSV from {PROCESSED_SPELLS_CSV}...")
-    if not os.path.exists(PROCESSED_SPELLS_CSV):
-        print(f"Error: Spells CSV file not found: {PROCESSED_SPELLS_CSV}")
+    print(f"Loading spells mapping from {SPELLS_MAPPING_CSV}...")
+    if not os.path.exists(SPELLS_MAPPING_CSV):
+        print(f"Error: Spells mapping CSV file not found: {SPELLS_MAPPING_CSV}")
         return
 
     # Load families
@@ -32,17 +36,18 @@ def main():
         if not family_id:
             continue
         name = row.get("family_name", "").strip()
-        icon = row.get("icon", "").strip()
         spells_str = row.get("spells", "").strip()
-        spell_ids = [s.strip() for s in spells_str.split(";") if s.strip()]
+        spell_ids = [
+            s.strip() for s in spells_str.split(";")
+            if s.strip() and s.strip() not in SKIP_SPELL_IDS
+        ]
         families[family_id] = {
             "name": name,
-            "icon": icon,
             "spells": spell_ids
         }
 
-    # Load spells
-    spells_rows = load_csv(PROCESSED_SPELLS_CSV)
+    # Load spells (hand-maintained: name, rank, category, tag, icon)
+    spells_rows = load_csv(SPELLS_MAPPING_CSV)
     spells = {}
     for row in spells_rows:
         spell_id = row.get("spell_id", "").strip()
@@ -72,7 +77,6 @@ def main():
     # First, process families
     for family_id, family_data in families.items():
         family_name = family_data["name"]
-        family_icon = family_data["icon"]
         spell_ids = family_data["spells"]
 
         ranks = {}
@@ -96,7 +100,6 @@ def main():
 
         abilities_data[family_id] = {
             "name": family_name,
-            "icon": family_icon,
             "ranks": ranks
         }
 
@@ -122,7 +125,6 @@ def main():
     if spec_ranks:
         abilities_data["Spec"] = {
             "name": "Spec abilities",
-            "icon": "",
             "ranks": spec_ranks
         }
 
@@ -139,7 +141,7 @@ def main():
         f.write(f"PSM_DataSchemaVersion = {SCHEMA_VERSION}\n\n")
         f.write("-- Abilities Data Export\n")
         f.write("-- Generated automatically\n")
-        f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", icon = \"family_icon\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", icon = \"ability_icon\", category = \"category\", tag = \"tag\"}, ...}}}\n")
+        f.write("-- Format: AbilitiesData[family_id] = {name = \"family_name\", ranks = {[rank] = {[ability_id] = {name = \"ability_name\", icon = \"ability_icon\", category = \"category\", tag = \"tag\"}, ...}}}\n")
         f.write("\n")
         f.write("AbilitiesData = {\n")
 
@@ -151,7 +153,6 @@ def main():
         for i, family_id in enumerate(sorted_family_ids):
             family_data = abilities_data[family_id]
             family_name = family_data["name"]
-            family_icon = family_data["icon"]
             ranks = family_data["ranks"]
 
             # Add comma before family (except first)
@@ -164,7 +165,6 @@ def main():
             else:
                 f.write(f'    [{lua_quote(family_id)}] = {{\n')
             f.write(f'        name = {lua_quote(family_name)},\n')
-            f.write(f'        icon = {lua_quote(family_icon)},\n')
             f.write('        ranks = {\n')
 
             # Sort ranks alphabetically

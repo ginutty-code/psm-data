@@ -2,12 +2,11 @@ PSM_DataSchemaVersion = 1
 
 -- Abilities Data Export
 -- Generated automatically
--- Format: AbilitiesData[family_id] = {name = "family_name", icon = "family_icon", ranks = {[rank] = {[ability_id] = {name = "ability_name", icon = "ability_icon", category = "category", tag = "tag"}, ...}}}
+-- Format: AbilitiesData[family_id] = {name = "family_name", ranks = {[rank] = {[ability_id] = {name = "ability_name", icon = "ability_icon", category = "category", tag = "tag"}, ...}}}
 
 AbilitiesData = {
     [1] = {
         name = "Wolf",
-        icon = "ability_hunter_pet_wolf",
         ranks = {
             ["Special Ability"] = {
                 [263840] = {
@@ -21,7 +20,6 @@ AbilitiesData = {
     },
     [2] = {
         name = "Cat",
-        icon = "ability_hunter_pet_cat",
         ranks = {
             ["Bonus Ability"] = {
                 [24450] = {
@@ -43,7 +41,6 @@ AbilitiesData = {
     },
     [3] = {
         name = "Spider",
-        icon = "ability_hunter_pet_spider",
         ranks = {
             ["Special Ability"] = {
                 [160067] = {
@@ -57,7 +54,6 @@ AbilitiesData = {
     },
     [4] = {
         name = "Bear",
-        icon = "ability_hunter_pet_bear",
         ranks = {
             ["Bonus Ability"] = {
                 [94019] = {
@@ -79,7 +75,6 @@ AbilitiesData = {
     },
     [5] = {
         name = "Boar",
-        icon = "ability_hunter_pet_boar",
         ranks = {
             ["Special Ability"] = {
                 [263869] = {
@@ -93,7 +88,6 @@ AbilitiesData = {
     },
     [6] = {
         name = "Crocolisk",
-        icon = "ability_hunter_pet_crocolisk",
         ranks = {
             ["Special Ability"] = {
                 [50433] = {
@@ -107,7 +101,6 @@ AbilitiesData = {
     },
     [7] = {
         name = "Carrion Bird",
-        icon = "ability_hunter_pet_vulture",
         ranks = {
             ["Special Ability"] = {
                 [24423] = {
@@ -121,7 +114,6 @@ AbilitiesData = {
     },
     [8] = {
         name = "Crab",
-        icon = "ability_hunter_pet_crab",
         ranks = {
             ["Special Ability"] = {
                 [50245] = {
@@ -135,7 +127,6 @@ AbilitiesData = {
     },
     [9] = {
         name = "Gorilla",
-        icon = "ability_hunter_pet_gorilla",
         ranks = {
             ["Special Ability"] = {
                 [263939] = {
@@ -149,7 +140,6 @@ AbilitiesData = {
     },
     [11] = {
         name = "Raptor",
-        icon = "ability_hunter_pet_raptor",
         ranks = {
             ["Special Ability"] = {
                 [263854] = {
@@ -163,7 +153,6 @@ AbilitiesData = {
     },
     [12] = {
         name = "Tallstrider",
-        icon = "ability_hunter_pet_tallstrider",
         ranks = {
             ["Special Ability"] = {
                 [50285] = {
@@ -177,7 +166,6 @@ AbilitiesData = {
     },
     [20] = {
         name = "Scorpid",
-        icon = "ability_hunter_pet_scorpid",
         ranks = {
             ["Special Ability"] = {
                 [160060] = {
@@ -191,7 +179,6 @@ AbilitiesData = {
     },
     [21] = {
         name = "Turtle",
-        icon = "ability_hunter_pet_turtle",
         ranks = {
             ["Special Ability"] = {
                 [26064] = {
@@ -205,7 +192,6 @@ AbilitiesData = {
     },
     [24] = {
         name = "Bat",
-        icon = "ability_hunter_pet_bat",
         ranks = {
             ["Special Ability"] = {
                 [344348] = {
@@ -219,7 +205,6 @@ AbilitiesData = {
     },
     [25] = {
         name = "Hyena",
-        icon = "ability_hunter_pet_hyena",
         ranks = {
             ["Special Ability"] = {
                 [263853] = {
@@ -233,7 +218,6 @@ AbilitiesData = {
     },
     [26] = {
         name = "Bird of Prey",
-        icon = "ability_hunter_pet_owl",
         ranks = {
             ["Bonus Ability"] = {
                 [94022] = {
@@ -255,7 +239,6 @@ AbilitiesData = {
     },
     [27] = {
         name = "Wind Serpent",
-        icon = "ability_hunter_pet_windserpent",
         ranks = {
             ["Special Ability"] = {
                 [264360] = {
@@ -269,7 +252,6 @@ AbilitiesData = {
     },
     [30] = {
         name = "Dragonhawk",
-        icon = "ability_hunter_pet_dragonhawk",
         ranks = {
             ["Special Ability"] = {
                 [263887] = {
@@ -283,7 +265,6 @@ AbilitiesData = {
     },
     [31] = {
         name = "Ravager",
-        icon = "ability_hunter_pet_ravager",
         ranks = {
             ["Special Ability"] = {
                 [263857] = {
@@ -297,7 +278,6 @@ AbilitiesData = {
     },
     [32] = {
         name = "Warp Stalker",
-        icon = "ability_hunter_pet_warpstalker",
         ranks = {
             ["Special Ability"] = {
                 [35346] = {
@@ -311,7 +291,6 @@ AbilitiesData = {
     },
     [33] = {
         name = "Sporebat",
-        icon = "ability_hunter_pet_sporebat",
         ranks = {
             ["Special Ability"] = {
                 [344347] = {
@@ -325,7 +304,6 @@ AbilitiesData = {
     },
     [34] = {
         name = "Ray",
-        icon = "ability_hunter_pet_netherray",
         ranks = {
             ["Special Ability"] = {
                 [344349] = {
@@ -339,7 +317,6 @@ AbilitiesData = {
     },
     [35] = {
         name = "Serpent",
-        icon = "spell_nature_guardianward",
         ranks = {
             ["Special Ability"] = {
                 [263904] = {
@@ -353,7 +330,6 @@ AbilitiesData = {
     },
     [37] = {
         name = "Moth",
-        icon = "ability_hunter_pet_moth",
         ranks = {
             ["Special Ability"] = {
                 [344353] = {
@@ -367,7 +343,6 @@ AbilitiesData = {
     },
     [38] = {
         name = "Chimaera",
-        icon = "ability_hunter_pet_chimera",
         ranks = {
             ["Exotic Ability"] = {
                 [92380] = {
@@ -389,13 +364,12 @@ AbilitiesData = {
     },
     [39] = {
         name = "Devilsaur",
-        icon = "ability_hunter_pet_devilsaur",
         ranks = {
             ["Exotic Ability"] = {
                 [159953] = {
                     name = "Feast",
                     icon = "ability_racial_cannibalize",
-                    category = "Exotic: Pet armor&healing",
+                    category = "Exotic: Pet armor & healing",
                     tag = "Defense"
                 }
             },
@@ -411,7 +385,6 @@ AbilitiesData = {
     },
     [41] = {
         name = "Aqiri",
-        icon = "ability_hunter_pet_silithid",
         ranks = {
             ["Exotic Ability"] = {
                 [280151] = {
@@ -433,7 +406,6 @@ AbilitiesData = {
     },
     [42] = {
         name = "Worm",
-        icon = "ability_hunter_pet_worm",
         ranks = {
             ["Exotic Ability"] = {
                 [93433] = {
@@ -455,7 +427,6 @@ AbilitiesData = {
     },
     [43] = {
         name = "Clefthoof",
-        icon = "inv_clefthoofdraenormount_blue",
         ranks = {
             ["Exotic Ability"] = {
                 [280069] = {
@@ -477,7 +448,6 @@ AbilitiesData = {
     },
     [44] = {
         name = "Wasp",
-        icon = "ability_hunter_pet_wasp",
         ranks = {
             ["Special Ability"] = {
                 [263858] = {
@@ -491,7 +461,6 @@ AbilitiesData = {
     },
     [45] = {
         name = "Core Hound",
-        icon = "ability_hunter_pet_corehound",
         ranks = {
             ["Exotic Ability"] = {
                 [159788] = {
@@ -513,7 +482,6 @@ AbilitiesData = {
     },
     [46] = {
         name = "Spirit Beast",
-        icon = "ability_druid_primalprecision",
         ranks = {
             ["Bonus Ability"] = {
                 [90328] = {
@@ -543,7 +511,6 @@ AbilitiesData = {
     },
     [50] = {
         name = "Fox",
-        icon = "ability_hunter_aspectofthefox",
         ranks = {
             ["Bonus Ability"] = {
                 [90347] = {
@@ -565,7 +532,6 @@ AbilitiesData = {
     },
     [51] = {
         name = "Monkey",
-        icon = "inv_pet_monkey",
         ranks = {
             ["Special Ability"] = {
                 [160044] = {
@@ -579,7 +545,6 @@ AbilitiesData = {
     },
     [52] = {
         name = "Hound",
-        icon = "inv_pet_mastiff",
         ranks = {
             ["Special Ability"] = {
                 [263423] = {
@@ -593,7 +558,6 @@ AbilitiesData = {
     },
     [53] = {
         name = "Beetle",
-        icon = "inv_misc_ahnqirajtrinket_01",
         ranks = {
             ["Special Ability"] = {
                 [90339] = {
@@ -607,7 +571,6 @@ AbilitiesData = {
     },
     [55] = {
         name = "Shale Beast",
-        icon = "inv_pet_-shalespider",
         ranks = {
             ["Exotic Passive"] = {
                 [279259] = {
@@ -629,7 +592,6 @@ AbilitiesData = {
     },
     [68] = {
         name = "Hydra",
-        icon = "trade_archaeology_whitehydrafigurine",
         ranks = {
             ["Special Ability"] = {
                 [263863] = {
@@ -643,7 +605,6 @@ AbilitiesData = {
     },
     [125] = {
         name = "Waterfowl",
-        icon = "inv_pet_crane",
         ranks = {
             ["Bonus Ability"] = {
                 [126259] = {
@@ -665,7 +626,6 @@ AbilitiesData = {
     },
     [126] = {
         name = "Water Strider",
-        icon = "inv_pet_waterstrider",
         ranks = {
             ["Exotic Ability"] = {
                 [126311] = {
@@ -687,7 +647,6 @@ AbilitiesData = {
     },
     [127] = {
         name = "Rodent",
-        icon = "inv_pet_porcupine",
         ranks = {
             ["Bonus Ability"] = {
                 [126364] = {
@@ -709,7 +668,6 @@ AbilitiesData = {
     },
     [128] = {
         name = "Stone Hound",
-        icon = "achievement_moguraid_01",
         ranks = {
             ["Exotic Ability"] = {
                 [267922] = {
@@ -731,7 +689,6 @@ AbilitiesData = {
     },
     [129] = {
         name = "Gruffhorn",
-        icon = "inv_pet_-goat",
         ranks = {
             ["Special Ability"] = {
                 [263921] = {
@@ -745,7 +702,6 @@ AbilitiesData = {
     },
     [130] = {
         name = "Basilisk",
-        icon = "inv_pet_-basilisk",
         ranks = {
             ["Special Ability"] = {
                 [263841] = {
@@ -759,7 +715,6 @@ AbilitiesData = {
     },
     [138] = {
         name = "Direhorn",
-        icon = "inv_pet_direhorn",
         ranks = {
             ["Special Ability"] = {
                 [263861] = {
@@ -773,7 +728,6 @@ AbilitiesData = {
     },
     [150] = {
         name = "Riverbeast",
-        icon = "inv_hippo_green",
         ranks = {
             ["Special Ability"] = {
                 [160018] = {
@@ -787,7 +741,6 @@ AbilitiesData = {
     },
     [151] = {
         name = "Stag",
-        icon = "inv_talbukdraenor_white",
         ranks = {
             ["Special Ability"] = {
                 [344352] = {
@@ -801,7 +754,6 @@ AbilitiesData = {
     },
     [154] = {
         name = "Mechanical",
-        icon = "ability_mount_mechastrider",
         ranks = {
             ["Special Ability"] = {
                 [263868] = {
@@ -815,7 +767,6 @@ AbilitiesData = {
     },
     [156] = {
         name = "Scalehide",
-        icon = "inv_mushanbeastmount",
         ranks = {
             ["Special Ability"] = {
                 [263865] = {
@@ -829,7 +780,6 @@ AbilitiesData = {
     },
     [157] = {
         name = "Oxen",
-        icon = "ability_mount_yakmount",
         ranks = {
             ["Special Ability"] = {
                 [264023] = {
@@ -843,7 +793,6 @@ AbilitiesData = {
     },
     [160] = {
         name = "Feathermane",
-        icon = "inv_misc_elitehippogryph",
         ranks = {
             ["Exotic Ability"] = {
                 [160007] = {
@@ -865,7 +814,6 @@ AbilitiesData = {
     },
     [288] = {
         name = "Lizard",
-        icon = "inv_komododragon_green",
         ranks = {
             ["Special Ability"] = {
                 [279362] = {
@@ -879,7 +827,6 @@ AbilitiesData = {
     },
     [290] = {
         name = "Pterrordax",
-        icon = "inv_pterrordax2mount_yellow",
         ranks = {
             ["Exotic Ability"] = {
                 [160007] = {
@@ -901,7 +848,6 @@ AbilitiesData = {
     },
     [291] = {
         name = "Hopper",
-        icon = "inv_pet_toad_green",
         ranks = {
             ["Special Ability"] = {
                 [279336] = {
@@ -915,7 +861,6 @@ AbilitiesData = {
     },
     [292] = {
         name = "Carapid",
-        icon = "achievement_dungeon_thesandqueen",
         ranks = {
             ["Exotic Passive"] = {
                 [279254] = {
@@ -937,7 +882,6 @@ AbilitiesData = {
     },
     [296] = {
         name = "Blood Beast",
-        icon = "inv_bloodtrollbeast_mount",
         ranks = {
             ["Special Ability"] = {
                 [288962] = {
@@ -951,7 +895,6 @@ AbilitiesData = {
     },
     [298] = {
         name = "Camel",
-        icon = "ability_mount_camel_brown",
         ranks = {
             ["Special Ability"] = {
                 [341115] = {
@@ -965,7 +908,6 @@ AbilitiesData = {
     },
     [299] = {
         name = "Courser",
-        icon = "inv_horse3_pale",
         ranks = {
             ["Special Ability"] = {
                 [341117] = {
@@ -979,7 +921,6 @@ AbilitiesData = {
     },
     [300] = {
         name = "Mammoth",
-        icon = "ability_mount_ridingelekk",
         ranks = {
             ["Special Ability"] = {
                 [341118] = {
@@ -993,7 +934,6 @@ AbilitiesData = {
     },
     [303] = {
         name = "Lesser Dragonkin",
-        icon = "inv_misc_head_dragon_nexus",
         ranks = {
             ["Special Ability"] = {
                 [392622] = {
@@ -1007,7 +947,6 @@ AbilitiesData = {
     },
     [315] = {
         name = "Whiptail",
-        icon = "inv_stalkermount_red",
         ranks = {
             ["Bonus Ability"] = {
                 [24450] = {
@@ -1035,7 +974,6 @@ AbilitiesData = {
     },
     ["Spec"] = {
         name = "Spec abilities",
-        icon = "",
         ranks = {
             ["Cunning Ability"] = {
                 [272682] = {

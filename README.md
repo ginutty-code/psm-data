@@ -34,8 +34,7 @@ The scripts must be run in numerical order. Each step validates its dependencies
 | 02 | `02_extract_petopia_data.py` | Fetches detailed metadata (taming skills, notes, appearance) for Step 01 IDs. | `Extracted/petopia_npcs.csv` | `Extracted/petopia_data.csv` |
 | 03 | `03_clean_petopia_data.py` | Cleans Petopia data (notes and taming skills) and applies manual updates. | `Extracted/petopia_data.csv`, `Manual/notes_keywords.csv`, `Manual/notes_updates.csv`, `Manual/taming_updates.csv`, `Manual/skip_npc_ids.csv` | `Processed/processed_petopia_data.csv` |
 | 04 | `04_extract_wowhead_families.py` | Scrapes pet family metadata (expansion, icon, base stats) from Wowhead and injects missing Whiptail family. | Wowhead Web | `Extracted/wowhead_families.csv`, `Processed/processed_wowhead_families.csv` |
-| 05 | `05_extract_wowhead_spells.py` | Scrapes and cleans spell descriptions from Wowhead for all family abilities. | `Processed/processed_wowhead_families.csv`, `Manual/spells_mapping.csv` | `Processed/wowhead_spells.csv` |
-| 06 | `06_generate_abilities_lua.py` | Generates the hierarchical `AbilitiesData.lua` for the addon. | `Processed/processed_wowhead_families.csv`, `Processed/wowhead_spells.csv` | `Output/AbilitiesData.lua` |
+| 06 | `06_generate_abilities_lua.py` | Generates the hierarchical `AbilitiesData.lua` for the addon from family spell IDs and the hand-maintained spell mapping. | `Processed/processed_wowhead_families.csv`, `Manual/spells_mapping.csv` | `Output/AbilitiesData.lua` |
 | 07 | `07_extract_wowhead_npcs.py` | Crawls Wowhead to list every tameable NPC belonging to known families. | `Processed/processed_wowhead_families.csv` | `Extracted/wowhead_npcs.csv` |
 | 08 | `08_update_npcs.py` | Applies human-curated overrides from `npcs_updates.csv` to the dataset. Reads raw data, writes corrected version. | `Extracted/wowhead_npcs.csv`, `Manual/npcs_updates.csv` | `Processed/processed_wowhead_npcs.csv` |
 | 09 | `09_extract_wowhead_data.py` | Enriches NPCs with Display IDs, coordinates, and patch info using stealth scraping. | `Processed/processed_wowhead_npcs.csv`, `Manual/skip_npc_ids.csv` | `Extracted/wowhead_data.csv` |
@@ -58,7 +57,7 @@ The scripts must be run in numerical order. Each step validates its dependencies
 ### Data Cleaning
 The pipeline ensures data integrity through specialized cleaning logic at every stage:
 - **Families**: Automatically patches incomplete Wowhead JavaScript data (e.g., injecting the missing Whiptail family) and normalizes field types.
-- **Spells**: Transforms raw Wowhead tooltip HTML into readable text by resolving data placeholders (like attack power formulas), converting stylized spans into sub-headers, and applying manual categories/tags.
+- **Spells**: Ability name, rank, icon, category, and tag come entirely from the hand-maintained `Manual/spells_mapping.csv` — there is no Wowhead spell scrape.
 - **Notes**: Employs an aggressive multi-pass cleaner that strips redundant "Located in..." filler, enforces relevance via keyword filtering, and applies global search-and-replace rules from `notes_updates.csv` plus npc-specific additions, removals, and modifications.
 - **Taming Skills**: Normalizes Petopia skill strings by stripping redundant terminology (e.g., "Required Skill:") and aggregates these requirements across unique models (Display IDs) to ensure consistency.
 - **Skip Lists**: Ensures data accuracy by filtering out NPCs that are no longer in-game, incorrectly marked as tameable, or lack sufficient location data (`skip_npc_ids.csv`). Similarly, `skip_display_ids.csv` removes display IDs that do not render correctly in-game.
@@ -85,7 +84,7 @@ The pipeline ensures data integrity through specialized cleaning logic at every 
 ## Output Files
 
 The addon expects the following `.lua` files from the `Output/` folder:
-- `AbilitiesData.lua`: Family ability mappings and spell descriptions.
+- `AbilitiesData.lua`: Family ability mappings (name, rank, icon, category, tag).
 - `ModelsData.lua`: Flat table of NPC metadata and display IDs (`ModelsData[npcId] = { ... }`).
 - `CoordsData.lua`: Coordinate data for map integration.
 - `NotesData.lua`: Curated flavor text and taming instructions.
