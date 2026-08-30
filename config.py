@@ -43,7 +43,7 @@ ACTION_LIST_CSV = os.path.join(PROCESSED_DIR, 'action_list.csv')
 # as `PSM_DataSchemaVersion`; psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
 # Schema.lua asserts it matches on load and fails loud on a mismatch instead of every
 # consumer hitting nil-index errors independently. Bump both sides together.
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 # Output — final deliverables for the addon (.lua files only)
 ABILITIES_LUA = os.path.join(OUTPUT_DIR, 'AbilitiesData.lua')

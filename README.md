@@ -57,7 +57,7 @@ The scripts must be run in numerical order. Each step validates its dependencies
 ### Data Cleaning
 The pipeline ensures data integrity through specialized cleaning logic at every stage:
 - **Families**: Automatically patches incomplete Wowhead JavaScript data (e.g., injecting the missing Whiptail family) and normalizes field types.
-- **Spells**: Ability name, rank, icon, category, and tag come entirely from the hand-maintained `Manual/spells_mapping.csv` — there is no Wowhead spell scrape.
+- **Spells**: Ability name, rank, category, and tag come entirely from the hand-maintained `Manual/spells_mapping.csv` — there is no Wowhead spell scrape.
 - **Notes**: Employs an aggressive multi-pass cleaner that strips redundant "Located in..." filler, enforces relevance via keyword filtering, and applies global search-and-replace rules from `notes_updates.csv` plus npc-specific additions, removals, and modifications.
 - **Taming Skills**: Normalizes Petopia skill strings by stripping redundant terminology (e.g., "Required Skill:") and aggregates these requirements across unique models (Display IDs) to ensure consistency.
 - **Skip Lists**: Ensures data accuracy by filtering out NPCs that are no longer in-game, incorrectly marked as tameable, or lack sufficient location data (`skip_npc_ids.csv`). Similarly, `skip_display_ids.csv` removes display IDs that do not render correctly in-game.
@@ -84,7 +84,7 @@ The pipeline ensures data integrity through specialized cleaning logic at every 
 ## Output Files
 
 The addon expects the following `.lua` files from the `Output/` folder:
-- `AbilitiesData.lua`: Family ability mappings (name, rank, icon, category, tag).
+- `AbilitiesData.lua`: Family ability mappings (name, rank, category, tag).
 - `ModelsData.lua`: Flat table of NPC metadata and display IDs (`ModelsData[npcId] = { ... }`).
 - `CoordsData.lua`: Coordinate data for map integration.
 - `NotesData.lua`: Curated flavor text and taming instructions.
