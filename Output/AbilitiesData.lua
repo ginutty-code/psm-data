@@ -1,4 +1,4 @@
-PSM_DataSchemaVersion = 2
+PSM_DataSchemaVersion = 1
 
 -- Abilities Data Export
 -- Generated automatically

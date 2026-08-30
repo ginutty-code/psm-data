@@ -43,7 +43,15 @@ ACTION_LIST_CSV = os.path.join(PROCESSED_DIR, 'action_list.csv')
 # as `PSM_DataSchemaVersion`; psm-addon/PetStableManagement_ModelsBrowser/ModelsBrowser/
 # Schema.lua asserts it matches on load and fails loud on a mismatch instead of every
 # consumer hitting nil-index errors independently. Bump both sides together.
-SCHEMA_VERSION = 2
+#
+# NOTE: the AbilitiesData icon removal + Basic Ability addition did NOT bump this.
+# Both consumers now nil-tolerate a missing ability icon (psm-addon derives it at
+# runtime via C_Spell.GetSpellTexture) and an unknown rank label sorts last, so an
+# un-regenerated data file degrades gracefully rather than hard-failing -- a version
+# bump would only have been a forcing function, and it can't be a partial one while
+# PSM_DataSchemaVersion is a single global shared with the four Models Browser tables
+# (which weren't regenerated).
+SCHEMA_VERSION = 1
 
 # Output — final deliverables for the addon (.lua files only)
 ABILITIES_LUA = os.path.join(OUTPUT_DIR, 'AbilitiesData.lua')
