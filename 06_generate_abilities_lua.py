@@ -51,7 +51,7 @@ def main():
     spells = {}
     for row in spells_rows:
         spell_id = row.get("spell_id", "").strip()
-        if not spell_id:
+        if not spell_id or spell_id in SKIP_SPELL_IDS:
             continue
         name = row.get("spell_name", "").strip() or f"Spell {spell_id}"
         icon = row.get("spell_icon", "").strip()
@@ -209,8 +209,8 @@ def main():
 
         f.write("\n}\n")
 
-    # Print summary
-    total_families = len(abilities_data)
+    # Print summary ("Spec" is a synthetic bucket, not a real family)
+    total_families = len([k for k in abilities_data if k != "Spec"])
     total_ranks = sum(len(family_data["ranks"]) for family_data in abilities_data.values())
     total_abilities = sum(len(rank_data) for family_data in abilities_data.values() for rank_data in family_data["ranks"].values())
 
