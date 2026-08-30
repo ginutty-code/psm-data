@@ -14,7 +14,6 @@ PETOPIA_DATA_CSV = os.path.join(EXTRACTED_DIR, 'petopia_data.csv')
 WOWHEAD_NPCS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_npcs.csv')            # raw scrape before corrections
 WOWHEAD_DATA_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_data.csv')           # enriched per-NPC data from web
 WOWHEAD_FAMILIES_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_families.csv')   # raw scrape before Whiptail injection
-WOWHEAD_SPELLS_CSV = os.path.join(EXTRACTED_DIR, 'wowhead_spells.csv')        # raw scrape before cleaning
 
 # Manual — human-curated input files
 SKIP_NPC_IDS_CSV = os.path.join(MANUAL_DIR, 'skip_npc_ids.csv')
@@ -32,7 +31,6 @@ PROCESSED_PETOPIA_DATA_CSV = os.path.join(PROCESSED_DIR, 'processed_petopia_data
 PROCESSED_NPCS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_npcs.csv')
 PROCESSED_WOWHEAD_DATA_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_data.csv')
 PROCESSED_FAMILIES_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_families.csv')
-PROCESSED_SPELLS_CSV = os.path.join(PROCESSED_DIR, 'processed_wowhead_spells.csv')
 
 # Processed — master file combining all relevant data for final output generation (pet_data.csv is the main source for the addon)
 COMBINED_PET_DATA_CSV = os.path.join(PROCESSED_DIR, 'pet_data.csv')

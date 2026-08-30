@@ -1,88 +1,88 @@
 spell_id,spell_name,spell_icon,spell_category,spell_tag,spell_rank
-24423,Bloody Screech,,Enemy healing reduction,Debuffs,
-24450,Prowl,,First attack damage bonus,Damage,
-26064,Shell Shield,,Pet damage taken reduction,Defense,
-35346,Warp Time,,Enemy movement reduction,Control,
-50245,Pin,,Enemy movement reduction,Control,
-50285,Dust Cloud,,Enemy movement reduction,Control,
-50433,Ankle Crack,,Enemy movement reduction,Control,
-54644,Frost Breath,,Enemy movement reduction,Control,
-54680,Monstrous Bite,,Enemy healing reduction,Debuffs,
-90328,Spirit Walk,,First attack damage bonus,Damage,
-90339,Harden Carapace,,Pet damage taken reduction,Defense,
-90347,Play,,Fun,Fun,
-90361,Spirit Mend,,Exotic: Ally healing,Utility,
-92380,Froststorm Breath,spell_frost_icestorm,Exotic: Damage over time,Damage,
-93433,Burrow Attack,,Exotic: Damage over time,Damage,
-94019,Rest,,Fun,Fun,
-94022,Trick,,Fun,Fun,
-126259,Trick,,Fun,Fun,
-126311,Surface Trot,,Exotic: Hunter and pet water walking,Utility,
-126364,Rest,,Fun,Fun,
-159788,Molten Hide,,Exotic: Damage over time,Damage,
-159953,Feast,,Exotic: Pet armor & healing,Defense,
-160007,Updraft,,Exotic: Hunter and pet slow fall,Utility,
-160011,Agile Reflexes,,Pet dodge,Defense,
-160018,Gruesome Bite,,Enemy healing reduction,Debuffs,
-160044,Primal Agility,,Pet dodge,Defense,
-160049,Stone Armor,,Pet damage taken reduction,Defense,
-160057,Thick Hide,,Pet damage taken reduction,Defense,
-160060,Deadly Sting,,Enemy healing reduction,Debuffs,
-160063,Solid Shell,,Pet damage taken reduction,Defense,
-160065,Tendon Rip,,Enemy movement reduction,Control,
-160067,Web Spray,,Enemy movement reduction,Control,
-263423,Lock Jaw,,Enemy movement reduction,Control,
-263446,Acid Spit,,Enemy movement reduction,Control,
-263840,Furious Bite,,Enemy movement reduction,Control,
-263841,Petrifying Gaze,inv_treasurebasiliskmount_green,Enemy movement reduction,Control,
-263852,Talon Rend,,Enemy movement reduction,Control,
-263853,Infected Bite,,Enemy healing reduction,Debuffs,
-263854,Savage Rend,,Enemy healing reduction,Debuffs,
-263856,Gnaw,,Enemy healing reduction,Debuffs,
-263857,Ravage,,Enemy healing reduction,Debuffs,
-263858,Toxic Sting,,Enemy healing reduction,Debuffs,
-263861,Gore,,Enemy healing reduction,Debuffs,
-263863,Acid Bite,,Enemy healing reduction,Debuffs,
-263865,Scale Shield,,Pet damage taken reduction,Defense,
-263867,Obsidian Skin,,Pet damage taken reduction,Defense,
-263868,Defense Matrix,,Pet damage taken reduction,Defense,
-263869,Bristle,,Pet damage taken reduction,Defense,
-263887,Dragon's Guile,,Pet dodge,Defense,
-263892,Catlike Reflexes,,Pet dodge,Defense,
-263904,Serpent's Swiftness,,Pet dodge,Defense,
-263916,Feather Flurry,,Pet dodge,Defense,
-263921,Gruff,inv_babyspacegoat,Pet damage taken reduction,Defense,
-263934,Thick Fur,,Pet damage taken reduction,Defense,
-263939,Silverback,,Pet damage taken reduction,Defense,
-264023,Niuzao's Fortitude,,Pet damage taken reduction,Defense,
-264360,Winged Agility,,Pet dodge,Defense,
-264656,Pathfinding,,Hunter and pet movement speed,Spec,
-264662,Endurance Training,,Hunter and pet health buff,Spec,
-264663,Predator's Thirst,,Hunter and pet leech,Spec,
-264667,Primal Rage,,Bloodlust / Heroism,Spec,
-267922,Eternal Guardian,,Exotic: Pet instant revive,Defense,
-272679,Fortitude of the Bear,,Hunter and pet damage reduction,Spec,Tenacity Ability
-272682,Master's Call,,Ally movement impairing removal,Spec,Cunning Ability
-279254,Calcified Carapace,,Exotic: Pet damage taken reduction,Defense,
-279259,Shimmering Shale,,Exotic: Pet damage taken reduction,Defense,
-279336,Swarm of Flies,,Pet dodge,Defense,
-279362,Grievous Bite,,Enemy healing reduction,Debuffs,
-279399,Ancient Hide,,Pet damage taken reduction,Defense,
-279410,Bulwark,,Pet damage taken reduction,Defense,
-280069,Blood of the Rhino,,Exotic: Pet armor & healing,Defense,
-280151,Dune Strider,,Exotic: Pet movement speed,Utility,
-288962,Blood Bolt,,Enemy movement reduction,Control,
-341115,Hardy,,Pet damage taken reduction,Defense,
-341117,Fleethoof,,Pet dodge,Defense,
-341118,Trample,,Enemy movement reduction,Control,
-344346,Soothing Waters,,Pet dispel,Defense,
-344347,Spore Cloud,,Pet dispel,Defense,
-344348,Sonic Screech,,Pet dispel,Defense,
-344349,Nether Energy,,Pet dispel,Defense,
-344350,Oiled Feathers,,Pet dispel,Defense,
-344351,Spirit Pulse,,Pet dispel,Defense,
-344352,Nature's Grace,,Pet dispel,Defense,
-344353,Serenity Dust,,Pet dispel,Defense,
-392622,Shimmering Scales,,Pet damage taken reduction,Defense,
-1247058,Serrated Strike,,Enemy healing reduction,Debuffs,
-1247078,Shadow Jump,,Enemy movement reduction,Control,
+24423,Bloody Screech,ability_hunter_pet_vulture,Enemy healing reduction,Debuffs,Special Ability
+24450,Prowl,ability_druid_supriseattack,First attack damage bonus,Damage,Bonus Ability
+26064,Shell Shield,inv_shield_21,Pet damage taken reduction,Defense,Special Ability
+35346,Warp Time,spell_arcane_arcane04,Enemy movement reduction,Control,Special Ability
+50245,Pin,ability_hunter_pet_crab,Enemy movement reduction,Control,Special Ability
+50285,Dust Cloud,inv_misc_dust,Enemy movement reduction,Control,Special Ability
+50433,Ankle Crack,ability_hunter_pet_crocolisk,Enemy movement reduction,Control,Special Ability
+54644,Frost Breath,spell_frost_chillingblast,Enemy movement reduction,Control,Special Ability
+54680,Monstrous Bite,inv_misc_bone_09,Enemy healing reduction,Debuffs,Special Ability
+90328,Spirit Walk,ability_druid_supriseattack,First attack damage bonus,Damage,Bonus Ability
+90339,Harden Carapace,inv_qiraj_carapaceoldgod,Pet damage taken reduction,Defense,Special Ability
+90347,Play,ability_hunter_separationanxiety,Fun,Fun,Bonus Ability
+90361,Spirit Mend,spell_shaman_spiritlink,Exotic: Ally healing,Utility,Exotic Ability
+92380,Froststorm Breath,spell_frost_icestorm,Exotic: Damage over time,Damage,Exotic Ability
+93433,Burrow Attack,inv_qiraj_skinsandworm,Exotic: Damage over time,Damage,Exotic Ability
+94019,Rest,ability_hunter_separationanxiety,Fun,Fun,Bonus Ability
+94022,Trick,ability_hunter_separationanxiety,Fun,Fun,Bonus Ability
+126259,Trick,ability_hunter_separationanxiety,Fun,Fun,Bonus Ability
+126311,Surface Trot,spell_frost_windwalkon,Exotic: Hunter and pet water walking,Utility,Exotic Ability
+126364,Rest,ability_hunter_separationanxiety,Fun,Fun,Bonus Ability
+159788,Molten Hide,spell_shaman_improvedfirenova,Exotic: Damage over time,Damage,Exotic Ability
+159953,Feast,ability_racial_cannibalize,Exotic: Pet armor & healing,Defense,Exotic Ability
+160007,Updraft,spell_magic_featherfall,Exotic: Hunter and pet slow fall,Utility,Exotic Ability
+160011,Agile Reflexes,inv_misc_foxkit,Pet dodge,Defense,Special Ability
+160018,Gruesome Bite,ability_devour,Enemy healing reduction,Debuffs,Special Ability
+160044,Primal Agility,inv_pet_monkey,Pet dodge,Defense,Special Ability
+160049,Stone Armor,achievement_moguraid_01,Pet damage taken reduction,Defense,Special Ability
+160057,Thick Hide,inv_misc_nativebeastskin,Pet damage taken reduction,Defense,Special Ability
+160060,Deadly Sting,trade_archaeology_tinybronzescorpion,Enemy healing reduction,Debuffs,Special Ability
+160063,Solid Shell,inv_misc_stonetablet_01,Pet damage taken reduction,Defense,Special Ability
+160065,Tendon Rip,inv_misc_monsterclaw_09,Enemy movement reduction,Control,Special Ability
+160067,Web Spray,inv_misc_web_01,Enemy movement reduction,Control,Special Ability
+263423,Lock Jaw,ability_druid_lacerate,Enemy movement reduction,Control,Special Ability
+263446,Acid Spit,ability_creature_poison_02,Enemy movement reduction,Control,Special Ability
+263840,Furious Bite,ability_hunter_pet_wolf,Enemy movement reduction,Control,Special Ability
+263841,Petrifying Gaze,inv_treasurebasiliskmount_green,Enemy movement reduction,Control,Special Ability
+263852,Talon Rend,ability_druid_mangle2,Enemy movement reduction,Control,Special Ability
+263853,Infected Bite,ability_druid_primaltenacity,Enemy healing reduction,Debuffs,Special Ability
+263854,Savage Rend,ability_gouge,Enemy healing reduction,Debuffs,Special Ability
+263856,Gnaw,inv_pet_beaver,Enemy healing reduction,Debuffs,Special Ability
+263857,Ravage,artifactability_feraldruid_openwounds,Enemy healing reduction,Debuffs,Special Ability
+263858,Toxic Sting,ability_poisons,Enemy healing reduction,Debuffs,Special Ability
+263861,Gore,inv_pet_direhorn,Enemy healing reduction,Debuffs,Special Ability
+263863,Acid Bite,spell_nature_corrosivebreath,Enemy healing reduction,Debuffs,Special Ability
+263865,Scale Shield,inv_artifact_dragonscales,Pet damage taken reduction,Defense,Special Ability
+263867,Obsidian Skin,ability_mage_moltenarmor,Pet damage taken reduction,Defense,Special Ability
+263868,Defense Matrix,ability_vehicle_shellshieldgenerator,Pet damage taken reduction,Defense,Special Ability
+263869,Bristle,spell_magic_polymorphpig,Pet damage taken reduction,Defense,Special Ability
+263887,Dragon's Guile,ability_hunter_pet_dragonhawk,Pet dodge,Defense,Special Ability
+263892,Catlike Reflexes,ability_hunter_catlikereflexes,Pet dodge,Defense,Special Ability
+263904,Serpent's Swiftness,ability_hunter_serpentswiftness,Pet dodge,Defense,Special Ability
+263916,Feather Flurry,inv_feather_13,Pet dodge,Defense,Special Ability
+263921,Gruff,inv_babyspacegoat,Pet damage taken reduction,Defense,Special Ability
+263934,Thick Fur,spell_druid_bristlingfur,Pet damage taken reduction,Defense,Special Ability
+263939,Silverback,ability_hunter_pet_gorilla,Pet damage taken reduction,Defense,Special Ability
+264023,Niuzao's Fortitude,ability_monk_chargingoxwave,Pet damage taken reduction,Defense,Special Ability
+264360,Winged Agility,ability_hunter_serpentswiftness,Pet dodge,Defense,Special Ability
+264656,Pathfinding,spell_lifegivingspeed,Hunter and pet movement speed,Spec,Cunning Passive
+264662,Endurance Training,ability_hunter_huntervswild,Hunter and pet health buff,Spec,Tenacity Passive
+264663,Predator's Thirst,spell_shadow_vampiricaura,Hunter and pet leech,Spec,Ferocity Passive
+264667,Primal Rage,spell_shadow_unholyfrenzy,Bloodlust / Heroism,Spec,Ferocity Ability
+267922,Eternal Guardian,spell_nature_reincarnation,Exotic: Pet instant revive,Defense,Exotic Ability
+272679,Fortitude of the Bear,spell_druid_bearhug,Hunter and pet damage reduction,Spec,Tenacity Ability
+272682,Master's Call,ability_hunter_masterscall,Ally movement impairing removal,Spec,Cunning Ability
+279254,Calcified Carapace,trade_archaeology_blacktrilobite,Exotic: Pet damage taken reduction,Defense,Exotic Passive
+279259,Shimmering Shale,inv_skinning_80_shimmerscale,Exotic: Pet damage taken reduction,Defense,Exotic Passive
+279336,Swarm of Flies,spell_nature_insect_swarm2,Pet dodge,Defense,Special Ability
+279362,Grievous Bite,inv_misc_bone_09,Enemy healing reduction,Debuffs,Special Ability
+279399,Ancient Hide,inv_skinning_80_coarseleather,Pet damage taken reduction,Defense,Special Ability
+279410,Bulwark,inv_shield_18,Pet damage taken reduction,Defense,Special Ability
+280069,Blood of the Rhino,spell_shadow_lifedrain,Exotic: Pet armor & healing,Defense,Exotic Ability
+280151,Dune Strider,ability_hunter_pet_silithid,Exotic: Pet movement speed,Utility,Exotic Ability
+288962,Blood Bolt,artifactability_blooddeathknight_umbilicuseternus,Enemy movement reduction,Control,Special Ability
+341115,Hardy,ability_mount_camel_brown,Pet damage taken reduction,Defense,Special Ability
+341117,Fleethoof,inv_horse3_pale,Pet dodge,Defense,Special Ability
+341118,Trample,ability_mount_ridingelekk,Enemy movement reduction,Control,Special Ability
+344346,Soothing Waters,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344347,Spore Cloud,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344348,Sonic Screech,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344349,Nether Energy,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344350,Oiled Feathers,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344351,Spirit Pulse,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344352,Nature's Grace,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+344353,Serenity Dust,spell_arcane_massdispel,Pet dispel,Defense,Special Ability
+392622,Shimmering Scales,inv_misc_rubysanctum1,Pet damage taken reduction,Defense,Special Ability
+1247058,Serrated Strike,ability_druid_ravage,Enemy healing reduction,Debuffs,Special Ability
+1247078,Shadow Jump,spell_shadow_shadesofdarkness,Enemy movement reduction,Control,Special Ability
