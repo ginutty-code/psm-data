@@ -179,7 +179,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 1994,Githyiss the Vile,Normal,0,3,Spider,257,"[-1,null]",update
 70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]",add
 262102,Slithering Coiler,Normal,0,35,Serpent,16642,[],add
-134390,,,,,,,,add
-29630,,,,,,,,add
-29637,,,,,,,,add
-29713,,,,,,,,add
+134390,Storm Serpent,,,,,,,add
+29630,Fanged Pit Viper,,,,,,,add
+29637,Crafty Snake,,,,,,,add
+29713,Slad'ran Constrictor,,,,,,,add

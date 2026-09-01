@@ -7210,5 +7210,9 @@ npc_id,npc_name,zone,family,name_keeper,notes,taming_requirements
 270767,Newborn Snake,The Coiled Isle,Serpent,,"Found during the quest, The Serpent's Tail.",
 271028,Enraged Dragonhawk,Zul'Aman,Dragonhawk,,"Found during the quest, Bravely Burning.",
 271067,Ravenous Seabird,"Mlurkkr Mire, The Coiled Isle",,,,
+271206,Voidstalker,Cursed Keepsake (Quest Scenario),Warp Stalker,,"Located in Cursed Keepsake (Quest Scenario). Found during the quest, Cursed Keepsake, which takes you into a unique scenario where you fight waves of enemies. Its red aura is lost upon taming.",
+271246,Swarmer,Cursed Keepsake (Quest Scenario),Beetle,,"Located in Cursed Keepsake (Quest Scenario). Found during the quest, Cursed Keepsake, which takes you into a unique scenario where you fight waves of enemies. Its red aura is lost upon taming.",
+271247,Spiderling,Cursed Keepsake (Quest Scenario),Spider,,"Located in Cursed Keepsake (Quest Scenario). Found during the quest, Cursed Keepsake, which takes you into a unique scenario where you fight waves of enemies. Its red aura is lost upon taming.",
+271252,Nerubian Screamer,Cursed Keepsake (Quest Scenario),Blood Beast,,"Located in Cursed Keepsake (Quest Scenario). Found during the quest, Cursed Keepsake, which takes you into a unique scenario where you fight waves of enemies. Its red aura is lost upon taming.",Blood Beast
 272920,Vilescar Tyrant,The Coiled Isle,Hydra,,,
 273290,Writhing Coiler,The Coiled Isle,Serpent,,"Spawns when rescuing Naz'ara the Clever during the quest, Into the Vaults of Atal'Utek.",
