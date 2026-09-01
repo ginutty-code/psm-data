@@ -80,28 +80,47 @@ def check_petopia_npcs_missing_from_pet_data():
     rawest, earliest-stage NPC list) should end up in the final combined
     dataset unless it's explicitly accounted for in Manual/skip_npc_ids.csv.
 
-    Anything missing from pet_data.csv AND absent from the skip list means
-    Petopia knows about the NPC but the Wowhead side of the pipeline never
-    picked it up (it's missing from wowhead_npcs.csv upstream) — the fix is
-    to add it to Manual/npcs_updates.csv so 08_update_npcs.py injects it.
+    An npc_id missing from pet_data.csv AND absent from the skip list splits
+    two ways, and the Wowhead extracts (wowhead_npcs.csv, then
+    wowhead_data.csv) are what tells them apart — being absent from
+    pet_data.csv alone doesn't prove the Wowhead side never picked the NPC
+    up, only that it isn't in the *final* table:
+      - Present in either Wowhead extract: the Wowhead pipeline *does* carry
+        it, so pet_data.csv is just stale (validation run before
+        11_combine_data.py) or the NPC is being dropped somewhere in
+        10/11 — regenerate and re-check before touching Manual/ files.
+      - In neither extract: the Wowhead side genuinely never picked it up —
+        add it to Manual/npcs_updates.csv so 08_update_npcs.py injects it.
     """
     petopia_ids = _load_ids(PETOPIA_NPCS_CSV)
     pet_data_ids = _load_ids(COMBINED_PET_DATA_CSV)
     skip_reasons = _load_skip_reasons(SKIP_NPC_IDS_CSV)
+    wowhead_pipeline_ids = _load_ids(WOWHEAD_NPCS_CSV) | _load_ids(WOWHEAD_DATA_CSV)
 
     missing = sorted(petopia_ids - pet_data_ids, key=lambda x: int(x) if x.isdigit() else 0)
     unexplained = [npc_id for npc_id in missing if npc_id not in skip_reasons]
+    in_wowhead = [npc_id for npc_id in unexplained if npc_id in wowhead_pipeline_ids]
+    absent_from_wowhead = [npc_id for npc_id in unexplained if npc_id not in wowhead_pipeline_ids]
 
     print(f"Petopia npc_ids: {len(petopia_ids)}")
     print(f"pet_data.csv npc_ids: {len(pet_data_ids)}")
     print(f"Missing from pet_data.csv: {len(missing)}")
     print(f"  - Accounted for in skip_npc_ids.csv: {len(missing) - len(unexplained)}")
-    print(f"  - UNEXPLAINED (needs a Manual/npcs_updates.csv entry): {len(unexplained)}")
+    print(f"  - In a Wowhead extract already (stale pet_data.csv or 10/11 drop): {len(in_wowhead)}")
+    print(f"  - UNEXPLAINED (needs a Manual/npcs_updates.csv entry): {len(absent_from_wowhead)}")
 
-    return [
-        (npc_id, f"Add npc_id {npc_id} to Manual/npcs_updates.csv (Petopia lists it, Wowhead pipeline doesn't)")
-        for npc_id in unexplained
+    actions = [
+        (npc_id,
+         f"npc_id {npc_id} is in the Wowhead pipeline (wowhead_npcs.csv/wowhead_data.csv) but not "
+         f"pet_data.csv - regenerate pet_data.csv (re-run 11_combine_data.py) and re-check; if it "
+         f"persists, it's being dropped in 10/11")
+        for npc_id in in_wowhead
     ]
+    actions += [
+        (npc_id, f"Add npc_id {npc_id} to Manual/npcs_updates.csv (Petopia lists it, Wowhead pipeline doesn't)")
+        for npc_id in absent_from_wowhead
+    ]
+    return actions
 
 
 def check_pet_data_required_fields():
