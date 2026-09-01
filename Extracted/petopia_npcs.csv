@@ -500,6 +500,7 @@ npc_id,npc_name,zone,tameable
 222789,Battlefront Hauler,"Arathi's End, Azj-Kahet",Can Be Tamed
 222719,Battlefront Hauler,"Arathi's End, Azj-Kahet",Can Be Tamed
 214397,Frenzied Swarmer,Hallowfall,Can Be Tamed
+271246,Swarmer,Cursed Keepsake (Quest Scenario),Can Be Tamed
 226173,Dirtcrusted Stagshell,"Untamed Valley, Azj-Kahet",Can Be Tamed
 226005,Scavenger Stagshell,Azj-Kahet,Can Be Tamed
 225552,Scavenger Stagshell,Azj-Kahet,Can Be Tamed
@@ -1104,6 +1105,7 @@ npc_id,npc_name,zone,tameable
 216037,Vilewing,"Ruptured Lake, Azj-Kahet",Can Be Tamed
 223905,Discordant Swarmite,"Maddening Deep, Azj-Kahet",Can Be Tamed
 219271,Twice-Stinger the Wretched,"Thunderhead Peak, Isle of Dorn",Can Be Tamed
+271252,Nerubian Screamer,Cursed Keepsake (Quest Scenario),Can Be Tamed
 217038,Intrusive Nothwing,Azj-Kahet,Can Be Tamed
 217127,Invasive Nestbuilder,"Mmarl, Azj-Kahet",Can Be Tamed
 225642,Leeching Swarmite,"Ruptured Lake, Azj-Kahet",Can Be Tamed
@@ -5264,6 +5266,7 @@ npc_id,npc_name,zone,tameable
 219664,Rampaging Threadling,Dalaran (Khaz Algar intro quest phase),Can Be Tamed
 216555,Heelripper,"The Burrows, Azj-Kahet",Can Be Tamed
 217137,Invasive Nestling,"Mmarl, Azj-Kahet",Can Be Tamed
+271247,Spiderling,Cursed Keepsake (Quest Scenario),Can Be Tamed
 226013,Feral Threadling,Azj-Kahet,Can Be Tamed
 229679,Scavenger Threadling,"Old Sacrificial Pit - City of Threads, Azj-Kahet",Can Be Tamed
 221131,Threadling Scavenger,"Tenir's Ascent, Hallowfall",Can Be Tamed
@@ -6293,6 +6296,7 @@ npc_id,npc_name,zone,tameable
 237753,Void Stalker,"Voidscar Cavern, K'aresh",Can Be Tamed
 239427,Vengeful Shredclaw,"Shadowridge Outpost, Voidstorm",Can Be Tamed
 254709,Prowling Voidstalker,Eversong Woods,Can Be Tamed
+271206,Voidstalker,Cursed Keepsake (Quest Scenario),Can Be Tamed
 83553,Insha'tar,Shadowmoon Valley - Draenor,Can Be Tamed
 75483,Shaded Plainsstalker,Shadowmoon Valley - Draenor,Can Be Tamed
 23163,Gezzarak the Huntress,Terokkar Forest,Can Be Tamed

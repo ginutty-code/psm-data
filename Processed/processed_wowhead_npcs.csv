@@ -1203,7 +1203,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 254818,Duskling Skitterer,Normal,0,3,Spider,15968,"[0,null]"
 260988,Frost Crawler,Normal,0,3,Spider,16900,[]
 263653,Mortuary Creeper,Normal,0,3,Spider,16535,"[-1,-1]"
-271247,Spiderling,Normal,0,3,Spider,unknown,[]
+271247,,,,,,,
 822,Young Forest Bear,Normal,0,4,Bear,12,"[-1,-1]"
 1130,Bjarn,Rare,4,4,Bear,1,"[-1,-1]"
 1186,Black Bear,Normal,0,4,Bear,38,"[-1,-1]"
@@ -4391,7 +4391,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257445,Agitated Voidcrawler,Normal,0,32,Warp Stalker,15458|15958,"[-1,-1]"
 259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]"
 265254,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|17103,"[-1,-1]"
-271206,Voidstalker,Normal,0,32,Warp Stalker,unknown,[]
+271206,,,,,,,
 17724,Underbat,Elite,1,33,Sporebat,3716,"[-1,-1]"
 17736,Underbat Swarmer,Normal,0,33,Sporebat,unknown,[]
 18128,Sporebat,Normal,0,33,Sporebat,3521,"[0,0]"
@@ -7095,7 +7095,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 256870,Smoldering Beetle,Normal,0,53,Beetle,15355,"[0,0]"
 257922,Riverbuzz Beetle,Normal,0,53,Beetle,unknown,[]
 258343,Underroot Beetle,Normal,0,53,Beetle,unknown,[]
-271246,Swarmer,Normal,0,53,Beetle,unknown,[]
+271246,,,,,,,
 34865,Tunneling Worm,Normal,0,55,Shale Beast,4737,"[null,0]"
 42766,Gorged Gyreworm,Normal,0,55,Shale Beast,5042,"[-1,-1]"
 42845,Rock Borer,Normal,0,55,Shale Beast,5088,"[-1,-1]"
@@ -10470,7 +10470,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257902,Bloodthirst Blistercreep,Normal,0,296,Blood Beast,15458,"[-1,-1]"
 258510,Hateleech Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
 261045,Siphoning Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
-271252,Nerubian Screamer,Normal,0,296,Blood Beast,unknown,[]
+271252,,,,,,,
 39443,Camel,Normal,0,298,Camel,4945,"[1,1]"
 45121,Lady Humps,Normal,0,298,Camel,5034,"[1,1]"
 45142,Lady Humps,Normal,0,298,Camel,unknown,[]
