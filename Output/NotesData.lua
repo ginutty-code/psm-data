@@ -2077,6 +2077,7 @@ PSM.NotesData = {
     [253765] = [[Found during the quest, The Serpent's Tail.]],
     [253884] = [[Found during a short sequence of Patch 12.1 Campaign quests, beginning with To the Skybridge. Also spawns during the confrontation with Hexlord Malacrass during the quest, Down With the Skies.]],
     [254203] = [[Located in The Grudge Pit (Non-Instanced), Harandar.]],
+    [254503] = [[Located in Atal'Aman (Delve). Spawns during the story variant, "Toadly Unbecoming".]],
     [254709] = [[Appears during various Void Strike events in Eversong.]],
     [254720] = [[Appears during various Void Strike events in Eversong.]],
     [254795] = [[Found south of the Horde entrance to Silvermoon City.]],

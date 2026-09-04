@@ -1203,7 +1203,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 254818,Duskling Skitterer,Normal,0,3,Spider,15968,"[0,null]"
 260988,Frost Crawler,Normal,0,3,Spider,16900,[]
 263653,Mortuary Creeper,Normal,0,3,Spider,16535,"[-1,-1]"
-271247,,,,,,,
+271247,Spiderling,Normal,0,3,Spider,unknown,[]
 822,Young Forest Bear,Normal,0,4,Bear,12,"[-1,-1]"
 1130,Bjarn,Rare,4,4,Bear,1,"[-1,-1]"
 1186,Black Bear,Normal,0,4,Bear,38,"[-1,-1]"
@@ -4391,7 +4391,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257445,Agitated Voidcrawler,Normal,0,32,Warp Stalker,15458|15958,"[-1,-1]"
 259106,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|15947|15968,"[-1,-1]"
 265254,Hal'hadar Leystalker,Normal,0,32,Warp Stalker,16943|17103,"[-1,-1]"
-271206,,,,,,,
+271206,Voidstalker,Normal,0,32,Warp Stalker,unknown,[]
 17724,Underbat,Elite,1,33,Sporebat,3716,"[-1,-1]"
 17736,Underbat Swarmer,Normal,0,33,Sporebat,unknown,[]
 18128,Sporebat,Normal,0,33,Sporebat,3521,"[0,0]"
@@ -4588,387 +4588,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 255918,Fathom Ray,Normal,0,34,Ray,16105|15524,"[0,0]"
 255957,Corrupted Ray,Normal,0,34,Ray,16796,[]
 257575,Hungering Stormray,Normal,0,34,Ray,15458,"[-1,-1]"
-3680,Serpentbloom Snake,Normal,0,35,Serpent,718,"[0,0]"
-5048,Deviate Adder,Elite,1,35,Serpent,718,"[-1,-1]"
-5225,Murk Spitter,Normal,0,35,Serpent,8|1477,"[-1,-1]"
-5755,Deviate Viper,Elite,1,35,Serpent,718,"[-1,-1]"
-5762,Deviate Moccasin,Elite,1,35,Serpent,718,"[-1,-1]"
-8886,Deviate Python,Normal,0,35,Serpent,718,"[-1,-1]"
-15274,Mana Wyrm,Normal,0,35,Serpent,6455|3430,"[0,0]"
-15966,Mana Serpent,Normal,0,35,Serpent,3430,"[-1,-1]"
-16310,Mana Shifter,Normal,0,35,Serpent,3433,"[-1,-1]"
-16491,Mana Feeder,Elite,1,35,Serpent,3457,"[-1,-1]"
-16492,Syphoner,Elite,1,35,Serpent,3457,"[-1,-1]"
-18883,Mana Snapper,Normal,0,35,Serpent,3523,"[-1,-1]"
-19306,Mana Leech,Normal,0,35,Serpent,3792,"[-1,-1]"
-19784,Coilskar Cobra,Normal,0,35,Serpent,3520,"[-1,-1]"
-19785,Venomcowl Cobra,Normal,0,35,Serpent,unknown,[]
-19921,Viper,Normal,0,35,Serpent,unknown,"[null,1]"
-20618,Mana Invader,Normal,0,35,Serpent,unknown,[]
-23020,Shadow Serpent,Normal,0,35,Serpent,3520,"[-1,-1]"
-23026,Twilight Serpent,Normal,0,35,Serpent,3518,"[0,0]"
-24338,Amani Snake,Normal,0,35,Serpent,3805,"[-1,-1]"
-24757,Fjord Rock Snake,Normal,0,35,Serpent,unknown,[]
-24761,Brightscale Wyrm,Normal,0,35,Serpent,4131,"[-1,-1]"
-24917,Phase Wyrm,Normal,0,35,Serpent,3522,"[-1,-1]"
-25113,Crafty Snake,Normal,0,35,Serpent,unknown,[]
-25711,Spirit of the North,Normal,0,35,Serpent,3537,"[-1,-1]"
-25721,Arcane Serpent,Normal,0,35,Serpent,3537,"[-1,-1]"
-26322,Arcane Wyrm,Normal,0,35,Serpent,65,"[-1,-1]"
-28011,Emperor Cobra,Normal,0,35,Serpent,3711,"[-1,-1]"
-28358,Venomtip,Normal,0,35,Serpent,3711,"[-1,-1]"
-29444,Drakkari Snake,Normal,0,35,Serpent,66,"[-1,-1]"
-36362,Swamp Adder,Normal,0,35,Serpent,unknown,[]
-40280,Swarming Serpent,Normal,0,35,Serpent,5144,"[0,0]"
-40657,Basking Cobra,Normal,0,35,Serpent,440,"[-1,-1]"
-41212,Void Wyrm,Normal,0,35,Serpent,4945,"[-1,-1]"
-41374,Void Wyrm,Normal,0,35,Serpent,4945,"[-1,-1]"
-44180,Viper,Normal,0,35,Serpent,11|8581|139,"[-1,-1]"
-44568,Dune Rattler,Normal,0,35,Serpent,440,"[-1,-1]"
-44594,Sunburst Adder,Normal,0,35,Serpent,440,"[-1,-1]"
-44595,Sand Slitherer,Normal,0,35,Serpent,440,"[-1,-1]"
-47283,Sand Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
-47740,Viper,Normal,0,35,Serpent,5034,"[-1,-1]"
-48131,Needlespine Cobra,Normal,0,35,Serpent,400|357|440,"[-1,-1]"
-48132,Needlespine Shimmerback,Normal,0,35,Serpent,400|440,"[-1,-1]"
-49159,Cavern Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
-50317,Mana Thirster,Normal,0,35,Serpent,618,"[-1,-1]"
-50735,Blinkeye the Rattler,Rare,4,35,Serpent,15,"[-1,-1]"
-50737,Acroniss,Rare,4,35,Serpent,1377,"[-1,-1]"
-50738,Shimmerscale,Rare,4,35,Serpent,8,"[-1,-1]"
-51676,Marsh Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
-52085,Razzashi Adder,Elite,1,35,Serpent,1977,"[-1,-1]"
-52173,Razzashi Serpent,Normal,0,35,Serpent,33,"[-1,-1]"
-52174,Small Jungle Serpent,Normal,0,35,Serpent,unknown,[]
-52224,Jungle Serpent,Normal,0,35,Serpent,33,"[-1,-1]"
-52402,Venomtooth,Normal,0,35,Serpent,1977,"[0,0]"
-58888,Murkscale Asp,Normal,0,35,Serpent,6134,"[-1,-1]"
-59769,Bamboo Python,Elite,1,35,Serpent,5785,"[-1,-1]"
-65604,Viper,Normal,0,35,Serpent,5842,"[-1,-1]"
-65820,Yellowback Water Moccasin,Normal,0,35,Serpent,6134,"[-1,-1]"
-65821,Cobaltscale Death Adder,Normal,0,35,Serpent,6134,"[-1,-1]"
-67770,Acidfang Slitherer,Normal,0,35,Serpent,6677|6507,"[-1,-1]"
-71500,Snake,Normal,0,35,Serpent,unknown,[]
-72841,Death Adder,Elite,1,35,Serpent,6757,"[-1,-1]"
-73163,Imperial Python,Rare Elite,2,35,Serpent,6757,"[-1,-1]"
-77067,Gorgrond Python,Normal,0,35,Serpent,6721|9786,"[-1,-1]"
-77070,Gorgrond Adder,Normal,0,35,Serpent,unknown,[]
-77157,Cauldron Adder,Normal,0,35,Serpent,unknown,[]
-78712,Deathstrike Cobra,Normal,0,35,Serpent,unknown,[]
-80354,Nightmarsh Anaconda,Normal,0,35,Serpent,unknown,[]
-85979,Gorgrond Water Snake,Normal,0,35,Serpent,6721,"[-1,-1]"
-87039,Marsh Anaconda,Elite,1,35,Serpent,6755,"[-1,-1]"
-89393,Azsuna Mana Wyrm,Normal,0,35,Serpent,7334,"[0,0]"
-89697,Swamp Python,Normal,0,35,Serpent,6723,"[-1,-1]"
-92606,Sylissa,Rare,4,35,Serpent,6723,"[-1,-1]"
-92607,Python Hatchling,Normal,0,35,Serpent,6723,"[-1,-1]"
-99744,Bloodscale Wyrm,Normal,0,35,Serpent,unknown,[]
-102091,Slithering Swampserpent,Normal,0,35,Serpent,7503,"[-1,-1]"
-105398,Snek,Normal,0,35,Serpent,unknown,[]
-105884,Spellwyrm,Normal,0,35,Serpent,7637,"[-1,-1]"
-107098,Flashwyrm,Normal,0,35,Serpent,7334,"[-1,-1]"
-109023,Shadescale Flyeater,Normal,0,35,Serpent,7637,"[0,0]"
-113202,Runebound Wyrm,Normal,0,35,Serpent,8423,"[-1,-1]"
-114835,Mana Feeder,Elite,1,35,Serpent,unknown,"[-1,-1]"
-115795,Abyss Stalker,Elite,1,35,Serpent,8524,"[-1,-1]"
-120477,Deep Stalker,Elite,1,35,Serpent,8524,"[-1,-1]"
-121449,Giant Snake,Normal,0,35,Serpent,unknown,[]
-121661,Sneaky Snake,Normal,0,35,Serpent,unknown,[]
-122015,Void Streaker,Normal,0,35,Serpent,8701,"[0,0]"
-123358,Serpent Hatchling,Normal,0,35,Serpent,8501,"[-1,-1]"
-123815,Jungle Python,Normal,0,35,Serpent,unknown,[]
-124523,Colossal Cobra,Normal,0,35,Serpent,unknown,[]
-125299,Soultainted Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
-126672,Cove Eel,Normal,0,35,Serpent,8567,"[-1,-1]"
-126894,Pit Snake,Normal,0,35,Serpent,8501,"[-1,-1]"
-127169,Colossal Water Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
-127547,Desert Cobra,Normal,0,35,Serpent,unknown,[]
-127600,Venomscale Slitherer,Normal,0,35,Serpent,8567,"[-1,-1]"
-127745,Pit Cobra,Normal,0,35,Serpent,unknown,[]
-128115,Swamp Serpent,Normal,0,35,Serpent,9012,"[-1,null]"
-128356,Soulspitter Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
-128622,Swamp Snake,Normal,0,35,Serpent,9012,"[-1,null]"
-129980,Abyssal Eel,Normal,0,35,Serpent,9042,"[-1,-1]"
-130020,Jungle Cobra,Normal,0,35,Serpent,unknown,[]
-130232,Venomous Coilscale,Normal,0,35,Serpent,8567|8721,"[-1,-1]"
-130401,Vathikur,Rare,4,35,Serpent,8501,"[-1,-1]"
-131609,Hiss'ak,Elite,1,35,Serpent,unknown,[]
-133384,Merektha,Elite,1,35,Serpent,9527,"[-1,-1]"
-133980,Ayame,Elite,1,35,Serpent,8500,"[-1,-1]"
-135005,Entangler,Elite,1,35,Serpent,unknown,[]
-135061,Water Serpent,Normal,0,35,Serpent,8501,"[-1,-1]"
-135789,Mud Lurker Python,Normal,0,35,Serpent,8500,"[-1,-1]"
-135846,Lightning Serpent,Elite,1,35,Serpent,9527,"[-1,-1]"
-136593,Sevriss,Elite,1,35,Serpent,8501,"[-1,-1]"
-137183,Honey-Coated Slitherer,Rare,4,35,Serpent,8567,"[-1,-1]"
-137824,Arclight,Rare,4,35,Serpent,8721,"[-1,-1]"
-137944,Spiny Shallow Eel,Normal,0,35,Serpent,9042,"[-1,-1]"
-138540,Venomous Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
-139285,Shiverscale the Toxic,Rare,4,35,Serpent,8567,"[-1,-1]"
-139988,Sandfang,Rare,4,35,Serpent,9042,"[-1,-1]"
-140038,Abyssal Eel,Normal,0,35,Serpent,9525,"[-1,-1]"
-140604,Coastal Trapfang,Normal,0,35,Serpent,8567,"[-1,-1]"
-140689,Dreadfang Slitherer,Normal,0,35,Serpent,9496|9440|9591,"[-1,-1]"
-140690,Dreadfang Viper,Normal,0,35,Serpent,9440|9469|9496,"[-1,-1]"
-140691,Giant Dreadfang,Elite,1,35,Serpent,9469|9496|9440,"[-1,-1]"
-140692,Bloodbore,Rare,4,35,Serpent,9440|9576|9548,"[-1,-1]"
-142464,Moult,Normal,0,35,Serpent,8670|8499,"[-1,1]"
-142475,Ka'za the Mezmerizing,Rare Elite,2,35,Serpent,8499,"[-1,-1]"
-145338,Abyssal Eel,Normal,0,35,Serpent,10052,"[-1,-1]"
-145343,Deepcoil Serpent,Normal,0,35,Serpent,10052,"[-1,-1]"
-147322,Ayame,Elite,1,35,Serpent,unknown,[]
-147864,Hisskarath,Rare Elite,2,35,Serpent,unknown,[]
-149707,Coral Slitherer,Normal,0,35,Serpent,10052,"[-1,-1]"
-152551,Deepcoil Constrictor,Elite,1,35,Serpent,10052,"[-1,-1]"
-152552,Shassera,Rare,4,35,Serpent,10052,"[-1,-1]"
-152554,Abyssal Spawn,Normal,0,35,Serpent,10052,"[-1,-1]"
-152555,Elderspawn Nalaada,Rare Elite,2,35,Serpent,10052,"[-1,-1]"
-152556,Chasm-Haunter,Rare,4,35,Serpent,10052,"[-1,-1]"
-152796,Monstrous Great Eel,Elite,1,35,Serpent,unknown,[]
-153694,Deepcoil Hatchling,Normal,0,35,Serpent,10052,"[-1,-1]"
-154092,Deepcoil Hatchling,Normal,0,35,Serpent,10052,"[-1,-1]"
-155455,Voltscale Guardian,Elite,1,35,Serpent,unknown,[]
-158465,Poisonous Snake,Normal,0,35,Serpent,10833,"[-1,-1]"
-159849,Shadow Serpent,Normal,0,35,Serpent,unknown,[]
-160413,Crimson Cobra,Normal,0,35,Serpent,2017,[]
-162375,Marsh Serpent,Normal,0,35,Serpent,10833,"[-1,-1]"
-166475,Dambala,Elite,1,35,Serpent,11510,"[-1,-1]"
-167848,Dambala,Elite,1,35,Serpent,11510,"[-1,-1]"
-173855,Shadow of Dambala,Normal,0,35,Serpent,11510,"[-1,-1]"
-181086,Desert Viperid,Normal,0,35,Serpent,13536,"[0,0]"
-181382,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-181537,Enraged Wyrm (0.5/0.5),Normal,0,35,Serpent,unknown,[]
-182779,Cobra,Normal,0,35,Serpent,unknown,[]
-182780,Cobra,Normal,0,35,Serpent,unknown,[]
-183648,Furious Viperid,Normal,0,35,Serpent,unknown,[]
-186826,Spiteful Cobra,Normal,0,35,Serpent,unknown,[]
-186831,Vicious Cobra,Normal,0,35,Serpent,unknown,[]
-188326,Cobra,Normal,0,35,Serpent,unknown,[]
-188327,Cobra,Normal,0,35,Serpent,unknown,[]
-190952,Arcane Wyrm,Elite,1,35,Serpent,unknown,[]
-191032,Mana Wyrm,Normal,0,35,Serpent,13646,"[0,0]"
-191033,Mana Wyrmling,Normal,0,35,Serpent,13646,"[0,0]"
-192170,Cobra Hatchling,Normal,0,35,Serpent,unknown,[]
-192171,Shore Cobra,Normal,0,35,Serpent,unknown,[]
-192739,Feasting Wyrm,Normal,0,35,Serpent,13646,"[-1,-1]"
-192790,Rock Viper,Normal,0,35,Serpent,unknown,[]
-193444,Feasting Wyrm,Normal,0,35,Serpent,unknown,[]
-195534,Lava Viper,Normal,0,35,Serpent,unknown,[]
-196892,Rock Viper,Normal,0,35,Serpent,unknown,[]
-196902,Lava Viper,Normal,0,35,Serpent,unknown,[]
-196904,Shadowflame Viper,Normal,0,35,Serpent,unknown,[]
-197837,Lava Viper,Normal,0,35,Serpent,unknown,[]
-198187,Feasting Wyrm,Normal,0,35,Serpent,unknown,[]
-198602,[DNT] Biting Lava Viper,Normal,0,35,Serpent,unknown,[]
-198603,[DNT] Spitting Lava Viper,Normal,0,35,Serpent,unknown,[]
-198705,[DNT] Swarming Lava Viper,Normal,0,35,Serpent,unknown,[]
-198731,Lava Viper,Normal,0,35,Serpent,unknown,[]
-198782,Coastal Eel,Normal,0,35,Serpent,14433|14529,"[-1,-1]"
-201824,Rock Viperling,Normal,0,35,Serpent,unknown,[]
-201825,Rock Viperling,Normal,0,35,Serpent,14022,"[-1,-1]"
-202266,Sulfurous Viper,Elite,1,35,Serpent,unknown,[]
-202302,Embertail Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
-203053,Invasive Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
-203327,Sizzle Fang,Normal,0,35,Serpent,14022,"[-1,-1]"
-203328,Conflagrated Rock Cobra,Normal,0,35,Serpent,14022,"[-1,-1]"
-203734,Mana Wyrm,Normal,0,35,Serpent,14433,"[-1,-1]"
-203783,Hunting Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
-203891,Embertail Rock Cobra,Normal,0,35,Serpent,unknown,[]
-203893,Embertail Rock Slitherer,Normal,0,35,Serpent,unknown,[]
-203900,Sulfurous Viper,Normal,0,35,Serpent,14022,"[0,0]"
-204158,Hunting Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
-204316,Contaminated Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
-204611,Rock Viperling,Normal,0,35,Serpent,14022,"[-1,-1]"
-204649,Spiraling Lightwyrm,Normal,0,35,Serpent,14022,"[0,0]"
-204825,Elusive Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
-204828,Elusive Lavafang,Elite,1,35,Serpent,14022,[]
-204837,Elusive Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
-204839,Elusive Shalefang,Elite,1,35,Serpent,14022,[]
-205123,Hunting Rock Viper,Normal,0,35,Serpent,unknown,[]
-205238,Embertail Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
-205300,Empowered Wyrmling,Normal,0,35,Serpent,14022,"[-1,-1]"
-206813,Lava Viper,Normal,0,35,Serpent,unknown,[]
-208602,Lava Viper,Normal,0,35,Serpent,unknown,[]
-208603,Lava Viper,Normal,0,35,Serpent,unknown,[]
-208690,Lava Viper,Normal,0,35,Serpent,unknown,[]
-208691,Sawscale Viper,Elite,1,35,Serpent,14529,"[-1,-1]"
-212621,Rock Viper,Normal,0,35,Serpent,unknown,[]
-212623,Rock Viper,Normal,0,35,Serpent,unknown,[]
-213055,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-213056,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-215680,Deepwater Eel,Normal,0,35,Serpent,14838,"[-1,-1]"
-215907,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-216031,Abyssal Devourer,Rare,4,35,Serpent,14752,"[-1,-1]"
-217723,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-217726,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-217797,Slithering Fungivore,Normal,0,35,Serpent,unknown,[]
-218735,Spiteful Ophidian,Normal,0,35,Serpent,14752,"[0,0]"
-218772,Moss Viper,Normal,0,35,Serpent,14717,"[-1,-1]"
-219265,Emperor Pitfang,Rare,4,35,Serpent,14717,"[-1,-1]"
-219397,Shalescale Striker,Normal,0,35,Serpent,14717,"[-1,-1]"
-219606,Sunless Slitherer,Normal,0,35,Serpent,14838,"[-1,-1]"
-219693,Rock Viper,Normal,0,35,Serpent,unknown,[]
-220383,Gulperworm,Normal,0,35,Serpent,unknown,[]
-220772,Sightless Wavecutter,Normal,0,35,Serpent,14838,"[-1,-1]"
-220786,Wavecutter Eel,Normal,0,35,Serpent,14838,"[0,0]"
-221954,Sunken River Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
-222019,Shalescale Striker,Normal,0,35,Serpent,14717,"[0,0]"
-222807,Protective Sandviper,Elite,1,35,Serpent,unknown,[]
-222810,Undersea Depthstalker,Normal,0,35,Serpent,14838,"[0,0]"
-222958,Wily Sandviper,Normal,0,35,Serpent,unknown,[]
-225520,Spined Slitherer,Normal,0,35,Serpent,14752,"[-1,-1]"
-225525,Spined Bilespitter,Normal,0,35,Serpent,14752,"[-1,-1]"
-226636,Scaletooth Coiler,Normal,0,35,Serpent,14717,"[-1,-1]"
-227369,Agitated Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
-227557,Venomous Deepscale,Normal,0,35,Serpent,unknown,[]
-228212,Tidewake Eel,Normal,0,35,Serpent,14838,"[-1,-1]"
-228409,Brightscale Eel,Normal,0,35,Serpent,unknown,[]
-228506,Sunken River Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
-229523,Sieve Spinedrifter,Normal,0,35,Serpent,14752,"[-1,-1]"
-232106,Brightscale Wyrm,Normal,0,35,Serpent,15829,[]
-232606,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-232607,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-232608,Light Wurm,Normal,0,35,Serpent,unknown,[]
-232609,Light Wyrm,Normal,0,35,Serpent,unknown,[]
-234318,Unbound Arcane Wyrm,Normal,0,35,Serpent,unknown,[]
-236182,Light Wyrm,Normal,0,35,Serpent,unknown,[]
-236183,Light Wyrm,Normal,0,35,Serpent,unknown,[]
-236275,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-236276,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-236340,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-236342,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-236346,Lightdazzled Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-236352,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
-236353,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
-236354,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
-237093,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237094,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237096,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237097,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-237098,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-237099,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-237100,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237101,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237102,Grovecrawler,Normal,0,35,Serpent,unknown,[]
-237399,Erratic Light Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-237404,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
-237408,Light Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-237505,Overzealous Lightcrawler,Normal,0,35,Serpent,15968,"[-1,-1]"
-237633,Lightfrenzy Devourer,Normal,0,35,Serpent,15968,"[-1,-1]"
-238087,Agitated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
-240995,Light Wyrm,Normal,0,35,Serpent,unknown,[]
-241354,Void-Infused Brightscale,Normal,0,35,Serpent,15829,[]
-241374,Scintillant Wyrm,Normal,0,35,Serpent,15968,"[1,1]"
-241758,Grovecrawler,Elite,1,35,Serpent,unknown,[]
-241761,Lightbloom Grovecrawler,Elite,1,35,Serpent,unknown,[]
-241766,Lightbloom Grovecrawler,Elite,1,35,Serpent,unknown,[]
-241767,Grovecrawler,Elite,1,35,Serpent,unknown,[]
-242520,Encroaching Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-242521,Encroaching Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-245659,Lattice Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-247392,Agitated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
-247393,Molted Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-247558,Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-247565,Drained Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-247569,Captured Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-247649,Engorged Silk Wyrm,Normal,0,35,Serpent,15968|15969,"[0,0]"
-248473,Skittering Dencrawler,Normal,0,35,Serpent,unknown,[]
-249392,Nesting Silk Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
-249447,Mysterious Mana Wyrm,Normal,0,35,Serpent,15968,"[1,1]"
-249959,Arcane Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
-250024,Lightscale Nibbler,Normal,0,35,Serpent,15968,"[0,0]"
-250025,Gorged Lightscale,Normal,0,35,Serpent,15968,"[0,0]"
-250026,Arcane Manathirster,Normal,0,35,Serpent,15968,"[0,0]"
-250028,Mana Thirster,Normal,0,35,Serpent,15968,"[0,0]"
-250231,Dracaena,Rare,4,35,Serpent,15355,"[-1,-1]"
-250327,Underbrush Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-250341,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[0,0]"
-250344,Juvenile Grovecrawler,Normal,0,35,Serpent,15355,"[0,0]"
-250525,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-250574,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-250824,Lightfrenzied Devourer,Normal,0,35,Serpent,15968,"[-1,-1]"
-250882,Amber Wyrm,Normal,0,35,Serpent,15969,"[0,0]"
-251468,Listless Mana Wyrm,Normal,0,35,Serpent,16215,"[0,0]"
-251642,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-251644,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
-251657,Python,Normal,0,35,Serpent,unknown,[]
-251677,Cobra,Normal,0,35,Serpent,unknown,[]
-251679,Cobra,Normal,0,35,Serpent,unknown,[]
-251794,Writhe,Normal,0,35,Serpent,unknown,[]
-251837,Writhe,Normal,0,35,Serpent,unknown,[]
-253397,Slithering Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-253558,Adzikel,Normal,0,35,Serpent,15355,"[-1,-1]"
-253697,Ravenous Cobraling,Normal,0,35,Serpent,16365,"[-1,-1]"
-253765,Brood Watcher,Normal,0,35,Serpent,16365,"[-1,-1]"
-253890,Hooded Amberfang,Normal,0,35,Serpent,unknown,[]
-253959,Arcane Manathirster,Normal,0,35,Serpent,15968,"[0,0]"
-253960,Mana Thirster,Normal,0,35,Serpent,15968,[]
-253961,Mana Thirster,Normal,0,35,Serpent,15968,[]
-253962,Arcane Manathirster,Normal,0,35,Serpent,15968,[]
-254511,Ravenous Python,Normal,0,35,Serpent,16365,"[0,0]"
-254964,Insatiate Hatchling,Normal,0,35,Serpent,16365,"[0,0]"
-254972,Void-Bloated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
-255079,Opportunistic Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-255148,Arcane Wyrmling,Normal,0,35,Serpent,15968,"[0,0]"
-255194,Void-Singed Wyrmling,Normal,0,35,Serpent,15968,"[-1,-1]"
-255302,Duskburn,Rare,4,35,Serpent,15968,"[-1,-1]"
-255709,Reinfused Felwyrm,Normal,0,35,Serpent,16091,[]
-255871,Lightbloom Crawler,Normal,0,35,Serpent,15355,"[0,0]"
-256226,Python,Normal,0,35,Serpent,unknown,[]
-256695,Mature Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-256696,Juvenile Rootcrawler,Normal,0,35,Serpent,15355,"[0,0]"
-256700,Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-256773,Devouring Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
-257334,Hungry Swarmling,Normal,0,35,Serpent,unknown,[]
-257560,Engorged Writhe,Normal,0,35,Serpent,unknown,[]
-257894,Writhing Young,Normal,0,35,Serpent,16365,"[-1,-1]"
-258190,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
-258549,Newborn Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
-258955,Frilled Spitter,Normal,0,35,Serpent,15355,[]
-258959,Ula'tek T3,Elite,1,35,Serpent,unknown,[]
-258962,Writhing Ripcoil,Normal,0,35,Serpent,16545|16594|16642,[]
-259131,Timber Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
-259132,Timber Whelp,Normal,0,35,Serpent,16365,"[-1,-1]"
-259134,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-259135,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-259137,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
-260670,Writhing Scaleknot,Normal,0,35,Serpent,unknown,[]
-260844,Seething Venommaw,Normal,0,35,Serpent,unknown,[]
-260872,Writhing Neonate,Normal,0,35,Serpent,unknown,[]
-261122,Agitated Python,Normal,0,35,Serpent,16365,"[-1,-1]"
-261124,Incensed Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
-261177,Swarming Chestbiter,Normal,0,35,Serpent,15947,"[-1,-1]"
-261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
-261375,Swarming Python,Normal,0,35,Serpent,16365,"[-1,-1]"
-261377,Preying Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
-261398,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
-261643,Summoned Serpent,Normal,0,35,Serpent,16535,"[-1,-1]"
-261644,Swarming Cobra,Normal,0,35,Serpent,unknown,[]
-261820,Venom-Bloated Python,Normal,0,35,Serpent,16535|15458|15968,"[-1,-1]"
-261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,"[-1,-1]"
-262439,Wild Snake,Normal,0,35,Serpent,16365,"[-1,-1]"
-262503,Vicious Coiler,Normal,0,35,Serpent,unknown,[]
-263356,Lurking Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
-263359,Sacred Doomcoiler,Elite,1,35,Serpent,16535,"[-1,-1]"
-263393,Territorial Eel,Normal,0,35,Serpent,16365,"[-1,-1]"
-263572,Devouring Writhe,Normal,0,35,Serpent,unknown,[]
-263793,Fledgling Corpseburster,Normal,0,35,Serpent,16365|16535|15969,"[-1,-1]"
-264350,Summoned Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
-264655,Lurking Thorntail,Normal,0,35,Serpent,16365,"[-1,-1]"
-264667,Frilled Spitter,Normal,0,35,Serpent,unknown,[]
-265048,Burrow Spitter,Normal,0,35,Serpent,unknown,[]
-265049,Burrow Stinger,Normal,0,35,Serpent,unknown,[]
-265051,Burrow Python,Normal,0,35,Serpent,unknown,[]
-265289,Fledgling Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
-265343,Nest Coiler,Normal,0,35,Serpent,16365,"[0,0]"
-265968,Writhing Bonechewer,Normal,0,35,Serpent,16365,"[-1,-1]"
-268908,Coiling Writhewatcher,Normal,0,35,Serpent,unknown,"[-1,-1]"
-268911,Frilled Spitter,Normal,0,35,Serpent,unknown,"[-1,-1]"
-268973,Newborn Writhe,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
-268979,Newborn Cobra,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
-270233,Venomspawn Snapper,Normal,0,35,Serpent,16365,"[-1,-1]"
-270767,Newborn Snake,Normal,0,35,Serpent,16365,"[-1,-1]"
-273290,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
 16520,Vale Moth,Normal,0,37,Moth,6456|3524,"[0,0]"
 17349,Blue Flutterer,Normal,0,37,Moth,3525,"[0,0]"
 17350,Royal Blue Flutterer,Normal,0,37,Moth,3525,"[0,0]"
@@ -7095,7 +6714,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 256870,Smoldering Beetle,Normal,0,53,Beetle,15355,"[0,0]"
 257922,Riverbuzz Beetle,Normal,0,53,Beetle,unknown,[]
 258343,Underroot Beetle,Normal,0,53,Beetle,unknown,[]
-271246,,,,,,,
+271246,Swarmer,Normal,0,53,Beetle,unknown,[]
 34865,Tunneling Worm,Normal,0,55,Shale Beast,4737,"[null,0]"
 42766,Gorged Gyreworm,Normal,0,55,Shale Beast,5042,"[-1,-1]"
 42845,Rock Borer,Normal,0,55,Shale Beast,5088,"[-1,-1]"
@@ -9899,198 +9518,6 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 229836,Saltwind Hatchling,Normal,0,290,Pterrordax,8499,"[0,0]"
 233939,Pterrordax Matriarch,Elite,1,290,Pterrordax,8499,"[-1,-1]"
 235230,Saltwind Pterrodax,Normal,0,290,Pterrordax,8499,"[-1,-1]"
-71786,Gorgrond Frog,Normal,0,291,Hopper,unknown,[]
-72775,Bufo,Rare Elite,2,291,Hopper,6757,"[-1,-1]"
-72777,Gulp Frog,Normal,0,291,Hopper,6757,"[-1,-1]"
-73805,Corrupted Toad,Normal,0,291,Hopper,6719|7078,"[-1,-1]"
-74176,Gloomshade Gulper,Normal,0,291,Hopper,6719,"[0,0]"
-75588,Grotto Toad,Elite,1,291,Hopper,491,"[-1,-1]"
-75590,Enormous Bullfrog,Rare Elite,2,291,Hopper,491,"[-1,-1]"
-78671,Palebelly Croaker,Normal,0,291,Hopper,6662,"[-1,-1]"
-78673,Noxious Riverhopper,Normal,0,291,Hopper,6662,"[-1,-1]"
-79411,Noxic Bellyflopper,Normal,0,291,Hopper,unknown,[]
-79413,Waterfall Gulper,Normal,0,291,Hopper,unknown,[]
-79481,River Toad,Normal,0,291,Hopper,unknown,[]
-79524,Hypnocroak,Rare,4,291,Hopper,6719,"[-1,-1]"
-79660,Shimmering Croaker,Normal,0,291,Hopper,6719,"[0,0]"
-88674,Darkhide Leaper,Normal,0,291,Hopper,6722,"[-1,-1]"
-89749,Marsh Gulper,Normal,0,291,Hopper,6723,"[0,0]"
-93124,Coastal Leaper,Normal,0,291,Hopper,unknown,[]
-105014,Territorial Croaker,Normal,0,291,Hopper,7637,"[0,0]"
-109124,Pondswallow Frog,Normal,0,291,Hopper,7334,"[0,0]"
-111197,Anax,Rare,4,291,Hopper,7637,"[-1,-1]"
-111216,Ambervale Darter,Normal,0,291,Hopper,7637,"[-1,-1]"
-122570,Dew Monster,Normal,0,291,Hopper,unknown,[]
-123603,Roughback Leaper,Normal,0,291,Hopper,unknown,[]
-128099,Swamp Toad,Normal,0,291,Hopper,9012,"[-1,null]"
-131614,Gesh'nar,Elite,1,291,Hopper,unknown,[]
-135052,Blight Toad,Normal,0,291,Hopper,9424,"[-1,-1]"
-136475,Speckled Bullfrog,Normal,0,291,Hopper,8501,"[0,0]"
-137233,Plague Toad,Normal,0,291,Hopper,9527,"[-1,-1]"
-140938,Croaker,Rare,4,291,Hopper,9042,"[-1,-1]"
-144825,Toxinbelly Croaker,Elite,1,291,Hopper,9440|9469|10222,"[-1,-1]"
-144826,Man-Eater,Rare,4,291,Hopper,9440|9469|9496,"[-1,-1]"
-144827,Bogbelcher,Rare,4,291,Hopper,9440|9496|9548,"[-1,-1]"
-144829,Thundercroak,Rare,4,291,Hopper,9548|9440,"[-1,-1]"
-144830,Yaz'za the Devourer,Rare Elite,2,291,Hopper,9440|9469|9496,"[-1,-1]"
-144831,Colossal Spadefoot,Rare Elite,2,291,Hopper,9440|9469|9496,"[-1,-1]"
-144833,Whiptongue,Rare Elite,2,291,Hopper,9440|9469,"[-1,-1]"
-169768,Mystic Gulper,Normal,0,291,Hopper,11510,"[0,0]"
-173524,Ardenweald Toad,Normal,0,291,Hopper,unknown,[]
-173611,Glowgullet Hopper,Normal,0,291,Hopper,unknown,[]
-173635,Shadow Croaker,Normal,0,291,Hopper,11510,"[-1,-1]"
-173687,Glowgullet Bull,Normal,0,291,Hopper,11510,"[-1,-1]"
-173688,Glowgullet Croaker,Normal,0,291,Hopper,11510,"[0,0]"
-173698,Ardenweald Toad Baby,Normal,0,291,Hopper,unknown,[]
-173720,Mistveil Gorgegullet,Elite,1,291,Hopper,13334,"[-1,-1]"
-174540,Toad,Normal,0,291,Hopper,unknown,[]
-175350,Falls Gulper,Normal,0,291,Hopper,11510,"[0,0]"
-176647,Elite Toad,Elite,1,291,Hopper,unknown,[]
-176665,Korthian Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
-176685,Ambient Elite Toad,Elite,1,291,Hopper,unknown,[]
-177185,Crested Gromit,Normal,0,291,Hopper,13570,"[0,0]"
-177335,Flashy Gromit,Normal,0,291,Hopper,13570,"[0,0]"
-177336,Zelnithop,Rare,4,291,Hopper,unknown,"[-1,-1]"
-178528,Fierce Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
-178803,Accelerated Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
-178910,Bufonid Leaper,Normal,0,291,Hopper,unknown,[]
-178963,Gorkek,Rare Elite,2,291,Hopper,13536,"[0,0]"
-180524,Hollow Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
-180568,Relic Detector,Normal,0,291,Hopper,unknown,[]
-180675,Swagsnout Gromit,Normal,0,291,Hopper,unknown,[]
-180678,Keensnout Gromit,Normal,0,291,Hopper,13570,"[0,0]"
-182362,Overgrown Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
-182443,Bounding Bufonid,Normal,0,291,Hopper,13536,"[1,1]"
-182486,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
-183161,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
-183610,Accelerated Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
-185488,Languid Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
-198029,Lightfrenzied Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-205059,Skipper,Normal,0,291,Hopper,unknown,[]
-207659,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
-211969,Skipper,Normal,0,291,Hopper,unknown,[]
-212560,Skipper,Normal,0,291,Hopper,unknown,[]
-212650,Skipper,Normal,0,291,Hopper,unknown,[]
-212651,Skipper,Normal,0,291,Hopper,unknown,[]
-212652,Skipper,Normal,0,291,Hopper,unknown,[]
-212866,Toad,Normal,0,291,Hopper,unknown,[]
-212868,Toad,Normal,0,291,Hopper,unknown,[]
-213067,Skipper,Normal,0,291,Hopper,unknown,[]
-213068,Skipper,Normal,0,291,Hopper,unknown,[]
-213700,Stream Skipper,Normal,0,291,Hopper,14717,"[0,0]"
-214401,Bullfrog,Normal,0,291,Hopper,unknown,[]
-214406,Shadowstarved Bullfrog,Normal,0,291,Hopper,14838,"[-1,-1]"
-214757,Croakit,Rare Elite,2,291,Hopper,14838,"[-1,-1]"
-214801,Skipper,Normal,0,291,Hopper,14980,"[0,0]"
-214960,Bubbling Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
-215031,Burblio,Rare,4,291,Hopper,unknown,[]
-215099,Dark Gulper,Normal,0,291,Hopper,unknown,[]
-215790,Grotto Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-215897,Skipper,Normal,0,291,Hopper,unknown,[]
-217629,Speckled Skipper,Normal,0,291,Hopper,14717,"[0,0]"
-218047,Skipper,Normal,0,291,Hopper,unknown,[]
-219011,Gulping Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
-219353,Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-219843,Terrace Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-219962,Glowshade Skipper,Normal,0,291,Hopper,14752,"[-1,-1]"
-220022,Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-220275,King Splash,Rare,4,291,Hopper,14795,"[-1,-1]"
-220736,Ravenous Flopper,Normal,0,291,Hopper,14838,"[0,0]"
-221144,Skipper,Normal,0,291,Hopper,unknown,[]
-221145,Skipper,Normal,0,291,Hopper,unknown,[]
-223704,Swale Hopper,Normal,0,291,Hopper,14795,"[0,0]"
-224578,Croaking Sandskipper,Normal,0,291,Hopper,14717,"[-1,-1]"
-224789,Juvenile Sandskipper,Normal,0,291,Hopper,14717,"[0,0]"
-225381,Skipper,Normal,0,291,Hopper,unknown,[]
-225382,Skipper,Normal,0,291,Hopper,unknown,[]
-225933,Glowshade Ambusher,Normal,0,291,Hopper,14752,"[-1,-1]"
-226235,Venomskin Croaker,Normal,0,291,Hopper,unknown,[]
-226242,Lazy Croaker,Normal,0,291,Hopper,unknown,[]
-226417,Furious Skipper,Normal,0,291,Hopper,14795,"[-1,-1]"
-226421,Stonepool Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-226625,Cave Skipper,Normal,0,291,Hopper,14957|14998|15005,"[0,0]"
-226929,Stonepool Skipper,Normal,0,291,Hopper,14795,"[0,0]"
-227325,Bubbling Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
-228465,The Captain,Normal,0,291,Hopper,15347,"[-1,-1]"
-228468,The Captain's Crew,Normal,0,291,Hopper,unknown,[]
-229812,Warbling Mudskip,Normal,0,291,Hopper,14795|14838|14717,"[-1,-1]"
-230377,Void-touched Hopper,Normal,0,291,Hopper,15336,"[-1,-1]"
-230384,Void-touched Hoppling,Normal,0,291,Hopper,15336,"[-1,-1]"
-230598,Sandbank Hopper,Normal,0,291,Hopper,15336,"[-1,-1]"
-230917,Briny Skipfin,Normal,0,291,Hopper,14795,"[0,0]"
-230918,Briny Skippling,Normal,0,291,Hopper,14795,"[0,0]"
-236446,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-236447,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-236448,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-236449,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-236450,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-236451,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-237048,Potatoad,Normal,0,291,Hopper,unknown,[]
-237053,Potatoad,Normal,0,291,Hopper,unknown,[]
-237056,Potatoad,Normal,0,291,Hopper,unknown,[]
-237057,Potatoad,Normal,0,291,Hopper,unknown,[]
-237059,Potatoad,Normal,0,291,Hopper,unknown,[]
-237083,Skipper,Normal,0,291,Hopper,unknown,[]
-237084,Skipper,Normal,0,291,Hopper,unknown,[]
-237204,Surly Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-237583,Gurgling Skipper,Normal,0,291,Hopper,15355,"[0,0]"
-237825,Tamed Potatoad,Normal,0,291,Hopper,15355,"[1,1]"
-242032,Oophaga,Rare,4,291,Hopper,15947,"[-1,-1]"
-242755,Enspored Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-243124,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-243125,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-243171,Gloombelly Toad,Normal,0,291,Hopper,15968,"[0,0]"
-244325,Toxic Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-244326,Toxic Potatoadling,Normal,0,291,Hopper,15355,"[-1,-1]"
-244349,Potatoad Brute,Normal,0,291,Hopper,15355,"[-1,-1]"
-246715,Aggressive Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-247011,Horned Frog,Normal,0,291,Hopper,15947,"[-1,-1]"
-247439,Horned Frog,Normal,0,291,Hopper,15947,"[-1,-1]"
-248471,Petalscaled Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-249358,Poisonous Passhopper,Normal,0,291,Hopper,15968,"[0,0]"
-249962,Queen Lashtongue,Rare,4,291,Hopper,15355,"[-1,-1]"
-250051,River Hopper,Normal,0,291,Hopper,15968,"[0,0]"
-250053,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
-250141,Swamp Leaper,Normal,0,291,Hopper,15947,"[0,0]"
-250142,Poisonous Hoplet,Normal,0,291,Hopper,15947,"[0,0]"
-250143,Bog Hopper,Normal,0,291,Hopper,15947,"[-1,-1]"
-250185,Bulb-Eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-250273,Cascade Potatoad,Normal,0,291,Hopper,15355,"[0,0]"
-250333,Stream Skipper,Normal,0,291,Hopper,15355,"[0,0]"
-250826,Banuran,Rare,4,291,Hopper,15968,"[-1,-1]"
-251625,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-251626,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-251885,Gravid Potatoad,Normal,0,291,Hopper,16359,"[1,1]"
-251887,Potatoad,Normal,0,291,Hopper,unknown,[]
-251915,Foraging Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-251937,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
-252995,Potatoad,Normal,0,291,Hopper,unknown,[]
-252997,Paint-Crazed Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-252998,Paint-Crazed Skipper,Normal,0,291,Hopper,15355,"[-1,-1]"
-253305,Poison Dart Frog,Normal,0,291,Hopper,16556,[]
-254503,Vile Cursed Toad,Normal,0,291,Hopper,unknown,[]
-254795,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
-256060,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-256104,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-256227,Tiny Cavern Skipper,Normal,0,291,Hopper,15355,"[0,null]"
-256364,Misthop Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-256365,Valeflow Skipper,Normal,0,291,Hopper,15355,"[0,0]"
-256850,River Hopper,Normal,0,291,Hopper,unknown,[]
-256851,Golden Hopper,Normal,0,291,Hopper,15968,"[0,0]"
-256852,Toxic Dartling,Normal,0,291,Hopper,unknown,[]
-256853,Radiant Dartling,Normal,0,291,Hopper,15968,"[0,0]"
-256854,Radiant Dartling,Normal,0,291,Hopper,15968,"[0,0]"
-257155,Abasi Croaker,Normal,0,291,Hopper,15947,"[0,0]"
-257428,Poisonous Hoplet,Normal,0,291,Hopper,15947,"[0,0]"
-257435,Swamp Darter,Normal,0,291,Hopper,15947,[]
-258090,Bulb-Eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
-258512,Tainted Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
-260370,Grumpy Bullfrog,Normal,0,291,Hopper,16365,"[0,0]"
-262737,Venom-Crazed Dart Frog,Normal,0,291,Hopper,unknown,[]
-264270,Gloombelly Toad,Normal,0,291,Hopper,15968,"[0,0]"
-264502,Skittish Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
-264661,Hophorn Bullfrog,Elite,1,291,Hopper,unknown,[]
-264678,Dartspitter Frog,Normal,0,291,Hopper,unknown,[]
 121448,Krolusk Dunecrawler,Normal,0,292,Carapid,unknown,[]
 124016,Saltspine Krolusk,Normal,0,292,Carapid,8501,"[-1,-1]"
 124526,Krolusk Dunecrawler,Normal,0,292,Carapid,8501,"[-1,-1]"
@@ -10470,7 +9897,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257902,Bloodthirst Blistercreep,Normal,0,296,Blood Beast,15458,"[-1,-1]"
 258510,Hateleech Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
 261045,Siphoning Blistercreep,Normal,0,296,Blood Beast,15958,"[-1,-1]"
-271252,,,,,,,
+271252,Nerubian Screamer,Normal,0,296,Blood Beast,unknown,[]
 39443,Camel,Normal,0,298,Camel,4945,"[1,1]"
 45121,Lady Humps,Normal,0,298,Camel,5034,"[1,1]"
 45142,Lady Humps,Normal,0,298,Camel,unknown,[]
@@ -11101,6 +10528,579 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 231324,Watchful Cloud Serpent,Normal,0,303,Lesser Dragonkin,15543,[]
 231340,Inquisitive Cloud Serpent,Normal,0,303,Lesser Dragonkin,15543,[]
 245947,Just a Testing Guy [DNT],Normal,0,303,Lesser Dragonkin,unknown,[]
+71786,Gorgrond Frog,Normal,0,291,Hopper,unknown,[]
+72775,Bufo,Rare Elite,2,291,Hopper,6757,"[-1,-1]"
+72777,Gulp Frog,Normal,0,291,Hopper,6757,"[-1,-1]"
+73805,Corrupted Toad,Normal,0,291,Hopper,6719|7078,"[-1,-1]"
+74176,Gloomshade Gulper,Normal,0,291,Hopper,6719,"[0,0]"
+75588,Grotto Toad,Elite,1,291,Hopper,491,"[-1,-1]"
+75590,Enormous Bullfrog,Rare Elite,2,291,Hopper,491,"[-1,-1]"
+78671,Palebelly Croaker,Normal,0,291,Hopper,6662,"[-1,-1]"
+78673,Noxious Riverhopper,Normal,0,291,Hopper,6662,"[-1,-1]"
+79411,Noxic Bellyflopper,Normal,0,291,Hopper,unknown,[]
+79413,Waterfall Gulper,Normal,0,291,Hopper,unknown,[]
+79481,River Toad,Normal,0,291,Hopper,unknown,[]
+79524,Hypnocroak,Rare,4,291,Hopper,6719,"[-1,-1]"
+79660,Shimmering Croaker,Normal,0,291,Hopper,6719,"[0,0]"
+88674,Darkhide Leaper,Normal,0,291,Hopper,6722,"[-1,-1]"
+89749,Marsh Gulper,Normal,0,291,Hopper,6723,"[0,0]"
+93124,Coastal Leaper,Normal,0,291,Hopper,unknown,[]
+105014,Territorial Croaker,Normal,0,291,Hopper,7637,"[0,0]"
+109124,Pondswallow Frog,Normal,0,291,Hopper,7334,"[0,0]"
+111197,Anax,Rare,4,291,Hopper,7637,"[-1,-1]"
+111216,Ambervale Darter,Normal,0,291,Hopper,7637,"[-1,-1]"
+122570,Dew Monster,Normal,0,291,Hopper,unknown,[]
+123603,Roughback Leaper,Normal,0,291,Hopper,unknown,[]
+128099,Swamp Toad,Normal,0,291,Hopper,9012,"[-1,null]"
+131614,Gesh'nar,Elite,1,291,Hopper,unknown,[]
+135052,Blight Toad,Normal,0,291,Hopper,9424,"[-1,-1]"
+136475,Speckled Bullfrog,Normal,0,291,Hopper,8501,"[0,0]"
+137233,Plague Toad,Normal,0,291,Hopper,9527,"[-1,-1]"
+140938,Croaker,Rare,4,291,Hopper,9042,"[-1,-1]"
+144825,Toxinbelly Croaker,Elite,1,291,Hopper,9440|9469|10222,"[-1,-1]"
+144826,Man-Eater,Rare,4,291,Hopper,9440|9469|9496,"[-1,-1]"
+144827,Bogbelcher,Rare,4,291,Hopper,9440|9496|9548,"[-1,-1]"
+144829,Thundercroak,Rare,4,291,Hopper,9548|9440,"[-1,-1]"
+144830,Yaz'za the Devourer,Rare Elite,2,291,Hopper,9440|9469|9496,"[-1,-1]"
+144831,Colossal Spadefoot,Rare Elite,2,291,Hopper,9440|9469|9496,"[-1,-1]"
+144833,Whiptongue,Rare Elite,2,291,Hopper,9440|9469,"[-1,-1]"
+169768,Mystic Gulper,Normal,0,291,Hopper,11510,"[0,0]"
+173524,Ardenweald Toad,Normal,0,291,Hopper,unknown,[]
+173611,Glowgullet Hopper,Normal,0,291,Hopper,unknown,[]
+173635,Shadow Croaker,Normal,0,291,Hopper,11510,"[-1,-1]"
+173687,Glowgullet Bull,Normal,0,291,Hopper,11510,"[-1,-1]"
+173688,Glowgullet Croaker,Normal,0,291,Hopper,11510,"[0,0]"
+173698,Ardenweald Toad Baby,Normal,0,291,Hopper,unknown,[]
+173720,Mistveil Gorgegullet,Elite,1,291,Hopper,13334,"[-1,-1]"
+174540,Toad,Normal,0,291,Hopper,unknown,[]
+175350,Falls Gulper,Normal,0,291,Hopper,11510,"[0,0]"
+176647,Elite Toad,Elite,1,291,Hopper,unknown,[]
+176665,Korthian Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
+176685,Ambient Elite Toad,Elite,1,291,Hopper,unknown,[]
+177185,Crested Gromit,Normal,0,291,Hopper,13570,"[0,0]"
+177335,Flashy Gromit,Normal,0,291,Hopper,13570,"[0,0]"
+177336,Zelnithop,Rare,4,291,Hopper,unknown,"[-1,-1]"
+178528,Fierce Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
+178803,Accelerated Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
+178910,Bufonid Leaper,Normal,0,291,Hopper,unknown,[]
+178963,Gorkek,Rare Elite,2,291,Hopper,13536,"[0,0]"
+180524,Hollow Gromit,Normal,0,291,Hopper,13570,"[-1,-1]"
+180568,Relic Detector,Normal,0,291,Hopper,unknown,[]
+180675,Swagsnout Gromit,Normal,0,291,Hopper,unknown,[]
+180678,Keensnout Gromit,Normal,0,291,Hopper,13570,"[0,0]"
+182362,Overgrown Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
+182443,Bounding Bufonid,Normal,0,291,Hopper,13536,"[1,1]"
+182486,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
+183161,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
+183610,Accelerated Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
+185488,Languid Bufonid,Normal,0,291,Hopper,13536,"[0,0]"
+198029,Lightfrenzied Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+205059,Skipper,Normal,0,291,Hopper,unknown,[]
+207659,[DNT] - Kill Credit,Normal,0,291,Hopper,unknown,[]
+211969,Skipper,Normal,0,291,Hopper,unknown,[]
+212560,Skipper,Normal,0,291,Hopper,unknown,[]
+212650,Skipper,Normal,0,291,Hopper,unknown,[]
+212651,Skipper,Normal,0,291,Hopper,unknown,[]
+212652,Skipper,Normal,0,291,Hopper,unknown,[]
+212866,Toad,Normal,0,291,Hopper,unknown,[]
+212868,Toad,Normal,0,291,Hopper,unknown,[]
+213067,Skipper,Normal,0,291,Hopper,unknown,[]
+213068,Skipper,Normal,0,291,Hopper,unknown,[]
+213700,Stream Skipper,Normal,0,291,Hopper,14717,"[0,0]"
+214401,Bullfrog,Normal,0,291,Hopper,unknown,[]
+214406,Shadowstarved Bullfrog,Normal,0,291,Hopper,14838,"[-1,-1]"
+214757,Croakit,Rare Elite,2,291,Hopper,14838,"[-1,-1]"
+214801,Skipper,Normal,0,291,Hopper,14980,"[0,0]"
+214960,Bubbling Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
+215031,Burblio,Rare,4,291,Hopper,unknown,[]
+215099,Dark Gulper,Normal,0,291,Hopper,unknown,[]
+215790,Grotto Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+215897,Skipper,Normal,0,291,Hopper,unknown,[]
+217629,Speckled Skipper,Normal,0,291,Hopper,14717,"[0,0]"
+218047,Skipper,Normal,0,291,Hopper,unknown,[]
+219011,Gulping Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
+219353,Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+219843,Terrace Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+219962,Glowshade Skipper,Normal,0,291,Hopper,14752,"[-1,-1]"
+220022,Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+220275,King Splash,Rare,4,291,Hopper,14795,"[-1,-1]"
+220736,Ravenous Flopper,Normal,0,291,Hopper,14838,"[0,0]"
+221144,Skipper,Normal,0,291,Hopper,unknown,[]
+221145,Skipper,Normal,0,291,Hopper,unknown,[]
+223704,Swale Hopper,Normal,0,291,Hopper,14795,"[0,0]"
+224578,Croaking Sandskipper,Normal,0,291,Hopper,14717,"[-1,-1]"
+224789,Juvenile Sandskipper,Normal,0,291,Hopper,14717,"[0,0]"
+225381,Skipper,Normal,0,291,Hopper,unknown,[]
+225382,Skipper,Normal,0,291,Hopper,unknown,[]
+225933,Glowshade Ambusher,Normal,0,291,Hopper,14752,"[-1,-1]"
+226235,Venomskin Croaker,Normal,0,291,Hopper,unknown,[]
+226242,Lazy Croaker,Normal,0,291,Hopper,unknown,[]
+226417,Furious Skipper,Normal,0,291,Hopper,14795,"[-1,-1]"
+226421,Stonepool Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+226625,Cave Skipper,Normal,0,291,Hopper,14957|14998|15005,"[0,0]"
+226929,Stonepool Skipper,Normal,0,291,Hopper,14795,"[0,0]"
+227325,Bubbling Mudskip,Normal,0,291,Hopper,14795,"[0,0]"
+228465,The Captain,Normal,0,291,Hopper,15347,"[-1,-1]"
+228468,The Captain's Crew,Normal,0,291,Hopper,unknown,[]
+229812,Warbling Mudskip,Normal,0,291,Hopper,14795|14838|14717,"[-1,-1]"
+230377,Void-touched Hopper,Normal,0,291,Hopper,15336,"[-1,-1]"
+230384,Void-touched Hoppling,Normal,0,291,Hopper,15336,"[-1,-1]"
+230598,Sandbank Hopper,Normal,0,291,Hopper,15336,"[-1,-1]"
+230917,Briny Skipfin,Normal,0,291,Hopper,14795,"[0,0]"
+230918,Briny Skippling,Normal,0,291,Hopper,14795,"[0,0]"
+236446,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+236447,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+236448,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+236449,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+236450,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+236451,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+237048,Potatoad,Normal,0,291,Hopper,unknown,[]
+237053,Potatoad,Normal,0,291,Hopper,unknown,[]
+237056,Potatoad,Normal,0,291,Hopper,unknown,[]
+237057,Potatoad,Normal,0,291,Hopper,unknown,[]
+237059,Potatoad,Normal,0,291,Hopper,unknown,[]
+237083,Skipper,Normal,0,291,Hopper,unknown,[]
+237084,Skipper,Normal,0,291,Hopper,unknown,[]
+237204,Surly Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+237583,Gurgling Skipper,Normal,0,291,Hopper,15355,"[0,0]"
+237825,Tamed Potatoad,Normal,0,291,Hopper,15355,"[1,1]"
+242032,Oophaga,Rare,4,291,Hopper,15947,"[-1,-1]"
+242755,Enspored Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+243124,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+243125,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+243171,Gloombelly Toad,Normal,0,291,Hopper,15968,"[0,0]"
+244325,Toxic Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+244326,Toxic Potatoadling,Normal,0,291,Hopper,15355,"[-1,-1]"
+244349,Potatoad Brute,Normal,0,291,Hopper,15355,"[-1,-1]"
+246715,Aggressive Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+247011,Horned Frog,Normal,0,291,Hopper,15947,"[-1,-1]"
+247439,Horned Frog,Normal,0,291,Hopper,15947,"[-1,-1]"
+248471,Petalscaled Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+249358,Poisonous Passhopper,Normal,0,291,Hopper,15968,"[0,0]"
+249962,Queen Lashtongue,Rare,4,291,Hopper,15355,"[-1,-1]"
+250051,River Hopper,Normal,0,291,Hopper,15968,"[0,0]"
+250053,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
+250141,Swamp Leaper,Normal,0,291,Hopper,15947,"[0,0]"
+250142,Poisonous Hoplet,Normal,0,291,Hopper,15947,"[0,0]"
+250143,Bog Hopper,Normal,0,291,Hopper,15947,"[-1,-1]"
+250185,Bulb-Eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+250273,Cascade Potatoad,Normal,0,291,Hopper,15355,"[0,0]"
+250333,Stream Skipper,Normal,0,291,Hopper,15355,"[0,0]"
+250826,Banuran,Rare,4,291,Hopper,15968,"[-1,-1]"
+251625,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+251626,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+251885,Gravid Potatoad,Normal,0,291,Hopper,16359,"[1,1]"
+251887,Potatoad,Normal,0,291,Hopper,unknown,[]
+251915,Foraging Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+251937,Poison Dart Frog,Normal,0,291,Hopper,unknown,[]
+252995,Potatoad,Normal,0,291,Hopper,unknown,[]
+252997,Paint-Crazed Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+252998,Paint-Crazed Skipper,Normal,0,291,Hopper,15355,"[-1,-1]"
+253305,Poison Dart Frog,Normal,0,291,Hopper,16556,[]
+254503,Vile Cursed Toad,Normal,0,291,Hopper,unknown,[]
+254795,Toxic Dartling,Normal,0,291,Hopper,15968,"[0,0]"
+256060,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+256104,Plodding Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+256227,Tiny Cavern Skipper,Normal,0,291,Hopper,15355,"[0,null]"
+256364,Misthop Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+256365,Valeflow Skipper,Normal,0,291,Hopper,15355,"[0,0]"
+256850,River Hopper,Normal,0,291,Hopper,unknown,[]
+256851,Golden Hopper,Normal,0,291,Hopper,15968,"[0,0]"
+256852,Toxic Dartling,Normal,0,291,Hopper,unknown,[]
+256853,Radiant Dartling,Normal,0,291,Hopper,15968,"[0,0]"
+256854,Radiant Dartling,Normal,0,291,Hopper,15968,"[0,0]"
+257155,Abasi Croaker,Normal,0,291,Hopper,15947,"[0,0]"
+257428,Poisonous Hoplet,Normal,0,291,Hopper,15947,"[0,0]"
+257435,Swamp Darter,Normal,0,291,Hopper,15947,[]
+258090,Bulb-Eye Potatoad,Normal,0,291,Hopper,15355,"[-1,-1]"
+258512,Tainted Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
+260370,Grumpy Bullfrog,Normal,0,291,Hopper,16365,"[0,0]"
+262737,Venom-Crazed Dart Frog,Normal,0,291,Hopper,unknown,[]
+264270,Gloombelly Toad,Normal,0,291,Hopper,15968,"[0,0]"
+264502,Skittish Dart Frog,Normal,0,291,Hopper,16365,"[-1,-1]"
+264661,Hophorn Bullfrog,Elite,1,291,Hopper,unknown,[]
+264678,Dartspitter Frog,Normal,0,291,Hopper,unknown,[]
+3680,Serpentbloom Snake,Normal,0,35,Serpent,718,"[0,0]"
+5048,Deviate Adder,Elite,1,35,Serpent,718,"[-1,-1]"
+5225,Murk Spitter,Normal,0,35,Serpent,8|1477,"[-1,-1]"
+5755,Deviate Viper,Elite,1,35,Serpent,718,"[-1,-1]"
+5762,Deviate Moccasin,Elite,1,35,Serpent,718,"[-1,-1]"
+8886,Deviate Python,Normal,0,35,Serpent,718,"[-1,-1]"
+15274,Mana Wyrm,Normal,0,35,Serpent,6455|3430,"[0,0]"
+15966,Mana Serpent,Normal,0,35,Serpent,3430,"[-1,-1]"
+16310,Mana Shifter,Normal,0,35,Serpent,3433,"[-1,-1]"
+16491,Mana Feeder,Elite,1,35,Serpent,3457,"[-1,-1]"
+16492,Syphoner,Elite,1,35,Serpent,3457,"[-1,-1]"
+18883,Mana Snapper,Normal,0,35,Serpent,3523,"[-1,-1]"
+19306,Mana Leech,Normal,0,35,Serpent,3792,"[-1,-1]"
+19784,Coilskar Cobra,Normal,0,35,Serpent,3520,"[-1,-1]"
+19785,Venomcowl Cobra,Normal,0,35,Serpent,unknown,[]
+19921,Viper,Normal,0,35,Serpent,unknown,"[null,1]"
+20618,Mana Invader,Normal,0,35,Serpent,unknown,[]
+23020,Shadow Serpent,Normal,0,35,Serpent,3520,"[-1,-1]"
+23026,Twilight Serpent,Normal,0,35,Serpent,3518,"[0,0]"
+24338,Amani Snake,Normal,0,35,Serpent,3805,"[-1,-1]"
+24757,Fjord Rock Snake,Normal,0,35,Serpent,unknown,[]
+24761,Brightscale Wyrm,Normal,0,35,Serpent,4131,"[-1,-1]"
+24917,Phase Wyrm,Normal,0,35,Serpent,3522,"[-1,-1]"
+25113,Crafty Snake,Normal,0,35,Serpent,unknown,[]
+25711,Spirit of the North,Normal,0,35,Serpent,3537,"[-1,-1]"
+25721,Arcane Serpent,Normal,0,35,Serpent,3537,"[-1,-1]"
+26322,Arcane Wyrm,Normal,0,35,Serpent,65,"[-1,-1]"
+28011,Emperor Cobra,Normal,0,35,Serpent,3711,"[-1,-1]"
+28358,Venomtip,Normal,0,35,Serpent,3711,"[-1,-1]"
+29444,Drakkari Snake,Normal,0,35,Serpent,66,"[-1,-1]"
+36362,Swamp Adder,Normal,0,35,Serpent,unknown,[]
+40280,Swarming Serpent,Normal,0,35,Serpent,5144,"[0,0]"
+40657,Basking Cobra,Normal,0,35,Serpent,440,"[-1,-1]"
+41212,Void Wyrm,Normal,0,35,Serpent,4945,"[-1,-1]"
+41374,Void Wyrm,Normal,0,35,Serpent,4945,"[-1,-1]"
+44180,Viper,Normal,0,35,Serpent,11|8581|139,"[-1,-1]"
+44568,Dune Rattler,Normal,0,35,Serpent,440,"[-1,-1]"
+44594,Sunburst Adder,Normal,0,35,Serpent,440,"[-1,-1]"
+44595,Sand Slitherer,Normal,0,35,Serpent,440,"[-1,-1]"
+47283,Sand Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
+47740,Viper,Normal,0,35,Serpent,5034,"[-1,-1]"
+48131,Needlespine Cobra,Normal,0,35,Serpent,400|357|440,"[-1,-1]"
+48132,Needlespine Shimmerback,Normal,0,35,Serpent,400|440,"[-1,-1]"
+49159,Cavern Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
+50317,Mana Thirster,Normal,0,35,Serpent,618,"[-1,-1]"
+50735,Blinkeye the Rattler,Rare,4,35,Serpent,15,"[-1,-1]"
+50737,Acroniss,Rare,4,35,Serpent,1377,"[-1,-1]"
+50738,Shimmerscale,Rare,4,35,Serpent,8,"[-1,-1]"
+51676,Marsh Serpent,Normal,0,35,Serpent,5034,"[-1,-1]"
+52085,Razzashi Adder,Elite,1,35,Serpent,1977,"[-1,-1]"
+52173,Razzashi Serpent,Normal,0,35,Serpent,33,"[-1,-1]"
+52174,Small Jungle Serpent,Normal,0,35,Serpent,unknown,[]
+52224,Jungle Serpent,Normal,0,35,Serpent,33,"[-1,-1]"
+52402,Venomtooth,Normal,0,35,Serpent,1977,"[0,0]"
+58888,Murkscale Asp,Normal,0,35,Serpent,6134,"[-1,-1]"
+59769,Bamboo Python,Elite,1,35,Serpent,5785,"[-1,-1]"
+65604,Viper,Normal,0,35,Serpent,5842,"[-1,-1]"
+65820,Yellowback Water Moccasin,Normal,0,35,Serpent,6134,"[-1,-1]"
+65821,Cobaltscale Death Adder,Normal,0,35,Serpent,6134,"[-1,-1]"
+67770,Acidfang Slitherer,Normal,0,35,Serpent,6677|6507,"[-1,-1]"
+71500,Snake,Normal,0,35,Serpent,unknown,[]
+72841,Death Adder,Elite,1,35,Serpent,6757,"[-1,-1]"
+73163,Imperial Python,Rare Elite,2,35,Serpent,6757,"[-1,-1]"
+77067,Gorgrond Python,Normal,0,35,Serpent,6721|9786,"[-1,-1]"
+77070,Gorgrond Adder,Normal,0,35,Serpent,unknown,[]
+77157,Cauldron Adder,Normal,0,35,Serpent,unknown,[]
+78712,Deathstrike Cobra,Normal,0,35,Serpent,unknown,[]
+80354,Nightmarsh Anaconda,Normal,0,35,Serpent,unknown,[]
+85979,Gorgrond Water Snake,Normal,0,35,Serpent,6721,"[-1,-1]"
+87039,Marsh Anaconda,Elite,1,35,Serpent,6755,"[-1,-1]"
+89393,Azsuna Mana Wyrm,Normal,0,35,Serpent,7334,"[0,0]"
+89697,Swamp Python,Normal,0,35,Serpent,6723,"[-1,-1]"
+92606,Sylissa,Rare,4,35,Serpent,6723,"[-1,-1]"
+92607,Python Hatchling,Normal,0,35,Serpent,6723,"[-1,-1]"
+99744,Bloodscale Wyrm,Normal,0,35,Serpent,unknown,[]
+102091,Slithering Swampserpent,Normal,0,35,Serpent,7503,"[-1,-1]"
+105398,Snek,Normal,0,35,Serpent,unknown,[]
+105884,Spellwyrm,Normal,0,35,Serpent,7637,"[-1,-1]"
+107098,Flashwyrm,Normal,0,35,Serpent,7334,"[-1,-1]"
+109023,Shadescale Flyeater,Normal,0,35,Serpent,7637,"[0,0]"
+113202,Runebound Wyrm,Normal,0,35,Serpent,8423,"[-1,-1]"
+114835,Mana Feeder,Elite,1,35,Serpent,unknown,"[-1,-1]"
+115795,Abyss Stalker,Elite,1,35,Serpent,8524,"[-1,-1]"
+120477,Deep Stalker,Elite,1,35,Serpent,8524,"[-1,-1]"
+121449,Giant Snake,Normal,0,35,Serpent,unknown,[]
+121661,Sneaky Snake,Normal,0,35,Serpent,unknown,[]
+122015,Void Streaker,Normal,0,35,Serpent,8701,"[0,0]"
+123358,Serpent Hatchling,Normal,0,35,Serpent,8501,"[-1,-1]"
+123815,Jungle Python,Normal,0,35,Serpent,unknown,[]
+124523,Colossal Cobra,Normal,0,35,Serpent,unknown,[]
+125299,Soultainted Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
+126672,Cove Eel,Normal,0,35,Serpent,8567,"[-1,-1]"
+126894,Pit Snake,Normal,0,35,Serpent,8501,"[-1,-1]"
+127169,Colossal Water Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
+127547,Desert Cobra,Normal,0,35,Serpent,unknown,[]
+127600,Venomscale Slitherer,Normal,0,35,Serpent,8567,"[-1,-1]"
+127745,Pit Cobra,Normal,0,35,Serpent,unknown,[]
+128115,Swamp Serpent,Normal,0,35,Serpent,9012,"[-1,null]"
+128356,Soulspitter Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
+128622,Swamp Snake,Normal,0,35,Serpent,9012,"[-1,null]"
+129980,Abyssal Eel,Normal,0,35,Serpent,9042,"[-1,-1]"
+130020,Jungle Cobra,Normal,0,35,Serpent,unknown,[]
+130232,Venomous Coilscale,Normal,0,35,Serpent,8567|8721,"[-1,-1]"
+130401,Vathikur,Rare,4,35,Serpent,8501,"[-1,-1]"
+131609,Hiss'ak,Elite,1,35,Serpent,unknown,[]
+133384,Merektha,Elite,1,35,Serpent,9527,"[-1,-1]"
+133980,Ayame,Elite,1,35,Serpent,8500,"[-1,-1]"
+135005,Entangler,Elite,1,35,Serpent,unknown,[]
+135061,Water Serpent,Normal,0,35,Serpent,8501,"[-1,-1]"
+135789,Mud Lurker Python,Normal,0,35,Serpent,8500,"[-1,-1]"
+135846,Lightning Serpent,Elite,1,35,Serpent,9527,"[-1,-1]"
+136593,Sevriss,Elite,1,35,Serpent,8501,"[-1,-1]"
+137183,Honey-Coated Slitherer,Rare,4,35,Serpent,8567,"[-1,-1]"
+137824,Arclight,Rare,4,35,Serpent,8721,"[-1,-1]"
+137944,Spiny Shallow Eel,Normal,0,35,Serpent,9042,"[-1,-1]"
+138540,Venomous Cobra,Normal,0,35,Serpent,8501,"[-1,-1]"
+139285,Shiverscale the Toxic,Rare,4,35,Serpent,8567,"[-1,-1]"
+139988,Sandfang,Rare,4,35,Serpent,9042,"[-1,-1]"
+140038,Abyssal Eel,Normal,0,35,Serpent,9525,"[-1,-1]"
+140604,Coastal Trapfang,Normal,0,35,Serpent,8567,"[-1,-1]"
+140689,Dreadfang Slitherer,Normal,0,35,Serpent,9496|9440|9591,"[-1,-1]"
+140690,Dreadfang Viper,Normal,0,35,Serpent,9440|9469|9496,"[-1,-1]"
+140691,Giant Dreadfang,Elite,1,35,Serpent,9469|9496|9440,"[-1,-1]"
+140692,Bloodbore,Rare,4,35,Serpent,9440|9576|9548,"[-1,-1]"
+142464,Moult,Normal,0,35,Serpent,8670|8499,"[-1,1]"
+142475,Ka'za the Mezmerizing,Rare Elite,2,35,Serpent,8499,"[-1,-1]"
+145338,Abyssal Eel,Normal,0,35,Serpent,10052,"[-1,-1]"
+145343,Deepcoil Serpent,Normal,0,35,Serpent,10052,"[-1,-1]"
+147322,Ayame,Elite,1,35,Serpent,unknown,[]
+147864,Hisskarath,Rare Elite,2,35,Serpent,unknown,[]
+149707,Coral Slitherer,Normal,0,35,Serpent,10052,"[-1,-1]"
+152551,Deepcoil Constrictor,Elite,1,35,Serpent,10052,"[-1,-1]"
+152552,Shassera,Rare,4,35,Serpent,10052,"[-1,-1]"
+152554,Abyssal Spawn,Normal,0,35,Serpent,10052,"[-1,-1]"
+152555,Elderspawn Nalaada,Rare Elite,2,35,Serpent,10052,"[-1,-1]"
+152556,Chasm-Haunter,Rare,4,35,Serpent,10052,"[-1,-1]"
+152796,Monstrous Great Eel,Elite,1,35,Serpent,unknown,[]
+153694,Deepcoil Hatchling,Normal,0,35,Serpent,10052,"[-1,-1]"
+154092,Deepcoil Hatchling,Normal,0,35,Serpent,10052,"[-1,-1]"
+155455,Voltscale Guardian,Elite,1,35,Serpent,unknown,[]
+158465,Poisonous Snake,Normal,0,35,Serpent,10833,"[-1,-1]"
+159849,Shadow Serpent,Normal,0,35,Serpent,unknown,[]
+160413,Crimson Cobra,Normal,0,35,Serpent,2017,[]
+162375,Marsh Serpent,Normal,0,35,Serpent,10833,"[-1,-1]"
+166475,Dambala,Elite,1,35,Serpent,11510,"[-1,-1]"
+167848,Dambala,Elite,1,35,Serpent,11510,"[-1,-1]"
+173855,Shadow of Dambala,Normal,0,35,Serpent,11510,"[-1,-1]"
+181086,Desert Viperid,Normal,0,35,Serpent,13536,"[0,0]"
+181382,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+181537,Enraged Wyrm (0.5/0.5),Normal,0,35,Serpent,unknown,[]
+182779,Cobra,Normal,0,35,Serpent,unknown,[]
+182780,Cobra,Normal,0,35,Serpent,unknown,[]
+183648,Furious Viperid,Normal,0,35,Serpent,unknown,[]
+186826,Spiteful Cobra,Normal,0,35,Serpent,unknown,[]
+186831,Vicious Cobra,Normal,0,35,Serpent,unknown,[]
+188326,Cobra,Normal,0,35,Serpent,unknown,[]
+188327,Cobra,Normal,0,35,Serpent,unknown,[]
+190952,Arcane Wyrm,Elite,1,35,Serpent,unknown,[]
+191032,Mana Wyrm,Normal,0,35,Serpent,13646,"[0,0]"
+191033,Mana Wyrmling,Normal,0,35,Serpent,13646,"[0,0]"
+192170,Cobra Hatchling,Normal,0,35,Serpent,unknown,[]
+192171,Shore Cobra,Normal,0,35,Serpent,unknown,[]
+192739,Feasting Wyrm,Normal,0,35,Serpent,13646,"[-1,-1]"
+192790,Rock Viper,Normal,0,35,Serpent,unknown,[]
+193444,Feasting Wyrm,Normal,0,35,Serpent,unknown,[]
+195534,Lava Viper,Normal,0,35,Serpent,unknown,[]
+196892,Rock Viper,Normal,0,35,Serpent,unknown,[]
+196902,Lava Viper,Normal,0,35,Serpent,unknown,[]
+196904,Shadowflame Viper,Normal,0,35,Serpent,unknown,[]
+197837,Lava Viper,Normal,0,35,Serpent,unknown,[]
+198187,Feasting Wyrm,Normal,0,35,Serpent,unknown,[]
+198602,[DNT] Biting Lava Viper,Normal,0,35,Serpent,unknown,[]
+198603,[DNT] Spitting Lava Viper,Normal,0,35,Serpent,unknown,[]
+198705,[DNT] Swarming Lava Viper,Normal,0,35,Serpent,unknown,[]
+198731,Lava Viper,Normal,0,35,Serpent,unknown,[]
+198782,Coastal Eel,Normal,0,35,Serpent,14433|14529,"[-1,-1]"
+201824,Rock Viperling,Normal,0,35,Serpent,unknown,[]
+201825,Rock Viperling,Normal,0,35,Serpent,14022,"[-1,-1]"
+202266,Sulfurous Viper,Elite,1,35,Serpent,unknown,[]
+202302,Embertail Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
+203053,Invasive Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
+203327,Sizzle Fang,Normal,0,35,Serpent,14022,"[-1,-1]"
+203328,Conflagrated Rock Cobra,Normal,0,35,Serpent,14022,"[-1,-1]"
+203734,Mana Wyrm,Normal,0,35,Serpent,14433,"[-1,-1]"
+203783,Hunting Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
+203891,Embertail Rock Cobra,Normal,0,35,Serpent,unknown,[]
+203893,Embertail Rock Slitherer,Normal,0,35,Serpent,unknown,[]
+203900,Sulfurous Viper,Normal,0,35,Serpent,14022,"[0,0]"
+204158,Hunting Rock Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
+204316,Contaminated Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
+204611,Rock Viperling,Normal,0,35,Serpent,14022,"[-1,-1]"
+204649,Spiraling Lightwyrm,Normal,0,35,Serpent,14022,"[0,0]"
+204825,Elusive Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
+204828,Elusive Lavafang,Elite,1,35,Serpent,14022,[]
+204837,Elusive Viper,Normal,0,35,Serpent,14022,"[-1,-1]"
+204839,Elusive Shalefang,Elite,1,35,Serpent,14022,[]
+205123,Hunting Rock Viper,Normal,0,35,Serpent,unknown,[]
+205238,Embertail Rock Cobra,Elite,1,35,Serpent,14022,"[-1,-1]"
+205300,Empowered Wyrmling,Normal,0,35,Serpent,14022,"[-1,-1]"
+206813,Lava Viper,Normal,0,35,Serpent,unknown,[]
+208602,Lava Viper,Normal,0,35,Serpent,unknown,[]
+208603,Lava Viper,Normal,0,35,Serpent,unknown,[]
+208690,Lava Viper,Normal,0,35,Serpent,unknown,[]
+208691,Sawscale Viper,Elite,1,35,Serpent,14529,"[-1,-1]"
+212621,Rock Viper,Normal,0,35,Serpent,unknown,[]
+212623,Rock Viper,Normal,0,35,Serpent,unknown,[]
+213055,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+213056,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+215680,Deepwater Eel,Normal,0,35,Serpent,14838,"[-1,-1]"
+215907,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+216031,Abyssal Devourer,Rare,4,35,Serpent,14752,"[-1,-1]"
+217723,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+217726,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+217797,Slithering Fungivore,Normal,0,35,Serpent,unknown,[]
+218735,Spiteful Ophidian,Normal,0,35,Serpent,14752,"[0,0]"
+218772,Moss Viper,Normal,0,35,Serpent,14717,"[-1,-1]"
+219265,Emperor Pitfang,Rare,4,35,Serpent,14717,"[-1,-1]"
+219397,Shalescale Striker,Normal,0,35,Serpent,14717,"[-1,-1]"
+219606,Sunless Slitherer,Normal,0,35,Serpent,14838,"[-1,-1]"
+219693,Rock Viper,Normal,0,35,Serpent,unknown,[]
+220383,Gulperworm,Normal,0,35,Serpent,unknown,[]
+220772,Sightless Wavecutter,Normal,0,35,Serpent,14838,"[-1,-1]"
+220786,Wavecutter Eel,Normal,0,35,Serpent,14838,"[0,0]"
+221954,Sunken River Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
+222019,Shalescale Striker,Normal,0,35,Serpent,14717,"[0,0]"
+222807,Protective Sandviper,Elite,1,35,Serpent,unknown,[]
+222810,Undersea Depthstalker,Normal,0,35,Serpent,14838,"[0,0]"
+222958,Wily Sandviper,Normal,0,35,Serpent,unknown,[]
+225520,Spined Slitherer,Normal,0,35,Serpent,14752,"[-1,-1]"
+225525,Spined Bilespitter,Normal,0,35,Serpent,14752,"[-1,-1]"
+226636,Scaletooth Coiler,Normal,0,35,Serpent,14717,"[-1,-1]"
+227369,Agitated Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
+227557,Venomous Deepscale,Normal,0,35,Serpent,unknown,[]
+228212,Tidewake Eel,Normal,0,35,Serpent,14838,"[-1,-1]"
+228409,Brightscale Eel,Normal,0,35,Serpent,unknown,[]
+228506,Sunken River Eel,Normal,0,35,Serpent,14752,"[-1,-1]"
+229523,Sieve Spinedrifter,Normal,0,35,Serpent,14752,"[-1,-1]"
+232106,Brightscale Wyrm,Normal,0,35,Serpent,15829,[]
+232606,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+232607,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+232608,Light Wurm,Normal,0,35,Serpent,unknown,[]
+232609,Light Wyrm,Normal,0,35,Serpent,unknown,[]
+234318,Unbound Arcane Wyrm,Normal,0,35,Serpent,unknown,[]
+236182,Light Wyrm,Normal,0,35,Serpent,unknown,[]
+236183,Light Wyrm,Normal,0,35,Serpent,unknown,[]
+236275,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+236276,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+236340,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+236342,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+236346,Lightdazzled Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+236352,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
+236353,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
+236354,Lightbloom Crawler [Max Level Only],Normal,0,35,Serpent,unknown,[]
+237093,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237094,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237096,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237097,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+237098,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+237099,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+237100,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237101,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237102,Grovecrawler,Normal,0,35,Serpent,unknown,[]
+237399,Erratic Light Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+237404,Lightbloom Crawler,Normal,0,35,Serpent,unknown,[]
+237408,Light Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+237505,Overzealous Lightcrawler,Normal,0,35,Serpent,15968,"[-1,-1]"
+237633,Lightfrenzy Devourer,Normal,0,35,Serpent,15968,"[-1,-1]"
+238087,Agitated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
+240995,Light Wyrm,Normal,0,35,Serpent,unknown,[]
+241354,Void-Infused Brightscale,Normal,0,35,Serpent,15829,[]
+241374,Scintillant Wyrm,Normal,0,35,Serpent,15968,"[1,1]"
+241758,Grovecrawler,Elite,1,35,Serpent,unknown,[]
+241761,Lightbloom Grovecrawler,Elite,1,35,Serpent,unknown,[]
+241766,Lightbloom Grovecrawler,Elite,1,35,Serpent,unknown,[]
+241767,Grovecrawler,Elite,1,35,Serpent,unknown,[]
+242520,Encroaching Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+242521,Encroaching Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+245659,Lattice Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+247392,Agitated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
+247393,Molted Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+247558,Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+247565,Drained Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+247569,Captured Mana Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+247649,Engorged Silk Wyrm,Normal,0,35,Serpent,15968|15969,"[0,0]"
+248473,Skittering Dencrawler,Normal,0,35,Serpent,unknown,[]
+249392,Nesting Silk Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
+249447,Mysterious Mana Wyrm,Normal,0,35,Serpent,15968,"[1,1]"
+249959,Arcane Wyrm,Normal,0,35,Serpent,15968,"[0,0]"
+250024,Lightscale Nibbler,Normal,0,35,Serpent,15968,"[0,0]"
+250025,Gorged Lightscale,Normal,0,35,Serpent,15968,"[0,0]"
+250026,Arcane Manathirster,Normal,0,35,Serpent,15968,"[0,0]"
+250028,Mana Thirster,Normal,0,35,Serpent,15968,"[0,0]"
+250231,Dracaena,Rare,4,35,Serpent,15355,"[-1,-1]"
+250327,Underbrush Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+250341,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[0,0]"
+250344,Juvenile Grovecrawler,Normal,0,35,Serpent,15355,"[0,0]"
+250525,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+250574,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+250824,Lightfrenzied Devourer,Normal,0,35,Serpent,15968,"[-1,-1]"
+250882,Amber Wyrm,Normal,0,35,Serpent,15969,"[0,0]"
+251468,Listless Mana Wyrm,Normal,0,35,Serpent,16215,"[0,0]"
+251642,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+251644,Abyssal Eel,Normal,0,35,Serpent,unknown,[]
+251657,Python,Normal,0,35,Serpent,unknown,[]
+251677,Cobra,Normal,0,35,Serpent,unknown,[]
+251679,Cobra,Normal,0,35,Serpent,unknown,[]
+251794,Writhe,Normal,0,35,Serpent,unknown,[]
+251837,Writhe,Normal,0,35,Serpent,unknown,[]
+253397,Slithering Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+253558,Adzikel,Normal,0,35,Serpent,15355,"[-1,-1]"
+253697,Ravenous Cobraling,Normal,0,35,Serpent,16365,"[-1,-1]"
+253765,Brood Watcher,Normal,0,35,Serpent,16365,"[-1,-1]"
+253890,Hooded Amberfang,Normal,0,35,Serpent,unknown,[]
+253959,Arcane Manathirster,Normal,0,35,Serpent,15968,"[0,0]"
+253960,Mana Thirster,Normal,0,35,Serpent,15968,[]
+253961,Mana Thirster,Normal,0,35,Serpent,15968,[]
+253962,Arcane Manathirster,Normal,0,35,Serpent,15968,[]
+254511,Ravenous Python,Normal,0,35,Serpent,16365,"[0,0]"
+254964,Insatiate Hatchling,Normal,0,35,Serpent,16365,"[0,0]"
+254972,Void-Bloated Wyrm,Normal,0,35,Serpent,15968,"[-1,-1]"
+255079,Opportunistic Grovecrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+255148,Arcane Wyrmling,Normal,0,35,Serpent,15968,"[0,0]"
+255194,Void-Singed Wyrmling,Normal,0,35,Serpent,15968,"[-1,-1]"
+255302,Duskburn,Rare,4,35,Serpent,15968,"[-1,-1]"
+255709,Reinfused Felwyrm,Normal,0,35,Serpent,16091,[]
+255871,Lightbloom Crawler,Normal,0,35,Serpent,15355,"[0,0]"
+256226,Python,Normal,0,35,Serpent,unknown,[]
+256695,Mature Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+256696,Juvenile Rootcrawler,Normal,0,35,Serpent,15355,"[0,0]"
+256700,Rootcrawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+256773,Devouring Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
+257334,Hungry Swarmling,Normal,0,35,Serpent,unknown,[]
+257560,Engorged Writhe,Normal,0,35,Serpent,unknown,[]
+257894,Writhing Young,Normal,0,35,Serpent,16365,"[-1,-1]"
+258190,Lightcursed Crawler,Normal,0,35,Serpent,15355,"[-1,-1]"
+258549,Newborn Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
+258955,Frilled Spitter,Normal,0,35,Serpent,15355,[]
+258959,Ula'tek T3,Elite,1,35,Serpent,unknown,[]
+258962,Writhing Ripcoil,Normal,0,35,Serpent,16545|16594|16642,[]
+259131,Timber Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+259132,Timber Whelp,Normal,0,35,Serpent,16365,"[-1,-1]"
+259134,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+259135,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+259137,Mana Wyrm,Normal,0,35,Serpent,unknown,[]
+260670,Writhing Scaleknot,Normal,0,35,Serpent,unknown,[]
+260844,Seething Venommaw,Normal,0,35,Serpent,unknown,[]
+260872,Writhing Neonate,Normal,0,35,Serpent,unknown,[]
+261122,Agitated Python,Normal,0,35,Serpent,16365,"[-1,-1]"
+261124,Incensed Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+261177,Swarming Chestbiter,Normal,0,35,Serpent,15947,"[-1,-1]"
+261372,Dustscale Cobra,Normal,0,35,Serpent,16365,"[-1,-1]"
+261375,Swarming Python,Normal,0,35,Serpent,16365,"[-1,-1]"
+261377,Preying Writhe,Normal,0,35,Serpent,16365,"[-1,-1]"
+261398,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
+261643,Summoned Serpent,Normal,0,35,Serpent,16535,"[-1,-1]"
+261644,Swarming Cobra,Normal,0,35,Serpent,unknown,[]
+261820,Venom-Bloated Python,Normal,0,35,Serpent,16535|15458|15968,"[-1,-1]"
+261864,Burrowing Ambusher,Normal,0,35,Serpent,16365,"[-1,-1]"
+262439,Wild Snake,Normal,0,35,Serpent,16365,"[-1,-1]"
+262503,Vicious Coiler,Normal,0,35,Serpent,unknown,[]
+263356,Lurking Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
+263359,Sacred Doomcoiler,Elite,1,35,Serpent,16535,"[-1,-1]"
+263393,Territorial Eel,Normal,0,35,Serpent,16365,"[-1,-1]"
+263572,Devouring Writhe,Normal,0,35,Serpent,unknown,[]
+263793,Fledgling Corpseburster,Normal,0,35,Serpent,16365|16535|15969,"[-1,-1]"
+264350,Summoned Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
+264655,Lurking Thorntail,Normal,0,35,Serpent,16365,"[-1,-1]"
+264667,Frilled Spitter,Normal,0,35,Serpent,unknown,[]
+265048,Burrow Spitter,Normal,0,35,Serpent,unknown,[]
+265049,Burrow Stinger,Normal,0,35,Serpent,unknown,[]
+265051,Burrow Python,Normal,0,35,Serpent,unknown,[]
+265289,Fledgling Corpseburster,Normal,0,35,Serpent,16365,"[-1,-1]"
+265343,Nest Coiler,Normal,0,35,Serpent,16365,"[0,0]"
+265968,Writhing Bonechewer,Normal,0,35,Serpent,16365,"[-1,-1]"
+268908,Coiling Writhewatcher,Normal,0,35,Serpent,unknown,"[-1,-1]"
+268911,Frilled Spitter,Normal,0,35,Serpent,unknown,"[-1,-1]"
+268973,Newborn Writhe,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
+268979,Newborn Cobra,Normal,0,35,Serpent,16535|16365,"[-1,-1]"
+270233,Venomspawn Snapper,Normal,0,35,Serpent,16365,"[-1,-1]"
+270767,Newborn Snake,Normal,0,35,Serpent,16365,"[-1,-1]"
+273290,Writhing Coiler,Normal,0,35,Serpent,16535,"[-1,-1]"
 7268,Sandfury Guardian,Elite,1,35,Serpent,1176,"[-1,-1]"
 9701,Spire Scorpid,Normal,0,20,Scorpid,1583,"[-1,-1]"
 13896,Scalebeard,Rare,4,21,Turtle,16,"[0,0]"
@@ -11222,7 +11222,7 @@ npc_id,npc_name,classification,classification_id,family_id,family_name,zone_id,r
 257740,Infested Shredclaw,Normal,0,315,Whiptails,15458,"[0,0]"
 70589,Cavern Burrower,Elite,1,55,Shale Beast,6622,"[-1,-1]"
 262102,Slithering Coiler,Normal,0,35,Serpent,16642,[]
-134390,,,,,,,
-29630,,,,,,,
-29637,,,,,,,
-29713,,,,,,,
+134390,Storm Serpent,,,,,,
+29630,Fanged Pit Viper,,,,,,
+29637,Crafty Snake,,,,,,
+29713,Slad'ran Constrictor,,,,,,
