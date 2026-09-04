@@ -3056,6 +3056,7 @@ npc_id,npc_name,zone,tameable
 250142,Poisonous Hoplet,"Hermit's Mooring, Zul'Aman",Can Be Tamed
 257428,Poisonous Hoplet,"Leech Bog, Zul'Aman",Can Be Tamed
 249358,Poisonous Passhopper,Eversong Woods,Can Be Tamed
+254503,Vile Cursed Toad,Atal'Aman (Delve),Can Be Tamed
 260370,Grumpy Bullfrog,"The Whispering Marsh, The Coiled Isle",Can Be Tamed
 256851,Golden Hopper,"Lake Elrendar , Eversong Woods",Can Be Tamed
 250051,River Hopper,Eversong Woods,Can Be Tamed
@@ -4975,6 +4976,7 @@ npc_id,npc_name,zone,tameable
 242521,Encroaching Mana Wyrm,"West Sanctum, Eversong Woods",Can Be Tamed
 247649,Engorged Silk Wyrm,"North Sanctum, Eversong Woods",Can Be Tamed
 251468,Listless Mana Wyrm,"Isle of Quel'Danas, Eversong Woods",Can Be Tamed
+253960,Mana Thirster,"Thalassian Pass, Eversong Woods",Can Be Tamed
 250028,Mana Thirster,Eversong Woods,Can Be Tamed
 247393,Molted Mana Wyrm,Eversong Woods,Can Be Tamed
 255194,Void-Singed Wyrmling,"Sunstrider Isle, Eversong Woods",Can Be Tamed
