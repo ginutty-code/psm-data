@@ -1,0 +1,36 @@
+name: Publish pet_data.csv
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pet_data.csv"   # adjust path if it's not at repo root
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout psm-data
+        uses: actions/checkout@v4
+
+      - name: Checkout psm-backlog
+        uses: actions/checkout@v4
+        with:
+          repository: ginutty-code/psm-backlog
+          token: ${{ secrets.BACKLOG_REPO_TOKEN }}
+          path: psm-backlog
+
+      - name: Copy CSV
+        run: |
+          mkdir -p psm-backlog/data
+          cp pet_data.csv psm-backlog/data/pet_data.csv
+
+      - name: Commit and push
+        run: |
+          cd psm-backlog
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/pet_data.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Update pet_data.csv from psm-data"
+          git push
