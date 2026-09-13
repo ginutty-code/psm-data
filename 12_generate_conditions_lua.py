@@ -77,7 +77,7 @@ def main():
             # A condition with no colon falls back to DEFAULT_GROUP rather than raising:
             # split(":", 1) returns one element, so indexing [1] was an IndexError that
             # took the whole generator down. Every condition carries a colon today, so
-            # this is a guard against a curation edit -- 11_combine_data.py derives these
+            # this is a guard against a curation edit -- _combine_data.py derives these
             # from note parsing, where a new CATEGORY_MAP entry or a record override can
             # produce a bare value.
             parts = c.split(":", 1)

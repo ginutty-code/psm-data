@@ -251,7 +251,7 @@ def clean_record_fields(row):
 
 def main():
     print("=" * 60)
-    print("Step 10: Clean Wowhead Data")
+    print("_clean_wowhead_data.py: Clean Wowhead Data")
     print("=" * 60)
     ensure_dirs()
 
@@ -266,7 +266,7 @@ def main():
     exact_updates, npc_only_updates = load_location_updates(LOCATION_UPDATES_CSV)
 
     if not os.path.exists(WOWHEAD_DATA_CSV):
-        print(f"Error: {WOWHEAD_DATA_CSV} not found. Please run Step 09 (extract_wowhead_data) first.")
+        print(f"Error: {WOWHEAD_DATA_CSV} not found. Please run _extract_wowhead_data.py first.")
         sys.exit(1)
 
     print(f"Reading records from {WOWHEAD_DATA_CSV}...")

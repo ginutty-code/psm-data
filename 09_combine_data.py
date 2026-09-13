@@ -176,7 +176,7 @@ def load_processed_petopia_data():
 def load_note_additions():
     """
     npc_id -> note text, for the rows of notes_updates.csv that add a note outright
-    (empty `search`, non-empty `replace`). 03_clean_petopia_data.py owns the full format
+    (empty `search`, non-empty `replace`). _clean_petopia_data.py owns the full format
     -- global rules, removals and scoped search/replace -- and applies all of it to the
     NPCs Petopia knows about. Only the outright additions are needed here.
 
@@ -201,7 +201,7 @@ def load_note_additions():
 def load_taming_additions():
     """
     npc_id -> taming_requirements string, for taming_updates.csv rows whose NPC
-    Petopia never carried. 03_clean_petopia_data.py applies the full file as an
+    Petopia never carried. _clean_petopia_data.py applies the full file as an
     override to every NPC Petopia *does* know about; those already reach here
     through petopia_info. This is the same "first step that has seen both
     sources" fallback as load_note_additions, for the same reason: an override
@@ -377,7 +377,7 @@ def check_explicit_faction(faction_name, final_notes):
 
 def main():
     print("=" * 60)
-    print("Step 11: Combine Wowhead and Petopia Data")
+    print("_combine_data.py: Combine Wowhead and Petopia Data")
     print("=" * 60)
     ensure_dirs()
 
@@ -401,7 +401,7 @@ def main():
     continent_map = load_continent_data()
 
     if not os.path.exists(PROCESSED_WOWHEAD_DATA_CSV):
-        print(f"Error: {PROCESSED_WOWHEAD_DATA_CSV} not found. Run step 10_clean_wowhead_data.py script first.")
+        print(f"Error: {PROCESSED_WOWHEAD_DATA_CSV} not found. Run step _clean_wowhead_data.py script first.")
         return
 
     columns = [

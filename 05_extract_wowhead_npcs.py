@@ -366,7 +366,7 @@ def main():
     print("=" * 60)
     ensure_dirs()
 
-    print("Step 2: Extracting Tameable NPCs from Family Pages")
+    print("_extract_wowhead_npcs.py: Extracting Tameable NPCs from Family Pages")
     print("=" * 60)
     print(f"Concurrency: {CONCURRENCY} (sequential to avoid rate limiting)")
     print(f"Request delay: {REQUEST_DELAY}s between requests")

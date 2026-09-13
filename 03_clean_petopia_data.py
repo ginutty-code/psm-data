@@ -4,7 +4,7 @@ Clean and process Petopia data, generating a cleaned dataset with notes and tami
 Pipeline order:
 1. Load raw Petopia data.
 2. Deduplicate by npc_id (keep first occurrence).
-3. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates) for the NPCs present here. Notes naming an NPC absent from the Petopia data are left for 11_combine_data.py, which is the first step that knows both sources.
+3. Clean notes (keyword filter, location stripping, global search/replace, NPC-specific updates) for the NPCs present here. Notes naming an NPC absent from the Petopia data are left for _combine_data.py, which is the first step that knows both sources.
 4. Clean taming skills from tamingskillname1/tamingskillname2.
 5. Merge taming_updates.csv — override/add taming_requirements where specified.
 6. Write processed_petopia_data.csv with columns: npc_id, npc_name, zone, family, name_keeper, notes, taming_requirements.
@@ -30,7 +30,7 @@ from config import (
 LOCATION_STRIP_RE = re.compile(r'Located in [^.]+\.', re.IGNORECASE)
 
 
-# --- Taming skill cleaning (moved from 11_combine_data.py) ---
+# --- Taming skill cleaning (moved from _combine_data.py) ---
 
 # Raw tamingskillname1/2 values after stripping "Required Skill:" and "Taming"/"Family" suffix
 # are already in standard form (e.g., "Exotic", "Cloud Serpent", "Blood Beast", "Mechanical").
@@ -57,7 +57,7 @@ def load_global_skip_npc_ids(filepath):
     in the data at all".
 
     This is deliberately the same rule as the global tier of
-    10_clean_wowhead_data.py's load_skip_npc_data, so both pipelines agree on what a
+    _clean_wowhead_data.py's load_skip_npc_data, so both pipelines agree on what a
     global skip is by construction. `reason` stays a free-text curation note and is
     read by nothing, which keeps a typo there harmless.
     """
@@ -78,7 +78,7 @@ def load_global_skip_npc_ids(filepath):
     return skip_ids
 
 
-# --- Notes cleaning (from 03_update_notes.py) ---
+# --- Notes cleaning ---
 
 def load_note_keywords():
     keywords = set()
@@ -221,7 +221,7 @@ def load_taming_updates(filepath):
 
 def main():
     print("=" * 60)
-    print("Step 03: Clean Petopia Data")
+    print("_clean_petopia_data.py: Clean Petopia Data")
     print("=" * 60)
     ensure_dirs()
 
@@ -318,7 +318,7 @@ def main():
     print(f"Records after note removals: {len(deduped_records)}")
 
     # This step corrects, cleans and updates notes for the NPCs it has. Notes naming an
-    # NPC that is not in the Petopia data are left for 11_combine_data.py.
+    # NPC that is not in the Petopia data are left for _combine_data.py.
     #
     # A minimal record used to be fabricated here for each of those. "Missing" is not
     # answerable at this step: Petopia is one of two sources, and the combined dataset is

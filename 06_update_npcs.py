@@ -43,7 +43,7 @@ def load_npcs():
     """Load NPCs from the main CSV file."""
     npcs = []
     if not os.path.exists(WOWHEAD_NPCS_CSV):
-        print(f"Error: {WOWHEAD_NPCS_CSV} not found. Run step2a_extract_npcs.py first.")
+        print(f"Error: {WOWHEAD_NPCS_CSV} not found. Run step _extract_wowhead_npcs.py first.")
         sys.exit(1)
     
     with open(WOWHEAD_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:

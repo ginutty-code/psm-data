@@ -33,7 +33,7 @@ from config import (
 )
 
 # Columns every pet_data.csv row is expected to have populated. continent_id
-# and continent_name are handled separately below since 11_combine_data.py
+# and continent_name are handled separately below since _combine_data.py
 # fills continent_name with the literal 'Unknown' (rather than leaving it
 # blank) when a row's uiMapId isn't found in Manual/continent_data.csv.
 REQUIRED_NON_EMPTY_FIELDS = [
@@ -87,10 +87,10 @@ def check_petopia_npcs_missing_from_pet_data():
     up, only that it isn't in the *final* table:
       - Present in either Wowhead extract: the Wowhead pipeline *does* carry
         it, so pet_data.csv is just stale (validation run before
-        11_combine_data.py) or the NPC is being dropped somewhere in
-        10/11 — regenerate and re-check before touching Manual/ files.
+        _combine_data.py) or the NPC is being dropped somewhere in
+        09/10 — regenerate and re-check before touching Manual/ files.
       - In neither extract: the Wowhead side genuinely never picked it up —
-        add it to Manual/npcs_updates.csv so 08_update_npcs.py injects it.
+        add it to Manual/npcs_updates.csv so _update_npcs.py injects it.
     """
     petopia_ids = _load_ids(PETOPIA_NPCS_CSV)
     pet_data_ids = _load_ids(COMBINED_PET_DATA_CSV)
@@ -106,14 +106,13 @@ def check_petopia_npcs_missing_from_pet_data():
     print(f"pet_data.csv npc_ids: {len(pet_data_ids)}")
     print(f"Missing from pet_data.csv: {len(missing)}")
     print(f"  - Accounted for in skip_npc_ids.csv: {len(missing) - len(unexplained)}")
-    print(f"  - In a Wowhead extract already (stale pet_data.csv or 10/11 drop): {len(in_wowhead)}")
+    print(f"  - In a Wowhead extract already (stale pet_data.csv or 09/10 drop): {len(in_wowhead)}")
     print(f"  - UNEXPLAINED (needs a Manual/npcs_updates.csv entry): {len(absent_from_wowhead)}")
 
     actions = [
         (npc_id,
-         f"npc_id {npc_id} is in the Wowhead pipeline (wowhead_npcs.csv/wowhead_data.csv) but not "
-         f"pet_data.csv - regenerate pet_data.csv (re-run 11_combine_data.py) and re-check; if it "
-         f"persists, it's being dropped in 10/11")
+         (f"npc_id {npc_id} is in the Wowhead pipeline (wowhead_npcs.csv/wowhead_data.csv) but not "
+          f"pet_data.csv - regenerate pet_data.csv (re-run _combine_data.py) and re-check"))
         for npc_id in in_wowhead
     ]
     actions += [
@@ -174,7 +173,7 @@ def check_pet_data_required_fields():
 def _load_note_update_targets(path):
     """
     npc_id -> note text, for rows that add a note outright (empty search, non-empty
-    replace). Mirrors 11_combine_data.py's load_note_additions; rows carrying a `search`
+    replace). Mirrors _combine_data.py's load_note_additions; rows carrying a `search`
     are search/replace edits that harmlessly do nothing when their NPC is absent, so
     only the outright additions can be orphaned.
     """
@@ -195,13 +194,13 @@ def check_orphan_note_updates():
     """
     Every note added by Manual/notes_updates.csv should land on a real NPC.
 
-    A note is attached in one of two places: 03_clean_petopia_data.py applies it to the
-    NPCs Petopia carries, and 11_combine_data.py fills in for NPCs that reached the
+    A note is attached in one of two places: _clean_petopia_data.py applies it to the
+    NPCs Petopia carries, and _combine_data.py fills in for NPCs that reached the
     combined dataset from the Wowhead side instead. An npc_id in neither is an orphan --
     it was skipped from both sources, or never existed.
 
     This is worth a check rather than a shrug because the failure is **silent**.
-    15_generate_notes_lua.py reads only pet_data.csv, so an orphaned note is not
+    _generate_notes_lua.py reads only pet_data.csv, so an orphaned note is not
     reported, not emitted, and not recoverable from the output -- it simply is not there.
     03 used to hide this by fabricating a blank Petopia record so the note always had
     something to sit on, which made an orphan indistinguishable from a real NPC with no
@@ -258,7 +257,7 @@ def _load_npcs_updates(path):
     tagged action=add.
 
     The 'action' column (add/update) is a human-maintained note only --
-    08_update_npcs.py itself decides add-vs-replace dynamically each run,
+    _update_npcs.py itself decides add-vs-replace dynamically each run,
     from whether the npc_id is currently in wowhead_npcs.csv, not from
     this column. So any row here, tagged either way, already counts as
     "accounted for" from the pipeline's perspective.
@@ -280,7 +279,7 @@ def _load_npcs_updates(path):
 
 def check_npcs_updates_freshness():
     """
-    Manual/npcs_updates.csv feeds 08_update_npcs.py: a row becomes a new
+    Manual/npcs_updates.csv feeds _update_npcs.py: a row becomes a new
     NPC if its npc_id isn't currently in wowhead_npcs.csv, or replaces the
     existing record otherwise. Only the "add" side is checked here -- rows
     tagged 'update' are left alone, since validating a correction needs
@@ -293,7 +292,7 @@ def check_npcs_updates_freshness():
          belong, a Manual/skip_npc_ids.csv entry.
       2. An 'add'-tagged row whose npc_id now exists in wowhead_npcs.csv on
          its own -- Wowhead caught up, so the row is redundant, and worse:
-         since 08_update_npcs.py never reads the 'action' column, it'll
+         since _update_npcs.py never reads the 'action' column, it'll
          silently start behaving as an *update* (replacing the now-real
          wowhead record with this row's possibly-stale field values) on
          the next run instead of being the harmless no-op its 'add' tag
@@ -370,7 +369,7 @@ def _load_wowhead_npc_zone_ids(path):
     """
     npc_id -> zone_id string from wowhead_npcs.csv (may be pipe-delimited for
     NPCs that spawn in several zones). Excludes the literal 'unknown' sentinel
-    07_extract_wowhead_npcs.py writes when Wowhead itself has no zone on file
+    _extract_wowhead_npcs.py writes when Wowhead itself has no zone on file
     -- that string is not a real lead, just a recorded absence.
     """
     zones = {}
@@ -389,7 +388,7 @@ def _location_lead_text(wowhead_zone, petopia_zone):
     """
     Plain-fact summary of whatever location lead is on file, or None.
     Deliberately doesn't guess a remedy -- a wowhead_npcs.csv lead usually
-    means 09_extract_wowhead_data.py just needs a re-run to pick it up, a
+    means _extract_wowhead_data.py just needs a re-run to pick it up, a
     Petopia-only lead usually means a manual Manual/location_updates.csv
     entry, and a human is better placed to tell those apart than a check.
     """
@@ -524,7 +523,7 @@ def main():
         action_items.extend((title, npc_id, description) for npc_id, description in actions)
 
     print("=" * 60)
-    print("Step 16: Validate Data")
+    print("_validate_data.py: Validate Data")
     print("=" * 60)
 
     print(f"\nAction List ({len(action_items)} open)")

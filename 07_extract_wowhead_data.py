@@ -2,7 +2,7 @@
 Extract npc metadata for each npc in npcs.csv.
 
 Extraction deliberately scrapes everything and applies no skip list. Skipping is
-10_clean_wowhead_data.py's job, where it can be zone- and layer-scoped and where a
+_clean_wowhead_data.py's job, where it can be zone- and layer-scoped and where a
 curation change takes effect without re-scraping.
 """
 
@@ -40,7 +40,7 @@ stop_event = threading.Event()
 
 def load_npcs():
     if not os.path.exists(PROCESSED_NPCS_CSV):
-        print(f"Error: {PROCESSED_NPCS_CSV} not found. Run steps 7 and 8 first to produce the corrected NPC CSV.")
+        print(f"Error: {PROCESSED_NPCS_CSV} not found. Run steps 6 and 7 first to produce the corrected NPC CSV.")
         sys.exit(1)
     records = []
     with open(PROCESSED_NPCS_CSV, 'r', encoding='utf-8', newline='') as f:
@@ -618,7 +618,7 @@ def main():
     ensure_dirs()
 
     print("=" * 60)
-    print("Step 3: Enriching NPC Data (Display IDs, Location, Patch)")
+    print("_extract_wowhead_data.py: Enriching NPC Data (Display IDs, Location, Patch)")
     print("=" * 60)
     print(f"Concurrency: {CONCURRENCY}")
     print(f"Request delay: Random {REQUEST_DELAY_RANGE[0]}-{REQUEST_DELAY_RANGE[1]}s per request")
